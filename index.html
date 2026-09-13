@@ -1,0 +1,1916 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#0b0e1a">
+<meta name="color-scheme" content="dark light">
+<link rel="manifest" href="manifest.json">
+<title>نور | دعا و معارف</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Vazirmatn:wght@300;400;500;600;700;800&family=Noto+Naskh+Arabic:wght@400;700&family=Cinzel:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/shabnam-font@v5.0.1/dist/font-face.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/gh/rastikerdar/sahel-font@v3.4.0/dist/font-face.css" rel="stylesheet">
+
+<style>
+:root{
+  --bg-body:#0b0e1a;
+  --bg-card:rgba(255,255,255,.04);
+  --bg-card-hover:rgba(255,255,255,.08);
+  --bg-tab:rgba(255,255,255,.04);
+  --bg-tab-active:rgba(212,175,55,.12);
+  --text-primary:#ede7d9;
+  --text-secondary:#b0c0b8;
+  --text-muted:#6a8a80;
+  --border-gold:rgba(212,175,55,.15);
+  --gold:#d4af37;
+  --gold-2:#e4c982;
+  --gold-3:#f4e0a2;
+  --gold-glow:rgba(212,175,55,.1);
+  --shadow:0 8px 32px rgba(0,0,0,.3);
+  --radius:20px;
+  --font-arabic:'Amiri',serif;
+  --font-quran:'Amiri Quran','Amiri',serif;
+  --bottom-nav-height:68px;
+  --fs-scale:1;
+}
+body.light-mode{
+  --bg-body:#fcf9f2;
+  --bg-card:#ffffff;
+  --bg-card-hover:#f8f4ea;
+  --bg-tab:rgba(0,0,0,.04);
+  --bg-tab-active:rgba(212,175,55,.10);
+  --text-primary:#2b2b2b;
+  --text-secondary:#5a5040;
+  --text-muted:#8b877f;
+  --border-gold:rgba(180,140,70,.2);
+  --gold:#b38a2e;
+  --gold-2:#d4af37;
+  --gold-3:#e4c982;
+  --shadow:0 4px 16px rgba(0,0,0,.04);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent;}
+html,body{width:100%;min-height:100%;}
+body{
+  font-family:'Vazirmatn',sans-serif;
+  background:var(--bg-body);
+  color:var(--text-primary);
+  transition:background .4s,color .4s;
+  min-height:100vh;
+  padding:0 12px calc(var(--bottom-nav-height) + 20px);
+  line-height:1.7;
+  overflow-x:hidden;
+}
+body.font-vazir{font-family:'Vazirmatn',sans-serif;}
+body.font-amiri{font-family:'Amiri',serif;}
+body.font-naskh{font-family:'Noto Naskh Arabic',serif;}
+body.font-shabnam{font-family:'Shabnam','Vazirmatn',sans-serif;}
+body.font-sahel{font-family:'Sahel','Vazirmatn',sans-serif;}
+body.font-uthman{font-family:'Amiri Quran','Amiri',serif;}
+
+body.fs-sm{--fs-scale:.9;}
+body.fs-md{--fs-scale:1;}
+body.fs-lg{--fs-scale:1.08;}
+body.fs-xl{--fs-scale:1.16;}
+
+.ic{
+  width:22px;height:22px;
+  fill:none;stroke:currentColor;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;
+  flex-shrink:0;display:inline-block;vertical-align:middle;
+}
+.ic.sm{width:16px;height:16px;}
+
+.page{display:none;padding:16px 0 80px;max-width:800px;margin:0 auto;animation:fadeIn .3s ease;}
+.page.active{display:block;}
+@keyframes fadeIn{from{opacity:0;transform:translateY(10px);}to{opacity:1;transform:translateY(0);}}
+
+/* ============================================================
+   WELCOME
+   ============================================================ */
+body.welcome-mode{
+  height:100dvh;min-height:100dvh;max-height:100dvh;
+  overflow:hidden;padding:0;
+}
+.welcome{
+  width:100%;
+  height:100dvh;min-height:100dvh;max-height:100dvh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;
+  padding:
+    max(14px,env(safe-area-inset-top))
+    max(16px,env(safe-area-inset-right))
+    max(12px,env(safe-area-inset-bottom))
+    max(16px,env(safe-area-inset-left));
+  position:relative;overflow:hidden;isolation:isolate;
+  background:radial-gradient(circle at 18% 24%,#171d39 0%,#0d1123 38%,#070a14 100%);
+  transition:background .4s;
+}
+body.light-mode .welcome{
+  background:radial-gradient(circle at 18% 24%,#f5f0e5 0%,#ebe3d4 42%,#d8cfbf 100%);
+}
+.welcome .art{
+  position:absolute;inset:0;opacity:.055;pointer-events:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='84' height='84' viewBox='0 0 84 84'><g fill='none' stroke='%23d4af37' stroke-width='0.7'><path d='M42 6 L58 22 L74 38 L58 54 L42 70 L26 54 L10 38 L26 22 Z'/><path d='M42 16 L50 24 L58 32 L66 40 L58 48 L50 56 L42 64 L34 56 L26 48 L18 40 L26 32 L34 24 Z' opacity='.6'/></g></svg>");
+  background-size:84px 84px;
+}
+.welcome .mosque{
+  position:absolute;left:0;right:0;bottom:0;
+  width:100%;height:32vh;max-height:240px;
+  opacity:.13;pointer-events:none;z-index:0;
+}
+body.light-mode .welcome .mosque{opacity:.065;}
+.welcome .veil{
+  position:absolute;inset:0;
+  background:radial-gradient(ellipse at center,transparent 38%,rgba(0,0,0,.52) 100%);
+  pointer-events:none;z-index:1;
+}
+body.light-mode .welcome .veil{
+  background:radial-gradient(ellipse at center,transparent 38%,rgba(0,0,0,.055) 100%);
+}
+.welcome-content{
+  position:relative;z-index:3;
+  width:min(100%,520px);max-height:100%;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+}
+.welcome-brand{
+  width:100%;
+  margin:0 auto clamp(4px,1.4vh,18px);
+  animation:welcomeIn 1.05s cubic-bezier(.2,.7,.2,1) both;
+}
+.noor-title-svg{
+  width:min(76vw,330px);
+  height:auto;max-height:31vh;
+  display:block;margin:0 auto;
+  filter:drop-shadow(0 10px 26px rgba(184,137,58,.30));
+}
+@keyframes welcomeIn{
+  from{opacity:0;transform:translateY(16px) scale(.94);}
+  to{opacity:1;transform:none;}
+}
+
+.bismillah{
+  font-family:var(--font-arabic);
+  font-size:clamp(.88rem,2.8vw,1.2rem);
+  color:#c9b28b;
+  margin:0 0 clamp(3px,1vh,10px);
+  letter-spacing:.5px;
+  animation:fadeUp .8s ease .2s both;
+}
+body.light-mode .bismillah{color:#8a7040;}
+
+.ornament{
+  display:flex;align-items:center;justify-content:center;
+  gap:10px;
+  margin:clamp(2px,1vh,10px) 0;
+  color:var(--gold);opacity:.7;
+  animation:fadeUp .8s ease .3s both;
+}
+.ornament i{
+  width:clamp(20px,7vw,30px);height:1px;
+  background:var(--gold);opacity:.3;display:inline-block;
+}
+.ornament .ic{width:13px;height:13px;color:var(--gold);}
+
+.ayah-box{
+  width:100%;
+  background:rgba(255,255,255,.045);
+  border:1px solid var(--border-gold);
+  border-radius:var(--radius);
+  padding:clamp(9px,1.8vh,18px) clamp(12px,4vw,18px);
+  margin-bottom:clamp(7px,1.5vh,17px);
+  backdrop-filter:blur(7px);-webkit-backdrop-filter:blur(7px);
+  animation:fadeUp .8s ease .4s both;
+  box-shadow:0 14px 35px rgba(0,0,0,.12),inset 0 1px 0 rgba(255,255,255,.035);
+}
+body.light-mode .ayah-box{background:rgba(255,255,255,.58);}
+
+.ayah-box .ayah{
+  font-family:var(--font-quran);
+  font-size:clamp(1.05rem,4.7vw,1.5rem);
+  line-height:clamp(1.8rem,6.4vw,2.4rem);
+  color:var(--text-primary);
+  text-align:center;
+  margin-bottom:14px;
+}
+
+.ayah-box .source{
+  font-size:clamp(.62rem,2.4vw,.8rem);
+  color:var(--text-muted);
+  margin:0 0 8px;
+  text-align:center;
+  letter-spacing:.4px;
+}
+
+.ayah-box .rule{
+  width:40px;height:1px;
+  background:var(--gold);
+  margin:10px auto;
+  opacity:.3;
+}
+
+.ayah-box .translation{
+  font-size:clamp(.76rem,3.3vw,.95rem);
+  color:var(--text-secondary);
+  margin-bottom:2px;
+  text-align:center;line-height:1.75;
+}
+
+.ayah-box .translation-en{
+  font-size:clamp(.62rem,2.6vw,.82rem);
+  color:var(--text-muted);
+  font-style:italic;
+  text-align:center;line-height:1.5;
+}
+
+.intro{
+  font-size:clamp(.78rem,3.5vw,1.02rem);
+  color:var(--text-secondary);
+  margin:clamp(3px,1vh,12px) 0 clamp(7px,1.5vh,17px);
+  line-height:1.65;
+  animation:fadeUp .8s ease .5s both;
+}
+
+.enter{
+  background:linear-gradient(135deg,var(--gold),#b8932a);
+  border:none;color:#0b0e1a;
+  font-family:inherit;
+  font-size:clamp(.78rem,3.2vw,.95rem);
+  font-weight:700;
+  padding:clamp(8px,1.2vh,11px) 28px;
+  min-height:42px;
+  border-radius:60px;
+  cursor:pointer;
+  display:inline-flex;align-items:center;justify-content:center;
+  gap:8px;
+  transition:transform .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+  animation:fadeUp .8s ease .6s both, glowPulse 2.4s ease-in-out infinite;
+  -webkit-user-select:none;user-select:none;
+}
+.enter::before{
+  content:"";position:absolute;inset:0;
+  background:linear-gradient(120deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);
+  transform:translateX(-100%);
+  animation:shine 3s ease-in-out infinite;
+}
+@keyframes shine{
+  0%,60%,100%{transform:translateX(-100%);}
+  80%{transform:translateX(100%);}
+}
+@keyframes glowPulse{
+  0%,100%{
+    box-shadow:0 8px 24px rgba(212,175,55,.35), 0 0 0 0 rgba(212,175,55,.55);
+  }
+  50%{
+    box-shadow:0 8px 32px rgba(212,175,55,.55), 0 0 0 10px rgba(212,175,55,0);
+  }
+}
+.enter:hover{transform:scale(1.03);}
+.enter:active{transform:scale(.97);}
+.enter span,.enter .ic{position:relative;z-index:1;}
+.enter .ic{width:16px;height:16px;stroke-width:2.4;}
+
+.bottom-note{
+  position:absolute;z-index:3;
+  bottom:max(28px,calc(env(safe-area-inset-bottom) + 24px));
+  left:16px;right:16px;margin:0 auto;
+  font-size:.68rem;color:var(--text-muted);
+  letter-spacing:.35px;
+  animation:fadeUp .8s ease .7s both;
+  text-align:center;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+.producer{
+  position:absolute;z-index:3;
+  bottom:max(8px,env(safe-area-inset-bottom));
+  left:16px;right:16px;
+  font-size:.62rem;color:#5a7a70;
+  animation:fadeUp .8s ease .8s both;
+  text-align:center;
+}
+.producer strong{color:var(--text-secondary);}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(12px);}
+  to{opacity:1;transform:none;}
+}
+
+/* ============================================================
+   MAIN APP
+   ============================================================ */
+.app-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:8px 0 16px;
+  border-bottom:1px solid var(--border-gold);
+  margin-bottom:16px;
+  position:sticky;top:0;z-index:50;
+  background:var(--bg-body);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.app-header .circle{
+  background:var(--bg-tab);
+  border:1px solid var(--border-gold);
+  border-radius:50%;
+  width:42px;height:42px;
+  color:var(--text-primary);
+  cursor:pointer;transition:.3s;
+  display:flex;align-items:center;justify-content:center;
+  font-family:inherit;
+}
+.app-header .circle:hover{
+  background:var(--bg-tab-active);
+  border-color:var(--gold);
+  transform:rotate(10deg);
+}
+.app-header .circle .ic{width:20px;height:20px;}
+.app-header .brand{text-align:center;}
+.app-header .brand strong{
+  display:block;font-size:1.4rem;font-weight:700;
+  color:var(--gold);font-family:var(--font-arabic);letter-spacing:2px;
+}
+.app-header .brand small{
+  font-size:.6rem;color:var(--text-muted);letter-spacing:1px;
+}
+
+.hero{
+  text-align:center;padding:16px 0 24px;
+  border-bottom:1px solid var(--border-gold);
+  margin-bottom:20px;
+}
+.hero small{color:var(--text-muted);font-size:.85rem;}
+.hero h1{
+  font-size:1.7rem;font-weight:700;
+  color:var(--gold);margin:6px 0 8px;
+  line-height:1.5;font-family:var(--font-arabic);
+}
+.hero p{color:var(--text-secondary);font-size:.95rem;font-weight:300;}
+.hero-symbol{
+  font-family:var(--font-arabic);font-size:2rem;
+  color:var(--gold);opacity:.12;margin-top:-8px;
+}
+
+.section-head{
+  display:flex;justify-content:space-between;align-items:center;
+  font-size:1rem;font-weight:700;color:var(--gold);
+  border-bottom:1px solid var(--border-gold);
+  padding-bottom:8px;margin:24px 0 14px;
+}
+.section-head span{
+  font-size:.8rem;font-weight:400;color:var(--text-muted);
+  cursor:pointer;transition:.3s;
+}
+.section-head span:hover{color:var(--gold);}
+
+.today{display:flex;flex-direction:column;gap:8px;}
+.today article{
+  background:var(--bg-card);border-radius:16px;
+  padding:12px 16px;
+  display:flex;align-items:center;gap:12px;
+  border-right:3px solid var(--border-gold);
+  transition:.3s;cursor:pointer;
+}
+.today article:hover{
+  background:var(--bg-card-hover);
+  transform:translateX(-4px);
+  border-right-color:var(--gold);
+}
+.today article .today-ic{
+  width:38px;height:38px;border-radius:12px;
+  background:var(--bg-tab-active);color:var(--gold);
+  display:grid;place-items:center;flex-shrink:0;
+}
+.today article .today-ic .ic{width:20px;height:20px;}
+.today article .info{flex:1;}
+.today article small{display:block;font-size:.62rem;color:var(--text-muted);}
+.today article b{font-size:.95rem;font-weight:700;color:var(--text-primary);}
+.today article .go{
+  font-size:.8rem;color:var(--gold);opacity:.6;
+  transition:.3s;margin-right:auto;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.today article .go .ic{width:14px;height:14px;}
+.today article:hover .go{opacity:1;}
+
+.grid{
+  display:grid;grid-template-columns:repeat(3,1fr);
+  gap:10px;margin-top:4px;
+}
+.grid button{
+  background:var(--bg-card);
+  border:1px solid var(--border-gold);
+  border-radius:16px;
+  padding:14px 8px;text-align:center;
+  color:var(--text-primary);
+  cursor:pointer;transition:.3s;
+  font-family:inherit;
+  display:flex;flex-direction:column;align-items:center;gap:6px;
+  backdrop-filter:blur(2px);
+}
+.grid button:hover{
+  background:var(--bg-card-hover);
+  border-color:rgba(212,175,55,.35);
+  transform:translateY(-3px);
+}
+.grid button .grid-ic{
+  width:40px;height:40px;border-radius:12px;
+  background:var(--bg-tab-active);color:var(--gold);
+  display:grid;place-items:center;
+}
+.grid button .grid-ic .ic{width:22px;height:22px;}
+.grid button b{font-size:.82rem;font-weight:700;}
+.grid button small{font-size:.6rem;color:var(--text-muted);font-weight:300;}
+
+.page-header{
+  display:flex;align-items:center;gap:12px;
+  margin-bottom:20px;
+  border-bottom:1px solid var(--border-gold);
+  padding-bottom:12px;
+}
+.page-header .back{
+  background:var(--bg-tab);
+  border:1px solid var(--border-gold);
+  color:var(--gold);cursor:pointer;
+  padding:8px;border-radius:12px;transition:.3s;
+  display:grid;place-items:center;
+}
+.page-header .back .ic{width:18px;height:18px;}
+.page-header .back:hover{background:var(--bg-tab-active);border-color:var(--gold);}
+.page-header h2{
+  font-family:var(--font-arabic);
+  font-size:1.4rem;color:var(--gold);
+}
+
+.producer-card{
+  background:var(--bg-card);
+  border:1px solid var(--border-gold);
+  border-radius:16px;
+  padding:24px 20px;margin:20px 0;text-align:center;
+}
+.producer-avatar{
+  width:80px;height:80px;border-radius:50%;
+  background:linear-gradient(135deg,var(--gold-3),var(--gold));
+  display:grid;place-items:center;
+  margin:0 auto 12px;
+  font-family:var(--font-arabic);
+  font-size:34px;font-weight:700;color:#0b0e1a;
+  box-shadow:0 8px 20px rgba(212,175,55,.3);
+}
+.producer-card .name{font-size:1.3rem;font-weight:700;color:var(--gold);}
+.producer-card .role{font-size:.9rem;color:var(--text-secondary);margin-top:2px;}
+.producer-card .app-name{
+  font-size:1.1rem;color:var(--text-primary);
+  margin-top:12px;font-weight:700;
+  display:inline-flex;align-items:center;gap:8px;
+}
+.producer-card .app-name .ic{width:20px;height:20px;color:var(--gold);}
+.producer-card .goal{
+  font-size:.92rem;color:var(--text-secondary);
+  margin:14px 0;line-height:1.9;padding:0 4px;text-align:right;
+}
+.producer-card .goal .label{
+  display:inline-flex;align-items:center;gap:6px;
+  color:var(--gold);font-weight:700;margin-bottom:6px;
+}
+.producer-card .goal .label .ic{width:16px;height:16px;}
+.producer-card .prayer-request{
+  font-size:1rem;color:var(--gold);
+  margin:16px 0 6px;font-weight:700;
+  font-family:var(--font-arabic);
+  display:inline-flex;align-items:center;gap:6px;
+}
+.producer-card .prayer-request .ic{width:18px;height:18px;}
+.producer-card .prayer-parents{
+  font-size:.88rem;color:var(--text-secondary);
+  margin-bottom:10px;line-height:1.9;
+}
+.producer-card .contact{
+  display:flex;flex-direction:column;gap:8px;
+  margin-top:16px;padding-top:16px;
+  border-top:1px solid var(--border-gold);
+}
+.producer-card .contact-item{
+  display:flex;align-items:center;gap:10px;
+  padding:10px 12px;
+  background:var(--bg-tab);border-radius:12px;
+  font-size:.82rem;color:var(--text-secondary);
+  text-decoration:none;transition:.3s;text-align:right;
+}
+.producer-card .contact-item:hover{
+  background:var(--bg-tab-active);color:var(--gold);
+}
+.producer-card .contact-item .ic{width:18px;height:18px;color:var(--gold);}
+.producer-card .copy{
+  font-size:.68rem;color:var(--text-muted);
+  margin-top:16px;border-top:1px solid var(--border-gold);
+  padding-top:12px;
+}
+.producer-card .version{font-size:.65rem;color:var(--text-muted);margin-top:4px;}
+
+.search-box{display:flex;gap:10px;margin-bottom:20px;}
+.search-box input{
+  flex:1;padding:12px 18px;border-radius:60px;
+  border:1px solid var(--border-gold);
+  background:var(--bg-card);color:var(--text-primary);
+  font-family:inherit;font-size:.95rem;
+  outline:none;transition:.3s;
+}
+.search-box input::placeholder{color:var(--text-muted);}
+.search-box input:focus{
+  border-color:var(--gold);
+  box-shadow:0 0 20px var(--gold-glow);
+  background:var(--bg-card-hover);
+}
+.search-box button{
+  padding:12px 18px;border-radius:60px;border:none;
+  background:linear-gradient(135deg,var(--gold),#b8932a);
+  color:#0b0e1a;font-weight:700;cursor:pointer;
+  transition:.3s;font-family:inherit;
+  display:inline-flex;align-items:center;justify-content:center;
+}
+.search-box button .ic{width:18px;height:18px;stroke-width:2.4;}
+.search-box button:hover{transform:scale(1.03);}
+
+.search-results{display:flex;flex-direction:column;gap:10px;}
+.search-results .result-item{
+  background:var(--bg-card);
+  border-radius:14px;padding:14px 18px;
+  border-right:3px solid var(--border-gold);
+  transition:.3s;cursor:pointer;
+}
+.search-results .result-item:hover{
+  background:var(--bg-card-hover);
+  border-right-color:var(--gold);
+}
+.search-results .result-item .rtitle{
+  font-weight:700;color:var(--gold);
+  display:flex;align-items:center;gap:6px;
+}
+.search-results .result-item .rtitle .ic{width:14px;height:14px;}
+.search-results .result-item .preview{font-size:.85rem;color:var(--text-secondary);margin-top:2px;}
+.search-results .result-item .meta{font-size:.7rem;color:var(--text-muted);margin-top:4px;}
+.search-empty{
+  text-align:center;padding:50px 20px;color:var(--text-muted);
+}
+.search-empty .icon{display:flex;justify-content:center;margin-bottom:12px;}
+.search-empty .icon .ic{width:52px;height:52px;opacity:.3;stroke-width:1.5;}
+
+.reminder-list{display:flex;flex-direction:column;gap:12px;margin-top:16px;}
+.reminder-item{
+  background:var(--bg-card);
+  border-radius:16px;padding:16px 18px;
+  border-right:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;
+  transition:.3s;flex-wrap:wrap;gap:8px;
+}
+.reminder-item:hover{background:var(--bg-card-hover);}
+.reminder-item .info .title{font-weight:700;font-size:1rem;}
+.reminder-item .info .time{
+  font-size:.8rem;color:var(--text-muted);
+  display:flex;align-items:center;gap:6px;margin-top:2px;
+}
+.reminder-item .info .time .ic{width:14px;height:14px;}
+.reminder-item .actions{display:flex;gap:6px;}
+.reminder-item .actions button{
+  background:none;border:1px solid var(--border-gold);
+  border-radius:30px;padding:4px 12px;
+  color:var(--text-secondary);cursor:pointer;
+  transition:.3s;font-family:inherit;font-size:.72rem;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.reminder-item .actions button .ic{width:14px;height:14px;}
+.reminder-item .actions button:hover{
+  background:var(--bg-tab-active);
+  border-color:var(--gold);color:var(--gold);
+}
+.reminder-item .actions .active-btn.active{
+  background:var(--bg-tab-active);
+  border-color:var(--gold);color:var(--gold);
+}
+.reminder-item .actions .delete-btn:hover{border-color:#e74c3c;color:#e74c3c;}
+
+.add-reminder{display:flex;gap:10px;margin-top:20px;flex-wrap:wrap;}
+.add-reminder input,.add-reminder select{
+  padding:10px 14px;border-radius:30px;
+  border:1px solid var(--border-gold);
+  background:var(--bg-card);color:var(--text-primary);
+  font-family:inherit;outline:none;
+  flex:1;min-width:120px;transition:.3s;
+}
+.add-reminder input:focus,.add-reminder select:focus{border-color:var(--gold);}
+.add-reminder button{
+  padding:10px 20px;border-radius:30px;border:none;
+  background:linear-gradient(135deg,var(--gold),#b8932a);
+  color:#0b0e1a;font-weight:700;cursor:pointer;
+  transition:.3s;font-family:inherit;
+  display:inline-flex;align-items:center;gap:6px;
+}
+.add-reminder button .ic{width:16px;height:16px;stroke-width:2.2;}
+.add-reminder button:hover{transform:scale(1.03);}
+
+.favorites-list{display:flex;flex-direction:column;gap:10px;margin-top:16px;}
+.favorites-list .fav-item{
+  background:var(--bg-card);
+  border-radius:14px;padding:14px 18px;
+  border-right:3px solid var(--gold);
+  display:flex;justify-content:space-between;align-items:center;
+  transition:.3s;
+}
+.favorites-list .fav-item:hover{background:var(--bg-card-hover);}
+.favorites-list .fav-item .title{font-weight:700;}
+.favorites-list .fav-item .type{font-size:.72rem;color:var(--text-muted);}
+.favorites-list .fav-item .remove{
+  background:none;border:none;color:#e74c3c;
+  cursor:pointer;transition:.3s;
+  display:grid;place-items:center;padding:6px;
+}
+.favorites-list .fav-item .remove .ic{width:18px;height:18px;}
+.favorites-list .fav-item .remove:hover{transform:scale(1.15);}
+
+.bottom-nav{
+  position:fixed;bottom:0;left:0;right:0;z-index:1000;
+  display:flex;justify-content:space-around;align-items:center;
+  background:var(--bg-body);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-top:1px solid var(--border-gold);
+  padding:6px 0 12px;
+  height:var(--bottom-nav-height);
+  box-shadow:0 -4px 30px rgba(0,0,0,.2);
+  transition:background .4s,border-color .4s;
+}
+.nav-item{
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  color:var(--text-muted);
+  font-family:inherit;font-size:.6rem;
+  transition:.25s;padding:4px 12px;
+  min-width:48px;position:relative;
+  cursor:pointer;border:none;background:none;
+  gap:2px;
+}
+.nav-item .nav-icon-wrap{display:grid;place-items:center;transition:.25s;}
+.nav-item .ic{width:22px;height:22px;}
+.nav-item .nav-label{font-size:.55rem;font-weight:500;opacity:.8;letter-spacing:.2px;}
+.nav-item:hover{color:var(--gold);transform:translateY(-2px);}
+.nav-item:hover .ic{transform:scale(1.1);}
+.nav-item.active{color:var(--gold);}
+.nav-item.active .ic{transform:scale(1.05);}
+.nav-item.active::after{
+  content:'';position:absolute;top:-1px;left:50%;
+  transform:translateX(-50%);
+  width:24px;height:3px;background:var(--gold);
+  border-radius:0 0 4px 4px;
+}
+.nav-item .badge{
+  position:absolute;top:0;right:2px;
+  background:#e74c3c;color:#fff;
+  font-size:.5rem;padding:1px 6px;
+  border-radius:20px;min-width:16px;
+  text-align:center;font-weight:700;line-height:1.5;
+}
+
+.modal-overlay{
+  display:none;position:fixed;inset:0;
+  background:rgba(0,0,0,.6);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  z-index:2000;align-items:center;justify-content:center;padding:20px;
+}
+.modal-overlay.open{display:flex;}
+.modal-box{
+  background:var(--bg-body);
+  border:1px solid var(--border-gold);
+  border-radius:28px;
+  padding:28px 22px;
+  max-width:460px;width:100%;
+  max-height:90vh;overflow-y:auto;
+  box-shadow:0 20px 60px rgba(0,0,0,.5);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{
+  from{opacity:0;transform:translateY(30px) scale(.96);}
+  to{opacity:1;transform:translateY(0) scale(1);}
+}
+.modal-box .modal-header{
+  display:flex;justify-content:space-between;align-items:center;
+  margin-bottom:20px;
+}
+.modal-box .modal-header h2{
+  font-family:var(--font-arabic);
+  color:var(--gold);font-size:1.3rem;
+  display:flex;align-items:center;gap:8px;
+}
+.modal-box .modal-header h2 .ic{width:20px;height:20px;}
+.modal-box .modal-header .close{
+  background:var(--bg-tab);
+  border:1px solid var(--border-gold);
+  border-radius:12px;
+  color:var(--text-primary);
+  cursor:pointer;transition:.3s;
+  display:grid;place-items:center;padding:8px;
+}
+.modal-box .modal-header .close .ic{width:18px;height:18px;}
+.modal-box .modal-header .close:hover{
+  background:var(--bg-tab-active);
+  border-color:var(--gold);color:var(--gold);
+  transform:rotate(90deg);
+}
+.settings-group{margin:20px 0;}
+.settings-group label{
+  display:flex;align-items:center;gap:8px;
+  font-size:.9rem;font-weight:700;
+  color:var(--gold);margin-bottom:10px;
+}
+.settings-group label .ic{width:16px;height:16px;}
+.settings-group .options{display:flex;gap:8px;flex-wrap:wrap;}
+.settings-group .options button{
+  background:var(--bg-tab);
+  border:1px solid var(--border-gold);
+  border-radius:30px;padding:7px 16px;
+  color:var(--text-secondary);
+  font-family:inherit;font-size:.82rem;
+  cursor:pointer;transition:.3s;
+}
+.settings-group .options button:hover{
+  border-color:var(--gold);
+  background:var(--bg-tab-active);color:var(--gold);
+}
+.settings-group .options button.active{
+  border-color:var(--gold);
+  background:var(--bg-tab-active);color:var(--gold);
+}
+.settings-divider{border:none;border-top:1px solid var(--border-gold);margin:16px 0;}
+.settings-save-note{
+  margin-top:12px;padding-top:16px;
+  border-top:1px solid var(--border-gold);
+  text-align:center;color:var(--text-muted);
+  font-size:.72rem;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media(max-width:600px){
+  .grid{grid-template-columns:repeat(2,1fr);}
+  .bottom-nav{height:62px;padding:4px 0 10px;}
+  .nav-item{min-width:40px;padding:2px 8px;}
+  .nav-item .ic{width:20px;height:20px;}
+  .nav-item .nav-label{font-size:.5rem;}
+  :root{--bottom-nav-height:62px;}
+  .hero h1{font-size:1.4rem;}
+  .ayah-box .ayah{font-size:1.25rem;line-height:2.1rem;}
+  .search-box{flex-wrap:wrap;}
+  .search-box input{width:100%;}
+  .add-reminder{flex-direction:column;}
+  .add-reminder input,.add-reminder select{width:100%;}
+  .noor-title-svg{width:min(82vw,320px);}
+}
+@media(max-width:400px){
+  .bottom-nav{height:56px;padding:2px 0 8px;}
+  .nav-item .nav-label{display:none;}
+  .nav-item{min-width:36px;}
+  :root{--bottom-nav-height:56px;}
+  .grid{grid-template-columns:1fr 1fr;}
+  .grid button{padding:12px 6px;}
+  .grid button .grid-ic{width:36px;height:36px;}
+  .grid button .grid-ic .ic{width:20px;height:20px;}
+}
+
+@media(max-height:700px){
+  .welcome{padding-top:10px;padding-bottom:10px;}
+  .noor-title-svg{width:min(68vw,290px);max-height:25vh;}
+  .welcome-brand{margin-bottom:4px;}
+  .bismillah{margin-bottom:3px;font-size:.9rem;}
+  .ornament{margin:2px 0 5px;}
+  .ayah-box{padding:8px 12px;margin-bottom:6px;}
+  .ayah-box .ayah{font-size:1.05rem;line-height:1.7rem;margin-bottom:10px;}
+  .ayah-box .source{margin:0 0 5px;font-size:.62rem;}
+  .ayah-box .rule{margin:6px auto;}
+  .ayah-box .translation{font-size:.72rem;line-height:1.5;}
+  .ayah-box .translation-en{font-size:.58rem;line-height:1.35;}
+  .intro{font-size:.75rem;margin:3px 0 6px;line-height:1.45;}
+  .enter{min-height:38px;padding:7px 24px;font-size:.76rem;}
+  .bottom-note{bottom:22px;font-size:.58rem;}
+  .producer{bottom:4px;font-size:.55rem;}
+}
+
+@media(max-height:560px){
+  .noor-title-svg{width:min(57vw,240px);max-height:20vh;}
+  .bismillah{display:none;}
+  .ornament{display:none;}
+  .ayah-box{padding:6px 10px;border-radius:15px;margin-bottom:5px;}
+  .ayah-box .ayah{font-size:.9rem;line-height:1.45rem;margin-bottom:8px;}
+  .ayah-box .source{display:none;}
+  .ayah-box .rule{display:none;}
+  .ayah-box .translation{font-size:.65rem;line-height:1.3;}
+  .ayah-box .translation-en{display:none;}
+  .intro{font-size:.68rem;margin:2px 0 4px;}
+  .enter{min-height:34px;padding:5px 20px;font-size:.7rem;}
+  .enter .ic{width:13px;height:13px;}
+  .bottom-note{display:none;}
+  .producer{display:none;}
+}
+
+@media(max-width:340px){
+  .welcome{padding-left:10px;padding-right:10px;}
+  .noor-title-svg{width:62vw;}
+  .ayah-box{padding-left:8px;padding-right:8px;}
+  .ayah-box .ayah{font-size:.84rem;}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+
+.section-link{background:none;border:0;color:var(--gold);font:inherit;font-size:.8rem;cursor:pointer;padding:3px 0}
+.more-tools{margin-bottom:18px}
+.more-tool{width:100%;display:flex;align-items:center;gap:12px;text-align:right;background:var(--bg-card);border:1px solid var(--border-gold);border-radius:18px;padding:14px;color:var(--text-primary);cursor:pointer}
+.more-tool-icon{width:42px;height:42px;border-radius:13px;display:grid;place-items:center;background:var(--bg-tab-active);color:var(--gold);flex:0 0 auto}
+.more-tool-icon .ic{width:21px;height:21px}
+.more-tool span:nth-child(2){display:flex;flex-direction:column;gap:2px;flex:1}.more-tool small{color:var(--text-muted);font-size:.72rem}.more-arrow{font-size:25px;color:var(--gold)}
+.more-section-title{margin:18px 2px 9px;color:var(--gold);font-weight:700;font-size:.9rem}
+.all-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.all-link{display:flex;align-items:center;gap:8px;min-height:48px;padding:9px 10px;border:1px solid var(--border-gold);border-radius:14px;background:var(--bg-card);color:var(--text-primary);text-decoration:none;font-size:.78rem}
+.all-link .ic{width:18px;height:18px;color:var(--gold)}
+.guide-content{max-height:70vh;overflow:auto}.guide-item{padding:10px 0;border-bottom:1px solid var(--border-gold)}.guide-item b{color:var(--gold)}.guide-item p{margin:4px 0 0;color:var(--text-secondary);font-size:.8rem;line-height:1.9}.guide-note{margin-top:12px;padding:11px;border:1px solid var(--border-gold);border-radius:14px;color:var(--text-muted);font-size:.72rem;line-height:1.8}
+@media(max-width:420px){.all-links{grid-template-columns:1fr}}
+</style>
+</head>
+
+<body class="welcome-mode">
+
+<!-- WELCOME -->
+<section class="welcome" id="pageWelcome">
+  <div class="art" aria-hidden="true"></div>
+
+  <svg class="mosque" viewBox="0 0 400 200" preserveAspectRatio="xMidYMax meet" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <g fill="#d4af37">
+      <rect x="0" y="165" width="400" height="40"/>
+      <path d="M155 165 L155 118 Q155 82 200 62 Q245 82 245 118 L245 165 Z"/>
+      <path d="M200 50 L197 60 L203 60 Z"/>
+      <circle cx="200" cy="52" r="2.5"/>
+      <rect x="95" y="95" width="16" height="70"/>
+      <path d="M95 95 Q103 72 111 95 Z"/>
+      <path d="M103 68 L100 78 L106 78 Z"/>
+      <circle cx="103" cy="70" r="2"/>
+      <rect x="92" y="118" width="22" height="3"/>
+      <rect x="289" y="95" width="16" height="70"/>
+      <path d="M289 95 Q297 72 305 95 Z"/>
+      <path d="M297 68 L294 78 L300 78 Z"/>
+      <circle cx="297" cy="70" r="2"/>
+      <rect x="286" y="118" width="22" height="3"/>
+      <path d="M120 165 L120 138 Q120 115 145 108 Q170 115 170 138 L170 165 Z"/>
+      <path d="M230 165 L230 138 Q230 115 255 108 Q280 115 280 138 L280 165 Z"/>
+      <rect x="55" y="130" width="10" height="35"/>
+      <path d="M55 130 Q60 116 65 130 Z"/>
+      <rect x="335" y="130" width="10" height="35"/>
+      <path d="M335 130 Q340 116 345 130 Z"/>
+      <path d="M20 165 L20 148 Q20 132 38 128 Q56 132 56 148 L56 165 Z"/>
+      <path d="M344 165 L344 148 Q344 132 362 128 Q380 132 380 148 L380 165 Z"/>
+    </g>
+  </svg>
+
+  <div class="veil" aria-hidden="true"></div>
+
+  <div class="welcome-content">
+    <div class="welcome-brand">
+      <svg class="noor-title-svg" viewBox="0 0 400 340" xmlns="http://www.w3.org/2000/svg" aria-label="نور | NOOR">
+        <defs>
+          <linearGradient id="noorGold" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F8E9A8"/>
+            <stop offset="45%" stop-color="#E8C86A"/>
+            <stop offset="55%" stop-color="#D4AF37"/>
+            <stop offset="100%" stop-color="#8E6B24"/>
+          </linearGradient>
+          <linearGradient id="noorGold2" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stop-color="#F4E0A2"/>
+            <stop offset="100%" stop-color="#B8893A"/>
+          </linearGradient>
+        </defs>
+
+        <text x="200" y="160"
+              text-anchor="middle"
+              font-family="'Amiri', serif"
+              font-size="175"
+              font-weight="700"
+              fill="url(#noorGold)"
+              direction="rtl"
+              letter-spacing="-6">نور</text>
+
+        <text x="200" y="248"
+              text-anchor="middle"
+              font-family="'Cinzel', 'Times New Roman', serif"
+              font-size="30"
+              font-weight="600"
+              fill="url(#noorGold2)"
+              letter-spacing="16">NOOR</text>
+
+        <line x1="70" y1="270" x2="330" y2="270"
+              stroke="url(#noorGold2)"
+              stroke-width="1.3"
+              opacity="0.7"/>
+
+        <text x="200" y="310"
+              text-anchor="middle"
+              font-family="'Vazirmatn', sans-serif"
+              font-size="14"
+              fill="#b8893a"
+              letter-spacing="2">دعا • قرآن • زیارت • مناجات</text>
+      </svg>
+    </div>
+
+    <div class="bismillah">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</div>
+
+    <div class="ornament" aria-hidden="true">
+      <i></i>
+      <svg class="ic" viewBox="0 0 24 24"><path d="M12 3l1.8 5.4L19 10l-5.2 1.6L12 17l-1.8-5.4L5 10l5.2-1.6z"/></svg>
+      <i></i>
+    </div>
+
+    <div class="ayah-box">
+      <div class="ayah">أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ</div>
+      <div class="source">سورهٔ رعد • آیهٔ ۲۸</div>
+      <div class="rule"></div>
+      <div class="translation" id="welcomeTrans">آگاه باشید که با یاد خدا دل‌ها آرام می‌گیرد.</div>
+      <div class="translation-en" id="welcomeTransEn">Surely, in the remembrance of Allah do hearts find rest.</div>
+    </div>
+
+    <p class="intro" id="welcomeIntro">دعا را آغاز کن،<br>دل را به نور خدا بسپار.</p>
+
+    <button class="enter" id="enterBtn" type="button">
+      <span id="enterLabel">ورود به برنامه</span>
+      <svg class="ic" viewBox="0 0 24 24" aria-hidden="true">
+        <path d="M19 12H5"/>
+        <path d="M11 6L5 12L11 18"/>
+      </svg>
+    </button>
+  </div>
+
+  <div class="bottom-note" id="welcomeBottomNote">دعا • قرآن • زیارت • مناجات • معارف اهل‌بیت علیهم‌السلام</div>
+  <div class="producer">
+    <span id="welcomeProducerLabel">تهیه‌کننده</span>:
+    <strong id="welcomeProducerName">سید مقدس حسینی</strong>
+  </div>
+</section>
+
+<!-- HOME -->
+<div class="page" id="pageHome">
+  <header class="app-header">
+    <button class="circle" id="settingsBtn" aria-label="تنظیمات">
+      <svg class="ic" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    </button>
+    <div class="brand">
+      <strong>نـــور</strong>
+      <small id="headerSub">دعا • قرآن • زیارت • معارف</small>
+    </div>
+    <button class="circle" id="homeLangBtn" aria-label="زبان">
+      <span style="font-weight:700;font-size:.9rem">فا</span>
+    </button>
+  </header>
+
+  <section class="hero">
+    <div>
+      <small id="heroGreeting">السلام علیکم و رحمة الله</small>
+      <h1 id="heroTitle">امروز را با یاد خدا<br>آغاز کنیم</h1>
+      <p id="heroDesc">یک لحظه آرامش، یک دعا، یک قدم نزدیک‌تر به خدا</p>
+    </div>
+    <div class="hero-symbol">نـــور</div>
+  </section>
+
+  <div class="section-head">
+    <b id="sectionTodayLabel">امروز</b>
+    <button class="section-link" id="sectionTodayAll" type="button" onclick="openExternalPage('calendar.html')">مشاهده همه</button>
+  </div>
+  <section class="today" id="todayList"></section>
+
+  <div class="section-head">
+    <b id="sectionQuickLabel">دسترسی سریع</b>
+    <span id="sectionQuickCount">۱۲ بخش</span>
+  </div>
+  <section class="grid" id="quickGrid"></section>
+</div>
+
+<!-- SEARCH -->
+<div class="page" id="pageSearch">
+  <div class="page-header">
+    <button class="back" onclick="goBack()" aria-label="بازگشت">
+      <svg class="ic" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+    </button>
+    <h2 id="searchTitle">جستجو</h2>
+  </div>
+  <div class="search-box">
+    <input type="text" id="searchInput" placeholder="جستجو..." oninput="performSearch()">
+    <button onclick="performSearch()" aria-label="جستجو">
+      <svg class="ic" viewBox="0 0 24 24"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg>
+    </button>
+  </div>
+  <div class="search-results" id="searchResults"></div>
+</div>
+
+<!-- FAVORITES -->
+<div class="page" id="pageFavorites">
+  <div class="page-header">
+    <button class="back" onclick="goBack()" aria-label="بازگشت">
+      <svg class="ic" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+    </button>
+    <h2 id="favoritesTitle">نشان‌شده</h2>
+  </div>
+  <div class="favorites-list" id="favoritesList"></div>
+</div>
+
+<!-- REMINDER -->
+<div class="page" id="pageReminder">
+  <div class="page-header">
+    <button class="back" onclick="goBack()" aria-label="بازگشت">
+      <svg class="ic" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+    </button>
+    <h2 id="reminderTitle">یادآوری</h2>
+  </div>
+  <div class="reminder-list" id="reminderList"></div>
+  <div class="add-reminder">
+    <input type="text" id="reminderTitleInput" placeholder="عنوان یادآوری...">
+    <input type="time" id="reminderTime" value="06:00">
+    <select id="reminderType">
+      <option value="نماز">نماز</option>
+      <option value="دعا">دعا</option>
+      <option value="عمل">عمل روزانه</option>
+      <option value="سایر">سایر</option>
+    </select>
+    <button onclick="addReminder()">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></svg>
+      افزودن
+    </button>
+  </div>
+</div>
+
+<!-- MORE -->
+<div class="page" id="pageMore">
+  <div class="page-header">
+    <button class="back" onclick="goBack()" aria-label="بازگشت">
+      <svg class="ic" viewBox="0 0 24 24"><path d="m9 6 6 6-6 6"/></svg>
+    </button>
+    <h2 id="moreTitle">بیشتر</h2>
+  </div>
+
+  <div class="more-tools">
+  <button class="more-tool" type="button" id="openGuideBtn">
+    <span class="more-tool-icon"><svg class="ic" viewBox="0 0 24 24"><path d="M4 5c3-1 5 0 8 2v13c-3-2-5-3-8-2Z"/><path d="M20 5c-3-1-5 0-8 2v13c3-2 5-3 8-2Z"/><path d="M12 7v13"/></svg></span>
+    <span><strong>راهنمای برنامه</strong><small>آشنایی سریع با بخش‌ها و امکانات نور</small></span>
+    <span class="more-arrow">›</span>
+  </button>
+  <a class="more-tool" href="https://kabulbazarstore-ship-it.github.io/Contacts/" target="_blank" rel="noopener noreferrer" style="text-decoration:none;">
+    <span class="more-tool-icon"><svg class="ic" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c.6-3.2 2.5-5 6-5s5.4 1.8 6 5"/><path d="M16 11a3 3 0 1 0 0-6"/><path d="M16 15c2.7.2 4.3 1.8 5 5"/></svg></span>
+    <span><strong>برنامه مخاطبین</strong><small>دانلود و استفاده از برنامه مخاطبین</small></span>
+    <span class="more-arrow">›</span>
+  </a>
+  <div class="more-section-title">کتابخانه کامل بخش‌ها</div>
+  <div class="all-links" id="allLinks"></div>
+</div>
+
+<div class="producer-card">
+    <div class="producer-avatar">م</div>
+    <div class="name" id="producerName">سید مقدس حسینی</div>
+    <div class="role" id="producerRole">تهیه‌کننده و توسعه‌دهنده</div>
+
+    <div class="app-name">
+      <svg class="ic" viewBox="0 0 24 24">
+        <path d="M4 5c3-1 5 0 8 2v13c-3-2-5-3-8-2Z"/>
+        <path d="M20 5c-3-1-5 0-8 2v13c3-2 5-3 8-2Z"/>
+        <path d="M12 7v13"/>
+      </svg>
+      <span id="appNameLabel">نـــور | NOOR</span>
+    </div>
+
+    <div class="goal">
+      <div class="label">
+        <svg class="ic" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="12" r="5"/>
+          <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+        </svg>
+        هدف برنامه
+      </div>
+      <span id="goalText">ایجاد فضایی آرام و معنوی برای انس با خدا، دعا، قرآن، زیارت و معارف اهل‌بیت (ع).</span>
+    </div>
+
+    <div class="prayer-request">
+      <svg class="ic" viewBox="0 0 24 24">
+        <path d="M7 21V10c0-2 1-3 2-3l3-4 3 4c1 0 2 1 2 3v11"/>
+        <path d="M10 21v-5c0-1 .7-2 2-2s2 1 2 2v5"/>
+      </svg>
+      التماس دعا
+    </div>
+    <div class="prayer-parents" id="prayerParentsText">
+      از همهٔ کاربران گرامی درخواست دارم که برای<br>
+      <strong>پدر و مادر این بندهٔ حقیر</strong><br>
+      طلب مغفرت و رحمت نمایند.
+    </div>
+
+    <div class="contact">
+      <a class="contact-item" href="mailto:hussaini1185@gmail.com">
+        <svg class="ic" viewBox="0 0 24 24">
+          <rect x="3" y="5" width="18" height="14" rx="2"/>
+          <path d="m3 7 9 6 9-6"/>
+        </svg>
+        <span>hussaini1185@gmail.com</span>
+      </a>
+      <a class="contact-item" href="https://www.facebook.com/share/19RK1uE8Km/" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+        </svg>
+        <span>صفحهٔ فیسبوک</span>
+      </a>
+      <a class="contact-item" href="https://www.instagram.com/_aqazada313" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24">
+          <rect x="3" y="3" width="18" height="18" rx="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>
+        </svg>
+        <span>@_aqazada313</span>
+      </a>
+      <a class="contact-item" href="https://wa.me/93700000000" target="_blank" rel="noopener">
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M21 12a9 9 0 0 1-13 8l-5 1.5L4.5 16A9 9 0 1 1 21 12z"/>
+          <path d="M8.5 8.5c0 3 2 5.5 5 6.5 1.5.5 2.5 0 3-.8l.4-.7-2.2-1.2-.8.8c-1-.5-1.8-1.3-2.3-2.3l.8-.8L11 8l-.8.4c-.8.5-1.2 1.5-1.2 2.5z" fill="currentColor" stroke="none"/>
+        </svg>
+        <span>واتساپ</span>
+      </a>
+    </div>
+
+    <div class="copy" id="copyText">© ۱۴۰۴ – نور | NOOR</div>
+    <div class="version" id="versionText">نسخهٔ ۲٫۰ • تمامی حقوق محفوظ است.</div>
+  </div>
+</div>
+
+<!-- APP GUIDE -->
+<div class="modal-overlay" id="guideModal">
+  <div class="modal-box guide-box">
+    <div class="modal-header">
+      <h2><svg class="ic" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7" r="1" fill="currentColor"/></svg><span>راهنمای برنامه نور</span></h2>
+      <button class="close" id="closeGuide" aria-label="بستن"><svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg></button>
+    </div>
+    <div class="guide-content">
+      <div class="guide-item"><b>۱. خانه</b><p>از خانه می‌توانید محتوای امروز، دعا، قرآن، زیارات، احادیث و دیگر بخش‌های اصلی را مستقیم باز کنید.</p></div>
+      <div class="guide-item"><b>۲. جستجو</b><p>برای یافتن سریع دعا، آیه یا حدیث، عبارت موردنظر را وارد کنید.</p></div>
+      <div class="guide-item"><b>۳. نشان‌شده</b><p>مواردی را که در صفحات مختلف برنامه به‌عنوان برگزیده ذخیره می‌کنید، از این بخش دنبال کنید.</p></div>
+      <div class="guide-item"><b>۴. یادآوری</b><p>برای دعا، نماز، اعمال و کارهای معنوی یادآوری شخصی ثبت کنید.</p></div>
+      <div class="guide-item"><b>۵. تنظیمات</b><p>زبان، فونت، اندازه متن و حالت روشن یا تاریک را تغییر دهید؛ تنظیمات روی دستگاه ذخیره می‌شوند.</p></div>
+      <div class="guide-item"><b>۶. بازگشت</b><p>داخل صفحات مستقل، دکمه بازگشت همان صفحه را به‌کار ببرید تا دوباره به نور برگردید.</p></div>
+      <div class="guide-note">نور برای استفاده آسان، آرام و آفلاین طراحی می‌شود؛ بعضی امکانات مانند اعلان‌های واقعی یا نصب PWA ممکن است به اجرای برنامه روی یک آدرس وب/سرور نیاز داشته باشند.</div>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS -->
+<div class="modal-overlay" id="settingsModal">
+  <div class="modal-box">
+    <div class="modal-header">
+      <h2>
+        <svg class="ic" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="3"/>
+          <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+        </svg>
+        <span>تنظیمات</span>
+      </h2>
+      <button class="close" id="closeSettings" aria-label="بستن">
+        <svg class="ic" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+
+    <div class="settings-group">
+      <label>
+        <svg class="ic" viewBox="0 0 24 24">
+          <circle cx="12" cy="12" r="9"/>
+          <path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>
+        </svg>
+        زبان برنامه
+      </label>
+      <div class="options" id="langOptions">
+        <button data-lang="fa" class="active">فارسی</button>
+        <button data-lang="ps">پشتو</button>
+        <button data-lang="en">English</button>
+      </div>
+    </div>
+
+    <hr class="settings-divider">
+
+    <div class="settings-group">
+      <label>
+        <svg class="ic" viewBox="0 0 24 24"><path d="M4 20 12 4l8 16M7 14h10"/></svg>
+        فونت
+      </label>
+      <div class="options" id="fontOptions">
+        <button data-font="vazir" class="active">وزیرمتن</button>
+        <button data-font="shabnam">شبنم</button>
+        <button data-font="sahel">ساحل</button>
+        <button data-font="amiri">امیری</button>
+        <button data-font="naskh">نسخ</button>
+        <button data-font="uthman">عثمان طه</button>
+      </div>
+    </div>
+
+    <hr class="settings-divider">
+
+    <div class="settings-group">
+      <label>
+        <svg class="ic" viewBox="0 0 24 24"><path d="M4 20 12 4l8 16"/></svg>
+        اندازهٔ متن
+      </label>
+      <div class="options" id="fsOptions">
+        <button data-fs="sm">کوچک</button>
+        <button data-fs="md" class="active">متوسط</button>
+        <button data-fs="lg">بزرگ</button>
+        <button data-fs="xl">بزرگ‌تر</button>
+      </div>
+    </div>
+
+    <hr class="settings-divider">
+
+    <div class="settings-group">
+      <label>
+        <svg class="ic" viewBox="0 0 24 24">
+          <path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5z"/>
+        </svg>
+        حالت نمایش
+      </label>
+      <div class="options" id="themeOptions">
+        <button data-theme="dark" class="active">تاریک</button>
+        <button data-theme="light">روشن</button>
+      </div>
+    </div>
+
+    <div class="settings-save-note">تغییرات به‌صورت خودکار ذخیره می‌شوند.</div>
+  </div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav" id="bottomNav" style="display:none">
+  <button class="nav-item" data-page="search" onclick="showPage('search')" type="button">
+    <span class="nav-icon-wrap">
+      <svg class="ic" viewBox="0 0 24 24">
+        <circle cx="10.8" cy="10.8" r="6.5"/>
+        <path d="m16 16 5 5"/>
+      </svg>
+    </span>
+    <span class="nav-label" data-t="nav-search">جستجو</span>
+  </button>
+  <button class="nav-item" data-page="favorites" onclick="showPage('favorites')" type="button">
+    <span class="nav-icon-wrap">
+      <svg class="ic" viewBox="0 0 24 24">
+        <path d="m12 3 2.7 5.9 6.3.6-4.8 4.4 1.4 6.1L12 17.8 6.4 20l1.4-6.1L3 9.5l6.3-.6z"/>
+      </svg>
+    </span>
+    <span class="nav-label" data-t="nav-favorites">نشان‌شده</span>
+  </button>
+  <button class="nav-item active" data-page="home" onclick="showPage('home')" type="button">
+    <span class="nav-icon-wrap">
+      <svg class="ic" viewBox="0 0 24 24">
+        <path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/>
+      </svg>
+    </span>
+    <span class="nav-label" data-t="nav-home">خانه</span>
+  </button>
+  <button class="nav-item" data-page="reminder" onclick="showPage('reminder')" type="button">
+    <span class="nav-icon-wrap">
+      <svg class="ic" viewBox="0 0 24 24">
+        <path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/>
+        <path d="M10 21h4"/>
+      </svg>
+    </span>
+    <span class="nav-label" data-t="nav-reminder">یادآوری</span>
+    <span class="badge" id="reminderBadge" style="display:none">0</span>
+  </button>
+  <button class="nav-item" data-page="more" onclick="showPage('more')" type="button">
+    <span class="nav-icon-wrap">
+      <svg class="ic" viewBox="0 0 24 24"><path d="M5 7h14M5 12h14M5 17h14"/></svg>
+    </span>
+    <span class="nav-label" data-t="nav-more">بیشتر</span>
+  </button>
+</nav>
+
+<script>
+/* ICONS */
+function ic(name, cls='ic'){
+  const map = {
+    dua:`<path d="M7 21V10c0-2 1-3 2-3l3-4 3 4c1 0 2 1 2 3v11"/><path d="M10 21v-5c0-1 .7-2 2-2s2 1 2 2v5"/>`,
+    quran:`<path d="M4 5c3-1 5 0 8 2v13c-3-2-5-3-8-2Z"/><path d="M20 5c-3-1-5 0-8 2v13c3-2 5-3 8-2Z"/><path d="M12 7v13"/>`,
+    ziyarat:`<path d="m4 10 8-5 8 5v9H4Z"/><path d="M4 10h16"/><path d="M8 13h8v6H8Z"/>`,
+    hadith:`<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3Z"/><path d="M8 8h7M8 12h7M8 16h5"/>`,
+    munajat:`<path d="M7 20c0-5 1-8 5-11 4 3 5 6 5 11"/><path d="M9 7c1.2 1.4 2.2 2 3 2s1.8-.6 3-2"/><path d="M12 4v5"/>`,
+    azkar:`<circle cx="12" cy="5" r="2"/><circle cx="17.5" cy="8" r="2"/><circle cx="19" cy="14" r="2"/><circle cx="15" cy="19" r="2"/><circle cx="9" cy="19" r="2"/><circle cx="5" cy="14" r="2"/><circle cx="6.5" cy="8" r="2"/>`,
+    sahifeh:`<path d="M5 5h11a3 3 0 0 1 3 3v11H8a3 3 0 0 1-3-3Z"/><path d="M8 9h7M8 13h7M8 17h5"/>`,
+    imam:`<path d="M5 19h14M7 19v-8h10v8"/><path d="M5 11l7-5 7 5"/><path d="M10 19v-4h4v4"/><path d="M12 4v2"/>`,
+    prayer:`<path d="M4 19h16M6 19v-7h12v7"/><path d="M8 12V9h8v3"/><path d="M12 4v5"/>`,
+    calendar:`<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/><path d="M8 13h3M13 13h3M8 16h3"/>`,
+    amal:`<path d="M6 3h12v18l-6-3-6 3Z"/><path d="M9 8h6M9 12h6"/>`,
+    favorite:`<path d="M20 8.8c0 5.1-8 10.2-8 10.2S4 13.9 4 8.8A4.1 4.1 0 0 1 8.2 5c1.6 0 3 1 3.8 2.2C12.8 6 14.2 5 15.8 5A4.1 4.1 0 0 1 20 8.8Z"/>`,
+    star:`<path d="m12 3 2.7 5.9 6.3.6-4.8 4.4 1.4 6.1L12 17.8 6.4 20l1.4-6.1L3 9.5l6.3-.6z"/>`,
+    search:`<circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/>`,
+    verse:`<path d="M5 4h11a3 3 0 0 1 3 3v13H8a3 3 0 0 1-3-3Z"/><path d="M9 9h5M9 13h5"/>`,
+    hadithToday:`<path d="M4 4h16v16H4Z"/><path d="M8 8h8M8 12h8M8 16h5"/>`,
+    calendarToday:`<rect x="4" y="5" width="16" height="15" rx="2"/><path d="M8 3v4M16 3v4M4 9h16"/>`,
+    plus:`<path d="M12 5v14M5 12h14"/>`,
+    trash:`<path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14"/>`,
+    bell:`<path d="M18 9a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9"/><path d="M10 21h4"/>`,
+    mail:`<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>`,
+    facebook:`<path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>`,
+    instagram:`<rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/>`,
+    whatsapp:`<path d="M21 12a9 9 0 0 1-13 8l-5 1.5L4.5 16A9 9 0 1 1 21 12z"/><path d="M8.5 8.5c0 3 2 5.5 5 6.5 1.5.5 2.5 0 3-.8l.4-.7-2.2-1.2-.8.8c-1-.5-1.8-1.3-2.3-2.3l.8-.8L11 8l-.8.4c-.8.5-1.2 1.5-1.2 2.5z" fill="currentColor" stroke="none"/>`,
+    heart:`<path d="M20 8.8c0 5.1-8 10.2-8 10.2S4 13.9 4 8.8A4.1 4.1 0 0 1 8.2 5c1.6 0 3 1 3.8 2.2C12.8 6 14.2 5 15.8 5A4.1 4.1 0 0 1 20 8.8Z"/>`,
+    x:`<path d="M6 6l12 12M18 6 6 18"/>`,
+    globe:`<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/>`,
+    target:`<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/>`,
+    settings:`<circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>`,
+    home:`<path d="m3 10 9-7 9 7v10a1 1 0 0 1-1 1h-5v-6H9v6H4a1 1 0 0 1-1-1Z"/>`,
+    clock:`<circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/>`
+  };
+  return `<svg class="${cls}" viewBox="0 0 24 24" aria-hidden="true">${map[name]||''}</svg>`;
+}
+
+/* ============================================================
+   HOME ITEMS — اصلاح‌شده
+   ============================================================ */
+const TODAY_ITEMS = [
+  {icon:'dua',           key:'today-dua',      titleKey:'today-dua-title',      link:'faraj.html'},
+  {icon:'verse',         key:'today-ayah',     titleKey:'today-ayah-title',     link:'aramesh.html'},
+  {icon:'hadithToday',   key:'today-hadith',   titleKey:'today-hadith-title',   link:'sokan.html'},
+  {icon:'calendarToday', key:'today-occasion', titleKey:'today-occasion-title', link:'calendaar.html'}
+];
+
+const QUICK_ITEMS = [
+  {icon:'dua',      key:'grid-dua',       descKey:'grid-dua-desc',       link:'doa.html'},
+  {icon:'quran',    key:'grid-quran',     descKey:'grid-quran-desc',     link:'quran.html'},
+  {icon:'ziyarat',  key:'grid-ziyarat',   descKey:'grid-ziyarat-desc',   link:'ziyarat.html'},
+  {icon:'hadith',   key:'grid-hadith',    descKey:'grid-hadith-desc',    link:'hadith.html'},
+  {icon:'munajat',  key:'grid-monajat',   descKey:'grid-monajat-desc',   link:'monajat.html'},
+  {icon:'azkar',    key:'grid-zekr',      descKey:'grid-zekr-desc',      link:'zekr.html'},
+  {icon:'sahifeh',  key:'grid-sahifeh',   descKey:'grid-sahifeh-desc',   link:'sahifeh.html'},
+  {icon:'imam',     key:'grid-imam',      descKey:'grid-imam-desc',      link:'imam.html'},
+  {icon:'prayer',   key:'grid-taqibat',   descKey:'grid-taqibat-desc',   link:'taqibat.html'},
+  {icon:'calendar', key:'grid-calendar',  descKey:'grid-calendar-desc',  link:'calendar.html'},
+  {icon:'amal',     key:'grid-amal',      descKey:'grid-amal-desc',      link:'amal.html'},
+  {icon:'favorite', key:'grid-favorites', descKey:'grid-favorites-desc', link:'favorite.html'}
+];
+
+function renderHome(){
+  const t = translations[currentLang];
+  const todayList = document.getElementById('todayList');
+  todayList.innerHTML = TODAY_ITEMS.map(it=>`
+    <article onclick="openExternalPage('${it.link}')">
+      <span class="today-ic">${ic(it.icon)}</span>
+      <div class="info">
+        <small>${t[it.key]}</small>
+        <b>${t[it.titleKey]}</b>
+      </div>
+      <span class="go">${t['view']}</span>
+    </article>
+  `).join('');
+
+  const grid = document.getElementById('quickGrid');
+  grid.innerHTML = QUICK_ITEMS.map(it=>`
+    <button onclick="openExternalPage('${it.link}')" type="button">
+      <span class="grid-ic">${ic(it.icon)}</span>
+      <b>${t[it.key]}</b>
+      <small>${t[it.descKey]}</small>
+    </button>
+  `).join('');
+}
+
+/* ============================================================
+   STATE MANAGEMENT
+   ============================================================ */
+const NavState = {
+  KEY_ENTERED: 'noor_entered',
+  KEY_PAGE: 'noor_current_page',
+  KEY_HISTORY: 'noor_page_history',
+
+  markEntered(){ try { sessionStorage.setItem(this.KEY_ENTERED, '1'); } catch(e){} },
+  isEntered(){ try { return sessionStorage.getItem(this.KEY_ENTERED) === '1'; } catch(e){ return false; } },
+  savePage(pageId){ try { sessionStorage.setItem(this.KEY_PAGE, pageId); } catch(e){} },
+  getPage(){ try { return sessionStorage.getItem(this.KEY_PAGE) || 'home'; } catch(e){ return 'home'; } },
+  getHistory(){
+    try { return JSON.parse(sessionStorage.getItem(this.KEY_HISTORY) || '[]'); }
+    catch(e){ return []; }
+  },
+  pushHistory(pageId){
+    try {
+      const h = this.getHistory();
+      if (h[h.length-1] !== pageId) h.push(pageId);
+      sessionStorage.setItem(this.KEY_HISTORY, JSON.stringify(h));
+    } catch(e){}
+  },
+  popHistory(){
+    try {
+      const h = this.getHistory();
+      const prev = h.pop();
+      sessionStorage.setItem(this.KEY_HISTORY, JSON.stringify(h));
+      return prev || null;
+    } catch(e){ return null; }
+  },
+  clearHistory(){ try { sessionStorage.setItem(this.KEY_HISTORY, '[]'); } catch(e){} },
+};
+
+/* ============================================================
+   NAVIGATION — مرحله‌ای
+   ============================================================ */
+function noorPageUrl(file){
+  const name = String(file || '').trim();
+  if (!name) return '#';
+  // All application pages live beside index.html inside the Noor-App folder.
+  // Using URL resolution avoids the previous /Noor-App/ path duplication that
+  // could produce Not Found in Chrome when the app was opened locally.
+  try { return new URL('./' + name, window.location.href).href; }
+  catch(e) { return './' + name; }
+}
+
+function openExternalPage(url){
+  if (!url) return;
+  const active = document.querySelector('.page.active');
+  if (active){
+    const pageId = active.id.replace('page','').toLowerCase();
+    NavState.savePage(pageId);
+  } else {
+    NavState.savePage('home');
+  }
+  NavState.markEntered();
+  try {
+    const clean = String(url).split('#')[0];
+    window.location.assign(noorPageUrl(clean));
+  } catch(e) {
+    window.location.href = String(url);
+  }
+}
+
+function showPage(pageId, pushToHistory = true){
+  if (pageId !== 'welcome'){
+    NavState.markEntered();
+    document.body.classList.remove('welcome-mode');
+  }
+  if (pushToHistory){
+    const active = document.querySelector('.page.active');
+    if (active){
+      const currentId = active.id.replace('page','').toLowerCase();
+      if (currentId !== pageId) NavState.pushHistory(currentId);
+    }
+  }
+  document.querySelectorAll('.page').forEach(el=>el.classList.remove('active'));
+  const target = document.getElementById('page' + pageId.charAt(0).toUpperCase() + pageId.slice(1));
+  if (target) target.classList.add('active');
+
+  document.querySelectorAll('.nav-item').forEach(btn=>{
+    btn.classList.remove('active');
+    if (btn.dataset.page === pageId) btn.classList.add('active');
+  });
+
+  const welcome = document.getElementById('pageWelcome');
+  const bottomNav = document.getElementById('bottomNav');
+  if (pageId === 'welcome'){
+    document.body.classList.add('welcome-mode');
+    if (welcome) welcome.style.display = 'flex';
+    if (bottomNav) bottomNav.style.display = 'none';
+  } else {
+    document.body.classList.remove('welcome-mode');
+    if (welcome) welcome.style.display = 'none';
+    if (bottomNav) bottomNav.style.display = 'flex';
+  }
+  NavState.savePage(pageId);
+  window.scrollTo({top:0, behavior:'auto'});
+}
+
+function goBack(){
+  const prev = NavState.popHistory();
+  if (prev && prev !== 'welcome'){
+    showPage(prev, false);
+  } else {
+    NavState.clearHistory();
+    showPage('home', false);
+  }
+}
+
+function enterApp(){
+  NavState.markEntered();
+  NavState.clearHistory();
+  NavState.savePage('home');
+  showPage('home', false);
+}
+
+document.getElementById('enterBtn').addEventListener('click', enterApp);
+
+/* BOOT */
+(function boot(){
+  const welcome = document.getElementById('pageWelcome');
+  const bottomNav = document.getElementById('bottomNav');
+  if (NavState.isEntered()){
+    const savedPage = NavState.getPage() || 'home';
+    const validPages = ['home','search','favorites','reminder','more'];
+    const targetPage = validPages.includes(savedPage) ? savedPage : 'home';
+    welcome.style.display = 'none';
+    bottomNav.style.display = 'flex';
+    document.body.classList.remove('welcome-mode');
+    showPage(targetPage, false);
+  } else {
+    welcome.style.display = 'flex';
+    bottomNav.style.display = 'none';
+    document.body.classList.add('welcome-mode');
+    document.querySelectorAll('.page').forEach(el => el.classList.remove('active'));
+  }
+})();
+
+/* SETTINGS MODAL */
+const settingsModal = document.getElementById('settingsModal');
+document.getElementById('settingsBtn').addEventListener('click', ()=>settingsModal.classList.add('open'));
+document.getElementById('closeSettings').addEventListener('click', ()=>settingsModal.classList.remove('open'));
+settingsModal.addEventListener('click', (e)=>{ if(e.target === e.currentTarget) settingsModal.classList.remove('open'); });
+document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') settingsModal.classList.remove('open'); });
+
+/* THEME */
+let currentTheme = localStorage.getItem('noor_theme') || 'dark';
+function applyTheme(theme){
+  currentTheme = theme;
+  document.body.classList.toggle('light-mode', theme === 'light');
+  document.body.classList.toggle('dark-mode', theme === 'dark');
+  localStorage.setItem('noor_theme', theme);
+  const meta = document.querySelector('meta[name="theme-color"]');
+  if(meta) meta.setAttribute('content', theme === 'light' ? '#fcf9f2' : '#0b0e1a');
+  document.querySelectorAll('#themeOptions button').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.theme === theme);
+  });
+}
+document.querySelectorAll('#themeOptions button').forEach(btn=>{
+  btn.addEventListener('click', function(){ applyTheme(this.dataset.theme); });
+});
+applyTheme(currentTheme);
+
+/* FONT */
+let currentFont = localStorage.getItem('noor_font') || 'vazir';
+function applyFont(font){
+  currentFont = font;
+  document.body.classList.remove('font-vazir','font-amiri','font-naskh','font-shabnam','font-sahel','font-uthman');
+  document.body.classList.add('font-' + font);
+  localStorage.setItem('noor_font', font);
+  document.querySelectorAll('#fontOptions button').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.font === font);
+  });
+}
+document.querySelectorAll('#fontOptions button').forEach(btn=>{
+  btn.addEventListener('click', function(){ applyFont(this.dataset.font); });
+});
+applyFont(currentFont);
+
+/* FONT SIZE */
+let currentFs = localStorage.getItem('noor_fs') || 'md';
+function applyFs(fs){
+  currentFs = fs;
+  document.body.classList.remove('fs-sm','fs-md','fs-lg','fs-xl');
+  document.body.classList.add('fs-' + fs);
+  localStorage.setItem('noor_fs', fs);
+  document.querySelectorAll('#fsOptions button').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.fs === fs);
+  });
+}
+document.querySelectorAll('#fsOptions button').forEach(btn=>{
+  btn.addEventListener('click', function(){ applyFs(this.dataset.fs); });
+});
+applyFs(currentFs);
+
+/* LANGUAGE */
+let currentLang = localStorage.getItem('noor_lang') || 'fa';
+
+const translations = {
+  fa:{
+    'appSub':'دعا • قرآن • زیارت • معارف','heroGreeting':'السلام علیکم و رحمة الله',
+    'heroTitle':'امروز را با یاد خدا<br>آغاز کنیم','heroDesc':'یک لحظه آرامش، یک دعا، یک قدم نزدیک‌تر به خدا',
+    'sectionToday':'امروز','sectionTodayAll':'مشاهده همه','sectionQuick':'دسترسی سریع','sectionQuickCount':'۱۲ بخش',
+    'today-dua':'دعای امروز','today-dua-title':'دعای فرج','today-ayah':'آیهٔ امروز','today-ayah-title':'آرامش با یاد خدا',
+    'today-hadith':'حدیث امروز','today-hadith-title':'سخن نورانی','today-occasion':'مناسبت امروز','today-occasion-title':'تقویم و اعمال',
+    'view':'مشاهده','grid-dua':'دعاها','grid-dua-desc':'روزانه','grid-quran':'قرآن','grid-quran-desc':'سوره‌ها',
+    'grid-ziyarat':'زیارات','grid-ziyarat-desc':'اهل‌بیت','grid-hadith':'احادیث','grid-hadith-desc':'روایات',
+    'grid-monajat':'مناجات','grid-monajat-desc':'منتخب','grid-zekr':'اذکار','grid-zekr-desc':'تسبیح',
+    'grid-sahifeh':'صحیفه','grid-sahifeh-desc':'۵۴ دعا','grid-imam':'امام زمان','grid-imam-desc':'دعا',
+    'grid-taqibat':'تعقیبات','grid-taqibat-desc':'نماز','grid-calendar':'تقویم','grid-calendar-desc':'مناسبت',
+    'grid-amal':'اعمال','grid-amal-desc':'ایام','grid-favorites':'برگزیده‌ها','grid-favorites-desc':'ذخیره',
+    'nav-home':'خانه','nav-search':'جستجو','nav-favorites':'نشان‌شده','nav-reminder':'یادآوری','nav-more':'بیشتر',
+    'searchTitle':'جستجو','searchPlaceholder':'جستجو در دعاها، احادیث و قرآن...',
+    'searchEmpty':'عبارت مورد نظر را وارد کنید تا نتایج نمایش داده شود.','searchNoResult':'نتیجه‌ای برای «{query}» یافت نشد.',
+    'favoritesTitle':'نشان‌شده','favoritesEmpty':'هنوز هیچ موردی به برگزیده‌ها اضافه نشده است.',
+    'reminderTitle':'یادآوری','reminderPlaceholder':'عنوان یادآوری (مثلاً: نماز صبح)','reminderAdd':'افزودن',
+    'reminderEmpty':'یادآوری‌ای ثبت نشده است. یک یادآوری جدید اضافه کنید.','reminderActive':'فعال','reminderInactive':'غیرفعال',
+    'moreTitle':'بیشتر','producerName':'سید مقدس حسینی','producerRole':'تهیه‌کننده و توسعه‌دهنده','appName':'نـــور | NOOR',
+    'goalLabel':'هدف برنامه','goalText':'ایجاد فضایی آرام و معنوی برای انس با خدا، دعا، قرآن، زیارت و معارف اهل‌بیت (ع).',
+    'prayerRequest':'التماس دعا','prayerParents':'از همهٔ کاربران گرامی درخواست دارم که برای<br><strong>پدر و مادر این بندهٔ حقیر</strong><br>طلب مغفرت و رحمت نمایند.',
+    'copy':'© ۱۴۰۴ – نور | NOOR','version':'نسخهٔ ۲٫۰ • تمامی حقوق محفوظ است.',
+    'welcomeIntro':'دعا را آغاز کن،<br>دل را به نور خدا بسپار.','welcomeEnter':'ورود به برنامه',
+    'welcomeTrans':'آگاه باشید که با یاد خدا دل‌ها آرام می‌گیرد.','welcomeTransEn':'Surely, in the remembrance of Allah do hearts find rest.',
+    'welcomeBottom':'دعا • قرآن • زیارت • مناجات • معارف اهل‌بیت علیهم‌السلام','producerLabel':'تهیه‌کننده'
+  },
+  ps:{
+    'appSub':'دعا • قرآن • زیارت • معارف','heroGreeting':'السلام علیکم و رحمة الله',
+    'heroTitle':'نن ورځ د خدای په یاد<br>پیل کړو','heroDesc':'یوه شیبه آرامښت، یو دعا، یو قدم خدای ته نږدې',
+    'sectionToday':'نن','sectionTodayAll':'ټول وګورئ','sectionQuick':'چټک لاسرسی','sectionQuickCount':'۱۲ برخې',
+    'today-dua':'د نن دعا','today-dua-title':'د فرج دعا','today-ayah':'د نن آیت','today-ayah-title':'د خدای په یاد آرامښت',
+    'today-hadith':'د نن حدیث','today-hadith-title':'روښانه وینا','today-occasion':'د نن مناسبت','today-occasion-title':'تقویم او اعمال',
+    'view':'وګورئ','grid-dua':'دعاګانې','grid-dua-desc':'ورځنی','grid-quran':'قرآن','grid-quran-desc':'سورتونه',
+    'grid-ziyarat':'زیارات','grid-ziyarat-desc':'اهل‌بیت','grid-hadith':'احادیث','grid-hadith-desc':'روایتونه',
+    'grid-monajat':'مناجات','grid-monajat-desc':'ټاکل شوي','grid-zekr':'اذکار','grid-zekr-desc':'تسبیح',
+    'grid-sahifeh':'صحیفه','grid-sahifeh-desc':'۵۴ دعاګانې','grid-imam':'امام زمان','grid-imam-desc':'دعا',
+    'grid-taqibat':'تعقیبات','grid-taqibat-desc':'لمونځ','grid-calendar':'تقویم','grid-calendar-desc':'مناسبت',
+    'grid-amal':'اعمال','grid-amal-desc':'ایام','grid-favorites':'خوښ شوي','grid-favorites-desc':'ذخیره',
+    'nav-home':'کور','nav-search':'لټون','nav-favorites':'نښه شوي','nav-reminder':'یادونه','nav-more':'نور',
+    'searchTitle':'لټون','searchPlaceholder':'په دعاګانو، احادیثو او قرآن کې لټون...',
+    'searchEmpty':'خپله لټون ولیکئ ترڅو پایلې ښکاره شي.','searchNoResult':'د «{query}» لپاره پایله ونه موندل شوه.',
+    'favoritesTitle':'نښه شوي','favoritesEmpty':'تر اوسه هېڅ شی نښه شوی نه دی.',
+    'reminderTitle':'یادونه','reminderPlaceholder':'د یادونې سرلیک...','reminderAdd':'زیاتول',
+    'reminderEmpty':'هیڅ یادونه نشته.','reminderActive':'فعال','reminderInactive':'غیر فعال',
+    'moreTitle':'نور','producerName':'سید مقدس حسینی','producerRole':'جوړونکی او پراختیا کوونکی','appName':'نـــور | NOOR',
+    'goalLabel':'د اپ هدف','goalText':'د خدای، دعا، قرآن، زیارت او د اهل‌بیت (ع) معارف سره د اړیکې لپاره یو آرام او روحاني چاپیریال رامنځته کول.',
+    'prayerRequest':'دعا غواړم','prayerParents':'له ټولو کاروونکو غوښتنه کوم چې د<br><strong>دې حقیر بنده مور او پلار</strong><br>لپاره د مغفرت او رحمت دعا وکړي.',
+    'copy':'© ۱۴۰۴ – نور | NOOR','version':'نسخه ۲٫۰ • ټول حقوق خوندي دي.',
+    'welcomeIntro':'دعا پیل کړه،<br>زړه د خدای نور ته وسپاره.','welcomeEnter':'اپ ته ننوځه',
+    'welcomeTrans':'پوه شه چې یوازې د خدای په یاد زړونه آرام کیږي.','welcomeTransEn':'Surely, in the remembrance of Allah do hearts find rest.',
+    'welcomeBottom':'دعا • قرآن • زیارت • مناجات • د اهل‌بیت (ع) معارف','producerLabel':'جوړونکی'
+  },
+  en:{
+    'appSub':'Prayer • Quran • Ziyarat • Knowledge','heroGreeting':'Peace be upon you and Allah\'s mercy',
+    'heroTitle':'Let us begin today<br>with the remembrance of God','heroDesc':'A moment of peace, a prayer, a step closer to God',
+    'sectionToday':'Today','sectionTodayAll':'View all','sectionQuick':'Quick access','sectionQuickCount':'12 sections',
+    'today-dua':"Today's Dua",'today-dua-title':'Dua al-Faraj','today-ayah':"Today's Verse",'today-ayah-title':'Peace in God\'s remembrance',
+    'today-hadith':"Today's Hadith",'today-hadith-title':'Radiant words','today-occasion':"Today's occasion",'today-occasion-title':'Calendar & practices',
+    'view':'View','grid-dua':'Duas','grid-dua-desc':'Daily','grid-quran':'Quran','grid-quran-desc':'Surahs',
+    'grid-ziyarat':'Ziyarat','grid-ziyarat-desc':'Ahlulbayt','grid-hadith':'Hadiths','grid-hadith-desc':'Narrations',
+    'grid-monajat':'Munajat','grid-monajat-desc':'Selected','grid-zekr':'Dhikr','grid-zekr-desc':'Tasbih',
+    'grid-sahifeh':'Sahifah','grid-sahifeh-desc':'54 duas','grid-imam':'Imam Zaman','grid-imam-desc':'Dua',
+    'grid-taqibat':'Post-prayer','grid-taqibat-desc':'Practices','grid-calendar':'Calendar','grid-calendar-desc':'Events',
+    'grid-amal':'Practices','grid-amal-desc':'Special days','grid-favorites':'Favorites','grid-favorites-desc':'Saved',
+    'nav-home':'Home','nav-search':'Search','nav-favorites':'Favorites','nav-reminder':'Reminders','nav-more':'More',
+    'searchTitle':'Search','searchPlaceholder':'Search in prayers, hadiths and Quran...',
+    'searchEmpty':'Enter a term to see results.','searchNoResult':'No results found for "{query}".',
+    'favoritesTitle':'Favorites','favoritesEmpty':'No favorites added yet.',
+    'reminderTitle':'Reminders','reminderPlaceholder':'Reminder title...','reminderAdd':'Add',
+    'reminderEmpty':'No reminders. Add a new one.','reminderActive':'Active','reminderInactive':'Inactive',
+    'moreTitle':'More','producerName':'Seyyed Moghaddas Hosseini','producerRole':'Producer & Developer','appName':'Noor | NOOR',
+    'goalLabel':'App Goal','goalText':'Creating a peaceful spiritual space for connecting with God, prayer, Quran, Ziyarat, and the teachings of the Ahlulbayt (AS).',
+    'prayerRequest':'Please pray for me','prayerParents':'I kindly request all dear users to pray for<br><strong>my beloved parents</strong><br>and ask for divine mercy and forgiveness.',
+    'copy':'© 2025 – Noor | NOOR','version':'Version 2.0 • All rights reserved.',
+    'welcomeIntro':'Begin your prayer,<br>surrender your heart to God\'s light.','welcomeEnter':'Enter app',
+    'welcomeTrans':'Surely, in the remembrance of Allah do hearts find rest.','welcomeTransEn':'Surely, in the remembrance of Allah do hearts find rest.',
+    'welcomeBottom':'Prayer • Quran • Ziyarat • Munajat • Teachings of Ahlulbayt (AS)','producerLabel':'Produced by'
+  }
+};
+
+function applyLanguage(lang){
+  currentLang = lang;
+  localStorage.setItem('noor_lang', lang);
+  const t = translations[lang] || translations.fa;
+
+  document.querySelectorAll('#langOptions button').forEach(btn=>{
+    btn.classList.toggle('active', btn.dataset.lang === lang);
+  });
+  document.getElementById('homeLangBtn').innerHTML =
+    `<span style="font-weight:700;font-size:.9rem">${lang==='fa'?'فا':lang==='ps'?'پښ':'EN'}</span>`;
+
+  document.getElementById('welcomeIntro').innerHTML = t['welcomeIntro'];
+  document.getElementById('welcomeTrans').textContent = t['welcomeTrans'];
+  document.getElementById('welcomeTransEn').textContent = t['welcomeTransEn'];
+  document.getElementById('enterLabel').textContent = t['welcomeEnter'];
+  document.getElementById('welcomeBottomNote').textContent = t['welcomeBottom'];
+  document.getElementById('welcomeProducerLabel').textContent = t['producerLabel'];
+  document.getElementById('welcomeProducerName').textContent = t['producerName'];
+
+  document.getElementById('headerSub').textContent = t['appSub'];
+  document.getElementById('heroGreeting').textContent = t['heroGreeting'];
+  document.getElementById('heroTitle').innerHTML = t['heroTitle'];
+  document.getElementById('heroDesc').textContent = t['heroDesc'];
+  document.getElementById('sectionTodayLabel').textContent = t['sectionToday'];
+  document.getElementById('sectionTodayAll').textContent = t['sectionTodayAll'];
+  document.getElementById('sectionQuickLabel').textContent = t['sectionQuick'];
+  document.getElementById('sectionQuickCount').textContent = t['sectionQuickCount'];
+
+  document.querySelectorAll('.nav-label').forEach(el=>{
+    el.textContent = t[el.dataset.t];
+  });
+
+  document.getElementById('searchTitle').textContent = t['searchTitle'];
+  document.getElementById('searchInput').placeholder = t['searchPlaceholder'];
+  document.getElementById('favoritesTitle').textContent = t['favoritesTitle'];
+  document.getElementById('reminderTitle').textContent = t['reminderTitle'];
+  document.getElementById('reminderTitleInput').placeholder = t['reminderPlaceholder'];
+  document.querySelector('.add-reminder button').innerHTML =
+    ic('plus','ic') + ' ' + t['reminderAdd'];
+  document.getElementById('moreTitle').textContent = t['moreTitle'];
+
+  document.getElementById('producerName').textContent = t['producerName'];
+  document.getElementById('producerRole').textContent = t['producerRole'];
+  document.getElementById('appNameLabel').textContent = t['appName'];
+  document.querySelector('.goal .label').innerHTML = ic('target','ic') + ' ' + t['goalLabel'];
+  document.getElementById('goalText').textContent = t['goalText'];
+  document.querySelector('.prayer-request').innerHTML =
+    ic('heart','ic') + ' ' + t['prayerRequest'];
+  document.getElementById('prayerParentsText').innerHTML = t['prayerParents'];
+  document.getElementById('copyText').textContent = t['copy'];
+  document.getElementById('versionText').textContent = t['version'];
+
+  renderHome();
+  renderFavorites();
+  renderReminders();
+}
+
+document.querySelectorAll('#langOptions button').forEach(btn=>{
+  btn.addEventListener('click', function(){ applyLanguage(this.dataset.lang); });
+});
+document.getElementById('homeLangBtn').addEventListener('click', function(){
+  const order = ['fa','ps','en'];
+  const idx = order.indexOf(currentLang);
+  applyLanguage(order[(idx+1) % order.length]);
+});
+
+/* SEARCH */
+const searchData = [
+  {id:1, type:'dua',    title:'دعای فرج',           text:'الهی عظم البلاء و برح الخفاء...',      source:'مفاتیح الجنان'},
+  {id:2, type:'dua',    title:'دعای عهد',           text:'اللهم کن لولیک الحجة بن الحسن...',    source:'مفاتیح الجنان'},
+  {id:3, type:'hadith', title:'حدیث صبر',           text:'الصبر مفتاح الفرج...',                source:'غررالحکم'},
+  {id:4, type:'hadith', title:'حدیث علم',           text:'العلم نور یقذفه الله فی قلب من یشاء', source:'تحف العقول'},
+  {id:5, type:'quran',  title:'آیه ۲۸ سوره رعد',    text:'ألا بذکر الله تطمئن القلوب',          source:'سوره رعد'},
+  {id:6, type:'dua',    title:'دعای کمیل',          text:'اللهم إنی أسألک برحمتک التی وسعت',    source:'دعای کمیل'},
+  {id:7, type:'hadith', title:'حدیث توکل',          text:'من توکل علی الله کفاه الله',           source:'نهج‌البلاغه'}
+];
+
+function performSearch(){
+  const q = document.getElementById('searchInput').value.trim();
+  const out = document.getElementById('searchResults');
+  const t = translations[currentLang];
+  if(!q){
+    out.innerHTML = `<div class="search-empty"><div class="icon">${ic('search','ic')}</div><p>${t['searchEmpty']}</p></div>`;
+    return;
+  }
+  const lower = q.toLowerCase();
+  const results = searchData.filter(item =>
+    item.title.toLowerCase().includes(lower) ||
+    item.text.toLowerCase().includes(lower) ||
+    item.source.toLowerCase().includes(lower)
+  );
+  if(!results.length){
+    out.innerHTML = `<div class="search-empty"><div class="icon">${ic('search','ic')}</div><p>${t['searchNoResult'].replace('{query}',q)}</p></div>`;
+    return;
+  }
+  const typeLabel = {dua:'دعا', hadith:'حدیث', quran:'قرآن'};
+  const typeIcon  = {dua:'dua', hadith:'hadith', quran:'quran'};
+  out.innerHTML = results.map(item=>`
+    <div class="result-item" onclick="openExternalPage('doa.html')">
+      <div class="rtitle">${ic(typeIcon[item.type],'ic')} ${typeLabel[item.type]} — ${item.title}</div>
+      <div class="preview">${item.text.substring(0,80)}${item.text.length>80?'...':''}</div>
+      <div class="meta">${item.source}</div>
+    </div>
+  `).join('');
+}
+
+/* FAVORITES */
+function getFavorites(){
+  try { return JSON.parse(localStorage.getItem('noor_favorites')) || []; }
+  catch { return []; }
+}
+function setFavorites(f){ localStorage.setItem('noor_favorites', JSON.stringify(f)); }
+function renderFavorites(){
+  const list = document.getElementById('favoritesList');
+  const favs = getFavorites();
+  const t = translations[currentLang];
+  if(!favs.length){
+    list.innerHTML = `<div class="search-empty"><div class="icon">${ic('star','ic')}</div><p>${t['favoritesEmpty']}</p></div>`;
+    return;
+  }
+  list.innerHTML = favs.map((item,i)=>`
+    <div class="fav-item">
+      <div>
+        <div class="title">${item.title}</div>
+        <div class="type">${item.type}</div>
+      </div>
+      <button class="remove" onclick="removeFavorite(${i})" type="button" aria-label="حذف">${ic('x','ic')}</button>
+    </div>
+  `).join('');
+}
+function removeFavorite(i){
+  const favs = getFavorites();
+  favs.splice(i,1);
+  setFavorites(favs);
+  renderFavorites();
+}
+
+/* REMINDERS */
+function getReminders(){
+  try { return JSON.parse(localStorage.getItem('noor_reminders')) || []; }
+  catch { return []; }
+}
+function setReminders(r){
+  localStorage.setItem('noor_reminders', JSON.stringify(r));
+  updateBadge();
+}
+function renderReminders(){
+  const list = document.getElementById('reminderList');
+  const reminders = getReminders();
+  const t = translations[currentLang];
+  if(!reminders.length){
+    list.innerHTML = `<div class="search-empty"><div class="icon">${ic('bell','ic')}</div><p>${t['reminderEmpty']}</p></div>`;
+    return;
+  }
+  list.innerHTML = reminders.map((item,i)=>`
+    <div class="reminder-item">
+      <div class="info">
+        <div class="title">${item.title}</div>
+        <div class="time">${ic('clock','ic')} ${item.time} — ${item.type}</div>
+      </div>
+      <div class="actions">
+        <button class="active-btn ${item.active?'active':''}" onclick="toggleReminder(${i})" type="button">
+          ${item.active ? t['reminderActive'] : t['reminderInactive']}
+        </button>
+        <button class="delete-btn" onclick="removeReminder(${i})" type="button" aria-label="حذف">${ic('trash','ic')}</button>
+      </div>
+    </div>
+  `).join('');
+}
+function addReminder(){
+  const title = document.getElementById('reminderTitleInput').value.trim();
+  const time = document.getElementById('reminderTime').value;
+  const type = document.getElementById('reminderType').value;
+  if(!title){ alert('لطفاً عنوان یادآوری را وارد کنید.'); return; }
+  const reminders = getReminders();
+  reminders.push({title, time, type, active:true, created:new Date().toISOString()});
+  setReminders(reminders);
+  document.getElementById('reminderTitleInput').value = '';
+  renderReminders();
+}
+function toggleReminder(i){
+  const r = getReminders();
+  r[i].active = !r[i].active;
+  setReminders(r);
+  renderReminders();
+}
+function removeReminder(i){
+  const r = getReminders();
+  r.splice(i,1);
+  setReminders(r);
+  renderReminders();
+}
+function updateBadge(){
+  const count = getReminders().filter(x=>x.active).length;
+  const badge = document.getElementById('reminderBadge');
+  if(!badge) return;
+  if(count > 0){ badge.textContent = count; badge.style.display = 'block'; }
+  else badge.style.display = 'none';
+}
+
+/* COMPLETE LIBRARY + GUIDE */
+const ALL_SECTIONS = [
+  ['دعاها','doa.html','dua'],['قرآن','quran.html','quran'],['زیارات','ziyarat.html','ziyarat'],['احادیث','hadith.html','hadith'],
+  ['مناجات','monajat.html','munajat'],['اذکار و تسبیح','zekr.html','azkar'],['صحیفه سجادیه','sahifeh.html','sahifeh'],['امام زمان','imam.html','imam'],
+  ['تعقیبات نماز','taqibat.html','prayer'],['تقویم','calendar.html','calendar'],['تقویم روزانه','calendaar.html','calendar'],['اعمال','amal.html','amal'],['نشان‌شده','favorite.html','favorite'],
+  ['دعای فرج','faraj.html','dua'],['دعای کمیل','kumayl.html','dua'],['دعای ندبه','nudbah.html','dua'],['دعای سمات','samat.html','dua'],['دعای افتتاح','iftitah.html','dua'],
+  ['دعای ابوحمزه ثمالی','abu-hamza.html','dua'],['دعای جوشن کبیر','Joushan-kabir.html','dua'],['دعای جوشن صغیر','joushan-saghir.html','dua'],['مناجات شعبانیه','shabaniyeh.html','munajat'],
+  ['زیارت عاشورا','ziyarat.html','ziyarat'],['استغاثه به امام زمان','estegatheh-zaman.html','imam'],['توسل','tavassol.html','dua'],['توسل به امام زمان','tavassol-zaman.html','imam'],
+  ['طلب حاجت','hajat.html','dua'],['حاجت و توکل','hajat-tawakkul.html','dua'],['رزق','rizgh.html','dua'],['عافیت','afiat.html','dua'],['سلامتی امام زمان','salamati-zaman.html','imam'],
+  ['آرامش با یاد خدا','aramesh.html','verse'],['سخن نورانی','sokan.html','hadithToday'],['مقاطع و اذکار شب','shab.html','clock'],['صبح','sobh.html','dua'],['جمعه','jomeh.html','calendar'],
+  ['شنبه','shanbeh.html','calendar'],['یکشنبه','yekshanbeh.html','calendar'],['دوشنبه','doshanbeh.html','calendar'],['سه‌شنبه','seshanbeh.html','calendar'],['چهارشنبه','chaharshanbeh.html','calendar'],['پنجشنبه','panjshanbeh.html','calendar'],
+  ['اعمال ماه رمضان','ramadan.html','amal'],['اعمال رجب','aamal-rajab.html','amal'],['اعمال شعبان','aamal-shaban.html','amal'],['اعمال عرفه','arafeh.html','amal'],['تحویل سال','tahvil.html','calendar'],
+  ['نیمه شعبان','nimah-shaban.html','calendar'],['دعای ماه رجب','rajab-dua.html','dua'],['استغفار رجب','istighfar-rajab.html','dua'],['مکارم الاخلاق','makrim.html','dua'],['سمات','samaat.html','dua'],
+  ['دعای مجیر','mujir.html','dua'],['دعای یستشیر','yastashir.html','dua'],['دعای عرفه','arafeh.html','dua'],['دعای جوشن','Joushan-kabir.html','dua'],['دعای پناه','aman.html','dua'],
+  ['دعای گشایش','goshayesh.html','dua'],['دعای عادل','adil.html','dua'],['دعای شکر','sokr.html','dua'],['دعای فرج','farag.html','dua'],['دعای حاجت کوتاه','hajat-short.html','dua'],
+  ['دعای نجات','dafe-bala.html','dua'],['دعای صبح','sobh.html','dua'],['دعای شب','shab.html','dua'],['دعای سلامتی','salamati-zaman.html','imam'],['دعای عافیت','afiat.html','dua'],
+  ['دعای امان','aman.html','dua'],['مقاتل','moghatel.html','book'],['مجموعه اعمال','list.html','book'],['نمایش محتوا','view.html','book'],['دعاهای منتخب','doa.html','dua'],
+  ['مناجات شب','munajat-shabaniyeh.html','munajat'],['هفت دعا صحیفه','sajjadieh7.html','sahifeh'],['شناخت امام زمان','arrafni.html','imam'],['توسل','tavassol.html','dua']
+];
+function renderAllSections(){
+  const box=document.getElementById('allLinks'); if(!box) return;
+  const seen=new Set();
+  box.innerHTML=ALL_SECTIONS.filter(x=>{if(seen.has(x[1]))return false;seen.add(x[1]);return true;}).map(x=>`<a class="all-link" href="${noorPageUrl(x[1])}" data-local-link><span>${ic(x[2]||'book','ic')}</span><b>${x[0]}</b></a>`).join('');
+}
+renderAllSections();
+const guideModal=document.getElementById('guideModal');
+document.getElementById('openGuideBtn')?.addEventListener('click',()=>guideModal?.classList.add('open'));
+document.getElementById('closeGuide')?.addEventListener('click',()=>guideModal?.classList.remove('open'));
+guideModal?.addEventListener('click',e=>{if(e.target===guideModal)guideModal.classList.remove('open')});
+
+/* INIT */
+renderFavorites();
+renderReminders();
+updateBadge();
+applyLanguage(currentLang);
+
+console.log('✨ نور | NOOR — بارگذاری کامل شد.');
+</script>
+
+<script>
+if(location.protocol !== 'file:' && 'serviceWorker' in navigator){
+  navigator.serviceWorker.register('sw.js')
+    .then(()=>console.log('✅ Service Worker registered'))
+    .catch(err=>console.log('❌ SW error:', err));
+}
+</script>
+</body>
+</html>

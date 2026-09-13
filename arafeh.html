@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای عرفه | نــــور NOOR">
+<title>دعای عرفه | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+body.font-ar-amiri{--font-ar:'Amiri',serif}
+body.font-ar-scheherazade{--font-ar:'Scheherazade New',serif}
+body.font-ar-naskh{--font-ar:'Noto Naskh Arabic',serif}
+body.font-ar-lateef{--font-ar:'Lateef',serif}
+body.font-ar-reem{--font-ar:'Reem Kufi',sans-serif}
+body.font-fa-vazir{--font-fa:'Vazirmatn',Tahoma,sans-serif}
+body.font-fa-naskh{--font-fa:'Noto Naskh Arabic',serif}
+body.font-fa-amiri{--font-fa:'Amiri',serif}
+body.font-fa-scheherazade{--font-fa:'Scheherazade New',serif}
+body.font-fa-lateef{--font-fa:'Lateef',serif}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+/* HEADER */
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.12rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+/* SCROLL */
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+/* TOP ORNAMENT */
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.45rem;font-weight:700;
+  color:var(--brand);letter-spacing:1px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.78rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+/* VERSE CARD */
+.verse-card{
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius);
+  padding:16px 14px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);position:relative;
+}
+.verse-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.verse-card .v-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verse-card .v-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:24px;height:24px;padding:0 8px;
+  border-radius:7px;
+  background:var(--gold-soft);color:var(--gold);
+  font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);
+}
+.verse-card .v-label{font-size:.68rem;color:var(--muted);font-weight:600}
+.verse-card .v-ar{
+  font-family:var(--font-ar);
+  font-size:var(--fs-ar);line-height:var(--lh-ar);
+  color:var(--arabic);text-align:center;font-weight:400;
+  margin-bottom:12px;padding:4px 2px;white-space:pre-line;
+}
+.verse-card.bismillah .v-ar{font-size:calc(var(--fs-ar) * .82);margin-bottom:10px}
+.verse-card .v-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  margin:0 auto 12px;width:52px;
+}
+.verse-card .v-fa{
+  font-family:var(--font-fa);
+  font-size:var(--fs-fa);line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding:0 8px;border-right:3px solid var(--gold-border);
+  white-space:pre-line;
+}
+.verse-card.hide-trans .v-fa{display:none}
+.verse-card.hide-trans .v-divider{display:none}
+.verse-card.hide-trans .v-ar{margin-bottom:0}
+
+/* MODALS */
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;
+  padding:20px 18px 26px;
+  box-shadow:var(--shadow);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+/* SETTINGS */
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+/* INFO BLOCK */
+.info-block{
+  padding:14px 16px;
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{
+  font-size:.8rem;line-height:1.95;
+  color:var(--text2);text-align:justify;white-space:pre-line;
+}
+
+/* BOTTOM NAV */
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;
+  color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+/* TOAST */
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;
+  transition:all .35s ease;font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.28rem}
+  .verse-card{padding:14px 12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">دعای عرفه</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای عرفه</div>
+      <div class="orn-sub">مناجات امام حسین (ع) در صحرای عرفات</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای عرفه
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> فضیلت و خواص</h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> منبع</h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> زمان و شیوه قرائت</h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-trans="1">نمایش</button>
+        <button class="set-opt" data-trans="0">پنهان</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای عرفه
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای عرفه (متن کامل با ترجمه)
+   ============================================================ */
+
+const DUA_DATA = {
+  title: "دعای عرفه",
+  verses: [
+    { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان", bismillah: true },
+    { ar: "الْحَمْدُ لِلّٰهِ الَّذِى لَیْسَ لِقَضائِهِ دافِعٌ، وَلَا لِعَطائِهِ مانِعٌ، وَلَا کَصُنْعِهِ صُنْعُ صانِعٍ، وَهُوَ الْجَوادُ الْواسِعُ، فَطَرَ أَجْناسَ الْبَدائِعِ، وَأَتْقَنَ بِحِکْمَتِهِ الصَّنائِعَ، لَا تَخْفىٰ عَلَیْهِ الطَّلائِعُ، وَلَا تَضِیعُ عِنْدَهُ الْوَدائِعُ، جازِى کُلِّ صانِعٍ، وَرایِشُ کُلِّ قانِعٍ، وَراحِمُ کُلِّ ضارِعٍ، وَ مُنْزِلُ الْمَنافِعِ وَالْکِتابِ الْجامِعِ بِالنُّورِ السَّاطِعِ، وَهُوَ لِلدَّعَواتِ سامِعٌ، وَ لِلْکُرُباتِ دافِعٌ، وَلِلدَّرَجاتِ رافِعٌ، وَ لِلْجَبابِرَةِ قامِعٌ؛ فَلا إِلٰهَ غَیْرُهُ، وَلَا شَىْءَ یَعْدِلُهُ، وَلَیْسَ کَمِثْلِهِ شَىْءٌ، وَهُوَ السَّمِیعُ الْبَصِیرُ اللَّطِیفُ الْخَبِیرُ، وَهُوَ عَلَىٰ کُلِّ شَىْءٍ قَدِیرٌ.", fa: "ستایش ویژۀ خداست که برای تقدیر و سرنوشتش برگرداننده‌ای و برای بخششش بازدارنده‌ای و همانند ساخته‌اش ساخته هیچ سازنده‌ای نیست و او سخاوتمند وسعت‌بخش است، انواع مخلوقات را پدید آورد و ساخته‌ها را با دانایی و فراستش استوار ساخت، پیشتازیها بر او پوشیده نمی‌ماند و امانتها نزد او ضایع نمی‌شود، پاداش‌دهنده هر سازنده و بی‌نیازکننده هر قناعت‌گر و رحم‌کننده بر هر نالان و فرستندۀ سودها و نازل‌کننده کتاب جامع با نور درخشان است، او شنونده دعاها و دورکننده نگرانیها و بالابرنده درجات و کوبنده گردنکشان است؛ پس معبودی جز او نیست و چیزی با او برابری نمی‌کند و چیزی همانندش نیست و اوست شنوا و بینا و مهربان و آگاه و بر هر کاری تواناست." },
+    { ar: "اللّٰهُمَّ إِنِّی أَرْغَبُ إِلَیْکَ وَأَشْهَدُ بِالرُّبُوبِیَّةِ لَکَ مُقِرّاً بِأَنَّکَ رَبِّی، وَأَنَّ إِلَیْکَ مَرَدِّی، ابْتَدَأْتَنِی بِنِعْمَتِکَ قَبْلَ أَنْ أَکُونَ شَیْئاً مَذْکُوراً، وَخَلَقْتَنِی مِنَ التُّرابِ، ثُمَّ أَسْکَنْتَنِی الْأَصْلابَ آمِناً لِرَیْبِ الْمَنُونِ، وَاخْتِلافِ الدُّهُورِ وَالسِّنِینَ؛ فَلَمْ أَزَلْ ظاعِناً مِنْ صُلْبٍ إِلیٰ رَحِمٍ فِی تَقادُمٍ مِنَ الْأَیَّامِ الْماضِیَةِ وَالْقُرُونِ الْخالِیَةِ لَمْ تُخْرِجْنِی لِرَأْفَتِکَ بِی وَلُطْفِکَ لِی وَ إِحْسانِکَ إِلَیَّ فِی دَوْلَةِ أَئِمَّةِ الْکُفْرِ الَّذِینَ نَقَضُوا عَهْدَکَ وَکَذَّبُوا رُسُلَکَ، لَکِنَّکَ أَخْرَجْتَنِی رَأْفَةً مِنْکَ وَتَحَنُّناً عَلَیَّ لِلَّذِی سَبَقَ لِی مِنَ الْهُدَی الَّذِی لَهُ یَسَّرْتَنِی وَفِیهِ أَنْشَأْتَنِی، وَمِنْ قَبْلِ ذٰلِکَ رَؤُفْتَ بِی بِجَمِیلِ صُنْعِکَ وَسَوابِغِ نِعَمِکَ فَابْتَدَعْتَ خَلْقِی مِنْ مَنِیٍّ یُمْنیٰ، وَأَسْکَنْتَنِی فِی ظُلُماتٍ ثَلاثٍ بَیْنَ لَحْمٍ وَدَمٍ وَجِلْدٍ؛ لَمْ تُشْهِدْنِی خَلْقِی، وَلَمْ تَجْعَلْ إِلَیَّ شَیْئاً مِنْ أَمْرِی، ثُمَّ أَخْرَجْتَنِی لِلَّذِی سَبَقَ لِی مِنَ الْهُدیٰ إِلَی الدُّنْیا تامّاً سَوِیّاً، وَحَفِظْتَنِی فِی الْمَهْدِ طِفْلاً صَبِیّاً، وَرَزَقْتَنِی مِنَ الْغِذاءِ لَبَناً مَرِیّاً، وَعَطَفْتَ عَلَیَّ قُلُوبَ الْحَواضِنِ، وَکَفَّلْتَنِی الْأُمَّهاتِ الرَّواحِمَ، وَکَلَأْتَنِی مِنْ طَوارِقِ الْجانِّ، وَسَلَّمْتَنِی مِنَ الزِّیادَةِ وَالنُّقْصانِ، فَتَعالَیْتَ یَا رَحِیمُ یَا رَحْمٰنُ، حَتَّیٰ إِذَا اسْتَهْلَلْتُ ناطِقاً بِالْکَلامِ؛ أَتْمَمْتَ عَلَیَّ سَوابِغَ الْإِنْعامِ، وَرَبَّیْتَنِی زائِداً فِی کُلِّ عامٍ، حَتَّیٰ إِذَا اکْتَمَلَتْ فِطْرَتِی وَاعْتَدَلَتْ مِرَّتِی أَوْجَبْتَ عَلَیَّ حُجَّتَکَ بِأَنْ أَلْهَمْتَنِی مَعْرِفَتَکَ، وَرَوَّعْتَنِی بِعَجائِبِ حِکْمَتِکَ، وَأَیْقَظْتَنِی لِما ذَرَأْتَ فِی سَمائِکَ وَأَرْضِکَ مِنْ بَدائِعِ خَلْقِکَ، وَنَبَّهْتَنِی لِشُکْرِکَ وَذِکْرِکَ، وَأَوْجَبْتَ عَلَیَّ طاعَتَکَ وَعِبادَتَکَ، وَفَهَّمْتَنِی مَا جاءَتْ بِهِ رُسُلُکَ، وَیَسَّرْتَ لِی تَقَبُّلَ مَرْضاتِکَ، وَمَنَنْتَ عَلَیَّ فِی جَمِیعِ ذٰلِکَ بِعَوْنِکَ وَلُطْفِکَ؛ ثُمَّ إِذْ خَلَقْتَنِی مِنْ خَیْرِ الثَّریٰ، لَمْ تَرْضَ لِی یَا إِلٰهِی نِعْمَةً دُونَ أُخْریٰ، وَرَزَقْتَنِی مِنْ أَنْواعِ الْمَعاشِ وَصُنُوفِ الرِّیاشِ بِمَنِّکَ الْعَظِیمِ الْأَعْظَمِ عَلَیَّ، وَ إِحْسانِکَ الْقَدِیمِ إِلَیَّ، حَتَّیٰ إِذا أَتْمَمْتَ عَلَیَّ جَمِیعَ النِّعَمِ وَصَرَفْتَ عَنِّی کُلَّ النِّقَمِ لَمْ یَمْنَعْکَ جَهْلِی وَجُرْأَتِی عَلَیْکَ أَنْ دَلَلْتَنِی إِلَیٰ مَا یُقَرِّبُنِی إِلَیْکَ، وَوَفَّقْتَنِی لِما یُزْ لِفُنِی لَدَیْکَ، فَإِنْ دَعَوْتُکَ أَجَبْتَنِی، وَ إِنْ سَأَلْتُکَ أَعْطَیْتَنِی، وَ إِنْ أَطَعْتُکَ شَکَرْتَنِی، وَ إِنْ شَکَرْتُکَ زِدْتَنِی؛ کُلُّ ذٰلِکَ إِکْمالٌ لِأَنْعُمِکَ عَلَیَّ وَ إِحْسانِکَ إِلَیَّ، فَسُبْحانَکَ سُبْحانَکَ مِنْ مُبْدِیً مُعِیدٍ حَمِیدٍ مَجِیدٍ! وَتَقَدَّسَتْ أَسْماؤُکَ، وَعَظُمَتْ آلاؤُکَ، فَأَىُّ نِعَمِکَ یَا إِلٰهِی أُحْصِی عَدَداً وَذِکْراً؟ أَمْ أَىُّ عَطایاکَ أَقُومُ بِها شُکْراً وَهِیَ یَا رَبِّ أَکْثَرُ مِنْ أَنْ یُحْصِیَهَا الْعادُّونَ، أَوْ یَبْلُغَ عِلْماً بِهَا الْحافِظُونَ؟ ثُمَّ مَا صَرَفْتَ وَدَرَأْتَ عَنِّی اللّٰهُمَّ مِنَ الضُّرِّ وَالضَّرَّاءِ أَکْثَرُ مِمَّا ظَهَرَ لِی مِنَ الْعافِیَةِ وَالسَّرَّاءِ، وَأَنَا أَشْهَدُ یَا إِلٰهِی بِحَقِیقَةِ إِیمانِی؛ وَعَقْدِ عَزَماتِ یَقِینِی، وَخالِصِ صَرِیحِ تَوْحِیدِی، وَباطِنِ مَکْنُونِ ضَمِیرِی، وَعَلائِقِ مَجارِی نُورِ بَصَرِی، وَأَسارِیرِ صَفْحَةِ جَبِینِی، وَخُرْقِ مَسارِبِ نَفْسِی، وَخَذارِیفِ مارِنِ عِرْنِینِی، وَمَسارِبِ سِماخِ سَمْعِی، وَمَا ضُمَّتْ وَأَطْبَقَتْ عَلَیْهِ شَفَتاىَ، وَحَرَکاتِ لَفْظِ لِسانِی، وَمَغْرَزِ حَنَکِ فَمِی وَفَکِّی وَمَنابِتِ أَضْراسِی؛ وَمَساغِ مَطْعَمِی وَمَشْرَبِی، وَحِمالَةِ أُمِّ رَأْسِی، وَبُلُوعِ فارِغِ حَبائِلِ عُنُقِی، وَمَا اشْتَمَلَ عَلَیْهِ تامُورُ صَدْرِی، وَحَمائِلِ حَبْلِ وَتِینِی، وَ نِیاطِ حِجابِ قَلْبِی، وَأَفْلاذِ حَواشِی کَبِدِی، وَمَا حَوَتْهُ شَراسِیفُ أَضْلاعِی، وَحِقاقُ مَفاصِلِی، وَقَبْضُ عَوامِلِی، وَأَطْرافُ أَنامِلِی، وَلَحْمِی وَدَمِی وَشَعْرِی وَبَشَرِی وَعَصَبِی وَقَصَبِی وَعِظامِی وَمُخِّی وَعُرُوقِی وَجَمِیعُ جَوارِحِی وَمَا انْتَسَجَ عَلَیٰ ذٰلِکَ أَیَّامَ رِضاعِی، وَمَا أَقَلَّتِ الْأَرْضُ مِنِّی وَنَوْمِی وَیَقْظَتِی وَسُکُونِی، وَحَرَکاتِ رُکُوعِی وَسُجُودِی؛ أَنْ لَوْ حاوَلْتُ وَاجْتَهَدْتُ مَدَی الْأَعْصارِ وَالْأَحْقابِ لَوْ عُمِّرْتُها أَنْ أُؤَدِّیَ شُکْرَ واحِدَةٍ مِنْ أَنْعُمِکَ مَا اسْتَطَعْتُ ذٰلِکَ إِلّا بِمَنِّکَ الْمُوجَبِ عَلَیَّ بِهِ شُکْرُکَ أَبَداً جَدِیداً، وَثَناءً طارِفاً عَتِیداً، أَجَلْ وَلَوْ حَرَصْتُ أَنَا وَالْعادُّونَ مِنْ أَنامِکَ أَنْ نُحْصِیَ مَدَیٰ إِنْعامِکَ سالِفِهِ وَآنِفِهِ مَا حَصَرْناهُ عَدَداً، وَلَا أَحْصَیْناهُ أَمَداً، هَیْهاتَ أَنَّیٰ ذٰلِکَ وَأَنْتَ الْمُخْبِرُ فِی کِتابِکَ النَّاطِقِ وَالنَّبَاَ الصَّادِقِ ﴿وَ إِنْ تَعُدُّوا نِعْمَةَ اللّٰهِ لاٰ تُحْصُوهٰا﴾؛ صَدَقَ کِتابُکَ اللّٰهُمَّ وَ إِنْباؤُکَ، وَبَلَّغَتْ أَنْبِیاؤُکَ وَرُسُلُکَ مَا أَنْزَلْتَ عَلَیْهِمْ مِنْ وَحْیِکَ، وَشَرَعْتَ لَهُمْ وَبِهِمْ مِنْ دِینِکَ، غَیْرَ أَنِّی یَا إِلٰهِی أَشْهَدُ بِجَُهْدِی وَجِدِّی وَمَبْلَغِ طاعَتِی وَوُسْعِی، وَأَقُولُ مُؤْمِناً مُوقِناً الْحَمْدُلِلّٰهِ الَّذِی لَمْ یَتَّخِذْ وَلَداً فَیَکُونَُ مَوْرُوثاً، وَلَمْ یَکُنْ لَهُ شَرِیکٌ فِی مُلْکِهِ فَیُضادَّهُ فِیَما ابْتَدَعَ؛ وَلَا وَلِیٌّ مِنَ الذُّلِّ فَیُرْفِدَهُ فِیما صَنَعَ، فَسُبْحانَهُ سُبْحانَهُ ﴿لَوْ کانَ فِیهِما آلِهَةٌ إِلّا اللّٰهُ لَفَسَدَتا﴾ وَتَفَطَّرَتا! سُبْحانَ اللّٰهِ الْواحِدِ الْأَحَدِ الصَّمَدِ الَّذِی لَمْ یَلِدْ وَلَمْ یُولَدْ وَلَمْ یَکُنْ لَهُ کُفُواً أَحَدٌ! الْحَمْدُلِلّٰهِ حَمْداً یُعادِلُ حَمْدَ مَلائِکَتِهِ الْمُقَرَّبِینَ وَأَنْبِیائِهِ الْمُرْسَلِینَ، وَصَلَّی اللّٰهُ عَلَىٰ خِیَرَتِهِ مُحَمَّدٍ خاتَِمِ النَّبِیِّینَ وَآلِهِ الطَّیِّبِینَ الطَّاهِرِینَ الْمُخْلَصِینَ وَسَلَّمَ؛ اللّٰهُمَّ اجْعَلْنِی أَخْشاکَ کَأَنِّی أَراکَ، وَأَسْعِدْنِی بِتَقْواکَ، وَلَا تُشْقِنِی بِمَعْصِیَتِکَ، وَخِرْ لِی فِی قَضائِکَ، وَبارِکْ لِی فِی قَدَرِکَ، حَتَّیٰ لَاأُحِبَّ تَعْجِیلَ مَا أَخَّرْتَ وَلَا تَأْخِیرَ مَا عَجَّلْتَ.", fa: "خدایا، به‌سوی تو اشتیاق دارم و به پروردگاری تو گواهی می‌دهم، اقرار کننده‌ام که تو پروردگار منی و بازگشت من به‌سوی تو است، وجودم را با نعمتت آغاز کردی پیش از آنکه موجودی قابل ذکر باشم و مرا از خاک پدید آوردی، سپس در میان صلب‌ها جایم دادی، درحالی‌که از حوادث زمانه و رفت‌وآمد روزگار و سال‌ها ایمنی بخشیدی؛ همواره کوچ‌کننده بودم از صلبی به رحمی، در ایام گذشته و قرن‌های پیشین، از باب رأفت و مهربانی و احسانی که به من داشتی، مرا در حکومت پیشوایان کفر، آنان‌که پیمانت را شکستند و پیامبرانت را تکذیب کردند، به دنیا نیاوردی، ولی زمانی به دنیام آوردی به خاطر آنچه در دانش و آگاهی‌ات برایم رقم خورده بود و آن عبارت بود از هدایتی که مرا برای پذیرفتن آن آماده ساختی و در عرصه گاهش نشو و نمایم دادی و پیش از آن هم با رفتار زیبایت و نعمت‌های کاملت بر من مهر ورزیدی، در نتیجه وجودم را پدید آوردی از نطفه ریخته شده و در تاریکی‌های سه‌گانه میان گوشت و خون و پوست جایم دادی؛ و مرا در آفرینش وجودم گواه نگرفتی و چیزی از کار پدید آمدنم را به من واگذار نکردی، سپس برای آنچه در دانش و آگاهی‌ات از هدایتم گذشته بود مرا کامل و آراسته به دنیا آوردی و در حال کودکی و خردسالی در میان گهواره نگهداری‌ام نمودی و از بین غذاها شیر گوارا نصیبم کردی و دل دایه‌ها را بر من مهربان نمودی و مادران پرمهر را به پرستاری‌ام گماشتی و از آسیب‌های پریان نگهداری فرمودی و از زیادی و کمی سالمم داشتی، پس تو برتری‌ای مهربان،ای بخشنده تا آنگاه که آغاز به سخن کردم؛ نعمت‌های کاملت را بر من تمام کردی و مرا در هر سال با افزوده شدن به وجودم پرورش دادی تا آفرینشم کامل شد و تاب و توانم معتدل گشت، حجّتت را بر من واجب کردی، به اینکه معرفتت را به من الهام فرمودی و با شگفتی‌های حکمتت به هراسم افکندی و به آنچه در آسمان و زمینت از پدیده‌های نو و شگفت پدید آوردی بیدارم کردی، به سپاسگزاری و یادت آگاهی‌ام دادی و طاعت و عبادتت را بر من واجب ساختی و آنچه را پیامبرانت آوردند به من فهماندی و پذیرفتن خشنودی‌ات را بر من آسان کردی و در تمام این امور به یاری و مهربانی‌ات بر من منّت نهادی؛ سپس وقتی که مرا از بهترین خاک آفریدی برایم نپسندیدی‌ای معبودم نعمتی را بدون نعمتی دیگر بنابراین از انواع وسایل زندگی و اقسام بهره‌ها نصیب من فرمودی و این به خاطر نعمت‌بخشی بزرگ و بزرگتر و احسان دیرینه‌ات بر من بود تا جایی که همه نعمت‌ها را بر من کامل کردی و تمام بلاها را از من بازگرداندی، نادانی و گستاخی‌ام بر تو، جلوگیرت نشد، از این که مرا به آنچه به تو نزدیک می‌کند راهنمایی کنی و به آنچه مرا به پیشگاهت مقرّب می‌نماید توفیق دهی، پس اگر بخوانمت، اجابتم کنی و اگر از تو درخواست نمایم، عطایم کنی و اگر اطاعتت کنم قدردانی‌ام فرمایی و اگر به سپاسگزاری‌ات برخیزم بر نعمتم بیفزایی؛ همه اینها کامل کردن نعمت‌هایت بر من و احسانت به‌سوی من است، پس منزّهی تو، منزّهی تو که آفریننده‌ای و بازگرداننده‌ای و ستوده‌ای و بزرگواری، نام‌هایت پاک و نعمت‌هایت بزرگ است، خدایا کدام‌یک از نعمت‌هایت را به شماره آورم و یاد کنم، یا برای کدام‌یک از عطاهایت به سپاسگزاری برخیزم درحالی‌که پروردگارا، بیش از آن است که شماره‌گران برشمارند، یا اینکه یاد دارندگان در دانش به آنها برسند، آنگاه‌ای خدا، آنچه از بدحالی و پریشانی از من بازگرداندی و دور کردی، از آنچه از سلامتی کامل و خوشحالی برایم نمایان شد، بیشتر است، معبودا، من گواهی می‌دهم به حقیقت ایمانم؛ و باور تصمیمات یقینم و یکتاپرستی بی‌شائبه روشن و صادقانه‌ام و اندیشه‌ها و خیالات پنهان درونم و آویزه‌های راه‌های نور چشمم و چین‌های صفحه پیشانی‌ام و روزنه‌های راه‌های نَفَسم و پرّه‌های نرمه تیغه بینی‌ام و حفره‌های پرده شنوایی‌ام و آنچه ضمیمه شده و بر آن دو لبم بر هم نهاده و حرکت‌های سخن زبانم و جای فرو رفتگی سقف دهان و آرواره‌ام و محل روئیدن دندان‌هایم؛ و جای گوارایی خوراک و آشامیدنی‌ام و بار بر مغز سرم و رسایی رگ‌های طولانی گردنم و آنچه را قفسه سینه‌ام در برگرفته و پی‌های شاهرگم و آویخته‌های پرده دلم و قطعات کناره‌های کبدم و آنچه را در برگرفته غضروف‌های دنده‌هایم و جایگاه‌های مفاصلم و پیوستگی پاهایم و اطراف انگشتانم و گوشتم و خونم و مویم و پوستم و عصبم و نایم و استخوانم و مغزم و رگ‌هایم و تمام اعضایم و آنچه در ایام شیرخوارگی بر آنها بافته شد و آنچه زمین از سنگینی من برداشته و خوابم و بیداری‌ام و سکونم و حرکات رکوع و سجودم؛ خلاصه با تمام این امور گواهی می‌دهم بر اینکه اگر به حرکت می‌آمدم و طول روزگاران و زمان‌های بس دراز می‌کوشیدم، بر فرض که آن همه زمان را عمر می‌کردم که شکر یکی از نعمت‌هایت را بجا آورم توانایی‌اش را نداشتم، جز با مهرورزی‌ات که به سبب آن شکرت بر من واجب می‌شود، شکری دائم و نو و ثنائی تازه و فراهم. آری اگر من و همه شمارش‌گران از آفریدگانت، حرص ورزیم که نهایت نعمت‌هایت، از نعمت‌های سابقه‌دار و بی‌سابقه‌ات را برشماریم، هرگز نمی‌توانیم به شماره آوریم و نه اندازه آن را به دست آوریم، چه دور است چنین چیزی چگونه ممکن است؟ و حال آنکه تو در کتاب گویایت و خبر صادقانه‌ات اعلام کرده‌ای: «اگر در مقام شمردن نعمت‌های خدا برآیید نمی‌توانید آنها را بشمارید.» خدایا کتابت راست گفته و اخبارت صادقانه است و پیامبرانت و رسولانت به مردم رساندند، آنچه را از وحیات بر آنان نازل کردی و برای آنان و به وسیله آنان از دینت قانون و شریعت ساختی، معبودم من گواهی می‌دهم به تلاش و کوششم و به قدر رسایی طاعت و ظرفیتم و از باب ایمان و یقین می‌گویم: ستایش ویژۀ خداست که فرزندی نگرفته تا از او ارث برند و برای او در فرمانروایی‌اش شریکی نبوده تا با او در آنچه پدید آورده مخالفت کند؛ و سرپرستی از خواری و کوچکی برایش نبوده تا او را در آنچه ساخته یاری دهد، پس منزّه است او، منزّه است او، «اگر در آسمان و زمین جز خداوند، معبودانی وجود داشت بیشک هر دو تباه می‌شدند» و متلاشی می‌گشتند، منزّه است خدای یگانه یکتا و بی‌نیاز که نزاده و زاده نشده و احدی همتایش نبوده است. ستایش ویژۀ خداست، ستایشی که برابری کند با ستایش فرشتگان مقرّب و انبیای مرسلش و درود و سلام خدا بر بهترین برگزیده از خلقش محمّد خاتم پیامبران و اهل‌بیت پاک و پاکیزه و ناب گشته او باد. آنگاه آن حضرت، شروع به درخواست از خدا کرد و در دعا کوشش و تلاش نشان داد و درحالی‌که اشک از دیده‌های مبارکش جاری بود، دعا را به این صورت ادامه داد: خدایا چنانم کن که از تو بترسم گویا که تو را می‌بینم و با پرهیزگاری مرا خوشبخت گردان و به نافرمانی‌ات بدبختم مکن و خیر در آنچه مقرر کردی را برایم اختیار کن و به من در تقدیرت برکت ده تا شتاب آنچه را تو به تأخیر انداختی نخواهم و تأخیر آنچه را تو پیش انداختی آرزو نکنم." }
+  ],
+  fazilat: "دعای عرفه، مشهورترین دعای روز عرفه است که از سرور و سالار شهیدان، امام حسین علیه‌السلام، روایت شده است. این دعا در روز عرفه در صحرای عرفات خوانده می‌شود و از پرفضیلت‌ترین اعمال این روز به شمار می‌رود.\n\nاین دعای نورانی با حمد و ثنای الهی، تهلیل و تکبیر آغاز می‌شود و مضامین بلندی مانند توحید، معرفت الهی، اقرار به گناهان، درخواست بخشش و رحمت، و اظهار نیاز به درگاه خداوند را در بر دارد.\n\nخواندن این دعا در روز عرفه، که از بزرگ‌ترین ایام سال است، بسیار سفارش شده و برای آمرزش گناهان، برآورده شدن حاجات و نزدیکی به خداوند مؤثر است. امام حسین علیه‌السلام در این روز با این دعا، حالات عرفانی و عشق و شوق خود به خداوند را به زیباترین شکل به تصویر کشیده‌اند.",
+  source: "مفاتیح الجنان (شیخ عباس قمی) • اقبال الأعمال (سید ابن طاووس) • مصباح المتهجد (شیخ طوسی) • بحار الأنوار (علامه مجلسی)",
+  time: "بهترین زمان خواندن این دعا، روز عرفه (نهم ذی‌الحجه) پس از نماز ظهر و عصر است. همچنین در شب عرفه و در هر زمان برای طلب آمرزش گناهان و برآورده شدن حاجات خوانده می‌شود. توصیه شده با وضو و رو به قبله و با قلب حاضر خوانده شود."
+};
+
+/* ============================================================
+   RENDER VERSES
+   ============================================================ */
+function renderVerses(){
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  DUA_DATA.verses.forEach((v,i)=>{
+    const el = document.createElement('div');
+    el.className = 'verse-card' + (v.bismillah ? ' bismillah' : '');
+    el.innerHTML = `
+      <div class="v-head">
+        <span class="v-num">${faNum(i+1)}</span>
+        <span class="v-label">بند ${faNum(i+1)}</span>
+      </div>
+      <div class="v-ar">${v.ar}</div>
+      <div class="v-divider"></div>
+      <div class="v-fa">${v.fa}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = ()=> $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = ()=> $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = ()=> $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e)=>{ if(e.target===m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark',dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme')==='dark');
+$('#themeToggle').onclick = ()=> applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  $$('.verse-card').forEach(v=> v.classList.toggle('hide-trans', !showTrans));
+  if($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = ()=>{
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = ()=>{
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b=>{
+  if(b.dataset.lh===lineHeight) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-lh]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b=>{
+  const isOn = (b.dataset.trans==='1')===showTrans;
+  b.classList.toggle('active',isOn);
+  b.onclick = ()=>{
+    $$('[data-trans]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans==='1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b=>{
+  if(b.dataset.fontAr===fontAr) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-ar]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b=>{
+  if(b.dataset.fontFa===fontFa) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-fa]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = ()=>{
+  if(document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=> console.log('NOOR Service Worker registered.'))
+      .catch(err=> console.log('Service Worker error:', err));
+  });
+}
+
+console.log('🤲 دعای عرفه | NOOR – بارگذاری شد. تعداد بندها:', DUA_DATA.verses.length);
+</script>
+
+</body>
+</html>

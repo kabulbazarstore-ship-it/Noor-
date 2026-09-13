@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای توسل به امام زمان (عج) | نــــور NOOR">
+<title>دعای توسل به امام زمان (عج) | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+body.font-ar-amiri{--font-ar:'Amiri',serif}
+body.font-ar-scheherazade{--font-ar:'Scheherazade New',serif}
+body.font-ar-naskh{--font-ar:'Noto Naskh Arabic',serif}
+body.font-ar-lateef{--font-ar:'Lateef',serif}
+body.font-ar-reem{--font-ar:'Reem Kufi',sans-serif}
+body.font-fa-vazir{--font-fa:'Vazirmatn',Tahoma,sans-serif}
+body.font-fa-naskh{--font-fa:'Noto Naskh Arabic',serif}
+body.font-fa-amiri{--font-fa:'Amiri',serif}
+body.font-fa-scheherazade{--font-fa:'Scheherazade New',serif}
+body.font-fa-lateef{--font-fa:'Lateef',serif}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.08rem;font-weight:700;
+  color:var(--brand);letter-spacing:.3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.25rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.75rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+.section-head{
+  position:relative;
+  margin:20px 0 12px;
+  padding:14px 16px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow-sm);
+  text-align:center;
+}
+.section-head:first-child{margin-top:0}
+.section-head .sec-title{
+  font-family:'Amiri',serif;
+  font-size:1.02rem;font-weight:700;
+  color:var(--gold);
+  margin-bottom:4px;
+  line-height:1.4;
+}
+.section-head .sec-sub{
+  font-size:.72rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+.section-head .sec-orn{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  width:60px;margin:8px auto 0;
+}
+.section-head .sec-orn:before,.section-head .sec-orn:after{
+  content:"";flex:1;height:1px;background:var(--gold-border);
+}
+.section-head .sec-orn svg{width:10px;height:10px;color:var(--gold)}
+
+.verse-card{
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius);
+  padding:16px 14px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);position:relative;
+}
+.verse-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.verse-card .v-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verse-card .v-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:24px;height:24px;padding:0 8px;
+  border-radius:7px;
+  background:var(--gold-soft);color:var(--gold);
+  font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);
+}
+.verse-card .v-label{font-size:.68rem;color:var(--muted);font-weight:600}
+.verse-card .v-ar{
+  font-family:var(--font-ar);
+  font-size:var(--fs-ar);line-height:var(--lh-ar);
+  color:var(--arabic);text-align:center;font-weight:400;
+  margin-bottom:12px;padding:4px 2px;white-space:pre-line;
+}
+.verse-card.bismillah .v-ar{font-size:calc(var(--fs-ar) * .82);margin-bottom:10px}
+.verse-card .v-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  margin:0 auto 12px;width:52px;
+}
+.verse-card .v-fa{
+  font-family:var(--font-fa);
+  font-size:var(--fs-fa);line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding:0 8px;border-right:3px solid var(--gold-border);
+  white-space:pre-line;
+}
+.verse-card.hide-trans .v-fa{display:none}
+.verse-card.hide-trans .v-divider{display:none}
+.verse-card.hide-trans .v-ar{margin-bottom:0}
+
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;
+  padding:20px 18px 26px;
+  box-shadow:var(--shadow);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+.info-block{
+  padding:14px 16px;
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{
+  font-size:.8rem;line-height:1.95;
+  color:var(--text2);text-align:justify;white-space:pre-line;
+}
+
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;
+  color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;
+  transition:all .35s ease;font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:.98rem}
+  .orn-title{font-size:1.1rem}
+  .verse-card{padding:14px 12px}
+  .section-head{padding:12px 12px}
+  .section-head .sec-title{font-size:.92rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">دعای توسل به امام زمان (عج)</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای توسل به امام زمان (عج)</div>
+      <div class="orn-sub">توسل به حضرت صاحب‌الزمان (ارواحنا فداه)</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای توسل به امام زمان (عج)
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> فضیلت و خواص</h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> منبع</h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> زمان و شیوه قرائت</h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-trans="1">نمایش</button>
+        <button class="set-opt" data-trans="0">پنهان</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای توسل به امام زمان (عج)
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای توسل به امام زمان (عج) (بخش‌بندی‌شده)
+   ============================================================ */
+
+const DUA_DATA = {
+  title: "دعای توسل به امام زمان (عج)",
+  sections: [
+    {
+      title: "دعای توسل به امام زمان (عج) از بحارالانوار",
+      sub: "دعایی که در کتاب شریف بحارالانوار برای توسل به حضرت صاحب‌الزمان (عج) نقل شده است",
+      verses: [
+        { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان", bismillah: true },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ بِحَقِّ وَلِیِّکَ وَحُجَّتِکَ صَاحِبِ الزَّمَانِ، إِلَّا أَعَنْتَنِی بِهِ عَلَىٰ جَمِیعِ أُمُورِی، وَکَفَیْتَنِی بِهِ مَؤُونَةَ کُلِّ مُوذٍ وَطَاغٍ وَبَاغٍ، وَأَعَنْتَنِی بِهِ، فَقَدْ بَلَغَ مَجْهُودِی، وَکَفَیْتَنِی کُلَّ عَدُوٍّ وَهَمٍّ وَغَمٍّ وَدَیْنٍ، وَوُلْدِی وَجَمِیعَ أَهْلِی وَإِخْوَانِی، وَمَنْ یُعْنِینِی أَمْرُهُ وَخَاصَّتِی، آمِینَ یَا رَبَّ الْعَالَمِینَ.", fa: "خدایا! از تو می‌خواهم به حق ولیّت و حجّتت، صاحب‌الزمان (عج)، که مرا به وسیله‌ی او در همه‌ی کارهایم یاری کنی، و به وسیله‌ی او شرّ هر آزاردهنده و سرکش و ستمگری را از من کفایت کنی، و مرا به وسیله‌ی او یاری ده، که همانا توانم به پایان رسیده است، و مرا از هر دشمن و اندوه و غم و بدهی، و فرزندانم و همه‌ی خانواده و برادرانم، و هر که کارش به من مربوط است و نزدیکانم، کفایت کن. آمین ای پروردگار جهانیان." },
+
+        { ar: "یَا مَوْلَایَ یَا صَاحِبَ الزَّمَانِ، أَغِثْنِی، أَغِثْنِی، أَغِثْنِی، أَدْرِکْنِی، أَدْرِکْنِی، أَدْرِکْنِی، الْأَمَانَ، الْأَمَانَ، الْأَمَانَ.", fa: "ای مولای من، ای صاحب‌الزمان، به دادم رس، به دادم رس، به دادم رس، مرا دریاب، مرا دریاب، مرا دریاب، امان، امان، امان." },
+
+        { ar: "السَّلَامُ عَلَیْکَ یَا صَاحِبَ الزَّمَانِ، السَّلَامُ عَلَیْکَ یَا خَلِیفَةَ الرَّحْمٰنِ، أَسْأَلُکَ بِحَقِّ جَدِّکَ مُحَمَّدٍ وَأَبِیکَ عَلِیٍّ وَأُمِّکَ فَاطِمَةَ وَجَدَّتِکَ خَدِیجَةَ، أَنْ تَکُونَ لِی شَفِیعاً إِلَى اللّٰهِ فِی قَضَاءِ حَاجَتِی.", fa: "سلام بر تو ای صاحب‌الزمان، سلام بر تو ای جانشین خدای رحمان، از تو به حق جدّت محمّد و پدرت علی و مادرت فاطمه و جدّه‌ات خدیجه می‌خواهم که شفیع من به درگاه خدا باشی در برآورده شدن حاجتم." }
+      ]
+    },
+
+    {
+      title: "دعای توسل به امام زمان (عج) از قبس المصباح",
+      sub: "دعای مختصر و مجرّب برای توسل به حضرت صاحب‌الزمان (ارواحنا فداه)",
+      verses: [
+        { ar: "أَللَّهُمَّ إِنِّی أَسْأَلُکَ بِحَقِّ وَلِیِّکَ وَحُجَّتِکَ صَاحِبِ الزَّمَانِ، إِلَّا أَعَنْتَنِی بِهِ عَلَىٰ جَمِیعِ أُمُورِی، وَکَفَیْتَنِی بِهِ مَؤُونَةَ کُلِّ مُوذٍ وَطَاغٍ وَبَاغٍ، وَأَعَنْتَنِی بِهِ، فَقَدْ بَلَغَ مَجْهُودِی، وَکَفَیْتَنِی کُلَّ عَدُوٍّ وَهَمٍّ وَغَمٍّ وَدَیْنٍ، وَوُلْدِی وَجَمِیعَ أَهْلِی وَإِخْوَانِی، وَمَنْ یُعْنِینِی أَمْرُهُ وَخَاصَّتِی، آمِینَ یَا رَبَّ الْعَالَمِینَ.", fa: "خدایا! از تو می‌خواهم به حق ولیّت و حجّتت، صاحب‌الزمان (عج)، که مرا به وسیله‌ی او در همه‌ی کارهایم یاری کنی، و به وسیله‌ی او شرّ هر آزاردهنده و سرکش و ستمگری را از من کفایت کنی، و مرا به وسیله‌ی او یاری ده، که همانا توانم به پایان رسیده است، و مرا از هر دشمن و اندوه و غم و بدهی، و فرزندانم و همه‌ی خانواده و برادرانم، و هر که کارش به من مربوط است و نزدیکانم، کفایت کن. آمین ای پروردگار جهانیان." }
+      ]
+    },
+
+    {
+      title: "دعای توسل به امام زمان (عج) در شب جمعه",
+      sub: "از مفاتیح‌الجنان — خواندن این دعا در شب جمعه برای برآورده شدن حاجات بسیار توصیه شده است",
+      verses: [
+        { ar: "اللّٰهُمَّ اِنْ اَطَعْتُکَ فَالْمَحْمِدَةُ لَکَ، وَاِنْ عَصَیْتُکَ فَالْحُجَّةُ لَکَ، مِنْکَ الرَّوْحُ وَمِنْکَ الْفَرَجُ، سُبْحانَ مَنْ اَنْعَمَ وَشَکَرَ، سُبْحانَ مَنْ قَدَّرَ وَغَفَرَ، اللّٰهُمَّ اِنْ کُنْتُ عَصَیْتُکَ فَاِنِّی قَدْ اَطَعْتُکَ فِی اَحَبِّ الْاَشْیَاءِ اِلَیْکَ وَهُوَ الْاِیمَانُ بِکَ، لَمْ اَتَّخِذْ لَکَ وَلَداً وَلَمْ اَدْعُ لَکَ شَرِیکاً، مَنّاً مِنْکَ بِهِ عَلَیَّ لَا مَنّاً مِنِّی بِهِ عَلَیْکَ، وَقَدْ عَصَیْتُکَ یَا اِلهِی عَلَی غَیْرِ وَجْهِ الْمُکابَرَةِ وَلَا الْخُرُوجِ عَنْ عُبُودِیَّتِکَ وَلَا الْجُحُودِ لِرُبُوبِیَّتِکَ، وَلٰکِنْ اَطَعْتُ هَوَایَ وَاَزَلَّنِی الشَّیْطَانُ.", fa: "خدایا! اگر اطاعتت کردم، ستایش از آن توست، و اگر نافرمانی‌ات کردم، حجت از آن توست. نسیم رحمت و گشایش از جانب توست. منزّه است کسی که نعمت داد و سپاس شد، منزّه است کسی که تقدیر کرد و آمرزید. خدایا! اگر نافرمانی‌ات کردم، همانا در محبوب‌ترین چیز نزد تو که ایمان به توست، اطاعتت کردم. برای تو فرزندی نگرفتم و شریکی نخواندم، این منّتی از جانب تو بر من است، نه منّتی از من بر تو. و ای خدای من، نافرمانی‌ات کردم، نه از روی گردنکشی و نه از سر خروج از بندگی‌ات و نه از روی انکار پروردگاری‌ات، بلکه از هوا و هوسم پیروی کردم و شیطان مرا لغزاند." },
+
+        { ar: "فَاَسْئَلُکَ بِحَقِّ مُحَمَّدٍ وَآلِهِ الطَّاهِرِینَ، اَنْ تَغْفِرَ لِی وَلِوَالِدَیَّ وَلِجَمِیعِ الْمُؤْمِنِینَ وَالْمُؤْمِنَاتِ، وَاَنْ تَقْضِیَ حَاجَتِی (و حاجت خود را نام ببر).", fa: "پس از تو می‌خواهم به حق محمّد و خاندان پاکش، که مرا و پدر و مادرم و همه‌ی مؤمنان و مؤمنات را بیامرزی، و حاجتم را برآورده کنی. (و حاجت خود را نام ببر)" }
+      ]
+    },
+
+    {
+      title: "دعای استغاثه به حضرت صاحب‌الزمان (عج)",
+      sub: "برای گرفتاری‌های سخت — دو رکعت نماز بخوان و زیر آسمان رو به قبله بایست و این دعا را بخوان",
+      verses: [
+        { ar: "سَلَامُ اللّٰهِ الْکَامِلُ التَّامُّ الشَّامِلُ الْعَامُّ، وَصَلَوَاتُهُ الدَّائِمَةُ وَبَرَکَاتُهُ الْقَائِمَةُ التَّامَّةُ، عَلَىٰ حُجَّةِ اللّٰهِ وَوَلِیِّهِ، وَخَلِیفَتِهِ وَصَفِیِّهِ، وَحَبِیبِهِ وَنَجِیبِهِ، وَسَیِّدِنَا وَمَوْلَانَا، صَاحِبِ الزَّمَانِ، وَخَازِنِ الْإِیمَانِ، وَقَائِمِ الْعَدْلِ وَالْإِحْسَانِ، الْمَهْدِیِّ الْمَوْعُودِ، وَالْإِمَامِ الْمَنْصُورِ.", fa: "سلام کامل و تمام و فراگیر و همگانی خداوند، و درودهای پایدار و برکات استوار و تمام او، بر حجّت خدا و ولیّ او، و جانشین و برگزیده‌اش، و حبیب و نجیبش، و سرور و مولای ما، صاحب‌الزمان، و نگهبان ایمان، و برپاکننده‌ی عدل و احسان، مهدی موعود، و امام یاری‌شده." },
+
+        { ar: "یَا مَوْلَایَ، یَا صَاحِبَ الزَّمَانِ، أَغِثْنِی، أَغِثْنِی، أَغِثْنِی، أَدْرِکْنِی، أَدْرِکْنِی، أَدْرِکْنِی، الْأَمَانَ، الْأَمَانَ، الْأَمَانَ.", fa: "ای مولای من، ای صاحب‌الزمان، به دادم رس، به دادم رس، به دادم رس، مرا دریاب، مرا دریاب، مرا دریاب، امان، امان، امان." },
+
+        { ar: "یَا فَارِسَ الْحِجَازِ، أَدْرِکْنِی. یَا أَبَا صَالِحٍ الْمَهْدِیَّ، أَدْرِکْنِی. یَا أَبَا الْقَاسِمِ، أَدْرِکْنِی. أَدْرِکْنِی، وَلَا تَدَعْنِی، فَاِنِّی عَاجِزٌ ذَلِیلٌ.", fa: "ای سوارکار حجاز، مرا دریاب. ای اباصالح مهدی، مرا دریاب. ای اباالقاسم، مرا دریاب. مرا دریاب و مرا وامگذار، که همانا من ناتوان و خوارم." }
+      ]
+    },
+
+    {
+      title: "دعای توسل به امام زمان (عج) برای گشایش کارها",
+      sub: "از علامه مجلسی — برای فتح و پیروزی بر دشمنان، اداى قرض و گشایش در کارها",
+      verses: [
+        { ar: "اللّٰهُمَّ کُنْ لِوَلِیِّکَ الْحُجَّةِ بْنِ الْحَسَنِ، صَلَوَاتُکَ عَلَیْهِ وَعَلَىٰ آبَائِهِ، فِی هٰذِهِ السَّاعَةِ وَفِی کُلِّ سَاعَةٍ، وَلِیّاً وَحَافِظاً وَقَائِداً وَنَاصِراً وَدَلِیلًا وَعَیْناً، حَتَّىٰ تُسْکِنَهُ أَرْضَکَ طَوْعاً، وَتُمَتِّعَهُ فِیهَا طَوِیلًا.", fa: "خدایا! برای ولیّت حجّت بن الحسن — درودهایت بر او و پدرانش — در این ساعت و در هر ساعت، سرپرست و نگهبان و پیشوا و یاور و راهنما و دیدبان باش، تا او را در زمینت به فرمانبری سکونت دهی، و او را در آن بهره‌مند طولانی گردانی." },
+
+        { ar: "اللّٰهُمَّ أَعِزَّهُ وَأَعْزِزْ بِهِ، وَانْصُرْهُ وَانْتَصِرْ بِهِ، وَانْصُرْهُ نَصْراً عَزِیزاً، وَافْتَحْ لَهُ فَتْحاً یَسِیراً، وَاجْعَلْ لَهُ مِنْ لَدُنْکَ سُلْطَاناً نَصِیراً.", fa: "خدایا! او را عزیز دار و به وسیله‌ی او عزیز کن، و یاری‌اش کن و به وسیله‌ی او یاری رسان، و او را یاری کن یاری‌ای عزیز، و برایش گشایشی آسان فراهم کن، و از جانب خود برای او سلطنتی یاری‌شده قرار ده." },
+
+        { ar: "اللّٰهُمَّ أَظْهِرْ بِهِ دِینَکَ وَسُنَّةَ نَبِیِّکَ، حَتَّىٰ لَا یَسْتَخْفِیَ بِشَیْءٍ مِنَ الْحَقِّ مَخَافَةَ أَحَدٍ مِنَ الْخَلْقِ.", fa: "خدایا! به وسیله‌ی او دین خود و سنّت پیامبرت را آشکار کن، تا آنکه چیزی از حقّ به‌خاطر ترس از هیچ‌یک از مردم پنهان نماند." }
+      ]
+    },
+
+    {
+      title: "اذکار و ذکرهای کوتاه برای توسل به امام زمان (عج)",
+      sub: "اذکاری که در منابع معتبر برای توسل و استغاثه به حضرت صاحب‌الزمان (عج) سفارش شده است",
+      verses: [
+        { ar: "یَا صَاحِبَ الزَّمَانِ، أَغِثْنِی.", fa: "ای صاحب‌الزمان، به دادم رس. (۷۰ مرتبه زیر آسمان با وضو)" },
+
+        { ar: "یَا صَاحِبَ الزَّمَانِ، أَدْرِکْنِی.", fa: "ای صاحب‌الزمان، مرا دریاب." },
+
+        { ar: "یَا مَوْلَایَ یَا صَاحِبَ الزَّمَانِ، أَغِثْنِی.", fa: "ای مولای من، ای صاحب‌الزمان، به دادم رس." },
+
+        { ar: "أَللَّهُمَّ بَلِّغْ مَوْلَانَا صَاحِبَ الزَّمَانِ، صَلَوَاتُ اللهِ عَلَیْهِ، عَنِّی وَعَنْ وَالِدَیَّ وَجَمِیعِ الْمُؤْمِنِینَ وَالْمُؤْمِنَاتِ، التَّحِیَّةَ وَالسَّلَامَ.", fa: "خدایا! از جانب من و پدر و مادرم و همه‌ی مؤمنان و مؤمنات، به مولای ما صاحب‌الزمان — درودهای خدا بر او — تحیت و سلام برسان." },
+
+        { ar: "اللّٰهُمَّ عَجِّلْ لِوَلِیِّکَ الْفَرَجَ، وَأَهِلْ لَهُ الْمَخْرَجَ، وَارْزُقْهُ النُّصْرَةَ، وَاجْعَلْنَا مِنْ أَعْوَانِهِ وَأَنْصَارِهِ.", fa: "خدایا! برای ولیّت گشایش را تعجیل کن، و راه بیرون آمدن را برایش آماده ساز، و یاری‌اش را روزی کن، و ما را از یاران و یاورانش قرار ده." },
+
+        { ar: "سُبْحَانَ اللهِ، وَالْحَمْدُ لِلّٰهِ، وَلَا إِلٰهَ إِلَّا اللهُ، وَاللهُ أَکْبَرُ، وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِیِّ الْعَظِیمِ.", fa: "منزّه است خدا، و ستایش از آنِ خداست، و معبودی جز خدا نیست، و خدا بزرگ‌تر است، و هیچ نیرو و توانی جز به خدای بلندمرتبه‌ی بزرگ نیست." },
+
+        { ar: "حَسْبُنَا اللهُ وَنِعْمَ الْوَکِیلُ.", fa: "خدا ما را بس است و چه نیکو وکیلی است." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ بِحَقِّ وَلِیِّکَ وَحُجَّتِکَ صَاحِبِ الزَّمَانِ، أَنْ تُعَجِّلَ فَرَجَهُ، وَتَجْعَلَنَا مِنْ أَنْصَارِهِ.", fa: "خدایا! از تو می‌خواهم به حق ولیّت و حجّتت، صاحب‌الزمان، که فرجش را تعجیل کنی و ما را از یارانش قرار دهی." }
+      ]
+    }
+  ],
+  fazilat: "دعای توسل به امام زمان (عج) از با فضیلت‌ترین دعاها در زمان غیبت است. خداوند متعال در قرآن کریم می‌فرماید: «وَإِذَا سَأَلَکَ عِبَادِی عَنِّی فَإِنِّی قَرِیبٌ أُجِیبُ دَعْوَةَ الدَّاعِ إِذَا دَعَانِ» (و چون بندگانم از تو درباره من بپرسند، همانا من نزدیکم و دعای دعاکننده را اجابت می‌کنم) [بقره: ۱۸۶].\n\nامام صادق (ع) فرمودند: «هر کس بعد از هر نماز واجب این دعا را بخواند، به درستی که امام، محمّد بن الحسن (عج) را در بیداری یا خواب خواهد دید.»\n\nعلامه مجلسی در بحارالانوار می‌فرماید: «فتح و پیروزی بر دشمنان در جنگ‌ها و غیر آن، و نیز اداى قرض‌ها، بستگی به توسل به حضرت مهدى (ارواحنا فداه) دارد.»\n\nخواندن این دعاها در زمان گرفتاری‌ها، برای برآورده شدن حاجات، دفع بلا، گشایش در کارها و فتح و پیروزی بسیار مؤثر و مجرّب است. در روایات آمده که هر کس این دعاها را با اخلاص و یقین بخواند، حضرت صاحب‌الزمان (عج) به یاری او می‌شتابد و حاجاتش برآورده می‌شود.",
+  source: "بحار الأنوار (علامه مجلسی) • قبس المصباح • مفاتیح الجنان (شیخ عباس قمی) • جنّات الخلود • صحیفه مهدیه • مصباح المتهجد (شیخ طوسی)",
+  time: "بهترین زمان‌ها: شب جمعه، شب‌های قدر، جمعه‌ها پس از نماز صبح، هنگام گرفتاری‌ها و مشکلات، برای برآورده شدن حاجات، و در زمان فتنه‌ها و بلاها. توصیه شده با وضو، رو به قبله، با اخلاص و حضور قلب خوانده شود. همچنین سفارش شده که پس از خواندن دعا، بر محمّد و آل محمّد صلوات فرستاده شود و صدقه نیز داده شود."
+};
+
+/* ============================================================
+   RENDER VERSES (with sections)
+   ============================================================ */
+function renderVerses(){
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  let totalIndex = 0;
+
+  DUA_DATA.sections.forEach((section) => {
+    const header = document.createElement('div');
+    header.className = 'section-head';
+    header.innerHTML = `
+      <div class="sec-title">${section.title}</div>
+      ${section.sub ? `<div class="sec-sub">${section.sub}</div>` : ''}
+      <div class="sec-orn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/>
+        </svg>
+      </div>
+    `;
+    c.appendChild(header);
+
+    section.verses.forEach((v) => {
+      totalIndex++;
+      const el = document.createElement('div');
+      el.className = 'verse-card' + (v.bismillah ? ' bismillah' : '');
+      el.innerHTML = `
+        <div class="v-head">
+          <span class="v-num">${faNum(totalIndex)}</span>
+          <span class="v-label">بند ${faNum(totalIndex)}</span>
+        </div>
+        <div class="v-ar">${v.ar}</div>
+        <div class="v-divider"></div>
+        <div class="v-fa">${v.fa}</div>
+      `;
+      c.appendChild(el);
+    });
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = ()=> $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = ()=> $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = ()=> $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e)=>{ if(e.target===m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark',dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme')==='dark');
+$('#themeToggle').onclick = ()=> applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  $$('.verse-card').forEach(v=> v.classList.toggle('hide-trans', !showTrans));
+  if($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = ()=>{
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = ()=>{
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b=>{
+  if(b.dataset.lh===lineHeight) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-lh]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b=>{
+  const isOn = (b.dataset.trans==='1')===showTrans;
+  b.classList.toggle('active',isOn);
+  b.onclick = ()=>{
+    $$('[data-trans]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans==='1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b=>{
+  if(b.dataset.fontAr===fontAr) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-ar]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b=>{
+  if(b.dataset.fontFa===fontFa) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-fa]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = ()=>{
+  if(document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=> console.log('NOOR Service Worker registered.'))
+      .catch(()=> {});
+  });
+}
+
+console.log('🤲 دعای توسل به امام زمان (عج) | NOOR – بارگذاری شد. تعداد بخش‌ها:', DUA_DATA.sections.length);
+</script>
+
+</body>
+</html>

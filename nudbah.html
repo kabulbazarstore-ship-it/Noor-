@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای ندبه | نــــور NOOR">
+<title>دعای ندبه | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+body.font-ar-amiri{--font-ar:'Amiri',serif}
+body.font-ar-scheherazade{--font-ar:'Scheherazade New',serif}
+body.font-ar-naskh{--font-ar:'Noto Naskh Arabic',serif}
+body.font-ar-lateef{--font-ar:'Lateef',serif}
+body.font-ar-reem{--font-ar:'Reem Kufi',sans-serif}
+body.font-fa-vazir{--font-fa:'Vazirmatn',Tahoma,sans-serif}
+body.font-fa-naskh{--font-fa:'Noto Naskh Arabic',serif}
+body.font-fa-amiri{--font-fa:'Amiri',serif}
+body.font-fa-scheherazade{--font-fa:'Scheherazade New',serif}
+body.font-fa-lateef{--font-fa:'Lateef',serif}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.12rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.45rem;font-weight:700;
+  color:var(--brand);letter-spacing:1px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.78rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+.verse-card{
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius);
+  padding:16px 14px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);position:relative;
+}
+.verse-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.verse-card .v-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verse-card .v-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:24px;height:24px;padding:0 8px;
+  border-radius:7px;
+  background:var(--gold-soft);color:var(--gold);
+  font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);
+}
+.verse-card .v-label{font-size:.68rem;color:var(--muted);font-weight:600}
+.verse-card .v-ar{
+  font-family:var(--font-ar);
+  font-size:var(--fs-ar);line-height:var(--lh-ar);
+  color:var(--arabic);text-align:center;font-weight:400;
+  margin-bottom:12px;padding:4px 2px;white-space:pre-line;
+}
+.verse-card.bismillah .v-ar{font-size:calc(var(--fs-ar) * .82);margin-bottom:10px}
+.verse-card .v-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  margin:0 auto 12px;width:52px;
+}
+.verse-card .v-fa{
+  font-family:var(--font-fa);
+  font-size:var(--fs-fa);line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding:0 8px;border-right:3px solid var(--gold-border);
+  white-space:pre-line;
+}
+.verse-card.hide-trans .v-fa{display:none}
+.verse-card.hide-trans .v-divider{display:none}
+.verse-card.hide-trans .v-ar{margin-bottom:0}
+
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;
+  padding:20px 18px 26px;
+  box-shadow:var(--shadow);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+.info-block{
+  padding:14px 16px;
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{
+  font-size:.8rem;line-height:1.95;
+  color:var(--text2);text-align:justify;white-space:pre-line;
+}
+
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;
+  color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;
+  transition:all .35s ease;font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.28rem}
+  .verse-card{padding:14px 12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">دعای ندبه</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای ندبه</div>
+      <div class="orn-sub">ندبه و اشتیاق به دیدار امام زمان (عج)</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای ندبه
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> فضیلت و خواص</h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> منبع</h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> زمان و شیوه قرائت</h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-trans="1">نمایش</button>
+        <button class="set-opt" data-trans="0">پنهان</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای ندبه
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای ندبه (متن کامل با ترجمه)
+   ============================================================ */
+
+const DUA_DATA = {
+  title: "دعای ندبه",
+  verses: [
+    { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان", bismillah: true },
+
+    { ar: "الْحَمْدُ لِلّٰهِ رَبِّ الْعالَمِینَ، وَصَلَّى اللّٰهُ عَلَىٰ سَیِّدِنا مُحَمَّدٍ نَبِیِّهِ وَآلِهِ وَسَلَّمَ تَسْلِیماً.", fa: "ستایش ویژه خداست که پروردگار جهانیان است، و درود خدا بر آقای ما محمّد پیامبرش و خاندانش، و سلامی کامل و فراوان." },
+
+    { ar: "اللّٰهُمَّ لَکَ الْحَمْدُ عَلَىٰ مَا جَرَىٰ بِهِ قَضَاؤُکَ فِی أَوْلِیَائِکَ، الَّذِینَ اسْتَخْلَصْتَهُمْ لِنَفْسِکَ وَدِینِکَ، إِذِ اخْتَرْتَ لَهُمْ جَزِیلَ مَا عِنْدَکَ مِنَ النَّعِیمِ الْمُقِیمِ الَّذِی لَا زَوَالَ لَهُ وَلَا اضْمِحْلَالَ، بَعْدَ أَنْ شَرَطْتَ عَلَیْهِمُ الزُّهْدَ فِی دَرَجَاتِ هٰذِهِ الدُّنْیَا الدَّنِیَّةِ وَزُخْرُفِهَا وَزِبْرِجِهَا، فَشَرَطُوا لَکَ ذٰلِکَ، وَعَلِمْتَ مِنْهُمُ الْوَفَاءَ بِهِ، فَقَبِلْتَهُمْ وَقَرَّبْتَهُمْ، وَقَدَّمْتَ لَهُمُ الذِّکْرَ الْعَلِیَّ وَالثَّنَاءَ الْجَلِیَّ، وَأَهْبَطْتَ عَلَیْهِمْ مَلَائِکَتَکَ، وَکَرَّمْتَهُمْ بِوَحْیِکَ، وَرَفَدْتَهُمْ بِعِلْمِکَ، وَجَعَلْتَهُمُ الذَّرِیعَةَ إِلَیْکَ، وَالْوَسِیلَةَ إِلَىٰ رِضْوَانِکَ.", fa: "خدایا، سپاس تو را بر آنچه به قضایت درباره دوستانت جاری شد، همانانی که آنان را برای خود و دینت خالص گرداندی، هنگامی که برایشان از نعمت پایدار نزد خودت بهره‌ای فراوان برگزیدی، نعمتی که نه زوال دارد و نه نابودی، پس از آنکه بر آنان زهد در درجات این دنیای پست و زر و زیور و زینت‌هایش را شرط کردی، پس آنان این شرط را برای تو پذیرفتند و تو وفایشان را دانستی، پس آنان را پذیرفتی و نزدیک گردانیدی و یاد بلند و ستایش روشن را برایشان پیش فرستادی و فرشتگانت را بر آنان فرو فرستادی و به وحی خود کرامتشان دادی و به علم خود یاریشان کردی و آنان را وسیله به سوی خود و راه رسیدن به خشنودی‌ات قرار دادی." },
+
+    { ar: "فَبَعْضٌ أَسْکَنْتَهُ جَنَّتَکَ إِلَىٰ أَنْ أَخْرَجْتَهُ مِنْهَا، وَبَعْضٌ حَمَلْتَهُ فِی فُلْکِکَ وَنَجَّیْتَهُ وَمَنْ آمَنَ مَعَهُ مِنَ الْهَلَکَةِ بِرَحْمَتِکَ، وَبَعْضٌ اتَّخَذْتَهُ لِنَفْسِکَ خَلِیلًا، وَسَأَلَکَ لِسَانَ صِدْقٍ فِی الْآخِرِینَ فَأَجَبْتَهُ وَجَعَلْتَ ذٰلِکَ عَلِیّاً، وَبَعْضٌ کَلَّمْتَهُ مِنْ شَجَرَةٍ تَکْلِیمًا وَجَعَلْتَ لَهُ مِنْ أَخِیهِ رِدْءاً وَوَزِیراً، وَبَعْضٌ أَوْلَدْتَهُ مِنْ غَیْرِ أَبٍ وَآتَیْتَهُ الْبَیِّنَاتِ وَأَیَّدْتَهُ بِرُوحِ الْقُدُسِ، وَکُلٌّ شَرَعْتَ لَهُ شَرِیعَةً وَنَهَجْتَ لَهُ مِنْهَاجاً، وَتَخَیَّرْتَ لَهُ أَوْصِیَاءَ مُسْتَحْفِظاً بَعْدَ مُسْتَحْفِظٍ، مِنْ مُدَّةٍ إِلَىٰ مُدَّةٍ، إِقَامَةً لِدِینِکَ وَحُجَّةً عَلَىٰ عِبَادِکَ، وَلِئَلَّا یَزُولَ الْحَقُّ عَنْ مَقَرِّهِ وَیَغْلِبَ الْبَاطِلُ عَلَىٰ أَهْلِهِ، وَلَا یَقُولَ أَحَدٌ لَوْلَا أَرْسَلْتَ إِلَیْنَا رَسُولًا مُنْذِراً، وَأَقَمْتَ لَنَا عَلَماً هَادِیاً فَنَتَّبِعَ آیَاتِکَ مِنْ قَبْلِ أَنْ نَذِلَّ وَنَخْزَىٰ.", fa: "پس برخی را در بهشت خود جای دادی تا آن‌که او را از آن بیرون آوردی، و برخی را در کشتی خود حمل کردی و او و کسانی را که با او ایمان آورده بودند، به رحمت خود از هلاکت نجات دادی، و برخی را برای خود دوست صمیمی گرفتی و از تو زبان صدق در آخرین (نسل‌های آینده) خواست و تو او را پاسخ دادی و آن را بلند و برجسته گرداندی، و برخی را از درختی با او سخن گفتی، سخنی ویژه، و برای او از برادرش پشتیبان و وزیری قرار دادی، و برخی را بدون پدر آفریدی و نشانه‌های روشن به او دادی و به روح‌القدس تأییدش کردی، و برای هر یک شریعتی نهادی و راهی روشن نمایاندی و برایشان جانشینانی برگزیدی، پاسداری پس از پاسدار، از دوره‌ای به دوره‌ای دیگر، برای برپایی دینت و حجتی بر بندگانت، و برای آنکه حق از جایگاهش زوال نیابد و باطل بر اهلش چیره نگردد، و کسی نگوید: «کاش رسولی هشداردهنده به سوی ما می‌فرستادی و برای ما نشانه‌ای راهنما برپا می‌داشتی تا پیش از آن‌که خوار و رسوا شویم، از آیاتت پیروی کنیم»." },
+
+    { ar: "إِلَىٰ أَنِ انْتَهَیْتَ بِالْأَمْرِ إِلَىٰ حَبِیبِکَ وَنَجِیبِکَ مُحَمَّدٍ صَلَّى اللّٰهُ عَلَیْهِ وَآلِهِ، فَکَانَ کَمَا انْتَجَبْتَهُ سَیِّدَ مَنْ خَلَقْتَهُ، وَصَفْوَةَ مَنِ اصْطَفَیْتَهُ، وَأَفْضَلَ مَنِ اجْتَبَیْتَهُ، وَأَکْرَمَ مَنِ اعْتَمَدْتَهُ، قَدَّمْتَهُ عَلَىٰ أَنْبِیَائِکَ، وَبَعَثْتَهُ إِلَىٰ الثَّقَلَیْنِ مِنْ عِبَادِکَ، وَأَوْطَأْتَهُ مَشَارِقَکَ وَمَغَارِبَکَ، وَسَخَّرْتَ لَهُ الْبُرَاقَ، وَعَرَجْتَ بِرُوحِهِ إِلَىٰ سَمَائِکَ، وَأَوْدَعْتَهُ عِلْمَ مَا کَانَ وَمَا یَکُونُ إِلَىٰ انْقِضَاءِ خَلْقِکَ، ثُمَّ نَصَرْتَهُ بِالرُّعْبِ، وَحَفَفْتَهُ بِجَبْرَئِیلَ وَمِیکَائِیلَ وَالْمُسَوِّمِینَ مِنْ مَلَائِکَتِکَ، وَوَعَدْتَهُ أَنْ تُظْهِرَ دِینَهُ عَلَى الدِّینِ کُلِّهِ وَلَوْ کَرِهَ الْمُشْرِکُونَ، وَذٰلِکَ بَعْدَ أَنْ بَوَّأْتَهُ مُبَوَّأَ صِدْقٍ مِنْ أَهْلِهِ، وَجَعَلْتَ لَهُ وَلَهُمْ أَوَّلَ بَیْتٍ وُضِعَ لِلنَّاسِ، لَلَّذِی بِبَکَّةَ مُبَارَکاً وَهُدًى لِلْعَالَمِینَ، فِیهِ آیَاتٌ بَیِّنَاتٌ مَقَامُ إِبْرَاهِیمَ، وَمَنْ دَخَلَهُ کَانَ آمِناً، وَقُلْتَ: «إِنَّمَا یُرِیدُ اللّٰهُ لِیُذْهِبَ عَنْکُمُ الرِّجْسَ أَهْلَ الْبَیْتِ وَیُطَهِّرَکُمْ تَطْهِیراً».", fa: "تا آن‌که کار را به حبیب و برگزیده‌ات محمّد صلی الله علیه و آله رساندی؛ پس او چنان بود که برگزیدی‌اش: سرور آفریدگانت و برگزیده‌ی برگزیدگانت و برترین آنان که انتخاب کردی و گرامی‌ترین آنان که بر او تکیه نمودی، او را بر پیامبرانت مقدم داشتی و به سوی دو گروه سنگین (انس و جن) از بندگانت فرستادی و مشرق‌ها و مغرب‌هایت را زیر گامش نهادی و براق را برایش رام کردی و روحش را به آسمان‌هایت بالا بردی و دانش آنچه بوده و آنچه خواهد بود تا پایان آفرینشت را به او سپردی، سپس او را با ترس (در دل دشمنان) یاری کردی و به جبرئیل و میکائیل و فرشتگان نشان‌دارت گرداگردش قرار دادی و به او وعده دادی که دینش را بر همه‌ی ادیان پیروز گردانی، هرچند مشرکان ناخشنود باشند، و این پس از آن بود که او را در جایگاه راستی از خاندانش جای دادی و برای او و آنان نخستین خانه‌ای که برای مردم نهاده شد، آن که در بکه (مکه) است، مبارک و مایه هدایت جهانیان قرار دادی، در آن نشانه‌های روشن است؛ مقام ابراهیم، و هر که در آن درآید ایمن است، و فرمودی: «همانا خداوند می‌خواهد که پلیدی را از شما، ای خاندان پیامبر، بزداید و شما را پاک گرداند، پاکی کامل»." },
+
+    { ar: "ثُمَّ جَعَلْتَ أَجْرَ مُحَمَّدٍ صَلَوَاتُکَ عَلَیْهِ وَآلِهِ مَوَدَّتَهُمْ فِی کِتَابِکَ، فَقُلْتَ: «قُلْ لَا أَسْأَلُکُمْ عَلَیْهِ أَجْراً إِلَّا الْمَوَدَّةَ فِی الْقُرْبَىٰ»، وَقُلْتَ: «مَا سَأَلْتُکُمْ مِنْ أَجْرٍ فَهُوَ لَکُمْ»، وَقُلْتَ: «مَا أَسْأَلُکُمْ عَلَیْهِ مِنْ أَجْرٍ إِلَّا مَنْ شَاءَ أَنْ یَتَّخِذَ إِلَىٰ رَبِّهِ سَبِیلًا»، فَکَانُوا هُمُ السَّبِیلَ إِلَیْکَ، وَالْمَسْلَکَ إِلَىٰ رِضْوَانِکَ.", fa: "سپس پاداش محمّد — درودهای تو بر او و خاندانش — را مودّت آنان در کتابت قرار دادی، و فرمودی: «بگو از شما پاداشی نمی‌خواهم جز دوستی نزدیکان» و فرمودی: «هر پاداشی که از شما خواستم، برای خود شماست» و فرمودی: «از شما پاداشی نمی‌خواهم، مگر آن‌که هر کس بخواهد راهی به سوی پروردگارش برگزیند»، پس آنان همان راه به سوی تو و مسیر به خشنودی‌ات بودند." },
+
+    { ar: "فَلَمَّا انْقَضَتْ أَیَّامُهُ، أَقَامَ وَلِیَّهُ عَلِیَّ بْنَ أَبِی طَالِبٍ صَلَوَاتُکَ عَلَیْهِمَا وَآلِهِمَا هَادِیاً، إِذْ کَانَ هُوَ الْمُنْذِرَ، وَلِکُلِّ قَوْمٍ هَادٍ، فَقَالَ وَالْمَلَأُ أَمَامَهُ: «مَنْ کُنْتُ مَوْلَاهُ فَعَلِیٌّ مَوْلَاهُ، اللّٰهُمَّ وَالِ مَنْ وَالَاهُ، وَعَادِ مَنْ عَادَاهُ، وَانْصُرْ مَنْ نَصَرَهُ، وَاخْذُلْ مَنْ خَذَلَهُ»، وَقَالَ: «مَنْ کُنْتُ أَنَا نَبِیَّهُ فَعَلِیٌّ أَمِیرُهُ»، وَقَالَ: «أَنَا وَعَلِیٌّ مِنْ شَجَرَةٍ وَاحِدَةٍ وَسَائِرُ النَّاسِ مِنْ شَجَرٍ شَتَّىٰ»، وَأَحَلَّهُ مَحَلَّ هَارُونَ مِنْ مُوسَىٰ، فَقَالَ لَهُ: «أَنْتَ مِنِّی بِمَنْزِلَةِ هَارُونَ مِنْ مُوسَىٰ إِلَّا أَنَّهُ لَا نَبِیَّ بَعْدِی»، وَزَوَّجَهُ ابْنَتَهُ سَیِّدَةَ نِسَاءِ الْعَالَمِینَ، وَأَحَلَّ لَهُ مِنْ مَسْجِدِهِ مَا حَلَّ لَهُ، وَسَدَّ الْأَبْوَابَ إِلَّا بَابَهُ، ثُمَّ أَوْدَعَهُ عِلْمَهُ وَحِکْمَتَهُ، فَقَالَ: «أَنَا مَدِینَةُ الْعِلْمِ وَعَلِیٌّ بَابُهَا، فَمَنْ أَرَادَ الْمَدِینَةَ وَالْحِکْمَةَ فَلْیَأْتِهَا مِنْ بَابِهَا»، ثُمَّ قَالَ: «أَنْتَ أَخِی وَوَصِیِّی وَوَارِثِی، لَحْمُکَ مِنْ لَحْمِی وَدَمُکَ مِنْ دَمِی، سِلْمُکَ سِلْمِی وَحَرْبُکَ حَرْبِی، وَالْإِیمَانُ مُخَالِطٌ لَحْمَکَ وَدَمَکَ کَمَا خَالَطَ لَحْمِی وَدَمِی، وَأَنْتَ غَداً عَلَى الْحَوْضِ خَلِیفَتِی، وَأَنْتَ تَقْضِی دَیْنِی وَتُنْجِزُ عِدَاتِی، وَشِیعَتُکَ عَلَىٰ مَنَابِرَ مِنْ نُورٍ، مُبْیَضَّةً وُجُوهُهُمْ حَوْلِی فِی الْجَنَّةِ، وَهُمْ جِیرَانِی، وَلَوْلَا أَنْتَ یَا عَلِیُّ لَمْ یُعْرَفِ الْمُؤْمِنُونَ بَعْدِی».", fa: "پس چون روزگارش به پایان رسید، ولیّ خود علی بن ابیطالب — درودهای تو بر آن دو و خاندانشان — را به عنوان هدایتگر برپا داشت، زیرا او هشداردهنده بود و هر قومی را هدایتگری است، پس در حضور جمعیت فرمود: «هر که من مولای اویم، علی مولای اوست. خدایا دوست بدار هر که او را دوست دارد و دشمن بدار هر که او را دشمن دارد و یاری کن هر که او را یاری کند و خوار کن هر که او را خوار کند» و فرمود: «هر کس من پیامبر اویم، علی امیر اوست» و فرمود: «من و علی از یک درختیم و سایر مردم از درختان پراکنده» و او را به جایگاه هارون برای موسی نشاند، پس به او فرمود: «تو برای من به منزله‌ی هارونی برای موسی، جز اینکه پس از من پیامبری نیست» و دخترش سرور زنان جهانیان را به همسری او داد و از مسجدش آنچه برای خود حلال بود برای او حلال کرد و درها را جز درِ او بست، سپس دانش و حکمت خود را به او سپرد و فرمود: «من شهر دانشم و علی درِ آن است، پس هر که شهر و حکمت را خواهد، از درِ آن درآید» سپس فرمود: «تو برادر و جانشین و وارث منی، گوشت تو از گوشت من و خون تو از خون من است، صلح تو صلح من و جنگ تو جنگ من است، و ایمان با گوشت و خون تو آمیخته است چنانکه با گوشت و خون من آمیخته، و تو فردا بر کنار حوض، جانشین منی و تو قرض مرا ادا می‌کنی و وعده‌هایم را به انجام می‌رسانی، و شیعیانت بر منبرهایی از نورند، چهره‌هایشان سفید، در بهشت گرد منند و همسایگان منند، و اگر تو ای علی نبودی، مؤمنان پس از من شناخته نمی‌شدند»." },
+
+    { ar: "وَکَانَ بَعْدَهُ هُدًى مِنَ الضَّلَالِ، وَنُوراً مِنَ الْعَمَىٰ، وَحَبْلَ اللّٰهِ الْمَتِینَ، وَصِرَاطَهُ الْمُسْتَقِیمَ، لَا یُسْبَقُ بِقَرَابَةٍ فِی رَحِمٍ، وَلَا بِسَابِقَةٍ فِی دِینٍ، وَلَا یُلْحَقُ فِی مَنْقَبَةٍ مِنْ مَنَاقِبِهِ، یَحْذُو حَذْوَ الرَّسُولِ صَلَّى اللّٰهُ عَلَیْهِمَا وَآلِهِمَا، وَیُقَاتِلُ عَلَى التَّأْوِیلِ، وَلَا تَأْخُذُهُ فِی اللّٰهِ لَوْمَةُ لَائِمٍ، قَدْ وَتَرَ فِیهِ صَنَادِیدَ الْعَرَبِ، وَقَتَلَ أَبْطَالَهُمْ، وَنَاوَشَ ذُؤْبَانَهُمْ، فَأَوْدَعَ قُلُوبَهُمْ أَحْقَاداً بَدْرِیَّةً وَخَیْبَرِیَّةً وَحُنَیْنِیَّةً وَغَیْرَهُنَّ، فَأَضَبَّتْ عَلَىٰ عَدَاوَتِهِ، وَأَکَبَّتْ عَلَىٰ مُنَابَذَتِهِ، حَتَّىٰ قَتَلَ النَّاکِثِینَ وَالْقَاسِطِینَ وَالْمَارِقِینَ، وَلَمَّا قَضَىٰ نَحْبَهُ وَقَتَلَهُ أَشْقَى الْآخِرِینَ یَتْبَعُ أَشْقَى الْأَوَّلِینَ، لَمْ یُمْتَثَلْ أَمْرُ رَسُولِ اللّٰهِ صَلَّى اللّٰهُ عَلَیْهِ وَآلِهِ فِی الْهَادِینَ بَعْدَ الْهَادِینَ، وَالْأُمَّةُ مُصِرَّةٌ عَلَىٰ مَقْتِهِ، مُجْتَمِعَةٌ عَلَىٰ قَطِیعَةِ رَحِمِهِ، وَإِقْصَاءِ وُلْدِهِ، إِلَّا الْقَلِیلَ مِمَّنْ وَفَىٰ لِرِعَایَةِ الْحَقِّ فِیهِمْ، فَقُتِلَ مَنْ قُتِلَ، وَسُبِیَ مَنْ سُبِیَ، وَأُقْصِیَ مَنْ أُقْصِیَ، وَجَرَى الْقَضَاءُ لَهُمْ بِمَا یُرْجَىٰ لَهُ حُسْنُ الْمَثُوبَةِ، إِذْ کَانَتِ الْأَرْضُ لِلّٰهِ یُورِثُهَا مَنْ یَشَاءُ مِنْ عِبَادِهِ، وَالْعَاقِبَةُ لِلْمُتَّقِینَ، وَسُبْحَانَ رَبِّنَا إِنْ کَانَ وَعْدُ رَبِّنَا لَمَفْعُولًا، وَلَنْ یُخْلِفَ اللّٰهُ وَعْدَهُ، وَهُوَ الْعَزِیزُ الْحَکِیمُ.", fa: "و او پس از خود، هدایتگری از گمراهی و نوری از کوردلی و ریسمان استوار خدا و راه راست او بود، نه در خویشاوندی از او پیشی گرفته شد و نه در پیشگامی در دین، و نه در فضیلتی از فضایلش به او رسیدند. او به روش رسول خدا گام برمی‌داشت و بر اساس تأویل (قرآن) جنگ می‌کرد و سرزنش هیچ سرزنش‌کننده‌ای درباره‌ی خدا او را نمی‌گرفت، در این راه بزرگان عرب را به خونخواهی واداشت و پهلوانانشان را کشت و گرگانشان را به مبارزه طلبید، پس در دل‌هایشان کینه‌های بدری و خیبری و حنینی و جز آن را جای داد، پس بر دشمنی او پافشاری کردند و بر هماوردی با او روی آوردند تا آن‌که پیمان‌شکنان و ستمگران و مارقان (خوارج) را کشت، و چون مرگش فرا رسید و بدترینِ آخرین‌ها که پیرو بدترینِ اولین‌ها (ابن ملجم) او را کشت، فرمان رسول خدا صلی الله علیه و آله درباره‌ی هدایتگران پس از هدایتگران به کار بسته نشد، و امّت بر دشمنی او پافشاری کردند و بر بریدن رحم او و دور کردن فرزندانش گرد آمدند، جز اندکی که در رعایت حق درباره‌شان وفا کردند. پس هر که کشته شد، کشته شد و هر که اسیر شد، اسیر شد و هر که دور شد، دور شد، و قضا برایشان به آنچه امید نیکوی پاداش در آن است جاری شد، زیرا زمین از آنِ خداست و آن را به هر کس از بندگانش بخواهد به ارث می‌دهد و عاقبت از آنِ پرهیزگاران است، و منزّه است پروردگار ما، که وعده‌ی پروردگارمان انجام‌شدنی است و خدا هرگز وعده‌اش را خلاف نمی‌کند و او توانای حکیم است." },
+
+    { ar: "فَعَلَى الْأَطَائِبِ مِنْ أَهْلِ بَیْتِ مُحَمَّدٍ وَعَلِیٍّ صَلَّى اللّٰهُ عَلَیْهِمَا وَآلِهِمَا، فَلْیَبْکِ الْبَاکُونَ، وَإِیَّاهُمْ فَلْیَنْدُبِ النَّادِبُونَ، وَلِمِثْلِهِمْ فَلْتَذْرِفِ الدُّمُوعُ، وَلْیَصْرُخِ الصَّارِخُونَ، وَیَضِجَّ الضَّاجُّونَ، وَیَعِجَّ الْعَاجُّونَ.", fa: "پس بر پاکان از خاندان محمّد و علی — درود خدا بر آن دو و خاندانشان — باید گریه‌کنندگان بگریند و ندبه‌کنندگان آنان را ندبه کنند، و برای مانند آنان باید اشک‌ها روان شود و فریادکنندگان فریاد کشند و ناله‌کنندگان ناله کنند و شیون‌کنندگان شیون سر دهند." },
+
+    { ar: "أَیْنَ الْحَسَنُ؟ أَیْنَ الْحُسَیْنُ؟ أَیْنَ أَبْنَاءُ الْحُسَیْنِ؟ صَالِحٌ بَعْدَ صَالِحٍ، وَصَادِقٌ بَعْدَ صَادِقٍ؟ أَیْنَ السَّبِیلُ بَعْدَ السَّبِیلِ؟ أَیْنَ الْخِیَرَةُ بَعْدَ الْخِیَرَةِ؟ أَیْنَ الشُّمُوسُ الطَّالِعَةُ؟ أَیْنَ الْأَقْمَارُ الْمُنِیرَةُ؟ أَیْنَ الْأَنْجُمُ الزَّاهِرَةُ؟ أَیْنَ أَعْلَامُ الدِّینِ وَقَوَاعِدُ الْعِلْمِ؟ أَیْنَ بَقِیَّةُ اللّٰهِ الَّتِی لَا تَخْلُو مِنَ الْعِتْرَةِ الْهَادِیَةِ؟", fa: "کجاست حسن؟ کجاست حسین؟ کجاست فرزندان حسین، صالحی پس از صالح و راستگویی پس از راستگو؟ کجاست راه پس از راه؟ کجاست برگزیده پس از برگزیده؟ کجاست خورشیدهای تابان؟ کجاست ماه‌های درخشان؟ کجاست ستاره‌های فروزان؟ کجاست پرچم‌های دین و پایه‌های علم؟ کجاست باقیمانده‌ی خدا که از خاندان هدایتگر خالی نمی‌ماند؟" },
+
+    { ar: "أَیْنَ الْمُعَدُّ لِقَطْعِ دَابِرِ الظَّلَمَةِ؟ أَیْنَ الْمُنْتَظَرُ لِإِقَامَةِ الْأَمْتِ وَالْعِوَجِ؟ أَیْنَ الْمُرْتَجَىٰ لِإِزَالَةِ الْجَوْرِ وَالْعُدْوَانِ؟ أَیْنَ الْمُدَّخَرُ لِتَجْدِیدِ الْفَرَائِضِ وَالسُّنَنِ؟ أَیْنَ الْمُتَخَیَّرُ لِإِعَادَةِ الْمِلَّةِ وَالشَّرِیعَةِ؟ أَیْنَ الْمُؤَمَّلُ لِإِحْیَاءِ الْکِتَابِ وَحُدُودِهِ؟ أَیْنَ مُحْیِی مَعَالِمِ الدِّینِ وَأَهْلِهِ؟ أَیْنَ قَاصِمُ شَوْکَةِ الْمُعْتَدِینَ؟ أَیْنَ هَادِمُ أَبْنِیَةِ الشِّرْکِ وَالنِّفَاقِ؟ أَیْنَ مُبِیدُ أَهْلِ الْفُسُوقِ وَالْعِصْیَانِ وَالطُّغْیَانِ؟ أَیْنَ حَاصِدُ فُرُوعِ الْغَیِّ وَالشِّقَاقِ؟ أَیْنَ طَامِسُ آثَارِ الزَّیْغِ وَالْأَهْوَاءِ؟ أَیْنَ قَاطِعُ حَبَائِلِ الْکِذْبِ وَالِافْتِرَاءِ؟ أَیْنَ مُبِیدُ الْعُتَاةِ وَالْمَرَدَةِ؟ أَیْنَ مُسْتَأْصِلُ أَهْلِ الْعِنَادِ وَالتَّضْلِیلِ وَالْإِلْحَادِ؟ أَیْنَ مُعِزُّ الْأَوْلِیَاءِ وَمُذِلُّ الْأَعْدَاءِ؟ أَیْنَ جَامِعُ الْکَلِمَةِ عَلَى التَّقْوَىٰ؟ أَیْنَ بَابُ اللّٰهِ الَّذِی مِنْهُ یُؤْتَىٰ؟ أَیْنَ وَجْهُ اللّٰهِ الَّذِی إِلَیْهِ یَتَوَجَّهُ الْأَوْلِیَاءُ؟ أَیْنَ السَّبَبُ الْمُتَّصِلُ بَیْنَ الْأَرْضِ وَالسَّمَاءِ؟ أَیْنَ صَاحِبُ یَوْمِ الْفَتْحِ وَنَاشِرُ رَایَةِ الْهُدَىٰ؟ أَیْنَ مُؤَلِّفُ شَمْلِ الصَّلَاحِ وَالرِّضَا؟ أَیْنَ الطَّالِبُ بِذُحُولِ الْأَنْبِیَاءِ وَأَبْنَاءِ الْأَنْبِیَاءِ؟ أَیْنَ الطَّالِبُ بِدَمِ الْمَقْتُولِ بِکَرْبَلَاءَ؟ أَیْنَ الْمَنْصُورُ عَلَىٰ مَنِ اعْتَدَىٰ عَلَیْهِ وَافْتَرَىٰ؟ أَیْنَ الْمُضْطَرُّ الَّذِی یُجَابُ إِذَا دَعَا؟ أَیْنَ صَدْرُ الْخَلَائِقِ ذُو الْبِرِّ وَالتَّقْوَىٰ؟ أَیْنَ ابْنُ النَّبِیِّ الْمُصْطَفَىٰ، وَابْنُ عَلِیٍّ الْمُرْتَضَىٰ، وَابْنُ خَدِیجَةَ الْغَرَّاءِ، وَابْنُ فَاطِمَةَ الْکُبْرَىٰ؟", fa: "کجاست آن که برای قطع ریشه‌ی ستمگران آماده شده؟ کجاست آن منتظر برای برپایی امت و اصلاح کژی‌ها؟ کجاست آن امید برای از بین بردن ستم و تجاوز؟ کجاست آن ذخیره برای تجدید واجبات و سنت‌ها؟ کجاست آن برگزیده برای بازگرداندن ملت و شریعت؟ کجاست آن آرزو برای زنده کردن کتاب و حدود آن؟ کجاست زنده‌کننده‌ی نشانه‌های دین و اهل آن؟ کجاست درهم‌شکننده‌ی قدرت متجاوزان؟ کجاست ویران‌کننده‌ی بناهای شرک و نفاق؟ کجاست نابودکننده‌ی اهل فسق و عصیان و طغیان؟ کجاست دروکننده‌ی شاخه‌های گمراهی و تفرقه؟ کجاست محوکننده‌ی آثار کژی و هوس‌ها؟ کجاست برنده‌ی دام‌های دروغ و افترا؟ کجاست نابودکننده‌ی سرکشان و گردنکشان؟ کجاست ریشه‌کن‌کننده‌ی اهل عناد و گمراهی و الحاد؟ کجاست عزت‌بخش دوستان و خوارکننده‌ی دشمنان؟ کجاست گردآورنده‌ی کلمه بر تقوا؟ کجاست درِ خدا که از آن به درون می‌روند؟ کجاست روی خدا که اولیا به سوی او روی می‌آورند؟ کجاست آن سبب متصل میان زمین و آسمان؟ کجاست صاحب روز فتح و برافرازنده‌ی پرچم هدایت؟ کجاست گردآورنده‌ی پراکندگی صلاح و خشنودی؟ کجاست آن که خون‌خواهی پیامبران و فرزندان پیامبران را می‌کند؟ کجاست آن که خون‌خواه کشته‌ی کربلاست؟ کجاست آن که بر هر که بر او تعدی و افترا کرده، پیروز است؟ کجاست آن درمانده‌ای که چون بخواند اجابت می‌شود؟ کجاست سینه‌ی خلایق، صاحب نیکی و تقوا؟ کجاست فرزند پیامبر برگزیده، و فرزند علی مرتضی، و فرزند خدیجه‌ی درخشان، و فرزند فاطمه‌ی کبری؟" },
+
+    { ar: "بِأَبِی أَنْتَ وَأُمِّی وَنَفْسِی لَکَ الْوِقَاءُ وَالْحِمَىٰ، یَا بْنَ السَّادَةِ الْمُقَرَّبِینَ، یَا بْنَ النُّجَبَاءِ الْأَکْرَمِینَ، یَا بْنَ الْهُدَاةِ الْمَهْدِیِّینَ، یَا بْنَ الْخِیَرَةِ الْمُهَذَّبِینَ، یَا بْنَ الْغَطَارِفَةِ الْأَنْجَبِینَ، یَا بْنَ الْأَطَائِبِ الْمُطَهَّرِینَ، یَا بْنَ الْخَضَارِمَةِ الْمُنْتَجَبِینَ، یَا بْنَ الْقَمَاقِمَةِ الْأَکْرَمِینَ، یَا بْنَ الْبُدُورِ الْمُنِیرَةِ، یَا بْنَ السُّرُجِ الْمُضِیئَةِ، یَا بْنَ الشُّهُبِ الثَّاقِبَةِ، یَا بْنَ الْأَنْجُمِ الزَّاهِرَةِ، یَا بْنَ السُّبُلِ الْوَاضِحَةِ، یَا بْنَ الْأَعْلَامِ اللَّائِحَةِ، یَا بْنَ الْعُلُومِ الْکَامِلَةِ، یَا بْنَ السُّنَنِ الْمَشْهُورَةِ، یَا بْنَ الْمَعَالِمِ الْمَأْثُورَةِ، یَا بْنَ الْمُعْجِزَاتِ الْمَوْجُودَةِ، یَا بْنَ الدَّلَائِلِ الْمَشْهُودَةِ، یَا بْنَ الصِّرَاطِ الْمُسْتَقِیمِ، یَا بْنَ النَّبَإِ الْعَظِیمِ، یَا بْنَ مَنْ هُوَ فِی أُمِّ الْکِتَابِ لَدَى اللّٰهِ عَلِیٌّ حَکِیمٌ، یَا بْنَ الْآیَاتِ وَالْبَیِّنَاتِ، یَا بْنَ الدَّلَائِلِ الظَّاهِرَاتِ، یَا بْنَ الْبَرَاهِینِ الْوَاضِحَاتِ الْبَاهِرَاتِ، یَا بْنَ الْحُجَجِ الْبَالِغَاتِ، یَا بْنَ النِّعَمِ السَّابِغَاتِ، یَا بْنَ طه وَالْمُحْکَمَاتِ، یَا بْنَ یس وَالذَّارِیَاتِ، یَا بْنَ الطُّورِ وَالْعَادِیَاتِ، یَا بْنَ مَنْ دَنَا فَتَدَلَّىٰ فَکَانَ قَابَ قَوْسَیْنِ أَوْ أَدْنَىٰ، دُنُوّاً وَاقْتِرَاباً مِنَ الْعَلِیِّ الْأَعْلَىٰ.", fa: "پدر و مادرم و جانم فدایت، ای سپر و پناه! ای پسر سروران مقرّب، ای پسر بزرگواران گرامی، ای پسر هدایتگران راه‌یافته، ای پسر برگزیدگان پالوده، ای پسر بزرگواران نجیب، ای پسر پاکان پاک‌شده، ای پسر بزرگواران برگزیده، ای پسر دریادلان کریم‌ترین، ای پسر ماه‌های تابان، ای پسر چراغ‌های فروزان، ای پسر شهاب‌های درخشان، ای پسر ستارگان فروزان، ای پسر راه‌های روشن، ای پسر نشانه‌های آشکار، ای پسر علوم کامل، ای پسر سنت‌های مشهور، ای پسر نشانه‌های مأثور، ای پسر معجزات موجود، ای پسر دلایل مشهود، ای پسر راه راست، ای پسر خبر بزرگ، ای پسر آن که در ام‌الکتاب نزد خدا علیّ حکیم است، ای پسر آیات و نشانه‌های روشن، ای پسر دلایل آشکار، ای پسر برهان‌های واضح و درخشان، ای پسر حجت‌های رسا، ای پسر نعمت‌های کامل، ای پسر «طه» و آیات محکم، ای پسر «یس» و «ذاریات»، ای پسر «طور» و «عادیات»، ای پسر آن که نزدیک شد و فروآمد تا به فاصله‌ی دو کمان یا نزدیک‌تر، نزدیکی و روی‌آوری به والاترین (خداوند) داشت." },
+
+    { ar: "لَیْتَ شِعْرِی أَیْنَ اسْتَقَرَّتْ بِکَ النَّوَىٰ؟ بَلْ أَیُّ أَرْضٍ تُقِلُّکَ أَوْ ثَرَىٰ؟ أَبِرَضْوَىٰ أَوْ غَیْرِهَا؟ أَمْ ذِی طُوًىٰ؟ عَزِیزٌ عَلَیَّ أَنْ أَرَى الْخَلْقَ وَلَا تُرَىٰ، وَلَا أَسْمَعُ لَکَ حَسِیساً وَلَا نَجْوَىٰ، عَزِیزٌ عَلَیَّ أَنْ تُحِیطَ بِکَ دُونِیَ الْبَلْوَىٰ، وَلَا یَنَالَکَ مِنِّی ضَجِیجٌ وَلَا شَکْوَىٰ، بِنَفْسِی أَنْتَ مِنْ مُغَیَّبٍ لَمْ یَخْلُ مِنَّا، بِنَفْسِی أَنْتَ مِنْ نَازِحٍ مَا نَزَحَ عَنَّا، بِنَفْسِی أَنْتَ أُمْنِیَّةُ شَائِقٍ یَتَمَنَّىٰ، مِنْ مُؤْمِنٍ وَمُؤْمِنَةٍ ذَکَرَا فَحَنَّا، بِنَفْسِی أَنْتَ مِنْ عَقِیدِ عِزٍّ لَا یُسَامَىٰ، بِنَفْسِی أَنْتَ مِنْ أَثِیلِ مَجْدٍ لَا یُجَارَىٰ، بِنَفْسِی أَنْتَ مِنْ تِلَادِ نِعَمٍ لَا تُضَاهَىٰ، بِنَفْسِی أَنْتَ مِنْ نَصِیفِ شَرَفٍ لَا یُسَاوَىٰ، إِلَىٰ مَتَىٰ أَحَارُ فِیکَ یَا مَوْلَایَ؟ وَإِلَىٰ مَتَىٰ؟ وَأَیَّ خِطَابٍ أَصِفُ فِیکَ؟ وَأَیَّ نَجْوَىٰ؟ عَزِیزٌ عَلَیَّ أَنْ أُجَابَ دُونَکَ وَأُنَاغَىٰ، عَزِیزٌ عَلَیَّ أَنْ أَبْکِیَکَ وَیَخْذُلَکَ الْوَرَىٰ، عَزِیزٌ عَلَیَّ أَنْ یَجْرِیَ عَلَیْکَ دُونَهُمْ مَا جَرَىٰ.", fa: "ای کاش می‌دانستم که آرزوهایت به کجا انجامیده است؟ بلکه کدام زمین تو را بر خود دارد یا کدام خاک؟ آیا رضوی است یا غیر آن یا ذی طوی؟ بر من گران است که خلق را ببینم و تو دیده نشوی، و صدایی و نجوایی از تو نشنوم. بر من گران است که بلاها بدون من تو را احاطه کنند و فریاد و شکایتی از من به تو نرسد. جانم فدای تو ای غایبی که از ما خالی نیستی، جانم فدای تو ای دوری که از ما دور نشده‌ای، جانم فدای تو ای آرزوی هر مشتاقی که مؤمن و مؤمنه‌ای به یادت افتاده و ناله کرده، جانم فدای تو ای گوهر عزتی که همتایی ندارد، جانم فدای تو ای ریشه‌ی مجدی که رقیبی ندارد، جانم فدای تو ای میراث نعمت‌هایی که مانند ندارند، جانم فدای تو ای نصف شرفی که برابر ندارد. تا کی در تو حیران باشم ای مولای من؟ و تا کی؟ و چه خطابی درباره‌ی تو وصف کنم و چه نجوایی؟ بر من گران است که جز تو پاسخ داده شوم و با تو نجوا کنم، بر من گران است که برای تو گریه کنم و خلق تو را تنها گذارند، بر من گران است که آنچه بر تو روا شد، بر دیگران جاری شود." },
+
+    { ar: "هَلْ مِنْ مُعِینٍ فَأُطِیلَ مَعَهُ الْعَوِیلَ وَالْبُکَاءَ؟ هَلْ مِنْ جَزُوعٍ فَأُسَاعِدَ جَزَعَهُ إِذَا خَلَا؟ هَلْ قَذِیَتْ عَیْنٌ فَسَاعَدَتْهَا عَیْنِی عَلَى الْقَذَىٰ؟ هَلْ إِلَیْکَ یَا بْنَ أَحْمَدَ سَبِیلٌ فَتُلْقَىٰ؟ هَلْ یَتَّصِلُ یَوْمُنَا مِنْکَ بِعِدَةٍ فَنَحْظَىٰ؟ مَتَىٰ نَرِدُ مَنَاهِلَکَ الرَّوِیَّةَ فَنَرْوَىٰ؟ مَتَىٰ نَنْتَقِعُ مِنْ عَذْبِ مَائِکَ فَقَدْ طَالَ الصَّدَىٰ؟ مَتَىٰ نُغَادِیکَ وَنُرَاوِحُکَ فَنُقِرَّ عَیْناً؟ مَتَىٰ تَرَانَا وَنَرَاکَ وَقَدْ نَشَرْتَ لِوَاءَ النَّصْرِ، تُرَىٰ أَتَرَانَا نَحُفُّ بِکَ وَأَنْتَ تَؤُمُّ الْمَلَأَ، وَقَدْ مَلَأْتَ الْأَرْضَ عَدْلًا، وَأَذَقْتَ أَعْدَاءَکَ هَوَاناً وَعِقَاباً، وَأَبَرْتَ الْعُتَاةَ وَجَحَدَةَ الْحَقِّ، وَقَطَعْتَ دَابِرَ الْمُتَکَبِّرِینَ، وَاجْتَثَثْتَ أُصُولَ الظَّالِمِینَ، وَنَحْنُ نَقُولُ: الْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِینَ.", fa: "آیا یاوری هست تا با او ناله و گریه را طولانی کنم؟ آیا بی‌تابی هست تا در خلوت به بی‌تابی او کمک کنم؟ آیا چشمی خار دارد تا چشمانم در پاک کردن آن خار با آن همکاری کند؟ آیا به سوی تو ای فرزند احمد راهی هست تا به دیدارت شتافت؟ آیا روزگار ما به وعده‌ای از تو می‌رسد تا بهره‌مند شویم؟ کی از چشمه‌های سیراب‌کننده‌ات وارد شویم تا سیراب گردیم؟ کی از آب شیرینت سیراب شویم که تشنگی بسیار طول کشیده است؟ کی با تو رفت و آمد کنیم تا چشم‌هایمان روشن شود؟ کی ما را می‌بینی و تو را ببینیم در حالی که پرچم پیروزی را گشوده‌ای؟ آیا می‌بینی که گرداگرد تو را گرفته‌ایم و تو به سوی جمعیت می‌روی، در حالی که زمین را از عدل پر کرده‌ای و به دشمنانت خواری و عذاب چشانده‌ای و سرکشان و منکران حق را نابود کرده‌ای و ریشه‌ی متکبران را بریده‌ای و بنیاد ستمگران را برکنده‌ای، و ما می‌گوییم: ستایش خدای را که پروردگار جهانیان است." },
+
+    { ar: "اللّٰهُمَّ أَنْتَ کَشَّافُ الْکُرَبِ وَالْبَلْوَىٰ، وَإِلَیْکَ أَسْتَعْدِی فَعِنْدَکَ الْعَدْوَىٰ، وَأَنْتَ رَبُّ الْآخِرَةِ وَالدُّنْیَا، فَأَغِثْ یَا غِیَاثَ الْمُسْتَغِیثِینَ عُبَیْدَکَ الْمُبْتَلَىٰ، وَأَرِهِ سَیِّدَهُ یَا شَدِیدَ الْقُوَىٰ، وَأَزِلْ عَنْهُ بِهِ الْأَسَىٰ وَالْجَوَىٰ، وَبَرِّدْ غَلِیلَهُ یَا مَنْ عَلَى الْعَرْشِ اسْتَوَىٰ، وَمَنْ إِلَیْهِ الرُّجْعَىٰ وَالْمُنْتَهَىٰ.", fa: "خدایا، تو برطرف‌کننده‌ی گرفتاری‌ها و بلاهایی، و شکایت تنها به توست، و تو پروردگار آخرت و دنیایی، پس ای فریادرس فریادخواهان، به بنده‌ی گرفتار خود فریاد رس و سرورش را به او نشان ده، ای سخت‌نیرو، و اندوه و حسرت را به واسطه‌ی او از او بزدای و تشنگی‌اش را فرو نشان، ای آن که بر عرش استیلا یافتی و بازگشت و پایان به سوی اوست." },
+
+    { ar: "اللّٰهُمَّ وَنَحْنُ عَبِیدُکَ التَّائِقُونَ إِلَىٰ وَلِیِّکَ الْمُذَکِّرِ بِکَ وَبِنَبِیِّکَ، خَلَقْتَهُ لَنَا عِصْمَةً وَمَلَاذاً، وَأَقَمْتَهُ لَنَا قِوَاماً وَمَعَاذاً، وَجَعَلْتَهُ لِلْمُؤْمِنِینَ مِنَّا إِمَاماً، فَبَلِّغْهُ مِنَّا تَحِیَّةً وَسَلَاماً، وَزِدْنَا بِذٰلِکَ یَا رَبِّ إِکْرَاماً، وَاجْعَلْ مُسْتَقَرَّهُ لَنَا مُسْتَقَرًّا وَمُقَاماً، وَأَتْمِمْ نِعْمَتَکَ بِتَقْدِیمِکَ إِیَّاهُ أَمَامَنَا، حَتَّىٰ تُورِدَنَا جَنَانَکَ، وَمُرَافَقَةَ الشُّهَدَاءِ مِنْ خُلَصَائِکَ.", fa: "خدایا، ما بندگان مشتاق تو به سوی ولیّ تو هستیم، آن که یادآور تو و پیامبر توست، او را برای ما نگهبان و پناه آفریدی و او را برای ما ستون و پناهگاه برپا داشتی و او را برای مؤمنان از ما پیشوا قرار دادی. پس از ما تحیت و سلامی به او برسان و به این وسیله کرامت ما را بیفزا ای پروردگار، و جایگاه او را برای ما جایگاهی پایدار و اقامتگاهی قرار ده، و نعمت خود را با پیش‌فرستادن او در پیش روی ما کامل گردان تا ما را به بهشت‌هایت و همنشینی با شهدای برگزیده‌ات درآوری." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَصَلِّ عَلَىٰ مُحَمَّدٍ جَدِّهِ وَرَسُولِکَ السَّیِّدِ الْأَکْبَرِ، وَعَلَىٰ عَلِیٍّ أَبِیهِ السَّیِّدِ الْأَصْغَرِ، وَجَدَّتِهِ الصِّدِّیقَةِ الْکُبْرَىٰ فَاطِمَةَ بِنْتِ مُحَمَّدٍ، وَعَلَىٰ مَنِ اصْطَفَیْتَ مِنْ آبَائِهِ الْبَرَرَةِ، وَعَلَیْهِ أَفْضَلَ وَأَکْمَلَ وَأَتَمَّ وَأَدْوَمَ وَأَکْثَرَ وَأَوْفَرَ مَا صَلَّیْتَ عَلَىٰ أَحَدٍ مِنْ أَصْفِیَائِکَ وَخِیَرَتِکَ مِنْ خَلْقِکَ، وَصَلِّ عَلَیْهِ صَلَاةً لَا غَایَةَ لِعَدَدِهَا، وَلَا نِهَایَةَ لِمَدَدِهَا، وَلَا نَفَادَ لِأَمَدِهَا.", fa: "خدایا بر محمّد و خاندان محمّد درود فرست، و بر محمّد جدّ او و رسولت، سرور بزرگ‌تر، و بر علی پدرش، سرور کوچک‌تر، و بر مادربزرگش، صدیقه‌ی کبری فاطمه دختر محمّد، و بر هر کس از پدران نیکویش که برگزیدی، درودی برتر و کامل‌تر و تمام‌تر و پایدارتر و بیشتر و فراوان‌تر از آنچه بر هیچ یک از برگزیدگانت و خوبانت از آفریده‌ات درود فرستادی، و بر او درودی فرست که عددش را پایانی و مدتش را نهایتی و مدت آن را نابودی نباشد." },
+
+    { ar: "اللّٰهُمَّ وَأَقِمْ بِهِ الْحَقَّ، وَأَدْحِضْ بِهِ الْبَاطِلَ، وَأَدِلْ بِهِ أَوْلِیَاءَکَ، وَأَذْلِلْ بِهِ أَعْدَاءَکَ، وَصِلِ اللّٰهُمَّ بَیْنَنَا وَبَیْنَهُ وُصْلَةً تُؤَدِّی إِلَىٰ مُرَافَقَةِ سَلَفِهِ، وَاجْعَلْنَا مِمَّنْ یَأْخُذُ بِحُجْزَتِهِمْ، وَیَمْکُثُ فِی ظِلِّهِمْ، وَأَعِنَّا عَلَىٰ تَأْدِیَةِ حُقُوقِهِ إِلَیْهِ، وَالِاجْتِهَادِ فِی طَاعَتِهِ، وَاجْتِنَابِ مَعْصِیَتِهِ، وَامْنُنْ عَلَیْنَا بِرِضَاهُ، وَهَبْ لَنَا رَأْفَتَهُ وَرَحْمَتَهُ وَدُعَاءَهُ وَخَیْرَهُ، مَا نَنَالُ بِهِ سَعَةً مِنْ رَحْمَتِکَ، وَفَوْزاً عِنْدَکَ، وَاجْعَلْ صَلَاتَنَا بِهِ مَقْبُولَةً، وَذُنُوبَنَا بِهِ مَغْفُورَةً، وَدُعَاءَنَا بِهِ مُسْتَجَاباً، وَاجْعَلْ أَرْزَاقَنَا بِهِ مَبْسُوطَةً، وَهُمُومَنَا بِهِ مَکْفِیَّةً، وَحَوَائِجَنَا بِهِ مَقْضِیَّةً، وَأَقْبِلْ إِلَیْنَا بِوَجْهِکَ الْکَرِیمِ، وَاقْبَلْ تَقَرُّبَنَا إِلَیْکَ، وَانْظُرْ إِلَیْنَا نَظْرَةً رَحِیمَةً نَسْتَکْمِلُ بِهَا الْکَرَامَةَ عِنْدَکَ، ثُمَّ لَا تَصْرِفْهَا عَنَّا بِجُودِکَ، وَاسْقِنَا مِنْ حَوْضِ جَدِّهِ صَلَّى اللّٰهُ عَلَیْهِ وَآلِهِ بِکَأْسِهِ وَبِیَدِهِ، رَیًّا رَوِیًّا هَنِیئاً سَائِغاً، لَا ظَمَأَ بَعْدَهُ، یَا أَرْحَمَ الرَّاحِمِینَ.", fa: "خدایا، به واسطه‌ی او حق را برپا دار و باطل را نابود کن و دوستانت را به او چیره گردان و دشمنانت را به او خوار کن، و خدایا میان ما و او پیوندی برقرار کن که به همنشینی با پیشینیانش (اهل بیت) انجامد، و ما را از کسانی قرار ده که به دامانشان چنگ زنند و در سایه‌شان آرام گیرند، و ما را بر ادای حقوق او و کوشش در طاعت او و دوری از نافرمانی او یاری کن، و ما را به خشنودی او منّت نه و رأفت و رحمت و دعا و خیرش را به ما ببخش، تا به وسیله‌ی آن از رحمتت بهره‌ای فراوان و پیشگاهت پیروزی‌ای به دست آوریم، و نمازمان را به او پذیرفته و گناهانمان را به او آمرزیده و دعایمان را به او مستجاب گردان، و روزی‌مان را به او گشاده و اندوه‌هایمان را به او برطرف و حاجاتمان را به او برآورده کن، و با روی کریمت به ما روی آور و تقربمان را بپذیر و به ما با نگاهی پر از رحمت بنگر تا کرامت را نزد تو کامل کنیم، سپس آن را با جودت از ما باز مگردان، و از حوض جدّش — درود خدا بر او و خاندانش — با جام و دست خود به ما بنوشان، نوشاندنی سیراب‌کننده و گوارا که پس از آن تشنگی نباشد، ای مهربان‌ترین مهربانان." }
+  ],
+  fazilat: "دعای ندبه از دعاهای بسیار پرفضیلت و معروف است که در زمان غیبت امام زمان (عج) برای ابراز اشتیاق به دیدار آن حضرت و طلب تعجیل در فرج خوانده می‌شود. این دعا را شیخ عباس قمی در کتاب مفاتیح الجنان از «کتاب المزار» نقل کرده است.\n\nمضامین بلند این دعا عبارت است از: حمد و ثنای الهی، ذکر سرگذشت پیامبران و اوصیاء، فضایل امیرالمؤمنین و اهل بیت علیهم‌السلام، مظلومیت آنان، ندبه و شیون بر مصائب آنان، و درخواست تعجیل در ظهور حضرت مهدی (عج).\n\nخواندن این دعا در ایام جمعه و اعیاد مذهبی و به‌ویژه در روز جمعه و روز عید غدیر و عید فطر و قربان بسیار سفارش شده است و برای تعجیل در فرج، دفع بلا، آمرزش گناهان و برآورده شدن حاجات مؤثر است.",
+  source: "مفاتیح الجنان (شیخ عباس قمی) • کتاب المزار (علامه مجلسی) • مصباح المتهجد (شیخ طوسی) • اقبال الأعمال (سید ابن طاووس)",
+  time: "بهترین زمان خواندن این دعا، صبح روز جمعه و روزهای عید (عید فطر، قربان، غدیر) است. همچنین در هر زمان برای ابراز اشتیاق به دیدار امام زمان (عج) و طلب تعجیل در فرج خوانده می‌شود. توصیه شده با وضو و رو به قبله و با قلب حاضر خوانده شود."
+};
+
+/* ============================================================
+   RENDER VERSES
+   ============================================================ */
+function renderVerses(){
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  DUA_DATA.verses.forEach((v,i)=>{
+    const el = document.createElement('div');
+    el.className = 'verse-card' + (v.bismillah ? ' bismillah' : '');
+    el.innerHTML = `
+      <div class="v-head">
+        <span class="v-num">${faNum(i+1)}</span>
+        <span class="v-label">بند ${faNum(i+1)}</span>
+      </div>
+      <div class="v-ar">${v.ar}</div>
+      <div class="v-divider"></div>
+      <div class="v-fa">${v.fa}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = ()=> $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = ()=> $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = ()=> $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e)=>{ if(e.target===m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark',dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme')==='dark');
+$('#themeToggle').onclick = ()=> applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  $$('.verse-card').forEach(v=> v.classList.toggle('hide-trans', !showTrans));
+  if($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = ()=>{
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = ()=>{
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b=>{
+  if(b.dataset.lh===lineHeight) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-lh]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b=>{
+  const isOn = (b.dataset.trans==='1')===showTrans;
+  b.classList.toggle('active',isOn);
+  b.onclick = ()=>{
+    $$('[data-trans]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans==='1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b=>{
+  if(b.dataset.fontAr===fontAr) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-ar]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b=>{
+  if(b.dataset.fontFa===fontFa) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-fa]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = ()=>{
+  if(document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=> console.log('NOOR Service Worker registered.'))
+      .catch(err=> console.log('Service Worker error:', err));
+  });
+}
+
+console.log('🤲 دعای ندبه | NOOR – بارگذاری شد. تعداد بندها:', DUA_DATA.verses.length);
+</script>
+
+</body>
+</html>

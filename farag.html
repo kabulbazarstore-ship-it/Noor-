@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>دعای فرج (عظم البلاء) | نور</title>
+<link rel="manifest" href="manifest.json">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;700;900&family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ================================================================
+           RESET & BASE (هماهنگ با سایر صفحات پروژه نور)
+           ================================================================ */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-body: #fcf9f2;
+            --bg-card: rgba(255, 248, 235, 0.75);
+            --bg-card-hover: #f8f4ea;
+            --bg-tab: rgba(0, 0, 0, 0.04);
+            --bg-tab-active: rgba(212, 175, 55, 0.10);
+            --text-primary: #2b2b2b;
+            --text-secondary: #5a5040;
+            --text-muted: #8b877f;
+            --text-arabic: #2c241a;
+            --text-translation: #4d3e2e;
+            --border-gold: rgba(180, 140, 70, 0.25);
+            --border-dash: rgba(180, 140, 70, 0.15);
+            --gold: #b38a2e;
+            --gold-light: #d4af37;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+            --radius: 48px;
+            --transition: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            --font-base: 16px;
+            --font-persian: 'Vazirmatn', sans-serif;
+            --font-arabic: 'Amiri', serif;
+            --font-naskh: 'Noto Naskh Arabic', serif;
+        }
+
+        /* ===== حالت تاریک (هماهنگ با صفحات اصلی) ===== */
+        body.dark-mode {
+            --bg-body: #0b0e1a;
+            --bg-card: rgba(255, 255, 255, 0.04);
+            --bg-card-hover: rgba(255, 255, 255, 0.08);
+            --bg-tab: rgba(255, 255, 255, 0.04);
+            --bg-tab-active: rgba(212, 175, 55, 0.12);
+            --text-primary: #ede7d9;
+            --text-secondary: #b0c0b8;
+            --text-muted: #6a8a80;
+            --text-arabic: #fcf3e0;
+            --text-translation: #bcc7eb;
+            --border-gold: rgba(212, 175, 55, 0.2);
+            --border-dash: rgba(212, 175, 55, 0.12);
+            --gold: #d4af37;
+            --shadow: 0 20px 60px rgba(0, 0, 0, 0.6);
+        }
+
+        body {
+            background: var(--bg-body);
+            color: var(--text-primary);
+            font-family: var(--font-persian);
+            font-size: var(--font-base);
+            direction: rtl;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            transition: background var(--transition), color var(--transition);
+        }
+
+        /* ===== فونت‌ها ===== */
+        body.font-vazir { font-family: var(--font-persian); }
+        body.font-amiri { font-family: var(--font-arabic); }
+        body.font-naskh { font-family: var(--font-naskh); }
+
+        /* ===== اندازه‌های متن ===== */
+        body.font-small .arabic-text { font-size: calc(var(--font-base) * 1.0) !important; line-height: 1.6 !important; }
+        body.font-small .persian-text { font-size: calc(var(--font-base) * 0.75) !important; line-height: 1.5 !important; }
+        body.font-small .header h1 { font-size: calc(var(--font-base) * 1.4) !important; }
+        body.font-small .closing { font-size: calc(var(--font-base) * 1.2) !important; }
+
+        body.font-large .arabic-text { font-size: calc(var(--font-base) * 1.6) !important; line-height: 2.4 !important; }
+        body.font-large .persian-text { font-size: calc(var(--font-base) * 1.1) !important; line-height: 2.0 !important; }
+        body.font-large .header h1 { font-size: calc(var(--font-base) * 2.0) !important; }
+        body.font-large .closing { font-size: calc(var(--font-base) * 1.8) !important; }
+
+        /* ===== کانتینر اصلی ===== */
+        .dua-container {
+            max-width: 820px;
+            width: 100%;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid var(--border-gold);
+            border-radius: var(--radius);
+            padding: 40px 30px;
+            box-shadow: var(--shadow);
+            transition: all var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+        /* افکت پس‌زمینه گرادیان در حالت تاریک */
+        body.dark-mode .dua-container {
+            background: radial-gradient(circle at 30% 20%, rgba(30, 42, 74, 0.8), rgba(11, 14, 26, 0.95));
+        }
+
+        /* ===== هدر ===== */
+        .app-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border-gold);
+            margin-bottom: 24px;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .back-btn {
+            background: var(--bg-tab);
+            border: 1px solid var(--border-gold);
+            border-radius: 50%;
+            width: 42px;
+            height: 42px;
+            font-size: 1.4rem;
+            color: var(--gold);
+            cursor: pointer;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex: none;
+        }
+        .back-btn:hover {
+            background: var(--bg-tab-active);
+            border-color: var(--gold);
+            transform: rotate(-8deg);
+        }
+
+        .brand {
+            text-align: center;
+            flex: 1;
+        }
+        .brand strong {
+            display: block;
+            font-size: calc(var(--font-base) * 1.2);
+            font-weight: 700;
+            color: var(--gold);
+            font-family: var(--font-arabic);
+            letter-spacing: 2px;
+            transition: font-size 0.2s;
+        }
+        .brand small {
+            font-size: calc(var(--font-base) * 0.6);
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        .header-controls {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .header-controls button {
+            background: var(--bg-tab);
+            border: 1px solid var(--border-gold);
+            border-radius: 30px;
+            padding: 4px 12px;
+            font-size: calc(var(--font-base) * 0.9);
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: var(--transition);
+            font-family: inherit;
+            line-height: 1.4;
+            min-width: 32px;
+            text-align: center;
+            font-weight: 700;
+        }
+        .header-controls button:hover {
+            background: var(--bg-tab-active);
+            border-color: var(--gold);
+            color: var(--gold);
+        }
+        .header-controls .font-btn {
+            font-size: calc(var(--font-base) * 1.1);
+        }
+        .header-controls #themeBtn {
+            font-size: calc(var(--font-base) * 1.2);
+            padding: 4px 12px;
+        }
+
+        /* ===== عنوان اصلی ===== */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            z-index: 2;
+        }
+        .header .title-icon {
+            font-size: calc(var(--font-base) * 1.6);
+            color: var(--gold);
+            display: block;
+            margin-bottom: 4px;
+            opacity: 0.9;
+            letter-spacing: 6px;
+        }
+        .header h1 {
+            font-family: var(--font-arabic);
+            font-weight: 700;
+            font-size: calc(var(--font-base) * 1.8);
+            color: var(--text-primary);
+            display: inline-block;
+            padding-bottom: 6px;
+            line-height: 1.3;
+            transition: font-size 0.2s, color var(--transition);
+            border-bottom: 2px solid var(--border-gold);
+        }
+        .header .sub-title {
+            font-size: calc(var(--font-base) * 0.85);
+            font-weight: 300;
+            margin-top: 10px;
+            color: var(--text-secondary);
+            letter-spacing: 1px;
+            transition: color var(--transition);
+        }
+        .header .sub-title span {
+            color: var(--gold);
+        }
+
+        /* ===== لیست دعا ===== */
+        .scroll-content {
+            overflow-y: auto;
+            padding: 4px 0 20px;
+            -webkit-overflow-scrolling: touch;
+            max-height: calc(100vh - 280px);
+        }
+        .scroll-content::-webkit-scrollbar { width: 4px; }
+        .scroll-content::-webkit-scrollbar-track { background: var(--bg-body); border-radius: 10px; }
+        .scroll-content::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 10px; }
+
+        .dua-list {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .dua-verse {
+            border-radius: 20px;
+            padding: 16px 22px;
+            border-left: 4px solid var(--border-gold);
+            border-right: 1px solid var(--border-dash);
+            background: var(--bg-tab);
+            transition: all 0.25s ease;
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }
+        .dua-verse:hover {
+            background: var(--bg-tab-active);
+            transform: translateX(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .arabic-text {
+            font-family: var(--font-arabic);
+            font-weight: 700;
+            font-size: calc(var(--font-base) * 1.1);
+            line-height: 2.2;
+            color: var(--text-arabic);
+            text-align: right;
+            direction: rtl;
+            letter-spacing: 1px;
+            word-spacing: 3px;
+            transition: font-size 0.2s, color var(--transition);
+        }
+
+        .persian-text {
+            font-size: calc(var(--font-base) * 0.85);
+            line-height: 1.9;
+            color: var(--text-translation);
+            text-align: justify;
+            padding-right: 12px;
+            border-right: 2px solid var(--border-gold);
+            transition: font-size 0.2s, color var(--transition);
+        }
+
+        .item-index {
+            display: inline-block;
+            font-size: 0.7rem;
+            color: var(--gold);
+            opacity: 0.5;
+            font-weight: 700;
+            margin-left: 8px;
+            font-family: var(--font-persian);
+        }
+
+        /* ===== فوتر ===== */
+        .footer-dua {
+            margin-top: 30px;
+            text-align: center;
+            border-top: 1px solid var(--border-gold);
+            padding-top: 25px;
+        }
+        .footer-dua .closing {
+            font-family: var(--font-arabic);
+            font-size: calc(var(--font-base) * 1.4);
+            font-weight: 700;
+            color: var(--gold);
+            letter-spacing: 3px;
+            transition: font-size 0.2s, color var(--transition);
+        }
+        .footer-dua .translation-closing {
+            font-size: calc(var(--font-base) * 0.85);
+            color: var(--text-secondary);
+            margin-top: 6px;
+        }
+        .footer-dua .dua-sign {
+            display: inline-block;
+            margin-top: 15px;
+            padding: 8px 30px;
+            border-radius: 50px;
+            border: 1px solid var(--border-gold);
+            background: var(--bg-tab);
+            font-size: calc(var(--font-base) * 0.8);
+            color: var(--text-muted);
+            letter-spacing: 2px;
+            transition: all var(--transition);
+        }
+
+        /* ===== ریسپانسیو ===== */
+        @media (max-width: 600px) {
+            .dua-container {
+                padding: 24px 16px;
+                border-radius: 32px;
+            }
+            .dua-verse {
+                padding: 14px 16px;
+            }
+            .brand strong { font-size: calc(var(--font-base) * 1.0); }
+            .header h1 { font-size: calc(var(--font-base) * 1.4); }
+            .scroll-content { max-height: calc(100vh - 240px); }
+        }
+        @media (max-width: 400px) {
+            body { padding: 10px; }
+            .dua-container { padding: 16px 12px; }
+            .header h1 { font-size: calc(var(--font-base) * 1.2); }
+            .app-header { gap: 4px; }
+            .header-controls button { padding: 2px 8px; font-size: calc(var(--font-base) * 0.7); min-width: 28px; }
+            .back-btn { width: 36px; height: 36px; font-size: 1.2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="dua-container">
+
+        <!-- ===== HEADER (هماهنگ با سایر صفحات) ===== -->
+        <header class="app-header">
+            <button class="back-btn" onclick="location.href='index.html'">←</button>
+            <div class="brand">
+                <strong id="pageTitle">دعای فرج</strong>
+                <small>إلهی عظم البلاء</small>
+            </div>
+            <div class="header-controls">
+                <button class="font-btn" onclick="changeFontSize(-1)">−</button>
+                <button class="font-btn" onclick="changeFontSize(1)">+</button>
+                <button id="themeBtn" aria-label="تغییر تم">🌙</button>
+            </div>
+        </header>
+
+        <!-- ===== CONTENT ===== -->
+        <div class="scroll-content" id="scrollContent">
+
+            <!-- عنوان اصلی -->
+            <div class="header">
+                <span class="title-icon">﷽</span>
+                <h1>دعای فرج</h1>
+                <div class="sub-title">
+                    <span>✦</span> إلهی عَظُمَ الْبَلاءُ <span>✦</span>
+                </div>
+            </div>
+
+            <!-- لیست دعا (داینامیک) -->
+            <div class="dua-list" id="duaContent"></div>
+
+            <!-- فوتر -->
+            <div class="footer-dua">
+                <div class="closing">آمین یا رب العالمین</div>
+                <div class="translation-closing">
+                    اَللّهُمَّ عَجِّلْ لِوَلِیِّکَ الْفَرَجَ وَ الْعافِیَةَ وَ النَّصْرَ
+                </div>
+                <div class="dua-sign">✦ به امید ظهور ✦</div>
+            </div>
+
+        </div>
+
+    </div>
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js')
+      .then(() => console.log('✅ سرویس‌ورکر ثبت شد!'))
+      .catch(err => console.log('❌ خطا:', err));
+  }
+</script>
+    <script>
+        // ================================================================
+        // 1. DATA – دعای فرج بندبه‌بند
+        // ================================================================
+        const duaData = {
+            title: "دعای فرج (عظم البلاء)",
+            verses: [
+                { ar: 'إِلٰهِی عَظُمَ الْبَلاءُ', fa: 'خدایا، گرفتاری بزرگ شد' },
+                { ar: 'وَ بَرِحَ الْخَفاءُ', fa: 'و پوشیده (و راز) آشکار گشت' },
+                { ar: 'وَ انْکَشَفَ الْغِطاءُ', fa: 'و پرده کنار رفت' },
+                { ar: 'وَ انْقَطَعَ الرَّجاءُ', fa: 'و امید (از همه جا) بریده شد' },
+                { ar: 'وَ ضاقَتِ الْأَرْضُ', fa: 'و زمین (با همه وسعتش) بر ما تنگ شد' },
+                { ar: 'وَ مُنِعَتِ السَّماءُ', fa: 'و آسمان (باران رحمتش) از ما دریغ شد' },
+                { ar: 'وَ أَنْتَ الْمُسْتَعانُ', fa: 'و تنها تو پشتیبان و فریادرسی' },
+                { ar: 'وَ إِلَیْکَ الْمُشْتَکیٰ', fa: 'و شکایت تنها به سوی توست' },
+                { ar: 'وَ عَلَیْکَ الْمُعَوَّلُ فِی الشِّدَّةِ وَ الرَّخاءِ', fa: 'و در سختی و آسانی، تنها بر تو تکیه و اعتماد است' },
+                { ar: 'اَللّٰهُمَّ صَلِّ عَلیٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ أُولِی الْأَمْرِ', fa: 'خدایا! بر محمّد و خاندان محمّد، آن صاحبان فرمان، درود فرست' },
+                { ar: 'الَّذِینَ فَرَضْتَ عَلَیْنا طاعَتَهُمْ', fa: 'همان کسانی که اطاعتشان را بر ما واجب کردی' },
+                { ar: 'وَ عَرَّفْتَنا بِذلِکَ مَنْزِلَتَهُمْ', fa: 'و به این وسیله مقام والایشان را به ما شناساندی' },
+                { ar: 'فَفَرِّجْ عَنّا بِحَقِّهِمْ فَرَجاً عاجِلاً قَرِیباً', fa: 'پس به حق ایشان، گشایشی زود و نزدیک برای ما بگشای' },
+                { ar: 'کَلَمْحِ الْبَصَرِ أَوْ هُوَ أَقْرَبُ', fa: 'مانند چشم بر هم زدنی یا نزدیک‌تر از آن' },
+                { ar: 'یَا مُحَمَّدُ یَا عَلِیُّ، یَا عَلِیُّ یَا مُحَمَّدُ اکْفِیانِی', fa: 'ای محمّد و ای علی، ای علی و ای محمّد، مرا کفایت کنید' },
+                { ar: 'فَإِنَّکُما کافِیانِ، وَ انْصُرانِی فَإِنَّکُما ناصِرانِ', fa: 'که تنها شما کفایت‌کنندگان منید و یاری‌ام دهید که شما یاری‌دهندگان منید' },
+                { ar: 'یَا مَوْلانَا یَا صاحِبَ الزَّمانِ', fa: 'ای مولای ما، ای صاحب الزمان' },
+                { ar: 'الْغَوْثَ الْغَوْثَ الْغَوْثَ', fa: 'فریادرس، فریادرس، فریادرس' },
+                { ar: 'اَدْرِکْنی اَدْرِکْنی اَدْرِکْنی', fa: 'مرا دریاب، مرا دریاب، مرا دریاب' },
+                { ar: 'السّاعَةَ السّاعَةَ السّاعَةَ', fa: 'اکنون، اکنون، اکنون' },
+                { ar: 'الْعَجَلَ الْعَجَلَ الْعَجَلَ', fa: 'با شتاب، با شتاب، با شتاب' }
+            ]
+        };
+
+        // ================================================================
+        // 2. RENDER
+        // ================================================================
+        function renderDua() {
+            const container = document.getElementById('duaContent');
+            let html = '';
+            duaData.verses.forEach((v, index) => {
+                const num = index + 1;
+                html += `
+                    <div class="dua-verse">
+                        <div class="arabic-text"><span class="item-index">${num}</span> ${v.ar}</div>
+                        <div class="persian-text"><span class="item-index">${num}</span> ${v.fa}</div>
+                    </div>
+                `;
+            });
+            container.innerHTML = html;
+        }
+        document.getElementById('pageTitle').textContent = duaData.title;
+        renderDua();
+
+        // ================================================================
+        // 3. THEME (هماهنگ با صفحات اصلی)
+        // ================================================================
+        const THEME_KEY = 'noor_theme_faraj';
+
+        function initTheme() {
+            const saved = localStorage.getItem(THEME_KEY);
+            const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const isDark = saved ? saved === 'dark' : prefersDark;
+            document.body.classList.toggle('dark-mode', isDark);
+            const btn = document.getElementById('themeBtn');
+            if (btn) btn.textContent = isDark ? '☀️' : '🌙';
+        }
+
+        document.getElementById('themeBtn').addEventListener('click', function() {
+            const isDark = document.body.classList.contains('dark-mode');
+            document.body.classList.toggle('dark-mode', !isDark);
+            localStorage.setItem(THEME_KEY, isDark ? 'light' : 'dark');
+            this.textContent = isDark ? '🌙' : '☀️';
+        });
+
+        initTheme();
+
+        // ================================================================
+        // 4. FONT SIZE (هماهنگ با صفحات اصلی)
+        // ================================================================
+        let currentFontSize = parseInt(localStorage.getItem('noor_font_size_faraj')) || 16;
+
+        function applyFontSize(size) {
+            document.documentElement.style.setProperty('--font-base', size + 'px');
+            localStorage.setItem('noor_font_size_faraj', size);
+            currentFontSize = size;
+            // به‌روزرسانی کلاس‌های اندازه برای body
+            document.body.classList.remove('font-small', 'font-large');
+            if (size <= 13) document.body.classList.add('font-small');
+            else if (size >= 20) document.body.classList.add('font-large');
+        }
+
+        function changeFontSize(delta) {
+            let newSize = currentFontSize + delta * 2;
+            if (newSize < 12) newSize = 12;
+            if (newSize > 28) newSize = 28;
+            applyFontSize(newSize);
+        }
+
+        applyFontSize(currentFontSize);
+
+        // ================================================================
+        // 5. FONT SELECTION (هماهنگ با صفحات اصلی)
+        // ================================================================
+        let currentFont = localStorage.getItem('noor_font_faraj') || 'vazir';
+
+        function applyFont(font) {
+            document.body.classList.remove('font-vazir', 'font-amiri', 'font-naskh');
+            document.body.classList.add('font-' + font);
+            localStorage.setItem('noor_font_faraj', font);
+            currentFont = font;
+        }
+        applyFont(currentFont);
+
+        // ================================================================
+        // 6. KEYBOARD SHORTCUTS
+        // ================================================================
+        document.addEventListener('keydown', function(e) {
+            // Ctrl+1, Ctrl+2, Ctrl+3 → اندازه
+            if (e.ctrlKey && ['1', '2', '3'].includes(e.key)) {
+                e.preventDefault();
+                const sizes = [12, 16, 22];
+                const idx = parseInt(e.key) - 1;
+                applyFontSize(sizes[idx]);
+            }
+            // Alt+1, Alt+2, Alt+3 → فونت
+            if (e.altKey && ['1', '2', '3'].includes(e.key)) {
+                e.preventDefault();
+                const fonts = ['vazir', 'amiri', 'naskh'];
+                const idx = parseInt(e.key) - 1;
+                applyFont(fonts[idx]);
+            }
+        });
+
+        // ================================================================
+        // 7. INIT
+        // ================================================================
+        window.addEventListener('load', function() {
+            document.getElementById('scrollContent').scrollTop = 0;
+        });
+
+        console.log('🤲 دعای فرج | NOOR – بارگذاری شد.');
+        console.log('💡 کلیدهای میانبر:');
+        console.log('   Ctrl+1 → متن کوچک');
+        console.log('   Ctrl+2 → متن متوسط');
+        console.log('   Ctrl+3 → متن بزرگ');
+        console.log('   Alt+1 → فونت وزیرمتن');
+        console.log('   Alt+2 → فونت امیری');
+        console.log('   Alt+3 → فونت نسخ');
+    </script>
+
+</body>
+</html>

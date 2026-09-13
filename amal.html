@@ -1,0 +1,2016 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="اعمال و مناسبت‌ها | نــــور NOOR">
+<title>اعمال و مناسبت‌ها | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+  --fs-base:16px;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:var(--fs-base);
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.icon-xs{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.08rem;font-weight:700;
+  color:var(--brand);letter-spacing:.3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.35rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.76rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+/* Tabs */
+.tabs{
+  display:flex;gap:6px;margin-bottom:14px;overflow-x:auto;
+  padding-bottom:4px;-webkit-overflow-scrolling:touch;
+  scrollbar-width:none;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab-btn{
+  flex:none;padding:8px 16px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--divider);color:var(--text2);
+  font-size:.75rem;font-weight:600;cursor:pointer;transition:var(--trans);
+  display:inline-flex;align-items:center;gap:6px;white-space:nowrap;
+}
+.tab-btn:hover{color:var(--gold);border-color:var(--gold-border)}
+.tab-btn.active{color:#fff;background:var(--gold);border-color:var(--gold)}
+
+/* Section head */
+.section-head{
+  position:relative;margin:18px 0 12px;padding:14px 16px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);box-shadow:var(--shadow-sm);text-align:center;
+}
+.section-head:first-child{margin-top:0}
+.section-head .sec-title{font-family:'Amiri',serif;font-size:1rem;font-weight:700;color:var(--gold);margin-bottom:4px;line-height:1.4;display:flex;align-items:center;justify-content:center;gap:8px}
+.section-head .sec-title svg{width:18px;height:18px;flex:none}
+.section-head .sec-orn{display:flex;align-items:center;justify-content:center;gap:6px;width:60px;margin:8px auto 0}
+.section-head .sec-orn:before,.section-head .sec-orn:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.section-head .sec-orn svg{width:10px;height:10px;color:var(--gold)}
+
+/* Card base */
+.card{
+  background:var(--surface);border:1px solid var(--gold-border);
+  border-radius:var(--radius);padding:16px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);transition:var(--trans);
+}
+.card.clickable{cursor:pointer}
+.card.clickable:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08);transform:translateX(-3px)}
+.card.clickable:active{transform:scale(.98)}
+
+.card .card-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.card .card-head .badge{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:26px;height:26px;padding:0 8px;border-radius:8px;
+  background:var(--gold-soft);color:var(--gold);font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);flex:none;
+}
+.card .card-title{flex:1;font-family:'Amiri',serif;font-size:.95rem;font-weight:700;color:var(--text);display:flex;align-items:center;gap:6px}
+.card .card-title svg{width:18px;height:18px;color:var(--gold);flex:none}
+.card .fav-btn{
+  width:32px;height:32px;border-radius:8px;flex:none;
+  background:var(--surface2);color:var(--muted);
+  border:1px solid var(--divider);transition:var(--trans);
+}
+.card .fav-btn.active{color:#e74c3c;border-color:rgba(231,76,60,.3)}
+.card .fav-btn.active svg{fill:currentColor}
+.card .fav-btn:hover{background:var(--gold-soft);color:var(--gold)}
+.card .desc{font-size:.78rem;color:var(--text2);line-height:1.8;margin-top:6px}
+.card .meta{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px;font-size:.68rem;color:var(--muted)}
+.card .meta .tag{
+  padding:2px 10px;border-radius:12px;
+  background:var(--surface2);border:1px solid var(--divider);
+  display:inline-flex;align-items:center;gap:4px;
+}
+.card .meta .tag.holiday{color:#c0392b;border-color:rgba(192,57,43,.3)}
+.card .meta .tag.shiite{color:#8e44ad;border-color:rgba(142,68,173,.3)}
+.card .meta .tag.national{color:#16a085;border-color:rgba(22,160,133,.3)}
+
+/* Today card */
+.today-card{
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);border-radius:var(--radius);
+  padding:18px;margin-bottom:14px;box-shadow:var(--shadow);
+}
+.today-label{font-size:.72rem;color:var(--gold);font-weight:700;letter-spacing:.5px;display:flex;align-items:center;gap:6px}
+.today-day{font-family:'Amiri',serif;font-size:1.4rem;font-weight:700;color:var(--text);margin:6px 0 8px}
+.today-dates{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.78rem;color:var(--text2)}
+.today-dates .shamsi{color:var(--gold);font-weight:700}
+.today-event{margin-top:12px;padding-top:12px;border-top:1px dashed var(--gold-border)}
+.today-event .et-label{font-size:.72rem;color:var(--muted);margin-bottom:4px;display:flex;align-items:center;gap:6px}
+.today-event .et-title{font-weight:700;color:var(--gold);font-family:'Amiri',serif;font-size:.95rem}
+.today-event .et-action{font-size:.72rem;color:var(--gold);cursor:pointer;margin-top:4px;display:inline-flex;align-items:center;gap:4px}
+
+/* Calendar */
+.cal-nav{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;gap:8px}
+.cal-title{font-family:'Amiri',serif;font-size:1rem;font-weight:700;text-align:center;flex:1}
+.cal-title small{display:block;font-family:var(--font-fa);font-size:.68rem;color:var(--muted);font-weight:400;margin-top:2px}
+.cal-nav button{
+  width:38px;height:38px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);color:var(--text);
+  flex:none;
+}
+.cal-nav button:hover{color:var(--gold);border-color:var(--gold-border)}
+.cal-nav .today-btn{width:auto;padding:0 14px;font-size:.72rem;font-weight:600;background:var(--gold);color:#fff;border-color:var(--gold)}
+.cal-weekdays,.cal-days{display:grid;grid-template-columns:repeat(7,1fr);gap:4px}
+.cal-weekdays div{
+  text-align:center;font-size:.62rem;font-weight:600;color:var(--muted);padding:4px 0;
+}
+.cal-weekdays .weekend{color:#c0392b}
+.cal-day{
+  aspect-ratio:1;min-height:42px;
+  border-radius:10px;
+  background:var(--surface2);border:1px solid transparent;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  cursor:pointer;transition:var(--trans);
+  position:relative;
+}
+.cal-day:hover{border-color:var(--gold-border)}
+.cal-day:active{transform:scale(.93)}
+.cal-day .num{font-size:.82rem;font-weight:600;color:var(--text);line-height:1}
+.cal-day .dot{width:5px;height:5px;border-radius:50%;background:var(--gold);margin-top:3px}
+.cal-day .dot.red{background:#c0392b}
+.cal-day .dot.purple{background:#8e44ad}
+.cal-day .dot.green{background:#27ae60}
+.cal-day.today{background:var(--gold-soft);border-color:var(--gold)}
+.cal-day.today .num{color:var(--gold);font-weight:700}
+.cal-day.empty{background:transparent;cursor:default}
+
+/* Detail */
+.detail-head{
+  position:relative;text-align:center;padding:18px 14px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);box-shadow:var(--shadow);
+}
+.detail-head .d-title{font-family:'Amiri',serif;font-size:1.1rem;font-weight:700;color:var(--gold);margin-bottom:6px;display:flex;align-items:center;justify-content:center;gap:8px}
+.detail-head .d-title svg{width:22px;height:22px;flex:none}
+.detail-head .d-meta{font-size:.72rem;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap}
+.detail-head .d-meta span{display:inline-flex;align-items:center;gap:4px}
+.back-btn{
+  display:inline-flex;align-items:center;gap:5px;margin-top:12px;
+  padding:7px 16px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);font-size:.72rem;font-weight:600;transition:var(--trans);
+}
+.back-btn:hover{background:var(--gold-soft);border-color:var(--gold)}
+
+/* Amal item (checkable) */
+.amal-item{
+  display:flex;align-items:flex-start;gap:10px;
+  padding:10px 0;border-bottom:1px dashed var(--divider);
+}
+.amal-item:last-child{border-bottom:none}
+.amal-check{
+  width:22px;height:22px;border-radius:6px;flex:none;
+  border:2px solid var(--gold-border);background:transparent;
+  cursor:pointer;transition:var(--trans);
+  display:flex;align-items:center;justify-content:center;
+  margin-top:2px;
+}
+.amal-check.done{background:var(--gold);border-color:var(--gold)}
+.amal-check svg{width:14px;height:14px;color:#fff;opacity:0;transition:var(--trans)}
+.amal-check.done svg{opacity:1}
+.amal-text{flex:1;font-size:.82rem;color:var(--text);line-height:1.8}
+.amal-text.done{text-decoration:line-through;opacity:.6}
+.amal-text .ar{
+  display:block;font-family:var(--font-ar);font-size:.9rem;color:var(--arabic);
+  font-weight:700;margin-top:4px;text-align:center;
+}
+.amal-text .src{display:block;font-size:.68rem;color:var(--muted);margin-top:3px;font-style:italic}
+
+/* Quick links */
+.quick-links{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px}
+.quick-link{
+  display:inline-flex;align-items:center;gap:6px;
+  padding:8px 14px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);font-size:.72rem;font-weight:600;
+  text-decoration:none;transition:var(--trans);
+}
+.quick-link:hover{background:var(--gold-soft);border-color:var(--gold);transform:translateY(-2px)}
+.quick-link svg{width:14px;height:14px;flex:none}
+
+/* Filters */
+.filter-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.filter-btn{
+  padding:6px 12px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--divider);color:var(--text2);
+  font-size:.72rem;font-weight:600;cursor:pointer;transition:var(--trans);
+}
+.filter-btn:hover{color:var(--gold);border-color:var(--gold-border)}
+.filter-btn.active{color:#fff;background:var(--gold);border-color:var(--gold)}
+
+/* Search */
+.search-box{position:relative;margin-bottom:12px}
+.search-box input{
+  width:100%;padding:11px 44px 11px 16px;border-radius:30px;
+  border:1px solid var(--gold-border);background:var(--surface);
+  color:var(--text);font-family:inherit;font-size:.85rem;outline:none;transition:var(--trans);
+}
+.search-box input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+.search-box .search-icon{
+  position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  color:var(--muted);pointer-events:none;
+}
+
+/* Empty */
+.empty-msg{
+  text-align:center;padding:40px 20px;color:var(--muted);font-size:.88rem;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.empty-msg svg{width:48px;height:48px;opacity:.3}
+
+/* Bottom nav */
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+/* Modals */
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;padding:20px 18px 26px;
+  box-shadow:var(--shadow);animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+.info-block{
+  padding:14px 16px;background:var(--surface2);border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{font-size:.8rem;line-height:1.95;color:var(--text2);text-align:justify;white-space:pre-line}
+
+/* Toast */
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;transition:all .35s ease;
+  font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+.tab-page{display:none}
+.tab-page.active{display:block;animation:fadeIn .25s ease}
+@keyframes fadeIn{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px;--fs-base:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.15rem}
+  .tab-btn{padding:6px 12px;font-size:.68rem}
+  .card{padding:14px}
+  .cal-day{min-height:38px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">اعمال و مناسبت‌ها</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">اعمال و مناسبت‌ها</div>
+      <div class="orn-sub">تقویم، مناسبت‌ها و اعمال مذهبی</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <!-- Tabs -->
+    <nav class="tabs" id="tabNav">
+      <button class="tab-btn active" data-tab="tabHome">
+        <svg class="icon-xs" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        اصلی
+      </button>
+      <button class="tab-btn" data-tab="tabEvents">
+        <svg class="icon-xs" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        مناسبت‌ها
+      </button>
+      <button class="tab-btn" data-tab="tabAmal">
+        <svg class="icon-xs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+        اعمال
+      </button>
+      <button class="tab-btn" data-tab="tabSearch">
+        <svg class="icon-xs" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        جستجو
+      </button>
+      <button class="tab-btn" data-tab="tabFav">
+        <svg class="icon-xs" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        علاقه‌مندی
+      </button>
+    </nav>
+
+    <!-- Pages -->
+    <div class="tab-page active" id="tabHome"><div id="homeContainer"></div></div>
+    <div class="tab-page" id="tabEvents">
+      <div class="filter-row" id="filterRow">
+        <button class="filter-btn active" data-filter="all">همه</button>
+        <button class="filter-btn" data-filter="مذهبی">مذهبی</button>
+        <button class="filter-btn" data-filter="شیعی">اهل‌بیت</button>
+        <button class="filter-btn" data-filter="ملی">افغانستان</button>
+        <button class="filter-btn" data-filter="today">امروز</button>
+        <button class="filter-btn" data-filter="month">این ماه</button>
+      </div>
+      <div id="eventsContainer"></div>
+    </div>
+    <div class="tab-page" id="tabAmal">
+      <div class="search-box">
+        <input type="text" id="amalSearch" placeholder="جستجو در اعمال..." oninput="renderAmalList(this.value)">
+        <span class="search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+      </div>
+      <div id="amalContainer"></div>
+    </div>
+    <div class="tab-page" id="tabSearch">
+      <div class="search-box">
+        <input type="text" id="globalSearch" placeholder="جستجو در مناسبت‌ها و اعمال..." oninput="renderGlobalSearch(this.value)">
+        <span class="search-icon">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        </span>
+      </div>
+      <div id="searchResults"></div>
+    </div>
+    <div class="tab-page" id="tabFav"><div id="favoritesContainer"></div></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/>
+    </svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="doa.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 2v6"/>
+      <path d="M7 8c0 3 2 5 5 5s5-2 5-5"/>
+      <path d="M8 13c-2 3-3 5-3 7 0 1 1 2 2 2h10c1 0 2-1 2-2 0-2-1-4-3-7"/>
+    </svg>
+    <span>دعاها</span>
+  </a>
+  <a class="nav-btn" href="zekr.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="12" r="5"/>
+      <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+      <path d="M12 3v3"/><path d="M12 18v3"/>
+      <path d="M3 12h3"/><path d="M18 12h3"/>
+    </svg>
+    <span>اذکار</span>
+  </a>
+</nav>
+
+<!-- Info Modal -->
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره اعمال و مناسبت‌ها
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        توضیحات
+      </h4>
+      <p>در این بخش می‌توانید مناسبت‌های مذهبی، ملی و شیعی را مشاهده کنید. هر مناسبت شامل اعمال مخصوص، دعاها و اذکار مربوطه است. با کلیک روی هر مناسبت، جزئیات کامل و لینک‌های مربوطه نمایش داده می‌شود.</p>
+    </div>
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        منبع
+      </h4>
+      <p>مفاتیح الجنان • صحیفه سجادیه • بحارالأنوار • اقبال الأعمال • مصباح المتهجد</p>
+    </div>
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+        راهنما
+      </h4>
+      <p>• برای مشاهده مناسبت امروز، تب «اصلی» را باز کنید.<br>• برای جستجوی سریع، از تب «جستجو» استفاده کنید.<br>• می‌توانید مناسبت‌های مورد علاقه را ذخیره کنید.<br>• لینک دعاها و اعمال مرتبط در پایین هر مناسبت نمایش داده می‌شود.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Settings Modal -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن فارسی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه و متن</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | اعمال و مناسبت‌ها
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   SVG ICONS
+   ============================================================ */
+const ICONS = {
+  heart:`<svg class="icon-xs" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+  book:`<svg class="icon-xs" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+  arrow:`<svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>`,
+  copy:`<svg class="icon-xs" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`,
+  share:`<svg class="icon-xs" viewBox="0 0 24 24"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>`,
+  empty:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`,
+  check:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>`,
+  star:`<svg class="icon-xs" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  starFilled:`<svg class="icon-xs" viewBox="0 0 24 24" fill="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>`,
+  calendar:`<svg class="icon-xs" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>`,
+  clock:`<svg class="icon-xs" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>`,
+  link:`<svg class="icon-xs" viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>`,
+  external:`<svg class="icon-xs" viewBox="0 0 24 24"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>`
+};
+
+/* ============================================================
+   HELPERS - تاریخ
+   ============================================================ */
+function gregorianToJalali(gy, gm, gd) {
+  const gdm = [0,31,59,90,120,151,181,212,243,273,304,334];
+  let gy2 = gm > 2 ? gy + 1 : gy;
+  let days = 355666 + (365*gy) + Math.floor((gy2+3)/4) - Math.floor((gy2+99)/100) + Math.floor((gy2+399)/400) + gd + gdm[gm-1];
+  let jy = -1595 + 33*Math.floor(days/12053);
+  days %= 12053;
+  jy += 4*Math.floor(days/1461);
+  days %= 1461;
+  if (days > 365) { jy += Math.floor((days-1)/365); days = (days-1)%365; }
+  let jm, jd;
+  if (days < 186) { jm = 1 + Math.floor(days/31); jd = 1 + (days%31); }
+  else { jm = 7 + Math.floor((days-186)/30); jd = 1 + ((days-186)%30); }
+  return [jy, jm, jd];
+}
+
+function jalaliToGregorian(jy, jm, jd) {
+  jy += 1595;
+  let days = -355668 + (365*jy) + Math.floor(jy/33)*8 + Math.floor(((jy%33)+3)/4) + jd + (jm<7 ? (jm-1)*31 : ((jm-7)*30)+186);
+  let gy = 400*Math.floor(days/146097);
+  days %= 146097;
+  if (days > 36524) { gy += 100*Math.floor(--days/36524); days %= 36524; if (days >= 365) days++; }
+  gy += 4*Math.floor(days/1461);
+  days %= 1461;
+  if (days > 365) { gy += Math.floor((days-1)/365); days = (days-1)%365; }
+  let gd = days + 1;
+  const sal_a = [0,31,((gy%4===0&&gy%100!==0)||gy%400===0)?29:28,31,30,31,30,31,31,30,31,30,31];
+  let gm;
+  for (gm = 1; gm <= 12 && gd > sal_a[gm]; gm++) gd -= sal_a[gm];
+  return [gy, gm, gd];
+}
+
+function solarMonthDays(year, month) {
+  if (month <= 6) return 31;
+  if (month <= 11) return 30;
+  const next = jalaliToGregorian(year+1,1,1);
+  const cur = jalaliToGregorian(year,1,1);
+  const diff = Math.round((new Date(next[0],next[1]-1,next[2]) - new Date(cur[0],cur[1]-1,cur[2])) / 86400000);
+  return diff === 366 ? 30 : 29;
+}
+
+function getIslamicDate(date) {
+  const jd = Math.floor(date.getTime()/86400000) + 2440588;
+  let l = jd - 1948440 + 10632;
+  let n = Math.floor((l-1)/10631);
+  l = l - 10631*n + 354;
+  let j = Math.floor((10985-l)/5316) * Math.floor((50*l)/17719) + Math.floor(l/5670) * Math.floor((43*l)/15238);
+  l = l - Math.floor((30-j)/15)*Math.floor((17719*j)/50) - Math.floor(j/16)*Math.floor((15238*j)/43) + 29;
+  const m = Math.floor((24*l)/709);
+  const d = l - Math.floor((709*m)/24);
+  const y = 30*n + j - 30;
+  return { year: y, month: m, day: d };
+}
+
+const SOLAR_MONTHS = ["حمل","ثور","جوزا","سرطان","اسد","سنبله","میزان","عقرب","قوس","جدی","دلو","حوت"];
+const WEEKDAYS = ["شنبه","یکشنبه","دوشنبه","سه‌شنبه","چهارشنبه","پنجشنبه","جمعه"];
+const ISLAMIC_MONTHS = ["","محرم","صفر","ربیع‌الاول","ربیع‌الثانی","جمادی‌الاول","جمادی‌الثانی","رجب","شعبان","رمضان","شوال","ذی‌القعده","ذی‌الحجه"];
+
+let now = new Date();
+let currentSolar = gregorianToJalali(now.getFullYear(), now.getMonth()+1, now.getDate());
+let viewYear = currentSolar[0], viewMonth = currentSolar[1];
+
+function getTodayShamsi() { return { year: currentSolar[0], month: currentSolar[1], day: currentSolar[2] }; }
+function isToday(y,m,d) { return y === currentSolar[0] && m === currentSolar[1] && d === currentSolar[2]; }
+
+/* ============================================================
+   DATA — مناسبت‌ها (با لینک‌های مرتبط)
+   ============================================================ */
+const EVENTS_DATA = [
+  // ===== افغانستان =====
+  { id:"nowruz", title:"نوروز (سال نو)", type:"ملی", solar:"1-1", holiday:true,
+    desc:"سال نو هجری شمسی - تعطیل رسمی",
+    links:[{title:"دعای تحویل سال", href:"doa.html"}] },
+
+  { id:"independence", title:"روز استقلال افغانستان", type:"ملی", solar:"5-28", holiday:true,
+    desc:"روز استقلال کشور - تعطیل رسمی" },
+
+  { id:"mujahideen", title:"روز پیروزی مجاهدین", type:"ملی", solar:"2-8", holiday:true,
+    desc:"روز پیروزی مجاهدین - تعطیل رسمی" },
+
+  { id:"massoud_martyr", title:"سالروز شهادت احمدشاه مسعود", type:"ملی", solar:"6-9",
+    desc:"سالروز شهادت قهرمان ملی" },
+
+  { id:"abdulrahim_martyrs", title:"شهدای لیسه عبدالرحیم", type:"ملی", solar:"12-26",
+    desc:"سالروز شهادت شهدای لیسه عبدالرحیم" },
+
+  { id:"kowsar_martyrs", title:"شهدای کوثر دانش", type:"ملی", solar:"11-22",
+    desc:"سالروز شهدای کوثر دانش" },
+
+  { id:"roshnai_martyrs", title:"شهدای جنبش روشنایی", type:"ملی", solar:"9-24",
+    desc:"سالروز شهدای جنبش روشنایی" },
+
+  // ===== پیامبر اکرم (ص) =====
+  { id:"prophet_birth", title:"ولادت پیامبر اکرم (ص)", type:"شیعی", islamic:"3-17",
+    desc:"ولادت حضرت محمد مصطفی (ص) — ۱۷ ربیع‌الاول",
+    amal:[
+      {text:"روزه گرفتن در این روز", ar:"صوم"},
+      {text:"صلوات بسیار بر پیامبر و خاندانش", ar:"اللهم صل علی محمد و آل محمد"},
+      {text:"زیارت پیامبر (ص) از دور یا نزدیک"}
+    ],
+    links:[
+      {title:"دعای توسل", href:"tavassol.html"},
+      {title:"زیارت پیامبر (ص)", href:"ziyarat.html"},
+      {title:"مناجات‌ها", href:"monajat.html"}
+    ]},
+
+  { id:"prophet_demise", title:"رحلت پیامبر اکرم (ص)", type:"شیعی", islamic:"2-28",
+    desc:"رحلت حضرت محمد مصطفی (ص) — ۲۸ صفر",
+    amal:[
+      {text:"خواندن زیارت پیامبر (ص)"},
+      {text:"سوگواری و ترک لذائذ"}
+    ]},
+
+  { id:"imam_hassan_martyr", title:"شهادت امام حسن مجتبی (ع)", type:"شیعی", islamic:"2-28",
+    desc:"شهادت امام حسن مجتبی (ع) — ۲۸ صفر",
+    amal:[
+      {text:"زیارت امام حسن (ع)"},
+      {text:"سوگواری"}
+    ]},
+
+  { id:"imam_reza_martyr", title:"شهادت امام رضا (ع)", type:"شیعی", islamic:"2-30",
+    desc:"شهادت امام علی بن موسی الرضا (ع) — آخر صفر",
+    amal:[
+      {text:"زیارت امام رضا (ع)"},
+      {text:"سوگواری"}
+    ]},
+
+  // ===== حضرت فاطمه (س) =====
+  { id:"fatima_birth", title:"ولادت حضرت فاطمه زهرا (س)", type:"شیعی", islamic:"6-20",
+    desc:"ولادت حضرت فاطمه زهرا (س) — ۲۰ جمادی‌الثانی",
+    amal:[
+      {text:"روزه"},
+      {text:"زیارت حضرت فاطمه (س)"},
+      {text:"صلوات", ar:"اللهم صل علی فاطمة و أبیها و بعلها و بنیها"}
+    ],
+    links:[
+      {title:"زیارت حضرت فاطمه (س)", href:"ziyarat.html"},
+      {title:"دعای توسل به حضرت زهرا", href:"tavassol.html"}
+    ]},
+
+  { id:"fatima_martyr_1", title:"شهادت حضرت فاطمه (س) - روایت اول", type:"شیعی", islamic:"5-13",
+    desc:"شهادت حضرت فاطمه زهرا (س) — ۱۳ جمادی‌الاولی",
+    amal:[
+      {text:"زیارت حضرت فاطمه (س)"},
+      {text:"سوگواری و عزا"}
+    ]},
+
+  { id:"fatima_martyr_2", title:"شهادت حضرت فاطمه (س) - روایت دوم", type:"شیعی", islamic:"6-3",
+    desc:"شهادت حضرت فاطمه زهرا (س) — ۳ جمادی‌الثانیه",
+    amal:[
+      {text:"زیارت حضرت فاطمه (س)"},
+      {text:"سوگواری"}
+    ]},
+
+  // ===== امام علی (ع) =====
+  { id:"imam_ali_birth", title:"ولادت امام علی (ع)", type:"شیعی", islamic:"7-13",
+    desc:"ولادت امیرالمؤمنین علی (ع) در کعبه — ۱۳ رجب",
+    amal:[
+      {text:"روزه"},
+      {text:"زیارت امیرالمؤمنین (ع)"},
+      {text:"خواندن دعای کمیل"}
+    ],
+    links:[
+      {title:"دعای کمیل", href:"komail.html"},
+      {title:"زیارت امیرالمؤمنین", href:"ziyarat.html"},
+      {title:"اعمال ماه رجب", href:"aamal-rajab.html"}
+    ]},
+
+  { id:"imam_ali_strike", title:"ضربت خوردن امام علی (ع)", type:"شیعی", islamic:"9-19",
+    desc:"ضربت خوردن امیرالمؤمنین (ع) در محراب — ۱۹ رمضان",
+    amal:[
+      {text:"زیارت امیرالمؤمنین (ع)"},
+      {text:"شب‌زنده‌داری و دعا"}
+    ]},
+
+  { id:"imam_ali_martyr", title:"شهادت امام علی (ع)", type:"شیعی", islamic:"9-21",
+    desc:"شهادت امیرالمؤمنین علی (ع) — ۲۱ رمضان",
+    amal:[
+      {text:"زیارت امیرالمؤمنین (ع)"},
+      {text:"سوگواری و عزا"}
+    ]},
+
+  // ===== امام حسین (ع) =====
+  { id:"imam_hussain_birth", title:"ولادت امام حسین (ع)", type:"شیعی", islamic:"8-3",
+    desc:"ولادت امام حسین (ع) — ۳ شعبان",
+    amal:[
+      {text:"روزه"},
+      {text:"زیارت امام حسین (ع)"}
+    ],
+    links:[
+      {title:"دعای عرفه", href:"arafeh.html"},
+      {title:"دعای توسل", href:"tavassol.html"}
+    ]},
+
+  { id:"imam_hussain_entry", title:"ورود امام حسین (ع) به کربلا", type:"شیعی", islamic:"1-2",
+    desc:"ورود کاروان امام حسین (ع) به کربلا — ۲ محرم",
+    amal:[
+      {text:"زیارت امام حسین (ع)"},
+      {text:"خواندن زیارت عاشورا"}
+    ]},
+
+  { id:"tasuah", title:"تاسوعای حسینی", type:"شیعی", islamic:"1-9", holiday:false,
+    desc:"روز تاسوعا — ۹ محرم",
+    amal:[
+      {text:"زیارت امام حسین (ع)"},
+      {text:"سوگواری"}
+    ]},
+
+  { id:"ashura", title:"عاشورای حسینی", type:"شیعی", islamic:"1-10", holiday:true,
+    desc:"شهادت امام حسین (ع) و یارانش — ۱۰ محرم",
+    amal:[
+      {text:"خواندن زیارت عاشورا"},
+      {text:"سوگواری و عزا"},
+      {text:"خواندن دعای علقمه"},
+      {text:"روزه (مستحب)"}
+    ],
+    links:[
+      {title:"زیارت عاشورا", href:"ziyarat.html"},
+      {title:"دعای علقمه", href:"doa.html"}
+    ]},
+
+  { id:"arbaeen", title:"اربعین حسینی", type:"شیعی", islamic:"2-20",
+    desc:"اربعین شهادت امام حسین (ع) — ۲۰ صفر",
+    amal:[
+      {text:"زیارت اربعین"},
+      {text:"سوگواری"}
+    ],
+    links:[
+      {title:"زیارت اربعین", href:"ziyarat.html"},
+      {title:"دعای ندبه", href:"nudbah.html"}
+    ]},
+
+  // ===== سایر ائمه =====
+  { id:"imam_sajjad_birth", title:"ولادت امام سجاد (ع)", type:"شیعی", islamic:"8-5",
+    desc:"ولادت امام زین‌العابدین (ع) — ۵ شعبان",
+    amal:[{text:"روزه"},{text:"زیارت امام سجاد"}] },
+
+  { id:"imam_sajjad_martyr", title:"شهادت امام سجاد (ع)", type:"شیعی", islamic:"1-25",
+    desc:"شهادت امام سجاد (ع) — ۲۵ محرم",
+    amal:[{text:"زیارت امام سجاد"},{text:"سوگواری"}] },
+
+  { id:"imam_baqir_birth", title:"ولادت امام باقر (ع)", type:"شیعی", islamic:"7-1",
+    desc:"ولادت امام محمد باقر (ع) — ۱ رجب",
+    amal:[{text:"روزه"},{text:"زیارت امام باقر"}],
+    links:[{title:"اعمال ماه رجب", href:"aamal-rajab.html"}] },
+
+  { id:"imam_baqir_martyr", title:"شهادت امام باقر (ع)", type:"شیعی", islamic:"12-7",
+    desc:"شهادت امام محمد باقر (ع) — ۷ ذی‌الحجه",
+    amal:[{text:"زیارت امام باقر"},{text:"سوگواری"}] },
+
+  { id:"imam_sadiq_birth", title:"ولادت امام صادق (ع)", type:"شیعی", islamic:"3-17",
+    desc:"ولادت امام جعفر صادق (ع) — ۱۷ ربیع‌الاول",
+    amal:[
+      {text:"روزه"},
+      {text:"زیارت امام صادق"},
+      {text:"خواندن دعای جوشن کبیر"}
+    ],
+    links:[{title:"دعای جوشن کبیر", href:"doa.html"}] },
+
+  { id:"imam_sadiq_martyr", title:"شهادت امام صادق (ع)", type:"شیعی", islamic:"10-25",
+    desc:"شهادت امام جعفر صادق (ع) — ۲۵ شوال",
+    amal:[{text:"زیارت امام صادق"},{text:"سوگواری"}] },
+
+  { id:"imam_kazem_birth", title:"ولادت امام کاظم (ع)", type:"شیعی", islamic:"2-7",
+    desc:"ولادت امام موسی کاظم (ع) — ۷ صفر",
+    amal:[{text:"روزه"},{text:"زیارت امام کاظم"}] },
+
+  { id:"imam_kazem_martyr", title:"شهادت امام کاظم (ع)", type:"شیعی", islamic:"7-25",
+    desc:"شهادت امام موسی کاظم (ع) — ۲۵ رجب",
+    amal:[{text:"زیارت امام کاظم"},{text:"سوگواری"}],
+    links:[{title:"اعمال ماه رجب", href:"aamal-rajab.html"}] },
+
+  { id:"imam_reza_birth", title:"ولادت امام رضا (ع)", type:"شیعی", islamic:"11-11",
+    desc:"ولادت امام علی بن موسی الرضا (ع) — ۱۱ ذی‌القعده",
+    amal:[{text:"روزه"},{text:"زیارت امام رضا"}] },
+
+  { id:"imam_jawad_birth", title:"ولادت امام جواد (ع)", type:"شیعی", islamic:"7-10",
+    desc:"ولادت امام محمد جواد (ع) — ۱۰ رجب",
+    amal:[{text:"روزه"},{text:"زیارت امام جواد"}],
+    links:[{title:"اعمال ماه رجب", href:"aamal-rajab.html"}] },
+
+  { id:"imam_jawad_martyr", title:"شهادت امام جواد (ع)", type:"شیعی", islamic:"11-29",
+    desc:"شهادت امام محمد جواد (ع) — ۲۹ ذی‌القعده",
+    amal:[{text:"زیارت امام جواد"},{text:"سوگواری"}] },
+
+  { id:"imam_hadi_birth", title:"ولادت امام هادی (ع)", type:"شیعی", islamic:"12-15",
+    desc:"ولادت امام علی النقی الهادی (ع) — ۱۵ ذی‌الحجه",
+    amal:[{text:"روزه"},{text:"زیارت امام هادی"}] },
+
+  { id:"imam_hadi_martyr", title:"شهادت امام هادی (ع)", type:"شیعی", islamic:"7-3",
+    desc:"شهادت امام علی النقی الهادی (ع) — ۳ رجب",
+    amal:[{text:"زیارت امام هادی"},{text:"سوگواری"}],
+    links:[{title:"اعمال ماه رجب", href:"aamal-rajab.html"}] },
+
+  { id:"imam_askari_birth", title:"ولادت امام عسکری (ع)", type:"شیعی", islamic:"4-8",
+    desc:"ولادت امام حسن عسکری (ع) — ۸ ربیع‌الثانی",
+    amal:[{text:"روزه"},{text:"زیارت امام عسکری"}] },
+
+  { id:"imam_askari_martyr", title:"شهادت امام عسکری (ع)", type:"شیعی", islamic:"3-8",
+    desc:"شهادت امام حسن عسکری (ع) — ۸ ربیع‌الاول",
+    amal:[{text:"زیارت امام عسکری"},{text:"سوگواری"}] },
+
+  // ===== امام مهدی (عج) =====
+  { id:"imam_mahdi_birth", title:"ولادت امام مهدی (عج)", type:"شیعی", islamic:"8-15", holiday:true,
+    desc:"ولادت حضرت ولی‌عصر (عج) — ۱۵ شعبان",
+    amal:[
+      {text:"روزه"},
+      {text:"زیارت امام زمان (عج)"},
+      {text:"خواندن دعای عهد"},
+      {text:"شب‌زنده‌داری و دعا"}
+    ],
+    links:[
+      {title:"دعای عهد", href:"ahd.html"},
+      {title:"دعای سلامتی امام زمان", href:"salamati-zaman.html"},
+      {title:"دعای توسل به امام زمان", href:"tavassol-zaman.html"},
+      {title:"دعای استغاثه", href:"estegatheh-zaman.html"},
+      {title:"زیارت آل یاسین", href:"ziyarat.html"},
+      {title:"نیمه شعبان", href:"nimah.html"}
+    ]},
+
+  { id:"imam_mahdi_imamate", title:"آغاز امامت امام مهدی (عج)", type:"شیعی", islamic:"3-9",
+    desc:"آغاز امامت حضرت مهدی (عج) — ۹ ربیع‌الاول",
+    amal:[
+      {text:"زیارت امام زمان (عج)"},
+      {text:"خواندن دعای عهد"}
+    ],
+    links:[{title:"دعای عهد", href:"ahd.html"}] },
+
+  // ===== مناسبت‌های مهم =====
+  { id:"mabath", title:"مبعث پیامبر (ص)", type:"مذهبی", islamic:"7-27", holiday:true,
+    desc:"مبعث پیامبر اکرم (ص) — ۲۷ رجب",
+    amal:[
+      {text:"روزه (از برترین روزهای سال)"},
+      {text:"خواندن دعای مبعث"},
+      {text:"صلوات بسیار"}
+    ],
+    links:[
+      {title:"اعمال ماه رجب", href:"aamal-rajab.html"},
+      {title:"استغفار ماه رجب", href:"istighfar-rajab.html"}
+    ]},
+
+  { id:"ramadan_start", title:"آغاز ماه مبارک رمضان", type:"مذهبی", islamic:"9-1", holiday:false,
+    desc:"آغاز ماه مبارک رمضان — ماه نزول قرآن",
+    amal:[
+      {text:"روزه"},
+      {text:"خواندن دعای افتتاح"},
+      {text:"قرائت قرآن"}
+    ],
+    links:[
+      {title:"دعای افتتاح", href:"iftitah.html"},
+      {title:"دعای ابوحمزه", href:"abu-hamza.html"},
+      {title:"دعای سحر", href:"sahar.html"}
+    ]},
+
+  { id:"laylat_qadr", title:"شب‌های قدر", type:"مذهبی", islamic:"9-19",
+    desc:"شب‌های قدر — ۱۹، ۲۱ و ۲۳ رمضان",
+    amal:[
+      {text:"احیای شب"},
+      {text:"قرائت قرآن و دعا"},
+      {text:"خواندن دعای جوشن کبیر"},
+      {text:"نماز شب قدر"}
+    ],
+    links:[
+      {title:"دعای جوشن کبیر", href:"doa.html"},
+      {title:"دعای افتتاح", href:"eftetah.html"},
+      {title:"دعای ابوحمزه", href:"abuhomzeh.html"}
+    ]},
+
+  { id:"eid_fitr", title:"عید سعید فطر", type:"مذهبی", islamic:"10-1", holiday:true,
+    desc:"عید فطر — پایان ماه رمضان",
+    amal:[
+      {text:"نماز عید فطر"},
+      {text:"زکات فطره"},
+      {text:"خواندن دعای عید"},
+      {text:"دید و بازدید"}
+    ]},
+
+  { id:"arafa", title:"روز عرفه", type:"مذهبی", islamic:"12-9", holiday:false,
+    desc:"روز عرفه — روز دعا و راز و نیاز",
+    amal:[
+      {text:"روزه (مستحب)"},
+      {text:"خواندن دعای عرفه"},
+      {text:"دعا برای دیگران"}
+    ],
+    links:[
+      {title:"دعای عرفه", href:"arafeh.html"}
+    ]},
+
+  { id:"eid_adha", title:"عید سعید قربان", type:"مذهبی", islamic:"12-10", holiday:true,
+    desc:"عید قربان — ۱۰ ذی‌الحجه",
+    amal:[
+      {text:"نماز عید قربان"},
+      {text:"قربانی"},
+      {text:"خواندن دعای عید"}
+    ]},
+
+  { id:"ghadir", title:"عید سعید غدیر خم", type:"مذهبی", islamic:"12-18", holiday:true,
+    desc:"عید غدیر خم — ۱۸ ذی‌الحجه",
+    amal:[
+      {text:"روزه"},
+      {text:"خواندن دعای غدیر"},
+      {text:"صلوات"},
+      {text:"دید و بازدید"}
+    ],
+    links:[
+      {title:"زیارت غدیریه", href:"ziyarat.html"},
+      {title:"دعای توسل", href:"tavassol.html"}
+    ]},
+
+  { id:"mubahala", title:"روز مباهله", type:"مذهبی", islamic:"12-24",
+    desc:"روز مباهله پیامبر (ص) با مسیحیان نجران",
+    amal:[
+      {text:"روزه"},
+      {text:"خواندن دعای مباهله"}
+    ]},
+
+  { id:"rajab_start", title:"آغاز ماه رجب", type:"مذهبی", islamic:"7-1",
+    desc:"آغاز ماه رجب — ماه خدا",
+    amal:[
+      {text:"غسل و دعای ماه رجب"},
+      {text:"استغفار فراوان"}
+    ],
+    links:[
+      {title:"دعاهای ماه رجب", href:"rajab-dua.html"},
+      {title:"استغفار ماه رجب", href:"istighfar-rajab.html"},
+      {title:"اعمال ماه رجب", href:"aamal-rajab.html"}
+    ]},
+
+  { id:"shaban_start", title:"آغاز ماه شعبان", type:"مذهبی", islamic:"8-1",
+    desc:"آغاز ماه شعبان — ماه پیامبر (ص)",
+    amal:[
+      {text:"روزه"},
+      {text:"خواندن مناجات شعبانیه"},
+      {text:"صلوات شعبانیه"},
+      {text:"استغفار"}
+    ],
+    links:[
+      {title:"دعاهای ماه شعبان", href:"shaban-dua.html"},
+      {title:"اعمال ماه شعبان", href:"aamal-shaban.html"},
+      {title:"مناجات شعبانیه", href:"monajat.html"}
+    ]},
+];
+
+/* ============================================================
+   DATA — اعمال ماه‌ها و روزانه
+   ============================================================ */
+const MONTH_AMAL = {
+  "محرم": {desc:"ماه محرم — سوگواری امام حسین (ع)",
+    amal:[{text:"خواندن زیارت عاشورا", link:"ziyarat.html"},
+          {text:"سوگواری در دهه اول"},
+          {text:"روزه روز عاشورا (مستحب)"},
+          {text:"خواندن دعای علقمه"}] },
+  "صفر": {desc:"ماه صفر — ماه غم و اندوه",
+    amal:[{text:"زیارت اربعین", link:"ziyarat.html"},
+          {text:"زیارت پیامبر (ص)"},
+          {text:"صدقه و خیرات"}] },
+  "ربیع‌الاول": {desc:"ماه ربیع‌الاول — ماه ولادت پیامبر (ص)",
+    amal:[{text:"روزه ۱۷ ربیع‌الاول"},
+          {text:"صلوات فراوان"},
+          {text:"زیارت پیامبر (ص)"}] },
+  "جمادی‌الثانی": {desc:"ماه جمادی‌الثانی — ولادت و شهادت حضرت زهرا (س)",
+    amal:[{text:"زیارت حضرت فاطمه (س)", link:"ziyarat.html"},
+          {text:"سوگواری در ۳ جمادی‌الثانیه"}] },
+  "رجب": {desc:"ماه رجب — ماه خدا، ماه استغفار و دعا",
+    amal:[{text:"روزه‌های ماه رجب"},
+          {text:"خواندن دعاهای ماه رجب", link:"rajab-dua.html"},
+          {text:"استغفار ۷۰ بار در روز", link:"istighfar-rajab.html"},
+          {text:"زیارت امام حسین (ع)"},
+          {text:"اعمال لیلة الرغائب"},
+          {text:"اعمال شب مبعث (۲۷ رجب)"}],
+    links:[
+      {title:"دعاهای ماه رجب", href:"rajab-dua.html"},
+      {title:"استغفار ماه رجب", href:"istighfar-rajab.html"},
+      {title:"اعمال ماه رجب", href:"aamal-rajab.html"},
+      {title:"عمره رجب", href:"omreh-rajab.html"}
+    ]},
+  "شعبان": {desc:"ماه شعبان — ماه پیامبر (ص)",
+    amal:[{text:"روزه‌های ماه شعبان"},
+          {text:"خواندن مناجات شعبانیه"},
+          {text:"صلوات شعبانیه", link:"shaban-dua.html"},
+          {text:"اعمال شب نیمه شعبان (۱۵ شعبان)", link:"nimah.html"},
+          {text:"اعمال شب‌های جمعه"},
+          {text:"استغفار فراوان"}],
+    links:[
+      {title:"دعاهای ماه شعبان", href:"shaban-dua.html"},
+      {title:"اعمال ماه شعبان", href:"aamal-shaban.html"},
+      {title:"مناجات شعبانیه", href:"monajat.html"},
+      {title:"نیمه شعبان", href:"nimah-shaban.html"}
+    ]},
+  "رمضان": {desc:"ماه رمضان — ماه نزول قرآن",
+    amal:[{text:"روزه واجب"},
+          {text:"خواندن دعای افتتاح", link:"eftetah.html"},
+          {text:"خواندن دعای ابوحمزه", link:"abuhomzeh.html"},
+          {text:"خواندن دعای سحر"},
+          {text:"قرائت یک جزء قرآن در روز"},
+          {text:"اعمال شب‌های قدر"}],
+    links:[
+      {title:"دعای افتتاح", href:"eftetah.html"},
+      {title:"دعای ابوحمزه", href:"abuhomzeh.html"},
+      {title:"دعای سحر", href:"sahar.html"}
+    ]},
+  "شوال": {desc:"ماه شوال — ماه عید فطر",
+    amal:[{text:"نماز عید فطر"},
+          {text:"زکات فطره"},
+          {text:"روزه شش روز شوال"}] },
+  "ذی‌القعده": {desc:"ماه ذی‌القعده — از ماه‌های حرام",
+    amal:[{text:"روزه‌های مستحبی"}] },
+  "ذی‌الحجه": {desc:"ماه ذی‌الحجه — ماه حج و عید قربان",
+    amal:[{text:"روزه روز عرفه", link:"arafeh.html"},
+          {text:"دعای عرفه", link:"arafeh.html"},
+          {text:"نماز عید قربان"},
+          {text:"قربانی"},
+          {text:"غسل روز عید غدیر"}],
+    links:[
+      {title:"دعای عرفه", href:"arafeh.html"}
+    ]},
+};
+
+const DAILY_AMAL = {
+  "صبح": [
+    {title:"ذکر صبح", ar:"أَصْبَحْنَا عَلَى فِطْرَةِ الْإِسْلَامِ"},
+    {title:"قرائت آیةالکرسی"},
+    {title:"صلوات (۱۰ بار)", ar:"اللهم صل علی محمد و آل محمد"},
+    {title:"استغفار (۷۰ بار)", ar:"أستغفر الله ربی و أتوب إلیه"}
+  ],
+  "شام": [
+    {title:"ذکر شام", ar:"أَمْسَيْنَا عَلَى فِطْرَةِ الْإِسْلَامِ"},
+    {title:"قرائت سوره توحید (۳ بار)"},
+    {title:"صلوات (۱۰ بار)"},
+    {title:"استغفار (۷۰ بار)"}
+  ],
+  "جمعه": [
+    {title:"غسل جمعه"},
+    {title:"خواندن سوره جمعه و منافقون"},
+    {title:"دعای عهد", link:"ahd.html"},
+    {title:"دعای کمیل (شب جمعه)", link:"kumayl.html"},
+    {title:"صلوات (۱۰۰ بار)"},
+    {title:"زیارت امام حسین (ع)", link:"ziyarat.html"}
+  ]
+};
+
+/* ============================================================
+   STATE
+   ============================================================ */
+let favorites = JSON.parse(localStorage.getItem("noor_amal_favs") || "[]");
+let amalProgress = JSON.parse(localStorage.getItem("noor_amal_progress") || "{}");
+
+function isFav(id){ return favorites.includes(id); }
+function toggleFav(id){
+  const i = favorites.indexOf(id);
+  if (i > -1) favorites.splice(i,1); else favorites.push(id);
+  localStorage.setItem("noor_amal_favs", JSON.stringify(favorites));
+}
+function getProgress(id){ return amalProgress[id] || {}; }
+function setProgress(id, data){ amalProgress[id] = data; localStorage.setItem("noor_amal_progress", JSON.stringify(amalProgress)); }
+
+/* ============================================================
+   RENDER: HOME
+   ============================================================ */
+function renderHome(){
+  const c = $("#homeContainer");
+  const today = getTodayShamsi();
+  const g = jalaliToGregorian(today.year, today.month, today.day);
+  const date = new Date(g[0], g[1]-1, g[2]);
+  const islamic = getIslamicDate(date);
+  const weekday = WEEKDAYS[(date.getDay()+1)%7];
+
+  const eventsToday = getEventsForDate(today.month, today.day);
+  const isFriday = weekday === "جمعه";
+  const dailyAmal = isFriday ? DAILY_AMAL["جمعه"] : [];
+
+  let eventHtml = '';
+  if (eventsToday.length > 0){
+    const ev = eventsToday[0];
+    eventHtml = `
+      <div class="today-event">
+        <div class="et-label">
+          <svg class="icon-xs" viewBox="0 0 24 24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          مناسبت امروز
+        </div>
+        <div class="et-title">${ev.title}</div>
+        <div class="et-action" onclick="openEventDetail('${ev.id}')">
+          مشاهده اعمال
+          <svg class="icon-xs" viewBox="0 0 24 24" style="display:inline;vertical-align:middle;"><polyline points="15 18 9 12 15 6"/></svg>
+        </div>
+      </div>
+    `;
+  }
+
+  c.innerHTML = `
+    <div class="today-card">
+      <div class="today-label">
+        <svg class="icon-xs" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        امروز در نور
+      </div>
+      <div class="today-day">${weekday}</div>
+      <div class="today-dates">
+        <span class="shamsi">${faNum(today.day)} ${SOLAR_MONTHS[today.month-1]} ${faNum(today.year)}</span>
+        <span>${faNum(islamic.day)} ${ISLAMIC_MONTHS[islamic.month]} ${faNum(islamic.year)} هـ</span>
+      </div>
+      ${eventHtml}
+    </div>
+
+    <div class="card">
+      <div class="cal-nav">
+        <button onclick="changeMonth(-1)">
+          <svg class="icon-sm" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+        <div class="cal-title">
+          ${SOLAR_MONTHS[viewMonth-1]} ${faNum(viewYear)}
+          <small>${ISLAMIC_MONTHS[islamic.month]} ${faNum(islamic.year)}</small>
+        </div>
+        <button onclick="changeMonth(1)">
+          <svg class="icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <button class="today-btn" onclick="goToday()">امروز</button>
+      </div>
+      <div class="cal-weekdays">
+        <div>ش</div><div>ی</div><div>د</div><div>س</div><div>چ</div><div>پ</div><div class="weekend">ج</div>
+      </div>
+      <div class="cal-days" id="calDays"></div>
+    </div>
+
+    ${dailyAmal.length > 0 ? `
+      <div class="section-head">
+        <div class="sec-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>
+          اعمال امروز (${isFriday ? 'جمعه' : 'روزانه'})
+        </div>
+        <div class="sec-orn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+        </div>
+      </div>
+      ${dailyAmal.map(a => `
+        <div class="card">
+          <div class="card-title">
+            <svg class="icon-xs" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+            ${a.title}
+          </div>
+          ${a.ar ? `<div class="amal-text"><span class="ar">${a.ar}</span></div>` : ''}
+          ${a.link ? `<div class="quick-links"><a href="${a.link}" class="quick-link">${ICONS.external} مشاهده صفحه</a></div>` : ''}
+        </div>
+      `).join('')}
+    ` : ''}
+  `;
+
+  renderCalendarDays();
+}
+
+function renderCalendarDays(){
+  const c = $("#calDays");
+  if (!c) return;
+  c.innerHTML = "";
+
+  const firstGreg = jalaliToGregorian(viewYear, viewMonth, 1);
+  const firstDate = new Date(firstGreg[0], firstGreg[1]-1, firstGreg[2]);
+  const start = (firstDate.getDay() + 1) % 7;
+
+  for (let i = 0; i < start; i++){
+    const div = document.createElement("div");
+    div.className = "cal-day empty";
+    c.appendChild(div);
+  }
+
+  const total = solarMonthDays(viewYear, viewMonth);
+  for (let d = 1; d <= total; d++){
+    const div = document.createElement("div");
+    div.className = "cal-day";
+    if (isToday(viewYear, viewMonth, d)) div.classList.add("today");
+
+    const events = getEventsForDate(viewMonth, d);
+    let dot = "";
+    if (events.length > 0){
+      const cls = events.some(e => e.holiday) ? "red" : events.some(e => e.type === "شیعی") ? "purple" : "green";
+      dot = `<div class="dot ${cls}"></div>`;
+    }
+
+    div.innerHTML = `<div class="num">${faNum(d)}</div>${dot}`;
+    div.addEventListener("click", () => openDayDetail(viewYear, viewMonth, d));
+    c.appendChild(div);
+  }
+}
+
+function getEventsForDate(month, day){
+  const solarKey = `${month}-${day}`;
+  const results = EVENTS_DATA.filter(e => e.solar === solarKey);
+
+  const g = jalaliToGregorian(viewYear, month, day);
+  const date = new Date(g[0], g[1]-1, g[2]);
+  const islamic = getIslamicDate(date);
+  const iKey = `${islamic.month}-${islamic.day}`;
+  EVENTS_DATA.forEach(e => {
+    if (e.islamic === iKey && !results.some(x => x.id === e.id)) results.push(e);
+  });
+  return results;
+}
+
+function changeMonth(d){
+  let m = viewMonth + d, y = viewYear;
+  if (m < 1){ m = 12; y--; }
+  if (m > 12){ m = 1; y++; }
+  viewYear = y; viewMonth = m;
+  renderHome();
+}
+
+function goToday(){
+  viewYear = currentSolar[0];
+  viewMonth = currentSolar[1];
+  renderHome();
+}
+
+function openDayDetail(y,m,d){
+  const events = getEventsForDate(m,d);
+  if (events.length === 0){ toast(`روز ${d} ${SOLAR_MONTHS[m-1]} مناسبت خاصی ندارد`); return; }
+  openEventDetail(events[0].id);
+}
+
+/* ============================================================
+   RENDER: EVENTS
+   ============================================================ */
+let currentFilter = "all";
+
+function renderEvents(filter = currentFilter){
+  const c = $("#eventsContainer");
+  let items = [...EVENTS_DATA];
+
+  if (filter === "today"){
+    const t = getTodayShamsi();
+    items = items.filter(e => {
+      const d = getEventDate(e);
+      return d && d.month === t.month && d.day === t.day;
+    });
+  } else if (filter === "month"){
+    const t = getTodayShamsi();
+    items = items.filter(e => {
+      const d = getEventDate(e);
+      return d && d.month === t.month;
+    });
+  } else if (filter !== "all"){
+    items = items.filter(e => e.type === filter);
+  }
+
+  const seen = new Set();
+  items = items.filter(e => { if (seen.has(e.id)) return false; seen.add(e.id); return true; });
+
+  if (items.length === 0){
+    c.innerHTML = `<div class="empty-msg">${ICONS.empty}<span>مناسبت‌ای یافت نشد</span></div>`;
+    return;
+  }
+
+  let html = '';
+  items.forEach(e => {
+    const fav = isFav(e.id);
+    html += `
+      <div class="card clickable" onclick="openEventDetail('${e.id}')">
+        <div class="card-head">
+          <span class="badge">${getEventTypeInitial(e.type)}</span>
+          <div class="card-title">${e.title}</div>
+          <button class="fav-btn ${fav ? 'active' : ''}" onclick="event.stopPropagation(); toggleFav('${e.id}'); renderEvents();">
+            ${fav ? ICONS.starFilled : ICONS.star}
+          </button>
+        </div>
+        <div class="meta">
+          <span class="tag ${e.type === 'ملی' ? 'national' : e.type === 'شیعی' ? 'shiite' : ''}">${e.type}</span>
+          ${e.holiday ? '<span class="tag holiday">تعطیل</span>' : ''}
+          <span class="tag">${getEventDateDisplay(e)}</span>
+        </div>
+        <div class="desc">${e.desc}</div>
+      </div>
+    `;
+  });
+  c.innerHTML = html;
+}
+
+function getEventTypeInitial(t){
+  if (t === 'ملی') return 'م';
+  if (t === 'شیعی') return 'ش';
+  return 'ذ';
+}
+
+function getEventDate(e){
+  if (e.solar){
+    const p = e.solar.split('-');
+    return { month: parseInt(p[0]), day: parseInt(p[1]) };
+  }
+  if (e.islamic){
+    const p = e.islamic.split('-');
+    return { month: 0, day: parseInt(p[1]) };
+  }
+  return null;
+}
+
+function getEventDateDisplay(e){
+  if (e.solar){
+    const p = e.solar.split('-');
+    return `${faNum(p[1])} ${SOLAR_MONTHS[parseInt(p[0])-1]}`;
+  }
+  if (e.islamic){
+    const p = e.islamic.split('-');
+    return `${faNum(p[1])} ${ISLAMIC_MONTHS[parseInt(p[0])]}`;
+  }
+  return '';
+}
+
+/* ============================================================
+   EVENT DETAIL
+   ============================================================ */
+function openEventDetail(id){
+  const ev = EVENTS_DATA.find(e => e.id === id);
+  if (!ev) return;
+
+  switchTab('tabEvents');
+  const c = $("#eventsContainer");
+  const fav = isFav(id);
+  const prog = getProgress(id);
+
+  let html = `
+    <div class="detail-head">
+      <div class="d-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        ${ev.title}
+      </div>
+      <div class="d-meta">
+        <span>${ICONS.calendar} ${getEventDateDisplay(ev)}</span>
+        <span>${ev.type}</span>
+        ${ev.holiday ? '<span style="color:#c0392b;">• تعطیل</span>' : ''}
+      </div>
+      <button class="back-btn" onclick="renderEvents()">
+        ${ICONS.arrow}
+        بازگشت به لیست
+      </button>
+    </div>
+  `;
+
+  // Desc
+  html += `
+    <div class="card">
+      <div class="desc">${ev.desc}</div>
+    </div>
+  `;
+
+  // Amal
+  if (ev.amal && ev.amal.length > 0){
+    html += `
+      <div class="section-head">
+        <div class="sec-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>
+          اعمال مخصوص
+        </div>
+        <div class="sec-orn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+        </div>
+      </div>
+      <div class="card">
+    `;
+    ev.amal.forEach((a, i) => {
+      const done = prog[i] || false;
+      const text = typeof a === 'string' ? a : a.text;
+      const ar = (typeof a === 'object' && a.ar) ? a.ar : '';
+      const link = (typeof a === 'object' && a.link) ? a.link : '';
+      const src = (typeof a === 'object' && a.src) ? a.src : '';
+      html += `
+        <div class="amal-item">
+          <button class="amal-check ${done ? 'done' : ''}" onclick="toggleAmalItem('${id}', ${i}, this)">
+            ${ICONS.check}
+          </button>
+          <div class="amal-text ${done ? 'done' : ''}">
+            ${text}
+            ${ar ? `<span class="ar">${ar}</span>` : ''}
+            ${src ? `<span class="src">${src}</span>` : ''}
+            ${link ? `<div style="margin-top:6px;"><a href="${link}" class="quick-link">${ICONS.external} مشاهده صفحه</a></div>` : ''}
+          </div>
+        </div>
+      `;
+    });
+    html += `</div>`;
+  }
+
+  // Quick Links
+  if (ev.links && ev.links.length > 0){
+    html += `
+      <div class="section-head">
+        <div class="sec-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          دعاها و اعمال مرتبط
+        </div>
+        <div class="sec-orn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+        </div>
+      </div>
+      <div class="card">
+        <div class="quick-links">
+          ${ev.links.map(l => `<a href="${l.href}" class="quick-link">${ICONS.external} ${l.title}</a>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  // Action buttons
+  html += `
+    <div class="quick-links" style="justify-content:center;margin-top:16px;">
+      <button class="quick-link" onclick="copyEvent('${id}')">${ICONS.copy} کپی متن</button>
+      <button class="quick-link" onclick="shareEvent('${id}')">${ICONS.share} اشتراک‌گذاری</button>
+      <button class="quick-link" onclick="toggleFav('${id}'); openEventDetail('${id}');" style="color:${fav ? '#e74c3c' : 'var(--gold)'};border-color:${fav ? 'rgba(231,76,60,.3)' : 'var(--gold-border)'};">
+        ${fav ? ICONS.starFilled : ICONS.star} ${fav ? 'حذف از علاقه‌مندی' : 'افزودن به علاقه‌مندی'}
+      </button>
+    </div>
+  `;
+
+  c.innerHTML = html;
+  $('#scrollContent').scrollTop = 0;
+}
+
+function toggleAmalItem(id, idx, btn){
+  const prog = getProgress(id);
+  prog[idx] = !prog[idx];
+  setProgress(id, prog);
+  btn.classList.toggle('done', prog[idx]);
+  btn.parentElement.querySelector('.amal-text').classList.toggle('done', prog[idx]);
+}
+
+function copyEvent(id){
+  const ev = EVENTS_DATA.find(e => e.id === id);
+  if (!ev) return;
+  let text = `${ev.title}\n${ev.desc}\nتاریخ: ${getEventDateDisplay(ev)}\n\n`;
+  if (ev.amal){
+    text += 'اعمال:\n';
+    ev.amal.forEach(a => text += `- ${typeof a === 'string' ? a : a.text}\n`);
+  }
+  if (navigator.clipboard){
+    navigator.clipboard.writeText(text).then(() => toast('متن کپی شد'));
+  } else {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); document.body.removeChild(ta);
+    toast('متن کپی شد');
+  }
+}
+function shareEvent(id){
+  const ev = EVENTS_DATA.find(e => e.id === id);
+  if (!ev) return;
+  const text = `${ev.title}\n${ev.desc}`;
+  if (navigator.share){ navigator.share({title: ev.title, text}).catch(()=>{}); }
+  else copyEvent(id);
+}
+
+/* ============================================================
+   AMAL LIST
+   ============================================================ */
+function renderAmalList(filter = ''){
+  const c = $("#amalContainer");
+  let items = [];
+
+  for (const [month, data] of Object.entries(MONTH_AMAL)){
+    if (!filter || month.includes(filter)) items.push({ type:'month', key: month, data });
+  }
+  for (const [time, amals] of Object.entries(DAILY_AMAL)){
+    if (!filter || time.includes(filter)) items.push({ type:'daily', key: time, data: amals });
+  }
+
+  if (items.length === 0){
+    c.innerHTML = `<div class="empty-msg">${ICONS.empty}<span>نتیجه‌ای یافت نشد</span></div>`;
+    return;
+  }
+
+  let html = '';
+  const monthsList = items.filter(i => i.type === 'month');
+  const dailyList = items.filter(i => i.type === 'daily');
+
+  if (monthsList.length > 0){
+    html += `
+      <div class="section-head">
+        <div class="sec-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          اعمال ماه‌های قمری
+        </div>
+        <div class="sec-orn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+        </div>
+      </div>
+    `;
+    monthsList.forEach(item => {
+      html += `
+        <div class="card clickable" onclick="openAmalDetail('month', '${item.key}')">
+          <div class="card-head">
+            <span class="badge">م</span>
+            <div class="card-title">${item.key}</div>
+          </div>
+          <div class="desc">${item.data.desc}</div>
+          <div class="meta">
+            <span class="tag">${faNum(item.data.amal.length)} عمل</span>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  if (dailyList.length > 0){
+    html += `
+      <div class="section-head">
+        <div class="sec-title">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>
+          اعمال روزانه
+        </div>
+        <div class="sec-orn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+        </div>
+      </div>
+    `;
+    dailyList.forEach(item => {
+      html += `
+        <div class="card clickable" onclick="openAmalDetail('daily', '${item.key}')">
+          <div class="card-head">
+            <span class="badge">ر</span>
+            <div class="card-title">اعمال ${item.key}</div>
+          </div>
+          <div class="meta">
+            <span class="tag">${faNum(item.data.length)} عمل</span>
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  c.innerHTML = html;
+}
+
+function openAmalDetail(type, key){
+  const c = $("#amalContainer");
+  switchTab('tabAmal');
+
+  let title = '', desc = '', amals = [], links = [];
+
+  if (type === 'month'){
+    const data = MONTH_AMAL[key];
+    title = `ماه ${key}`;
+    desc = data.desc;
+    amals = data.amal;
+    links = data.links || [];
+  } else {
+    const data = DAILY_AMAL[key];
+    title = `اعمال ${key}`;
+    amals = data;
+  }
+
+  let html = `
+    <div class="detail-head">
+      <div class="d-title">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/></svg>
+        ${title}
+      </div>
+      <button class="back-btn" onclick="renderAmalList()">
+        ${ICONS.arrow} بازگشت
+      </button>
+    </div>
+  `;
+
+  if (desc){
+    html += `<div class="card"><div class="desc">${desc}</div></div>`;
+  }
+
+  html += `<div class="section-head"><div class="sec-title">اعمال</div></div><div class="card">`;
+  amals.forEach(a => {
+    const text = typeof a === 'string' ? a : a.text;
+    const ar = (typeof a === 'object' && a.ar) ? a.ar : '';
+    const link = (typeof a === 'object' && a.link) ? a.link : '';
+    html += `
+      <div class="amal-item">
+        <div class="amal-text" style="padding-right:0;">
+          ${text}
+          ${ar ? `<span class="ar">${ar}</span>` : ''}
+          ${link ? `<div style="margin-top:6px;"><a href="${link}" class="quick-link">${ICONS.external} مشاهده صفحه</a></div>` : ''}
+        </div>
+      </div>
+    `;
+  });
+  html += `</div>`;
+
+  if (links.length > 0){
+    html += `
+      <div class="section-head"><div class="sec-title">دعاهای مرتبط</div></div>
+      <div class="card">
+        <div class="quick-links">
+          ${links.map(l => `<a href="${l.href}" class="quick-link">${ICONS.external} ${l.title}</a>`).join('')}
+        </div>
+      </div>
+    `;
+  }
+
+  c.innerHTML = html;
+  $('#scrollContent').scrollTop = 0;
+}
+
+/* ============================================================
+   GLOBAL SEARCH
+   ============================================================ */
+function renderGlobalSearch(q){
+  const c = $("#searchResults");
+  q = (q || '').trim().toLowerCase();
+  if (!q){
+    c.innerHTML = `<div class="empty-msg">${ICONS.empty}<span>عبارت مورد نظر را جستجو کنید</span></div>`;
+    return;
+  }
+
+  const results = EVENTS_DATA.filter(e =>
+    e.title.toLowerCase().includes(q) ||
+    e.desc.toLowerCase().includes(q) ||
+    (e.amal && e.amal.some(a => (typeof a === 'string' ? a : a.text).toLowerCase().includes(q)))
+  );
+
+  if (results.length === 0){
+    c.innerHTML = `<div class="empty-msg">${ICONS.empty}<span>نتیجه‌ای یافت نشد</span></div>`;
+    return;
+  }
+
+  let html = `<div style="font-size:.78rem;color:var(--muted);margin-bottom:10px;text-align:center;">${faNum(results.length)} نتیجه</div>`;
+  results.forEach(e => {
+    const fav = isFav(e.id);
+    html += `
+      <div class="card clickable" onclick="openEventDetail('${e.id}')">
+        <div class="card-head">
+          <span class="badge">${getEventTypeInitial(e.type)}</span>
+          <div class="card-title">${e.title}</div>
+          <button class="fav-btn ${fav ? 'active' : ''}" onclick="event.stopPropagation(); toggleFav('${e.id}'); renderGlobalSearch('${q}');">
+            ${fav ? ICONS.starFilled : ICONS.star}
+          </button>
+        </div>
+        <div class="desc">${e.desc}</div>
+      </div>
+    `;
+  });
+  c.innerHTML = html;
+}
+
+/* ============================================================
+   FAVORITES
+   ============================================================ */
+function renderFavorites(){
+  const c = $("#favoritesContainer");
+  const favs = favorites.map(id => EVENTS_DATA.find(e => e.id === id)).filter(Boolean);
+
+  if (favs.length === 0){
+    c.innerHTML = `<div class="empty-msg">${ICONS.star}<span>هیچ مناسبت‌ای به علاقه‌مندی‌ها اضافه نشده است</span></div>`;
+    return;
+  }
+
+  let html = '';
+  favs.forEach(e => {
+    html += `
+      <div class="card clickable" onclick="openEventDetail('${e.id}')">
+        <div class="card-head">
+          <span class="badge">${getEventTypeInitial(e.type)}</span>
+          <div class="card-title">${e.title}</div>
+          <button class="fav-btn active" onclick="event.stopPropagation(); toggleFav('${e.id}'); renderFavorites();">
+            ${ICONS.starFilled}
+          </button>
+        </div>
+        <div class="desc">${e.desc}</div>
+      </div>
+    `;
+  });
+  c.innerHTML = html;
+}
+
+/* ============================================================
+   TABS
+   ============================================================ */
+function switchTab(tab){
+  $$('.tab-page').forEach(el => el.classList.remove('active'));
+  $$('.tab-btn').forEach(el => el.classList.remove('active'));
+  $('#'+tab).classList.add('active');
+  $(`.tab-btn[data-tab="${tab}"]`).classList.add('active');
+
+  if (tab === 'tabHome') renderHome();
+  if (tab === 'tabEvents') renderEvents();
+  if (tab === 'tabAmal') renderAmalList();
+  if (tab === 'tabFav') renderFavorites();
+  if (tab === 'tabSearch'){
+    const i = $('#globalSearch');
+    if (i) renderGlobalSearch(i.value);
+  }
+  $('#scrollContent').scrollTop = 0;
+}
+
+$$('.tab-btn').forEach(b => b.addEventListener('click', function(){ switchTab(this.dataset.tab); }));
+$$('.filter-btn').forEach(b => b.addEventListener('click', function(){
+  $$('.filter-btn').forEach(x => x.classList.remove('active'));
+  this.classList.add('active');
+  currentFilter = this.dataset.filter;
+  renderEvents(currentFilter);
+}));
+
+/* ============================================================
+   THEME & SETTINGS
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+$('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+/* Settings */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  document.documentElement.style.setProperty('--fs-base', faSize+'px');
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b => {
+  if (b.dataset.lh === lineHeight) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-lh]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* Modals */
+$('#btnInfo').onclick = () => $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+$$('[data-close]').forEach(b => b.onclick = () => $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = e => { if (e.target === m) m.classList.remove('show'); });
+
+/* Toast */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* Back button */
+$('#btnBack').onclick = () => {
+  if (document.referrer && (document.referrer.includes('index.html') || document.referrer.includes('list.html'))) history.back();
+  else location.href = 'index.html';
+};
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderHome();
+renderEvents();
+renderAmalList();
+renderFavorites();
+
+if ('serviceWorker' in navigator){
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('sw.js').catch(()=>{});
+  });
+}
+
+console.log('📿 اعمال و مناسبت‌ها | NOOR – بارگذاری شد. تعداد مناسبت‌ها:', EVENTS_DATA.length);
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>امام زمان (عج) | نــــور NOOR</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.12);
+  --gold-border: rgba(184, 138, 59, 0.28);
+  --text: #17231F; --text-2: #3d4a44; --muted: #66716C;
+  --divider: #E7E0D3;
+  --arabic: #123C32; --translation: #3d4a44;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.06);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.04);
+  --radius: 18px; --radius-sm: 12px;
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --font-ar: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --fs-ar: 24px; --fs-fa: 16px; --line-height: 2.4;
+  --nav-h: 68px;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.10);
+  --gold-border: rgba(210, 172, 92, 0.22);
+  --text: #F4EFE4; --text-2: #c8d2cc; --muted: #A8B3AD;
+  --divider: #26352F;
+  --arabic: #e8e2d2; --translation: #c8d2cc;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+body.font-fa-vazir { --font-fa: 'Vazirmatn', Tahoma, sans-serif; }
+body.font-fa-amiri { --font-fa: 'Amiri', serif; }
+body.font-fa-naskh { --font-fa: 'Noto Naskh Arabic', serif; }
+body.font-ar-amiri { --font-ar: 'Amiri', serif; }
+body.font-ar-scheherazade { --font-ar: 'Scheherazade New', serif; }
+body.font-ar-naskh { --font-ar: 'Noto Naskh Arabic', serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; padding-bottom: calc(var(--nav-h) + 20px);
+  line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input, textarea, select { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-sm { width: 18px; height: 18px; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px; }
+
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 7px;
+  margin-top: 3px; text-shadow: 0 0 12px var(--gold-soft);
+}
+
+.search-wrap { margin: 14px 0; display: none; }
+.search-wrap.show { display: block; }
+.search-box { position: relative; }
+.search-box input {
+  width: 100%; padding: 13px 46px 13px 16px;
+  border-radius: 60px; border: 1px solid var(--gold-border);
+  background: var(--surface); color: var(--text);
+  font-size: 0.9rem; outline: none; transition: var(--trans);
+}
+.search-box input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.search-box input::placeholder { color: var(--muted); }
+.search-box .ico {
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--muted); pointer-events: none;
+}
+
+.hero {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 26px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow); text-align: center;
+}
+.hero-orn { position: absolute; color: var(--gold); opacity: 0.15; pointer-events: none; }
+.hero-orn.tr { top: -10px; right: -10px; width: 110px; height: 110px; }
+.hero-orn.bl { bottom: -10px; left: -10px; width: 110px; height: 110px; transform: rotate(180deg); }
+.hero-ar {
+  font-family: 'Amiri', serif;
+  font-size: 1.9rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 2px;
+  margin-bottom: 6px; line-height: 1.4;
+}
+body.dark .hero-ar { color: var(--gold); }
+.hero-fa {
+  font-size: 0.9rem; color: var(--muted);
+  margin-bottom: 16px;
+}
+.hero-date {
+  display: inline-block;
+  font-size: 0.7rem; color: var(--gold);
+  background: var(--gold-soft);
+  padding: 4px 12px; border-radius: 20px;
+  border: 1px solid var(--gold-border);
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+.hero-div {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin: 12px auto; width: 100px;
+}
+.hero-div::before, .hero-div::after { content: ""; flex: 1; height: 1px; background: var(--gold-border); }
+.hero-div svg { color: var(--gold); width: 14px; height: 14px; }
+
+.daily-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 20px 0;
+}
+@media (max-width: 560px) {
+  .daily-grid { grid-template-columns: 1fr; }
+}
+.daily-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  padding: 14px;
+  box-shadow: var(--shadow-sm);
+  display: flex; flex-direction: column;
+  transition: var(--trans);
+}
+.daily-card:hover { border-color: var(--gold); }
+.daily-card .dc-head {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+  padding-bottom: 8px;
+  border-bottom: 1px dashed var(--gold-border);
+}
+.daily-card .dc-ico {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.daily-card .dc-ico svg { width: 15px; height: 15px; }
+.daily-card .dc-title {
+  font-size: 0.72rem; font-weight: 700;
+  color: var(--gold); flex: 1;
+}
+.daily-card .dc-ar {
+  font-family: var(--font-ar);
+  font-size: 0.95rem; line-height: 1.9;
+  color: var(--arabic); text-align: center;
+  padding: 4px 2px;
+  margin-bottom: 6px;
+}
+.daily-card .dc-fa {
+  font-size: 0.7rem; line-height: 1.8;
+  color: var(--translation); text-align: center;
+  flex: 1;
+}
+.daily-card .dc-ref {
+  font-size: 0.6rem; color: var(--muted);
+  text-align: center; margin-top: 8px;
+  padding-top: 6px;
+  border-top: 1px dashed var(--gold-border);
+  font-style: italic;
+}
+
+.quick-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px; margin: 16px 0;
+}
+.qa-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 14px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--text); text-align: right;
+  transition: var(--trans); position: relative;
+  cursor: pointer;
+}
+.qa-card:hover { background: var(--gold-soft); border-color: var(--gold); transform: translateY(-2px); }
+.qa-card .qa-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.qa-card .qa-ico svg { width: 20px; height: 20px; }
+.qa-card .qa-info { flex: 1; min-width: 0; }
+.qa-card .qa-title { font-size: 0.78rem; font-weight: 700; }
+.qa-card .qa-sub { font-size: 0.62rem; color: var(--muted); margin-top: 2px; }
+
+.section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 22px 0 12px; gap: 10px;
+}
+.section-head h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-head h3 svg { color: var(--gold); width: 18px; height: 18px; }
+.section-head .cnt {
+  font-size: 0.72rem; color: var(--gold);
+  background: var(--gold-soft); padding: 3px 10px;
+  border-radius: 10px; font-weight: 600;
+  border: 1px solid var(--gold-border);
+}
+
+.filter-chips {
+  display: flex; gap: 6px; overflow-x: auto;
+  padding-bottom: 4px; margin-bottom: 12px;
+  scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0; padding: 6px 14px;
+  border-radius: 20px; font-size: 0.72rem;
+  font-weight: 600; cursor: pointer;
+  background: var(--surface); color: var(--muted);
+  border: 1px solid var(--divider);
+  transition: var(--trans); white-space: nowrap;
+}
+.chip:hover { border-color: var(--gold-border); color: var(--gold); }
+.chip.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+
+.list { display: flex; flex-direction: column; gap: 10px; }
+.item {
+  display: flex; gap: 12px; padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  cursor: pointer; transition: var(--trans); position: relative;
+}
+.item:hover { background: var(--surface2); border-color: var(--gold); transform: translateY(-1px); }
+.item .i-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.item .i-ico svg { width: 20px; height: 20px; }
+.item .i-info { flex: 1; min-width: 0; }
+.item .i-title {
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--text); margin-bottom: 4px;
+}
+.item .i-ar {
+  font-family: var(--font-ar);
+  font-size: 0.95rem; line-height: 1.9;
+  color: var(--arabic); margin-bottom: 6px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.item .i-fa {
+  font-size: 0.72rem; color: var(--muted); line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-top: 6px; border-top: 1px dashed var(--gold-border);
+}
+.item .i-meta {
+  display: flex; align-items: center; gap: 6px;
+  margin-top: 6px; flex-wrap: wrap;
+  font-size: 0.62rem; color: var(--muted);
+}
+.item .i-meta .tag {
+  padding: 2px 8px; border-radius: 8px;
+  background: var(--gold-soft); color: var(--gold);
+  border: 1px solid var(--gold-border);
+  font-weight: 600;
+}
+.item .i-bm {
+  width: 34px; height: 34px; border-radius: 10px;
+  color: var(--muted); flex: none;
+}
+.item .i-bm:hover, .item .i-bm.active { color: var(--gold); background: var(--gold-soft); }
+
+.link-item {
+  display: flex; align-items: center; gap: 14px;
+  padding: 18px 18px;
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
+  cursor: pointer; transition: var(--trans);
+  margin-bottom: 12px;
+}
+.link-item:hover { border-color: var(--gold); transform: translateY(-2px); box-shadow: var(--shadow); }
+.link-item .li-ico {
+  width: 48px; height: 48px; border-radius: 14px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.link-item .li-ico svg { width: 24px; height: 24px; }
+.link-item .li-info { flex: 1; min-width: 0; }
+.link-item .li-title {
+  font-size: 0.9rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 4px;
+}
+.link-item .li-desc {
+  font-size: 0.72rem; color: var(--muted);
+  line-height: 1.7;
+}
+.link-item .li-arrow {
+  color: var(--gold); opacity: 0.6;
+}
+
+.detail-view { display: none; }
+.detail-view.active { display: block; }
+.list-view.hidden { display: none; }
+
+.detail-head {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 22px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+  color: #fff; text-align: center;
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.detail-head .dh-ico {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(214, 181, 106, 0.18);
+  color: var(--gold2); margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.detail-head .dh-ico svg { width: 26px; height: 26px; }
+.detail-head .dh-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.detail-head .dh-meta {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px; font-size: 0.7rem; color: rgba(255,255,255,0.75);
+  margin-top: 8px; flex-wrap: wrap;
+}
+.detail-head .dh-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold2); }
+
+.content-box {
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); padding: 22px 18px;
+  margin-bottom: 12px; box-shadow: var(--shadow-sm);
+}
+.content-box .cb-ar {
+  font-family: var(--font-ar);
+  font-size: var(--fs-ar); line-height: var(--line-height);
+  color: var(--arabic); text-align: center;
+  padding: 6px 8px 16px;
+  border-bottom: 1px dashed var(--gold-border);
+  white-space: pre-line;
+}
+.content-box .cb-fa {
+  font-family: var(--font-fa);
+  font-size: var(--fs-fa); line-height: 1.95;
+  color: var(--translation); text-align: center;
+  padding-top: 14px;
+  white-space: pre-line;
+}
+.content-box.hide-trans .cb-fa { display: none; }
+.content-box.hide-trans .cb-ar { padding-bottom: 6px; border-bottom: 0; }
+.content-box .cb-text {
+  font-size: calc(var(--fs-fa) * 0.9); line-height: 2;
+  color: var(--text-2); text-align: justify;
+  white-space: pre-line;
+}
+
+.info-block {
+  padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm); margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.info-block h4 {
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.info-block h4 svg { width: 15px; height: 15px; flex: none; }
+.info-block p {
+  font-size: 0.78rem; line-height: 1.95;
+  color: var(--text-2); text-align: justify;
+  white-space: pre-line;
+}
+
+.primary-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 14px 20px;
+  border-radius: 14px;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  font-weight: 700; font-size: 0.9rem;
+  margin-bottom: 10px; transition: var(--trans);
+}
+.primary-btn:hover { background: var(--brand2); transform: translateY(-2px); }
+.primary-btn svg { width: 18px; height: 18px; flex: none; }
+
+.secondary-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 12px 18px;
+  border-radius: 14px;
+  background: var(--surface2); color: var(--text);
+  border: 1px solid var(--divider);
+  font-weight: 600; font-size: 0.85rem;
+  margin-bottom: 10px; transition: var(--trans);
+}
+.secondary-btn:hover { border-color: var(--gold); color: var(--gold); }
+.secondary-btn svg { width: 18px; height: 18px; flex: none; }
+
+.checklist-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--divider);
+}
+.checklist-item:last-child { border-bottom: 0; }
+.checklist-item input[type="checkbox"] {
+  width: 20px; height: 20px;
+  accent-color: var(--gold); cursor: pointer; flex: none;
+}
+.checklist-item label {
+  font-size: 0.82rem; color: var(--text);
+  cursor: pointer; flex: 1; line-height: 1.7;
+}
+.checklist-item.checked label {
+  text-decoration: line-through; opacity: 0.55;
+}
+.checklist-stats {
+  font-size: 0.72rem; color: var(--gold);
+  text-align: center; padding: 8px 0 12px;
+  font-weight: 700; letter-spacing: 1px;
+}
+
+.notes-area {
+  width: 100%; min-height: 140px;
+  padding: 14px 16px; border-radius: 12px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text); font-size: 0.85rem;
+  line-height: 1.9; resize: vertical; outline: none;
+  transition: var(--trans);
+}
+.notes-area:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+
+.poem-card {
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); padding: 18px;
+  margin-bottom: 12px; box-shadow: var(--shadow-sm);
+}
+.poem-text {
+  font-family: var(--font-fa);
+  font-size: 0.9rem; line-height: 2.4;
+  color: var(--text-2); text-align: center;
+  white-space: pre-line;
+}
+
+.floating-btns {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 14px;
+  z-index: 90; display: flex; flex-direction: column; gap: 8px;
+}
+.fab {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.fab:hover { background: var(--brand2); transform: translateY(-2px); }
+.fab:active { transform: scale(0.94); }
+.fab svg { width: 20px; height: 20px; }
+
+.modal-bg {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: none; align-items: flex-end; justify-content: center;
+  z-index: 200; padding: 0 12px 12px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%; max-width: 520px; max-height: 88vh;
+  overflow-y: auto; background: var(--surface);
+  border-radius: 24px 24px 18px 18px;
+  padding: 22px 18px 26px;
+  border: 1px solid var(--gold-border);
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.modal-head h3 {
+  font-size: 1.05rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.modal-head h3 svg { color: var(--gold); width: 20px; height: 20px; flex: none; }
+.modal-close {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--muted);
+}
+.modal-close:hover { color: var(--gold); }
+
+.set-group { margin-bottom: 16px; }
+.set-group > label {
+  display: block; font-size: 0.78rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 8px;
+}
+.set-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.set-opt {
+  padding: 7px 14px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text-2); font-size: 0.78rem;
+  font-weight: 600; cursor: pointer; transition: var(--trans);
+}
+.set-opt:hover { border-color: var(--gold-border); color: var(--gold); }
+.set-opt.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+.set-ctrl {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  border-radius: 10px; padding: 4px; width: fit-content;
+}
+.set-ctrl button {
+  width: 36px; height: 36px; border-radius: 8px;
+  color: var(--muted); font-weight: 700; font-size: 1rem;
+}
+.set-ctrl button:hover { background: var(--gold-soft); color: var(--gold); }
+.set-ctrl .val {
+  min-width: 44px; text-align: center;
+  color: var(--gold); font-weight: 700; font-size: 0.85rem;
+}
+.font-preview { font-family: 'Amiri', serif; font-size: 1.3rem; }
+
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 100; display: flex; justify-content: space-around;
+  align-items: center; background: var(--surface);
+  border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: var(--nav-h);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px;
+  border-radius: 12px; color: var(--muted);
+  transition: var(--trans); position: relative;
+  font-size: 0.62rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg {
+  width: 22px; height: 22px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+.nav-btn.active::before {
+  content: ""; position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 22px; height: 3px;
+  border-radius: 0 0 4px 4px; background: var(--gold);
+}
+
+.toast {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 20px; border-radius: 14px;
+  font-size: 0.82rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 18px; height: 18px; }
+
+.empty {
+  text-align: center; padding: 50px 20px; color: var(--muted);
+}
+.empty svg { width: 50px; height: 50px; color: var(--gold); opacity: 0.4; margin: 0 auto 14px; }
+.empty p { font-size: 0.85rem; }
+
+mark {
+  background: var(--gold-soft); color: var(--gold);
+  padding: 0 3px; border-radius: 4px; font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 1.1rem; }
+  .brand .brand-noor { font-size: 0.68rem; letter-spacing: 5px; }
+  :root { --nav-h: 62px; --fs-ar: 22px; --fs-fa: 15px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+  .hero-ar { font-size: 1.55rem; }
+  .quick-grid { grid-template-columns: 1fr; }
+  .daily-grid { grid-template-columns: 1fr; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">امام زمان (عج)</h1>
+      <span class="brand-noor">نور</span>
+    </div>
+    <button class="hbtn" id="btnSearch" aria-label="جستجو">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </button>
+    <button class="hbtn" id="btnBookmarks" aria-label="نشان‌شده‌ها">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+  </header>
+
+  <div class="search-wrap" id="searchWrap">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجو در امام زمان..." autocomplete="off">
+      <span class="ico">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+    </div>
+  </div>
+
+  <div id="listView" class="list-view">
+
+    <section class="hero">
+      <svg class="hero-orn tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="hero-orn bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="hero-ar">الْمَهْدِيُّ الْمَوْعُودُ</div>
+      <div class="hero-fa">حضرت ولیّ‌عصر، مهدی موعود (عج)</div>
+      <div class="hero-date" id="heroDate"></div>
+      <div class="hero-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+      <div style="font-size:0.8rem;color:var(--muted);line-height:2;margin-top:6px;text-align:center;">
+        «اللّهُمَّ عَجِّلْ لِوَلِيِّكَ الْفَرَجَ»
+      </div>
+    </section>
+
+    <div class="daily-grid" id="dailyGrid"></div>
+
+    <div class="link-item" data-link="doa.html#imam-zaman">
+      <div class="li-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+      </div>
+      <div class="li-info">
+        <div class="li-title">دعاهای امام زمان (عج)</div>
+        <div class="li-desc">عهد، ندبه، فرج، توسل، اللّهم عرّفنی نفسک و سایر دعاهای مرتبط</div>
+      </div>
+      <svg class="icon li-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </div>
+
+    <div class="link-item" data-link="ziyarat.html#al-yasin">
+      <div class="li-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+      </div>
+      <div class="li-info">
+        <div class="li-title">زیارت آل‌یاسین</div>
+        <div class="li-desc">متن کامل زیارت با ترجمه در بخش زیارات</div>
+      </div>
+      <svg class="icon li-arrow" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+    </div>
+
+    <div class="quick-grid">
+      <div class="qa-card" data-section="knowledge">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+            <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">شناخت امام</div>
+          <div class="qa-sub">۲۰ موضوع</div>
+        </div>
+      </div>
+      <div class="qa-card" data-link="doa.html#imam-zaman">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">دعاها</div>
+          <div class="qa-sub">عهد، ندبه، فرج، توسل</div>
+        </div>
+      </div>
+      <div class="qa-card" data-link="ziyarat.html#al-yasin">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">زیارت</div>
+          <div class="qa-sub">آل‌یاسین و سایر</div>
+        </div>
+      </div>
+      <div class="qa-card" data-section="amal">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="9 11 12 14 22 4"/>
+            <path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">اعمال منتظران</div>
+          <div class="qa-sub">مکیال المکارم</div>
+        </div>
+      </div>
+      <div class="qa-card" data-section="ghaybah">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">غیبت و ظهور</div>
+          <div class="qa-sub">۲۰ موضوع</div>
+        </div>
+      </div>
+      <div class="qa-card" data-section="yaran">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="8" r="4"/><path d="M4 22v-2a6 6 0 0 1 6-6h4a6 6 0 0 1 6 6v2"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">یاران حضرت</div>
+          <div class="qa-sub">۳۱۳ یار</div>
+        </div>
+      </div>
+      <div class="qa-card" data-section="poems">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/>
+            <line x1="7" y1="7" x2="7.01" y2="7"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">اشعار مهدوی</div>
+          <div class="qa-sub">۲۰ شعر ناب</div>
+        </div>
+      </div>
+      <div class="qa-card" data-section="letter">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">نامه به امام</div>
+          <div class="qa-sub">دفتر انتظار</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="filter-chips" id="filterChips"></div>
+
+    <div class="section-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <span id="listTitle">همه</span>
+      </h3>
+      <span class="cnt" id="listCount">—</span>
+    </div>
+    <div class="list" id="mainList"></div>
+
+  </div>
+
+  <div id="detailView" class="detail-view">
+    <div id="detailContent"></div>
+    <div style="height:80px"></div>
+  </div>
+
+</div>
+
+<div class="floating-btns" id="floatingBtns" style="display:none">
+  <button class="fab" id="fabCopy" aria-label="کپی">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>
+  </button>
+  <button class="fab" id="fabNotes" aria-label="یادداشت">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+    </svg>
+  </button>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html" aria-label="خانه">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="doa.html" aria-label="دعاها">
+    <svg viewBox="0 0 24 24">
+      <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+    </svg>
+    <span>دعاها</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html" aria-label="زیارت">
+    <svg viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    <span>زیارت</span>
+  </a>
+  <button class="nav-btn active" aria-label="امام زمان">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </button>
+</nav>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <div class="set-opt active" data-font-ar="amiri"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="naskh"><span class="font-preview">بسم الله</span></div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>فونت فارسی</label>
+      <div class="set-options">
+        <div class="set-opt active" data-font-fa="vazir">وزیرمتن</div>
+        <div class="set-opt" data-font-fa="amiri">امیری</div>
+        <div class="set-opt" data-font-fa="naskh">نسخ</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt active" data-trans="1">نمایش</div>
+        <div class="set-opt" data-trans="0">پنهان</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>حالت نمایش</label>
+      <div class="set-options">
+        <div class="set-opt" id="themeLight">روشن</div>
+        <div class="set-opt" id="themeDark">تاریک</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalNotes">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        یادداشت شخصی
+      </h3>
+      <button class="modal-close" data-close="modalNotes">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <textarea class="notes-area" id="notesArea" placeholder="یادداشت خود را بنویسید..."></textarea>
+    <button class="primary-btn" style="margin-top:12px;" id="saveNotesBtn">ذخیره یادداشت</button>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalCopy">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        کپی / اشتراک‌گذاری
+      </h3>
+      <button class="modal-close" data-close="modalCopy">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="display:grid;gap:8px;">
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyArabic">کپی متن عربی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyTrans">کپی ترجمه فارسی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyBoth">کپی کامل</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="shareBtn">اشتراک‌گذاری</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalLetter">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        نامه به امام زمانم
+      </h3>
+      <button class="modal-close" data-close="modalLetter">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <textarea class="notes-area" id="letterArea" placeholder="ای امام زمانم..." style="min-height:200px;"></textarea>
+    <button class="primary-btn" style="margin-top:12px;" id="saveLetterBtn">ذخیره نامه</button>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   نــــور NOOR — امام زمان (عج)
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+let bookmarks = JSON.parse(localStorage.getItem('noor_imam_bm') || '[]');
+let notes = JSON.parse(localStorage.getItem('noor_imam_notes') || '{}');
+let letters = localStorage.getItem('noor_imam_letter') || '';
+let amalState = JSON.parse(localStorage.getItem('noor_imam_amal') || '{}');
+let currentItem = null;
+let currentCategory = 'all';
+let searchQuery = '';
+let editingNoteId = null;
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  const tl = $('#themeLight'), td = $('#themeDark');
+  if (tl && td) {
+    tl.classList.toggle('active', !dark);
+    td.classList.toggle('active', dark);
+  }
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+document.body.classList.add('font-ar-' + fontAr);
+document.body.classList.add('font-fa-' + fontFa);
+
+function applySettings() {
+  document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+  document.querySelectorAll('.content-box').forEach(v => v.classList.toggle('hide-trans', !showTrans));
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep) * 2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(24, faSize + parseInt(b.dataset.faStep) * 2));
+  applySettings();
+});
+$$('[data-trans]').forEach(b => {
+  const isOn = (b.dataset.trans === '1') === showTrans;
+  b.classList.toggle('active', isOn);
+  b.onclick = () => {
+    $$('[data-trans]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans === '1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g, '').trim();
+    document.body.classList.add('font-ar-' + b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g, '').trim();
+    document.body.classList.add('font-fa-' + b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+$('#themeLight').onclick = () => applyTheme(false);
+$('#themeDark').onclick = () => applyTheme(true);
+
+const CATEGORIES = [
+  { id: 'all', name: 'همه' },
+  { id: 'knowledge', name: 'شناخت' },
+  { id: 'ghaybah', name: 'غیبت و ظهور' },
+  { id: 'yaran', name: 'یاران' },
+  { id: 'poems', name: 'اشعار' },
+  { id: 'names', name: 'القاب' }
+];
+
+const KNOWLEDGE_DATA = [
+  { id: 'k1', title: '۱. امام زمان (عج) کیست؟', content: 'امام مهدی (عج)، دوازدهمین امام از سلسله امامان شیعه و فرزند امام حسن عسکری (ع) و نرجس خاتون (س) است. ایشان در نیمه شعبان سال ۲۵۵ هجری قمری در سامرا متولد شدند.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k2', title: '۲. ولادت حضرت', content: 'ولادت امام زمان (عج) در نیمه شعبان سال ۲۵۵ هجری قمری در سامرا رخ داد. پدر بزرگوارشان امام حسن عسکری (ع) و مادرشان نرجس خاتون است.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k3', title: '۳. پدر و مادر بزرگوار', content: 'پدر بزرگوار امام زمان (عج)، امام حسن عسکری (ع)، یازدهمین امام شیعیان است. مادر گرامی ایشان، حضرت نرجس خاتون (س) نام دارد.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k4', title: '۴. ویژگی‌های جسمانی حضرت', content: 'در روایات آمده که امام زمان (عج) دارای چهره‌ای نورانی و گشاده، پیشانی بلند، بینی کشیده، موی مجعّد و خال بر گونه‌ی راست هستند.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k5', title: '۵. کنیه و القاب حضرت', content: 'کنیه ایشان ابوالقاسم و القاب معروفشان مهدی، قائم، حجّت، منتظر، صاحب‌الزمان، بقیةالله، منصور و موعود است.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k6', title: '۶. امامت حضرت', content: 'امامت ایشان از سن پنج سالگی و پس از شهادت پدر بزرگوارشان امام حسن عسکری (ع) در سال ۲۶۰ هجری قمری آغاز شد.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k7', title: '۷. ویژگی‌های اخلاقی حضرت', content: 'از نظر اخلاقی، حضرت دارای صفاتی چون عدالت‌خواهی، مهربانی، شجاعت، فروتنی، بردباری و کرامت هستند.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k8', title: '۸. احادیث نبوی درباره امام زمان', content: 'پیامبر اکرم (ص) فرمودند: «مهدی از عترت من است، چهره‌اش مانند چهره‌ی من است و زمین را از عدل و داد پر می‌کند».', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k9', title: '۹. معرفت امام، وظیفه اصلی', content: 'پیامبر اکرم (ص) فرمود: «هر کس بمیرد و امام زمان خود را نشناسد، به مرگ جاهلیت مرده است».', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k10', title: '۱۰. وظایف منتظران در دوران غیبت', content: '۱- شناخت امام ۲- دعا برای تعجیل فرج ۳- آمادگی برای ظهور ۴- اصلاح اخلاق ۵- امر به معروف ۶- تقویت ایمان ۷- ارتباط معنوی با امام ۸- صبر بر سختی‌ها ۹- انتظار فعال ۱۰- تشکیل جامعه منتظران.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k11', title: '۱۱. امام زمان در قرآن', content: 'آیات متعددی در قرآن کریم به ظهور منجی و حکومت صالحان اشاره دارد؛ از جمله آیه ۵ سوره قصص، آیه ۵۵ سوره نور و آیه ۱۰۵ سوره انبیاء.', source: 'تفسیر المیزان' },
+  { id: 'k12', title: '۱۲. غیبت صغری', content: 'غیبت صغری از سال ۲۶۰ تا ۳۲۹ هجری قمری به مدت حدود ۶۹ سال ادامه داشت. در این دوران، امام از طریق چهار نایب خاص با شیعیان ارتباط داشتند.', source: 'بحارالأنوار، ج ۵۳' },
+  { id: 'k13', title: '۱۳. غیبت کبری', content: 'از سال ۳۲۹ هجری قمری آغاز شده و تا ظهور ادامه دارد. ارتباط مستقیم با امام قطع شده و شیعیان باید به فقهای جامع‌الشرایط مراجعه کنند.', source: 'شیخ طوسی، الغیبة' },
+  { id: 'k14', title: '۱۴. فلسفه غیبت', content: 'فلسفه غیبت شامل: امتحان و آزمایش مردم، جدایی مؤمنان واقعی از دیگران، آمادگی برای ظهور، و ایجاد زمینه برای حکومت جهانی عدل.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k15', title: '۱۵. نوّاب اربعه', content: 'چهار تن از یاران نزدیک امام زمان در دوران غیبت صغری: ۱- عثمان بن سعید عمری ۲- محمد بن عثمان عمری ۳- حسین بن روح نوبختی ۴- علی بن محمد سمری.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'k16', title: '۱۶. یاران حضرت (۳۱۳ نفر)', content: 'بر اساس روایات، یاران ویژه امام زمان ۳۱۳ نفر هستند که مانند یاران حضرت موسی و اصحاب بدر، در رکاب آن حضرت خواهند بود.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k17', title: '۱۷. نشانه‌های ظهور', content: 'نشانه‌های حتمی ظهور پنج مورد است: خروج سفیانی، خروج یمانی، صیحه آسمانی، قتل نفس زکیّه، خسف در بیداء.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k18', title: '۱۸. هشدار درباره تعیین وقت ظهور', content: 'هیچ‌کس زمان ظهور را نمی‌داند و هرگونه تعیین تاریخ برای ظهور، باطل و نادرست است. وظیفه ما آماده‌سازی و انتظار است.', source: 'قرآن کریم و روایات' },
+  { id: 'k19', title: '۱۹. حکومت جهانی حضرت', content: 'در حکومت حضرت مهدی (عج)، عدالت در سراسر جهان گسترده می‌شود، زمین آبادان می‌گردد، امنیت کامل برقرار می‌شود و علم و دانش پیشرفت می‌کند.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'k20', title: '۲۰. منتظر واقعی کیست؟', content: 'منتظر واقعی کسی است که به وظایف دینی خود عمل کند، از گناه بپرهیزد، اخلاق خود را نیکو کند و با عمل به تکالیف شرعی، زمینه ظهور را فراهم آورد.', source: 'مکیال المکارم' }
+];
+
+const GHAYBAH_DATA = [
+  { id: 'g1', title: '۱. معنای غیبت (شیعه)', content: 'غیبت به معنای پنهان شدن و مخفی بودن امام از دید مردم است، اما نه به معنای نبودن ایشان. امام زمان در میان مردم حضور دارند، اما از دید همگان پنهان هستند.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g2', title: '۲. غیبت صغری (شیعه)', content: 'غیبت صغری از سال ۲۶۰ تا ۳۲۹ هجری قمری ادامه داشت. در این دوران، امام از طریق نوّاب اربعه با شیعیان ارتباط داشتند.', source: 'بحارالأنوار، ج ۵۳' },
+  { id: 'g3', title: '۳. غیبت کبری (شیعه)', content: 'از سال ۳۲۹ هجری قمری آغاز شده و تا ظهور ادامه دارد. ارتباط مستقیم با امام قطع شده و شیعیان باید به فقهای جامع‌الشرایط مراجعه کنند.', source: 'شیخ طوسی، الغیبة' },
+  { id: 'g4', title: '۴. نوّاب اربعه (شیعه)', content: 'چهار تن از یاران نزدیک امام زمان: عثمان بن سعید عمری، محمد بن عثمان عمری، حسین بن روح نوبختی، علی بن محمد سمری.', source: 'بحارالأنوار، ج ۵۱' },
+  { id: 'g5', title: '۵. فلسفه غیبت (شیعه)', content: 'فلسفه غیبت شامل: امتحان مردم، آمادگی برای ظهور، و اجرای سنت الهی در پنهان داشتن بعضی از اولیاء است.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g6', title: '۶. نشانه‌های حتمی ظهور (شیعه)', content: 'پنج نشانه حتمی: خروج سفیانی، خروج یمانی، صیحه آسمانی، قتل نفس زکیّه، خسف در بیداء.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g7', title: '۷. نشانه‌های غیرحتمی (شیعه)', content: 'خسوف و کسوف، ظهور دجال، نزول حضرت عیسی، طلوع خورشید از مغرب، خروج دابة الارض، جنگ‌های فراگیر.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g8', title: '۸. قیام حضرت (شیعه)', content: 'حضرت مهدی (عج) با ظهور خود، قیام جهانی علیه ظلم و فساد را آغاز می‌کنند و حکومت عدل الهی را برپا می‌دارند.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g9', title: '۹. رجعت (شیعه)', content: 'اعتقاد به رجعت از معتقدات شیعه است. در دوران ظهور، برخی از اولیاء و اعداء الهی به دنیا بازمی‌گردند.', source: 'بحارالأنوار، ج ۵۳' },
+  { id: 'g10', title: '۱۰. حکومت جهانی (شیعه)', content: 'در حکومت حضرت، عدالت در سراسر جهان گسترده می‌شود، زمین آبادان می‌گردد و امنیت کامل برقرار می‌شود.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g11', title: '۱۱. یاران حضرت (شیعه)', content: 'یاران ویژه حضرت ۳۱۳ نفر هستند. علاوه بر این، سپاه حضرت شامل ده‌ها هزار نفر از یاران مخلص خواهد بود.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'g12', title: '۱۲. هشدار تعیین وقت (شیعه)', content: 'هیچ‌کس زمان ظهور را نمی‌داند. هرگونه تعیین تاریخ برای ظهور باطل است و وظیفه ما آماده‌سازی و انتظار است.', source: 'قرآن کریم و روایات' },
+  { id: 'gs1', title: '۱۳. مهدویت در صحیح بخاری (اهل سنت)', content: 'در صحیح بخاری آمده: «کیف انتم اذا نزل ابن مریم فیکم و امامکم منکم» — چگونه خواهید بود آنگاه که فرزند مریم در بین شما نازل شود و امام شما از خودتان باشد؟', source: 'صحیح بخاری' },
+  { id: 'gs2', title: '۱۴. مهدویت در صحیح مسلم (اهل سنت)', content: 'در صحیح مسلم آمده: «لا تزال طائفة من أمتي يقاتلون على الحق ظاهرين إلى يوم القيامة» — پیوسته تا قیامت طایفه‌ای از امت من برای حاکمیت حق مبارزه می‌کنند.', source: 'صحیح مسلم' },
+  { id: 'gs3', title: '۱۵. مهدی در سنن ابی‌داود (اهل سنت)', content: 'ابی‌داود در سنن خود کتابی به نام «کتاب المهدی» دارد. پیامبر (ص) فرمود: «المهدي مني أجلى الجبهة، أقنى الأنف، يملأ الأرض قسطا وعدلا، يملك سبع سنين».', source: 'سنن ابی‌داود' },
+  { id: 'gs4', title: '۱۶. مهدی در مسند احمد (اهل سنت)', content: 'احمد بن حنبل در مسند خود روایات متعددی درباره مهدی نقل کرده است. پیامبر (ص) فرمود: «أبشرکم بالمهدي يبعث في أمتي علي اختلاف من الناس وزلازل».', source: 'مسند احمد بن حنبل' },
+  { id: 'gs5', title: '۱۷. ابن کثیر درباره مهدی (اهل سنت)', content: 'ابن کثیر دمشقی در «نهایة البدایة فی الفتن والملاحم» می‌نویسد: دوران مهدی روزگار فراوانی نعمت‌ها خواهد بود. در آن زمان میوه‌ها زیاد و کشتزارها پربار می‌شوند.', source: 'ابن کثیر، نهایة البدایة' },
+  { id: 'gs6', title: '۱۸. ابن خلدون درباره مهدی (اهل سنت)', content: 'ابن خلدون در «کتاب العِبَر» می‌نویسد: در بین مسلمانان در همه عصرها مشهور این است که به یقین در آخرالزمان فردی از خاندان نبوّت ظهور می‌کند.', source: 'ابن خلدون، کتاب العِبَر' },
+  { id: 'gs7', title: '۱۹. ابن اثیر درباره مهدی (اهل سنت)', content: 'ابن اثیر، صاحب «النّهایة فی غریب الحدیث» می‌نویسد: مهدی یعنی کسی که خداوند راه حق را به او نشان داده است و نام آن کسی است که پیامبر اکرم (ص) مژده داده است.', source: 'ابن اثیر، النهایة' },
+  { id: 'gs8', title: '۲۰. اجماع علمای اهل سنت (اهل سنت)', content: 'بسیاری از علمای بزرگ اهل سنت مانند ابن حجر، سیوطی، ابن کثیر، ابن خلدون، احمد بن حنبل و دیگران به ظهور حضرت مهدی اعتقاد داشته و آن را از مسلمات اسلامی می‌دانند.', source: 'منابع متعدد اهل سنت' }
+];
+
+const YARAN_DATA = [
+  { id: 'y1', title: 'یاران حضرت (۳۱۳ نفر)', content: 'بر اساس روایات، یاران ویژه امام زمان (عج) ۳۱۳ نفر هستند که مانند یاران حضرت موسی (ع) و اصحاب پیامبر (ص) در جنگ بدر، در رکاب آن حضرت خواهند بود.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'y2', title: 'ویژگی‌های یاران حضرت', content: '۱- ایمان خالص ۲- شجاعت در راه حق ۳- معرفت و بصیرت ۴- اخلاص در عمل ۵- عدالت‌خواهی ۶- اطاعت کامل از امام ۷- آمادگی برای جهاد.', source: 'بحارالأنوار، ج ۵۲' },
+  { id: 'y3', title: 'نقش زنان در یاری حضرت', content: 'زنان نیز نقش مهمی در یاری امام زمان (عج) دارند. در سپاه حضرت، زنانی با ایمان و شجاع حضور دارند.', source: 'بحارالأنوار، ج ۵۳' }
+];
+
+const POEMS_DATA = [
+  { id: 'p1', title: 'الا که دست خدا', poet: 'عرفان نظرآهاری', text: 'الا که دست خدايت در آستين باشد\nبيا که مانده به در ديدة زمين باشد\nگناه ميکنم اما به خود نميگويم\nشرار قهر تو شايد که در کمين باشد\nخوشا به حال گدايي که دست چشمانش\nز ابر خرمن چشم تو خوشهچين باشد' },
+  { id: 'p2', title: 'چه وقت‌ها که برایت دعا نکرده دلم', poet: 'عرفان نظرآهاری', text: 'چه وقتها كه برايت دعا نكرده دلم\nچه نذرها كه براي شما نكرده دلم\nچقدر نام مرا در نوافلت بردي\nولي به هيچ كدام اعتنا نكرده دلم' },
+  { id: 'p3', title: 'طالبِ خونِ خدا', poet: 'عرفان نظرآهاری', text: 'طالبِ خونِ خدا، مَتى تَرانا وَ نَراكَ\nيابنَ مِصباح الهُدي، مَتى تَرانا وَ نَراكَ\nچه شود با تو كنم گريه سرِ قبرِ حسين\nدر مزار شهدا، مَتى تَرانا وَ نَراكَ' },
+  { id: 'p4', title: 'از فراقت به جوانی', poet: 'عرفان نظرآهاری', text: 'از فراقت به جواني همگي پير شديم\nبي تو از وادي دنيا همگي سير شديم\nبي خود از حادثه ي عشق تو ديوانه و مست\nعاشق کوي تو گشتيم و زمين گير شديم' },
+  { id: 'p5', title: 'هزار شکر', poet: 'عرفان نظرآهاری', text: 'هميشه كوچه ي ما عِطري از شما دارد\nكه آشنا به دلش ميلِ آشنا دارد\nهزار شكر كه مژگان به ما حواله شده\nغبارِ پاي تو تأثيرِ كيميا دارد' },
+  { id: 'p6', title: 'استکان‌ها لبالب از خالیست', poet: 'عرفان نظرآهاری', text: 'استکان‌ها لبالب از خاليست، جام‌ها لب‌به‌لب ترک دارند\nشاعران با غمت هم‌آوازند، اشک دارند ني‌لبک دارند\nمثل شب گريه ‌هاي مولانا، شاعري را تمام خواهم کرد\nشمس من! مولوي شبيه من است، مردها درد مشترک دارند' },
+  { id: 'p7', title: 'کسی می‌آید', poet: 'عرفان نظرآهاری', text: 'کسي ميآيد از يک راه دور آهسته آهسته\nشبي هم ميکند زينجا عبور آهسته آهسته\nغبار غربت از رخسار غمگين دور ميسازد\nو ما را ميکند غرق سرور آهسته آهسته' },
+  { id: 'p8', title: 'بهار از پشت چشمان تو', poet: 'عرفان نظرآهاری', text: 'بهار از پشت چشمان تو ظاهر مي‌شود روزي\nزمين با ماه تابانت، مجاور مي‌شود روزي\nصدايت مي‌رسد از پشت پرچين‌ها و دالان‌ها\nسکوت راه، در گامت مسافر مي‌شود روزي' },
+  { id: 'p9', title: 'ناز از تو، نیاز از ما', poet: 'عرفان نظرآهاری', text: 'نـاز از تـو، نيـاز و تمنّـا ز مـا، بــه روي چشم\nمنّت كشي ز يوسف بطحـا، به روي چشم\nگفتـي گنـه نكن، به خدا سعي مي كنم\nقدري دگـر نما تـو مدارا، به روي چشم' },
+  { id: 'p10', title: 'می و میخانه', poet: 'عرفان نظرآهاری', text: 'مي و ميخانه را از ما گرفتند\nز کف پيمانه را از ما گرفتند\nشديم عاقل که دنيا دوست گشتيم\nدل ديوانه را از ما گرفتند' },
+  { id: 'p11', title: 'مناجات عاشقانه', poet: 'عرفان نظرآهاری', text: 'من در پناهِ چَشمهايت سرفرازم\nاز اين كه آقاي مني بر خود بنازم\nشد خاكساري حريمت آبرويم\nخاكِ كف پاي تو شد مُهرِ نمازم' },
+  { id: 'p12', title: 'جمعه‌ها', poet: 'عرفان نظرآهاری', text: 'جمعه ها را همه از بس که شمردم بي تو\nبغض خود را وسط سينه فشردم بي تو\nبسکه هر جمعه غروب آمد و دلگيرم کرد\nدل به درياي غم و غصه سپردم بي تو' },
+  { id: 'p13', title: 'به شوق صبح و سحر', poet: 'عرفان نظرآهاری', text: 'به شوق صبح و سحر، شام تار هم خوب است\nبراي گريه شدن آبشار هم خوب است\nتمام هفته خطا و غروب جمعه دعا\nکمي خجالت از اين انتظار هم خوب است' },
+  { id: 'p14', title: 'توبه از جرم و خطا', poet: 'عرفان نظرآهاری', text: 'توبه از جرم وخطا، حال سحر مي خواهد\nخلوت نيمه ي شب اشك بصر مي خواهد\nوادي طور همين هيئت هر هفته ي ماست\nديدن نور خدا اهل نظر مي خواهد' },
+  { id: 'p15', title: 'سلام بر آل یاسین', poet: 'عرفان نظرآهاری', text: 'سَلامٌ عَلي آلِ ياسين\nهم با سخن و اشاره گفتيم دروغ\nهم با کمي استعاره گفتيم دروغ' },
+  { id: 'p16', title: 'گفتم که بی‌قرار تو باشم', poet: 'عرفان نظرآهاری', text: 'گفتم که بي قرار تو باشم ولي نشد\nتنها در انتظار تو باشم ولي نشد\nگفتم به دل که جلب رضايت کند نکرد\nگفتم که جان نثار تو باشم ولي نشد' },
+  { id: 'p17', title: 'خواهی که لبم پُر آه باشد', poet: 'عرفان نظرآهاری', text: 'خواهي که لبم پُر آه باشد، باشد\nچشمم به در و به راه باشد، باشد\nگر خواسته ي شما در اين است که دل\nدر حسرت يک نگاه باشد، باشد' },
+  { id: 'p18', title: 'با یاد خدا', poet: 'عرفان نظرآهاری', text: 'با ياد خدا هميشه در زمزمه باش\nاز غصه روزگار بي واهمه باش\nهر لحظه دلت شکست يادت نرود\nآن لحظه به ياد يوسف فاطمه باش' },
+  { id: 'p19', title: 'یا ایها العزیز', poet: 'عرفان نظرآهاری', text: 'يا ايهاالعزيز دلم مبتلايتان\nدارد دوباره اين دل تنگم هوايتان\nاز حال ما اگر که بپرسي ملال نيست\nجز دوري شما و فراق صدايتان' },
+  { id: 'p20', title: 'ای سرو بلند مهدی', poet: 'محتشم کاشانی', text: 'ای سرو بلند مهدی، ای ماه فروزان\nای نور خداوندی، ای شاه خراسان\nبی‌تو همه جا غمگین، بی‌تو همه جا ماتم\nای مونس دل‌ها، ای شمع شبستان' }
+];
+
+const NAMES_DATA = [
+  { id: 'n1', title: 'مهدی', meaning: 'هدایت‌شده', desc: 'کسی که خداوند او را هدایت کرده است.', source: 'بحارالأنوار' },
+  { id: 'n2', title: 'قائم', meaning: 'قیام‌کننده', desc: 'کسی که به امر خدا قیام می‌کند.', source: 'بحارالأنوار' },
+  { id: 'n3', title: 'حجّت', meaning: 'حجّت و برهان خدا', desc: 'کسی که حجّت خدا بر روی زمین است.', source: 'بحارالأنوار' },
+  { id: 'n4', title: 'منتظر', meaning: 'مورد انتظار', desc: 'کسی که همه در انتظار ظهور او هستند.', source: 'بحارالأنوار' },
+  { id: 'n5', title: 'صاحب‌الزمان', meaning: 'صاحب زمان', desc: 'کسی که صاحب امر در زمان خویش است.', source: 'بحارالأنوار' },
+  { id: 'n6', title: 'بقیةالله', meaning: 'باقی‌مانده خدا', desc: 'کسی که باقیمانده حجّت‌های الهی روی زمین است.', source: 'بحارالأنوار' },
+  { id: 'n7', title: 'ولی‌عصر', meaning: 'ولی زمان', desc: 'کسی که سرپرست و ولی امر زمان خویش است.', source: 'بحارالأنوار' },
+  { id: 'n8', title: 'موعود', meaning: 'وعده داده‌شده', desc: 'کسی که خدا و پیامبران به آمدنش وعده داده‌اند.', source: 'بحارالأنوار' },
+  { id: 'n9', title: 'منصور', meaning: 'یاری‌شده', desc: 'کسی که خداوند او را یاری می‌کند.', source: 'بحارالأنوار' },
+  { id: 'n10', title: 'خلف صالح', meaning: 'جانشین شایسته', desc: 'جانشین شایسته و صالح خداوند.', source: 'بحارالأنوار' }
+];
+
+const AMAL_ITEMS = [
+  'معرفت به امام زمان (عج) — شناخت مقام و منزلت حضرت',
+  'دعا برای تعجیل فرج — «اللهم عجل لولیک الفرج»',
+  'خواندن دعای عهد در هر صبح',
+  'صلوات بر پیامبر و آل او',
+  'صدقه به نیت سلامتی حضرت',
+  'انجام واجبات — نماز، روزه، زکات',
+  'ترک گناه و معصیت',
+  'اصلاح اخلاق و رفتار',
+  'کمک به نیازمندان و محرومان',
+  'خوش‌اخلاقی با خانواده و همسایگان',
+  'مطالعه و افزایش معرفت درباره امام زمان',
+  'حفظ وحدت و پرهیز از اختلاف',
+  'یاد امام زمان در طول روز',
+  'صبر بر سختی‌ها و مشکلات',
+  'امیدواری به فرج و ظهور',
+  'محبت به اهل‌بیت (ع)',
+  'انتظار فعال — آماده‌سازی خود و جامعه',
+  'دعا برای سلامتی حضرت',
+  'زیارت آل‌یاسین یا سایر زیارات مرتبط',
+  'تجدید بیعت و عهد با امام زمان'
+];
+
+const DAILY_VERSES = [
+  { ar: 'وَنُرِيدُ أَنْ نَمُنَّ عَلَى الَّذِينَ اسْتُضْعِفُوا فِي الْأَرْضِ وَنَجْعَلَهُمْ أَئِمَّةً وَنَجْعَلَهُمُ الْوَارِثِينَ', fa: 'و می‌خواهیم بر آنان که در زمین به ضعف کشیده شده‌اند منّت گذاریم و آنان را پیشوایان و وارثان گردانیم.', ref: 'قصص، آیه ۵' },
+  { ar: 'أَلا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ', fa: 'آگاه باشید که تنها با یاد خدا دل‌ها آرام می‌گیرد.', ref: 'رعد، آیه ۲۸' },
+  { ar: 'وَعَدَ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَعَمِلُوا الصَّالِحَاتِ لَيَسْتَخْلِفَنَّهُمْ فِي الْأَرْضِ', fa: 'خدا به کسانی از شما که ایمان آوردند و کارهای شایسته کردند وعده داده که آنان را در زمین جانشین گرداند.', ref: 'نور، آیه ۵۵' },
+  { ar: 'وَلَقَدْ كَتَبْنَا فِي الزَّبُورِ مِنْ بَعْدِ الذِّكْرِ أَنَّ الْأَرْضَ يَرِثُهَا عِبَادِيَ الصَّالِحُونَ', fa: 'و در زبور پس از ذکر نوشتیم که بندگان شایسته من زمین را به ارث می‌برند.', ref: 'انبیاء، آیه ۱۰۵' }
+];
+
+const DAILY_HADITHS = [
+  { ar: 'الْمَهْدِيُّ مِنْ عِتْرَتِي، مِنْ وُلْدِ فَاطِمَةَ', fa: 'مهدی از عترت من و از فرزندان فاطمه است.', speaker: 'پیامبر اکرم (ص)', ref: 'سنن ابی‌داود' },
+  { ar: 'لَوْ لَمْ يَبْقَ مِنَ الدُّنْيَا إِلَّا يَوْمٌ وَاحِدٌ لَطَوَّلَ اللَّهُ ذَلِكَ الْيَوْمَ حَتَّى يَبْعَثَ فِيهِ رَجُلاً مِنْ أَهْلِ بَيْتِي', fa: 'اگر از دنیا تنها یک روز باقی بماند، خداوند آن روز را طولانی می‌کند تا مردی از اهل‌بیتم را در آن برانگیزد.', speaker: 'پیامبر اکرم (ص)', ref: 'سنن ابی‌داود' },
+  { ar: 'الْمَهْدِيُّ حَقٌّ وَهُوَ مِنْ عِتْرَتِي', fa: 'مهدی حق است و از عترت من است.', speaker: 'پیامبر اکرم (ص)', ref: 'مسند احمد' },
+  { ar: 'مَنْ مَاتَ وَلَمْ يَعْرِفْ إِمَامَ زَمَانِهِ مَاتَ مِيتَةً جَاهِلِيَّةً', fa: 'هر کس بمیرد و امام زمان خود را نشناسد، به مرگ جاهلیت مرده است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالأنوار' }
+];
+
+const DAILY_DUAS = [
+  { ar: 'اللَّهُمَّ عَجِّلْ لِوَلِيِّكَ الْفَرَجَ', fa: 'خدایا فرج ولیّت را نزدیک گردان', ref: 'دعای فرج' },
+  { ar: 'اللَّهُمَّ كُنْ لِوَلِيِّكَ الْحُجَّةِ بْنِ الْحَسَنِ وَلِيّاً وَحَافِظاً', fa: 'خدایا برای ولیّت حجت بن الحسن، سرپرست و نگهبان باش.', ref: 'دعای سلامتی' },
+  { ar: 'يَا صَاحِبَ الزَّمَانِ أَدْرِكْنِي', fa: 'ای صاحب زمان، مرا دریاب', ref: 'دعای توسل' },
+  { ar: 'الْعَجَلَ الْعَجَلَ يَا مَوْلَايَ يَا صَاحِبَ الزَّمَانِ', fa: 'تعجیل کن تعجیل کن، ای مولای من، ای صاحب زمان', ref: 'دعای فرج' }
+];
+
+const DAILY_DEEDS = [
+  'امروز یک صلوات هدیه به امام زمان (عج) بفرست.',
+  'امروز دعای فرج را با حضور قلب بخوان.',
+  'به یکی از اعضای خانواده‌ات محبت کن.',
+  'یک کار خیر کوچک انجام بده.',
+  'امروز یک گناه را ترک کن.',
+  'چند دقیقه درباره امام زمان (عج) مطالعه کن.',
+  'برای سلامتی و فرج حضرت دعا کن.',
+  'امروز صدقه‌ای به نیت امام زمان بده.',
+  'یک بار دعای عهد را بخوان.',
+  'به فقرا یا نیازمندان کمک کن.'
+];
+
+function getDayOfYear() {
+  const t = new Date();
+  const s = new Date(t.getFullYear(), 0, 0);
+  return Math.floor((t - s) / 86400000);
+}
+
+const PERSIAN_MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
+
+function getJalaliDate() {
+  try {
+    const d = new Date();
+    const gy = d.getFullYear(), gm = d.getMonth() + 1, gd = d.getDate();
+    const g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    let jy = gy <= 1600 ? 0 : 979;
+    if (gy > 1600) gy -= 1600;
+    const gy2 = (gm > 2) ? (gy + 1) : gy;
+    let days = (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400) - 80 + gd + g_d_m[gm - 1];
+    jy += 33 * Math.floor(days / 12053);
+    days %= 12053;
+    jy += 4 * Math.floor(days / 1461);
+    days %= 1461;
+    if (days > 365) { jy += Math.floor((days - 1) / 365); days = (days - 1) % 365; }
+    const jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+    const jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+    return { jy, jm, jd };
+  } catch (e) { return null; }
+}
+
+function getTodayLabel() {
+  const j = getJalaliDate();
+  if (j) return `${faNum(j.jd)} ${PERSIAN_MONTHS[j.jm - 1]} ${faNum(j.jy)}`;
+  return new Date().toLocaleDateString('fa-IR');
+}
+
+function highlight(text, query) {
+  if (!query || !text) return text;
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(text).replace(new RegExp(q, 'gi'), m => `<mark>${m}</mark>`);
+}
+
+function renderDaily() {
+  const day = getDayOfYear();
+  const verse = DAILY_VERSES[day % DAILY_VERSES.length];
+  const hadith = DAILY_HADITHS[day % DAILY_HADITHS.length];
+  const dua = DAILY_DUAS[day % DAILY_DUAS.length];
+  const deed = DAILY_DEEDS[day % DAILY_DEEDS.length];
+
+  $('#heroDate').textContent = getTodayLabel();
+
+  const ICONS = {
+    quran: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+    hadith: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+    dua: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+    deed: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>'
+  };
+
+  $('#dailyGrid').innerHTML = `
+    <div class="daily-card">
+      <div class="dc-head">
+        <div class="dc-ico">${ICONS.quran}</div>
+        <div class="dc-title">آیه امروز</div>
+      </div>
+      <div class="dc-ar">${verse.ar}</div>
+      <div class="dc-fa">${verse.fa}</div>
+      <span class="dc-ref">${verse.ref}</span>
+    </div>
+    <div class="daily-card">
+      <div class="dc-head">
+        <div class="dc-ico">${ICONS.hadith}</div>
+        <div class="dc-title">حدیث امروز</div>
+      </div>
+      <div class="dc-ar">${hadith.ar}</div>
+      <div class="dc-fa">${hadith.fa}</div>
+      <span class="dc-ref">${hadith.speaker} — ${hadith.ref}</span>
+    </div>
+    <div class="daily-card">
+      <div class="dc-head">
+        <div class="dc-ico">${ICONS.dua}</div>
+        <div class="dc-title">دعای امروز</div>
+      </div>
+      <div class="dc-ar">${dua.ar}</div>
+      <div class="dc-fa">${dua.fa}</div>
+      <span class="dc-ref">${dua.ref}</span>
+    </div>
+    <div class="daily-card">
+      <div class="dc-head">
+        <div class="dc-ico">${ICONS.deed}</div>
+        <div class="dc-title">عمل نیک امروز</div>
+      </div>
+      <div class="dc-fa" style="border-top:0;padding-top:0;">${deed}</div>
+    </div>
+  `;
+}
+
+function getAllItems() {
+  return KNOWLEDGE_DATA.map(k => ({ ...k, category: 'knowledge' }))
+    .concat(GHAYBAH_DATA.map(g => ({ ...g, category: 'ghaybah' })))
+    .concat(YARAN_DATA.map(y => ({ ...y, category: 'yaran' })))
+    .concat(POEMS_DATA.map(p => ({ ...p, category: 'poems', arabic: p.text, translation: '', source: p.poet })))
+    .concat(NAMES_DATA.map(n => ({ ...n, category: 'names', arabic: n.title, translation: `${n.meaning} — ${n.desc}`, source: n.source })));
+}
+
+function renderFilterChips() {
+  const c = $('#filterChips');
+  c.innerHTML = '';
+  CATEGORIES.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'chip' + (currentCategory === cat.id ? ' active' : '');
+    btn.textContent = cat.name;
+    btn.onclick = () => {
+      currentCategory = cat.id;
+      renderFilterChips();
+      renderList();
+    };
+    c.appendChild(btn);
+  });
+}
+
+function renderList() {
+  const c = $('#mainList');
+  c.innerHTML = '';
+  let list = getAllItems();
+
+  if (currentCategory !== 'all') {
+    list = list.filter(x => x.category === currentCategory);
+  }
+
+  if (searchQuery) {
+    const q = searchQuery.trim();
+    list = list.filter(x =>
+      (x.title && x.title.includes(q)) ||
+      (x.arabic && x.arabic.includes(q)) ||
+      (x.translation && x.translation.includes(q)) ||
+      (x.content && x.content.includes(q)) ||
+      (x.source && x.source.includes(q))
+    );
+  }
+
+  const catName = currentCategory === 'all' ? 'همه' :
+    (CATEGORIES.find(x => x.id === currentCategory)?.name || '');
+  $('#listTitle').textContent = catName;
+  $('#listCount').textContent = faNum(list.length) + ' مورد';
+
+  if (!list.length) {
+    c.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><p>موردی یافت نشد.</p></div>`;
+    return;
+  }
+
+  list.forEach(item => {
+    const isBm = bookmarks.includes(item.id);
+    const el = document.createElement('div');
+    el.className = 'item';
+    el.innerHTML = `
+      <div class="i-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
+      <div class="i-info">
+        <div class="i-title">${highlight(item.title, searchQuery)}</div>
+        ${item.arabic && item.category !== 'poems' && item.category !== 'names' ? `<div class="i-ar">${highlight(item.arabic.substring(0, 120), searchQuery)}</div>` : ''}
+        ${item.content ? `<div class="i-fa">${highlight(item.content.substring(0, 120), searchQuery)}</div>` : ''}
+        ${item.translation && !item.content ? `<div class="i-fa">${highlight(item.translation.substring(0, 100), searchQuery)}</div>` : ''}
+        ${item.source ? `<div class="i-meta"><span class="tag">${item.source}</span></div>` : ''}
+      </div>
+      <button class="i-bm ${isBm ? 'active' : ''}" data-bm="${item.id}">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+    `;
+    el.onclick = (e) => {
+      if (e.target.closest('[data-bm]')) return;
+      openItem(item.id);
+    };
+    el.querySelector('[data-bm]').onclick = (e) => {
+      e.stopPropagation();
+      toggleBookmark(item.id);
+      renderList();
+    };
+    c.appendChild(el);
+  });
+}
+
+function openItem(id) {
+  const all = getAllItems();
+  const item = all.find(x => x.id === id);
+  if (!item) return;
+  currentItem = item;
+
+  if (id === 'amal') { openAmal(); return; }
+
+  $('#listView').classList.add('hidden');
+  $('#detailView').classList.add('active');
+  $('#floatingBtns').style.display = 'flex';
+  $('#pageTitle').textContent = item.title;
+  $('#searchWrap').classList.remove('show');
+  renderDetail(id);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderDetail(id) {
+  const all = getAllItems();
+  const item = all.find(x => x.id === id);
+  if (!item) return;
+  const isBm = bookmarks.includes(item.id);
+
+  let html = `
+    <div class="detail-head">
+      <div class="dh-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      </div>
+      <div class="dh-title">${item.title}</div>
+      <div class="dh-meta">
+        ${item.source ? `<span>${item.source}</span>` : ''}
+      </div>
+    </div>
+  `;
+
+  if (item.category === 'poems' && item.text) {
+    html += `
+      <div class="poem-card">
+        <div class="poem-text">${item.text}</div>
+      </div>
+    `;
+  } else if (item.arabic) {
+    html += `
+      <div class="content-box${showTrans ? '' : ' hide-trans'}">
+        <div class="cb-ar">${item.arabic}</div>
+        ${item.translation ? `<div class="cb-fa">${item.translation}</div>` : ''}
+      </div>
+    `;
+  }
+
+  if (item.content && !item.arabic) {
+    html += `
+      <div class="content-box">
+        <div class="cb-text">${item.content}</div>
+      </div>
+    `;
+  }
+
+  if (item.source) {
+    html += `
+      <div class="info-block">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          منبع
+        </h4>
+        <p>${item.source}</p>
+      </div>
+    `;
+  }
+
+  const note = notes[item.id] || '';
+  html += `
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        یادداشت من
+      </h4>
+      <p style="color:${note ? 'var(--text)' : 'var(--muted)'};font-style:${note ? 'normal' : 'italic'};">${note || 'هنوز یادداشتی ثبت نشده است.'}</p>
+    </div>
+  `;
+
+  html += `
+    <button class="secondary-btn" id="bmBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+      </svg>
+      ${isBm ? 'حذف از نشان‌شده‌ها' : 'افزودن به نشان‌شده‌ها'}
+    </button>
+  `;
+
+  $('#detailContent').innerHTML = html;
+  $('#bmBtn').onclick = () => {
+    toggleBookmark(item.id);
+    renderDetail(item.id);
+  };
+}
+
+function closeDetail() {
+  currentItem = null;
+  $('#listView').classList.remove('hidden');
+  $('#detailView').classList.remove('active');
+  $('#floatingBtns').style.display = 'none';
+  $('#pageTitle').textContent = 'امام زمان (عج)';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function getTodayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+
+function openAmal() {
+  currentItem = { id: 'amal', title: 'اعمال منتظران' };
+  $('#listView').classList.add('hidden');
+  $('#detailView').classList.add('active');
+  $('#floatingBtns').style.display = 'none';
+  $('#pageTitle').textContent = 'اعمال منتظران';
+  renderAmal();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderAmal() {
+  const todayKey = getTodayKey();
+  const ts = amalState[todayKey] || {};
+  let done = 0;
+
+  let html = `
+    <div class="detail-head">
+      <div class="dh-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+      </div>
+      <div class="dh-title">چک‌لیست امروز</div>
+      <div class="dh-meta"><span>بر اساس مکیال المکارم</span></div>
+      <div class="dh-meta" style="margin-top:6px;"><span>${getTodayLabel()}</span></div>
+    </div>
+    <div class="checklist-stats" id="amalStats">—</div>
+  `;
+
+  AMAL_ITEMS.forEach((item, idx) => {
+    const checked = ts[idx] || false;
+    if (checked) done++;
+    html += `
+      <div class="checklist-item ${checked ? 'checked' : ''}">
+        <input type="checkbox" ${checked ? 'checked' : ''} data-idx="${idx}" id="amal_${idx}">
+        <label for="amal_${idx}">${item}</label>
+      </div>
+    `;
+  });
+
+  html += `
+    <div style="margin-top:20px;">
+      <button class="primary-btn" onclick="closeDetail()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 6 15 12 9 18"/></svg>
+        بازگشت
+      </button>
+    </div>
+  `;
+
+  $('#detailContent').innerHTML = html;
+  $('#amalStats').textContent = `${faNum(done)} از ${faNum(AMAL_ITEMS.length)} انجام شده`;
+
+  $$('.checklist-item input[type="checkbox"]').forEach(cb => {
+    cb.onchange = () => {
+      const idx = parseInt(cb.dataset.idx);
+      const todayKey = getTodayKey();
+      if (!amalState[todayKey]) amalState[todayKey] = {};
+      amalState[todayKey][idx] = cb.checked;
+      localStorage.setItem('noor_imam_amal', JSON.stringify(amalState));
+      renderAmal();
+    };
+  });
+}
+
+function toggleBookmark(id) {
+  const idx = bookmarks.indexOf(id);
+  if (idx > -1) { bookmarks.splice(idx, 1); toast('از نشان‌شده‌ها حذف شد'); }
+  else { bookmarks.push(id); toast('به نشان‌شده‌ها اضافه شد'); }
+  localStorage.setItem('noor_imam_bm', JSON.stringify(bookmarks));
+}
+
+$('#searchInput').oninput = (e) => {
+  searchQuery = e.target.value;
+  renderList();
+};
+$('#btnSearch').onclick = () => {
+  const w = $('#searchWrap');
+  w.classList.toggle('show');
+  if (w.classList.contains('show')) setTimeout(() => $('#searchInput').focus(), 100);
+  else { $('#searchInput').value = ''; searchQuery = ''; renderList(); }
+};
+$('#btnBookmarks').onclick = () => {
+  if (!bookmarks.length) { toast('هنوز موردی نشان نکرده‌اید'); return; }
+  currentCategory = 'all';
+  searchQuery = '';
+  $('#searchInput').value = '';
+  renderBookmarksList();
+};
+
+function renderBookmarksList() {
+  closeDetail();
+  $('#pageTitle').textContent = 'نشان‌شده‌ها';
+  const c = $('#mainList');
+  c.innerHTML = '';
+  const all = getAllItems();
+  const list = bookmarks.map(id => all.find(x => x.id === id)).filter(Boolean);
+  $('#listTitle').textContent = 'نشان‌شده‌ها';
+  $('#listCount').textContent = faNum(list.length) + ' مورد';
+
+  if (!list.length) {
+    c.innerHTML = `<div class="empty"><p>موردی یافت نشد.</p></div>`;
+    return;
+  }
+
+  list.forEach(item => {
+    const el = document.createElement('div');
+    el.className = 'item';
+    el.innerHTML = `
+      <div class="i-ico">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      </div>
+      <div class="i-info">
+        <div class="i-title">${item.title}</div>
+        ${item.content ? `<div class="i-fa">${item.content.substring(0, 120)}</div>` : ''}
+      </div>
+    `;
+    el.onclick = () => openItem(item.id);
+    c.appendChild(el);
+  });
+}
+
+function copyText(t) {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(t).then(() => toast('متن کپی شد')).catch(() => fallbackCopy(t));
+  } else fallbackCopy(t);
+}
+function fallbackCopy(t) {
+  const ta = document.createElement('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); toast('متن کپی شد'); } catch (e) { toast('کپی ناموفق'); }
+  document.body.removeChild(ta);
+}
+function shareText(t) {
+  if (navigator.share) navigator.share({ title: 'امام زمان (عج)', text: t }).catch(() => {});
+  else copyText(t);
+}
+
+$('#fabCopy').onclick = () => {
+  if (!currentItem) return;
+  $('#modalCopy').classList.add('show');
+};
+$('#fabNotes').onclick = () => {
+  if (!currentItem) return;
+  editingNoteId = currentItem.id;
+  $('#notesArea').value = notes[currentItem.id] || '';
+  $('#modalNotes').classList.add('show');
+  setTimeout(() => $('#notesArea').focus(), 200);
+};
+
+$('#copyArabic').onclick = () => {
+  if (!currentItem) return;
+  copyText(currentItem.arabic || currentItem.text || currentItem.content || '');
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyTrans').onclick = () => {
+  if (!currentItem) return;
+  copyText(currentItem.translation || '');
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyBoth').onclick = () => {
+  if (!currentItem) return;
+  const item = currentItem;
+  let t = item.title + '\n\n';
+  if (item.text) t += item.text + '\n\n';
+  if (item.arabic) t += item.arabic + '\n\n';
+  if (item.translation) t += item.translation + '\n\n';
+  if (item.content) t += item.content + '\n\n';
+  if (item.source) t += 'منبع: ' + item.source + '\n\n';
+  t += 'نــــور | NOOR';
+  copyText(t);
+  $('#modalCopy').classList.remove('show');
+};
+$('#shareBtn').onclick = () => {
+  if (!currentItem) return;
+  const item = currentItem;
+  let t = item.title + '\n\n';
+  if (item.text) t += item.text + '\n\n';
+  if (item.arabic) t += item.arabic + '\n\n';
+  if (item.translation) t += item.translation + '\n\n';
+  if (item.content) t += item.content + '\n\n';
+  t += 'نــــور | NOOR';
+  shareText(t);
+  $('#modalCopy').classList.remove('show');
+};
+
+$('#saveNotesBtn').onclick = () => {
+  if (!editingNoteId) return;
+  const val = $('#notesArea').value;
+  if (val.trim()) notes[editingNoteId] = val;
+  else delete notes[editingNoteId];
+  localStorage.setItem('noor_imam_notes', JSON.stringify(notes));
+  $('#modalNotes').classList.remove('show');
+  if (currentItem && currentItem.id === editingNoteId) renderDetail(editingNoteId);
+  editingNoteId = null;
+  toast('یادداشت ذخیره شد');
+};
+
+$('#saveLetterBtn').onclick = () => {
+  const t = $('#letterArea').value;
+  localStorage.setItem('noor_imam_letter', t);
+  $('#modalLetter').classList.remove('show');
+  toast('نامه ذخیره شد');
+};
+
+$$('[data-close]').forEach(b => b.onclick = () => $('#' + b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e) => { if (e.target === m) m.classList.remove('show'); });
+
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+
+$('#btnBack').onclick = () => {
+  if (currentItem) closeDetail();
+  else location.href = 'index.html';
+};
+
+function toast(msg) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+$$('.qa-card').forEach(card => {
+  card.onclick = () => {
+    const sec = card.dataset.section;
+    const link = card.dataset.link;
+    if (link) { location.href = link; return; }
+    if (sec === 'letter') {
+      $('#letterArea').value = letters;
+      $('#modalLetter').classList.add('show');
+      return;
+    }
+    if (sec === 'amal') { openAmal(); return; }
+    currentCategory = sec;
+    renderFilterChips();
+    renderList();
+    window.scrollTo({ top: 400, behavior: 'smooth' });
+  };
+});
+
+$$('.link-item').forEach(item => {
+  item.onclick = () => {
+    const link = item.dataset.link;
+    if (link) location.href = link;
+  };
+});
+
+renderDaily();
+renderFilterChips();
+currentCategory = 'all';
+renderList();
+
+console.log('🌙 نــــور NOOR — امام زمان (عج) بارگذاری شد');
+</script>
+</body>
+</html>

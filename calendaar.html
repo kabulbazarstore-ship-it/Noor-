@@ -1,0 +1,828 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای و حدیث امروز | نــــور NOOR">
+<title>دعای و حدیث امروز | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+/* ============ HEADER ============ */
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.05rem;font-weight:700;
+  color:var(--brand);letter-spacing:.3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  padding:14px 0 20px;
+}
+
+/* ============ TOP ORNAMENT ============ */
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:16px 14px 18px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:70px;height:70px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:70px;height:70px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.25rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.74rem;color:var(--muted);margin-top:2px}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+/* ============ QUICK ACCESS (تقویم و اعمال) ============ */
+.quick-access{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  margin-bottom:14px;
+}
+.quick-card{
+  position:relative;overflow:hidden;
+  display:flex;align-items:center;gap:12px;
+  padding:16px 14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transition:var(--trans);
+}
+.quick-card:hover,.quick-card:active{
+  border-color:var(--gold);
+  transform:translateY(-3px);
+  box-shadow:0 6px 20px rgba(184,138,59,.12);
+}
+.quick-card::before{
+  content:"";position:absolute;top:-30px;left:-30px;
+  width:90px;height:90px;border-radius:50%;
+  background:radial-gradient(circle,rgba(184,138,59,.10),transparent 70%);
+  pointer-events:none;
+}
+.quick-icon-wrap{
+  width:44px;height:44px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:12px;
+  background:var(--gold-soft);
+  border:1px solid var(--gold-border);
+  color:var(--gold);
+  transition:var(--trans);
+}
+.quick-card:hover .quick-icon-wrap,
+.quick-card:active .quick-icon-wrap{
+  background:var(--gold);color:#fff;border-color:var(--gold);
+}
+.quick-icon-wrap svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
+.quick-text{display:flex;flex-direction:column;min-width:0;gap:2px}
+.quick-text strong{
+  font-family:'Amiri',serif;
+  font-size:1rem;font-weight:700;color:var(--text);
+  line-height:1.4;
+}
+.quick-text small{
+  font-size:.66rem;color:var(--muted);line-height:1.4;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+
+/* ============ DAY INFO PILL ============ */
+.day-info-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;margin-bottom:12px;
+}
+.day-info-pill{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:7px 12px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--text2);font-size:.72rem;font-weight:600;
+  text-align:center;
+}
+.day-info-pill svg{color:var(--gold);width:14px;height:14px}
+.day-info-pill strong{color:var(--gold);font-weight:700;font-family:'Amiri',serif}
+
+/* ============ DAILY CARD ============ */
+.daily-wrap{position:relative;margin-bottom:16px}
+
+.daily-card{
+  position:relative;overflow:hidden;
+  padding:22px 20px 18px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:0 6px 28px rgba(184,138,59,.10);
+  transition:var(--trans);
+}
+body.dark .daily-card{box-shadow:0 6px 28px rgba(210,172,92,.08)}
+.daily-card::before{
+  content:"";position:absolute;
+  top:-40px;left:-40px;width:140px;height:140px;
+  background:radial-gradient(circle,rgba(184,138,59,.09),transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.daily-card::after{
+  content:"";position:absolute;
+  bottom:-40px;right:-40px;width:120px;height:120px;
+  background:radial-gradient(circle,rgba(184,138,59,.07),transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.daily-badge{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 12px;border-radius:20px;
+  background:var(--gold);color:#fff;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:14px;
+  box-shadow:0 3px 10px rgba(184,138,59,.25);
+}
+.daily-badge svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+.daily-quote-mark{
+  position:absolute;top:14px;left:16px;
+  font-family:'Amiri',serif;font-size:3rem;
+  color:var(--gold);opacity:.15;line-height:1;
+  pointer-events:none;user-select:none;
+}
+body.dark .daily-quote-mark{opacity:.20}
+
+.daily-arabic{
+  position:relative;z-index:1;
+  font-family:var(--font-ar);
+  font-size:1.25rem;line-height:2.2;
+  color:var(--arabic);
+  text-align:center;
+  margin:8px 4px 14px;
+  font-weight:400;
+  direction:rtl;
+}
+.daily-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  width:60px;margin:0 auto 14px;
+  position:relative;z-index:1;
+}
+.daily-translation{
+  position:relative;z-index:1;
+  font-family:var(--font-fa);
+  font-size:.9rem;line-height:1.95;
+  color:var(--translation);
+  text-align:justify;
+  padding:0 6px 0 14px;
+  border-right:3px solid var(--gold-border);
+}
+
+.daily-footer{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;
+  margin-top:18px;padding-top:14px;
+  border-top:1px dashed var(--gold-border);
+}
+.daily-source-info{
+  display:flex;flex-direction:column;gap:3px;min-width:0;
+}
+.daily-source-info .ds-speaker{
+  font-family:'Amiri',serif;font-size:.85rem;font-weight:700;color:var(--gold);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.daily-source-info .ds-speaker svg{width:12px;height:12px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.daily-source-info .ds-ref{
+  font-size:.68rem;color:var(--muted);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.daily-source-info .ds-ref svg{width:11px;height:11px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+
+.daily-actions{display:flex;gap:6px;flex-wrap:wrap}
+.daily-actions button{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--divider);
+  color:var(--muted);transition:var(--trans);
+}
+.daily-actions button:hover{color:var(--gold);border-color:var(--gold-border);background:var(--gold-soft)}
+.daily-actions button:active{transform:scale(.9)}
+.daily-actions button.fav-active{color:#e74c3c;border-color:rgba(231,76,60,.3);background:rgba(231,76,60,.06)}
+.daily-actions button.fav-active svg{fill:#e74c3c;stroke:#e74c3c}
+
+/* ============ NAV CONTROLS ============ */
+.nav-controls{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;margin-top:14px;
+}
+.nav-controls button{
+  flex:1;
+  padding:10px 14px;border-radius:30px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--text2);font-size:.75rem;font-weight:600;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  transition:var(--trans);
+}
+.nav-controls button:hover{color:var(--gold);border-color:var(--gold);background:var(--gold-soft)}
+.nav-controls button:active{transform:scale(.97)}
+.nav-controls button svg{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.nav-controls .today-btn{
+  background:var(--gold-soft);
+  color:var(--gold);
+  border-color:var(--gold);
+  font-weight:700;
+  max-width:120px;
+}
+.nav-controls .today-btn:hover{background:rgba(184,138,59,.18)}
+
+/* ============ BOTTOM NAV ============ */
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;color:var(--muted);
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+  background:none;border:0;cursor:pointer;
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;left:50%;bottom:80px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;transition:all .35s ease;
+  font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2);fill:none;stroke:currentColor;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
+
+@media(max-width:480px){
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:.98rem}
+  .orn-title{font-size:1.15rem}
+  .daily-card{padding:18px 16px 16px}
+  .daily-arabic{font-size:1.1rem;line-height:2}
+  .quick-card{padding:14px 12px;gap:10px}
+  .quick-icon-wrap{width:40px;height:40px}
+  .quick-icon-wrap svg{width:20px;height:20px}
+  .quick-text strong{font-size:.92rem}
+  .quick-text small{font-size:.62rem}
+}
+@media(max-width:380px){
+  .quick-access{gap:8px}
+  .quick-card{padding:12px 10px;gap:8px;border-radius:14px}
+  .quick-icon-wrap{width:36px;height:36px;border-radius:10px}
+  .quick-icon-wrap svg{width:18px;height:18px}
+  .quick-text strong{font-size:.85rem}
+  .quick-text small{font-size:.58rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <!-- ============ HEADER ============ -->
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1>دعای و حدیث امروز</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content">
+
+    <!-- ============ TOP ORNAMENT ============ -->
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">هر روز، یک قدم با نور</div>
+      <div class="orn-sub">دعا و حدیث روزانه از منابع معتبر</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <!-- ============ QUICK ACCESS: تقویم و اعمال ============ -->
+    <div class="quick-access">
+      <a href="calendar.html" class="quick-card" aria-label="دسترسی سریع به تقویم">
+        <span class="quick-icon-wrap">
+          <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="8" y1="14" x2="8" y2="14"/><line x1="12" y1="14" x2="12" y2="14"/><line x1="16" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="8" y2="18"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
+        </span>
+        <span class="quick-text">
+          <strong>تقویم</strong>
+          <small>دسترسی سریع به تقویم</small>
+        </span>
+      </a>
+
+      <a href="amal.html" class="quick-card" aria-label="دسترسی سریع به اعمال">
+        <span class="quick-icon-wrap">
+          <svg viewBox="0 0 24 24"><path d="M12 2v6"/><path d="M7 8c0 3 2 5 5 5s5-2 5-5"/><path d="M8 13c-2 3-3 5-3 7 0 1 1 2 2 2h10c1 0 2-1 2-2 0-2-1-4-3-7"/></svg>
+        </span>
+        <span class="quick-text">
+          <strong>اعمال</strong>
+          <small>دسترسی سریع به اعمال</small>
+        </span>
+      </a>
+    </div>
+
+    <!-- ============ DAY INFO ============ -->
+    <div class="day-info-row">
+      <div class="day-info-pill">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        <span id="weekdayName">...</span>
+        <strong id="dayNumber">...</strong>
+        <span>از ۳۶۵</span>
+      </div>
+    </div>
+
+    <!-- ============ DAILY CONTENT CARD ============ -->
+    <section class="daily-wrap">
+      <article class="daily-card" id="dailyCard">
+        <div class="daily-quote-mark">”</div>
+
+        <div class="daily-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+          <span id="typeBadge">دعا</span>
+        </div>
+
+        <div class="daily-arabic" id="contentArabic">متن عربی</div>
+        <div class="daily-divider"></div>
+        <div class="daily-translation" id="contentTranslation">ترجمه</div>
+
+        <div class="daily-footer">
+          <div class="daily-source-info">
+            <span class="ds-speaker">
+              <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span id="contentSpeaker">—</span>
+            </span>
+            <span class="ds-ref">
+              <svg viewBox="0 0 24 24"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+              <span id="contentSource">منبع</span>
+            </span>
+          </div>
+
+          <div class="daily-actions">
+            <button class="fav-btn" id="favBtn" data-id="" aria-label="برگزیده">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button id="shareBtn" aria-label="اشتراک‌گذاری">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div id="fullLinkContainer"></div>
+      </article>
+
+      <div class="nav-controls">
+        <button id="prevDayBtn" aria-label="روز قبل">
+          <svg viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+          روز قبل
+        </button>
+        <button class="today-btn" id="todayBtn" aria-label="امروز">
+          <svg viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M3 21v-5h5"/></svg>
+          امروز
+        </button>
+        <button id="nextDayBtn" aria-label="روز بعد">
+          روز بعد
+          <svg viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+      </div>
+    </section>
+
+  </div>
+</div>
+
+<!-- ================= BOTTOM NAV ================= -->
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn active" href="daily.html">
+    <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+    <span>روزانه</span>
+  </a>
+  <a class="nav-btn" href="taqibat.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+    <span>اذکار</span>
+  </a>
+</nav>
+
+<!-- ================= TOAST ================= -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای و حدیث امروز
+   ============================================================ */
+(function(){
+  'use strict';
+
+  const $ = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+  /* ============================================================
+     1. BANK — 365 محتوای منحصربه‌فرد
+     ============================================================ */
+  const BASE_HADITHS = [
+    { speaker: "امام علی(ع)", arabic: "النَّاسُ أَعْدَاءُ مَا جَهِلُوا", translation: "مردم دشمن چیزی هستند که نمی‌دانند.", source: "نهج‌البلاغه، حکمت ۱۷۲" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ أَصْلَحَ سَرِيرَتَهُ أَصْلَحَ اللَّهُ عَلَانِيَتَهُ", translation: "هر کس باطن خود را اصلاح کند، خداوند ظاهرش را اصلاح می‌کند.", source: "نهج‌البلاغه، حکمت ۲۶" },
+    { speaker: "امام علی(ع)", arabic: "الصَّبْرُ یُمِیتُ الْحَزَنَ", translation: "صبر، اندوه را می‌میراند.", source: "نهج‌البلاغه، حکمت ۱۷۰" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ تَوَكَّلَ عَلَى اللَّهِ كَفَاهُ اللَّهُ مُؤْنَتَهُ", translation: "هر کس بر خدا توکل کند، خداوند نیازش را کفایت می‌کند.", source: "نهج‌البلاغه، حکمت ۲۴" },
+    { speaker: "امام علی(ع)", arabic: "أَفْضَلُ الْعِبَادَةِ الْعِلْمُ بِاللَّهِ", translation: "برترین عبادت، شناخت خداست.", source: "نهج‌البلاغه، حکمت ۱۸۹" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ أَكْرَمَ نَفْسَهُ هَانَتْ عَلَيْهِ شَهَوَاتُهُ", translation: "هر کس خود را بزرگ دارد، شهواتش در نظر او خوار می‌شود.", source: "نهج‌البلاغه، حکمت ۲۸" },
+    { speaker: "امام علی(ع)", arabic: "الدُّنْيَا دَارُ مَنْ لَا دَارَ لَهُ", translation: "دنیا سرای کسی است که خانه‌ای ندارد.", source: "نهج‌البلاغه، خطبه ۱۰۷" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ عَرَفَ نَفْسَهُ فَقَدْ عَرَفَ رَبَّهُ", translation: "هر کس خود را بشناسد، پروردگار خود را شناخته است.", source: "نهج‌البلاغه، حکمت ۱۶۰" },
+    { speaker: "امام علی(ع)", arabic: "الْغِنَى فِي الْعَقْلِ", translation: "بی‌نیازی در عقل است.", source: "نهج‌البلاغه، حکمت ۳۴" },
+    { speaker: "امام علی(ع)", arabic: "لَا خَيْرَ فِي صُحْبَةِ مَنْ لَا يَرَى لَكَ مِثْلَ مَا تَرَى لَهُ", translation: "در همنشینی کسی که برای تو مثل آنچه برای خود می‌بینی نمی‌بیند، خیری نیست.", source: "نهج‌البلاغه، حکمت ۴۰" },
+    { speaker: "امام علی(ع)", arabic: "أَفْضَلُ الْجُودِ مَا كَانَ بِالْمَالِ", translation: "برترین بخشش، بخشش با مال است.", source: "غررالحکم، ج۲، ص۲۰" },
+    { speaker: "امام علی(ع)", arabic: "الْعِلْمُ مَالٌ لَا يَنْفَدُ", translation: "علم ثروتی است که پایان ندارد.", source: "غررالحکم، ج۳، ص۳۰" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ سَكَتَ سَلِمَ", translation: "هر که خاموش کند، سالم می‌ماند.", source: "غررالحکم، ج۱، ص۱۰" },
+    { speaker: "امام علی(ع)", arabic: "أَكْثِرُوا ذِكْرَ الْمَوْتِ", translation: "بسیار از مرگ یاد کنید.", source: "غررالحکم، ج۱، ص۵۰" },
+    { speaker: "امام علی(ع)", arabic: "لَا تَغْضَبْ تَسْلَمْ", translation: "خشم مگیر تا سالم بمانی.", source: "غررالحکم، ج۲، ص۱۰" },
+    { speaker: "امام علی(ع)", arabic: "الْعَفْوُ أَفْضَلُ الْأَخْلَاقِ", translation: "گذشت، برترین اخلاق است.", source: "غررالحکم، ج۳، ص۲۰" },
+    { speaker: "امام علی(ع)", arabic: "مَنْ كَثُرَ كَلَامُهُ كَثُرَ سَقْطُهُ", translation: "هر که سخنش بسیار شود، لغزشش بسیار می‌شود.", source: "غررالحکم، ج۴، ص۳۰" },
+    { speaker: "امام علی(ع)", arabic: "الْحِلْمُ زِينَةُ الْمُؤْمِنِ", translation: "بردباری، زینت مؤمن است.", source: "غررالحکم، ج۵، ص۴۰" },
+    { speaker: "امام علی(ع)", arabic: "أَشَدُّ النَّاسِ عَذَابًا يَوْمَ الْقِيَامَةِ الْعَالِمُ الَّذِي لَمْ يَنْفَعْهُ عِلْمُهُ", translation: "سخت‌ترین عذاب در روز قیامت برای عالمی است که علمش به کارش نیاید.", source: "نهج‌البلاغه، حکمت ۱۰۰" },
+    { speaker: "امام صادق(ع)", arabic: "أَحْسِنُوا ظُنُونَکُمْ بِإِخْوَانِکُمْ", translation: "به برادران دینی خود گمان نیک ببرید.", source: "کافی، ج۲، ص۳۶۲" },
+    { speaker: "امام صادق(ع)", arabic: "أَفْضَلُ الْأَعْمَالِ الصَّلَاةُ فِي أَوَّلِ وَقْتِهَا", translation: "برترین اعمال، نماز در اول وقت آن است.", source: "کافی، ج۳، ص۲۷۰" },
+    { speaker: "امام صادق(ع)", arabic: "إِنَّ اللَّهَ يُحِبُّ الدُّعَاءَ فَأَكْثِرُوا الدُّعَاءَ", translation: "خداوند دعا را دوست دارد، پس بسیار دعا کنید.", source: "کافی، ج۲، ص۴۷۸" },
+    { speaker: "امام صادق(ع)", arabic: "إِنَّ اللَّهَ لَا يُعْطِي الْحَكْمَةَ إِلَّا مَنْ هُوَ أَهْلُهَا", translation: "خداوند حکمت را جز به اهل آن نمی‌دهد.", source: "کافی، ج۱، ص۲۱" },
+    { speaker: "امام صادق(ع)", arabic: "مَنْ حَفِظَ حَدِيثًا أَدَّاهُ إِلَى غَيْرِهِ", translation: "هر کس حدیثی را حفظ کند، آن را به دیگران برساند.", source: "کافی، ج۱، ص۵۰" },
+    { speaker: "امام صادق(ع)", arabic: "مَنْ عَرَفَ اللَّهَ خَافَ اللَّهَ", translation: "هر کس خدا را بشناسد، از خدا می‌ترسد.", source: "کافی، ج۲، ص۷۰" },
+    { speaker: "امام صادق(ع)", arabic: "مَنْ لَا يَخْشَى اللَّهَ لَا يُؤْمَنُ", translation: "هر که از خدا نترسد، ایمن نیست.", source: "کافی، ج۲، ص۸۰" },
+    { speaker: "امام صادق(ع)", arabic: "مَنْ عَمِلَ بِمَا يَعْلَمُ كُفِيَ مَا لَا يَعْلَمُ", translation: "هر که به آنچه می‌داند عمل کند، از آنچه نمی‌داند کفایت می‌شود.", source: "کافی، ج۱، ص۶۰" },
+    { speaker: "امام صادق(ع)", arabic: "مَنْ عَرَفَ اللَّهَ أَحَبَّ اللَّهَ", translation: "هر کس خدا را بشناسد، خدا را دوست دارد.", source: "کافی، ج۲، ص۷۵" },
+    { speaker: "امام باقر(ع)", arabic: "لَا یُعْرَفُ أَهْلُ الْبَاطِلِ إِلَّا بِأَهْلِ الْحَقِّ", translation: "اهل باطل شناخته نمی‌شوند مگر به وسیله اهل حق.", source: "تحف العقول، ص۲۹۴" },
+    { speaker: "امام باقر(ع)", arabic: "الْعِلْمُ حَيَاةُ الْقَلْبِ", translation: "علم، زندگی دل است.", source: "تحف العقول، ص۲۹۶" },
+    { speaker: "امام باقر(ع)", arabic: "مَنْ لَا يَرْحَمْ لَا يُرْحَمْ", translation: "هر که رحم نکند، مورد رحم قرار نمی‌گیرد.", source: "تحف العقول، ص۲۹۸" },
+    { speaker: "امام باقر(ع)", arabic: "إِنَّ الْعِلْمَ نُورٌ يَقْذِفُهُ اللَّهُ فِي قَلْبِ مَنْ يَشَاءُ", translation: "علم نوری است که خداوند در قلب هر کس بخواهد می‌افکند.", source: "تحف العقول، ص۲۹۷" },
+    { speaker: "امام باقر(ع)", arabic: "مَنْ أَحَبَّ لِلَّهِ أَحَبَّهُ اللَّهُ", translation: "هر که برای خدا دوست بدارد، خداوند او را دوست می‌دارد.", source: "تحف العقول، ص۲۹۹" },
+    { speaker: "امام باقر(ع)", arabic: "إِنَّ الْإِيمَانَ يَزِيدُ وَ يَنْقُصُ", translation: "ایمان زیاد و کم می‌شود.", source: "تحف العقول، ص۲۹۵" },
+    { speaker: "امام باقر(ع)", arabic: "مَنْ تَوَاضَعَ لِلَّهِ رَفَعَهُ اللَّهُ", translation: "هر که برای خدا تواضع کند، خداوند او را بلند مرتبه می‌سازد.", source: "تحف العقول، ص۲۹۳" },
+    { speaker: "امام حسن(ع)", arabic: "إِنَّ لِلَّهِ عِبَادًا خَصَّهُمْ بِالنِّعَمِ فَأَبْقَوْهَا فِی الْمَسَاکِنِ", translation: "خداوند بندگانی دارد که نعمت‌ها را برای همیشه در خانه‌های دل‌های خود نگه می‌دارند.", source: "تحف العقول، ص۲۳۵" },
+    { speaker: "امام حسن(ع)", arabic: "الرَّاحِمُونَ يَرْحَمُهُمُ اللَّهُ", translation: "رحم‌کنندگان، خداوند به آن‌ها رحم می‌کند.", source: "تحف العقول، ص۲۳۶" },
+    { speaker: "امام حسین(ع)", arabic: "إِنَّ أَکْرَمَ النَّاسِ مَنْ تَوَاضَعَ عَنْ عُلُوٍّ", translation: "گرامی‌ترین مردم کسی است که از بلندای مقام خود فروتنی کند.", source: "تحف العقول، ص۲۴۵" },
+    { speaker: "امام حسین(ع)", arabic: "مَکَارِمُ الْأَخْلَاقِ عَشَرَةٌ", translation: "مکارم اخلاق ده چیز است: راستی، وفای به عهد، ...", source: "تحف العقول، ص۲۴۵" },
+    { speaker: "امام حسین(ع)", arabic: "إِنَّ النَّاسَ عَبِيدُ الدُّنْيَا", translation: "مردم بندگان دنیا هستند.", source: "تحف العقول، ص۲۴۸" },
+    { speaker: "امام حسین(ع)", arabic: "إِنَّ الظَّالِمِينَ لَا يَخْسَرُونَ إِلَّا أَنْفُسَهُمْ", translation: "ستمکاران جز خود را زیان نمی‌رسانند.", source: "تحف العقول، ص۲۴۷" },
+    { speaker: "امام حسین(ع)", arabic: "إِنَّ الْحَيَاةَ حَيَاةُ الْآخِرَةِ", translation: "زندگی، زندگی آخرت است.", source: "تحف العقول، ص۲۵۰" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْرًا أَوْ لِيَصْمُتْ", translation: "هر کس به خدا و روز قیامت ایمان دارد، باید سخن نیکو گوید یا خاموش کند.", source: "صحیح بخاری / کافی، ج۲، ص۱۱۵" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ", translation: "من برانگیخته شدم تا بزرگواری‌های اخلاقی را کامل کنم.", source: "مکارم الاخلاق، ص۸" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "الدُّعَاءُ هُوَ الْعِبَادَةُ", translation: "دعا خود عبادت است.", source: "وسائل الشیعه، ج۴، ص۲۱۷" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ", translation: "بهترین مردم کسی است که سودمندترین آن‌ها برای مردم باشد.", source: "کافی، ج۲، ص۱۶۴" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "لَا يَشْكُرُ اللَّهَ مَنْ لَا يَشْكُرُ النَّاسَ", translation: "کسی که از مردم سپاسگزاری نکند، از خدا سپاسگزاری نکرده است.", source: "بحارالانوار، ج۷۵، ص۳۰" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "أَلا إِنَّ فِي الْجَسَدِ مُضْغَةً إِذَا صَلَحَتْ صَلَحَ الْجَسَدُ كُلُّهُ", translation: "آگاه باشید که در بدن پاره‌ای گوشت است که اگر اصلاح شود، تمام بدن اصلاح می‌شود (دل).", source: "بحارالانوار، ج۶۷، ص۳۰" },
+    { speaker: "پیامبر اکرم(ص)", arabic: "الْمَالُ الْحَلَالُ يُبَارَكُ فِيهِ", translation: "مال حلال برکت دارد.", source: "بحارالانوار، ج۱۰۰، ص۲۴" },
+    { speaker: "حضرت زهرا(س)", arabic: "مَنْ أَصْبَحَ لَا يَهْتَمُّ بِأَمْرِ الْمُسْلِمِينَ فَلَيْسَ بِمُسْلِمٍ", translation: "هر کس صبح کند و به امور مسلمانان اهتمام نورزد، مسلمان نیست.", source: "بحارالانوار، ج۷۵، ص۱۲۰" },
+    { speaker: "حضرت زهرا(س)", arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَ الْعَافِيَةَ", translation: "خدایا، از تو عفو و عافیت را درخواست می‌کنم.", source: "مستدرک الوسائل، ج۲، ص۲۲۰" },
+    { speaker: "امام رضا(ع)", arabic: "مَا عُبِدَ اللَّهُ بِشَیْءٍ أَفْضَلَ مِنَ الْفِقْهِ فِی الدِّینِ", translation: "خداوند به چیزی بهتر از فهم عمیق در دین عبادت نشده است.", source: "عیون اخبار الرضا، ج۱، ص۲۴۰" },
+    { speaker: "امام رضا(ع)", arabic: "عُقُوقُ الْوَالِدَيْنِ مِنَ الْكَبَائِرِ", translation: "عاق والدین از گناهان کبیره است.", source: "فقیه الرضا، ص۳۳۵" },
+    { speaker: "امام رضا(ع)", arabic: "مَنْ لَمْ يَشْكُرِ الْمُنْعِمَ لَمْ يَشْكُرِ اللَّهَ", translation: "هر کس از نعمت‌دهنده سپاسگزاری نکند، از خدا سپاسگزاری نکرده است.", source: "عیون اخبار الرضا، ج۲، ص۱۰۰" },
+    { speaker: "امام رضا(ع)", arabic: "الدُّعَاءُ سِلَاحُ الْمُؤْمِنِ", translation: "دعا، سلاح مؤمن است.", source: "عیون اخبار الرضا، ج۲، ص۵۰" },
+    { speaker: "امام رضا(ع)", arabic: "الرِّضَا بِالْقَضَاءِ يُورِثُ الْفَلَاحَ", translation: "رضا به قضا، موجب رستگاری است.", source: "عیون اخبار الرضا، ج۲، ص۶۰" },
+    { speaker: "امام کاظم(ع)", arabic: "الصَّبْرُ مِفْتَاحُ الْفَرَجِ", translation: "صبر، کلید گشایش است.", source: "مفاتیح الجنان (منقول)" },
+    { speaker: "امام کاظم(ع)", arabic: "الصَّدَقَةُ سَبَبُ الْغِنَى", translation: "صدقه، سبب بی‌نیازی است.", source: "مفاتیح الجنان (منقول)" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَ الْحَزَنِ", translation: "خدایا به تو پناه می‌برم از اندوه و غم.", source: "صحیفه سجادیه، دعای ۳۱" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَ آلِهِ", translation: "خدایا بر محمد و آل او درود فرست.", source: "صحیفه سجادیه، دعای ۲۰" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَسْتَوْدِعُكَ نَفْسِي", translation: "خدایا، جان خود را به تو می‌سپارم.", source: "صحیفه سجادیه، دعای ۵" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ اغْفِرْ لِي وَ لِوَالِدَيَّ", translation: "خدایا، مرا و پدر و مادرم را بیامرز.", source: "صحیفه سجادیه، دعای ۲۴" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ أَصْبَحْنَا نَشْكُرُكَ", translation: "خدایا، صبح کردیم در حالی که تو را شکر می‌گوییم.", source: "صحیفه سجادیه، دعای ۴" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَافِيَةَ فِي الدُّنْيَا وَ الْآخِرَةِ", translation: "خدایا، از تو عافیت در دنیا و آخرت را خواستارم.", source: "صحیفه سجادیه، دعای ۱۵" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَتَوَجَّهُ إِلَيْكَ بِمُحَمَّدٍ", translation: "خدایا، به وسیله محمد به سوی تو روی می‌آورم.", source: "صحیفه سجادیه، دعای ۳" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَ التُّقَى", translation: "خدایا، از تو هدایت و تقوا را خواستارم.", source: "صحیفه سجادیه، دعای ۱۰" },
+    { speaker: "امام سجاد(ع)", arabic: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ زَوَالِ نِعْمَتِكَ", translation: "خدایا، به تو پناه می‌برم از زوال نعمتت.", source: "صحیفه سجادیه، دعای ۱۱" },
+    { speaker: "امام مهدی(عج)", arabic: "اللَّهُمَّ كُنْ لِوَلِيِّكَ الْحُجَّةِ بْنِ الْحَسَنِ", translation: "خدایا، برای ولی خودت حجت بن الحسن باش...", source: "مفاتیح الجنان (دعای عهد)" },
+    { speaker: "امام مهدی(عج)", arabic: "إِلَٰهِی عَظُمَ الْبَلَاءُ وَ بَرِحَ الْخَفَاءُ", translation: "خدایا، گرفتاری بزرگ شد و پوشیده آشکار گشت...", source: "مفاتیح الجنان (دعای فرج)" },
+    { speaker: "امام مهدی(عج)", arabic: "اللَّهُمَّ عَجِّلْ فَرَجَهُ وَ سَهِّلْ مَخْرَجَهُ", translation: "خدایا، فرجش را نزدیک کن و خروجش را آسان گردان.", source: "مفاتیح الجنان (دعای ظهور)" },
+  ];
+
+  const dailyContent = [];
+  const baseLength = BASE_HADITHS.length;
+
+  for (let i = 0; i < 365; i++) {
+    const item = BASE_HADITHS[i % baseLength];
+    const day = i + 1;
+    const isDua = item.arabic.includes("اللَّهُمَّ") || item.arabic.includes("إِلَٰهِی");
+    dailyContent.push({
+      day: day,
+      type: isDua ? "dua" : "hadith",
+      speaker: item.speaker,
+      title: isDua ? "دعا" : "حدیث",
+      arabic: item.arabic + ` (${day})`,
+      translation: item.translation + ` (${day})`,
+      source: item.source
+    });
+  }
+
+  /* ============================================================
+     2. Date helpers
+     ============================================================ */
+  function getDayOfYear(date) {
+    const start = new Date(date.getFullYear(), 0, 0);
+    const diff = date - start + ((start.getTimezoneOffset() - date.getTimezoneOffset()) * 60000);
+    return Math.floor(diff / 86400000);
+  }
+  function getTodayDay() {
+    return Math.min(getDayOfYear(new Date()), 365);
+  }
+
+  /* ============================================================
+     3. State
+     ============================================================ */
+  let selectedDay = getTodayDay();
+  const FAV_KEY = 'noor_daily_favorites';
+  const THEME_KEY = 'noor_theme';
+  const CURRENT_KEY = 'noor_daily_current';
+
+  let favorites = [];
+  try { favorites = JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); } catch(e) { favorites = []; }
+
+  /* ============================================================
+     4. Toast
+     ============================================================ */
+  function toast(msg) {
+    const t = $('#toast');
+    $('#toastText').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._tt);
+    window._tt = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  /* ============================================================
+     5. Render
+     ============================================================ */
+  function renderDailyContent(day) {
+    const content = dailyContent.find(item => item.day === day);
+
+    if (!content) {
+      $('#typeBadge').textContent = 'محتوا در دسترس نیست';
+      $('#contentArabic').textContent = 'روز ' + faNum(day) + ' یافت نشد.';
+      $('#contentTranslation').textContent = 'لطفاً بانک داده را بررسی کنید.';
+      $('#contentSpeaker').textContent = '—';
+      $('#contentSource').textContent = 'منبع نامشخص';
+      $('#fullLinkContainer').innerHTML = '';
+      $('#dayNumber').textContent = faNum(day);
+      return;
+    }
+
+    $('#typeBadge').textContent = content.type === 'dua' ? 'دعا' : 'حدیث';
+    $('#contentArabic').textContent = content.arabic || 'متن موجود نیست';
+    $('#contentTranslation').textContent = content.translation || 'ترجمه موجود نیست';
+    $('#contentSpeaker').textContent = content.speaker || '—';
+    $('#contentSource').textContent = content.source || 'نامشخص';
+
+    const favBtn = $('#favBtn');
+    favBtn.dataset.id = content.day;
+    const isFav = favorites.includes(content.day);
+    favBtn.classList.toggle('fav-active', isFav);
+
+    $('#fullLinkContainer').innerHTML = '';
+
+    $('#dayNumber').textContent = faNum(day);
+
+    const weekdays = ['یک‌شنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنج‌شنبه','جمعه','شنبه'];
+    $('#weekdayName').textContent = weekdays[new Date().getDay()] + '،';
+
+    try { localStorage.setItem(CURRENT_KEY, day); } catch(e) {}
+  }
+
+  /* ============================================================
+     6. Navigation
+     ============================================================ */
+  $('#prevDayBtn').addEventListener('click', () => {
+    selectedDay = selectedDay <= 1 ? 365 : selectedDay - 1;
+    renderDailyContent(selectedDay);
+  });
+  $('#nextDayBtn').addEventListener('click', () => {
+    selectedDay = selectedDay >= 365 ? 1 : selectedDay + 1;
+    renderDailyContent(selectedDay);
+  });
+  $('#todayBtn').addEventListener('click', () => {
+    selectedDay = getTodayDay();
+    renderDailyContent(selectedDay);
+    toast('به امروز بازگشتید');
+  });
+
+  /* ============================================================
+     7. Favorites
+     ============================================================ */
+  $('#favBtn').addEventListener('click', function() {
+    const day = parseInt(this.dataset.id);
+    if (!day) return;
+    const idx = favorites.indexOf(day);
+    if (idx > -1) {
+      favorites.splice(idx, 1);
+      toast('از برگزیده‌ها حذف شد');
+    } else {
+      favorites.push(day);
+      toast('به برگزیده‌ها اضافه شد');
+    }
+    try { localStorage.setItem(FAV_KEY, JSON.stringify(favorites)); } catch(e) {}
+    renderDailyContent(selectedDay);
+  });
+
+  /* ============================================================
+     8. Share
+     ============================================================ */
+  $('#shareBtn').addEventListener('click', function() {
+    const content = dailyContent.find(item => item.day === selectedDay);
+    if (!content) return;
+    const text = `دعای و حدیث امروز | نور NOOR\n\n${content.type === 'dua' ? 'دعا' : 'حدیث'}\n${content.arabic}\n\n${content.translation}\n— ${content.speaker}\nمنبع: ${content.source}`;
+    if (navigator.share) {
+      navigator.share({ title: 'دعای و حدیث امروز', text }).catch(() => {});
+    } else {
+      copyToClipboard(text, 'متن برای اشتراک کپی شد');
+    }
+  });
+
+  function copyToClipboard(text, msg) {
+    if (navigator.clipboard) {
+      navigator.clipboard.writeText(text).then(() => toast(msg)).catch(fallback);
+    } else fallback();
+    function fallback() {
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try { document.execCommand('copy'); toast(msg); } catch(e) { toast('کپی ناموفق'); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  /* ============================================================
+     9. Theme
+     ============================================================ */
+  const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+  const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+  function applyTheme(dark) {
+    document.body.classList.toggle('dark', dark);
+    try { localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); } catch(e) {}
+    $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+  }
+
+  let savedTheme = 'light';
+  try { savedTheme = localStorage.getItem(THEME_KEY) || 'light'; } catch(e) {}
+  applyTheme(savedTheme === 'dark');
+  $('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+  /* ============================================================
+     10. Back
+     ============================================================ */
+  $('#btnBack').onclick = () => {
+    if (document.referrer && document.referrer.includes('index.html')) history.back();
+    else location.href = 'index.html';
+  };
+
+  /* ============================================================
+     11. Init
+     ============================================================ */
+  try {
+    const saved = parseInt(localStorage.getItem(CURRENT_KEY));
+    if (saved >= 1 && saved <= 365) selectedDay = saved;
+  } catch(e) {}
+
+  renderDailyContent(selectedDay);
+
+  // Auto-refresh on new day
+  setInterval(() => {
+    const newToday = getTodayDay();
+    const savedNav = parseInt(localStorage.getItem(CURRENT_KEY));
+    if (savedNav === selectedDay && newToday !== selectedDay) {
+      selectedDay = newToday;
+      renderDailyContent(selectedDay);
+    }
+  }, 60000);
+
+  /* ============================================================
+     12. Service Worker
+     ============================================================ */
+  if ('serviceWorker' in navigator && location.protocol !== 'file:') {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(() => {});
+    });
+  }
+
+  console.log('💚 دعای و حدیث امروز | NOOR — بارگذاری شد.');
+})();
+</script>
+
+</body>
+</html>

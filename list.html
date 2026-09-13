@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>لیست دعاها | نــــور NOOR</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.12);
+  --gold-border: rgba(184, 138, 59, 0.28);
+  --text: #17231F; --muted: #66716C; --divider: #E7E0D3;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.06);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.04);
+  --radius: 18px; --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --nav-h: 68px;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.10);
+  --gold-border: rgba(210, 172, 92, 0.22);
+  --text: #F4EFE4; --muted: #A8B3AD; --divider: #26352F;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; padding-bottom: calc(var(--nav-h) + 20px);
+  line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px; }
+
+/* HEADER */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 7px;
+  margin-top: 3px;
+}
+
+/* SEARCH */
+.search-wrap { margin: 14px 0; }
+.search-box { position: relative; }
+.search-box input {
+  width: 100%; padding: 13px 46px 13px 16px;
+  border-radius: 60px; border: 1px solid var(--gold-border);
+  background: var(--surface); color: var(--text);
+  font-size: 0.9rem; outline: none; transition: var(--trans);
+}
+.search-box input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.search-box input::placeholder { color: var(--muted); }
+.search-box .ico {
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--muted); pointer-events: none;
+}
+
+/* LIST */
+.list { display: flex; flex-direction: column; gap: 10px; }
+.item {
+  display: flex; gap: 12px; padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  cursor: pointer; transition: var(--trans); position: relative;
+  text-decoration: none; color: inherit; align-items: center;
+}
+.item:hover { background: var(--surface2); border-color: var(--gold); transform: translateY(-1px); }
+.item:active { transform: scale(0.99); }
+
+/* ===== شماره‌گذاری زیبا ===== */
+.item .i-num {
+  width: 46px; height: 46px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--gold-soft) 0%, rgba(184, 138, 59, 0.18) 100%);
+  color: var(--gold); flex: none;
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Amiri', serif;
+  font-size: 1.15rem; font-weight: 700;
+  border: 1px solid var(--gold-border);
+  letter-spacing: -1px;
+  transition: var(--trans);
+}
+.item:hover .i-num {
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold2) 100%);
+  color: #fff;
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(184, 138, 59, 0.3);
+}
+
+.item .i-info { flex: 1; min-width: 0; }
+.item .i-title { font-size: 0.9rem; font-weight: 700; color: var(--text); margin-bottom: 4px; }
+.item .i-sub { font-size: 0.7rem; color: var(--muted); line-height: 1.7; }
+.item .i-meta { display: flex; align-items: center; gap: 6px; margin-top: 6px; flex-wrap: wrap;
+  font-size: 0.62rem; color: var(--muted); }
+.item .i-meta .tag { padding: 2px 8px; border-radius: 8px; background: var(--gold-soft);
+  color: var(--gold); border: 1px solid var(--gold-border); font-weight: 600; }
+.item .i-bm { width: 34px; height: 34px; border-radius: 10px; color: var(--muted);
+  flex: none; display: flex; align-items: center; justify-content: center; }
+.item .i-bm:hover, .item .i-bm.active { color: var(--gold); background: var(--gold-soft); }
+
+/* EMPTY */
+.empty { text-align: center; padding: 50px 20px; color: var(--muted); }
+.empty svg { width: 50px; height: 50px; color: var(--gold); opacity: 0.4; margin: 0 auto 14px; }
+.empty p { font-size: 0.85rem; }
+mark { background: var(--gold-soft); color: var(--gold); padding: 0 3px; border-radius: 4px; font-weight: 700; }
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-around; align-items: center;
+  background: var(--surface); border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: var(--nav-h); box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px; border-radius: 12px; color: var(--muted);
+  transition: var(--trans); font-size: 0.62rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg { width: 22px; height: 22px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 20px; border-radius: 14px;
+  font-size: 0.82rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 18px; height: 18px; }
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 1.1rem; }
+  .brand .brand-noor { font-size: 0.68rem; letter-spacing: 5px; }
+  :root { --nav-h: 62px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+  .item { padding: 12px 14px; }
+  .item .i-num { width: 40px; height: 40px; font-size: 1rem; }
+  .item .i-title { font-size: 0.82rem; }
+  .item .i-sub { font-size: 0.65rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- HEADER -->
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">لیست دعاها</h1>
+      <span class="brand-noor">نور</span>
+    </div>
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-wrap">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجو در این دسته..." autocomplete="off">
+      <span class="ico">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- LIST -->
+  <div class="list" id="duaList"></div>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html" aria-label="خانه">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html" aria-label="قرآن">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/>
+    </svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html" aria-label="زیارت">
+    <svg viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html" aria-label="امام زمان">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   نــــور NOOR — لیست دعاها
+   ============================================================ */
+const $ = s => document.querySelector(s);
+let bookmarks = JSON.parse(localStorage.getItem('noor_duas_bm') || '[]');
+let searchQuery = '';
+
+/* ===== THEME ===== */
+const sunIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+const moonIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  if ($('#themeToggle')) $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+$('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   DATA — ۸ دسته‌بندی کامل با لینک‌های واقعی فایل‌ها
+   ============================================================ */
+const allData = {
+  /* ===== ۱. دعاهای روزانه ===== */
+  daily: [
+    { id: 'sobh', name: "دعای صبح", desc: "برای شروع روز با نور و برکت", link: "sobh.html", occasion: "صبح‌ها" },
+    { id: 'shab', name: "دعای شب", desc: "برای پایان روز با آمرزش و امنیت", link: "shab.html", occasion: "شب‌ها" },
+    { id: 'shanbeh', name: "دعای روز شنبه", desc: "مخصوص روز شنبه", link: "shanbeh.html", occasion: "شنبه" },
+    { id: 'yekshanbeh', name: "دعای روز یکشنبه", desc: "مخصوص روز یکشنبه", link: "yekshanbeh.html", occasion: "یکشنبه" },
+    { id: 'doshanbeh', name: "دعای روز دوشنبه", desc: "مخصوص روز دوشنبه", link: "doshanbeh.html", occasion: "دوشنبه" },
+    { id: 'seshanbeh', name: "دعای روز سه‌شنبه", desc: "مخصوص روز سه‌شنبه", link: "seshanbeh.html", occasion: "سه‌شنبه" },
+    { id: 'chaharshanbeh', name: "دعای روز چهارشنبه", desc: "مخصوص روز چهارشنبه", link: "chaharshanbeh.html", occasion: "چهارشنبه" },
+    { id: 'panjshanbeh', name: "دعای روز پنج‌شنبه", desc: "مخصوص روز پنج‌شنبه", link: "panjshanbeh.html", occasion: "پنج‌شنبه" },
+    { id: 'jomeh', name: "دعای روز جمعه", desc: "مخصوص روز جمعه", link: "jomeh.html", occasion: "جمعه" },
+    { id: 'tahvil', name: "دعای تحویل سال", desc: "هنگام تحویل سال نو", link: "tahvil.html", occasion: "نوروز" },
+    { id: 'ramadan-daily', name: "دعای هر روز ماه رمضان", desc: "۳۰ دعا برای هر روز ماه رمضان", link: "ramadan.html", occasion: "رمضان" }
+  ],
+
+  /* ===== ۲. دعاهای مشکل‌گشا ===== */
+  problem: [
+    { id: 'tavssol', name: "دعای توسل", desc: "توسل به ۱۴ معصوم (ع) برای رفع حاجات", link: "tavassol.html", occasion: "هر زمان" },
+    { id: 'samat', name: "دعای سمات", desc: "برای دفع بلا و گرفتاری", link: "samaat.html", occasion: "هر زمان" },
+    { id: 'goshayesh', name: "دعای گشایش (مشلول)", desc: "برای گشایش کارها و رفع گرفتاری", link: "goshayesh.html", occasion: "هنگام گرفتاری" },
+    { id: 'adil', name: "دعای عدیل", desc: "برای طلب مغفرت و رفع مشکلات", link: "adil.html", occasion: "هر زمان" },
+    { id: 'gham', name: "دعای رفع غم و اندوه", desc: "برای رفع غم و اندوه", link: "gham.html", occasion: "هنگام غم" },
+    { id: 'sajjadieh7', name: "دعای هفتم صحیفه سجادیه", desc: "دعای ویژه هنگام سختی‌ها", link: "sajjadieh7.html", occasion: "هنگام سختی" },
+    { id: 'yastashir', name: "دعای یستشیر", desc: "دعای پرفضیلت برای گشایش در کارها", link: "yastashir.html", occasion: "هر زمان" },
+    { id: 'moghatel', name: "دعای مقاتل بن سلیمان", desc: "دعای سریع‌الاجابه برای حاجات", link: "moghatel.html", occasion: "هر زمان" },
+    { id: 'mujir', name: "دعای مجیر", desc: "دعای معروف برای آمرزش گناهان", link: "mujir.html", occasion: "ایام البیض" },
+    { id: 'faraj', name: "دعای فرج (الهی عظم البلاء)", desc: "دعای معروف برای تعجیل فرج", link: "faraj.html", occasion: "هنگام سختی" }
+  ],
+
+  /* ===== ۳. دعاهای معروف ===== */
+  famous: [
+    { id: 'kumayl', name: "دعای کمیل", desc: "برای طلب آمرزش و رحمت الهی", link: "kumayl.html", occasion: "شب‌های جمعه" },
+    { id: 'joushan-kabir', name: "دعای جوشن کبیر", desc: "۱۰۰ بند با اسماء الهی", link: "Joushan-kabir.html", occasion: "ماه رمضان" },
+    { id: 'joushan-saghir', name: "دعای جوشن صغیر", desc: "خلاصه‌ی جوشن کبیر", link: "joushan-saghir.html", occasion: "هر زمان" },
+    { id: 'abu-hamza', name: "دعای ابوحمزه ثمالی", desc: "دعای سحرهای ماه رمضان", link: "abu-hamza.html", occasion: "سحر رمضان" },
+    { id: 'iftitah', name: "دعای افتتاح", desc: "دعای شب‌های ماه رمضان", link: "iftitah.html", occasion: "شب‌های رمضان" },
+    { id: 'shabaniyeh', name: "دعای شعبانیه", desc: "دعای معروف ماه شعبان", link: "shabaniyeh.html", occasion: "ماه شعبان" },
+    { id: 'arafeh', name: "دعای عرفه", desc: "دعای روز عرفه (امام حسین ع)", link: "arafeh.html", occasion: "روز عرفه" },
+    { id: 'nudbah', name: "دعای ندبه", desc: "برای طلب فرج و ظهور", link: "nudbah.html", occasion: "صبح‌های جمعه" },
+    { id: 'faraj-mashhur', name: "دعای فرج", desc: "برای تعجیل فرج امام زمان (عج)", link: "faraj.html", occasion: "هر زمان" },
+    { id: 'mujir-famous', name: "دعای مجیر", desc: "دعای معروف برای آمرزش گناهان", link: "mujir.html", occasion: "ایام البیض" }
+  ],
+
+  /* ===== ۴. دعاهای کوتاه ===== */
+  short: [
+    { id: 'hajat', name: "دعای حاجت (کوتاه)", desc: "برای برآورده شدن حاجات", link: "hajat.html", occasion: "هر زمان" },
+    { id: 'daf-bala', name: "دعای دفع بلا", desc: "برای دفع بلا و بیماری", link: "dafe-bala.html", occasion: "هنگام بلا" },
+    { id: 'rizgh', name: "دعای رزق و روزی", desc: "برای افزایش روزی و برکت", link: "rizgh.html", occasion: "هر زمان" },
+    { id: 'shokr', name: "دعای شکرگزاری", desc: "برای شکر نعمت‌ها", link: "shokr.html", occasion: "هر زمان" },
+    { id: 'aman', name: "دعای امان از دشمن", desc: "برای امان از شر دشمنان", link: "aman.html", occasion: "هنگام ترس" },
+    { id: 'tavakol', name: "دعای توکل", desc: "برای توکل بر خدا در کارها", link: "tavakol.html", occasion: "هر زمان" },
+    { id: 'afiat', name: "دعای عافیت", desc: "برای سلامتی و عافیت", link: "afiat.html", occasion: "صبح و شام" },
+    { id: 'makarim', name: "دعای مکارم الاخلاق", desc: "برای کسب اخلاق نیکو", link: "makarim.html", occasion: "هر زمان" },
+    { id: 'mujir-short', name: "دعای مجیر (کامل)", desc: "۸۸ بند با اسماء الهی", link: "mujir.html", occasion: "ایام البیض" }
+  ],
+
+  /* ===== ۵. امام زمان (عج) ===== */
+  zaman: [
+    { id: 'tavassol-zaman', name: "دعای توسل به امام زمان", desc: "استغاثه به حضرت ولی‌عصر (عج)", link: "tavassol-zaman.html", occasion: "هر زمان" },
+    { id: 'estegatheh-zaman', name: "دعای استغاثه به امام زمان", desc: "برای رفع گرفتاری شدید", link: "estegatheh-zaman.html", occasion: "هنگام سختی" },
+    { id: 'arrafni', name: "دعای اللهم عرفنی نفسک", desc: "دعای معرفت به امام زمان", link: "arrafni.html", occasion: "هر زمان" },
+    { id: 'salamati-zaman', name: "دعای سلامتی امام زمان (عج)", desc: "برای حفظ و سلامت حضرت", link: "salamati-zaman.html", occasion: "بعد از نماز" },
+    { id: 'ahd', name: "دعای عهد", desc: "تجديد بيعت با امام زمان (عج)", link: "ahd.html", occasion: "هر صبح" },
+    { id: 'nudbah-zaman', name: "دعای ندبه", desc: "برای طلب فرج و ظهور", link: "nudbah.html", occasion: "صبح‌های جمعه" },
+    { id: 'faraj-zaman', name: "دعای فرج", desc: "برای تعجیل فرج امام زمان", link: "faraj.html", occasion: "هر زمان" }
+  ],
+
+  /* ===== ۶. ماه رجب ===== */
+  rajab: [
+    { id: 'rajab-dua', name: "دعای ماه رجب", desc: "برای ورود به ماه پربرکت رجب", link: "rajab-dua.html", occasion: "اول ماه رجب" },
+    { id: 'istighfar-rajab', name: "استغفار ماه رجب", desc: "ذکر مخصوص ماه رجب", link: "istighfar-rajab.html", occasion: "ماه رجب" },
+    { id: 'aamal-rajab', name: "اعمال ماه رجب", desc: "برنامه عملی و معنوی ماه رجب", link: "aamal-rajab.html", occasion: "کل ماه رجب" },
+    { id: 'omreh-rajab', name: "دعای عمره رجب", desc: "برای عمره ماه رجب", link: "omreh-rajab.html", occasion: "ماه رجب" }
+  ],
+
+  /* ===== ۷. حاجت و گشایش ===== */
+  hajat: [
+    { id: 'hajat-tawakkul', name: "دعای توکل", desc: "از قرآن کریم", link: "tavakol.html", occasion: "هنگام ترس" },
+    { id: 'hajat-short', name: "ذکر کوتاه حاجت", desc: "برای برآورده شدن سریع حاجات", link: "hajat.html", occasion: "هر زمان" },
+    { id: 'hajat-tavassol', name: "دعای توسل (برای حاجت)", desc: "توسل به ۱۴ معصوم (ع)", link: "tavassol.html", occasion: "هر زمان" },
+    { id: 'hajat-goshayesh', name: "دعای گشایش (مشلول)", desc: "برای گشایش کارهای بسته", link: "goshayesh.html", occasion: "هنگام گرفتاری" },
+    { id: 'hajat-moghatel', name: "دعای مقاتل بن سلیمان", desc: "دعای سریع‌الاجابه", link: "moghatel.html", occasion: "هر زمان" },
+    { id: 'hajat-yastashir', name: "دعای یستشیر", desc: "دعای پرفضیلت گشایش", link: "yastashir.html", occasion: "هر زمان" }
+  ],
+
+  /* ===== ۸. ماه شعبان ===== */
+  shaban: [
+    { id: 'shaban-dua', name: "دعای ماه شعبان", desc: "برای ماه منسوب به پیامبر (ص)", link: "shaban-dua.html", occasion: "ماه شعبان" },
+    { id: 'munajat-shabaniyeh', name: "مناجات شعبانیه", desc: "مناجات معروف ماه شعبان", link: "shabaniyeh.html", occasion: "ماه شعبان" },
+    { id: 'aamal-shaban', name: "اعمال ماه شعبان", desc: "برنامه عملی و معنوی ماه شعبان", link: "aamal-shaban.html", occasion: "کل ماه شعبان" },
+    { id: 'nimah-shaban', name: "دعای نیمه شعبان", desc: "برای شب نیمه شعبان (ولادت امام زمان)", link: "nimah-shaban.html", occasion: "۱۵ شعبان" }
+  ]
+};
+
+/* ============================================================
+   رندر لیست
+   ============================================================ */
+const urlParams = new URLSearchParams(window.location.search);
+const type = urlParams.get('type') || 'daily';
+
+const titles = {
+  daily: "دعاهای روزانه",
+  problem: "دعاهای مشکل‌گشا",
+  famous: "دعاهای معروف",
+  short: "دعاهای کوتاه",
+  zaman: "امام زمان (عج)",
+  rajab: "ماه رجب",
+  hajat: "حاجت و گشایش",
+  shaban: "ماه شعبان"
+};
+
+document.getElementById('pageTitle').innerText = titles[type] || "لیست دعاها";
+let list = allData[type] || [];
+let filteredList = [...list];
+
+/* تبدیل عدد به فارسی */
+function faNum(n) {
+  return String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+}
+
+function renderList() {
+  const container = document.getElementById('duaList');
+  container.innerHTML = '';
+
+  if (filteredList.length === 0) {
+    container.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg><p>دعایی یافت نشد.</p></div>`;
+    return;
+  }
+
+  filteredList.forEach((item, index) => {
+    const isBm = bookmarks.includes(item.id);
+    const el = document.createElement('a');
+    el.className = 'item';
+    el.href = item.link;
+    el.innerHTML = `
+      <div class="i-num">${faNum(index + 1).padStart(2, '۰')}</div>
+      <div class="i-info">
+        <div class="i-title">${highlight(item.name, searchQuery)}</div>
+        <div class="i-sub">${highlight(item.desc || '', searchQuery)}</div>
+        ${item.occasion ? `<div class="i-meta"><span class="tag">${item.occasion}</span></div>` : ''}
+      </div>
+      <button class="i-bm ${isBm ? 'active' : ''}" data-bm="${item.id}" aria-label="نشان‌گذاری" onclick="event.preventDefault(); event.stopPropagation(); toggleBookmark('${item.id}');">
+        <svg class="icon" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+    `;
+    container.appendChild(el);
+  });
+}
+
+/* ============================================================
+   جستجو
+   ============================================================ */
+document.getElementById('searchInput').oninput = (e) => {
+  searchQuery = e.target.value.trim();
+  if (searchQuery) {
+    filteredList = list.filter(item =>
+      item.name.includes(searchQuery) || (item.desc && item.desc.includes(searchQuery))
+    );
+  } else {
+    filteredList = [...list];
+  }
+  renderList();
+};
+
+function highlight(text, query) {
+  if (!query || !text) return text;
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(text).replace(new RegExp(q, 'gi'), m => `<mark>${m}</mark>`);
+}
+
+/* ============================================================
+   نشان‌گذاری
+   ============================================================ */
+function toggleBookmark(id) {
+  const idx = bookmarks.indexOf(id);
+  if (idx > -1) { bookmarks.splice(idx, 1); toast('از نشان‌شده‌ها حذف شد'); }
+  else { bookmarks.push(id); toast('به نشان‌شده‌ها اضافه شد'); }
+  localStorage.setItem('noor_duas_bm', JSON.stringify(bookmarks));
+  renderList();
+}
+
+/* ============================================================
+   دکمه بازگشت
+   ============================================================ */
+document.getElementById('btnBack').onclick = () => location.href = 'doa.html';
+
+/* ============================================================
+   Toast
+   ============================================================ */
+function toast(msg) {
+  const t = document.getElementById('toast');
+  document.getElementById('toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderList();
+console.log('📋 لیست دعاها | NOOR – بارگذاری شد. نوع:', type, '- تعداد:', list.length);
+</script>
+</body>
+</html>

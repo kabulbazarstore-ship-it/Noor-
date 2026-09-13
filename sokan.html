@@ -1,0 +1,1490 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="سخن نورانی | نــــور NOOR">
+<title>سخن نورانی | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:22px; --fs-fa:15px; --lh-ar:2.3;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+a{color:inherit;text-decoration:none}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.icon-xs{width:14px;height:14px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+/* ============ HEADER ============ */
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.08rem;font-weight:700;
+  color:var(--brand);letter-spacing:.3px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+/* ============ TOP ORNAMENT ============ */
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:16px 14px 18px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:70px;height:70px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:70px;height:70px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.25rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.74rem;color:var(--muted);margin-top:2px}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+/* ============ DAILY CARD ============ */
+.daily-wrap{position:relative;margin-bottom:18px}
+
+.daily-nav-row{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;margin-bottom:10px;
+}
+.daily-date-pill{
+  flex:1;
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  padding:6px 12px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--text2);font-size:.72rem;font-weight:600;
+  text-align:center;
+}
+.daily-date-pill svg{color:var(--gold);width:14px;height:14px}
+.daily-nav-btn{
+  width:38px;height:38px;flex:none;border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.daily-nav-btn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.daily-nav-btn:active{transform:scale(.9)}
+.daily-nav-btn:disabled{opacity:.35;cursor:not-allowed}
+.daily-nav-btn:disabled:hover{background:var(--surface);border-color:var(--gold-border)}
+
+.daily-card{
+  position:relative;overflow:hidden;
+  padding:22px 20px 18px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:0 6px 28px rgba(184,138,59,.10);
+  transition:var(--trans);
+}
+body.dark .daily-card{
+  box-shadow:0 6px 28px rgba(210,172,92,.08);
+}
+.daily-card::before{
+  content:"";position:absolute;
+  top:-40px;left:-40px;width:140px;height:140px;
+  background:radial-gradient(circle,rgba(184,138,59,.09),transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.daily-card::after{
+  content:"";position:absolute;
+  bottom:-40px;right:-40px;width:120px;height:120px;
+  background:radial-gradient(circle,rgba(184,138,59,.07),transparent 70%);
+  border-radius:50%;pointer-events:none;
+}
+.daily-badge{
+  position:relative;z-index:1;
+  display:inline-flex;align-items:center;gap:6px;
+  padding:4px 12px;border-radius:20px;
+  background:var(--gold);color:#fff;
+  font-size:.68rem;font-weight:700;
+  letter-spacing:.5px;
+  margin-bottom:14px;
+  box-shadow:0 3px 10px rgba(184,138,59,.25);
+}
+.daily-badge svg{width:12px;height:12px}
+
+.daily-quote-mark{
+  position:absolute;top:14px;left:16px;
+  font-family:'Amiri',serif;font-size:3rem;
+  color:var(--gold);opacity:.15;line-height:1;
+  pointer-events:none;user-select:none;
+}
+body.dark .daily-quote-mark{opacity:.20}
+
+.daily-arabic{
+  position:relative;z-index:1;
+  font-family:var(--font-ar);
+  font-size:1.3rem;line-height:2.2;
+  color:var(--arabic);
+  text-align:center;
+  margin:8px 4px 14px;
+  font-weight:400;
+}
+.daily-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  width:60px;margin:0 auto 14px;
+  position:relative;z-index:1;
+}
+.daily-translation{
+  position:relative;z-index:1;
+  font-family:var(--font-fa);
+  font-size:.92rem;line-height:1.95;
+  color:var(--translation);
+  text-align:justify;
+  padding:0 6px 0 14px;
+  border-right:3px solid var(--gold-border);
+}
+
+.daily-footer{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:space-between;
+  gap:10px;flex-wrap:wrap;
+  margin-top:18px;padding-top:14px;
+  border-top:1px dashed var(--gold-border);
+}
+.daily-source-info{
+  display:flex;flex-direction:column;gap:3px;min-width:0;
+}
+.daily-source-info .ds-speaker{
+  font-family:'Amiri',serif;font-size:.88rem;font-weight:700;color:var(--gold);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.daily-source-info .ds-speaker svg{width:12px;height:12px}
+.daily-source-info .ds-ref{
+  font-size:.68rem;color:var(--muted);
+  display:inline-flex;align-items:center;gap:5px;
+}
+.daily-source-info .ds-ref svg{width:11px;height:11px}
+
+.daily-actions{
+  display:flex;gap:6px;flex-wrap:wrap;
+}
+.daily-actions button{
+  width:36px;height:36px;border-radius:50%;
+  background:var(--surface);border:1px solid var(--divider);
+  color:var(--muted);transition:var(--trans);
+}
+.daily-actions button:hover{color:var(--gold);border-color:var(--gold-border);background:var(--gold-soft)}
+.daily-actions button:active{transform:scale(.9)}
+.daily-actions button.fav-active{color:#e74c3c;border-color:rgba(231,76,60,.3);background:rgba(231,76,60,.06)}
+.daily-actions button.fav-active svg{fill:#e74c3c}
+
+.daily-dots{
+  position:relative;z-index:1;
+  display:flex;justify-content:center;gap:4px;
+  margin-top:14px;
+}
+.daily-dots .dot{
+  width:5px;height:5px;border-radius:50%;
+  background:var(--gold-border);transition:var(--trans);
+}
+.daily-dots .dot.active{background:var(--gold);width:18px;border-radius:5px}
+
+/* ============ SEARCH ============ */
+.search-box{position:relative;margin-bottom:12px}
+.search-box input{
+  width:100%;padding:11px 44px 11px 16px;border-radius:30px;
+  border:1px solid var(--gold-border);background:var(--surface);
+  color:var(--text);font-family:inherit;font-size:.85rem;outline:none;transition:var(--trans);
+}
+.search-box input:focus{border-color:var(--gold);box-shadow:0 0 0 3px var(--gold-soft)}
+.search-box .search-icon{
+  position:absolute;right:16px;top:50%;transform:translateY(-50%);
+  color:var(--muted);pointer-events:none;
+}
+
+/* ============ TABS ============ */
+.tabs{
+  display:flex;gap:6px;margin-bottom:12px;
+  overflow-x:auto;padding-bottom:4px;
+  scrollbar-width:none;
+  -webkit-overflow-scrolling:touch;
+}
+.tabs::-webkit-scrollbar{display:none}
+.tab-btn{
+  flex:none;padding:7px 14px;border-radius:20px;
+  background:var(--surface);border:1px solid var(--divider);color:var(--text2);
+  font-size:.72rem;font-weight:600;cursor:pointer;transition:var(--trans);
+  display:inline-flex;align-items:center;gap:5px;white-space:nowrap;
+}
+.tab-btn:hover{color:var(--gold);border-color:var(--gold-border)}
+.tab-btn.active{color:#fff;background:var(--gold);border-color:var(--gold)}
+.tab-btn svg{width:13px;height:13px;flex:none}
+
+.topics-row{
+  display:none;flex-wrap:wrap;gap:6px;
+  padding:10px 12px;margin-bottom:12px;
+  border-radius:var(--radius-sm);
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+}
+.topics-row.show{display:flex}
+.topic-chip{
+  padding:5px 12px;border-radius:16px;
+  background:var(--surface);border:1px solid var(--divider);
+  color:var(--text2);font-size:.68rem;font-weight:600;cursor:pointer;
+  transition:var(--trans);
+}
+.topic-chip:hover{color:var(--gold);border-color:var(--gold-border)}
+.topic-chip.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+
+/* ============ LIST CARDS ============ */
+.list{display:flex;flex-direction:column;gap:10px}
+.item-card{
+  position:relative;
+  padding:16px 16px 14px;
+  background:var(--surface);border:1px solid var(--gold-border);
+  border-radius:var(--radius);box-shadow:var(--shadow-sm);
+  cursor:pointer;transition:var(--trans);
+}
+.item-card:hover{border-color:var(--gold);transform:translateX(-3px);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.item-card:active{transform:scale(.98)}
+.item-cat{
+  position:absolute;top:12px;left:12px;
+  padding:2px 9px;border-radius:10px;
+  background:var(--gold-soft);color:var(--gold);
+  font-size:.6rem;font-weight:700;
+  border:1px solid var(--gold-border);
+}
+.item-arabic{
+  font-family:var(--font-ar);
+  font-size:1rem;line-height:2;
+  color:var(--arabic);text-align:center;
+  margin:6px 0 10px;
+}
+.item-translation{
+  font-size:.8rem;line-height:1.9;
+  color:var(--translation);text-align:justify;
+  padding-right:8px;border-right:2px solid var(--gold-border);
+}
+.item-meta{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:8px;flex-wrap:wrap;
+  margin-top:12px;padding-top:10px;
+  border-top:1px dashed var(--divider);
+}
+.item-meta .im-left{
+  display:flex;flex-direction:column;gap:2px;min-width:0;
+}
+.item-meta .im-speaker{
+  font-family:'Amiri',serif;font-size:.78rem;font-weight:700;color:var(--gold);
+}
+.item-meta .im-source{font-size:.65rem;color:var(--muted)}
+.item-meta .im-actions{display:flex;gap:6px}
+.item-meta .im-actions button{
+  width:30px;height:30px;border-radius:50%;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);transition:var(--trans);
+}
+.item-meta .im-actions button:hover{color:var(--gold);border-color:var(--gold-border)}
+.item-meta .im-actions button.fav-active{color:#e74c3c}
+.item-meta .im-actions button.fav-active svg{fill:#e74c3c}
+
+/* ============ EMPTY ============ */
+.empty-msg{
+  text-align:center;padding:40px 20px;color:var(--muted);font-size:.85rem;
+  display:flex;flex-direction:column;align-items:center;gap:12px;
+}
+.empty-msg svg{width:48px;height:48px;opacity:.3}
+
+/* ============ MODALS ============ */
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;padding:20px 18px 26px;
+  box-shadow:var(--shadow);animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;border-bottom:1px solid var(--divider);
+}
+.modal-head h3{
+  display:flex;align-items:center;gap:8px;
+  font-size:1rem;color:var(--text);
+}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.modal-arabic{
+  font-family:var(--font-ar);font-size:1.15rem;line-height:2.2;
+  color:var(--arabic);text-align:center;
+  padding:10px 4px;margin-bottom:10px;
+}
+.modal-divider{
+  height:1px;background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  width:60px;margin:0 auto 14px;
+}
+.modal-translation{
+  font-size:.85rem;line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding-right:10px;border-right:3px solid var(--gold-border);
+  margin-bottom:16px;
+}
+.modal-detail{
+  display:grid;grid-template-columns:1fr 1fr;gap:10px;
+  background:var(--surface2);padding:14px 16px;
+  border-radius:var(--radius-sm);border:1px solid var(--gold-border);
+  margin-bottom:14px;
+}
+.modal-detail > div{
+  display:flex;flex-direction:column;gap:3px;
+  min-width:0;
+}
+.modal-detail .label{
+  font-size:.66rem;color:var(--muted);font-weight:600;
+  display:inline-flex;align-items:center;gap:4px;
+}
+.modal-detail .label svg{width:11px;height:11px}
+.modal-detail .value{
+  font-size:.82rem;font-weight:700;color:var(--text);
+  font-family:'Amiri',serif;
+}
+.modal-actions{
+  display:flex;gap:8px;flex-wrap:wrap;
+  padding-top:14px;border-top:1px solid var(--divider);
+}
+.modal-actions button{
+  flex:1;min-width:80px;
+  padding:10px 14px;border-radius:20px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.75rem;font-weight:600;
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+}
+.modal-actions button:hover{color:var(--gold);border-color:var(--gold-border);background:var(--gold-soft)}
+.modal-actions button.fav-active{color:#e74c3c;border-color:rgba(231,76,60,.3);background:rgba(231,76,60,.06)}
+.modal-actions button.fav-active svg{fill:#e74c3c}
+.modal-actions button svg{width:15px;height:15px;flex:none}
+
+/* ============ TOAST ============ */
+.toast{
+  position:fixed;left:50%;bottom:80px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;transition:all .35s ease;
+  font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+/* ============ BOTTOM NAV ============ */
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;color:var(--muted);
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+  background:none;border:0;cursor:pointer;
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+/* ============ SETTINGS MODAL ============ */
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+@media(max-width:480px){
+  :root{--fs-ar:20px;--fs-fa:14px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.15rem}
+  .daily-card{padding:18px 16px 16px}
+  .daily-arabic{font-size:1.15rem;line-height:2}
+  .daily-nav-btn{width:34px;height:34px}
+  .item-card{padding:14px}
+  .modal{padding:18px 16px 22px}
+  .modal-detail{grid-template-columns:1fr;gap:8px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1>سخن نورانی</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">سخن نورانی</div>
+      <div class="orn-sub">گنجینه‌ای از احادیث و سخنان معصومین (ع)</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <!-- ========== DAILY CARD ========== -->
+    <section class="daily-wrap">
+      <div class="daily-nav-row">
+        <button class="daily-nav-btn" id="dailyPrev" aria-label="سخن قبلی">
+          <svg class="icon-sm" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+        <div class="daily-date-pill">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          <span id="dailyDate">امروز</span>
+        </div>
+        <button class="daily-nav-btn" id="dailyNext" aria-label="سخن بعدی">
+          <svg class="icon-sm" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+      </div>
+
+      <article class="daily-card" id="dailyCard">
+        <div class="daily-quote-mark">”</div>
+        <div class="daily-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+          سخن نورانی امروز
+        </div>
+
+        <div class="daily-arabic" id="dailyArabic">...</div>
+        <div class="daily-divider"></div>
+        <div class="daily-translation" id="dailyTranslation">...</div>
+
+        <div class="daily-footer">
+          <div class="daily-source-info">
+            <span class="ds-speaker">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              <span id="dailySpeaker">...</span>
+            </span>
+            <span class="ds-ref">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              <span id="dailySource">...</span>
+            </span>
+          </div>
+
+          <div class="daily-actions">
+            <button id="dailyFav" aria-label="افزودن به برگزیده">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+            </button>
+            <button id="dailyCopy" aria-label="کپی متن">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button id="dailyShare" aria-label="اشتراک‌گذاری">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+            </button>
+            <button id="dailyOpen" aria-label="مشاهده کامل">
+              <svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="daily-dots" id="dailyDots"></div>
+      </article>
+    </section>
+
+    <!-- ========== SEARCH ========== -->
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجو در متن، گوینده، منبع یا موضوع...">
+      <span class="search-icon">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      </span>
+    </div>
+
+    <!-- ========== TABS ========== -->
+    <nav class="tabs" id="tabsNav">
+      <button class="tab-btn active" data-filter="all">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>
+        همه
+      </button>
+      <button class="tab-btn" data-filter="prophet">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v6"/><path d="M8 8c0 2 2 4 4 4s4-2 4-4"/><circle cx="12" cy="17" r="4"/></svg>
+        پیامبر (ص)
+      </button>
+      <button class="tab-btn" data-filter="zahra">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v10"/></svg>
+        حضرت زهرا (س)
+      </button>
+      <button class="tab-btn" data-filter="imams">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 4 7v6c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7z"/></svg>
+        ائمه (ع)
+      </button>
+      <button class="tab-btn" data-filter="ulama">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        علما
+      </button>
+      <button class="tab-btn" data-filter="topics" id="tabTopics">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        موضوعات
+      </button>
+    </nav>
+
+    <!-- ========== TOPICS ========== -->
+    <div class="topics-row" id="topicsRow"></div>
+
+    <!-- ========== LIST ========== -->
+    <div class="list" id="listContainer"></div>
+
+  </div>
+</div>
+
+<!-- ================= BOTTOM NAV ================= -->
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn active" href="sokhan.html">
+    <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+    <span>سخن</span>
+  </a>
+  <a class="nav-btn" href="taqibat.html">
+    <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1.5" fill="currentColor"/></svg>
+    <span>اذکار</span>
+  </a>
+</nav>
+
+<!-- ================= INFO MODAL ================= -->
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره سخن نورانی
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="padding:14px 16px;background:var(--surface2);border:1px solid var(--gold-border);border-radius:12px;margin-bottom:10px;">
+      <p style="font-size:.82rem;line-height:2;color:var(--text2);">
+        <strong style="color:var(--gold);">سخن نورانی</strong> گنجینه‌ای از احادیث، سخنان معصومین (علیهم‌السلام) و بزرگان دین است که با هدف ترویج معارف اهل بیت (ع) گردآوری شده است. هر روز یک سخن نورانی برای شما انتخاب می‌شود تا چراغ راه زندگی‌تان باشد.
+      </p>
+    </div>
+    <div style="padding:14px 16px;background:var(--surface2);border:1px solid var(--gold-border);border-radius:12px;margin-bottom:10px;">
+      <p style="font-size:.78rem;line-height:2;color:var(--text2);">
+        <strong style="color:var(--gold);">منابع:</strong> نهج‌البلاغه، الکافی، تحف العقول، صحیفه سجادیه، بحارالأنوار، غررالحکم، مکارم الاخلاق و توقیع شریف.
+      </p>
+    </div>
+    <div style="padding:14px 16px;background:var(--surface2);border:1px solid var(--gold-border);border-radius:12px;">
+      <p style="font-size:.78rem;line-height:2;color:var(--text2);">
+        <strong style="color:var(--gold);">راهنما:</strong> از دکمه‌های کنار کارت «امروز» می‌توانید بین سخنان حرکت کنید، به برگزیده‌ها اضافه کنید، متن را کپی یا به اشتراک بگذارید.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SETTINGS MODAL ================= -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن فارسی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۲</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۵</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.3">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ================= DETAIL MODAL ================= -->
+<div class="modal-bg" id="modalDetail">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+        سخن کامل
+      </h3>
+      <button class="modal-close" data-close="modalDetail">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="modal-arabic" id="mdArabic">...</div>
+    <div class="modal-divider"></div>
+    <div class="modal-translation" id="mdTranslation">...</div>
+
+    <div class="modal-detail">
+      <div>
+        <span class="label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          گوینده
+        </span>
+        <span class="value" id="mdSpeaker">...</span>
+      </div>
+      <div>
+        <span class="label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          موضوع
+        </span>
+        <span class="value" id="mdCategory">...</span>
+      </div>
+      <div>
+        <span class="label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          منبع
+        </span>
+        <span class="value" id="mdSource">...</span>
+      </div>
+      <div>
+        <span class="label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          شماره
+        </span>
+        <span class="value" id="mdRef">...</span>
+      </div>
+    </div>
+
+    <div class="modal-actions">
+      <button id="mdFav">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        برگزیده
+      </button>
+      <button id="mdCopy">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+        کپی
+      </button>
+      <button id="mdShare">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+        اشتراک
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | سخن نورانی
+   ============================================================ */
+(function(){
+  'use strict';
+
+  const $ = s => document.querySelector(s);
+  const $$ = s => document.querySelectorAll(s);
+  const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+  /* ============================================================
+     SPEECHES DATA
+     ============================================================ */
+  const SPEECHES = [
+    { id:"prophet-001", speaker:"پیامبر اکرم (ص)", category:"اخلاق",
+      arabic:"مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيَقُلْ خَيْراً أَوْ لِيَصْمُتْ",
+      translation:"هر کس به خدا و روز قیامت ایمان دارد، باید سخن نیکو گوید یا خاموش کند.",
+      source:"اصول کافی", ref:"ج۲، ص۱۱۵", isDaily:true },
+
+    { id:"imam-ali-001", speaker:"امام علی (ع)", category:"علم",
+      arabic:"النَّاسُ أَعْدَاءُ مَا جَهِلُوا",
+      translation:"مردم دشمن چیزی هستند که نمی‌دانند.",
+      source:"نهج‌البلاغه", ref:"حکمت ۱۷۲", isDaily:true },
+
+    { id:"imam-ali-002", speaker:"امام علی (ع)", category:"صبر",
+      arabic:"الصَّبْرُ يُمِيتُ الْحَزَنَ",
+      translation:"صبر، اندوه را می‌میراند.",
+      source:"غررالحکم", ref:"ج۱، ص۴۱۲", isDaily:false },
+
+    { id:"imam-sajjad-001", speaker:"امام سجاد (ع)", category:"والدین",
+      arabic:"وَ اخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ",
+      translation:"و بال فروتنی را از روی مهربانی برای پدر و مادر بگستران.",
+      source:"صحیفه سجادیه", ref:"دعای ۲۴", isDaily:true },
+
+    { id:"imam-sadiq-001", speaker:"امام جعفر صادق (ع)", category:"دوستی",
+      arabic:"أَحْسِنُوا ظُنُونَکُمْ بِإِخْوَانِکُمْ",
+      translation:"به برادران دینی خود گمان نیک ببرید.",
+      source:"اصول کافی", ref:"ج۲، ص۳۶۲", isDaily:false },
+
+    { id:"imam-baqir-001", speaker:"امام محمد باقر (ع)", category:"عدالت",
+      arabic:"لَا يُعْرَفُ أَهْلُ الْبَاطِلِ إِلَّا بِأَهْلِ الْحَقِّ",
+      translation:"اهل باطل شناخته نمی‌شوند مگر به وسیله اهل حق.",
+      source:"تحف العقول", ref:"ص۲۹۴", isDaily:false },
+
+    { id:"imam-ridha-001", speaker:"امام رضا (ع)", category:"علم",
+      arabic:"مَا عُبِدَ اللَّهُ بِشَيْءٍ أَفْضَلَ مِنَ الْفِقْهِ فِي الدِّينِ",
+      translation:"خداوند به چیزی بهتر از فهم عمیق در دین عبادت نشده است.",
+      source:"عیون اخبار الرضا", ref:"ج۱، ص۲۴۰", isDaily:true },
+
+    { id:"zahra-001", speaker:"حضرت فاطمه زهرا (س)", category:"عبادت",
+      arabic:"أَصْبَحْتُ لَا أَعْبُدُ اللَّهَ حَتَّىٰ أُحِبَّ مَنْ أَحَبَّهُ",
+      translation:"چنان نیست که خدا را نپرستم مگر اینکه دوست بدارم کسی را که او دوست دارد.",
+      source:"مستدرک الوسائل", ref:"ج۲، ص۲۲۰", isDaily:false },
+
+    { id:"imam-hasan-001", speaker:"امام حسن مجتبی (ع)", category:"اخلاق",
+      arabic:"إِنَّ لِلَّهِ عِبَادًا خَصَّهُمْ بِالنِّعَمِ فَأَبْقَوْهَا فِي الْمَسَاكِنِ",
+      translation:"خداوند بندگانی دارد که نعمت‌ها را برای همیشه در خانه‌های خود نگه می‌دارند.",
+      source:"تحف العقول", ref:"ص۲۳۵", isDaily:false },
+
+    { id:"imam-husayn-001", speaker:"امام حسین (ع)", category:"تواضع",
+      arabic:"إِنَّ أَكْرَمَ النَّاسِ مَنْ تَوَاضَعَ عَنْ عُلُوٍّ",
+      translation:"گرامی‌ترین مردم کسی است که از بلندای مقام خود فروتنی کند.",
+      source:"بحارالانوار", ref:"ج۷۵، ص۱۲۱", isDaily:false },
+
+    { id:"imam-kadhim-001", speaker:"امام موسی کاظم (ع)", category:"دعا",
+      arabic:"إِنَّ اللَّهَ يُحِبُّ الدُّعَاءَ فَأَكْثِرُوا الدُّعَاءَ",
+      translation:"خداوند دعا را دوست دارد، پس بسیار دعا کنید.",
+      source:"الکافی", ref:"ج۲، ص۴۷۸", isDaily:false },
+
+    { id:"imam-hadi-001", speaker:"امام علی نقی (ع)", category:"دنیا",
+      arabic:"الدُّنْيَا سُوقٌ يَرْبَحُ فِيهَا قَوْمٌ وَ يَخْسَرُ آخَرُونَ",
+      translation:"دنیا بازاری است که گروهی در آن سود می‌برند و گروهی دیگر زیان می‌کنند.",
+      source:"تحف العقول", ref:"ص۴۸۳", isDaily:false },
+
+    { id:"imam-askari-001", speaker:"امام حسن عسکری (ع)", category:"علم",
+      arabic:"اَلْفَضِيلَةُ لَا تَكُونُ إِلَّا بِالْعِلْمِ وَ الْعَمَلِ",
+      translation:"فضیلت (برتری) جز با علم و عمل حاصل نمی‌شود.",
+      source:"موسوعة الامام العسکری", ref:"ص۱۱۲", isDaily:false },
+
+    { id:"imam-mahdi-001", speaker:"امام مهدی (عج)", category:"انتظار",
+      arabic:"وَ أَمَّا الْحَوَادِثُ الْوَاقِعَةُ فَارْجِعُوا فِيهَا إِلَى رُوَاتِهِمْ",
+      translation:"و اما رویدادهای پیش‌آمده، در آنها به راویان حدیث ما (فقها) مراجعه کنید.",
+      source:"توقیع شریف", ref:"احتجاج طبرسی، ج۲، ص۲۸۳", isDaily:true },
+
+    { id:"alim-motahhari-001", speaker:"علما و بزرگان", category:"اخلاق",
+      arabic:null,
+      translation:"انسان موجودی است که با انتخاب خود، سرنوشت خویش را می‌سازد.",
+      source:"استاد مطهری", ref:"مجموعه آثار، ج۲۳", isDaily:false },
+
+    { id:"imam-ali-003", speaker:"امام علی (ع)", category:"توکل",
+      arabic:"مَنْ تَوَكَّلَ عَلَى اللَّهِ كَفَاهُ اللَّهُ مُؤْنَتَهُ",
+      translation:"هر کس بر خدا توکل کند، خداوند نیازش را کفایت می‌کند.",
+      source:"غررالحکم", ref:"ج۵، ص۳۲۱", isDaily:false },
+
+    { id:"imam-sajjad-002", speaker:"امام سجاد (ع)", category:"توبه",
+      arabic:"وَ تَجَاوَزْ عَنْ سَيِّئَاتِی بِفَضْلِكَ",
+      translation:"و به فضل خود از گناهان من درگذر.",
+      source:"صحیفه سجادیه", ref:"دعای ۳۱", isDaily:false },
+
+    { id:"prophet-002", speaker:"پیامبر اکرم (ص)", category:"احسان",
+      arabic:"إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ",
+      translation:"من برانگیخته شدم تا بزرگواری‌های اخلاقی را کامل کنم.",
+      source:"مکارم الاخلاق", ref:"ص۸", isDaily:true },
+
+    { id:"imam-sadiq-002", speaker:"امام جعفر صادق (ع)", category:"نماز",
+      arabic:"أَفْضَلُ الْأَعْمَالِ الصَّلَاةُ فِي أَوَّلِ وَقْتِهَا",
+      translation:"برترین اعمال، نماز در اول وقت آن است.",
+      source:"الکافی", ref:"ج۳، ص۲۷۰", isDaily:false },
+
+    { id:"imam-ridha-002", speaker:"امام رضا (ع)", category:"والدین",
+      arabic:"عُقُوقُ الْوَالِدَيْنِ مِنَ الْكَبَائِرِ",
+      translation:"عاق والدین از گناهان کبیره است.",
+      source:"فقیه الرضا", ref:"ص۳۳۵", isDaily:false }
+  ];
+
+  /* ============================================================
+     SVG ICONS
+     ============================================================ */
+  const SVG = {
+    heartOutline:`<svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    heartFilled:`<svg class="icon-sm" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>`,
+    copy:`<svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>`,
+    share:`<svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>`,
+    open:`<svg class="icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h6v6"/><path d="M10 14 21 3"/><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/></svg>`,
+    user:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>`,
+    book:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>`,
+    info:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>`,
+    empty:`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>`
+  };
+
+  /* ============================================================
+     STATE
+     ============================================================ */
+  const FAV_KEY = 'noor_sokan_favs';
+  const DAILY_INDEX_KEY = 'noor_sokan_daily_index';
+  const THEME_KEY = 'noor_theme';
+
+  let favorites = [];
+  try{ favorites = JSON.parse(localStorage.getItem(FAV_KEY) || '[]'); }catch(e){ favorites = []; }
+
+  let dailyIndex = 0;
+  try{ dailyIndex = parseInt(localStorage.getItem(DAILY_INDEX_KEY) || '0') || 0; }catch(e){}
+
+  let currentFilter = 'all';
+  let currentTopic = null;
+  let currentSearch = '';
+  let currentModalId = null;
+
+  const dailySpeeches = SPEECHES.filter(s => s.isDaily);
+  if (dailyIndex >= dailySpeeches.length) dailyIndex = 0;
+
+  /* ============================================================
+     HELPERS
+     ============================================================ */
+  function isFav(id){ return favorites.includes(id); }
+
+  function toggleFav(id){
+    const i = favorites.indexOf(id);
+    if(i > -1) favorites.splice(i, 1); else favorites.push(id);
+    try{ localStorage.setItem(FAV_KEY, JSON.stringify(favorites)); }catch(e){}
+    return favorites.includes(id);
+  }
+
+  function toast(msg){
+    const t = $('#toast');
+    $('#toastText').textContent = msg;
+    t.classList.add('show');
+    clearTimeout(window._tt);
+    window._tt = setTimeout(() => t.classList.remove('show'), 2200);
+  }
+
+  function getShamsiDate(){
+    try{
+      const now = new Date();
+      const gY = now.getFullYear(), gM = now.getMonth()+1, gD = now.getDate();
+      const gdm = [0,31,59,90,120,151,181,212,243,273,304,334];
+      const gy2 = gM > 2 ? gY + 1 : gY;
+      let days = 355666 + (365*gY) + Math.floor((gy2+3)/4) - Math.floor((gy2+99)/100) + Math.floor((gy2+399)/400) + gD + gdm[gM-1];
+      let jy = -1595 + 33*Math.floor(days/12053);
+      days %= 12053;
+      jy += 4*Math.floor(days/1461);
+      days %= 1461;
+      if(days > 365){ jy += Math.floor((days-1)/365); days = (days-1)%365; }
+      let jm, jd;
+      if(days < 186){ jm = 1 + Math.floor(days/31); jd = 1 + (days%31); }
+      else{ jm = 7 + Math.floor((days-186)/30); jd = 1 + ((days-186)%30); }
+      const months = ['حمل','ثور','جوزا','سرطان','اسد','سنبله','میزان','عقرب','قوس','جدی','دلو','حوت'];
+      const weekdays = ['یکشنبه','دوشنبه','سه‌شنبه','چهارشنبه','پنجشنبه','جمعه','شنبه'];
+      const wd = weekdays[now.getDay()];
+      return wd + ' • ' + faNum(jd) + ' ' + months[jm-1] + ' ' + faNum(jy);
+    }catch(e){ return 'امروز'; }
+  }
+
+  /* ============================================================
+     DAILY CARD
+     ============================================================ */
+  function renderDaily(){
+    if(dailySpeeches.length === 0) return;
+    const item = dailySpeeches[dailyIndex];
+
+    $('#dailyDate').textContent = getShamsiDate();
+    $('#dailyArabic').textContent = item.arabic || '(متن عربی در دسترس نیست)';
+    $('#dailyTranslation').textContent = item.translation;
+    $('#dailySpeaker').textContent = item.speaker;
+    $('#dailySource').textContent = item.source;
+
+    const favBtn = $('#dailyFav');
+    if(isFav(item.id)){
+      favBtn.classList.add('fav-active');
+      favBtn.innerHTML = SVG.heartFilled;
+    } else {
+      favBtn.classList.remove('fav-active');
+      favBtn.innerHTML = SVG.heartOutline;
+    }
+
+    // Dots
+    const dots = $('#dailyDots');
+    let dotsHtml = '';
+    dailySpeeches.forEach((_, i) => {
+      dotsHtml += `<span class="dot ${i === dailyIndex ? 'active' : ''}"></span>`;
+    });
+    dots.innerHTML = dotsHtml;
+
+    // Buttons
+    $('#dailyPrev').disabled = false;
+    $('#dailyNext').disabled = false;
+
+    // store current id
+    favBtn.dataset.id = item.id;
+    $('#dailyCopy').dataset.id = item.id;
+    $('#dailyShare').dataset.id = item.id;
+    $('#dailyOpen').dataset.id = item.id;
+  }
+
+  function dailyPrev(){
+    dailyIndex = (dailyIndex - 1 + dailySpeeches.length) % dailySpeeches.length;
+    try{ localStorage.setItem(DAILY_INDEX_KEY, dailyIndex); }catch(e){}
+    renderDaily();
+  }
+
+  function dailyNext(){
+    dailyIndex = (dailyIndex + 1) % dailySpeeches.length;
+    try{ localStorage.setItem(DAILY_INDEX_KEY, dailyIndex); }catch(e){}
+    renderDaily();
+  }
+
+  /* ============================================================
+     RENDER LIST
+     ============================================================ */
+  function getFiltered(){
+    let list = [...SPEECHES];
+
+    if(currentFilter === 'prophet') list = list.filter(s => s.speaker.includes('پیامبر'));
+    else if(currentFilter === 'zahra') list = list.filter(s => s.speaker.includes('زهرا'));
+    else if(currentFilter === 'imams') list = list.filter(s => s.speaker.includes('امام'));
+    else if(currentFilter === 'ulama') list = list.filter(s => s.speaker.includes('علما'));
+    else if(currentFilter === 'topics' && currentTopic){
+      list = list.filter(s => s.category === currentTopic);
+    }
+
+    if(currentSearch.trim()){
+      const q = currentSearch.trim().toLowerCase();
+      list = list.filter(s =>
+        (s.arabic && s.arabic.includes(q)) ||
+        (s.translation && s.translation.includes(q)) ||
+        (s.speaker && s.speaker.includes(q)) ||
+        (s.category && s.category.includes(q)) ||
+        (s.source && s.source.includes(q))
+      );
+    }
+
+    return list;
+  }
+
+  function renderList(){
+    const c = $('#listContainer');
+    const list = getFiltered();
+
+    if(list.length === 0){
+      c.innerHTML = `<div class="empty-msg">${SVG.empty}<span>سخنی با این فیلتر یا جستجو یافت نشد</span></div>`;
+      return;
+    }
+
+    let html = '';
+    list.forEach(item => {
+      const fav = isFav(item.id);
+      html += `
+        <div class="item-card" onclick="openDetail('${item.id}')">
+          <span class="item-cat">${item.category}</span>
+          ${item.arabic ? `<div class="item-arabic">${item.arabic}</div>` : ''}
+          <div class="item-translation">${item.translation}</div>
+          <div class="item-meta">
+            <div class="im-left">
+              <span class="im-speaker">${item.speaker}</span>
+              <span class="im-source">${item.source}${item.ref ? ' • ' + item.ref : ''}</span>
+            </div>
+            <div class="im-actions">
+              <button class="${fav ? 'fav-active' : ''}" onclick="event.stopPropagation(); handleFav('${item.id}', this)" aria-label="برگزیده">
+                ${fav ? SVG.heartFilled : SVG.heartOutline}
+              </button>
+              <button onclick="event.stopPropagation(); copyItem('${item.id}')" aria-label="کپی">
+                ${SVG.copy}
+              </button>
+              <button onclick="event.stopPropagation(); shareItem('${item.id}')" aria-label="اشتراک">
+                ${SVG.share}
+              </button>
+            </div>
+          </div>
+        </div>
+      `;
+    });
+    c.innerHTML = html;
+  }
+
+  /* ============================================================
+     TABS / TOPICS
+     ============================================================ */
+  function renderTopics(){
+    const topics = [...new Set(SPEECHES.map(s => s.category))].sort();
+    const row = $('#topicsRow');
+    let html = '';
+    topics.forEach(t => {
+      html += `<button class="topic-chip ${currentTopic === t ? 'active' : ''}" onclick="selectTopic('${t}')">${t}</button>`;
+    });
+    row.innerHTML = html;
+  }
+
+  /* ============================================================
+     MODAL DETAIL
+     ============================================================ */
+  function openDetail(id){
+    const item = SPEECHES.find(s => s.id === id);
+    if(!item) return;
+    currentModalId = id;
+
+    $('#mdArabic').textContent = item.arabic || '(متن عربی در دسترس نیست)';
+    $('#mdTranslation').textContent = item.translation;
+    $('#mdSpeaker').textContent = item.speaker;
+    $('#mdCategory').textContent = item.category;
+    $('#mdSource').textContent = item.source;
+    $('#mdRef').textContent = item.ref || '—';
+
+    const favBtn = $('#mdFav');
+    if(isFav(id)){
+      favBtn.classList.add('fav-active');
+      favBtn.querySelector('svg').outerHTML = SVG.heartFilled;
+    } else {
+      favBtn.classList.remove('fav-active');
+      favBtn.querySelector('svg').outerHTML = SVG.heartOutline;
+    }
+
+    $('#modalDetail').classList.add('show');
+  }
+
+  function closeModal(el){
+    el.classList.remove('show');
+  }
+
+  /* ============================================================
+     FAV / COPY / SHARE
+     ============================================================ */
+  function handleFav(id, btn){
+    const isNow = toggleFav(id);
+    if(btn){
+      btn.classList.toggle('fav-active', isNow);
+      btn.innerHTML = isNow ? SVG.heartFilled : SVG.heartOutline;
+    }
+    // update daily
+    if(dailySpeeches.some(s => s.id === id)) renderDaily();
+    // update modal
+    if(currentModalId === id){
+      const mb = $('#mdFav');
+      mb.classList.toggle('fav-active', isNow);
+      mb.querySelector('svg').outerHTML = isNow ? SVG.heartFilled : SVG.heartOutline;
+    }
+    toast(isNow ? 'به برگزیده‌ها اضافه شد' : 'از برگزیده‌ها حذف شد');
+  }
+
+  function getText(id){
+    const item = SPEECHES.find(s => s.id === id);
+    if(!item) return '';
+    return `${item.arabic ? item.arabic + '\n\n' : ''}${item.translation}\n\n— ${item.speaker}\nمنبع: ${item.source}${item.ref ? ' • ' + item.ref : ''}`;
+  }
+
+  function copyItem(id){
+    const text = getText(id);
+    if(!text) return;
+    if(navigator.clipboard){
+      navigator.clipboard.writeText(text).then(() => toast('متن کپی شد')).catch(fallbackCopy);
+    } else fallbackCopy();
+
+    function fallbackCopy(){
+      const ta = document.createElement('textarea');
+      ta.value = text;
+      document.body.appendChild(ta);
+      ta.select();
+      try{ document.execCommand('copy'); toast('متن کپی شد'); }catch(e){ toast('کپی ناموفق'); }
+      document.body.removeChild(ta);
+    }
+  }
+
+  function shareItem(id){
+    const text = getText(id);
+    if(!text) return;
+    if(navigator.share){
+      navigator.share({ title: 'سخن نورانی — نور', text }).catch(()=>{});
+    } else {
+      copyItem(id);
+      toast('متن برای اشتراک کپی شد');
+    }
+  }
+
+  /* ============================================================
+     THEME
+     ============================================================ */
+  const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+  const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+  function applyTheme(dark){
+    document.body.classList.toggle('dark', dark);
+    try{ localStorage.setItem(THEME_KEY, dark ? 'dark' : 'light'); }catch(e){}
+    $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+  }
+
+  let savedTheme = 'light';
+  try{ savedTheme = localStorage.getItem(THEME_KEY) || 'light'; }catch(e){}
+  applyTheme(savedTheme === 'dark');
+  $('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+  /* ============================================================
+     SETTINGS
+     ============================================================ */
+  let arSize = 22, faSize = 15, lineHeight = '2.3';
+  try{
+    arSize = parseInt(localStorage.getItem('noor_ar_size') || '22');
+    faSize = parseInt(localStorage.getItem('noor_fa_size') || '15');
+    lineHeight = localStorage.getItem('noor_lh') || '2.3';
+  }catch(e){}
+
+  const fontAr = (() => { try{ return localStorage.getItem('noor_font_ar') || 'amiri'; }catch(e){ return 'amiri'; } })();
+  const fontFa = (() => { try{ return localStorage.getItem('noor_font_fa') || 'vazir'; }catch(e){ return 'vazir'; } })();
+
+  function applySettings(){
+    document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+    document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+    document.documentElement.style.setProperty('--lh-ar', lineHeight);
+    const arEl = $('#arSizeVal'); if(arEl) arEl.textContent = faNum(arSize);
+    const faEl = $('#faSizeVal'); if(faEl) faEl.textContent = faNum(faSize);
+    try{
+      localStorage.setItem('noor_ar_size', arSize);
+      localStorage.setItem('noor_fa_size', faSize);
+      localStorage.setItem('noor_lh', lineHeight);
+    }catch(e){}
+  }
+
+  $$('[data-ar-step]').forEach(b => b.onclick = () => {
+    arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+    applySettings();
+  });
+  $$('[data-fa-step]').forEach(b => b.onclick = () => {
+    faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+    applySettings();
+  });
+  $$('[data-lh]').forEach(b => {
+    if(b.dataset.lh === lineHeight) b.classList.add('active');
+    b.onclick = () => {
+      $$('[data-lh]').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      lineHeight = b.dataset.lh;
+      applySettings();
+    };
+  });
+  $$('[data-font-ar]').forEach(b => {
+    if(b.dataset.fontAr === fontAr) b.classList.add('active');
+    b.onclick = () => {
+      $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+      document.body.classList.add('font-ar-' + b.dataset.fontAr);
+      try{ localStorage.setItem('noor_font_ar', b.dataset.fontAr); }catch(e){}
+    };
+  });
+  $$('[data-font-fa]').forEach(b => {
+    if(b.dataset.fontFa === fontFa) b.classList.add('active');
+    b.onclick = () => {
+      $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+      b.classList.add('active');
+      document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+      document.body.classList.add('font-fa-' + b.dataset.fontFa);
+      try{ localStorage.setItem('noor_font_fa', b.dataset.fontFa); }catch(e){}
+    };
+  });
+
+  document.body.classList.add('font-ar-' + fontAr);
+  document.body.classList.add('font-fa-' + fontFa);
+  applySettings();
+
+  /* ============================================================
+     TABS
+     ============================================================ */
+  $$('#tabsNav .tab-btn').forEach(btn => {
+    btn.onclick = () => {
+      const f = btn.dataset.filter;
+      $$('#tabsNav .tab-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+
+      if(f === 'topics'){
+        $('#topicsRow').classList.toggle('show');
+        currentFilter = 'topics';
+        if(!currentTopic){
+          const topics = [...new Set(SPEECHES.map(s => s.category))].sort();
+          currentTopic = topics[0];
+        }
+        renderTopics();
+      } else {
+        $('#topicsRow').classList.remove('show');
+        currentFilter = f;
+        currentTopic = null;
+      }
+      renderList();
+    };
+  });
+
+  window.selectTopic = function(topic){
+    currentTopic = topic;
+    renderTopics();
+    renderList();
+  };
+
+  /* ============================================================
+     SEARCH
+     ============================================================ */
+  const searchInput = $('#searchInput');
+  let searchTimer;
+  searchInput.addEventListener('input', e => {
+    clearTimeout(searchTimer);
+    searchTimer = setTimeout(() => {
+      currentSearch = e.target.value;
+      renderList();
+    }, 180);
+  });
+
+  /* ============================================================
+     MODAL HANDLERS
+     ============================================================ */
+  $('#btnInfo').onclick = () => $('#modalInfo').classList.add('show');
+  $('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+  $$('[data-close]').forEach(b => {
+    b.onclick = () => {
+      const m = document.getElementById(b.dataset.close);
+      if(m) m.classList.remove('show');
+    };
+  });
+  $$('.modal-bg').forEach(m => {
+    m.onclick = e => { if(e.target === m) m.classList.remove('show'); };
+  });
+
+  /* ============================================================
+     DAILY BUTTONS
+     ============================================================ */
+  $('#dailyPrev').onclick = dailyPrev;
+  $('#dailyNext').onclick = dailyNext;
+
+  $('#dailyFav').onclick = function(e){
+    e.stopPropagation();
+    const id = this.dataset.id;
+    if(id) handleFav(id, this);
+  };
+  $('#dailyCopy').onclick = function(e){
+    e.stopPropagation();
+    const id = this.dataset.id;
+    if(id) copyItem(id);
+  };
+  $('#dailyShare').onclick = function(e){
+    e.stopPropagation();
+    const id = this.dataset.id;
+    if(id) shareItem(id);
+  };
+  $('#dailyOpen').onclick = function(e){
+    e.stopPropagation();
+    const id = this.dataset.id;
+    if(id) openDetail(id);
+  };
+
+  /* ============================================================
+     MODAL DETAIL ACTIONS
+     ============================================================ */
+  $('#mdFav').onclick = function(){
+    if(currentModalId) handleFav(currentModalId, null);
+  };
+  $('#mdCopy').onclick = function(){
+    if(currentModalId) copyItem(currentModalId);
+  };
+  $('#mdShare').onclick = function(){
+    if(currentModalId) shareItem(currentModalId);
+  };
+
+  /* ============================================================
+     EXPOSE for inline onclick
+     ============================================================ */
+  window.openDetail = openDetail;
+  window.handleFav = handleFav;
+  window.copyItem = copyItem;
+  window.shareItem = shareItem;
+  window.selectTopic = selectTopic;
+
+  /* ============================================================
+     BACK BUTTON
+     ============================================================ */
+  $('#btnBack').onclick = () => {
+    if(document.referrer && document.referrer.includes('index.html')) history.back();
+    else location.href = 'index.html';
+  };
+
+  /* ============================================================
+     SERVICE WORKER
+     ============================================================ */
+  if('serviceWorker' in navigator && location.protocol !== 'file:'){
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('sw.js').catch(()=>{});
+    });
+  }
+
+  /* ============================================================
+     INIT
+     ============================================================ */
+  renderDaily();
+  renderList();
+
+  console.log('✨ سخن نورانی | NOOR — بارگذاری شد. تعداد سخنان:', SPEECHES.length);
+})();
+</script>
+
+</body>
+</html>

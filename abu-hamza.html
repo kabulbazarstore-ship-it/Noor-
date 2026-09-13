@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>دعای ابوحمزه ثمالی | نــــور NOOR</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.10);
+  --gold-border: rgba(184, 138, 59, 0.20);
+  --text: #17231F; --text-2: #3d4a44; --muted: #66716C;
+  --divider: #E7E0D3;
+  --arabic: #123C32; --translation: #3d4a44;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.05);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.03);
+  --radius: 16px; --radius-sm: 12px;
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --font-ar: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --fs-ar: 24px; --fs-fa: 16px; --line-height: 2.3;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.08);
+  --gold-border: rgba(210, 172, 92, 0.16);
+  --text: #F4EFE4; --text-2: #c8d2cc; --muted: #A8B3AD;
+  --divider: #26352F;
+  --arabic: #e8e2d2; --translation: #c8d2cc;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.30);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.20);
+}
+body.font-ar-amiri { --font-ar: 'Amiri', serif; }
+body.font-ar-scheherazade { --font-ar: 'Scheherazade New', serif; }
+body.font-ar-naskh { --font-ar: 'Noto Naskh Arabic', serif; }
+body.font-ar-lateef { --font-ar: 'Lateef', serif; }
+body.font-ar-reem { --font-ar: 'Reem Kufi', sans-serif; }
+body.font-fa-vazir { --font-fa: 'Vazirmatn', Tahoma, sans-serif; }
+body.font-fa-naskh { --font-fa: 'Noto Naskh Arabic', serif; }
+body.font-fa-amiri { --font-fa: 'Amiri', serif; }
+body.font-fa-scheherazade { --font-fa: 'Scheherazade New', serif; }
+body.font-fa-lateef { --font-fa: 'Lateef', serif; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-sm { width: 18px; height: 18px; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px 40px; }
+
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; min-width: 0; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.05rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 0.3px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.65rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 6px;
+  margin-top: 3px;
+}
+
+.scroll-content {
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  padding: 14px 0 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar { width: 4px; }
+.scroll-content::-webkit-scrollbar-track { background: transparent; }
+.scroll-content::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 10px; }
+
+.top-orn {
+  position: relative; overflow: hidden;
+  text-align: center;
+  padding: 18px 14px 20px;
+  margin-bottom: 14px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.top-orn .orn-svg {
+  position: absolute; color: var(--gold); opacity: 0.10; pointer-events: none;
+}
+.top-orn .orn-svg.tr { top: -6px; right: -6px; width: 80px; height: 80px; }
+.top-orn .orn-svg.bl { bottom: -6px; left: -6px; width: 80px; height: 80px; transform: rotate(180deg); }
+.top-orn .orn-title {
+  font-family: 'Amiri', serif;
+  font-size: 1.45rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+body.dark .top-orn .orn-title { color: var(--gold); }
+.top-orn .orn-sub { font-size: 0.78rem; color: var(--muted); }
+.top-orn .orn-div {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin: 8px auto 0; width: 80px;
+}
+.top-orn .orn-div::before, .top-orn .orn-div::after {
+  content: ""; flex: 1; height: 1px; background: var(--gold-border);
+}
+.top-orn .orn-div svg { color: var(--gold); width: 12px; height: 12px; }
+
+.verse-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--trans);
+  position: relative;
+}
+.verse-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(184, 138, 59, 0.08);
+}
+.verse-card .v-head {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+}
+.verse-card .v-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 24px; height: 24px; padding: 0 8px;
+  border-radius: 7px;
+  background: var(--gold-soft); color: var(--gold);
+  font-family: 'Amiri', serif; font-weight: 700;
+  font-size: 0.72rem;
+  border: 1px solid var(--gold-border);
+}
+.verse-card .v-label {
+  font-size: 0.68rem; color: var(--muted);
+  font-weight: 600;
+}
+.verse-card .v-ar {
+  font-family: var(--font-ar);
+  font-size: var(--fs-ar);
+  line-height: var(--line-height);
+  color: var(--arabic);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding: 4px 2px;
+  white-space: pre-line;
+}
+.verse-card .v-divider {
+  height: 1px;
+  background: repeating-linear-gradient(90deg, var(--gold-border) 0, var(--gold-border) 3px, transparent 3px, transparent 6px);
+  margin: 0 auto 12px;
+  width: 50px;
+}
+.verse-card .v-fa {
+  font-family: var(--font-fa);
+  font-size: var(--fs-fa);
+  line-height: 1.95;
+  color: var(--translation);
+  text-align: justify;
+  padding: 0 2px;
+  white-space: pre-line;
+}
+.verse-card.hide-trans .v-fa { display: none; }
+.verse-card.hide-trans .v-divider { display: none; }
+.verse-card.hide-trans .v-ar { margin-bottom: 0; }
+
+.modal-bg {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  display: none; align-items: flex-end; justify-content: center;
+  z-index: 200; padding: 0 12px 12px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%; max-width: 520px; max-height: 85vh;
+  overflow-y: auto; background: var(--surface);
+  border-radius: 24px 24px 18px 18px;
+  padding: 20px 18px 26px;
+  border: 1px solid var(--gold-border);
+  animation: slideUp 0.3s ease;
+  box-shadow: var(--shadow);
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.modal-head h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+  color: var(--text);
+}
+.modal-head h3 svg { color: var(--gold); width: 20px; height: 20px; flex: none; }
+.modal-close {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--muted);
+}
+.modal-close:hover { color: var(--gold); border-color: var(--gold); }
+
+.set-group { margin-bottom: 16px; }
+.set-group > label {
+  display: block; font-size: 0.75rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 8px;
+}
+.set-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.set-opt {
+  padding: 6px 12px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text-2); font-size: 0.75rem;
+  font-weight: 600; cursor: pointer; transition: var(--trans);
+}
+.set-opt:hover { border-color: var(--gold-border); color: var(--gold); }
+.set-opt.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+.set-ctrl {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  border-radius: 10px; padding: 4px; width: fit-content;
+}
+.set-ctrl button {
+  width: 34px; height: 34px; border-radius: 8px;
+  color: var(--muted); font-weight: 700; font-size: 1rem;
+}
+.set-ctrl button:hover { background: var(--gold-soft); color: var(--gold); }
+.set-ctrl .val {
+  min-width: 40px; text-align: center;
+  color: var(--gold); font-weight: 700; font-size: 0.82rem;
+}
+.font-preview { font-family: 'Amiri', serif; font-size: 1.1rem; }
+
+.info-block {
+  padding: 14px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+.info-block h4 {
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.info-block h4 svg { width: 16px; height: 16px; flex: none; }
+.info-block p {
+  font-size: 0.8rem; line-height: 1.95;
+  color: var(--text-2); text-align: justify;
+  white-space: pre-line;
+}
+
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-around; align-items: center;
+  background: var(--surface); border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: 62px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px; border-radius: 12px; color: var(--muted);
+  transition: var(--trans); font-size: 0.6rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+
+.toast {
+  position: fixed; bottom: 80px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 18px; border-radius: 14px;
+  font-size: 0.8rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 16px; height: 16px; }
+
+.app { padding-bottom: 80px; }
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 0.95rem; }
+  :root { --fs-ar: 22px; --fs-fa: 15px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+  .verse-card { padding: 14px 12px; }
+  .top-orn .orn-title { font-size: 1.15rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">دعای ابوحمزه ثمالی</h1>
+      <span class="brand-noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <div class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای ابوحمزه ثمالی</div>
+      <div class="orn-sub">مناجات سحرهای ماه رمضان</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </div>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/>
+    </svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<!-- ================= INFO MODAL ================= -->
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای ابوحمزه ثمالی
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        فضیلت و خواص
+      </h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        منبع
+      </h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        زمان خواندن
+      </h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SETTINGS MODAL ================= -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <div class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt" data-font-fa="vazir">وزیرمتن</div>
+        <div class="set-opt" data-font-fa="naskh">نسخ</div>
+        <div class="set-opt" data-font-fa="amiri">امیری</div>
+        <div class="set-opt" data-font-fa="scheherazade">شهرزاد</div>
+        <div class="set-opt" data-font-fa="lateef">لطیف</div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <div class="set-opt" data-lh="1.9">کم</div>
+        <div class="set-opt" data-lh="2.3">متوسط</div>
+        <div class="set-opt" data-lh="2.8">زیاد</div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt" data-trans="1">نمایش</div>
+        <div class="set-opt" data-trans="0">پنهان</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   نــــور NOOR — دعای ابوحمزه ثمالی
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای ابوحمزه ثمالی
+   ============================================================ */
+const DUA_DATA = {
+  title: "دعای ابوحمزه ثمالی",
+  verses: [
+    { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان" },
+    { ar: "إِلَهِي لاَ تُؤَدِّبْنِي بِعُقُوبَتِكَ وَ لاَ تَمْكُرْ بِي فِي حِيلَتِكَ مِنْ أَيْنَ لِيَ الْخَيْرُ يَا رَبِّ وَ لاَ يُوجَدُ إِلاَّ مِنْ عِنْدِكَ وَ مِنْ أَيْنَ لِيَ النَّجَاةُ وَ لاَ تُسْتَطَاعُ إِلاَّ بِكَ لاَ الَّذِي أَحْسَنَ اسْتَغْنَى عَنْ عَوْنِكَ وَ رَحْمَتِكَ وَ لاَ الَّذِي أَسَاءَ وَ اجْتَرَأَ عَلَيْكَ وَ لَمْ يُرْضِكَ خَرَجَ عَنْ قُدْرَتِكَ يَا رَبِّ يَا رَبِّ يَا رَبِّ", fa: "خدایا، مرا به کیفرت ادب مکن و با نیرنگ خود با من مکر مکن، پروردگارا از کجا برایم خیری هست در حالی که جز نزد تو یافت نمی‌شود؟ و از کجا برایم نجاتی است در حالی که جز به تو دست‌یافتنی نیست؟ نه آنکه نیکی کرد از کمک و رحمتت بی‌نیاز شد و نه آنکه بدی کرد و بر تو گستاخی روا داشت و تو را خشنود نساخت از عرصه قدرتت بیرون رفت؛ پروردگارا، پروردگارا، پروردگارا." },
+    { ar: "بِكَ عَرَفْتُكَ وَ أَنْتَ دَلَلْتَنِي عَلَيْكَ وَ دَعَوْتَنِي إِلَيْكَ وَ لَوْ لاَ أَنْتَ لَمْ أَدْرِ مَا أَنْتَ الْحَمْدُ لِلَّهِ الَّذِي أَدْعُوهُ فَيُجِيبُنِي وَ إِنْ كُنْتُ بَطِيئاً حِينَ يَدْعُونِي وَ الْحَمْدُ لِلَّهِ الَّذِي أَسْأَلُهُ فَيُعْطِينِي وَ إِنْ كُنْتُ بَخِيلاً حِينَ يَسْتَقْرِضُنِي وَ الْحَمْدُ لِلَّهِ الَّذِي أُنَادِيهِ كُلَّمَا شِئْتُ لِحَاجَتِي وَ أَخْلُو بِهِ حَيْثُ شِئْتُ لِسِرِّي بِغَيْرِ شَفِيعٍ فَيَقْضِي لِي حَاجَتِي", fa: "تو را به تو شناختم و تو مرا بر خود راهنمایی کردی و به سوی خود خواندی و اگر تو نبودی، نمی‌دانستم تو کیستی. سپاس خدایی را که می‌خوانمش و پاسخم می‌دهد، هر چند من هنگامی که او مرا می‌خواند، کندی می‌کنم. و سپاس خدایی را که از او درخواست می‌کنم و به من عطا می‌کند، هر چند من هنگامی که او از من قرض می‌خواهد، بخل می‌ورزم. و سپاس خدایی را که هر وقت بخواهم برای حاجتم او را صدا می‌زنم و هر جا که بخواهم برای راز و نیازم با او خلوت می‌کنم، بی‌نیاز از شفیع، و او حاجتم را برآورده می‌سازد." },
+    { ar: "وَ الْحَمْدُ لِلَّهِ الَّذِي لاَ أَدْعُو غَيْرَهُ وَ لَوْ دَعَوْتُ غَيْرَهُ لَمْ يَسْتَجِبْ لِي دُعَائِي وَ الْحَمْدُ لِلَّهِ الَّذِي لاَ أَرْجُو غَيْرَهُ وَ لَوْ رَجَوْتُ غَيْرَهُ لَأَخْلَفَ رَجَائِي وَ الْحَمْدُ لِلَّهِ الَّذِي وَكَلَنِي إِلَيْهِ فَأَكْرَمَنِي وَ لَمْ يَكِلْنِي إِلَى النَّاسِ فَيُهِينُونِي وَ الْحَمْدُ لِلَّهِ الَّذِي تَحَبَّبَ إِلَيَّ وَ هُوَ غَنِيٌّ عَنِّي وَ الْحَمْدُ لِلَّهِ الَّذِي يَحْلُمُ عَنِّي حَتَّى كَأَنِّي لاَ ذَنْبَ لِي فَرَبِّي أَحْمَدُ شَيْءٍ عِنْدِي وَ أَحَقُّ بِحَمْدِي", fa: "و سپاس خدایی را که جز او کسی را نمی‌خوانم و اگر غیر او را می‌خواندم، دعایم را اجابت نمی‌کرد. و سپاس خدایی را که به غیر او امید نمی‌بندم و اگر به غیر او امید می‌بستم، ناامیدم می‌کرد. و سپاس خدایی را که مرا به خود واگذاشت و گرامیم داشت و به مردم واگذار نکرد تا خوارم کنند. و سپاس خدایی را که با وجود بی‌نیازی از من، با من محبت ورزید. و سپاس خدایی را که بر من بردباری می‌کند تا آن‌جا که گویی گناهی ندارم؛ پس پروردگارم ستوده‌ترین چیز نزد من و سزاوارترین به ستایش من است." },
+    { ar: "اللَّهُمَّ إِنِّي أَجِدُ سُبُلَ الْمَطَالِبِ إِلَيْكَ مُشْرَعَةً وَ مَنَاهِلَ الرَّجَاءِ إِلَيْكَ مُتْرَعَةً وَ الاِسْتِعَانَةَ بِفَضْلِكَ لِمَنْ أَمَّلَكَ مُبَاحَةً وَ أَبْوَابَ الدُّعَاءِ إِلَيْكَ لِلصَّارِخِينَ مَفْتُوحَةً وَ أَعْلَمُ أَنَّكَ لِلرَّاجِينَ بِمَوْضِعِ إِجَابَةٍ وَ لِلْمَلْهُوفِينَ بِمَرْصَدِ إِغَاثَةٍ وَ أَنَّ فِي اللَّهْفِ إِلَى جُودِكَ وَ الرِّضَا بِقَضَائِكَ عِوَضاً مِنْ مَنْعِ الْبَاخِلِينَ وَ مَنْدُوحَةً عَمَّا فِي أَيْدِي الْمُسْتَأْثِرِينَ وَ أَنَّ الرَّاحِلَ إِلَيْكَ قَرِيبُ الْمَسَافَةِ وَ أَنَّكَ لاَ تَحْتَجِبُ عَنْ خَلْقِكَ إِلاَّ أَنْ تَحْجُبَهُمُ الْأَعْمَالُ دُونَكَ", fa: "خدایا، راه‌های رسیدن به خواسته‌ها را به سوی تو باز می‌یابم و چشمه‌های امید را به سوی تو پر می‌بینم و یاری جستن به فضل تو را برای آن‌که به تو امید بسته، روا می‌دانم و درهای دعا را به سوی تو برای فریادکنندگان گشوده می‌بینم. و می‌دانم که تو برای امیدواران در جایگاه اجابه‌ای و برای دل‌سوختگان در کمین‌گاه فریادرسی. و همانا در اشتیاق به جودت و خشنودی به قضایت، جایگزینی است از منع بخیلان و گشایشی است از آنچه در دست ثروت‌اندوزان است. و آن‌که به سوی تو کوچ کند، مسافتش نزدیک است و تو از آفریدگانت در پرده نیستی، مگر آن‌که اعمالشان آنان را از تو در پرده دارد." },
+    { ar: "وَ قَدْ قَصَدْتُ إِلَيْكَ بِطَلِبَتِي وَ تَوَجَّهْتُ إِلَيْكَ بِحَاجَتِي وَ جَعَلْتُ بِكَ اسْتِغَاثَتِي وَ بِدُعَائِكَ تَوَسُّلِي مِنْ غَيْرِ اسْتِحْقَاقٍ لاِسْتِمَاعِكَ مِنِّي وَ لاَ اسْتِيجَابٍ لِعَفْوِكَ عَنِّي بَلْ لِثِقَتِي بِكَرَمِكَ وَ سُكُونِي إِلَى صِدْقِ وَعْدِكَ وَ لَجَئِي إِلَى الْإِيمَانِ بِتَوْحِيدِكَ وَ يَقِينِي بِمَعْرِفَتِكَ مِنِّي أَنْ لاَ رَبَّ لِي غَيْرُكَ وَ لاَ إِلَهَ إِلاَّ أَنْتَ وَحْدَكَ لاَ شَرِيكَ لَكَ", fa: "و با درخواستم به سوی تو قصد کردم و با حاجتم به تو روی آوردم و فریادخواهی‌ام را به تو واگذاشتم و خواندنت را وسیله قرار دادم، نه از روی استحقاق برای شنیدن از من، و نه سزاواری برای گذشت از من، بلکه به خاطر اعتماد به کرمت و آرامش به راستی وعده‌ات و پناه بردن به ایمان به یگانگی‌ات و یقینم به معرفتت که پروردگاری جز تو ندارم و معبودی جز تو نیست، یگانه‌ای که شریکی ندارد." },
+    { ar: "اللَّهُمَّ أَنْتَ الْقَائِلُ وَ قَوْلُكَ حَقٌّ وَ وَعْدُكَ صِدْقٌ وَ اسْأَلُوا اللَّهَ مِنْ فَضْلِهِ إِنَّ اللَّهَ كَانَ بِكُمْ رَحِيماً وَ لَيْسَ مِنْ صِفَاتِكَ يَا سَيِّدِي أَنْ تَأْمُرَ بِالسُّؤَالِ وَ تَمْنَعَ الْعَطِيَّةَ وَ أَنْتَ الْمَنَّانُ بِالْعَطِيَّاتِ عَلَى أَهْلِ مَمْلَكَتِكَ وَ الْعَائِدُ عَلَيْهِمْ بِتَحَنُّنِ رَأْفَتِكَ", fa: "خدایا، تو هستی که گفتی و گفتارت حق است و وعده‌ات راست است: «از خدا فضل او را بخواهید، که خدا به شما مهربان است» و از شأن تو نیست که امر به درخواست کنی و عطا را بازداری، در حالی که تو بر اهل مملکتت بسیار منت‌گذاری و با محبت و رأفت به آنان بازمی‌گردی." },
+    { ar: "إِلَهِي رَبَّيْتَنِي فِي نِعَمِكَ وَ إِحْسَانِكَ صَغِيراً وَ نَوَّهْتَ بِاسْمِي كَبِيراً فَيَا مَنْ رَبَّانِي فِي الدُّنْيَا بِإِحْسَانِهِ وَ تَفَضُّلِهِ وَ نِعَمِهِ وَ أَشَارَ لِي فِي الْآخِرَةِ إِلَى عَفْوِهِ وَ كَرَمِهِ مَعْرِفَتِي يَا مَوْلاَيَ دَلِيلِي عَلَيْكَ وَ حُبِّي لَكَ شَفِيعِي إِلَيْكَ وَ أَنَا وَاثِقٌ مِنْ دَلِيلِي بِدَلاَلَتِكَ وَ سَاكِنٌ مِنْ شَفِيعِي إِلَى شَفَاعَتِكَ", fa: "خدایا، مرا در نعمت‌ها و احسانت کوچک پروردی و در بزرگ‌سالی نامم را بلند کردی. ای آن‌که مرا در دنیا به احسان و فضل و نعمت‌هایش پرورد و در آخرت به عفو و کرمش راهنمایم کرد. ای مولای من، شناختم راهنمای من به سوی توست و محبتم به تو شفیع من به پیشگاه توست و من به راهنماییم به راهنمایی‌ات اطمینان دارم و به شفیعم به شفاعتت آرامم." },
+    { ar: "أَدْعُوكَ يَا سَيِّدِي بِلِسَانٍ قَدْ أَخْرَسَهُ ذَنْبُهُ رَبِّ أُنَاجِيكَ بِقَلْبٍ قَدْ أَوْبَقَهُ جُرْمُهُ أَدْعُوكَ يَا رَبِّ رَاهِباً رَاغِباً رَاجِياً خَائِفاً إِذَا رَأَيْتُ مَوْلاَيَ ذُنُوبِي فَزِعْتُ وَ إِذَا رَأَيْتُ كَرَمَكَ طَمِعْتُ", fa: "تو را می‌خوانم ای آقای من، با زبانی که گناهانش آن را لال کرده است. پروردگارا، با دلی که جرمش آن را هلاک کرده با تو راز می‌گویم. تو را می‌خوانم ای پروردگار، در حال ترس و رغبت و امید و خوف؛ هنگامی که گناهانم را می‌بینم می‌ترسم و هنگامی که کرمت را می‌بینم طمع می‌ورزم." },
+    { ar: "فَإِنْ عَفَوْتَ فَخَيْرُ رَاحِمٍ وَ إِنْ عَذَّبْتَ فَغَيْرُ ظَالِمٍ حُجَّتِي يَا اللَّهُ فِي جُرْأَتِي عَلَى مَسْأَلَتِكَ مَعَ إِتْيَانِي مَا تَكْرَهُ جُودُكَ وَ كَرَمُكَ وَ عُدَّتِي فِي شِدَّتِي مَعَ قِلَّةِ حَيَائِي رَأْفَتُكَ وَ رَحْمَتُكَ وَ قَدْ رَجَوْتُ أَنْ لاَ تَخِيبَ بَيْنَ ذَيْنِ وَ ذَيْنِ مُنْيَتِي فَحَقِّقْ رَجَائِي وَ اسْمَعْ دُعَائِي يَا خَيْرَ مَنْ دَعَاهُ دَاعٍ وَ أَفْضَلَ مَنْ رَجَاهُ رَاجٍ", fa: "پس اگر عفو کنی، بهترین رحم‌کننده‌ای و اگر عذاب کنی، ستمگر نیستی. خدایا، حجت من در جسارتم بر درخواست از تو با وجود انجام آنچه ناپسند می‌داری، جود و کرم توست و ساز و برگ من در سختی‌ام با وجود کم‌حیایی‌ام، رأفت و رحمت توست. و امیدوارم که میان این دو، آرزوی من ناامید نشود؛ پس امیدم را محقق کن و دعایم را بشنو ای بهترین کسی که خواهنده‌ای او را خوانده و بهترین کسی که امیدواری به او امید بسته است." },
+    { ar: "عَظُمَ يَا سَيِّدِي أَمَلِي وَ سَاءَ عَمَلِي فَأَعْطِنِي مِنْ عَفْوِكَ بِمِقْدَارِ أَمَلِي وَ لاَ تُؤَاخِذْنِي بِأَسْوَإِ عَمَلِي فَإِنَّ كَرَمَكَ يَجِلُّ عَنْ مُجَازَاةِ الْمُذْنِبِينَ وَ حِلْمَكَ يَكْبُرُ عَنْ مُكَافَاةِ الْمُقَصِّرِينَ", fa: "ای آقای من، آرزوی من بزرگ است و عملم بد، پس به اندازه آرزویَم از عفو خود به من عطا کن و مرا به بدترین عملم مؤاخذه مکن، زیرا کرمت بزرگ‌تر از آن است که گناهکاران را کیفر دهد و بردباریت والاتر از آن است که با کوتاهی‌کنندگان مقابله کند." },
+    { ar: "وَ أَنَا يَا سَيِّدِي عَائِذٌ بِفَضْلِكَ هَارِبٌ مِنْكَ إِلَيْكَ مُتَنَجِّزٌ مَا وَعَدْتَ مِنَ الصَّفْحِ عَمَّنْ أَحْسَنَ بِكَ ظَنّاً وَ مَا أَنَا يَا رَبِّ وَ مَا خَطَرِي هَبْنِي بِفَضْلِكَ وَ تَصَدَّقْ عَلَيَّ بِعَفْوِكَ أَيْ رَبِّ جَلِّلْنِي بِسَتْرِكَ وَ اعْفُ عَنْ تَوْبِيخِي بِكَرَمِ وَجْهِكَ", fa: "و من ای آقای من، به فضل تو پناهنده‌ام، از تو به سوی تو می‌گریزم و به آنچه از گذشت درباره کسی که به تو نیکوگمان است وعده دادی، امید بسته‌ام. پروردگارا، من چه‌ام و چه قدری دارم؟ مرا به فضلت ببخش و به عفو خود بر من تصدق کن. ای پروردگار، مرا به پرده پوشش خود بپوشان و با کرامت روی خود از سرزنشم درگذر." },
+    { ar: "فَلَوِ اطَّلَعَ الْيَوْمَ عَلَى ذَنْبِي غَيْرُكَ مَا فَعَلْتُهُ وَ لَوْ خِفْتُ تَعْجِيلَ الْعُقُوبَةِ لاَجْتَنَبْتُهُ لاَ لِأَنَّكَ أَهْوَنُ النَّاظِرِينَ وَ أَخَفُّ الْمُطَّلِعِينَ بَلْ لِأَنَّكَ يَا رَبِّ خَيْرُ السَّاتِرِينَ وَ أَحْكَمُ الْحَاكِمِينَ وَ أَحْلَمُ الْأَحْلَمِينَ وَ أَكْرَمُ الْأَكْرَمِينَ", fa: "اگر امروز غیر تو بر گناهم آگاه می‌شد، آن را انجام نمی‌دادم و اگر از شتاب در عقوبت می‌ترسیدم، از آن دوری می‌کردم، نه از آن جهت که تو کم‌توجه‌ترین ناظران و سبک‌ترین آگاه‌کنندگان هستی، بلکه از آن رو که ای پروردگار، تو بهترین پوشنده‌ای و استوارترین حاکمانی و بردبارترین بردبارانی و کریم‌ترین کریمانی." },
+    { ar: "سَتَّارُ الْعُيُوبِ غَفَّارُ الذُّنُوبِ عَلاَّمُ الْغُيُوبِ تَسْتُرُ الذَّنْبَ بِكَرَمِكَ وَ تُؤَخِّرُ الْعُقُوبَةَ بِحِلْمِكَ فَلَكَ الْحَمْدُ عَلَى حِلْمِكَ بَعْدَ عِلْمِكَ وَ عَلَى عَفْوِكَ بَعْدَ قُدْرَتِكَ", fa: "ای پوشنده عیب‌ها، ای آمرزنده گناهان، ای دانای نهان‌ها، گناه را به کرمت می‌پوشانی و عقوبت را به بردباریت به تأخیر می‌اندازی. پس ستایش تو راست بر بردباری‌ات پس از دانایی‌ات و بر گذشت‌ات پس از قدرت‌ات." },
+    { ar: "وَ يَحْمِلُنِي وَ يُجَرِّئُنِي عَلَى مَعْصِيَتِكَ حِلْمُكَ عَنِّي وَ يَدْعُونِي إِلَى قِلَّةِ الْحَيَاءِ سَتْرُكَ عَلَيَ وَ يُسْرِعُنِي إِلَى التَّوَثُّبِ عَلَى مَحَارِمِكَ مَعْرِفَتِي بِسَعَةِ رَحْمَتِكَ وَ عَظِيمِ عَفْوِكَ يَا حَلِيمُ يَا كَرِيمُ يَا حَيُّ يَا قَيُّومُ يَا غَافِرَ الذَّنْبِ يَا قَابِلَ التَّوْبِ يَا عَظِيمَ الْمَنِّ يَا قَدِيمَ الْإِحْسَانِ", fa: "و بردباری تو نسبت به من، مرا بر گناهت حمل می‌کند و جری می‌سازد و پوشش تو بر من، مرا به کم‌حیایی دعوت می‌کند و آگاهی من به گستردگی رحمت و بزرگ‌ی عفو تو، مرا به پریدن بر حریم‌هایت شتاب می‌دهد. ای بردبار، ای کریم، ای زنده، ای قیّوم، ای آمرزنده گناه، ای پذیرنده توبه، ای بزرگ‌منت، ای دیرینه‌احسان." },
+    { ar: "أَيْنَ سَتْرُكَ الْجَمِيلُ أَيْنَ عَفْوُكَ الْجَلِيلُ أَيْنَ فَرَجُكَ الْقَرِيبُ أَيْنَ غِيَاثُكَ السَّرِيعُ أَيْنَ رَحْمَتُكَ الْوَاسِعَةُ أَيْنَ عَطَايَاكَ الْفَاضِلَةُ أَيْنَ مَوَاهِبُكَ الْهَنِيئَةُ أَيْنَ صَنَائِعُكَ السَّنِيَّةُ أَيْنَ فَضْلُكَ الْعَظِيمُ أَيْنَ مَنُّكَ الْجَسِيمُ أَيْنَ إِحْسَانُكَ الْقَدِيمُ أَيْنَ كَرَمُكَ يَا كَرِيمُ", fa: "کجاست پوشش زیبایت؟ کجاست گذشت بزرگوارانه‌ات؟ کجاست گشایش نزدیکت؟ کجاست فریادرسی سریعت؟ کجاست رحمت گسترده‌ات؟ کجاست عطاهای برترت؟ کجاست بخشش‌های گوارایت؟ کجاست کارهای والایت؟ کجاست فضل بزرگت؟ کجاست منت بزرگت؟ کجاست احسان دیرینه‌ات؟ کجاست کرمت ای کریم؟" },
+    { ar: "بِهِ وَ بِمُحَمَّدٍ وَ آلِ مُحَمَّدٍ فَاسْتَنْقِذْنِي وَ بِرَحْمَتِكَ فَخَلِّصْنِي يَا مُحْسِنُ يَا مُجْمِلُ يَا مُنْعِمُ يَا مُفْضِلُ لَسْتُ أَتَّكِلُ فِي النَّجَاةِ مِنْ عِقَابِكَ عَلَى أَعْمَالِنَا بَلْ بِفَضْلِكَ عَلَيْنَا لِأَنَّكَ أَهْلُ التَّقْوَى وَ أَهْلُ الْمَغْفِرَةِ", fa: "به آن و به محمد و آل محمد، مرا نجات ده و به رحمتت مرا رهایی بخش. ای نیکوکار، ای زیباکننده، ای نعمت‌دهنده، ای فزون‌بخش. من در نجات از عذابت بر اعمالمان تکیه نمی‌کنم، بلکه بر فضل تو بر ما، زیرا تو شایسته تقوایی و شایسته آمرزشی." },
+    { ar: "تُبْدِئُ بِالْإِحْسَانِ نِعَماً وَ تَعْفُو عَنِ الذَّنْبِ كَرَماً فَمَا نَدْرِي مَا نَشْكُرُ أَ جَمِيلَ مَا تَنْشُرُ أَمْ قَبِيحَ مَا تَسْتُرُ أَمْ عَظِيمَ مَا أَبْلَيْتَ وَ أَوْلَيْتَ أَمْ كَثِيرَ مَا مِنْهُ نَجَّيْتَ وَ عَافَيْتَ", fa: "نعمت‌ها را با احسان آغاز می‌کنی و از گناه به کرم می‌گذری، پس نمی‌دانیم چه را سپاس گوییم؟ زیبایی را که آشکار می‌کنی؟ یا زشتی را که می‌پوشانی؟ یا بزرگی آنچه را که آزمودی و ارزانی داشتی؟ یا بسیاری آنچه را که از آن نجات دادی و عافیت بخشیدی؟" },
+    { ar: "يَا حَبِيبَ مَنْ تَحَبَّبَ إِلَيْكَ وَ يَا قُرَّةَ عَيْنِ مَنْ لاَذَ بِكَ وَ انْقَطَعَ إِلَيْكَ أَنْتَ الْمُحْسِنُ وَ نَحْنُ الْمُسِيئُونَ فَتَجَاوَزْ يَا رَبِّ عَنْ قَبِيحِ مَا عِنْدَنَا بِجَمِيلِ مَا عِنْدَكَ", fa: "ای حبیب آن‌که به تو محبت ورزید و ای روشنی چشم آن‌که به تو پناه برد و به تو پیوست. تو نیکوکاری و ما بدکاریم، پس ای پروردگار، از زشتی آنچه نزد ماست به زیبایی آنچه نزد توست درگذر." },
+    { ar: "وَ أَيُّ جَهْلٍ يَا رَبِّ لاَ يَسَعُهُ جُودُكَ أَوْ أَيُّ زَمَانٍ أَطْوَلُ مِنْ أَنَاتِكَ وَ مَا قَدْرُ أَعْمَالِنَا فِي جَنْبِ نِعَمِكَ وَ كَيْفَ نَسْتَكْثِرُ أَعْمَالاً نُقَابِلُ بِهَا كَرَمَكَ بَلْ كَيْفَ يَضِيقُ عَلَى الْمُذْنِبِينَ مَا وَسِعَهُمْ مِنْ رَحْمَتِكَ", fa: "و ای پروردگار، کدام نادانی است که جود تو آن را دربر نگیرد؟ یا کدام زمان از بردباری تو درازتر است؟ و اعمال ما در کنار نعمت‌هایت چه قدری دارد؟ و چگونه اعمالی را که با آن با کرمت مقابله می‌کنیم بسیار شماریم؟ بلکه چگونه بر گناهکاران تنگ شود آنچه از رحمت تو آنان را گنجانده است؟" },
+    { ar: "يَا وَاسِعَ الْمَغْفِرَةِ يَا بَاسِطَ الْيَدَيْنِ بِالرَّحْمَةِ فَوَ عِزَّتِكَ يَا سَيِّدِي لَوْ نَهَرْتَنِي مَا بَرِحْتُ مِنْ بَابِكَ وَ لاَ كَفَفْتُ عَنْ تَمَلُّقِكَ لِمَا انْتَهَى إِلَيَّ مِنَ الْمَعْرِفَةِ بِجُودِكَ وَ كَرَمِكَ", fa: "ای گسترده‌آمرزش، ای گشاده‌دست به رحمت، به عزتت سوگند ای آقای من، اگر مرا از خود برانی، از درگاهت دست نمی‌کشم و از چاپلوسی‌ات باز نمی‌ایستم، به خاطر آنچه از شناخت جود و کرمت به من رسیده است." },
+    { ar: "وَ أَنْتَ الْفَاعِلُ لِمَا تَشَاءُ تُعَذِّبُ مَنْ تَشَاءُ بِمَا تَشَاءُ كَيْفَ تَشَاءُ وَ تَرْحَمُ مَنْ تَشَاءُ بِمَا تَشَاءُ كَيْفَ تَشَاءُ لاَ تُسْأَلُ عَنْ فِعْلِكَ وَ لاَ تُنَازَعُ فِي مُلْكِكَ وَ لاَ تُشَارَكُ فِي أَمْرِكَ وَ لاَ تُضَادُّ فِي حُكْمِكَ وَ لاَ يَعْتَرِضُ عَلَيْكَ أَحَدٌ فِي تَدْبِيرِكَ لَكَ الْخَلْقُ وَ الْأَمْرُ تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ", fa: "و تو هر چه خواهی انجام‌دهنده‌ای، هر که را خواهی به هر چه خواهی و هر گونه خواهی عذاب می‌کنی و هر که را خواهی به هر چه خواهی و هر گونه خواهی رحم می‌کنی. از کارت پرسیده نمی‌شوی و در پادشاهی‌ات با تو ستیز نمی‌شود و در کارت با تو شریک نمی‌شوند و در حکمت با تو مخالفت نمی‌شود و کسی در تدبیرت بر تو اعتراض نمی‌کند. آفرینش و فرمان از آن توست، پربرکت است خداوند، پروردگار جهانیان." },
+    { ar: "يَا رَبِّ هَذَا مَقَامُ مَنْ لاَذَ بِكَ وَ اسْتَجَارَ بِكَرَمِكَ وَ أَلِفَ إِحْسَانَكَ وَ نِعَمَكَ وَ أَنْتَ الْجَوَادُ الَّذِي لاَ يَضِيقُ عَفْوُكَ وَ لاَ يَنْقُصُ فَضْلُكَ وَ لاَ تَقِلُّ رَحْمَتُكَ وَ قَدْ تَوَثَّقْنَا مِنْكَ بِالصَّفْحِ الْقَدِيمِ وَ الْفَضْلِ الْعَظِيمِ وَ الرَّحْمَةِ الْوَاسِعَةِ", fa: "ای پروردگار، این جایگاه کسی است که به تو پناه آورده و به کرمت پناه جسته و به احسان و نعمت‌هایت انس گرفته است و تو بخشنده‌ای که عفو تو تنگ نمی‌شود و فضل تو کم نمی‌گردد و رحمت تو اندک نمی‌شود. و ما از تو به گذشت دیرینه و فضل بزرگ و رحمت گسترده اطمینان داریم." },
+    { ar: "أَ فَتُرَاكَ يَا رَبِّ تُخْلِفُ ظُنُونَنَا أَوْ تُخَيِّبُ آمَالَنَا كَلاَّ يَا كَرِيمُ فَلَيْسَ هَذَا ظَنَّنَا بِكَ وَ لاَ هَذَا فِيكَ طَمَعَنَا يَا رَبِّ إِنَّ لَنَا فِيكَ أَمَلاً طَوِيلاً كَثِيراً إِنَّ لَنَا فِيكَ رَجَاءً عَظِيماً", fa: "آیا ای پروردگار، گمان ما را درباره خودت خلاف می‌کنی یا امیدهایمان را ناامید می‌سازی؟ هرگز ای کریم، این گمان ما درباره تو نیست و این طمع ما در تو نیست. ای پروردگار، ما به تو امیدی دراز و بسیار داریم، ما به تو امیدی بزرگ داریم." },
+    { ar: "عَصَيْنَاكَ وَ نَحْنُ نَرْجُو أَنْ تَسْتُرَ عَلَيْنَا وَ دَعَوْنَاكَ وَ نَحْنُ نَرْجُو أَنْ تَسْتَجِيبَ لَنَا فَحَقِّقْ رَجَاءَنَا مَوْلاَنَا فَقَدْ عَلِمْنَا مَا نَسْتَوْجِبُ بِأَعْمَالِنَا وَ لَكِنْ عِلْمُكَ فِينَا وَ عِلْمُنَا بِأَنَّكَ لاَ تَصْرِفُنَا عَنْكَ وَ إِنْ كُنَّا غَيْرَ مُسْتَوْجِبِينَ لِرَحْمَتِكَ فَأَنْتَ أَهْلٌ أَنْ تَجُودَ عَلَيْنَا وَ عَلَى الْمُذْنِبِينَ بِفَضْلِ سَعَتِكَ فَامْنُنْ عَلَيْنَا بِمَا أَنْتَ أَهْلُهُ وَ جُدْ عَلَيْنَا فَإِنَّا مُحْتَاجُونَ إِلَى نَيْلِكَ", fa: "از تو نافرمانی کردیم در حالی که امید داریم که بر ما بپوشانی، و تو را خواندیم در حالی که امید داریم که پاسخمان دهی. پس ای پروردگار، امید ما را محقق کن، زیرا می‌دانیم که با اعمالمان چه چیزی را سزاواریم، ولی دانش تو درباره ما و دانستن ما به این که تو ما را از خود نمی‌گردانی، هر چند سزاوار رحمتت نباشیم. پس تو شایسته‌ای که بر ما و بر گناهکاران به فضل گسترده‌ات ببخشی؛ پس بر ما به آنچه شایسته آنی منت نه و بر ما ببخش که ما به دریافت تو محتاجیم." },
+    { ar: "يَا غَفَّارُ بِنُورِكَ اهْتَدَيْنَا وَ بِفَضْلِكَ اسْتَغْنَيْنَا وَ بِنِعْمَتِكَ أَصْبَحْنَا وَ أَمْسَيْنَا ذُنُوبُنَا بَيْنَ يَدَيْكَ نَسْتَغْفِرُكَ اللَّهُمَّ مِنْهَا وَ نَتُوبُ إِلَيْكَ تَتَحَبَّبُ إِلَيْنَا بِالنِّعَمِ وَ نُعَارِضُكَ بِالذُّنُوبِ خَيْرُكَ إِلَيْنَا نَازِلٌ وَ شَرُّنَا إِلَيْكَ صَاعِدٌ وَ لَمْ يَزَلْ وَ لاَ يَزَالُ مَلَكٌ كَرِيمٌ يَأْتِيكَ بِعَمَلٍ قَبِيحٍ فَلاَ يَمْنَعُكَ ذَلِكَ مِنْ أَنْ تَحُوطَنَا بِنِعَمِكَ وَ تَتَفَضَّلَ عَلَيْنَا بِآلاَئِكَ فَسُبْحَانَكَ مَا أَحْلَمَكَ وَ أَعْظَمَكَ وَ أَكْرَمَكَ مُبْدِئاً وَ مُعِيداً تَقَدَّسَتْ أَسْمَاؤُكَ وَ جَلَّ ثَنَاؤُكَ وَ كَرُمَ صَنَائِعُكَ وَ فِعَالُكَ", fa: "ای بسیار آمرزنده، به نورت هدایت یافتیم و به فضلت بی‌نیاز شدیم و در نعمت‌هایت صبح و شام می‌کنیم، گناهانمان پیش روی توست، از آنها آمرزش می‌خواهیم و به تو توبه می‌کنیم. تو با نعمت‌هایت با ما محبت می‌کنی و ما با گناهان با تو مقابله می‌کنیم. خوبی تو به سوی ما فرود می‌آید و بدی ما به سوی تو بالا می‌رود. و پیوسته فرشته‌ای کریم از ما عمل زشتی را به تو می‌آورد، ولی این تو را از اینکه به نعمت‌هایت ما را در بر گیری و با بخشش‌هایت بر ما فضل کنی باز نمی‌دارد. پس منزّهی تو، چه بردبار و چه بزرگ و چه کریمی، در آغاز و بازگردانیدن. نام‌هایت پاک است و ستایشت بزرگ است و صنعت‌ها و کردارهایت کریمانه است." },
+    { ar: "أَنْتَ إِلَهِي أَوْسَعُ فَضْلاً وَ أَعْظَمُ حِلْماً مِنْ أَنْ تُقَايِسَنِي بِفِعْلِي وَ خَطِيئَتِي فَالْعَفْوَ الْعَفْوَ الْعَفْوَ سَيِّدِي سَيِّدِي سَيِّدِي", fa: "تو خدای منی، گسترده‌تر از آنی که با کردار و خطایم مرا بسنجی. پس عفو، عفو، عفو، ای آقای من، ای آقای من، ای آقای من." },
+    { ar: "اللَّهُمَّ اشْغَلْنَا بِذِكْرِكَ وَ أَعِذْنَا مِنْ سَخَطِكَ وَ أَجِرْنَا مِنْ عَذَابِكَ وَ ارْزُقْنَا مِنْ مَوَاهِبِكَ وَ أَنْعِمْ عَلَيْنَا مِنْ فَضْلِكَ وَ ارْزُقْنَا حَجَّ بَيْتِكَ وَ زِيَارَةَ قَبْرِ نَبِيِّكَ صَلَوَاتُكَ وَ رَحْمَتُكَ وَ مَغْفِرَتُكَ وَ رِضْوَانُكَ عَلَيْهِ وَ عَلَى أَهْلِ بَيْتِهِ إِنَّكَ قَرِيبٌ مُجِيبٌ", fa: "خدایا، ما را به یاد خود مشغول دار و از خشم خود پناه ده و از عذابت نجات بخش و از بخشش‌هایت روزیمان ده و از فضلت بر ما نعمت ارزانی دار. و حج خانه‌ات و زیارت قبر پیامبرت را روزیمان گردان، درودها و رحمت و آمرزش و خشنودی تو بر او و بر اهل بیتش باد، که تو نزدیک و اجابت‌کننده‌ای." },
+    { ar: "وَ ارْزُقْنَا عَمَلاً بِطَاعَتِكَ وَ تَوَفَّنَا عَلَى مِلَّتِكَ وَ سُنَّةِ نَبِيِّكَ صَلَّى اللَّهُ عَلَيْهِ وَ آلِهِ", fa: "و عملی در طاعتت روزیمان کن و ما را بر آیینت و سنت پیامبرت –درود خدا بر او و خاندانش– بمیران." },
+    { ar: "اللَّهُمَّ اغْفِرْ لِي وَ لِوَالِدَيَّ وَ ارْحَمْهُمَا كَمَا رَبَّيَانِي صَغِيراً اجْزِهِمَا بِالْإِحْسَانِ إِحْسَاناً وَ بِالسَّيِّئَاتِ غُفْرَاناً", fa: "خدایا، مرا و پدر و مادرم را بیامرز و به آنان رحم کن چنان که مرا در خردی پروردند؛ آنان را به نیکی‌ها پاداش نیکو ده و بدی‌هایشان را ببخش." },
+    { ar: "اللَّهُمَّ اغْفِرْ لِلْمُؤْمِنِينَ وَ الْمُؤْمِنَاتِ الْأَحْيَاءِ مِنْهُمْ وَ الْأَمْوَاتِ وَ تَابِعْ بَيْنَنَا وَ بَيْنَهُمْ بِالْخَيْرَاتِ اللَّهُمَّ اغْفِرْ لِحَيِّنَا وَ مَيِّتِنَا وَ شَاهِدِنَا وَ غَائِبِنَا ذَكَرِنَا وَ إِنَاثِنَا صَغِيرِنَا وَ كَبِيرِنَا حُرِّنَا وَ مَمْلُوكِنَا", fa: "خدایا، مردان و زنان مؤمن را بیامرز، زندگان و مردگانشان را، و میان ما و آنان را با خوبی‌ها پیوند ده. خدایا، زنده و مرده، حاضر و غایب، مرد و زن، کوچک و بزرگ، آزاد و برده‌ی ما را بیامرز." },
+    { ar: "كَذَبَ الْعَادِلُونَ بِاللَّهِ وَ ضَلُّوا ضَلاَلاً بَعِيداً وَ خَسِرُوا خُسْرَاناً مُبِيناً", fa: "دروغ گفتند آنان که برای خدا همتایی گرفتند و گمراه شدند گمراهی دور و زیان کردند زیانی آشکار." },
+    { ar: "اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ اخْتِمْ لِي بِخَيْرٍ وَ اكْفِنِي مَا أَهَمَّنِي مِنْ أَمْرِ دُنْيَايَ وَ آخِرَتِي وَ لاَ تُسَلِّطْ عَلَيَّ مَنْ لاَ يَرْحَمُنِي وَ اجْعَلْ عَلَيَّ مِنْكَ وَاقِيَةً بَاقِيَةً وَ لاَ تَسْلُبْنِي صَالِحَ مَا أَنْعَمْتَ بِهِ عَلَيَ وَ ارْزُقْنِي مِنْ فَضْلِكَ رِزْقاً وَاسِعاً حَلاَلاً طَيِّباً", fa: "خدایا، بر محمد و آل محمد درود فرست و سرانجام مرا به خیر خاتمه ده و آنچه را از کار دنیا و آخرتم مرا مهم کرده کفایت کن و کسی را که به من رحم نمی‌کند بر من مسلط مگردان و از سوی خود نگهبانی پایدار برایم قرار ده و نیکویی‌ای را که به من نعمت دادی از من سلب مکن و از فضل خود روزی فراخ و حلال و پاکیزه به من روزی کن." },
+    { ar: "اللَّهُمَّ احْرُسْنِي بِحَرَاسَتِكَ وَ احْفَظْنِي بِحِفْظِكَ وَ اكْلَأْنِي بِكِلاَءَتِكَ وَ ارْزُقْنِي حِجَّ بَيْتِكَ الْحَرَامِ فِي عَامِنَا هَذَا وَ فِي كُلِّ عَامٍ وَ زِيَارَةَ قَبْرِ نَبِيِّكَ وَ الْأَئِمَّةِ عَلَيْهِمُ السَّلاَمُ وَ لاَ تُخْلِنِي يَا رَبِّ مِنْ تِلْكَ الْمَشَاهِدِ الشَّرِيفَةِ وَ الْمَوَاقِفِ الْكَرِيمَةِ", fa: "خدایا، مرا به نگهبانی خود حراست کن و به حفظ خود حفظ کن و به نگاهبانی خود نگاه دار. و حج خانه حرامت را در این سال و هر سال، و زیارت قبر پیامبرت و امامان –درود بر آنان– را روزیم کن و ای پروردگار، مرا از آن مشاهده‌های شریف و مواقف کریمه بی‌بهره مگردان." },
+    { ar: "اللَّهُمَّ تُبْ عَلَيَّ حَتَّى لاَ أَعْصِيَكَ وَ أَلْهِمْنِي الْخَيْرَ وَ الْعَمَلَ بِهِ وَ خَشْيَتَكَ بِاللَّيْلِ وَ النَّهَارِ مَا أَبْقَيْتَنِي يَا رَبَّ الْعَالَمِينَ", fa: "خدایا، بر من توبه‌ام را بپذیر تا دیگر نافرمانیت نکنم، و خیر و عمل به آن و ترس از خود را در شب و روز تا هنگامی که مرا زنده نگاه داشته‌ای به من الهام کن، ای پروردگار جهانیان." },
+    { ar: "اللَّهُمَّ إِنِّي كُلَّمَا قُلْتُ قَدْ تَهَيَّأْتُ وَ تَعَبَّأْتُ وَ قُمْتُ لِلصَّلاَةِ بَيْنَ يَدَيْكَ وَ نَاجَيْتُكَ أَلْقَيْتَ عَلَيَّ نُعَاساً إِذَا أَنَا صَلَّيْتُ وَ سَلَبْتَنِي مُنَاجَاتَكَ إِذَا أَنَا نَاجَيْتُ مَا لِي كُلَّمَا قُلْتُ قَدْ صَلَحَتْ سَرِيرَتِي وَ قَرُبَ مِنْ مَجَالِسِ التَّوَّابِينَ مَجْلِسِي عَرَضَتْ لِي بَلِيَّةٌ أَزَالَتْ قَدَمِي وَ حَالَتْ بَيْنِي وَ بَيْنَ خِدْمَتِكَ", fa: "خدایا، هر گاه گفتم آماده شدم و مهیا گشتم و برای نماز به پیشگاهت ایستادم و با تو راز گفتم، خواب‌آلودگی بر من افکندی و چون نماز می‌خواندم و مناجات می‌کردم، مناجاتت را از من گرفتی. مرا چیست که هر گاه گفتم باطنم درست شد و مجلس من به مجالس توبه‌کنندگان نزدیک گردید، بلایی پیش آمد که گامم را لغزاند و بین من و خدمتت حائل شد؟" },
+    { ar: "سَيِّدِي لَعَلَّكَ عَنْ بَابِكَ طَرَدْتَنِي وَ عَنْ خِدْمَتِكَ نَحَّيْتَنِي أَوْ لَعَلَّكَ رَأَيْتَنِي مُسْتَخِفّاً بِحَقِّكَ فَأَقْصَيْتَنِي أَوْ لَعَلَّكَ رَأَيْتَنِي مُعْرِضاً عَنْكَ فَقَلَيْتَنِي أَوْ لَعَلَّكَ وَجَدْتَنِي فِي مَقَامِ الْكَاذِبِينَ فَرَفَضْتَنِي أَوْ لَعَلَّكَ رَأَيْتَنِي غَيْرَ شَاكِرٍ لِنَعْمَائِكَ فَحَرَمْتَنِي أَوْ لَعَلَّكَ فَقَدْتَنِي مِنْ مَجَالِسِ الْعُلَمَاءِ فَخَذَلْتَنِي أَوْ لَعَلَّكَ رَأَيْتَنِي فِي الْغَافِلِينَ فَمِنْ رَحْمَتِكَ آيَسْتَنِي أَوْ لَعَلَّكَ رَأَيْتَنِي آلِفَ مَجَالِسِ الْبَطَّالِينَ فَبَيْنِي وَ بَيْنَهُمْ خَلَّيْتَنِي أَوْ لَعَلَّكَ لَمْ تُحِبَّ أَنْ تَسْمَعَ دُعَائِي فَبَاعَدْتَنِي أَوْ لَعَلَّكَ بِجُرْمِي وَ جَرِيرَتِي كَافَيْتَنِي أَوْ لَعَلَّكَ بِقِلَّةِ حَيَائِي مِنْكَ جَازَيْتَنِي", fa: "آقای من، شاید مرا از درگاهت راندی و از خدمتت دور کردی، یا شاید مرا نسبت به حق خود سست‌عنایت دیدی و از من بریدی، یا شاید مرا رویگردان از خود دیدی و دشمن داشتی، یا شاید مرا در مقام دروغگویان یافتی و طردم کردی، یا شاید مرا ناسپاس نعمت‌هایت دیدی و محرومم ساختی، یا شاید مرا از مجالس علمای دور یافتی و خوارم کردی، یا شاید مرا در زمره غافلان دیدی و از رحمتت ناامیدم کردی، یا شاید مرا انس‌گیرنده با مجالس باطل یافتی و میان من و آنان رهایم کردی، یا شاید دوست نداشتی دعایم را بشنوی و دورم کردی، یا شاید به جرم و گناهم کیفر دادی، یا شاید به کم‌حیایی‌ام از تو جزایم دادی." },
+    { ar: "فَإِنْ عَفَوْتَ يَا رَبِّ فَطَالَمَا عَفَوْتَ عَنِ الْمُذْنِبِينَ قَبْلِي لِأَنَّ كَرَمَكَ أَيْ رَبِّ يَجِلُّ عَنْ مُكَافَاةِ الْمُقَصِّرِينَ وَ أَنَا عَائِذٌ بِفَضْلِكَ هَارِبٌ مِنْكَ إِلَيْكَ مُتَنَجِّزٌ مَا وَعَدْتَ مِنَ الصَّفْحِ عَمَّنْ أَحْسَنَ بِكَ ظَنّاً", fa: "پس اگر ای پروردگار عفو کنی، چه بسیار پیش از این از گناهکاران گذشته‌ای، زیرا کرمت ای پروردگار بزرگ‌تر از آن است که با کوتاهی‌کنندگان مقابله کنی. و من به فضل تو پناهنده‌ام، از تو به سوی تو می‌گریزم و به آنچه از گذشت بر کسی که به تو نیکوگمان است وعده دادی، امید بسته‌ام." },
+    { ar: "إِلَهِي أَنْتَ أَوْسَعُ فَضْلاً وَ أَعْظَمُ حِلْماً مِنْ أَنْ تُقَايِسَنِي بِعَمَلِي أَوْ أَنْ تَسْتَزِلَّنِي بِخَطِيئَتِي وَ مَا أَنَا يَا سَيِّدِي وَ مَا خَطَرِي هَبْنِي بِفَضْلِكَ سَيِّدِي وَ تَصَدَّقْ عَلَيَّ بِعَفْوِكَ وَ جَلِّلْنِي بِسَتْرِكَ وَ اعْفُ عَنْ تَوْبِيخِي بِكَرَمِ وَجْهِكَ", fa: "خدایا، تو گسترده‌تر و بزرگ‌وارتر از آنی که با عملم مرا بسنجی یا به خطایم بلغزانی. و من ای آقای من چه‌ام و چه قدری دارم؟ مرا به فضلت ببخش و بر من به عفو خود تصدق کن و به پرده پوششت بپوشان و با کرامت رویت از سرزنشم درگذر." },
+    { ar: "سَيِّدِي أَنَا الصَّغِيرُ الَّذِي رَبَّيْتَهُ وَ أَنَا الْجَاهِلُ الَّذِي عَلَّمْتَهُ وَ أَنَا الضَّالُّ الَّذِي هَدَيْتَهُ وَ أَنَا الْوَضِيعُ الَّذِي رَفَعْتَهُ وَ أَنَا الْخَائِفُ الَّذِي آمَنْتَهُ وَ الْجَائِعُ الَّذِي أَشْبَعْتَهُ وَ الْعَطْشَانُ الَّذِي أَرْوَيْتَهُ وَ الْعَارِي الَّذِي كَسَوْتَهُ وَ الْفَقِيرُ الَّذِي أَغْنَيْتَهُ وَ الضَّعِيفُ الَّذِي قَوَّيْتَهُ وَ الذَّلِيلُ الَّذِي أَعْزَزْتَهُ وَ السَّقِيمُ الَّذِي شَفَيْتَهُ وَ السَّائِلُ الَّذِي أَعْطَيْتَهُ وَ الْمُذْنِبُ الَّذِي سَتَرْتَهُ وَ الْخَاطِئُ الَّذِي أَقَلْتَهُ وَ أَنَا الْقَلِيلُ الَّذِي كَثَّرْتَهُ وَ الْمُسْتَضْعَفُ الَّذِي نَصَرْتَهُ وَ أَنَا الطَّرِيدُ الَّذِي آوَيْتَهُ", fa: "آقای من، من همان کوچکی هستم که پروردی و همان نادانی که تعلیم دادی و همان گمراهی که هدایت کردی و همان فروتن که بلند کردی و همان ترسان که ایمن ساختی و گرسنه که سیر کردی و تشنه که سیراب کردی و برهنه که پوشاندی و فقیر که بی‌نیاز کردی و ضعیف که نیرو دادی و خوار که عزت بخشیدی و بیمار که شفا دادی و سائل که عطا کردی و گناهکار که پوشاندی و خطاکار که گذشتی و من همان اندکم که بسیار کردی و همان ناتوان که یاری دادی و من همان رانده شده‌ام که پناه دادی." },
+    { ar: "أَنَا يَا رَبِّ الَّذِي لَمْ أَسْتَحْيِكَ فِي الْخَلاَءِ وَ لَمْ أُرَاقِبْكَ فِي الْمَلَإِ أَنَا صَاحِبُ الدَّوَاهِي الْعُظْمَى أَنَا الَّذِي عَلَى سَيِّدِهِ اجْتَرَى أَنَا الَّذِي عَصَيْتُ جَبَّارَ السَّمَاءِ أَنَا الَّذِي أَعْطَيْتُ عَلَى مَعَاصِي الْجَلِيلِ الرُّشَا أَنَا الَّذِي حِينَ بُشِّرْتُ بِهَا خَرَجْتُ إِلَيْهَا أَسْعَى أَنَا الَّذِي أَمْهَلْتَنِي فَمَا ارْعَوَيْتُ وَ سَتَرْتَ عَلَيَّ فَمَا اسْتَحْيَيْتُ وَ عَمِلْتُ بِالْمَعَاصِي فَتَعَدَّيْتُ وَ أَسْقَطْتَنِي مِنْ عَيْنِكَ فَمَا بَالَيْتُ فَبِحِلْمِكَ أَمْهَلْتَنِي وَ بِسِتْرِكَ سَتَرْتَنِي حَتَّى كَأَنَّكَ أَغْفَلْتَنِي وَ مِنْ عُقُوبَاتِ الْمَعَاصِي جَنَّبْتَنِي حَتَّى كَأَنَّكَ اسْتَحْيَيْتَنِي", fa: "ای پروردگار، منم که در خلوت از تو حیا نکردم و در انجمن مراقبت تو را نداشتم. من صاحب مصیبت‌های بزرگم. منم که بر سرور خود گستاخی کردم. منم که نافرمانی جبّار آسمان را کردم. منم که بر گناهان بزرگ، رشوه دادم. منم که چون به گناه بشارت داده شدم، به سویش شتابان بیرون رفتم. منم که مهلتم دادی و پند نگرفتم و پوشاندی بر من و حیا نکردم و به گناهان عمل کردم و تجاوز نمودم و مرا از چشم خود انداختی و باکی نداشتم. پس به بردباری‌ات مهلتم دادی و به پوششت پوشاندی تا گویی از من غافل شدی و از عقوبت گناهان دورم داشتی تا گویی از من حیاکردی." },
+    { ar: "إِلَهِي لَمْ أَعْصِكَ حِينَ عَصَيْتُكَ وَ أَنَا بِرُبُوبِيَّتِكَ جَاحِدٌ وَ لاَ بِأَمْرِكَ مُسْتَخِفٌّ وَ لاَ لِعُقُوبَتِكَ مُتَعَرِّضٌ وَ لاَ لِوَعِيدِكَ مُتَهَاوِنٌ فَقَدْ عَصَيْتُكَ وَ خَالَفْتُكَ بِجُهْدِي فَالْآنَ مِنْ عَذَابِكَ مَنْ يَسْتَنْقِذُنِي وَ مِنْ أَيْدِي الْخُصَمَاءِ غَداً مَنْ يُخَلِّصُنِي وَ بِحَبْلِ مَنْ أَتَّصِلُ إِنْ أَنْتَ قَطَعْتَ حَبْلَكَ عَنِّي", fa: "خدایا، هنگامی که نافرمانیت کردم نه به ربوبیتت کافر بودم و نه به امرت سبک‌می‌گرفتم و نه خود را در معرض عقوبتت قرار می‌دادم و نه به وعیدت بی‌توجه بودم، بلکه با تمام توان نافرمانی و مخالفت کردم. اکنون از عذابت چه کسی مرا می‌رهاند؟ و از دست دشمنان فردا چه کسی مرا می‌رهاند؟ و به ریسمان چه کسی چنگ زنم اگر تو ریسمانت را از من بگسلی؟" },
+    { ar: "فَوَا سَوْأَتَا عَلَى مَا أَحْصَى كِتَابُكَ مِنْ عَمَلِيَ الَّذِي لَوْ لاَ مَا أَرْجُو مِنْ كَرَمِكَ وَ سَعَةِ رَحْمَتِكَ وَ نَهْيِكَ إِيَّايَ عَنِ الْقُنُوطِ لَقَنَطْتُ عِنْدَ مَا أَتَذَكَّرُهَا يَا خَيْرَ مَنْ دَعَاهُ دَاعٍ وَ أَفْضَلَ مَنْ رَجَاهُ رَاجٍ", fa: "ای وای بر من بر آنچه کتاب تو از عملم شماره کرده، که اگر امید به کرم و گستردگی رحمتت و نهی تو از ناامیدی نبود، هر گاه آنها را به یاد می‌آوردم ناامید می‌شدم. ای بهترین کسی که خواهنده‌ای او را خوانده و بهترین کسی که امیدواری به او امید بسته است." },
+    { ar: "اللَّهُمَّ بِذِمَّةِ الْإِسْلاَمِ أَتَوَسَّلُ إِلَيْكَ وَ بِحُرْمَةِ الْقُرْآنِ أَعْتَمِدُ إِلَيْكَ وَ بِحُبِّي النَّبِيَّ الْأُمِّيَّ الْقُرَشِيَّ الْهَاشِمِيَّ الْعَرَبِيَّ التِّهَامِيَّ الْمَكِّيَّ الْمَدَنِيَّ أَرْجُو الزُّلْفَةَ لَدَيْكَ فَلاَ تُوحِشْ اسْتِينَاسَ إِيمَانِي وَ لاَ تَجْعَلْ ثَوَابِي ثَوَابَ مَنْ عَبَدَ سِوَاكَ", fa: "خدایا، به ذمّه اسلام به تو توسل می‌جویم و به حرمت قرآن بر تو اعتماد می‌کنم و به عشقی که به پیامبر امّی قریشی هاشمی عربی تهامى مکی مدنی دارم، امید نزدیکی به تو را دارم. پس انس گرفتن ایمانم را وحشت‌زده مکن و پاداش مرا پاداش کسی که جز تو را پرستیده قرار مده." },
+    { ar: "فَإِنَّ قَوْماً آمَنُوا بِأَلْسِنَتِهِمْ لِيَحْقِنُوا بِهِ دِمَاءَهُمْ فَأَدْرَكُوا مَا أَمَّلُوا وَ إِنَّا آمَنَّا بِكَ بِأَلْسِنَتِنَا وَ قُلُوبِنَا لِتَعْفُوَ عَنَّا فَأَدْرِكْ بِنَا مَا أَمَّلْنَا وَ ثَبِّتْ رَجَاءَكَ فِي صُدُورِنَا وَ لاَ تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَ هَبْ لَنَا مِنْ لَدُنْكَ رَحْمَةً إِنَّكَ أَنْتَ الْوَهَّابُ", fa: "زیرا گروهی با زبانهایشان ایمان آوردند تا خونهایشان را حفظ کنند و به آرزویشان رسیدند، ولی ما به تو با زبانها و دلهایمان ایمان آوردیم تا از ما درگذری، پس به آنچه آرزو کردیم برسانیم و امیدت را در سینه‌هایمان استوار کن و دلهایمان را پس از آنکه هدایت کردی منحرف مکن و از جانب خود رحمتی به ما ببخش که تو بسیار بخشنده‌ای." },
+    { ar: "فَوَ عِزَّتِكَ لَوِ انْتَهَرْتَنِي مَا بَرِحْتُ مِنْ بَابِكَ وَ لاَ كَفَفْتُ عَنْ تَمَلُّقِكَ لِمَا أُلْهِمَ قَلْبِي يَا سَيِّدِي مِنَ الْمَعْرِفَةِ بِكَرَمِكَ وَ سَعَةِ رَحْمَتِكَ إِلَى مَنْ يَذْهَبُ الْعَبْدُ إِلاَّ إِلَى مَوْلاَهُ وَ إِلَى مَنْ يَلْتَجِئُ الْمَخْلُوقُ إِلاَّ إِلَى خَالِقِهِ", fa: "سوگند به عزتت، اگر مرا از خود برانی، از درگاهت دست نمی‌کشم و از چاپلوسی‌ات باز نمی‌ایستم، به خاطر آنچه در دلم ای آقای من از معرفت به کرمت و گستردگی رحمتت الهام شده است. بنده به جز به سوی مولای خود کجا می‌رود؟ و مخلوق به جز به سوی خالق خود به کجا پناه می‌برد؟" },
+    { ar: "إِلَهِي لَوْ قَرَنْتَنِي بِالْأَصْفَادِ وَ مَنَعْتَنِي سَيْبَكَ مِنْ بَيْنِ الْأَشْهَادِ وَ دَلَلْتَ عَلَى فَضَائِحِي عُيُونَ الْعِبَادِ وَ أَمَرْتَ بِي إِلَى النَّارِ وَ حُلْتَ بَيْنِي وَ بَيْنَ الْأَبْرَارِ مَا قَطَعْتُ رَجَائِي مِنْكَ وَ مَا صَرَفْتُ تَأْمِيلِي لِلْعَفْوِ عَنْكَ وَ لاَ خَرَجَ حُبُّكَ مِنْ قَلْبِي أَنَا لاَ أَنْسَى أَيَادِيَكَ عِنْدِي وَ سَتْرَكَ عَلَيَّ فِي دَارِ الدُّنْيَا", fa: "خدایا، اگر مرا در بندها کنی و در میان مردم عطایت را از من بازداری و چشم بندگان را بر رسوایی‌هایم گماری و مرا به آتش فرمان دهی و میان من و نیکان جدایی افکنی، هرگز امیدم را از تو نمی‌برم و آرزوی عفو را از تو بر نمی‌گردانم و محبتت از دلم بیرون نمی‌رود. من هرگز نعمت‌هایت را نزد خود و پوششت را در سرای دنیا بر خود فراموش نمی‌کنم." },
+    { ar: "سَيِّدِي أَخْرِجْ حُبَّ الدُّنْيَا مِنْ قَلْبِي وَ اجْمَعْ بَيْنِي وَ بَيْنَ الْمُصْطَفَى وَ آلِهِ خِيَرَتِكَ مِنْ خَلْقِكَ وَ خَاتَمِ النَّبِيِّينَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَ آلِهِ وَ انْقُلْنِي إِلَى دَرَجَةِ التَّوْبَةِ إِلَيْكَ وَ أَعِنِّي بِالْبُكَاءِ عَلَى نَفْسِي فَقَدْ أَفْنَيْتُ بِالتَّسْوِيفِ وَ الْآمَالِ عُمُرِي وَ قَدْ نَزَلْتُ مَنْزِلَةَ الْآيِسِينَ مِنْ خَيْرِي فَمَنْ يَكُونُ أَسْوَأَ حَالاً مِنِّي إِنْ أَنَا نُقِلْتُ عَلَى مِثْلِ حَالِي إِلَى قَبْرِي لَمْ أُمَهِّدْهُ لِرَقْدَتِي وَ لَمْ أَفْرُشْهُ بِالْعَمَلِ الصَّالِحِ لِضَجْعَتِي", fa: "آقای من، محبت دنیا را از دلم بیرون کن و میان من و مصطفی و خاندانش که برگزیدگان تو از آفریدگان و خاتم پیامبرانند، محمد درود خدا بر او و خاندانش، جمع کن و مرا به درجه توبه به سوی خود منتقل نما و با گریه بر خود یاری‌ام ده، که عمر خود را با سهل‌انگاری و آرزوها به پایان بردم و به جایگاه ناامیدان از زندگیم فرود آمدم، پس چه کسی بدحال‌تر از من خواهد بود؟ اگر بر همین حال به گورم منتقل شوم که آن را برای خوابم آماده نکرده و با عمل صالح برای آسایشم فرش ننهاده‌ام." },
+    { ar: "وَ مَا لِي لاَ أَبْكِي وَ لاَ أَدْرِي إِلَى مَا يَكُونُ مَصِيرِي وَ أَرَى نَفْسِي تُخَادِعُنِي وَ أَيَّامِي تُخَاتِلُنِي وَ قَدْ خَفَقَتْ فَوْقَ رَأْسِي أَجْنِحَةُ الْمَوْتِ فَمَا لِي لاَ أَبْكِي أَبْكِي لِخُرُوجِ نَفْسِي أَبْكِي لِظُلْمَةِ قَبْرِي أَبْكِي لِضِيقِ لَحْدِي أَبْكِي لِسُؤَالِ مُنْكَرٍ وَ نَكِيرٍ إِيَّايَ أَبْكِي لِخُرُوجِي مِنْ قَبْرِي عُرْيَاناً ذَلِيلاً حَامِلاً ثِقْلِي عَلَى ظَهْرِي أَنْظُرُ مَرَّةً عَنْ يَمِينِي وَ أُخْرَى عَنْ شِمَالِي إِذِ الْخَلاَئِقُ فِي شَأْنٍ غَيْرِ شَأْنِي لِكُلِّ امْرِئٍ مِنْهُمْ يَوْمَئِذٍ شَأْنٌ يُغْنِيهِ وُجُوهٌ يَوْمَئِذٍ مُسْفِرَةٌ ضَاحِكَةٌ مُسْتَبْشِرَةٌ وَ وُجُوهٌ يَوْمَئِذٍ عَلَيْهَا غَبَرَةٌ تَرْهَقُهَا قَتَرَةٌ وَ ذِلَّةٌ", fa: "و مرا چه شده که گریه نمی‌کنم؟ در حالی که نمی‌دانم سرانجامم به کجا خواهد بود. و می‌بینم که نفسم مرا فریب می‌دهد و روزگارم با من نیرنگ می‌بازد و بال‌های مرگ بالای سرم به اهتزاز درآمده است. پس چرا گریه نکنم؟ گریه می‌کنم برای بیرون رفتن جانم، گریه می‌کنم برای تاریکی قبرم، گریه می‌کنم برای تنگی لحدّم، گریه می‌کنم برای سؤال منکر و نکیر از من، گریه می‌کنم برای بیرون آمدن از قبرم در حالی که برهنه و خوار و سنگین‌بار پشتم هستم. یک بار به راستم نگاه می‌کنم و بار دیگر به چپم، در حالی که هر یک از خلایق در کاری غیر از کار من است؛ در آن روز هر کس را از آنان کاری است که او را بسنده است. چهره‌هایی آن روز فروزان و خندان و نویدبخش و چهره‌هایی که بر آنها غبار است و تاریکی و ذلّت آنان را می‌پوشاند." },
+    { ar: "سَيِّدِي عَلَيْكَ مُعَوَّلِي وَ مُعْتَمَدِي وَ رَجَائِي وَ تَوَكُّلِي وَ بِرَحْمَتِكَ تَعَلُّقِي تُصِيبُ بِرَحْمَتِكَ مَنْ تَشَاءُ وَ تَهْدِي بِكَرَامَتِكَ مَنْ تُحِبُّ فَلَكَ الْحَمْدُ عَلَى مَا نَقَّيْتَ مِنَ الشِّرْكِ قَلْبِي وَ لَكَ الْحَمْدُ عَلَى بَسْطِ لِسَانِي أَ فَبِلِسَانِي هَذَا الْكَالِّ أَشْكُرُكَ أَمْ بِغَايَةِ جُهْدِي فِي عَمَلِي أُرْضِيكَ وَ مَا قَدْرُ لِسَانِي يَا رَبِّ فِي جَنْبِ شُكْرِكَ وَ مَا قَدْرُ عَمَلِي فِي جَنْبِ نِعَمِكَ وَ إِحْسَانِكَ", fa: "آقای من، تکیه‌گاه و پشتوانه و امید و توکل من بر توست و به رحمتت چنگ زده‌ام. هر که را خواهی به رحمتت می‌رسانی و هر که را دوست داری به کرامتت هدایت می‌کنی. پس ستایش تو راست بر آنچه دلم را از شرک پاک کردی و ستایش تو راست بر گشادگی زبانم. آیا با این زبان ناتوانم از تو سپاس گویم یا با نهایت کوششم در عملت را خشنود سازم؟ و چه قدر است زبانم در کنار شکر تو و چه قدر است عملم در کنار نعمت‌ها و احسانت به من؟" },
+    { ar: "إِلَهِي إِنَّ جُودَكَ بَسَطَ أَمَلِي وَ شُكْرَكَ قَبِلَ عَمَلِي سَيِّدِي إِلَيْكَ رَغْبَتِي وَ إِلَيْكَ رَهْبَتِي وَ إِلَيْكَ تَأْمِيلِي وَ قَدْ سَاقَنِي إِلَيْكَ أَمَلِي وَ إِلَيْكَ يَا وَاحِدِي عَكَفَتْ هِمَّتِي وَ فِيمَا عِنْدَكَ انْبَسَطَتْ رَغْبَتِي وَ لَكَ خَالِصُ رَجَائِي وَ خَوْفِي وَ بِكَ أَنِسَتْ مَحَبَّتِي وَ إِلَيْكَ أَلْقَيْتُ بِيَدِي وَ بِحَبْلِ طَاعَتِكَ مَدَدْتُ رَهْبَتِي", fa: "خدایا، جودت امیدم را گشاده کرد و شکرت عملم را پذیرفت. آقای من، رغبت و ترس و آرزوی من به سوی توست و امیدم مرا به سوی تو کشانده است. ای یگانه‌ام، همتم به تو پیوسته و رغبتم به آنچه نزد توست گشاده شده و امید و ترس من خالص برای توست. محبتم به تو انس گرفت و به سوی تو دستم را گشودم و با ریسمان طاعتت ترسم را دراز کردم." },
+    { ar: "يَا مَوْلاَيَ بِذِكْرِكَ عَاشَ قَلْبِي وَ بِمُنَاجَاتِكَ بَرَّدْتُ أَلَمَ الْخَوْفِ عَنِّي فَيَا مَوْلاَيَ وَ يَا مُؤَمَّلِي وَ يَا مُنْتَهَى سُؤْلِي فَرِّقْ بَيْنِي وَ بَيْنَ ذَنْبِيَ الْمَانِعِ لِي مِنْ لُزُومِ طَاعَتِكَ فَإِنَّمَا أَسْأَلُكَ لِقَدِيمِ الرَّجَاءِ فِيكَ وَ عَظِيمِ الطَّمَعِ مِنْكَ الَّذِي أَوْجَبْتَهُ عَلَى نَفْسِكَ مِنَ الرَّأْفَةِ وَ الرَّحْمَةِ فَالْأَمْرُ لَكَ وَحْدَكَ لاَ شَرِيكَ لَكَ وَ الْخَلْقُ كُلُّهُمْ عِيَالُكَ وَ فِي قَبْضَتِكَ وَ كُلُّ شَيْءٍ خَاضِعٌ لَكَ تَبَارَكْتَ يَا رَبَّ الْعَالَمِينَ", fa: "ای مولای من، دلم به یاد تو زنده است و با مناجاتت درد ترس را از خود زدودم. ای مولای من و ای آرزوی من و ای نهایت درخواست من، میان من و آن گناهی که مرا از طاعتت باز داشته جدایی افکن. زیرا تنها برای امید دیرینه به تو و طمع بزرگ از تو که آن را از رأفت و رحمت بر خود واجب کرده‌ای از تو می‌خواهم. پس فرمان تنها از آن توست، شریکی نداری و همه آفریدگان عیال تواند و در قبضه توانند و همه چیز برای تو فروتن است. پربرکت هستی ای پروردگار جهانیان." },
+    { ar: "إِلَهِي ارْحَمْنِي إِذَا انْقَطَعَتْ حُجَّتِي وَ كَلَّ عَنْ جَوَابِكَ لِسَانِي وَ طَاشَ عِنْدَ سُؤَالِكَ إِيَّايَ لُبِّي فَيَا عَظِيمَ رَجَائِي لاَ تُخَيِّبْنِي إِذَا اشْتَدَّتْ فَاقَتِي وَ لاَ تَرُدَّنِي لِجَهْلِي وَ لاَ تَمْنَعْنِي لِقِلَّةِ صَبْرِي أَعْطِنِي لِفَقْرِي وَ ارْحَمْنِي لِضَعْفِي", fa: "خدایا، هنگامی که حجتم قطع شود و زبانم از پاسخ به تو بازماند و خردم در برابر پرسشت سرگردان شود، مرا رحم کن. ای بزرگ آرزوی من، چون نیازم سخت شود ناامیدم مکن و به خاطر نادانی‌ام مرا برمگردان و به خاطر کم‌صبری‌ام عطایم را بازمدار، مرا به فقرم عطا کن و به ضعفم رحم فرما." },
+    { ar: "سَيِّدِي عَلَيْكَ مُعْتَمَدِي وَ مُعَوَّلِي وَ رَجَائِي وَ تَوَكُّلِي وَ بِرَحْمَتِكَ تَعَلُّقِي وَ بِفِنَائِكَ أَحُطُّ رَحْلِي وَ بِجُودِكَ أَقْصِدُ طَلِبَتِي وَ بِكَرَمِكَ أَيْ رَبِّ أَسْتَفْتِحُ دُعَائِي وَ لَدَيْكَ أَرْجُو فَاقَتِي وَ بِغِنَاكَ أَجْبُرُ عَيْلَتِي وَ تَحْتَ ظِلِّ عَفْوِكَ قِيَامِي وَ إِلَى جُودِكَ وَ كَرَمِكَ أَرْفَعُ بَصَرِي وَ إِلَى مَعْرُوفِكَ أُدِيمُ نَظَرِي", fa: "آقای من، پشتوانه و تکیه‌گاه و امید و توکل من بر توست و به رحمتت چنگ زده‌ام. در سرایت بار می‌بندم و به جودت درخواستم را کوتاه می‌کنم و به کرمت ای پروردگار دعایم را می‌گشایم. نزد تو آرزوی مهمانی دارم و به بی‌نیازیت درماندگیم را جبران می‌کنم. و ایستادنم زیر سایه عفو توست و به سوی جود و کرمت چشم برمی‌دارم و به احسانت نگاه همیشگی دارم." },
+    { ar: "فَلاَ تُحْرِقْنِي بِالنَّارِ وَ أَنْتَ مَوْضِعُ أَمَلِي وَ لاَ تُسْكِنِّي الْهَاوِيَةَ فَإِنَّكَ قُرَّةُ عَيْنِي يَا سَيِّدِي لاَ تُكَذِّبْ ظَنِّي بِإِحْسَانِكَ وَ مَعْرُوفِكَ فَإِنَّكَ ثِقَتِي وَ لاَ تَحْرِمْنِي ثَوَابَكَ فَإِنَّكَ الْعَارِفُ بِفَقْرِي", fa: "پس مرا به آتش مسوزان که تو جایگاه آرزوی منی و در هاویه‌ام مسکن مده که تو روشنی چشم منی. ای آقای من، گمان مرا به احسان و نیکی‌ات دروغ مکن که تو پشتوانه منی و مرا از پاداشت محروم مگردان که تو به فقرم آگاهی." },
+    { ar: "إِلَهِي إِنْ كَانَ قَدْ دَنَا أَجَلِي وَ لَمْ يُقَرِّبْنِي مِنْكَ عَمَلِي فَقَدْ جَعَلْتُ الاِعْتِرَافَ إِلَيْكَ بِذَنْبِي وَسَائِلَ عِلَلِي إِلَهِي إِنْ عَفَوْتَ فَمَنْ أَوْلَى مِنْكَ بِالْعَفْوِ وَ إِنْ عَذَّبْتَ فَمَنْ أَعْدَلُ مِنْكَ فِي الْحُكْمِ ارْحَمْ فِي هَذِهِ الدُّنْيَا غُرْبَتِي وَ عِنْدَ الْمَوْتِ كُرْبَتِي وَ فِي الْقَبْرِ وَحْدَتِي وَ فِي اللَّحْدِ وَحْشَتِي وَ إِذَا نُشِرْتُ لِلْحِسَابِ بَيْنَ يَدَيْكَ ذُلَّ مَوْقِفِي وَ اغْفِرْ لِي مَا خَفِيَ عَلَى الْآدَمِيِّينَ مِنْ عَمَلِي وَ أَدِمْ لِي مَا بِهِ سَتَرْتَنِي", fa: "خدایا، اگر اجلم نزدیک شده و عملم مرا به تو نزدیک نکرده، اعتراف به گناهم را وسیله درماندگی‌ام قرار داده‌ام. خدایا، اگر عفو کنی چه کسی از تو به عفو سزاوارتر و اگر عذاب کنی چه کسی در حکم از تو عادل‌تر است؟ در این دنیا به غربتم رحم کن و هنگام مرگ به اندوهم، و در قبر به تنهایی‌ام، و در لحد به وحشتم، و چون برای حساب در پیشگاهت نشر داده شوم به خواری جایگاهم. و آنچه از عملم بر آدمیان پنهان مانده بر من ببخش و آنچه را که با آن مرا پوشاندی برایم پایدار دار." },
+    { ar: "وَ ارْحَمْنِي صَرِيعاً عَلَى الْفِرَاشِ تُقَلِّبُنِي أَيْدِي أَحِبَّتِي وَ تَفَضَّلْ عَلَيَّ مَمْدُوداً عَلَى الْمُغْتَسَلِ يُغَسِّلُنِي صَالِحُ جِيرَتِي وَ تَحَنَّنْ عَلَيَّ مَحْمُولاً قَدْ تَنَاوَلَ الْأَقْرِبَاءُ أَطْرَافَ جَنَازَتِي وَ جُدْ عَلَيَّ مَنْقُولاً قَدْ نَزَلْتُ بِكَ وَحِيداً فِي حُفْرَتِي وَ ارْحَمْ فِي ذَلِكَ الْبَيْتِ الْجَدِيدِ غُرْبَتِي حَتَّى لاَ أَسْتَأْنِسَ بِغَيْرِكَ", fa: "و به من رحم کن در آن هنگام که بر بستر افتاده‌ام و دستان دوستانم مرا می‌گردانند، و بر من فضل کن در آن حال که بر غسل‌گاه کشیده شده‌ام و همسایگان شایسته‌ام مرا غسل می‌دهند و بر من مهرورز هنگامی که حمل می‌شوم و خویشان اطراف جنازه‌ام را گرفته‌اند، و بر من ببخش آنگاه که منتقل می‌شوم و در قبرم تنها به تو فرود آمده‌ام. و در آن خانه جدید به غربتم رحم کن تا با غیر تو انس نگیرم." },
+    { ar: "يَا سَيِّدِي إِنْ وَكَلْتَنِي إِلَى نَفْسِي هَلَكْتُ سَيِّدِي فَبِمَنْ أَسْتَغِيثُ إِنْ لَمْ تُقِلْنِي عَثْرَتِي فَإِلَى مَنْ أَفْزَعُ إِنْ فَقَدْتُ عِنَايَتَكَ فِي ضَجْعَتِي وَ إِلَى مَنْ أَلْتَجِئُ إِنْ لَمْ تُنَفِّسْ كُرْبَتِي سَيِّدِي مَنْ لِي وَ مَنْ يَرْحَمُنِي إِنْ لَمْ تَرْحَمْنِي وَ فَضْلَ مَنْ أُؤَمِّلُ إِنْ عَدِمْتُ فَضْلَكَ يَوْمَ فَاقَتِي وَ إِلَى مَنِ الْفِرَارُ مِنَ الذُّنُوبِ إِذَا انْقَضَى أَجَلِي سَيِّدِي لاَ تُعَذِّبْنِي وَ أَنَا أَرْجُوكَ إِلَهِي حَقِّقْ رَجَائِي وَ آمِنْ خَوْفِي فَإِنَّ كَثْرَةَ ذُنُوبِي لاَ أَرْجُو لَهَا إِلاَّ عَفْوَكَ", fa: "ای آقای من، اگر مرا به خودم واگذاری هلاک می‌شوم. پس اگر لغزشم را نپوشانی به که پناه می‌برم؟ و اگر عنایتت را در خوابگاهم از دست بدهم به که پناه می‌آورم؟ و اگر گرفتاریم را گشایش نبخشی به که پناه می‌جویم؟ آقای من، که را دارم و چه کسی به من رحم می‌کند اگر تو رحم نکنی؟ و فضل چه کسی را امید دارم اگر فضلت را در روز نیازم از دست بدهم؟ و به که از گناهان بگریزم چون اجلم به سر آید؟ آقای من، مرا عذاب مکن در حالی که به تو امید دارم. خدایا، امیدم را محقق کن و ترسم را ایمنی بخش، زیرا در بسیاری گناهانم جز به عفو تو امیدی ندارم." },
+    { ar: "سَيِّدِي أَنَا أَسْأَلُكَ مَا لاَ أَسْتَحِقُّ وَ أَنْتَ أَهْلُ التَّقْوَى وَ أَهْلُ الْمَغْفِرَةِ فَاغْفِرْ لِي وَ أَلْبِسْنِي مِنْ نَظَرِكَ ثَوْباً يُغَطِّي عَلَيَّ التَّبِعَاتِ وَ تَغْفِرُهَا لِي وَ لاَ أُطَالَبُ بِهَا إِنَّكَ ذُو مَنٍّ قَدِيمٍ وَ صَفْحٍ عَظِيمٍ وَ تَجَاوُزٍ كَرِيمٍ", fa: "آقای من، از تو چیزی می‌خواهم که سزاوارش نیستم و تو شایسته تقوایی و شایسته آمرزشی، پس مرا بیامرز و از نگاهت جامه‌ای بر من بپوشان که تبعات را بر من بپوشاند و آنها را بر من ببخشی و بر آنها مؤاخذه نشوم، که تو صاحب منتی دیرینه‌ای و گذشتی بزرگ و بخششی کریمانه‌ای." },
+    { ar: "إِلَهِي أَنْتَ الَّذِي تُفِيضُ سَيْبَكَ عَلَى مَنْ لاَ يَسْأَلُكَ وَ عَلَى الْجَاحِدِينَ بِرُبُوبِيَّتِكَ فَكَيْفَ سَيِّدِي بِمَنْ سَأَلَكَ وَ أَيْقَنَ أَنَّ الْخَلْقَ لَكَ وَ الْأَمْرَ إِلَيْكَ تَبَارَكْتَ وَ تَعَالَيْتَ يَا رَبَّ الْعَالَمِينَ", fa: "خدایا، تو هستی که عطایت را بر کسانی که از تو نمی‌خواهند و حتی بر منکران ربوبیتت جاری می‌سازی، پس چگونه ای آقای من، حال کسی خواهد بود که از تو خواسته و یقین دارد که آفرینش از آن تو و کار به سوی توست. پربرکت و برتری ای پروردگار جهانیان." },
+    { ar: "سَيِّدِي عَبْدُكَ بِبَابِكَ أَقَامَتْهُ الْخَصَاصَةُ بَيْنَ يَدَيْكَ يَقْرَعُ بَابَ إِحْسَانِكَ بِدُعَائِهِ وَ يَسْتَعْطِفُ جَمِيلَ نَظَرِكَ بِمَكْنُونِ رَجَائِكَ فَلاَ تُعْرِضْ بِوَجْهِكَ الْكَرِيمِ عَنِّي وَ اقْبَلْ مِنِّي مَا أَقُولُ فَقَدْ دَعَوْتُكَ بِهَذَا الدُّعَاءِ وَ أَنَا أَرْجُو أَنْ لاَ تَرُدَّنِي مَعْرِفَةً مِنِّي بِرَأْفَتِكَ وَ رَحْمَتِكَ", fa: "آقای من، بنده‌ات به درگاه توست؛ نیازمندی او را در پیشگاهت بر پا داشته، با دعای خود در خانه احسانت را می‌زند و با نهان امیدت، نگاه زیبایت را طلب می‌کند. پس روی کریمت را از من بر مگردان و آنچه می‌گویم از من بپذیر، که من با این دعا تو را خواندم و به رأفت و رحمتت امید دارم که مرا رد نکنی." },
+    { ar: "إِلَهِي أَنْتَ الَّذِي لاَ يُحْفِيكَ سَائِلٌ وَ لاَ يَنْقُصُكَ نَائِلٌ أَنْتَ كَمَا تَقُولُ وَ فَوْقَ مَا نَقُولُ", fa: "خدایا، تو آنی که خواهنده تو را به ستوه نمی‌آورد و عطا کردن از تو نمی‌کاهد. تو آنی که خود می‌گویی و بالاتر از آنچه ما می‌گوییم." },
+    { ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ صَبْراً جَمِيلاً وَ فَرَجاً قَرِيباً وَ قَوْلاً صَادِقاً وَ أَجْراً عَظِيماً أَسْأَلُكَ يَا رَبِّ مِنَ الْخَيْرِ كُلِّهِ مَا عَلِمْتُ مِنْهُ وَ مَا لَمْ أَعْلَمْ أَسْأَلُكَ اللَّهُمَّ مِنْ خَيْرِ مَا سَأَلَكَ مِنْهُ عِبَادُكَ الصَّالِحُونَ يَا خَيْرَ مَنْ سُئِلَ وَ أَجْوَدَ مَنْ أَعْطَى", fa: "خدایا، از تو صبری نیکو و گشایشی نزدیک و گفتاری راست و پاداشی بزرگ می‌خواهم. از تو ای پروردگار همه خیر را می‌خواهم، آنچه از آن می‌دانم و آنچه نمی‌دانم. از تو خدایا بهترین چیزی را می‌خواهم که بندگان شایسته‌ات از تو خواسته‌اند، ای بهترین کسی که از او خواسته شده و بخشنده‌ترین کسی که عطا کرده است." },
+    { ar: "أَعْطِنِي سُؤْلِي فِي نَفْسِي وَ أَهْلِي وَ وَالِدَيَّ وَ وَلَدِي وَ أَهْلِ حُزَانَتِي وَ إِخْوَانِي فِيكَ وَ أَرْغِدْ عَيْشِي وَ أَظْهِرْ مُرُوَّتِي وَ أَصْلِحْ جَمِيعَ أَحْوَالِي وَ اجْعَلْنِي مِمَّنْ أَطَلْتَ عُمُرَهُ وَ حَسَّنْتَ عَمَلَهُ وَ أَتْمَمْتَ عَلَيْهِ نِعْمَتَكَ وَ رَضِيتَ عَنْهُ وَ أَحْيَيْتَهُ حَيَاةً طَيِّبَةً فِي أَدْوَمِ السُّرُورِ وَ أَسْبَغِ الْكَرَامَةِ وَ أَتَمِّ الْعَيْشِ إِنَّكَ تَفْعَلُ مَا تَشَاءُ وَ لاَ يَفْعَلُ مَا يَشَاءُ غَيْرُكَ", fa: "خواسته‌ام را در خودم و خانواده و پدر و مادرم و فرزندانم و خاندانم و برادرانم در راهت به من عطا کن. زندگیم را گوارا گردان و مردانگی‌ام را آشکار ساز و همه حالاتم را اصلاح کن. مرا از کسانی قرار ده که عمرشان را دراز کردی و عملشان را نیکو ساختی و نعمتت را بر آنان کامل کردی و از آنان خشنود شدی و آنان را با زندگی پاک در پایدارترین شادی و گسترده‌ترین کرامت و کامل‌ترین زندگی زنده داشتی. همانا تو هر چه خواهی می‌کنی و غیر تو نمی‌کند آنچه را که او خواهد." },
+    { ar: "اللَّهُمَّ خُصَّنِي مِنْكَ بِخَاصَّةِ ذِكْرِكَ وَ لاَ تَجْعَلْ شَيْئاً مِمَّا أَتَقَرَّبُ بِهِ فِي آنَاءِ اللَّيْلِ وَ أَطْرَافِ النَّهَارِ رِيَاءً وَ لاَ سُمْعَةً وَ لاَ أَشَراً وَ لاَ بَطَراً وَ اجْعَلْنِي لَكَ مِنَ الْخَاشِعِينَ", fa: "خدایا، مرا به ویژه‌ی یاد خود اختصاص ده و هیچ یک از آنچه را در ساعات شب و روز به آن تقرب می‌جویم، ریا و خودنمایی و سرکشی و سرمستی قرار مده و مرا از خاشعان برای خود قرار ده." },
+    { ar: "اللَّهُمَّ أَعْطِنِي السَّعَةَ فِي الرِّزْقِ وَ الْأَمْنَ فِي الْوَطَنِ وَ قُرَّةَ الْعَيْنِ فِي الْأَهْلِ وَ الْمَالِ وَ الْوَلَدِ وَ الْمُقَامَ فِي نِعَمِكَ عِنْدِي وَ الصِّحَّةَ فِي الْجِسْمِ وَ الْقُوَّةَ فِي الْبَدَنِ وَ السَّلاَمَةَ فِي الدِّينِ وَ اسْتَعْمِلْنِي بِطَاعَتِكَ وَ طَاعَةِ رَسُولِكَ مُحَمَّدٍ صَلَّى اللَّهُ عَلَيْهِ وَ آلِهِ أَبَداً مَا اسْتَعْمَرْتَنِي", fa: "خدایا، گشایش در روزی و امنیت در وطن و روشنی چشم در خانواده و مال و فرزند و ماندگاری در نعمت‌هایت نزد من و تندرستی در تن و نیرو در بدن و سلامت در دین را به من عطا کن. و مرا همواره تا هنگامی که مرا زنده نگاه داشته‌ای به طاعت خود و طاعت پیامبرت محمد درود خدا بر او و خاندانش وادار." },
+    { ar: "وَ اجْعَلْنِي مِنْ أَوْفَرِ عِبَادِكَ عِنْدَكَ نَصِيباً فِي كُلِّ خَيْرٍ أَنْزَلْتَهُ وَ تُنْزِلُهُ فِي شَهْرِ رَمَضَانَ فِي لَيْلَةِ الْقَدْرِ وَ مَا أَنْتَ مُنْزِلُهُ فِي كُلِّ سَنَةٍ مِنْ رَحْمَةٍ تَنْشُرُهَا وَ عَافِيَةٍ تُلْبِسُهَا وَ بَلِيَّةٍ تَدْفَعُهَا وَ حَسَنَاتٍ تَتَقَبَّلُهَا وَ سَيِّئَاتٍ تَتَجَاوَزُ عَنْهَا", fa: "و مرا از بیشترین بندگانت در بهره از هر خیری که در ماه رمضان و شب قدر نازل کرده‌ای و در هر سال نازل می‌کنی از رحمت گسترده، عافیت‌پوشیده، بلیه‌دفع‌شده، حسنات پذیرفته و سیئات بخشیده‌شده قرار ده." },
+    { ar: "وَ ارْزُقْنِي حَجَّ بَيْتِكَ الْحَرَامِ فِي عَامِي هَذَا وَ فِي كُلِّ عَامٍ وَ ارْزُقْنِي رِزْقاً وَاسِعاً مِنْ فَضْلِكَ الْوَاسِعِ وَ اصْرِفْ عَنِّي يَا سَيِّدِي الْأَسْوَاءَ وَ اقْضِ عَنِّي الدَّيْنَ وَ الظُّلاَمَاتِ حَتَّى لاَ أَتَأَذَّى بِشَيْءٍ مِنْهُ وَ خُذْ عَنِّي بِأَسْمَاعِ وَ أَبْصَارِ أَعْدَائِي وَ حُسَّادِي وَ الْبَاغِينَ عَلَيَ وَ انْصُرْنِي عَلَيْهِمْ وَ أَقِرَّ عَيْنِي وَ فَرِّحْ قَلْبِي", fa: "و حج خانه حرامت را در این سال و هر سال روزیم کن و از فضل گسترده‌ات روزی فراخ بر من روزی کن. و ای آقای من، بدی‌ها را از من بگردان و قرض و مظالم را از من بپرداز تا از چیزی از آنها آزرده نشوم. و گوش و چشم دشمنان و حسودان و ستمگرانم را از من بگردان و مرا بر آنان پیروز کن و چشمم را روشن دار و دلم را شاد گردان." },
+    { ar: "وَ اجْعَلْ لِي مِنْ هَمِّي وَ كَرْبِي فَرَجاً وَ مَخْرَجاً وَ اجْعَلْ مَنْ أَرَادَنِي بِسُوءٍ مِنْ جَمِيعِ خَلْقِكَ تَحْتَ قَدَمَيَ وَ اكْفِنِي شَرَّ الشَّيْطَانِ وَ شَرَّ السُّلْطَانِ وَ سَيِّئَاتِ عَمَلِي وَ طَهِّرْنِي مِنَ الذُّنُوبِ كُلِّهَا وَ أَجِرْنِي مِنَ النَّارِ بِعَفْوِكَ وَ أَدْخِلْنِي الْجَنَّةَ بِرَحْمَتِكَ وَ زَوِّجْنِي مِنَ الْحُورِ الْعِينِ بِفَضْلِكَ وَ أَلْحِقْنِي بِأَوْلِيَائِكَ الصَّالِحِينَ مُحَمَّدٍ وَ آلِهِ الْأَبْرَارِ الطَّيِّبِينَ الطَّاهِرِينَ الْأَخْيَارِ صَلَوَاتُكَ عَلَيْهِمْ وَ عَلَى أَجْسَادِهِمْ وَ أَرْوَاحِهِمْ وَ رَحْمَةُ اللَّهِ وَ بَرَكَاتُهُ", fa: "و برای غم و اندوهم گشایش و راه نجاتی قرار ده و هر که را از همه آفریدگانت که قصد بدی به من دارد زیر پاهایم انداز. و شر شیطان و شر سلطان و بدی‌های عملم را از من کفایت کن و مرا از همه گناهان پاک گردان و به عفو خود از آتش پناه ده و به رحمتت به بهشت درآور و به فضلت با حورالعین همسر کن و مرا به اولیای شایسته‌ات محمد و خاندانش، نیکان پاکیزه پاک برگزیده، ملحق گردان که درودهایت بر آنان و بر جسم و روانشان، و رحمت و برکات خدا بر آنان باد." },
+    { ar: "إِلَهِي وَ سَيِّدِي وَ عِزَّتِكَ وَ جَلاَلِكَ لَئِنْ طَالَبْتَنِي بِذُنُوبِي لَأُطَالِبَنَّكَ بِعَفْوِكَ وَ لَئِنْ طَالَبْتَنِي بِلُؤْمِي لَأُطَالِبَنَّكَ بِكَرَمِكَ وَ لَئِنْ أَدْخَلْتَنِي النَّارَ لَأُخْبِرَنَّ أَهْلَ النَّارِ بِحُبِّي لَكَ", fa: "خدایا و آقای من، به عزت و جلالت سوگند، اگر مرا به گناهانم مؤاخذه کنی، تو را به عفو خود مؤاخذه خواهم کرد و اگر مرا به پستی‌ام مؤاخذه کنی، تو را به کرمت مؤاخذه می‌کنم و اگر مرا به آتش درآوری، بهشتیان را از عشق خود به تو آگاه خواهم ساخت." },
+    { ar: "إِلَهِي وَ سَيِّدِي إِنْ كُنْتَ لاَ تَغْفِرُ إِلاَّ لِأَوْلِيَائِكَ وَ أَهْلِ طَاعَتِكَ فَإِلَى مَنْ يَفْزَعُ الْمُذْنِبُونَ وَ إِنْ كُنْتَ لاَ تُكْرِمُ إِلاَّ أَهْلَ الْوَفَاءِ بِكَ فَبِمَنْ يَسْتَغِيثُ الْمُسِيئُونَ", fa: "خدایا و آقای من، اگر تنها برای اولیای خود و اهل طاعتت آمرزش می‌فرستی، گناهکاران به چه کسی پناه برند؟ و اگر تنها اهل وفا را گرامی می‌داری، بدکاران از که فریادخواهی کنند؟" },
+    { ar: "إِلَهِي إِنْ أَدْخَلْتَنِي النَّارَ فَفِي ذَلِكَ سُرُورُ عَدُوِّكَ وَ إِنْ أَدْخَلْتَنِي الْجَنَّةَ فَفِي ذَلِكَ سُرُورُ نَبِيِّكَ وَ أَنَا وَ اللَّهِ أَعْلَمُ أَنَّ سُرُورَ نَبِيِّكَ أَحَبُّ إِلَيْكَ مِنْ سُرُورِ عَدُوِّكَ", fa: "خدایا، اگر مرا به آتش درآوری، در این کار دشمنت شادمان می‌شود و اگر به بهشت درآوری، پیامبرت شادمان می‌شود و به خدا سوگند می‌دانم که شادی پیامبرت نزد تو محبوب‌تر از شادی دشمنت است." },
+    { ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ أَنْ تَمْلَأَ قَلْبِي حُبّاً لَكَ وَ خَشْيَةً مِنْكَ وَ تَصْدِيقاً بِكِتَابِكَ وَ إِيمَاناً بِكَ وَ فَرَقاً مِنْكَ وَ شَوْقاً إِلَيْكَ يَا ذَا الْجَلاَلِ وَ الْإِكْرَامِ حَبِّبْ إِلَيَّ لِقَاءَكَ وَ أَحْبِبْ لِقَائِي وَ اجْعَلْ لِي فِي لِقَائِكَ الرَّاحَةَ وَ الْفَرَجَ وَ الْكَرَامَةَ", fa: "خدایا، از تو می‌خواهم که دلم را از عشق به خود و ترس از خود و تصدیق به کتابت و ایمان به خود و هراس از خود و شوق به خود پر کنی. ای صاحب جلال و اکرام، دیدار خود را بر من محبوب گردان و دیدار مرا دوست بدار و در دیدارت آرامش و گشایش و کرامت برایم قرار ده." },
+    { ar: "اللَّهُمَّ أَلْحِقْنِي بِصَالِحِ مَنْ مَضَى وَ اجْعَلْنِي مِنْ صَالِحِ مَنْ بَقِيَ وَ خُذْ بِي سَبِيلَ الصَّالِحِينَ وَ أَعِنِّي عَلَى نَفْسِي بِمَا تُعِينُ بِهِ الصَّالِحِينَ عَلَى أَنْفُسِهِمْ وَ اخْتِمْ عَمَلِي بِأَحْسَنِهِ وَ اجْعَلْ ثَوَابِي مِنْهُ الْجَنَّةَ بِرَحْمَتِكَ وَ أَعِنِّي عَلَى صَالِحِ مَا أَعْطَيْتَنِي وَ ثَبِّتْنِي يَا رَبِّ وَ لاَ تَرُدَّنِي فِي سُوءٍ اسْتَنْقَذْتَنِي مِنْهُ يَا رَبَّ الْعَالَمِينَ", fa: "خدایا، مرا به شایستگان گذشته ملحق کن و از شایستگان باقی قرار ده و راه شایستگان را به من بنمای. و مرا بر نفس خود به آنچه شایستگان را بر نفسشان یاری می‌دهی، یاری کن و عملم را به بهترین آن خاتمه ده و پاداش آن را به رحمتت بهشت قرار ده و مرا بر شایستگی آنچه به من عطا کرده‌ای یاری کن. و ای پروردگار، مرا استوار دار و به بدی که از آن نجاتم دادی بازمگردان، ای پروردگار جهانیان." },
+    { ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ إِيمَاناً لاَ أَجَلَ لَهُ دُونَ لِقَائِكَ أَحْيِنِي مَا أَحْيَيْتَنِي عَلَيْهِ وَ تَوَفَّنِي إِذَا تَوَفَّيْتَنِي عَلَيْهِ وَ ابْعَثْنِي إِذَا بَعَثْتَنِي عَلَيْهِ وَ أَبْرِئْ قَلْبِي مِنَ الرِّيَاءِ وَ الشَّكِّ وَ السُّمْعَةِ فِي دِينِكَ حَتَّى يَكُونَ عَمَلِي خَالِصاً لَكَ", fa: "خدایا، از تو ایمانی می‌خواهم که تا هنگام دیدارت پایانی ندارد؛ مرا تا زمانی که زنده‌ام بر آن زنده بدار و چون بمیرانی بر آن بمیران و چون برانگیزی بر آن برانگیز و دلم را از ریا و شک و خودنمایی در دینت پاک کن تا عملم خالص برای تو باشد." },
+    { ar: "اللَّهُمَّ أَعْطِنِي بَصِيرَةً فِي دِينِكَ وَ فَهْماً فِي حُكْمِكَ وَ فِقْهاً فِي عِلْمِكَ وَ كِفْلَيْنِ مِنْ رَحْمَتِكَ وَ وَرَعاً يَحْجُزُنِي عَنْ مَعَاصِيكَ وَ بَيِّضْ وَجْهِي بِنُورِكَ وَ اجْعَلْ رَغْبَتِي فِيمَا عِنْدَكَ وَ تَوَفَّنِي فِي سَبِيلِكَ وَ عَلَى مِلَّةِ رَسُولِكَ صَلَّى اللَّهُ عَلَيْهِ وَ آلِهِ", fa: "خدایا، بصیرتی در دینت و فهمی در حکمت و فقاهتی در علمت و دو بهره از رحمتت و پارسایی که مرا از نافرمانی‌هایت بازدارد، به من عطا کن و رویم را به نورت سفید گردان و رغبتم را به آنچه نزد توست قرار ده و مرا در راهت و بر آیین رسولت درود خدا بر او و خاندانش بمیران." },
+    { ar: "اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْكَسَلِ وَ الْفَشَلِ وَ الْهَمِّ وَ الْجُبْنِ وَ الْبُخْلِ وَ الْغَفْلَةِ وَ الْقَسْوَةِ وَ الذِّلَّةِ وَ الْمَسْكَنَةِ وَ الْفَقْرِ وَ الْفَاقَةِ وَ كُلِّ بَلِيَّةٍ وَ الْفَوَاحِشِ مَا ظَهَرَ مِنْهَا وَ مَا بَطَنَ وَ أَعُوذُ بِكَ مِنْ نَفْسٍ لاَ تَقْنَعُ وَ بَطْنٍ لاَ يَشْبَعُ وَ قَلْبٍ لاَ يَخْشَعُ وَ دُعَاءٍ لاَ يُسْمَعُ وَ عَمَلٍ لاَ يَنْفَعُ", fa: "خدایا، به تو پناه می‌برم از سستی و ناتوانی و اندوه و ترس و بخل و غفلت و سنگدلی و خواری و بینوایی و فقر و نیازمندی و هر بلا و زشتی‌های آشکار و پنهان. و پناه می‌برم به تو از نفسی که قانع نمی‌شود و شکمی که سیر نمی‌شود و دلی که خشوع نمی‌کند و دعایی که شنیده نمی‌شود و عملی که سود نمی‌بخشد." },
+    { ar: "وَ أَعُوذُ بِكَ يَا رَبِّ عَلَى نَفْسِي وَ دِينِي وَ مَالِي وَ عَلَى جَمِيعِ مَا رَزَقْتَنِي مِنَ الشَّيْطَانِ الرَّجِيمِ إِنَّكَ أَنْتَ السَّمِيعُ الْعَلِيمُ", fa: "و پناه می‌برم به تو ای پروردگار، برای خود و دین و مال و همه آنچه روزیم کرده‌ای، از شیطان رانده‌شده، که تو شنوای دانایی." },
+    { ar: "اللَّهُمَّ إِنَّهُ لاَ يُجِيرُنِي مِنْكَ أَحَدٌ وَ لاَ أَجِدُ مِنْ دُونِكَ مُلْتَحَداً فَلاَ تَجْعَلْ نَفْسِي فِي شَيْءٍ مِنْ عَذَابِكَ وَ لاَ تَرُدَّنِي بِهَلَكَةٍ وَ لاَ تَرُدَّنِي بِعَذَابٍ أَلِيمٍ", fa: "خدایا، کسی مرا از تو پناه نمی‌دهد و جز تو پناهگاهی نمی‌یابم، پس نفس مرا در چیزی از عذابت قرار مده و مرا به هلاکت و عذاب دردناک بازمگردان." },
+    { ar: "اللَّهُمَّ تَقَبَّلْ مِنِّي وَ أَعْلِ كَعْبِي وَ ذِكْرِي وَ ارْفَعْ دَرَجَتِي وَ حُطَّ وِزْرِي وَ لاَ تَذْكُرْنِي بِخَطِيئَتِي وَ اجْعَلْ ثَوَابَ مَجْلِسِي وَ ثَوَابَ مَنْطِقِي وَ ثَوَابَ دُعَائِي رِضَاكَ وَ الْجَنَّةَ وَ أَعْطِنِي يَا رَبِّ جَمِيعَ مَا سَأَلْتُكَ وَ زِدْنِي مِنْ فَضْلِكَ إِنِّي إِلَيْكَ رَاغِبٌ يَا رَبَّ الْعَالَمِينَ", fa: "خدایا، از من بپذیر و جایگاه و نامم را بلند کن و درجه‌ام را بالا ببر و گناهم را بریز و مرا به خطایم یاد مکن. و پاداش مجلس و گفتار و دعایم را خشنودی خود و بهشت قرار ده و ای پروردگار، همه آنچه را از تو خواستم به من عطا کن و از فضلت بر من بیفزای، که من به تو راغبم ای پروردگار جهانیان." },
+    { ar: "اللَّهُمَّ إِنَّكَ أَنْزَلْتَ فِي كِتَابِكَ الْعَفْوَ وَ أَمَرْتَنَا أَنْ نَعْفُوَ عَمَّنْ ظَلَمَنَا وَ قَدْ ظَلَمْنَا أَنْفُسَنَا فَاعْفُ عَنَّا فَإِنَّكَ أَوْلَى بِذَلِكَ مِنَّا وَ أَمَرْتَنَا أَنْ لاَ نَرُدَّ سَائِلاً عَنْ أَبْوَابِنَا وَ قَدْ جِئْتُكَ سَائِلاً فَلاَ تَرُدَّنِي إِلاَّ بِقَضَاءِ حَاجَتِي وَ أَمَرْتَنَا بِالْإِحْسَانِ إِلَى مَا مَلَكَتْ أَيْمَانُنَا وَ نَحْنُ أَرِقَّاؤُكَ فَأَعْتِقْ رِقَابَنَا مِنَ النَّارِ", fa: "خدایا، تو در کتابت عفو را نازل کردی و به ما دستور دادی که از کسی که به ما ستم کرده درگذریم، در حالی که ما به خود ستم کرده‌ایم، پس از ما درگذر که تو به این کار از ما سزاوارتری. و به ما دستور دادی که خواهنده‌ای را از درهایمان باز نگردانیم، و من خواهنده به درگاه تو آمده‌ام، پس مرا جز با برآورده کردن حاجتم بازمگردان. و به ما دستور دادی که به آنچه دست‌هایمان مالک است احسان کنیم، و ما بندگان توییم، پس گردن‌هایمان را از آتش آزاد کن." },
+    { ar: "يَا مَفْزَعِي عِنْدَ كُرْبَتِي وَ يَا غَوْثِي عِنْدَ شِدَّتِي إِلَيْكَ فَزِعْتُ وَ بِكَ اسْتَغَثْتُ وَ لُذْتُ لاَ أَلُوذُ بِسِوَاكَ وَ لاَ أَطْلُبُ الْفَرَجَ إِلاَّ مِنْكَ فَأَغِثْنِي وَ فَرِّجْ عَنِّي يَا مَنْ يَفُكُّ الْأَسِيرَ وَ يَعْفُو عَنِ الْكَثِيرِ اقْبَلْ مِنِّي الْيَسِيرَ وَ اعْفُ عَنِّي الْكَثِيرَ إِنَّكَ أَنْتَ الرَّحِيمُ الْغَفُورُ", fa: "ای پناهگاه من در گرفتاری‌ام و ای فریادرس من در سختی‌ام، به سوی تو پناه بردم و از تو فریادخواهی کردم و پناه آوردم، به غیر تو پناه نمی‌برم و گشایش را جز از تو نمی‌جویم. پس فریادم رس و گشایشم ده، ای کسی که اسیر را می‌رهاند و از بسیار درمی‌گذرد، اندک مرا بپذیر و از بسیارم درگذر که تو رحم‌کننده و آمرزنده‌ای." },
+    { ar: "اللَّهُمَّ إِنِّي أَسْأَلُكَ إِيمَاناً تُبَاشِرُ بِهِ قَلْبِي وَ يَقِيناً صَادِقاً حَتَّى أَعْلَمَ أَنَّهُ لَنْ يُصِيبَنِي إِلاَّ مَا كَتَبْتَ لِي وَ رَضِّنِي مِنَ الْعَيْشِ بِمَا قَسَمْتَ لِي يَا أَرْحَمَ الرَّاحِمِينَ", fa: "خدایا، از تو ایمانی می‌خواهم که دلم را به آن نوید دهی و یقینی راستین تا بدانم که جز آنچه برایم نوشته‌ای به من نمی‌رسد و مرا به آنچه از زندگی قسمت کرده‌ای خشنود گردان، ای مهربانترین مهربانان." }
+  ],
+  fazilat: "دعای ابوحمزه ثمالی از دعاهای معروف و پرفضیلت است که ابوحمزه ثمالی از امام سجاد (ع) نقل کرده است. این دعا در کتاب «مصباح المتهجد» شیخ طوسی آمده و حضرت امام زین‌العابدین (ع) در ماه رمضان، بیشتر شب را به نماز می‌ایستاد و هنگام سحر این دعا را می‌خواند.\n\nاین دعای نورانی از نظر سند و محتوا کاملاً معتبر است و مفاهیم بلندی مانند توحید، معرفت الهی، شناخت خدا توسط خود خدا، گریزناپذیری بنده از حکومت الهی، تبیین راه سعادت و نجات، تمسک به رحمت الهی، عمل به فضائل اخلاقی، دعا و مناجات با خدا، اقرار به گناهان، و یادآوری مرگ و سختی‌های پس از آن را در بر دارد.\n\nخواندن این دعا در سحرهای ماه مبارک رمضان و شب‌های قدر بسیار سفارش شده است و برای دفع بلا، طلب رحمت، آمرزش گناهان و برآورده شدن حاجات بسیار مؤثر است.",
+  source: "مصباح المتهجد (شیخ طوسی) • مفاتیح الجنان (شیخ عباس قمی) • اقبال الأعمال (سید ابن طاووس) • بحار الأنوار (علامه مجلسی)",
+  time: "بهترین زمان خواندن این دعا، سحرهای ماه مبارک رمضان است. همچنین در شب‌های قدر و در هر زمان برای طلب رحمت، آمرزش گناهان و برآورده شدن حاجات خوانده می‌شود. توصیه شده با وضو و رو به قبله و با قلب حاضر خوانده شود."
+};
+
+/* ============================================================
+   RENDER VERSES
+   ============================================================ */
+function renderVerses() {
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  DUA_DATA.verses.forEach((v, i) => {
+    const el = document.createElement('div');
+    el.className = 'verse-card';
+    el.innerHTML = `
+      <div class="v-head">
+        <span class="v-num">${faNum(i + 1)}</span>
+        <span class="v-label">بند ${faNum(i + 1)}</span>
+      </div>
+      <div class="v-ar">${v.ar}</div>
+      <div class="v-divider"></div>
+      <div class="v-fa">${v.fa}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = () => $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = () => $('#' + b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e) => { if (e.target === m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+const moonIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  if ($('#themeToggle')) $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+$('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.3';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-' + fontAr);
+document.body.classList.add('font-fa-' + fontFa);
+
+function applySettings() {
+  document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+  document.documentElement.style.setProperty('--line-height', lineHeight);
+  $$('.verse-card').forEach(v => v.classList.toggle('hide-trans', !showTrans));
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep) * 2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(24, faSize + parseInt(b.dataset.faStep) * 2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b => {
+  if (b.dataset.lh === lineHeight) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-lh]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b => {
+  const isOn = (b.dataset.trans === '1') === showTrans;
+  b.classList.toggle('active', isOn);
+  b.onclick = () => {
+    $$('[data-trans]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans === '1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g, '').trim();
+    document.body.classList.add('font-ar-' + b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g, '').trim();
+    document.body.classList.add('font-fa-' + b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = () => {
+  if (document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+console.log('🤲 دعای ابوحمزه ثمالی | NOOR – بارگذاری شد. تعداد بندها:', DUA_DATA.verses.length);
+</script>
+</body>
+</html>

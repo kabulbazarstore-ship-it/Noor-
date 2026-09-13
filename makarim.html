@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای مکارم الاخلاق | نــــور NOOR">
+<title>دعای مکارم الاخلاق | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+body.font-ar-amiri{--font-ar:'Amiri',serif}
+body.font-ar-scheherazade{--font-ar:'Scheherazade New',serif}
+body.font-ar-naskh{--font-ar:'Noto Naskh Arabic',serif}
+body.font-ar-lateef{--font-ar:'Lateef',serif}
+body.font-ar-reem{--font-ar:'Reem Kufi',sans-serif}
+body.font-fa-vazir{--font-fa:'Vazirmatn',Tahoma,sans-serif}
+body.font-fa-naskh{--font-fa:'Noto Naskh Arabic',serif}
+body.font-fa-amiri{--font-fa:'Amiri',serif}
+body.font-fa-scheherazade{--font-fa:'Scheherazade New',serif}
+body.font-fa-lateef{--font-fa:'Lateef',serif}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.12rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.45rem;font-weight:700;
+  color:var(--brand);letter-spacing:1px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.78rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+.verse-card{
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius);
+  padding:16px 14px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);position:relative;
+}
+.verse-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.verse-card .v-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verse-card .v-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:24px;height:24px;padding:0 8px;
+  border-radius:7px;
+  background:var(--gold-soft);color:var(--gold);
+  font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);
+}
+.verse-card .v-label{font-size:.68rem;color:var(--muted);font-weight:600}
+.verse-card .v-ar{
+  font-family:var(--font-ar);
+  font-size:var(--fs-ar);line-height:var(--lh-ar);
+  color:var(--arabic);text-align:center;font-weight:400;
+  margin-bottom:12px;padding:4px 2px;white-space:pre-line;
+}
+.verse-card.bismillah .v-ar{font-size:calc(var(--fs-ar) * .82);margin-bottom:10px}
+.verse-card .v-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  margin:0 auto 12px;width:52px;
+}
+.verse-card .v-fa{
+  font-family:var(--font-fa);
+  font-size:var(--fs-fa);line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding:0 8px;border-right:3px solid var(--gold-border);
+  white-space:pre-line;
+}
+.verse-card.hide-trans .v-fa{display:none}
+.verse-card.hide-trans .v-divider{display:none}
+.verse-card.hide-trans .v-ar{margin-bottom:0}
+
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;
+  padding:20px 18px 26px;
+  box-shadow:var(--shadow);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+.info-block{
+  padding:14px 16px;
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{
+  font-size:.8rem;line-height:1.95;
+  color:var(--text2);text-align:justify;white-space:pre-line;
+}
+
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;
+  color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;
+  transition:all .35s ease;font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.28rem}
+  .verse-card{padding:14px 12px}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">دعای مکارم الاخلاق</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای مکارم الاخلاق</div>
+      <div class="orn-sub">بیستمین دعای صحیفه سجادیه</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای مکارم الاخلاق
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> فضیلت و خواص</h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> منبع</h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> زمان و شیوه قرائت</h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-trans="1">نمایش</button>
+        <button class="set-opt" data-trans="0">پنهان</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای مکارم الاخلاق
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای مکارم الاخلاق (بیستمین دعای صحیفه سجادیه، متن کامل)
+   ============================================================ */
+
+const DUA_DATA = {
+  title: "دعای مکارم الاخلاق",
+  verses: [
+    { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان", bismillah: true },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَبَلِّغْ بِإِیمَانِی أَکْمَلَ الْإِیمَانِ، وَاجْعَلْ یَقِینِی أَفْضَلَ الْیَقِینِ، وَانْتَهِ بِنِیَّتِی إِلَىٰ أَحْسَنِ النِّیَّاتِ، وَبِعَمَلِی إِلَىٰ أَحْسَنِ الْأَعْمَالِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست و ایمانم را به کامل‌ترین درجه‌ی ایمان برسان، و یقینم را به برترین یقین تبدیل کن، و نیّتم را به بهترین نیّت‌ها منتهی ساز، و کردارم را به نیکوترین کردارها برسان." },
+
+    { ar: "اللّٰهُمَّ وَفِّرْ بِلُطْفِکَ نِیَّتِی، وَصَحِّحْ بِمَا عِنْدَکَ یَقِینِی، وَاسْتَصْلِحْ بِقُدْرَتِکَ مَا فَسَدَ مِنِّی.", fa: "خدایا، نیّتم را به لطف خود کامل گردان، و یقینم را به آنچه نزد توست درست کن، و آنچه از من تباه شده، به قدرتت اصلاح فرما." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاکْفِنِی مَا یَشْغَلُنِی الِاهْتِمَامُ بِهِ، وَاسْتَعْمِلْنِی بِمَا تَسْأَلُنِی غَداً عَنْهُ، وَاسْتَفْرِغْ أَیَّامِی فِیمَا خَلَقْتَنِی لَهُ؛ فَإِنَّکَ قُلْتَ: ﴿وَمَا خَلَقْتُ الْجِنَّ وَالْإِنْسَ إِلَّا لِیَعْبُدُونِ﴾.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از هر کاری که پرداختن به آن، مرا از تو بازمی‌دارد بی‌نیاز کن، و به کاری بگمار که فردا از من خواهی پرسید، و روزهایم را در آنچه برای آن آفریده‌ای مصروف دار؛ چرا که فرمودی: «جن و انس را نیافریدم مگر برای آنکه مرا بپرستند»." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَغْنِنِی وَأَوْسِعْ عَلَیَّ فِی رِزْقِکَ، وَلَا تَفْتِنِّی بِالنَّظَرِ، وَأَعِزَّنِی وَلَا تَبْتَلِیَنِّی بِالْکِبْرِ، وَعَبِّدْنِی لَکَ وَلَا تُفْسِدْ عِبَادَتِی بِالْعُجْبِ، وَأَجْرِ لِلنَّاسِ عَلَىٰ یَدَیَّ الْخَیْرَ، وَلَا تَمْحَقْهُ بِالْمَنِّ.", fa: "خدایا، بر محمّد و خاندانش درود فرست و مرا بی‌نیاز کن و در روزی بر من بگشا، و به نگاه کردن (به مال دیگران) گرفتارم مکن، و عزیزم دار و به خودپسندی دچارم مساز، و مرا بنده‌ی خود گردان و عبادتم را با خودبینی تباه مکن، و نیکی را به دستانم برای مردم جاری ساز و آن را با منّت نهادن از بین مبر." },
+
+    { ar: "وَهَبْ لِی مَعَالِیَ الْأَخْلَاقِ، وَاعْصِمْنِی مِنَ الْفَخْرِ.", fa: "و بزرگواری اخلاق را به من عطا کن، و از فخر فروشی نگاهم دار." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَلَا تَرْفَعْنِی فِی النَّاسِ دَرَجَةً إِلَّا حَطَطْتَنِی عِنْدَ نَفْسِی مِثْلَهَا، وَلَا تُحْدِثْ لِی عِزّاً ظَاهِراً إِلَّا أَحْدَثْتَ لِی ذِلَّةً بَاطِنَةً عِنْدَ نَفْسِی بِقَدَرِهَا.", fa: "خدایا، بر محمّد و خاندانش درود فرست و مرا در میان مردم به درجه‌ای مبر، مگر آنکه به همان اندازه در نزد خودم مرا فروتر سازی، و عزّت ظاهری برایم پدید میاور، مگر آنکه به همان اندازه در نزد خودم خواری باطنی برایم ایجاد کنی." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَمَتِّعْنِی بِهُدًى صَالِحٍ لَا أَسْتَبْدِلُ بِهِ، وَطَرِیقَةِ حَقٍّ لَا أَزِیغُ عَنْهَا، وَنِیَّةِ رُشْدٍ لَا أَشُکُّ فِیهَا، وَعَمِّرْنِی مَا کَانَ عُمُرِی بِذْلَةً فِی طَاعَتِکَ؛ فَإِذَا کَانَ عُمُرِی مَرْتَعاً لِلشَّیْطَانِ فَاقْبِضْنِی إِلَیْکَ قَبْلَ أَنْ یَسْبِقَ مَقْتُکَ إِلَیَّ، أَوْ یَسْتَحْکِمَ غَضَبُکَ عَلَیَّ.", fa: "خدایا، بر محمّد و خاندان محمّد درود فرست و مرا به هدایت شایسته‌ای بهره‌مند کن که آن را با دیگری عوض نکنم، و راه حقّی که از آن منحرف نشوم، و نیّت رشدی که در آن شک نکنم؛ و مرا تا زمانی زنده بدار که عمرم در طاعت تو صرف شود؛ و چون عمرم چراگاه شیطان گردد، مرا به سوی خود ببر، پیش از آنکه دشمنی‌ات بر من پیشی گیرد یا خشم تو بر من استوار شود." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَحْیِنِی عَلَىٰ أَحْسَنِ مَا أَحْیَیْتَ عَلَیْهِ عِبَادَکَ الصَّالِحِینَ، وَتَوَفَّنِی عَلَىٰ أَحْسَنِ مَا تَوَفَّیْتَ عَلَیْهِ خَلْقَکَ الْمُتَّقِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا به بهترین حالتی که بندگان شایسته‌ات را بر آن زنده داشتی زنده بدار، و به بهترین حالتی که آفریدگان پرهیزگارت را بر آن می‌رانی بمیران." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِمَّنْ أَحْسَنَ فِیمَا أَسْلَفَ، وَأَنْتَقَى فِیمَا بَقِیَ، وَأَخَذَ بِالْفَضْلِ إِلَىٰ الْفَضْلِ، إِنَّکَ عَلَىٰ کُلِّ شَیْءٍ قَدِیرٌ.", fa: "خدایا، بر محمّد و خاندانش درود فرست و مرا از کسانی قرار ده که در گذشته نیکی کرده و در باقی‌مانده‌ی عمر پرهیزگاری پیشه کرده، و از فضیلتی به فضیلت دیگر روی آورده‌اند، همانا تو بر هر کاری توانایی." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَغْنِنِی عَنْ کُلِّ شَیْءٍ بِعِبَادَتِکَ، وَلَا تُفْقِرْنِی إِلَىٰ أَحَدٍ مِنْ خَلْقِکَ بِتَرْکِ طَاعَتِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا با عبادت خودت از هر چیز بی‌نیاز کن، و با ترک طاعتت، مرا نیازمند به هیچ‌یک از آفریدگانت مگردان." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَصْلِحْ لِی دُنْیَایَ الَّتِی فِیهَا مَعَاشِی، وَآخِرَتِیَ الَّتِی فِیهَا مَعَادِی، وَاجْعَلْ مَحْیَایَ مَزِیداً لِی فِی کُلِّ خَیْرٍ، وَمَمَاتِی رَاحَةً لِی مِنْ کُلِّ شَرٍّ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و دنیایم را که معاش من در آن است و آخرتم را که بازگشتم به آن است، اصلاح کن، و زندگی‌ام را مایه‌ی افزودن هر خیر و مرگم را مایه‌ی آسودگی از هر شرّ قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاحْرُسْنِی بِعَیْنِکَ الَّتِی لَا تَنَامُ، وَاکْنُفْنِی بِرُکْنِکَ الَّذِی لَا یُرَامُ، وَارْحَمْنِی بِقُدْرَتِکَ عَلَیَّ فَلَا أَهْلِکَ، وَأَنْتَ رَجَائِی.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا به چشمی که هرگز نمی‌خوابد نگهبانی کن، و به رکنی که دست‌نیافتنی است پناهم ده، و به قدرت خود بر من رحم کن تا هلاک نشوم، که تو امید منی." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاحْفَظْنِی مِنْ بَیْنِ یَدَیَّ، وَمِنْ خَلْفِی، وَعَنْ یَمِینِی، وَعَنْ شِمَالِی، وَمِنْ فَوْقِی، وَمِنْ تَحْتِی، وَمِنْ جَمِیعِ جِهَاتِ الْإِحَاطَةِ بِی، اللّٰهُمَّ بِحَقِّ مُحَمَّدٍ وَآلِ مُحَمَّدٍ، صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِ مُحَمَّدٍ، وَعَافِنِی مِنْ کُلِّ مَکْرُوهٍ، وَاجْعَلْ لِی مِنْ کُلِّ هَمٍّ فَرَجاً وَمَخْرَجاً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از پیش رو و از پشت سر، و از راست و از چپ، و از بالا و از پایین، و از همه‌ی سو‌هایی که امکان احاطه وجود دارد، محافظت فرما. خدایا، به حقّ محمّد و خاندان محمّد، بر محمّد و خاندان محمّد درود فرست، و مرا از هر ناخوشایندی عافیت بخش، و برای هر اندوهی راه نجاتی برایم قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَوَفِّقْنِی لِمَا یُوجِبُ رِضْوَانَکَ، وَأَعِنِّی عَلَىٰ مَا یُوجِبُ حُسْنَ ثَوَابِکَ، وَاجْعَلْ لِی فِی کُلِّ نِعْمَةٍ مِنْکَ شُکْراً، وَفِی کُلِّ بَلاءٍ صَبْراً، وَفِی کُلِّ عُسْرٍ یُسْراً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا برای آنچه موجب خشنودی‌ات می‌شود توفیق ده، و بر آنچه موجب پاداش نیکویت می‌گردد یاری کن، و برای هر نعمتی که به من می‌دهی شکری، و در هر بلایی صبری، و در هر سختی آسانی برایم قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَارْزُقْنِی حُسْنَ الْأَخْلَاقِ، وَاجْعَلْنِی مِنَ الَّذِینَ یَسْعَوْنَ فِی الْأَرْضِ بِالْخَیْرِ، وَیَأْمُرُونَ بِالْمَعْرُوفِ وَیَنْهَوْنَ عَنِ الْمُنْکَرِ، وَیَتَواصَوْنَ بِالصَّبْرِ، وَیَتَواصَوْنَ بِالْمَرْحَمَةِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و اخلاق نیکو روزیم گردان، و مرا از کسانی قرار ده که در زمین برای خیر می‌کوشند، و به نیکی فرمان می‌دهند و از زشتی بازمی‌دارند، و یکدیگر را به شکیبایی و رحمت سفارش می‌کنند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الْمُؤْمِنِینَ الْکَامِلِینَ، وَاجْعَلْنِی مِنَ الْمُخْلِصِینَ الْیَقِنِینَ، وَاجْعَلْنِی مِنَ الْمُتَوَکِّلِینَ الْمُتَّقِینَ، وَاجْعَلْنِی مِنَ الصَّالِحِینَ الرَّاضِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از مؤمنان کامل قرار ده، و از مخلصان یقین‌دار، و از توکل‌کنندگان پرهیزگار، و از صالحان خشنود." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاکْفِنِی مَا یُهِمُّنِی مِنْ أَمْرِ الدُّنْیَا وَالْآخِرَةِ، وَاجْعَلْنِی مِنَ الْمُتَوَسِّلِینَ إِلَیْکَ بِأَحَبِّ الْوَسَائِلِ إِلَیْکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در آنچه از کار دنیا و آخرت مرا اندوهگین می‌کند، مرا کفایت کن، و مرا از کسانی قرار ده که به محبوب‌ترین وسیله‌ها به پیشگاه تو توسل می‌جویند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَارْزُقْنِی الْعَافِیَةَ فِی الدِّینِ وَالدُّنْیَا، وَالسَّلَامَةَ فِی النَّفْسِ وَالْبَدَنِ، وَالصِّحَّةَ فِی الْجِسْمِ وَالْقُوَّةَ فِی الْبَدَنِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و عافیت در دین و دنیا، و سلامت در نفس و بدن، و تندرستی در جسم و نیرو در بدن روزیم گردان." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی فِی قَلْبِی نُوراً، وَبَصَراً، وَبَصِیرَةً، وَنَفَاذاً فِی الدِّینِ، وَیَقِیناً صَادِقاً، وَثَبَاتاً فِی أَمْرِکَ، وَاسْتِقَامَةً عَلَىٰ طَاعَتِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در دلم نوری و بینشی و بصیرتی و نفوذی در دین، و یقینی راستین، و پایداری در کارت، و استقامت در طاعتت قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی لِسَاناً صَادِقاً، وَقَلْباً خَاشِعاً، وَقِنَاعَةً شَافِیَةً، وَاجْعَلْنِی مِنَ الْحَامِدِینَ الشَّاکِرِینَ، وَالصَّابِرِینَ عَلَىٰ بَلَائِکَ، الْمُتَوَکِّلِینَ عَلَیْکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و برایم زبانی راستگو و دلی فروتن و قناعتی سیراب‌کننده قرار ده، و مرا از سپاس‌گویان و شکرکنندگان و شکیبایان بر بلایا و توکل‌کنندگان بر خودت قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَبَارِکْ لِی فِی مَالِی وَوَلَدِی، وَاجْعَلْهُمْ لِی قُرَّةَ عَیْنٍ، وَاجْعَلْهُمْ لِی ذُخْراً وَذِکْراً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در مالم و فرزندانم برکت ده، و آنان را روشنی چشم من قرار ده، و آنان را برایم ذخیره و یادگاری نیکو گردان." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الَّذِینَ یُؤَدُّونَ الْأَمَانَةَ، وَیُوفُونَ بِالْعَهْدِ، وَیَحْفَظُونَ الْحُقُوقَ، وَیَرْحَمُونَ الْخَلْقَ، وَیُحِبُّونَ الْخَیْرَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از کسانی قرار ده که امانت را ادا می‌کنند، و به پیمان وفا می‌کنند، و حقوق را رعایت می‌نمایند، و به مردم رحم می‌کنند، و نیکی را دوست می‌دارند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ خَاتِمَةَ أَمْرِی خَیْراً، وَأَسْعِدْنِی بِمَا أَحْبَبْتَ، وَاجْعَلْ آخِرَ کَلَامِی مِنَ الدُّنْیَا کَلِمَةَ شَهَادَةِ أَنْ لَا إِلٰهَ إِلَّا اللّٰهُ، وَأَنَّ مُحَمَّداً رَسُولُ اللّٰهِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و پایان کارم را به خیر کن، و به آنچه دوست داری خوشبختم گردان، و آخرین سخنم از دنیا را کلمه‌ی شهادت «لا اله الا الله» و «محمد رسول الله» قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَصْلِحْ لِی أَمْرَ دُنْیَایَ، وَاجْعَلْ أَوَّلَهَا صَلَاحاً وَآخِرَهَا فَلَاحاً، وَأَوَّلَهَا بَرَکَةً وَآخِرَهَا رَحْمَةً، وَأَوَّلَهَا تَوْفِیقاً وَآخِرَهَا نَجَاحاً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و کار دنیایم را اصلاح کن، و ابتدای آن را صلاح و پایانش را رستگاری، و آغازش را برکت و انجامش را رحمت، و ابتدایش را توفیق و پایانش را کامیابی قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَجِرْنِی مِنْ مُوجِبَاتِ سَخَطِکَ، وَأَنْزِلْ بِی مُوجِبَاتِ رِضَاکَ، وَوَفِّقْنِی لِمَا فِیهِ رِضَاکَ، وَاجْتَنِبْ بِی مَا فِیهِ سَخَطُکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از آنچه موجب خشم تو می‌شود پناه ده، و آنچه را موجب خشنودی توست بر من فرود آور، و برای آنچه در آن خشنودی توست توفیقم ده، و از آنچه در آن خشمت است دورم دار." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَحْسِنْ عَاقِبَتِی فِی الْأُمُورِ کُلِّهَا، وَأَجِرْنِی مِنْ خِزْیِ الدُّنْیَا وَعَذَابِ الْآخِرَةِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در همه‌ی کارها فرجامم را نیکو گردان، و از خواری دنیا و عذاب آخرت پناهم ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ مَا أَنْعَمْتَ بِهِ عَلَیَّ مِنْ قُوَّةٍ فِی طَاعَتِکَ، وَمَا أَنْعَمْتَ بِهِ عَلَیَّ مِنْ نِعْمَةٍ فِی سَبِیلِ خَیْرٍ، وَاجْعَلْ مَا أَنْعَمْتَ بِهِ عَلَیَّ مِنْ فَضْلٍ فِی مَزِیدٍ مِنْ شُکْرِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و آنچه از نیرو به من نعمت دادی در طاعتت قرار ده، و هر نعمتی که به من دادی در راه خیر قرار ده، و هر فضلی که به من ارزانی داشتی مایه افزودن شکرت قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی وَلِیّاً مِنْکَ یُقَوِّی ضَعْفِی، وَیُصْلِحُ فَسَادِی، وَیَجْعَلُ لِی سَبِیلَ الرَّشَادِ، وَیَأْخُذُ بِی إِلَىٰ مَا فِیهِ رِضَاکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و برایم سرپرستی از سوی خود قرار ده که ضعف مرا نیرو بخشد، و تباهی‌ام را اصلاح کند، و راه راستی برایم بگشاید، و مرا به آنچه در آن خشنودی توست بکشاند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی فِی کُلِّ شَیْءٍ رَغْبَةً فِی الْخَیْرِ، وَرَهْبَةً مِنَ الشَّرِّ، وَاجْعَلْنِی مِنَ الْآمِرِینَ بِالْخَیْرِ، وَالنَّاهِینَ عَنِ الْمُنْکَرِ، وَالْمُتَمَسِّکِینَ بِحُسْنِ السُّنَّةِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در دلم نسبت به هر چیز رغبت به خیر و هراس از شرّ قرار ده، و مرا از امرکنندگان به خیر و بازدارندگان از زشتی و چنگ‌زنندگان به سنّت نیکو قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلِ الْمُتَوَسِّلَ مِنِّی إِلَیْکَ مُحَمَّداً وَآلَهُ، وَاجْعَلْ ذَلِکَ وُصْلَةً إِلَىٰ رِضَاکَ، وَسَبِیلاً إِلَىٰ مَغْفِرَتِکَ، وَاجْعَلْ ذَلِکَ شَفِیعاً لِی عِنْدَکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و وسیله‌ام به پیشگاهت را محمّد و خاندانش قرار ده، و آن را پیوندی به خشنودی‌ات و راهی به آمرزشت گردان، و آن را شفیعی برایم نزد خود قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَارْزُقْنِی فِی هٰذَا الْیَوْمِ وَکُلِّ یَوْمٍ سَلَامَةً، وَصِحَّةً، وَأَمْناً، وَعَافِیَةً، وَطُولَ الْعُمْرِ فِی طَاعَتِکَ، وَقُوَّةً فِی عِبَادَتِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در این روز و در هر روز، سلامت و تندرستی و امنیّت و عافیت و طول عمر در طاعت و نیرو در عبادتت روزیم گردان." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ ثَوَابِی مِنْ عَمَلِی الْجَنَّةَ، وَاجْعَلْ ثِقَتِی بِکَ عَلَىٰ مَا تُحِبُّ وَتَرْضَىٰ، وَاجْعَلْ نِیَّتِی فِی کُلِّ عَمَلٍ لِوَجْهِکَ الْکَرِیمِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و پاداش کردارم را بهشت قرار ده، و اعتمادم را بر تو در آنچه دوست داری و می‌پسندی قرار ده، و نیّتم را در هر کاری برای ذات کریم تو خالص گردان." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَحْسِنْ عَاقِبَتِی، وَأَقِلَّ عَثْرَتِی، وَاعْفُ عَنْ زَلَّتِی، وَاجْعَلْ ذُنُوبِی مَغْفُورَةً، وَعَمَلِی مَقْبُولاً، وَتِجَارَتِی لَنْ تَبُورَ، وَأَجِرْنِی مِنَ النَّارِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و فرجامم را نیکو گردان، و لغزشم را کم کن، و از خطایم درگذر، و گناهانم را آمرزیده و کردارم را پذیرفته و تجارتم را بی‌زیان قرار ده، و از آتش پناهم ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَادْفَعْ عَنِّی کُلَّ مَا لَا طَاقَةَ لِی بِهِ، وَأَعِنِّی عَلَىٰ مَا یُطِیقُهُ الْبَدَنُ وَیَقْبَلُهُ الْقَلْبُ، وَاجْعَلْنِی مِنَ الَّذِینَ یُبَشَّرُونَ بِالْجَنَّةِ، وَیُؤْمَنُونَ یَوْمَ الْقِیَامَةِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و هر آنچه طاقت آن را ندارم از من دور کن، و بر آنچه بدن توان آن را دارد و دل آن را می‌پذیرد یاری‌ام ده، و مرا از کسانی قرار ده که به بهشت بشارت داده می‌شوند و روز قیامت در امان‌اند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی وَلَداً صَالِحاً یَکُونُ لِی عَوْناً فِی الدُّنْیَا وَذُخْراً فِی الْآخِرَةِ، وَاجْعَلْهُ لِی مِنَ الْأَبْرَارِ الْأَخْیَارِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و فرزندی شایسته به من عطا کن که در دنیا یاور من و در آخرت ذخیره‌ام باشد، و او را از نیکان برگزیده قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَصْلِحْ لِی نَفْسِی، وَطَهِّرْ لِی قَلْبِی، وَارْزُقْنِی حُسْنَ الْخُلُقِ، وَاجْعَلْنِی مِنَ الْمُؤْمِنِینَ الْمُتَّقِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و نفسم را اصلاح کن، و دلم را پاک گردان، و اخلاق نیکو روزیم کن، و مرا از مؤمنان پرهیزگار قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِمَّنْ یَحْفَظُ لِسَانَهُ، وَیُطَهِّرُ قَلْبَهُ، وَیَعْمَلُ بِمَا یَعْلَمُ، وَیَحْبِسُ فَضْلَ مَالِهِ، وَیُوفِی بِمَا وَعَدَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از کسانی قرار ده که زبانش را نگه می‌دارد، و دلش را پاک می‌کند، و به آنچه می‌داند عمل می‌کند، و زیاده‌ی مالش را نگاه می‌دارد (برای نیازمندان)، و به آنچه وعده داده وفا می‌کند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الَّذِینَ یَحْفَظُونَ أَوَامِرَکَ، وَیُطِیعُونَ رَسُولَکَ، وَیَتَّبِعُونَ سُنَّتَهُ، وَیَتَجَنَّبُونَ مَعْصِیَتَکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از کسانی قرار ده که فرمان‌هایت را نگه می‌دارند و رسولت را اطاعت می‌کنند و سنّتش را پیروی می‌نمایند و از نافرمانی‌ات دوری می‌جویند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ خَیْرَ زَادِی التَّقْوَىٰ، وَخَیْرَ عَمَلِی الرِّضَا، وَخَیْرَ أَمَلِی الرَّحْمَةَ، وَخَیْرَ مَا أَرْجُوهُ الْعَفْوَ وَالْمَغْفِرَةَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و بهترین توشه‌ام را تقوا، و بهترین کردارم را خشنودی، و بهترین آرزویم را رحمت، و بهترین چیزی که به آن امید دارم را عفو و آمرزش قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَعْطِنِی فِی الدُّنْیَا حُسْنَ الْعَمَلِ، وَفِی الْآخِرَةِ حُسْنَ الثَّوَابِ، وَاجْعَلْنِی مِنَ الْمُقَرَّبِینَ الْأَبْرَارِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در دنیا کردار نیکو و در آخرت پاداش نیکو به من عطا کن، و مرا از نیکان مقرّب قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی فِی الدُّنْیَا رَاحَةً، وَفِی الْآخِرَةِ رَحْمَةً، وَاجْعَلْنِی مِنَ الْأَتْقِیَاءِ الْأَصْفِیَاءِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در دنیا آسودگی و در آخرت رحمت نصیبم کن، و مرا از پرهیزگاران برگزیده قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَطَهِّرْ لِسَانِی مِنَ الْکَذِبِ، وَقَلْبِی مِنَ النِّفَاقِ، وَعَمَلِی مِنَ الرِّیَاءِ، وَبَصَرِی مِنَ الْخِیَانَةِ، فَإِنَّکَ تَعْلَمُ خَائِنَةَ الْأَعْیُنِ وَمَا تُخْفِی الصُّدُورُ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و زبانم را از دروغ، و دلم را از نفاق، و کردارم را از ریا، و چشمم را از خیانت پاک کن؛ چرا که تو خیانت چشم‌ها و آنچه را سینه‌ها پنهان می‌دارند می‌دانی." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَلَا تَجْعَلْنِی مِنَ الْغَافِلِینَ، وَلَا مِنَ الْمُتَکَبِّرِینَ، وَلَا مِنَ الْمَاکِرِینَ، وَلَا مِنَ الْمُفْسِدِینَ، وَاجْعَلْنِی مِنْ عِبَادِکَ الْمُخْلِصِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از غافلان و متکبران و حیله‌گران و فسادانگیزان قرار مده، و از بندگان مخلصت قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الَّذِینَ یُحِبُّونَ فِیکَ، وَیُحِبُّهُمْ، وَیُوالُونَ فِیکَ، وَیُوَالُونَ، وَیُعَادُونَ فِیکَ، وَیُعَادُونَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از کسانی قرار ده که در راه تو دوستی می‌کنند و مورد دوستی قرار می‌گیرند، و در راه تو ولایت می‌ورزند و ولایت می‌پذیرند، و در راه تو دشمنی می‌کنند و با آنان دشمنی می‌شود." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَجِرْنِی مِنْ مَکْرِ الْمُشْرِکِینَ، وَشَمَاتَةِ الْأَعْدَاءِ، وَحَسَدِ الْحَاسِدِینَ، وَکَیْدِ الظَّالِمِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از مکر مشرکان و شماتت دشمنان و حسد حسودان و نیرنگ ستمگران پناه ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الْمُهْتَدِینَ بِهُدَاکَ، وَالسَّالِکِینَ بِطَاعَتِکَ، وَالْمُتَمَسِّکِینَ بِحَبْلِکَ، وَالْمُلْتَجِینَ إِلَىٰ رِضَاکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از هدایت‌یافتگان به هدایتت، و پویندگان در طاعتت، و چنگ‌زنندگان به ریسمانت، و پناهندگان به خشنودی‌ات قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاکْتُبْ لِی عِنْدَکَ ذِکْراً حَسَناً، وَذِکْراً صَالِحاً، وَأَجْراً عَظِیماً، وَثَنَاءً جَمِیلاً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و برای من نزد خود یاد نیکو و نام شایسته و پاداشی بزرگ و ستایشی زیبا بنویس." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْنِی مِنَ الَّذِینَ یَشْکُرُونَکَ عَلَىٰ نِعْمَتِکَ، وَیَصْبِرُونَ عَلَىٰ بَلَائِکَ، وَیَرْضَوْنَ بِقَضَائِکَ، وَیُسَلِّمُونَ لِأَمْرِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و مرا از کسانی قرار ده که تو را بر نعمتت سپاس می‌گویند و بر بلایت صبر می‌کنند و به قضایت خشنود می‌شوند و به فرمانت تسلیم‌اند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَحْیِنِی مَا کَانَتِ الْحَیَاةُ خَیْراً لِی، وَتَوَفَّنِی إِذَا کَانَتِ الْوَفَاةُ خَیْراً لِی، وَلَا تَفْجَعْنِی فِی دِینِی، وَلَا تُصْعِبْ عَلَیَّ أَمْرِی، وَلَا تَجْعَلِ الدُّنْیَا أَکْبَرَ هَمِّی.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و تا زمانی که زندگی برایم بهتر است زنده‌ام دار، و چون مرگ برایم بهتر باشد بمیرانم، و در دینم داغ بر دلم مگذار، و کارم را بر من دشوار مساز، و دنیا را بزرگ‌ترین اندوهم قرار مده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ قَلْبِی مِنَ الْحِکْمَةِ مَمْلُوّاً، وَاجْعَلْ لِسَانِی مِنَ الصِّدْقِ مَحْبُوساً، وَاجْعَلْنِی مِنَ الْحُکَمَاءِ الرَّاشِدِینَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و دلم را از حکمت پر کن، و زبانم را به راستی بازدار (نگه‌دار از بیهوده‌گویی)، و مرا از حکیمان راه‌یافته قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَعُوذُ بِکَ مِنْ غَلَبَةِ الدَّیْنِ، وَسُلْطَانِ الْأَعْدَاءِ، وَمُصَارَعَةِ الْأَهْوَاءِ، وَمُزَاحَمَةِ الرِّجَالِ، وَشَمَاتَةِ الْأَعْدَاءِ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و از چیرگی بدهی، و تسلط دشمنان، و مغلوب شدن در برابر هواهای نفس، و درگیری با قدرتمندان، و شماتت دشمنان به تو پناه می‌آورم." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَسْأَلُکَ أَنْ تَجْعَلَنِی مِنْ أَوْلِیَائِکَ الَّذِینَ لَا خَوْفٌ عَلَیْهِمْ وَلَا هُمْ یَحْزَنُونَ، وَمِنَ الَّذِینَ آمَنُوا وَکَانُوا یَتَّقُونَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و از تو می‌خواهم که مرا از دوستانت قرار دهی، همانانی که نه ترسی بر آنان است و نه اندوهگین می‌شوند، و از کسانی که ایمان آوردند و پرهیزگاری پیشه کردند." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَجُدْ عَلَیَّ بِرَحْمَتِکَ، وَأَعْطِنِی مِنْ فَضْلِکَ، وَاجْعَلْنِی مِنَ الْفَائِزِینَ النَّاجِینَ، وَاجْعَلْ لِی لِسَاناً ذَاکِراً، وَقَلْباً شَاکِراً، وَبَدَناً صَابِراً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و به رحمتت بر من ببخش، و از فضلت به من عطا کن، و مرا از رستگاران نجات‌یافته قرار ده، و برایم زبانی ذاکر و دلی شکرگزار و بدنی شکیبا قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَاجْعَلْ لِی فِی الدُّنْیَا مَا یُقَرِّبُنِی إِلَىٰ طَاعَتِکَ، وَفِی الْآخِرَةِ مَا یُوجِبُ رَحْمَتَکَ، وَاجْعَلْ لِی مَا لَا یُحْصَىٰ مِنْ رَحْمَتِکَ وَفَضْلِکَ وَکَرَمِکَ.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و در دنیا آنچه مرا به طاعتت نزدیک می‌کند و در آخرت آنچه موجب رحمتت است نصیبم کن، و از رحمت و فضل و کرمت آنچه به شماره نیاید برایم قرار ده." },
+
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَنْتَ الْکَرِیمُ الْجَوَادُ، فَأَعْطِنِی مِنْ کَرَمِکَ وَجُودِکَ وَرَحْمَتِکَ وَفَضْلِکَ، وَاجْعَلْ خَاتِمَةَ عَمَلِی خَیْراً، وَأَعْطِنِی مِنْ کَرَمِکَ مَا یَنْفَعُنِی وَلَا یَضُرُّنِی، وَاجْعَلْ أَمْرِی کُلَّهُ خَیْراً.", fa: "خدایا، بر محمّد و خاندانش درود فرست، و تو کریم و بخشنده‌ای، پس از کرم و بخشش و رحمت و فضلت به من عطا کن، و پایان کارم را به خیر کن، و از کرمت آنچه به من سود می‌رساند و زیان ندارد عطا کن، و همه‌ی کارهایم را به خیر گردان." },
+
+    { ar: "وَالْحَمْدُ لِلّٰهِ رَبِّ الْعَالَمِینَ، وَصَلَّى اللّٰهُ عَلَىٰ مُحَمَّدٍ نَبِیِّهِ وَآلِهِ الطَّاهِرِینَ، وَسَلَّمَ تَسْلِیماً کَثِیراً.", fa: "و ستایش ویژه‌ی خداست که پروردگار جهانیان است، و درود خدا بر محمّد پیامبرش و خاندان پاکش باد، و سلامی فراوان و کامل بر آنان." }
+  ],
+  fazilat: "دعای مکارم الاخلاق، بیستمین دعای صحیفه‌ی سجادیه و از مشهورترین دعاهای امام سجاد علیه‌السلام است. این دعا را «دعای مکارم الاخلاق» می‌نامند و دربردارنده‌ی درخواست‌های بلندی برای کسب فضایل اخلاقی، دوری از رذایل، و اصلاح فرد و جامعه است.\n\nامام سجاد (ع) در این دعا از خداوند می‌خواهد: ایمان کامل، یقین برتر، نیّت نیکو، کردار پسندیده، اخلاق بزرگوارانه، فروتنی، بی‌نیازی از مردم به واسطه‌ی عبادت، اصلاح دین و دنیا، عافیت در دین و بدن، زبان راستگو، دل فروتن، و در نهایت پایان نیک و شهادتین بر زبان.\n\nاز ویژگی‌های این دعا آن است که به عنوان «دُرسنامه‌ی اخلاق اسلامی» شناخته می‌شود. خواندن آن در هر زمان سفارش شده و برای تهذیب نفس، اصلاح اخلاق و نزدیکی به خداوند بسیار مؤثر است.",
+  source: "صحیفه سجادیه (دعای بیستم) • مفاتیح الجنان (شیخ عباس قمی) • بحار الأنوار (علامه مجلسی) • ریاض السالکین (سید علی‌خان مدنی)",
+  time: "این دعا زمان خاصی ندارد و در هر ساعتی از شبانه‌روز می‌توان خواند. بهترین زمان آن، سحرها و پس از نمازهای واجب است. توصیه شده با وضو، رو به قبله، با حضور قلب و تدبّر در معانی آن خوانده شود تا آثار تربیتی و اخلاقی آن در جان انسان بنشیند."
+};
+
+/* ============================================================
+   RENDER VERSES
+   ============================================================ */
+function renderVerses(){
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  DUA_DATA.verses.forEach((v,i)=>{
+    const el = document.createElement('div');
+    el.className = 'verse-card' + (v.bismillah ? ' bismillah' : '');
+    el.innerHTML = `
+      <div class="v-head">
+        <span class="v-num">${faNum(i+1)}</span>
+        <span class="v-label">بند ${faNum(i+1)}</span>
+      </div>
+      <div class="v-ar">${v.ar}</div>
+      <div class="v-divider"></div>
+      <div class="v-fa">${v.fa}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = ()=> $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = ()=> $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = ()=> $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e)=>{ if(e.target===m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark',dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme')==='dark');
+$('#themeToggle').onclick = ()=> applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  $$('.verse-card').forEach(v=> v.classList.toggle('hide-trans', !showTrans));
+  if($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = ()=>{
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = ()=>{
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b=>{
+  if(b.dataset.lh===lineHeight) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-lh]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b=>{
+  const isOn = (b.dataset.trans==='1')===showTrans;
+  b.classList.toggle('active',isOn);
+  b.onclick = ()=>{
+    $$('[data-trans]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans==='1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b=>{
+  if(b.dataset.fontAr===fontAr) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-ar]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b=>{
+  if(b.dataset.fontFa===fontFa) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-fa]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = ()=>{
+  if(document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=> console.log('NOOR Service Worker registered.'))
+      .catch(()=> {});
+  });
+}
+
+console.log('🤲 دعای مکارم الاخلاق | NOOR – بارگذاری شد. تعداد بندها:', DUA_DATA.verses.length);
+</script>
+
+</body>
+</html>

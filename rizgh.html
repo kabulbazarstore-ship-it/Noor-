@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<meta name="description" content="دعای رزق و روزی | نــــور NOOR">
+<title>دعای رزق و روزی | نــــور NOOR</title>
+
+<link rel="manifest" href="manifest.json">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef:wght@400;700&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#F8F5EE; --surface:#FFFDF8; --surface2:#F1ECE2;
+  --brand:#123C32; --brand2:#2D6657;
+  --gold:#B88A3B; --gold2:#D6B56A;
+  --gold-soft:rgba(184,138,59,.10);
+  --gold-border:rgba(184,138,59,.20);
+  --text:#17231F; --text2:#3D4A44; --muted:#66716C;
+  --divider:#E7E0D3;
+  --arabic:#123C32; --translation:#3D4A44;
+  --shadow:0 4px 20px rgba(18,60,50,.05);
+  --shadow-sm:0 2px 10px rgba(18,60,50,.035);
+  --radius:16px; --radius-sm:12px;
+  --trans:.25s cubic-bezier(.4,0,.2,1);
+  --font-fa:'Vazirmatn',Tahoma,sans-serif;
+  --font-ar:'Amiri','Scheherazade New','Noto Naskh Arabic',serif;
+  --fs-ar:24px; --fs-fa:16px; --lh-ar:2.35;
+}
+body.dark{
+  --bg:#080E0C; --surface:#101A16; --surface2:#16231E;
+  --brand:#9FC5B5; --brand2:#B9D5C8;
+  --gold:#D2AC5C; --gold2:#E4C982;
+  --gold-soft:rgba(210,172,92,.08);
+  --gold-border:rgba(210,172,92,.16);
+  --text:#F4EFE4; --text2:#C8D2CC; --muted:#A8B3AD;
+  --divider:#26352F;
+  --arabic:#E8E2D2; --translation:#C8D2CC;
+  --shadow:0 4px 24px rgba(0,0,0,.30);
+  --shadow-sm:0 2px 10px rgba(0,0,0,.20);
+}
+body.font-ar-amiri{--font-ar:'Amiri',serif}
+body.font-ar-scheherazade{--font-ar:'Scheherazade New',serif}
+body.font-ar-naskh{--font-ar:'Noto Naskh Arabic',serif}
+body.font-ar-lateef{--font-ar:'Lateef',serif}
+body.font-ar-reem{--font-ar:'Reem Kufi',sans-serif}
+body.font-fa-vazir{--font-fa:'Vazirmatn',Tahoma,sans-serif}
+body.font-fa-naskh{--font-fa:'Noto Naskh Arabic',serif}
+body.font-fa-amiri{--font-fa:'Amiri',serif}
+body.font-fa-scheherazade{--font-fa:'Scheherazade New',serif}
+body.font-fa-lateef{--font-fa:'Lateef',serif}
+
+*{margin:0;padding:0;box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{
+  font-family:var(--font-fa);background:var(--bg);color:var(--text);
+  min-height:100vh;line-height:1.7;font-size:16px;
+  transition:background var(--trans),color var(--trans);
+  overflow-x:hidden;
+}
+button,input{font-family:inherit;color:inherit}
+button{border:0;background:none;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;transition:var(--trans)}
+svg{display:block}
+.icon{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none}
+.icon-sm{width:18px;height:18px}
+.app{width:100%;max-width:780px;margin:0 auto;padding:0 14px 88px}
+
+.header{
+  position:sticky;top:0;z-index:50;
+  display:flex;align-items:center;gap:6px;
+  padding:12px 0;
+  background:color-mix(in srgb,var(--bg) 88%,transparent);
+  border-bottom:1px solid var(--divider);
+  backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);
+}
+.hbtn{
+  width:40px;height:40px;flex:none;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;
+  background:var(--surface);border:1px solid var(--gold-border);
+  color:var(--gold);transition:var(--trans);
+}
+.hbtn:hover{background:var(--gold-soft);border-color:var(--gold)}
+.hbtn:active{transform:scale(.94)}
+.brand{flex:1;min-width:0;text-align:center;line-height:1.15}
+.brand h1{
+  font-family:'Amiri',serif;font-size:1.12rem;font-weight:700;
+  color:var(--brand);letter-spacing:.5px;
+  white-space:nowrap;overflow:hidden;text-overflow:ellipsis;
+}
+body.dark .brand h1{color:var(--gold)}
+.brand .noor{
+  display:block;margin-top:3px;
+  font-family:'Amiri',serif;font-size:.65rem;font-weight:700;
+  color:var(--gold);letter-spacing:6px;
+}
+
+.scroll-content{
+  max-height:calc(100vh - 90px);
+  overflow-y:auto;padding:14px 0 20px;
+  -webkit-overflow-scrolling:touch;
+  scrollbar-width:thin;scrollbar-color:var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar{width:4px}
+.scroll-content::-webkit-scrollbar-track{background:transparent}
+.scroll-content::-webkit-scrollbar-thumb{background:var(--gold-border);border-radius:10px}
+
+.top-orn{
+  position:relative;overflow:hidden;text-align:center;
+  padding:18px 14px 20px;margin-bottom:14px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+}
+.orn-svg{position:absolute;color:var(--gold);opacity:.10;pointer-events:none}
+.orn-svg.tr{top:-6px;right:-6px;width:80px;height:80px}
+.orn-svg.bl{bottom:-6px;left:-6px;width:80px;height:80px;transform:rotate(180deg)}
+.orn-title{
+  position:relative;z-index:1;
+  font-family:'Amiri',serif;font-size:1.45rem;font-weight:700;
+  color:var(--brand);letter-spacing:1px;
+}
+body.dark .orn-title{color:var(--gold)}
+.orn-sub{position:relative;z-index:1;font-size:.78rem;color:var(--muted)}
+.orn-div{
+  position:relative;z-index:1;
+  display:flex;align-items:center;justify-content:center;gap:8px;
+  width:80px;margin:8px auto 0;
+}
+.orn-div:before,.orn-div:after{content:"";flex:1;height:1px;background:var(--gold-border)}
+.orn-div svg{width:12px;height:12px;color:var(--gold)}
+
+.section-head{
+  position:relative;
+  margin:20px 0 12px;
+  padding:14px 16px;
+  border-radius:var(--radius);
+  background:linear-gradient(135deg,var(--surface) 0%,var(--surface2) 100%);
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow-sm);
+  text-align:center;
+}
+.section-head:first-child{margin-top:0}
+.section-head .sec-title{
+  font-family:'Amiri',serif;
+  font-size:1.05rem;font-weight:700;
+  color:var(--gold);
+  margin-bottom:4px;
+  line-height:1.4;
+}
+.section-head .sec-sub{
+  font-size:.72rem;
+  color:var(--muted);
+  line-height:1.6;
+}
+.section-head .sec-orn{
+  display:flex;align-items:center;justify-content:center;gap:6px;
+  width:60px;margin:8px auto 0;
+}
+.section-head .sec-orn:before,.section-head .sec-orn:after{
+  content:"";flex:1;height:1px;background:var(--gold-border);
+}
+.section-head .sec-orn svg{width:10px;height:10px;color:var(--gold)}
+
+.verse-card{
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius);
+  padding:16px 14px;margin-bottom:10px;
+  box-shadow:var(--shadow-sm);
+  transition:var(--trans);position:relative;
+}
+.verse-card:hover{border-color:var(--gold);box-shadow:0 4px 16px rgba(184,138,59,.08)}
+.verse-card .v-head{display:flex;align-items:center;gap:8px;margin-bottom:10px}
+.verse-card .v-num{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-width:24px;height:24px;padding:0 8px;
+  border-radius:7px;
+  background:var(--gold-soft);color:var(--gold);
+  font-family:'Amiri',serif;font-weight:700;font-size:.72rem;
+  border:1px solid var(--gold-border);
+}
+.verse-card .v-label{font-size:.68rem;color:var(--muted);font-weight:600}
+.verse-card .v-ar{
+  font-family:var(--font-ar);
+  font-size:var(--fs-ar);line-height:var(--lh-ar);
+  color:var(--arabic);text-align:center;font-weight:400;
+  margin-bottom:12px;padding:4px 2px;white-space:pre-line;
+}
+.verse-card.bismillah .v-ar{font-size:calc(var(--fs-ar) * .82);margin-bottom:10px}
+.verse-card .v-divider{
+  height:1px;
+  background:repeating-linear-gradient(90deg,var(--gold-border) 0,var(--gold-border) 3px,transparent 3px,transparent 6px);
+  margin:0 auto 12px;width:52px;
+}
+.verse-card .v-fa{
+  font-family:var(--font-fa);
+  font-size:var(--fs-fa);line-height:1.95;
+  color:var(--translation);text-align:justify;
+  padding:0 8px;border-right:3px solid var(--gold-border);
+  white-space:pre-line;
+}
+.verse-card.hide-trans .v-fa{display:none}
+.verse-card.hide-trans .v-divider{display:none}
+.verse-card.hide-trans .v-ar{margin-bottom:0}
+
+.modal-bg{
+  position:fixed;inset:0;z-index:200;
+  display:none;align-items:flex-end;justify-content:center;
+  padding:0 12px 12px;
+  background:rgba(0,0,0,.55);
+  backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+}
+.modal-bg.show{display:flex}
+.modal{
+  width:100%;max-width:540px;max-height:86vh;overflow-y:auto;
+  background:var(--surface);
+  border:1px solid var(--gold-border);
+  border-radius:24px 24px 18px 18px;
+  padding:20px 18px 26px;
+  box-shadow:var(--shadow);
+  animation:slideUp .3s ease;
+}
+@keyframes slideUp{from{transform:translateY(40px);opacity:0}to{transform:translateY(0);opacity:1}}
+.modal-head{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:16px;padding-bottom:12px;
+  border-bottom:1px solid var(--divider);
+}
+.modal-head h3{display:flex;align-items:center;gap:8px;font-size:1rem;color:var(--text)}
+.modal-head h3 svg{color:var(--gold);width:20px;height:20px;flex:none}
+.modal-close{
+  width:34px;height:34px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--muted);
+}
+.modal-close:hover{color:var(--gold);border-color:var(--gold)}
+
+.set-group{margin-bottom:18px}
+.set-group>label{display:block;margin-bottom:8px;color:var(--muted);font-size:.75rem;font-weight:700}
+.set-options{display:flex;flex-wrap:wrap;gap:6px}
+.set-opt{
+  padding:7px 11px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+  color:var(--text2);font-size:.74rem;font-weight:600;
+  cursor:pointer;transition:var(--trans);
+}
+.set-opt:hover{color:var(--gold);border-color:var(--gold-border)}
+.set-opt.active{color:var(--gold);background:var(--gold-soft);border-color:var(--gold)}
+.font-preview{font-family:var(--font-ar);font-size:1rem}
+.set-ctrl{
+  display:flex;align-items:center;gap:6px;width:max-content;
+  padding:4px;border-radius:10px;
+  background:var(--surface2);border:1px solid var(--divider);
+}
+.set-ctrl button{width:34px;height:34px;border-radius:8px;color:var(--muted);font-size:1.05rem;font-weight:700}
+.set-ctrl button:hover{background:var(--gold-soft);color:var(--gold)}
+.set-ctrl .val{min-width:42px;text-align:center;color:var(--gold);font-size:.82rem;font-weight:700}
+
+.info-block{
+  padding:14px 16px;
+  background:var(--surface2);
+  border:1px solid var(--gold-border);
+  border-radius:var(--radius-sm);
+  margin-bottom:10px;
+}
+.info-block h4{
+  display:flex;align-items:center;gap:6px;
+  font-size:.8rem;font-weight:700;color:var(--gold);margin-bottom:8px;
+}
+.info-block h4 svg{width:16px;height:16px;flex:none}
+.info-block p{
+  font-size:.8rem;line-height:1.95;
+  color:var(--text2);text-align:justify;white-space:pre-line;
+}
+
+.bottom-nav{
+  position:fixed;left:0;right:0;bottom:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-around;
+  height:62px;
+  padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));
+  background:var(--surface);border-top:1px solid var(--divider);
+  box-shadow:0 -6px 24px rgba(0,0,0,.06);
+}
+body.dark .bottom-nav{box-shadow:0 -6px 24px rgba(0,0,0,.4)}
+.nav-btn{
+  flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:3px;padding:6px 4px;border-radius:12px;
+  color:var(--muted);text-decoration:none;
+  font-size:.6rem;font-weight:500;transition:var(--trans);
+}
+.nav-btn svg{width:20px;height:20px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.nav-btn:hover,.nav-btn.active{color:var(--gold)}
+
+.toast{
+  position:fixed;left:50%;bottom:78px;z-index:300;
+  display:flex;align-items:center;gap:8px;
+  max-width:90%;padding:10px 18px;border-radius:14px;
+  background:var(--brand);color:#fff;
+  border:1px solid var(--gold-border);
+  box-shadow:var(--shadow);
+  transform:translateX(-50%) translateY(20px);
+  opacity:0;pointer-events:none;
+  transition:all .35s ease;font-size:.8rem;font-weight:600;
+}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+.toast svg{width:16px;height:16px;color:var(--gold2)}
+
+@media(max-width:480px){
+  :root{--fs-ar:22px;--fs-fa:15px}
+  .app{padding-left:10px;padding-right:10px}
+  .hbtn{width:36px;height:36px}
+  .hbtn .icon{width:18px;height:18px}
+  .brand h1{font-size:1rem}
+  .orn-title{font-size:1.28rem}
+  .verse-card{padding:14px 12px}
+  .section-head{padding:12px 12px}
+  .section-head .sec-title{font-size:.95rem}
+}
+</style>
+</head>
+
+<body>
+
+<div class="app">
+
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+
+    <div class="brand">
+      <h1 id="pageTitle">دعای رزق و روزی</h1>
+      <span class="noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <section class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width=".8">
+        <path d="M50 5L95 50L50 95L5 50Z"/><path d="M50 20L80 50L50 80L20 50Z"/><circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای رزق و روزی</div>
+      <div class="orn-sub">مجموعه دعاهای افزایش روزی و برکت</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </section>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/></svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای رزق و روزی
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> فضیلت و خواص</h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg> منبع</h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg> زمان و شیوه قرائت</h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></button>
+        <button class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-font-fa="vazir">وزیرمتن</button>
+        <button class="set-opt" data-font-fa="naskh">نسخ</button>
+        <button class="set-opt" data-font-fa="amiri">امیری</button>
+        <button class="set-opt" data-font-fa="scheherazade">شهرزاد</button>
+        <button class="set-opt" data-font-fa="lateef">لطیف</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <button class="set-opt" data-lh="1.9">کم</button>
+        <button class="set-opt" data-lh="2.35">متوسط</button>
+        <button class="set-opt" data-lh="2.8">زیاد</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <button class="set-opt" data-trans="1">نمایش</button>
+        <button class="set-opt" data-trans="0">پنهان</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   NOOR | دعای رزق و روزی
+   ============================================================ */
+
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g,d=>'۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای رزق و روزی (بخش‌بندی‌شده)
+   ============================================================ */
+
+const DUA_DATA = {
+  title: "دعای رزق و روزی",
+  sections: [
+    {
+      title: "دعای رزق و روزی از پیامبر اکرم (ص)",
+      sub: "دعایی که رسول خدا (ص) به امیرالمؤمنین (ع) برای گشایش روزی آموختند",
+      verses: [
+        { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان", bismillah: true },
+
+        { ar: "اللّٰهُمَّ أَغْنِنِی بِحَلَالِکَ عَنْ حَرَامِکَ، وَأَغْنِنِی بِفَضْلِکَ عَمَّنْ سِوَاکَ.", fa: "خدایا! مرا به حلال خودت از حرامت بی‌نیاز گردان، و به فضل خودت از هر کس جز تو بی‌نیازم کن." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ عِلْماً نَافِعاً، وَرِزْقاً طَیِّباً، وَعَمَلًا مُتَقَبَّلًا.", fa: "خدایا! از تو دانش سودمند، و روزی پاکیزه، و کردار پذیرفته‌شده می‌خواهم." },
+
+        { ar: "اللّٰهُمَّ اکْفِنِی بِحَلَالِکَ عَنْ حَرَامِکَ، وَأَغْنِنِی بِفَضْلِکَ عَمَّنْ سِوَاکَ.", fa: "خدایا! مرا با حلال خود از حرامت کفایت کن، و به فضل خود از هر کس جز خودت بی‌نیاز گردان." },
+
+        { ar: "اللّٰهُمَّ بَارِکْ لِی فِی مَالِی، وَبَارِکْ لِی فِی رِزْقِی، وَاجْعَلْنِی مِنَ الشَّاکِرِینَ.", fa: "خدایا! در مالم برکت ده و در روزیم برکت ده و مرا از سپاسگزاران قرار ده." }
+      ]
+    },
+
+    {
+      title: "دعای رزق و روزی از امام سجاد (ع)",
+      sub: "از صحیفه سجادیه — دعای طلب روزی پاک و حلال و شکرگزاری بر آن",
+      verses: [
+        { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَعْطِنِی مِنْ رِزْقِکَ الْحَلَالِ الطَّیِّبِ مَا أَسْتَعِینُ بِهِ عَلَىٰ طَاعَتِکَ، وَأَصِلُ بِهِ إِلَىٰ رِضَاکَ.", fa: "خدایا! بر محمّد و خاندانش درود فرست، و از روزی حلال و پاکیزه‌ات آنقدر به من عطا کن که با آن بر طاعتت یاری جویم، و به وسیله‌ی آن به خشنودی‌ات برسم." },
+
+        { ar: "اللّٰهُمَّ وَأَغْنِنِی عَنْ کُلِّ شَیْءٍ بِعِبَادَتِکَ، وَلَا تُفْقِرْنِی إِلَىٰ أَحَدٍ مِنْ خَلْقِکَ بِتَرْکِ طَاعَتِکَ.", fa: "خدایا! مرا با عبادت خود از هر چیزی بی‌نیاز کن، و به سبب ترک طاعتت، نیازمند به هیچ‌یک از آفریدگانت مگردان." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ رِزْقاً وَاسِعاً حَلَالًا طَیِّباً، تَسُدُّ بِهِ فَاقَتِی، وَتَقْضِی بِهِ دَیْنِی، وَتَکْفِی بِهِ عِیَالِی، وَتَصِلُ بِهِ رَحِمِی.", fa: "خدایا! از تو روزی گسترده، حلال و پاکیزه می‌خواهم که نیازمندی‌ام را برطرف کنی، و قرضم را ادا نمایی، و خانواده‌ام را کفایت کنی، و پیوند خویشاوندی‌ام را برقرار سازی." },
+
+        { ar: "اللّٰهُمَّ وَاجْعَلْ لِی فِی کُلِّ نِعْمَةٍ شُکْراً، وَفِی کُلِّ بَلَاءٍ صَبْراً، وَفِی کُلِّ عُسْرٍ یُسْراً.", fa: "خدایا! برای هر نعمتی شکری، و در هر بلایی صبری، و در هر سختی آسانی برایم قرار ده." }
+      ]
+    },
+
+    {
+      title: "دعای رزق و روزی از امام صادق (ع)",
+      sub: "از حضرت صادق آل محمد (ع) — برای رزق وسیع و بی‌حساب از جایی که گمان نمی‌رود",
+      verses: [
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ مِنْ فَضْلِکَ الْوَاسِعِ، وَرِزْقِکَ الْحَلَالِ الطَّیِّبِ، وَأَسْأَلُکَ أَنْ تَرْزُقَنِی مِنْ حَیْثُ لَا أَحْتَسِبُ.", fa: "خدایا! از فضل گسترده‌ات، و روزی حلال پاکیزه‌ات از تو درخواست می‌کنم، و از تو می‌خواهم که از جایی که گمان نمی‌برم روزیم کنی." },
+
+        { ar: "اللّٰهُمَّ إِنَّکَ قُلْتَ: ﴿وَ مَنْ یَتَّقِ اللّٰهَ یَجْعَلْ لَهُ مَخْرَجاً * وَ یَرْزُقْهُ مِنْ حَیْثُ لَا یَحْتَسِبُ﴾، فَاجْعَلْنِی مِنَ الْمُتَّقِینَ الَّذِینَ تُوَسِّعُ عَلَیْهِمْ رِزْقَهُمْ مِنْ حَیْثُ لَا یَحْتَسِبُونَ.", fa: "خدایا! تو فرمودی: «هر کس تقوای الهی پیشه کند، خداوند راه بیرون شدنی از تنگناها برای او قرار می‌دهد و از جایی که گمانش را ندارد، روزی‌اش می‌دهد»، پس مرا از پرهیزگارانی قرار ده که روزی‌شان را از جایی که گمان نمی‌برند گسترده می‌سازی." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ رِزْقاً لَا یَنْفَدُ، وَنَعِیماً لَا یَنْقَطِعُ، وَخَیْراً لَا یُحْصَىٰ، وَبَرَکَةً لَا تُوصَفُ.", fa: "خدایا! از تو روزی‌ای که تمام نمی‌شود، و نعمتی که قطع نمی‌گردد، و خیری که به شماره نمی‌آید، و برکتی که وصف نمی‌شود می‌خواهم." },
+
+        { ar: "اللّٰهُمَّ ارْزُقْنِی مِنْ فَضْلِکَ الْوَاسِعِ حَلَالاً طَیِّباً، وَاجْعَلْنِی رَاضِیاً قَنِعاً، وَاجْعَلْ قَلْبِی عَنْ حُبِّ الدُّنْیَا نَازِعاً.", fa: "خدایا! از فضل گسترده‌ات روزی حلال پاکیزه روزیم گردان، و مرا خشنود و قناعت‌پیشه قرار ده، و دلم را از محبت دنیا رها ساز." }
+      ]
+    },
+
+    {
+      title: "دعای رزق و روزی از امام کاظم (ع)",
+      sub: "برای رزق وسیع و دور شدن فقر و تنگدستی",
+      verses: [
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ رِزْقاً وَاسِعاً، وَنَعِیماً سَابِغاً، وَعَقْلاً رَاجِحاً، وَقَلْباً خَاشِعاً، وَلِسَاناً صَادِقاً.", fa: "خدایا! از تو روزی گسترده، و نعمت کامل، و خرد برتر، و قلب فروتن، و زبان راستگو می‌خواهم." },
+
+        { ar: "اللّٰهُمَّ أَغْنِنِی مِنْ فَضْلِکَ، وَاکْفِنِی رِزْقَکَ، وَلَا تُحْوِجْنِی إِلَىٰ خَلْقِکَ، وَاجْعَلْ لِی مِنْ کُلِّ هَمٍّ فَرَجاً.", fa: "خدایا! مرا به فضلت بی‌نیاز کن، و روزی‌ات را کفایتم کن، و به آفریدگانت نیازمندم مگردان، و برای هر اندوهم گشایشی قرار ده." }
+      ]
+    },
+
+    {
+      title: "دعای رزق و روزی (اللهم ارزقنی رزقاً حلالاً طیباً)",
+      sub: "دعای مشهور برای رزق حلال و پاکیزه — از مفاتیح‌الجنان",
+      verses: [
+        { ar: "اللّٰهُمَّ ارْزُقْنِی رِزْقاً حَلَالًا طَیِّباً وَاسِعاً مِنْ غَیْرِ کَدٍّ وَلَا مَنٍّ، وَاسْتُرْنِی مِنْ عُیُونِ الْأَعْدَاءِ وَالْحَاسِدِینَ.", fa: "خدایا! روزی حلال، پاکیزه و گسترده‌ای روزیم کن، بی‌زحمت و بی‌منّت، و مرا از چشمان دشمنان و حسودان بپوشان." },
+
+        { ar: "اللّٰهُمَّ بَارِکْ لِی فِیمَا رَزَقْتَنِی، وَاخْلُفْ عَلَیَّ بِخَیْرٍ فِیمَا أَنْفَقْتُ، وَاجْعَلْ لِی رِزْقاً حَلَالًا طَیِّباً مِنْ غَیْرِ کَدٍّ وَلَا نَصَبٍ.", fa: "خدایا! در آنچه روزیم کرده‌ای برکت ده، و آنچه انفاق کرده‌ام به بهترین شکل جانشین کن، و برایم روزی حلال پاکیزه‌ای بی‌زحمت و خستگی قرار ده." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَعُوذُ بِکَ مِنَ الْفَقْرِ وَالْقِلَّةِ وَالذُّلِّ، وَأَعُوذُ بِکَ مِنْ أَنْ أَظْلِمَ أَوْ أُظْلَمَ.", fa: "خدایا! به تو پناه می‌برم از فقر و تنگدستی و خواری، و به تو پناه می‌برم از اینکه ستم کنم یا بر من ستم شود." },
+
+        { ar: "اللّٰهُمَّ إِنِّی أَسْأَلُکَ مِنْ فَضْلِکَ وَرَحْمَتِکَ، فَإِنَّهُ لَا یَمْلِکُهَا إِلَّا أَنْتَ، وَلَا یَقْدِرُ عَلَیْهَا سِوَاکَ، یَا وَاسِعَ الْفَضْلِ، یَا کَثِیرَ الْخَیْرِ، یَا دَائِمَ الْإِحْسَانِ.", fa: "خدایا! از فضل و رحمتت از تو درخواست می‌کنم، که آن را جز تو کسی در اختیار ندارد و جز تو بر آن کسی توانا نیست، ای صاحب فضل گسترده، ای پرخیر، ای همیشه نیکوکار." }
+      ]
+    },
+
+    {
+      title: "دعای رزق در قنوت نماز",
+      sub: "از پیامبر اکرم (ص) — خواندن آن در قنوت نماز برای گشایش روزی",
+      verses: [
+        { ar: "اللّٰهُمَّ ارْزُقْنِی حُبَّکَ، وَحُبَّ مَنْ یَنْفَعُنِی حُبُّهُ عِنْدَکَ، اللّٰهُمَّ مَا رَزَقْتَنِی مِمَّا أُحِبُّ فَاجْعَلْهُ قُوَّةً لِی فِیمَا تُحِبُّ.", fa: "خدایا! محبت خودت، و محبت هر که محبتش نزد تو به من سود می‌رساند را روزیم کن؛ خدایا آنچه از آنچه دوست دارم روزیم کرده‌ای، آن را نیرویی برای انجام آنچه تو دوست داری قرار ده." },
+
+        { ar: "اللّٰهُمَّ اکْفِنِی الْحَلَالَ عَنِ الْحَرَامِ، وَأَغْنِنِی بِفَضْلِکَ عَمَّنْ سِوَاکَ.", fa: "خدایا! مرا با حلال از حرام کفایت کن، و به فضل خود از هر کس جز خودت بی‌نیاز گردان." }
+      ]
+    },
+
+    {
+      title: "اذکار و ذکرهای کوتاه رزق و روزی",
+      sub: "اذکاری که در منابع معتبر برای جلب روزی و برکت بسیار سفارش شده است",
+      verses: [
+        { ar: "یَا رَزَّاقُ، یَا رَزَّاقُ، یَا رَزَّاقُ.", fa: "ای روزی‌دهنده، ای روزی‌دهنده، ای روزی‌دهنده. (۴۱ مرتبه برای گشایش روزی)" },
+
+        { ar: "یَا فَتَّاحُ، یَا عَلِیمُ، یَا رَزَّاقُ، یَا کَرِیمُ.", fa: "ای گشاینده، ای دانا، ای روزی‌دهنده، ای کریم." },
+
+        { ar: "لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ الْعَلِیِّ الْعَظِیمِ.", fa: "هیچ نیرو و توانی جز به خدای بلندمرتبه بزرگ نیست." },
+
+        { ar: "الْحَمْدُ لِلّٰهِ الَّذِی بِنِعْمَتِهِ تَتِمُّ الصَّالِحَاتُ.", fa: "سپاس خداوندی را که به نعمتش کارهای شایسته کامل می‌شود." },
+
+        { ar: "حَسْبُنَا اللهُ وَنِعْمَ الْوَکِیلُ.", fa: "خدا ما را بس است و چه نیکو وکیلی است." },
+
+        { ar: "اللّٰهُمَّ أَغْنِنِی بِحَلَالِکَ عَنْ حَرَامِکَ، وَبِفَضْلِکَ عَمَّنْ سِوَاکَ.", fa: "خدایا! مرا با حلال خود از حرامت بی‌نیاز کن، و با فضلت از هر کس جز خودت." },
+
+        { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ، اللّٰهُمَّ أَعْطِنِی مِنْ فَضْلِکَ الْوَاسِعِ.", fa: "به نام خداوند بخشنده‌ی مهربان، خدایا از فضل گسترده‌ات به من عطا کن." }
+      ]
+    }
+  ],
+  fazilat: "خداوند متعال در قرآن کریم می‌فرماید: «إِنَّ اللّٰهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِینُ» (همانا خداوند خود روزی‌دهنده و صاحب نیروی استوار است) [ذاریات: ۵۸]. و در جای دیگر: «وَ مَنْ یَتَّقِ اللّٰهَ یَجْعَلْ لَهُ مَخْرَجاً * وَ یَرْزُقْهُ مِنْ حَیْثُ لَا یَحْتَسِبُ» (هر کس تقوای الهی پیشه کند، خداوند راه بیرون شدنی از تنگناها برایش قرار می‌دهد و از جایی که گمان نمی‌برد روزی‌اش می‌دهد) [طلاق: ۲–۳].\n\nدعاهای رزق و روزی از معصومین (ع) نقل شده و خواندن آنها باعث گشایش روزی، دفع فقر و تنگدستی، افزایش برکت در مال و زندگی، و بی‌نیازی از مردم می‌شود. امام صادق (ع) فرمودند: «هر کس این دعاها را بعد از نماز صبح بخواند، خداوند روزی او را از جایی که گمان ندارد می‌رساند.»\n\nدر روایات آمده که خواندن این دعاها در شب جمعه، سبب گشایش روزی و دفع فقر می‌شود. همچنین سفارش شده که همراه دعا، صدقه دادن، صله‌ی رحم و پرداخت حقوق شرعی (خمس و زکات) نیز انجام شود، چرا که این اعمال خود از مهم‌ترین عوامل گشایش روزی هستند.\n\nامام باقر (ع) فرمودند: «هر کس راست بگوید، روزی‌اش زیاد می‌شود؛ و هر کس امانت را ادا کند، مالش فزونی می‌یابد.»",
+  source: "مفاتیح الجنان (شیخ عباس قمی) • صحیفه سجادیه • بحار الأنوار (علامه مجلسی) • مصباح المتهجد (شیخ طوسی) • الکافی (شیخ کلینی) • وسائل الشیعة",
+  time: "دعای رزق زمان خاصی ندارد و در هر ساعتی از شبانه‌روز می‌توان خواند. بهترین زمان‌ها: پس از نماز صبح، شب جمعه، شب نیمه ماه رمضان، عید غدیر، و هنگام روبه‌رو شدن با تنگدستی و گرفتاری مالی. توصیه شده با وضو، رو به قبله، با اخلاص و حضور قلب خوانده شود و همراه آن صدقه نیز داده شود."
+};
+
+/* ============================================================
+   RENDER VERSES (with sections)
+   ============================================================ */
+function renderVerses(){
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  let totalIndex = 0;
+
+  DUA_DATA.sections.forEach((section) => {
+    const header = document.createElement('div');
+    header.className = 'section-head';
+    header.innerHTML = `
+      <div class="sec-title">${section.title}</div>
+      ${section.sub ? `<div class="sec-sub">${section.sub}</div>` : ''}
+      <div class="sec-orn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/>
+        </svg>
+      </div>
+    `;
+    c.appendChild(header);
+
+    section.verses.forEach((v) => {
+      totalIndex++;
+      const el = document.createElement('div');
+      el.className = 'verse-card' + (v.bismillah ? ' bismillah' : '');
+      el.innerHTML = `
+        <div class="v-head">
+          <span class="v-num">${faNum(totalIndex)}</span>
+          <span class="v-label">بند ${faNum(totalIndex)}</span>
+        </div>
+        <div class="v-ar">${v.ar}</div>
+        <div class="v-divider"></div>
+        <div class="v-fa">${v.fa}</div>
+      `;
+      c.appendChild(el);
+    });
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = ()=> $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = ()=> $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = ()=> $('#'+b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e)=>{ if(e.target===m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
+const moonIcon = `<svg id="themeIcon" class="icon" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>`;
+
+function applyTheme(dark){
+  document.body.classList.toggle('dark',dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme')==='dark');
+$('#themeToggle').onclick = ()=> applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.35';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-'+fontAr);
+document.body.classList.add('font-fa-'+fontFa);
+
+function applySettings(){
+  document.documentElement.style.setProperty('--fs-ar', arSize+'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize+'px');
+  document.documentElement.style.setProperty('--lh-ar', lineHeight);
+  $$('.verse-card').forEach(v=> v.classList.toggle('hide-trans', !showTrans));
+  if($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = ()=>{
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep)*2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = ()=>{
+  faSize = Math.max(12, Math.min(26, faSize + parseInt(b.dataset.faStep)*2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b=>{
+  if(b.dataset.lh===lineHeight) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-lh]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b=>{
+  const isOn = (b.dataset.trans==='1')===showTrans;
+  b.classList.toggle('active',isOn);
+  b.onclick = ()=>{
+    $$('[data-trans]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans==='1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b=>{
+  if(b.dataset.fontAr===fontAr) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-ar]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g,'').trim();
+    document.body.classList.add('font-ar-'+b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b=>{
+  if(b.dataset.fontFa===fontFa) b.classList.add('active');
+  b.onclick = ()=>{
+    $$('[data-font-fa]').forEach(x=>x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g,'').trim();
+    document.body.classList.add('font-fa-'+b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = ()=>{
+  if(document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg){
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(()=> t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{
+    navigator.serviceWorker.register('sw.js')
+      .then(()=> console.log('NOOR Service Worker registered.'))
+      .catch(()=> {});
+  });
+}
+
+console.log('🤲 دعای رزق و روزی | NOOR – بارگذاری شد. تعداد بخش‌ها:', DUA_DATA.sections.length);
+</script>
+
+</body>
+</html>

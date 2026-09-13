@@ -1,0 +1,2149 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>احادیث | نور</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.12);
+  --gold-border: rgba(184, 138, 59, 0.28);
+  --text: #17231F; --text-2: #3d4a44; --muted: #66716C;
+  --divider: #E7E0D3;
+  --arabic: #123C32; --translation: #3d4a44;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.06);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.04);
+  --radius: 18px; --radius-sm: 12px;
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --font-ar: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --fs-ar: 24px; --fs-fa: 16px; --line-height: 2.4;
+  --nav-h: 68px;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.10);
+  --gold-border: rgba(210, 172, 92, 0.22);
+  --text: #F4EFE4; --text-2: #c8d2cc; --muted: #A8B3AD;
+  --divider: #26352F;
+  --arabic: #e8e2d2; --translation: #c8d2cc;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+body.font-fa-vazir { --font-fa: 'Vazirmatn', Tahoma, sans-serif; }
+body.font-fa-amiri { --font-fa: 'Amiri', serif; }
+body.font-fa-naskh { --font-fa: 'Noto Naskh Arabic', serif; }
+body.font-ar-amiri { --font-ar: 'Amiri', serif; }
+body.font-ar-scheherazade { --font-ar: 'Scheherazade New', serif; }
+body.font-ar-naskh { --font-ar: 'Noto Naskh Arabic', serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; padding-bottom: calc(var(--nav-h) + 20px);
+  line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input, textarea { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-sm { width: 18px; height: 18px; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px; }
+
+/* HEADER */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-jd {
+  display: block; font-size: 0.6rem;
+  color: var(--muted); letter-spacing: 2px; margin-top: 2px;
+}
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.75rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 7px;
+  margin-top: -1px; text-shadow: 0 0 12px var(--gold-soft);
+}
+
+/* SEARCH */
+.search-wrap { margin: 14px 0; display: none; }
+.search-wrap.show { display: block; }
+.search-box { position: relative; }
+.search-box input {
+  width: 100%; padding: 13px 46px 13px 16px;
+  border-radius: 60px; border: 1px solid var(--gold-border);
+  background: var(--surface); color: var(--text);
+  font-size: 0.9rem; outline: none; transition: var(--trans);
+}
+.search-box input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.search-box input::placeholder { color: var(--muted); }
+.search-box .ico {
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--muted); pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 24px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.hero-orn { position: absolute; color: var(--gold); opacity: 0.15; pointer-events: none; }
+.hero-orn.tr { top: -8px; right: -8px; width: 100px; height: 100px; }
+.hero-orn.bl { bottom: -8px; left: -8px; width: 100px; height: 100px; transform: rotate(180deg); }
+.hero-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.7rem; font-weight: 700;
+  color: var(--gold); background: var(--gold-soft);
+  padding: 4px 12px; border-radius: 20px;
+  border: 1px solid var(--gold-border);
+  margin-bottom: 14px;
+}
+.hero-label svg { width: 14px; height: 14px; }
+.hero-date {
+  display: block; text-align: center;
+  font-size: 0.7rem; color: var(--muted);
+  margin-bottom: 10px; letter-spacing: 1px;
+}
+.hero-ar {
+  font-family: var(--font-ar);
+  font-size: 1.35rem; font-weight: 700;
+  line-height: 2.1; color: var(--arabic);
+  text-align: center; margin-bottom: 12px;
+  padding: 0 8px;
+}
+.hero-fa {
+  font-family: var(--font-fa);
+  font-size: 0.9rem; line-height: 1.95;
+  color: var(--translation); text-align: center;
+  padding-top: 12px; border-top: 1px dashed var(--gold-border);
+  margin-bottom: 12px;
+}
+.hero-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; font-size: 0.7rem; color: var(--muted);
+  flex-wrap: wrap; margin-bottom: 12px;
+}
+.hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0.6; }
+.hero-meta .speaker { color: var(--gold); font-weight: 700; }
+.hero-actions {
+  display: flex; gap: 8px; justify-content: center;
+  padding-top: 12px; border-top: 1px solid var(--divider);
+}
+.hero-actions button {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--surface2); color: var(--muted);
+  border: 1px solid var(--divider);
+}
+.hero-actions button:hover { color: var(--gold); border-color: var(--gold); }
+.hero-actions button.active { color: var(--gold); background: var(--gold-soft); border-color: var(--gold); }
+.hero-actions svg { width: 18px; height: 18px; }
+
+/* NOOR SECTION */
+.noor-section {
+  margin: 20px 0;
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  padding: 18px;
+  box-shadow: var(--shadow-sm);
+}
+.noor-head {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 14px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.noor-head svg { color: var(--gold); width: 20px; height: 20px; }
+.noor-head h3 { font-size: 0.95rem; font-weight: 700; }
+.noor-head span {
+  margin-right: auto; font-size: 0.65rem;
+  color: var(--muted); letter-spacing: 1px;
+}
+.noor-grid { display: flex; flex-direction: column; gap: 10px; }
+.noor-item {
+  padding: 12px 14px; border-radius: var(--radius-sm);
+  background: var(--surface2); border: 1px solid var(--divider);
+  transition: var(--trans);
+}
+.noor-item:hover { border-color: var(--gold); }
+.noor-item .noor-top {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+}
+.noor-item .noor-ico {
+  width: 32px; height: 32px; border-radius: 9px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.noor-item .noor-ico svg { width: 17px; height: 17px; }
+.noor-item .noor-title { font-size: 0.78rem; font-weight: 700; color: var(--gold); flex: 1; }
+.noor-item .noor-ar {
+  font-family: var(--font-ar);
+  font-size: 1.05rem; line-height: 1.95;
+  color: var(--arabic); text-align: center;
+  padding: 6px 4px; margin-bottom: 6px;
+}
+.noor-item .noor-fa {
+  font-size: 0.75rem; line-height: 1.85;
+  color: var(--translation); text-align: center;
+  padding-top: 6px; border-top: 1px dashed var(--gold-border);
+}
+.noor-item .noor-ref {
+  display: block; font-size: 0.65rem;
+  color: var(--muted); text-align: center;
+  margin-top: 6px; font-style: italic;
+}
+
+/* QUICK ACTIONS */
+.quick-actions {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px; margin-bottom: 16px;
+}
+.qa-btn {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 16px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--text); text-align: right;
+  transition: var(--trans); position: relative;
+}
+.qa-btn:hover { background: var(--gold-soft); border-color: var(--gold); transform: translateY(-2px); }
+.qa-btn .qa-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.qa-btn .qa-ico svg { width: 20px; height: 20px; }
+.qa-btn .qa-info { flex: 1; min-width: 0; }
+.qa-btn .qa-title { font-size: 0.82rem; font-weight: 700; }
+.qa-btn .qa-sub { font-size: 0.65rem; color: var(--muted); margin-top: 2px; }
+.qa-btn .qa-badge {
+  position: absolute; top: 8px; left: 8px;
+  background: var(--gold); color: #fff;
+  font-size: 0.6rem; padding: 2px 7px;
+  border-radius: 8px; font-weight: 700;
+}
+
+/* SECTION HEAD */
+.section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 22px 0 12px; gap: 10px;
+}
+.section-head h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-head h3 svg { color: var(--gold); width: 18px; height: 18px; }
+.section-head .cnt {
+  font-size: 0.72rem; color: var(--gold);
+  background: var(--gold-soft); padding: 3px 10px;
+  border-radius: 10px; font-weight: 600;
+  border: 1px solid var(--gold-border);
+}
+
+/* FILTER CHIPS */
+.filter-chips {
+  display: flex; gap: 6px; overflow-x: auto;
+  padding-bottom: 4px; margin-bottom: 12px;
+  scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0; padding: 6px 14px;
+  border-radius: 20px; font-size: 0.72rem;
+  font-weight: 600; cursor: pointer;
+  background: var(--surface); color: var(--muted);
+  border: 1px solid var(--divider);
+  transition: var(--trans);
+  white-space: nowrap;
+}
+.chip:hover { border-color: var(--gold-border); color: var(--gold); }
+.chip.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+
+/* HADITH LIST */
+.hadith-list { display: flex; flex-direction: column; gap: 10px; }
+.hadith-item {
+  display: flex; gap: 12px; padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  cursor: pointer; transition: var(--trans);
+  position: relative; overflow: hidden;
+}
+.hadith-item:hover { background: var(--surface2); border-color: var(--gold); transform: translateY(-1px); }
+.hadith-item .h-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.hadith-item .h-ico svg { width: 20px; height: 20px; }
+.hadith-item .h-info { flex: 1; min-width: 0; }
+.hadith-item .h-ar {
+  font-family: var(--font-ar);
+  font-size: 0.95rem; line-height: 1.9;
+  color: var(--arabic); margin-bottom: 6px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.hadith-item .h-fa {
+  font-size: 0.72rem; color: var(--muted); line-height: 1.7;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+  padding-top: 6px; border-top: 1px dashed var(--gold-border);
+}
+.hadith-item .h-speaker {
+  font-size: 0.65rem; color: var(--gold);
+  font-weight: 700; margin-bottom: 4px;
+}
+.hadith-item .h-bm {
+  width: 34px; height: 34px; border-radius: 10px;
+  color: var(--muted); flex: none;
+}
+.hadith-item .h-bm:hover, .hadith-item .h-bm.active { color: var(--gold); background: var(--gold-soft); }
+
+/* DETAIL VIEW */
+.detail-view { display: none; }
+.detail-view.active { display: block; }
+.list-view.hidden { display: none; }
+
+.detail-head {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 22px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+  color: #fff; text-align: center;
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.detail-head::before {
+  content: ""; position: absolute; top: -50px; right: -50px;
+  width: 150px; height: 150px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(214, 181, 106, 0.22), transparent 70%);
+}
+.detail-head .dh-ico {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(214, 181, 106, 0.18);
+  color: var(--gold2); margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.detail-head .dh-ico svg { width: 26px; height: 26px; }
+.detail-head .dh-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.detail-head .dh-sub { font-size: 0.75rem; color: rgba(255,255,255,0.75); }
+.detail-head .dh-meta {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px; font-size: 0.7rem; color: rgba(255,255,255,0.75);
+  margin-top: 8px; flex-wrap: wrap;
+}
+
+.hadith-body {
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); padding: 22px 18px;
+  margin-bottom: 12px; box-shadow: var(--shadow-sm);
+}
+.hadith-body .hb-ar {
+  font-family: var(--font-ar);
+  font-size: var(--fs-ar); line-height: var(--line-height);
+  color: var(--arabic); text-align: center;
+  padding: 6px 8px 16px;
+  border-bottom: 1px dashed var(--gold-border);
+}
+.hadith-body .hb-fa {
+  font-family: var(--font-fa);
+  font-size: var(--fs-fa); line-height: 1.95;
+  color: var(--translation); text-align: center;
+  padding-top: 14px;
+}
+.hadith-body.hide-trans .hb-fa { display: none; }
+.hadith-body.hide-trans .hb-ar { padding-bottom: 6px; border-bottom: 0; }
+
+.info-block {
+  padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm); margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.info-block h4 {
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.info-block h4 svg { width: 15px; height: 15px; }
+.info-block p {
+  font-size: 0.78rem; line-height: 1.95;
+  color: var(--text-2); text-align: justify;
+}
+.info-block .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.info-block .tag {
+  font-size: 0.68rem; padding: 3px 9px; border-radius: 8px;
+  background: var(--gold-soft); color: var(--gold);
+  border: 1px solid var(--gold-border);
+}
+
+.section-title {
+  display: flex; align-items: center; justify-content: center;
+  gap: 10px; margin: 20px 0 12px;
+  font-size: 0.85rem; color: var(--gold); font-weight: 700;
+}
+.section-title::before, .section-title::after {
+  content: ""; flex: 1; height: 1px;
+  background: var(--gold-border); max-width: 80px;
+}
+.section-title svg { width: 16px; height: 16px; }
+
+/* FLOATING */
+.floating-btns {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 14px;
+  z-index: 90; display: flex; flex-direction: column; gap: 8px;
+}
+.fab {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.fab:hover { background: var(--brand2); transform: translateY(-2px); }
+.fab:active { transform: scale(0.94); }
+.fab svg { width: 20px; height: 20px; }
+
+/* MODAL */
+.modal-bg {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: none; align-items: flex-end; justify-content: center;
+  z-index: 200; padding: 0 12px 12px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%; max-width: 520px; max-height: 88vh;
+  overflow-y: auto; background: var(--surface);
+  border-radius: 24px 24px 18px 18px;
+  padding: 22px 18px 26px;
+  border: 1px solid var(--gold-border);
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.modal-head h3 {
+  font-size: 1.05rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.modal-head h3 svg { color: var(--gold); width: 20px; height: 20px; }
+.modal-close {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--muted);
+}
+.modal-close:hover { color: var(--gold); }
+
+/* SETTINGS */
+.set-group { margin-bottom: 16px; }
+.set-group > label {
+  display: block; font-size: 0.78rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 8px;
+}
+.set-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.set-opt {
+  padding: 7px 14px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text-2); font-size: 0.78rem;
+  font-weight: 600; cursor: pointer; transition: var(--trans);
+}
+.set-opt:hover { border-color: var(--gold-border); color: var(--gold); }
+.set-opt.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+.set-ctrl {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  border-radius: 10px; padding: 4px; width: fit-content;
+}
+.set-ctrl button {
+  width: 36px; height: 36px; border-radius: 8px;
+  color: var(--muted); font-weight: 700; font-size: 1rem;
+}
+.set-ctrl button:hover { background: var(--gold-soft); color: var(--gold); }
+.set-ctrl .val {
+  min-width: 44px; text-align: center;
+  color: var(--gold); font-weight: 700; font-size: 0.85rem;
+}
+.font-preview { font-family: 'Amiri', serif; font-size: 1.3rem; }
+
+/* NOTES */
+.notes-area {
+  width: 100%; min-height: 120px;
+  padding: 12px 14px; border-radius: 12px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text); font-size: 0.85rem;
+  line-height: 1.8; resize: vertical; outline: none;
+  transition: var(--trans);
+}
+.notes-area:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 100; display: flex; justify-content: space-around;
+  align-items: center; background: var(--surface);
+  border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: var(--nav-h);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px;
+  border-radius: 12px; color: var(--muted);
+  transition: var(--trans); position: relative;
+  font-size: 0.62rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg {
+  width: 22px; height: 22px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+.nav-btn.active::before {
+  content: ""; position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 22px; height: 3px;
+  border-radius: 0 0 4px 4px; background: var(--gold);
+}
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 20px; border-radius: 14px;
+  font-size: 0.82rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 18px; height: 18px; }
+
+.empty {
+  text-align: center; padding: 50px 20px; color: var(--muted);
+}
+.empty svg { width: 50px; height: 50px; color: var(--gold); opacity: 0.4; margin: 0 auto 14px; }
+.empty p { font-size: 0.85rem; }
+
+mark {
+  background: var(--gold-soft);
+  color: var(--gold);
+  padding: 0 3px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 1.1rem; }
+  .brand .brand-noor { font-size: 0.68rem; letter-spacing: 5px; }
+  :root { --nav-h: 62px; --fs-ar: 22px; --fs-fa: 15px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- HEADER -->
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">احادیث</h1>
+      <span class="brand-jd"> </span>
+      <span class="brand-noor">نور</span>
+    </div>
+    <button class="hbtn" id="btnSearch" aria-label="جستجو">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </button>
+    <button class="hbtn" id="btnBookmarks" aria-label="نشان‌شده‌ها">
+      <svg class="icon" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+    </button>
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات">
+      <svg class="icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-wrap" id="searchWrap">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجو در احادیث، موضوعات، گویندگان..." autocomplete="off">
+      <span class="ico">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- LIST VIEW -->
+  <div id="listView" class="list-view">
+    <!-- HERO — حدیث امروز -->
+    <section class="hero" id="heroHadith">
+      <svg class="hero-orn tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="hero-orn bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="hero-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        حدیث امروز
+      </div>
+      <span class="hero-date" id="heroDate"></span>
+      <div id="heroContent"></div>
+    </section>
+
+    <!-- نور امروز -->
+    <section class="noor-section">
+      <div class="noor-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="4"/>
+          <line x1="12" y1="2" x2="12" y2="4"/>
+          <line x1="12" y1="20" x2="12" y2="22"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="2" y1="12" x2="4" y2="12"/>
+          <line x1="20" y1="12" x2="22" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <h3>نور امروز</h3>
+        <span>هر روز تازه</span>
+      </div>
+      <div class="noor-grid" id="noorGrid"></div>
+    </section>
+
+    <!-- QUICK ACTIONS -->
+    <div class="quick-actions">
+      <button class="qa-btn" id="qaRandom">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="16 3 21 3 21 8"/>
+            <line x1="4" y1="20" x2="21" y2="3"/>
+            <polyline points="21 16 21 21 16 21"/>
+            <line x1="15" y1="15" x2="21" y2="21"/>
+            <line x1="4" y1="4" x2="9" y2="9"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">یک حدیث برای من</div>
+          <div class="qa-sub">حدیث تصادفی از بانک</div>
+        </div>
+      </button>
+      <button class="qa-btn" id="qaBookmarks">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">نشان‌شده‌ها</div>
+          <div class="qa-sub">احادیث ذخیره‌شده</div>
+        </div>
+        <span class="qa-badge" id="bmCount" style="display:none">۰</span>
+      </button>
+    </div>
+
+    <!-- FILTER CHIPS -->
+    <div class="filter-chips" id="filterChips"></div>
+
+    <!-- HADITH LIST -->
+    <div class="section-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+          <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+        </svg>
+        <span id="listTitle">همه احادیث</span>
+      </h3>
+      <span class="cnt" id="listCount">—</span>
+    </div>
+    <div class="hadith-list" id="hadithList"></div>
+  </div>
+
+  <!-- DETAIL VIEW -->
+  <div id="detailView" class="detail-view">
+    <div id="detailContent"></div>
+    <div style="height:80px"></div>
+  </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns" id="floatingBtns" style="display:none">
+  <button class="fab" id="fabCopy" aria-label="کپی">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>
+  </button>
+  <button class="fab" id="fabNotes" aria-label="یادداشت">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html" aria-label="خانه">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <button class="nav-btn active" id="navHome" aria-label="احادیث">
+    <svg viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    <span>احادیث</span>
+  </button>
+  <button class="nav-btn" id="navNotes" aria-label="یادداشت‌ها">
+    <svg viewBox="0 0 24 24">
+      <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+      <polyline points="14 2 14 8 20 8"/>
+      <line x1="9" y1="13" x2="15" y2="13"/>
+      <line x1="9" y1="17" x2="13" y2="17"/>
+    </svg>
+    <span>یادداشت</span>
+  </button>
+ <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/><path d="M8 7h8"/><path d="M8 11h8"/></svg>
+    <span>قرآن</span>
+</a> 
+  </button>
+</nav>
+
+<!-- MODAL SETTINGS -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>
+        </svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options" id="fontArOptions">
+        <div class="set-opt active" data-font-ar="amiri"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="naskh"><span class="font-preview">بسم الله</span></div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>فونت فارسی</label>
+      <div class="set-options" id="fontFaOptions">
+        <div class="set-opt active" data-font-fa="vazir">وزیرمتن</div>
+        <div class="set-opt" data-font-fa="amiri">امیری</div>
+        <div class="set-opt" data-font-fa="naskh">نسخ</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>فاصله خطوط</label>
+      <div class="set-options" id="lhOptions">
+        <div class="set-opt" data-lh="1.9">کم</div>
+        <div class="set-opt active" data-lh="2.4">متوسط</div>
+        <div class="set-opt" data-lh="3">زیاد</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options" id="transOptions">
+        <div class="set-opt active" data-trans="1">نمایش</div>
+        <div class="set-opt" data-trans="0">پنهان</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>حالت نمایش</label>
+      <div class="set-options">
+        <div class="set-opt" id="themeLight">روشن</div>
+        <div class="set-opt" id="themeDark">تاریک</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL NOTES -->
+<div class="modal-bg" id="modalNotes">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+        یادداشت شخصی
+      </h3>
+      <button class="modal-close" data-close="modalNotes">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <textarea class="notes-area" id="notesArea" placeholder="یادداشت خود را بنویسید..."></textarea>
+    <button style="width:100%;padding:12px;border-radius:12px;background:var(--brand);color:#fff;font-weight:700;margin-top:12px;" id="saveNotesBtn">ذخیره یادداشت</button>
+  </div>
+</div>
+
+<!-- MODAL COPY -->
+<div class="modal-bg" id="modalCopy">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        کپی / اشتراک‌گذاری
+      </h3>
+      <button class="modal-close" data-close="modalCopy">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="display:grid;gap:8px;">
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;align-items:center;gap:10px;justify-content:flex-start;width:100%;" id="copyArabic">کپی متن عربی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;align-items:center;gap:10px;justify-content:flex-start;width:100%;" id="copyTrans">کپی ترجمه فارسی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;align-items:center;gap:10px;justify-content:flex-start;width:100%;" id="copyBoth">کپی کامل (عربی + ترجمه + منبع)</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;align-items:center;gap:10px;justify-content:flex-start;width:100%;" id="shareBtn">اشتراک‌گذاری</button>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL GOOD DEED -->
+<div class="modal-bg" id="modalGoodDeed">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+        </svg>
+        عمل نیک امروز
+      </h3>
+      <button class="modal-close" data-close="modalGoodDeed">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="goodDeedContent"></div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+    نور — احادیث
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ===== STATE ===== */
+let bookmarks = JSON.parse(localStorage.getItem('noor_hadith_bm') || '[]');
+let notes = JSON.parse(localStorage.getItem('noor_hadith_notes') || '{}');
+let history = JSON.parse(localStorage.getItem('noor_hadith_hist') || '[]');
+let currentHadith = null;
+let currentFilter = 'all';
+let searchQuery = '';
+let editingNoteId = null;
+
+/* ===== THEME ===== */
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  const tl = $('#themeLight'), td = $('#themeDark');
+  if (tl && td) {
+    tl.classList.toggle('active', !dark);
+    td.classList.toggle('active', dark);
+  }
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+
+/* ===== SETTINGS ===== */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.4';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+document.body.classList.add('font-ar-' + fontAr);
+document.body.classList.add('font-fa-' + fontFa);
+
+function applySettings() {
+  document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+  document.documentElement.style.setProperty('--line-height', lineHeight);
+  document.querySelectorAll('.hadith-body').forEach(v => v.classList.toggle('hide-trans', !showTrans));
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep) * 2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(24, faSize + parseInt(b.dataset.faStep) * 2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b => {
+  if (b.dataset.lh === lineHeight) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-lh]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b => {
+  const isOn = (b.dataset.trans === '1') === showTrans;
+  b.classList.toggle('active', isOn);
+  b.onclick = () => {
+    $$('[data-trans]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans === '1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g, '').trim();
+    document.body.classList.add('font-ar-' + b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g, '').trim();
+    document.body.classList.add('font-fa-' + b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+$('#themeLight').onclick = () => applyTheme(false);
+$('#themeDark').onclick = () => applyTheme(true);
+
+/* ===== ICONS ===== */
+const ICONS = {
+  hadith: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>',
+  quran: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>',
+  dua: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>',
+  good: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>',
+  star: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>'
+};
+
+/* ============================================================
+   نور روزانه — بر اساس ۳۶۵ روز سال
+   ============================================================ */
+const QURAN_VERSES = [
+  { ar: 'أَلا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ', fa: 'آگاه باشید که تنها با یاد خدا دل‌ها آرام می‌گیرد.', ref: 'رعد، آیه ۲۸' },
+  { ar: 'وَمَنْ يَتَوَكَّلْ عَلَى اللَّهِ فَهُوَ حَسْبُهُ', fa: 'و هر که بر خدا توکل کند، خدا او را کافی است.', ref: 'طلاق، آیه ۳' },
+  { ar: 'إِنَّ مَعَ الْعُسْرِ يُسْراً', fa: 'همانا با سختی، آسانی است.', ref: 'شرح، آیه ۶' },
+  { ar: 'وَإِذَا سَأَلَكَ عِبَادِي عَنِّي فَإِنِّي قَرِيبٌ', fa: 'و چون بندگانم از تو درباره من بپرسند، همانا من نزدیکم.', ref: 'بقره، آیه ۱۸۶' },
+  { ar: 'وَعَسَىٰ أَنْ تَكْرَهُوا شَيْئاً وَهُوَ خَيْرٌ لَكُمْ', fa: 'و بسا چیزی را ناخوش دارید و آن برای شما نیک باشد.', ref: 'بقره، آیه ۲۱۶' },
+  { ar: 'فَاذْكُرُونِي أَذْكُرْكُمْ', fa: 'پس مرا یاد کنید تا شما را یاد کنم.', ref: 'بقره، آیه ۱۵۲' },
+  { ar: 'وَمَا تَوْفِيقِي إِلَّا بِاللَّهِ', fa: 'و توفیق من جز به خدا نیست.', ref: 'هود، آیه ۸۸' },
+  { ar: 'وَاللَّهُ يُحِبُّ الصَّابِرِينَ', fa: 'و خداوند صابران را دوست دارد.', ref: 'آل عمران، آیه ۱۴۶' },
+  { ar: 'إِنَّ اللَّهَ مَعَ الَّذِينَ اتَّقَوْا', fa: 'همانا خدا با پرهیزگاران است.', ref: 'نحل، آیه ۱۲۸' },
+  { ar: 'وَاصْبِرْ إِنَّ اللَّهَ لَا يُضِيعُ أَجْرَ الْمُحْسِنِينَ', fa: 'صبر کن که خدا پاداش نیکوکاران را تباه نمی‌کند.', ref: 'هود، آیه ۱۱۵' },
+  { ar: 'فَإِنَّ مَعَ الْعُسْرِ يُسْراً', fa: 'پس همانا با سختی، آسانی است.', ref: 'شرح، آیه ۵' },
+  { ar: 'وَاللَّهُ غَفُورٌ رَحِيمٌ', fa: 'و خداوند آمرزنده و مهربان است.', ref: 'بقره، آیه ۱۷۳' },
+  { ar: 'رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً', fa: 'پروردگارا در دنیا و آخرت به ما نیکی عطا کن.', ref: 'بقره، آیه ۲۰۱' },
+  { ar: 'إِنَّ اللَّهَ لَا يُغَيِّرُ مَا بِقَوْمٍ حَتَّىٰ يُغَيِّرُوا مَا بِأَنْفُسِهِمْ', fa: 'همانا خدا حال قومی را تغییر نمی‌دهد تا خود را تغییر دهند.', ref: 'رعد، آیه ۱۱' },
+  { ar: 'وَقُلْ رَبِّ زِدْنِي عِلْماً', fa: 'و بگو پروردگارا بر دانش من بیفزای.', ref: 'طه، آیه ۱۱۴' },
+  { ar: 'وَأَنْ لَيْسَ لِلْإِنْسَانِ إِلَّا مَا سَعَىٰ', fa: 'و اینکه برای انسان جز تلاش او نیست.', ref: 'نجم، آیه ۳۹' },
+  { ar: 'وَلَسَوْفَ يُعْطِيكَ رَبُّكَ فَتَرْضَىٰ', fa: 'و به‌زودی پروردگارت به تو عطا می‌کند تا خشنود شوی.', ref: 'ضحی، آیه ۵' },
+  { ar: 'إِنَّ اللَّهَ يَأْمُرُ بِالْعَدْلِ وَالْإِحْسَانِ', fa: 'همانا خدا به عدالت و نیکی فرمان می‌دهد.', ref: 'نحل، آیه ۹۰' },
+  { ar: 'خُذِ الْعَفْوَ وَأْمُرْ بِالْعُرْفِ', fa: 'گذشت را پیشه کن و به نیکی فرمان ده.', ref: 'اعراف، آیه ۱۹۹' },
+  { ar: 'وَلَا تَيْأَسُوا مِنْ رَوْحِ اللَّهِ', fa: 'و از رحمت خدا ناامید نشوید.', ref: 'یوسف، آیه ۸۷' },
+  { ar: 'إِنَّ اللَّهَ يُحِبُّ الْمُتَوَكِّلِينَ', fa: 'همانا خداوند توکل‌کنندگان را دوست دارد.', ref: 'آل عمران، آیه ۱۵۹' },
+  { ar: 'وَقُولُوا لِلنَّاسِ حُسْناً', fa: 'و با مردم به زبان خوش سخن بگویید.', ref: 'بقره، آیه ۸۳' },
+  { ar: 'وَلَا تَقْرَبُوا الْفَوَاحِشَ', fa: 'و به زشتی‌ها نزدیک نشوید.', ref: 'انعام، آیه ۱۵۱' },
+  { ar: 'وَاتَّقُوا اللَّهَ وَيُعَلِّمُكُمُ اللَّهُ', fa: 'و از خدا پروا کنید که خدا به شما می‌آموزد.', ref: 'بقره، آیه ۲۸۲' },
+  { ar: 'فَاسْتَقِمْ كَمَا أُمِرْتَ', fa: 'پس همان‌گونه که فرمان یافته‌ای، استقامت کن.', ref: 'هود، آیه ۱۱۲' },
+  { ar: 'وَلَذِكْرُ اللَّهِ أَكْبَرُ', fa: 'و همانا یاد خدا بزرگ‌تر است.', ref: 'عنکبوت، آیه ۴۵' },
+  { ar: 'وَأَنِ اسْتَغْفِرُوا رَبَّكُمْ ثُمَّ تُوبُوا إِلَيْهِ', fa: 'و اینکه از پروردگارتان آمرزش بخواهید و به او توبه کنید.', ref: 'هود، آیه ۳' },
+  { ar: 'وَبَشِّرِ الصَّابِرِينَ', fa: 'و صابران را بشارت ده.', ref: 'بقره، آیه ۱۵۵' },
+  { ar: 'وَمَنْ يَتَّقِ اللَّهَ يَجْعَلْ لَهُ مَخْرَجاً', fa: 'و هر که از خدا پروا کند، خداوند برای او راه خروجی قرار می‌دهد.', ref: 'طلاق، آیه ۲' },
+  { ar: 'وَأَقِيمُوا الصَّلَاةَ وَآتُوا الزَّكَاةَ', fa: 'و نماز را برپا دارید و زکات بدهید.', ref: 'بقره، آیه ۱۱۰' },
+  { ar: 'وَاعْتَصِمُوا بِحَبْلِ اللَّهِ جَمِيعاً', fa: 'و همگی به ریسمان خدا چنگ زنید.', ref: 'آل عمران، آیه ۱۰۳' },
+  { ar: 'يَا أَيُّهَا الَّذِينَ آمَنُوا اتَّقُوا اللَّهَ', fa: 'ای اهل ایمان، از خدا پروا کنید.', ref: 'مائده، آیه ۳۵' },
+  { ar: 'وَأَحْسِنُوا إِنَّ اللَّهَ يُحِبُّ الْمُحْسِنِينَ', fa: 'و نیکی کنید که خدا نیکوکاران را دوست دارد.', ref: 'بقره، آیه ۱۹۵' },
+  { ar: 'وَالْكَاظِمِينَ الْغَيْظَ وَالْعَافِينَ عَنِ النَّاسِ', fa: 'و خشم خود را فرو می‌برند و از مردم در می‌گذرند.', ref: 'آل عمران، آیه ۱۳۴' },
+  { ar: 'وَقُولُوا قَوْلاً سَدِيداً', fa: 'و سخن درست و استوار بگویید.', ref: 'احزاب، آیه ۷۰' },
+  { ar: 'إِنَّ اللَّهَ لَا يَظْلِمُ مِثْقَالَ ذَرَّةٍ', fa: 'همانا خدا به اندازه سنگینی ذره‌ای ستم نمی‌کند.', ref: 'نساء، آیه ۴۰' },
+  { ar: 'وَلَا تَمْشِ فِي الْأَرْضِ مَرَحاً', fa: 'و در زمین با تکبر راه نرو.', ref: 'اسراء، آیه ۳۷' },
+  { ar: 'وَاخْفِضْ لَهُمَا جَنَاحَ الذُّلِّ مِنَ الرَّحْمَةِ', fa: 'و از سر مهربانی، بال تواضع را برای پدر و مادرت فرود آور.', ref: 'اسراء، آیه ۲۴' },
+  { ar: 'وَلَا تُبَذِّرْ تَبْذِيراً', fa: 'و اسراف نکن.', ref: 'اسراء، آیه ۲۶' },
+  { ar: 'وَأَوْفُوا بِالْعَهْدِ إِنَّ الْعَهْدَ كَانَ مَسْئُولاً', fa: 'و به پیمان وفا کنید که از پیمان پرسیده می‌شود.', ref: 'اسراء، آیه ۳۴' },
+  { ar: 'إِنَّ اللَّهَ يَأْمُرُكُمْ أَنْ تُؤَدُّوا الْأَمَانَاتِ إِلَىٰ أَهْلِهَا', fa: 'همانا خدا به شما فرمان می‌دهد که امانت‌ها را به صاحبانشان بازگردانید.', ref: 'نساء، آیه ۵۸' },
+  { ar: 'وَتَعَاوَنُوا عَلَى الْبِرِّ وَالتَّقْوَىٰ', fa: 'و در نیکی و پرهیزگاری با یکدیگر همکاری کنید.', ref: 'مائده، آیه ۲' },
+  { ar: 'إِنَّ اللَّهَ يُحِبُّ الْمُقْسِطِينَ', fa: 'همانا خداوند عدالت‌پیشگان را دوست دارد.', ref: 'حجرات، آیه ۹' },
+  { ar: 'وَلَا تَنَابَزُوا بِالْأَلْقَابِ', fa: 'و یکدیگر را با لقب‌های زشت نخوانید.', ref: 'حجرات، آیه ۱۱' },
+  { ar: 'إِنَّ أَكْرَمَكُمْ عِنْدَ اللَّهِ أَتْقَاكُمْ', fa: 'همانا گرامی‌ترین شما نزد خدا پرهیزگارترین شماست.', ref: 'حجرات، آیه ۱۳' },
+  { ar: 'وَمَنْ أَصْدَقُ مِنَ اللَّهِ قِيلاً', fa: 'و چه کسی در گفتار از خدا راست‌گوتر است؟', ref: 'نساء، آیه ۱۲۲' },
+  { ar: 'رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا', fa: 'پروردگارا دل‌های ما را بعد از آنکه هدایت کردی منحرف مکن.', ref: 'آل عمران، آیه ۸' },
+  { ar: 'وَمَا بِكُمْ مِنْ نِعْمَةٍ فَمِنَ اللَّهِ', fa: 'و هر نعمتی که دارید از خداست.', ref: 'نحل، آیه ۵۳' },
+  { ar: 'وَآتَاكُمْ مِنْ كُلِّ مَا سَأَلْتُمُوهُ', fa: 'و از هر چه خواستید به شما داد.', ref: 'ابراهیم، آیه ۳۴' },
+  { ar: 'وَلَقَدْ كَرَّمْنَا بَنِي آدَمَ', fa: 'و همانا فرزندان آدم را گرامی داشتیم.', ref: 'اسراء، آیه ۷۰' },
+  { ar: 'إِنَّ اللَّهَ لَطِيفٌ خَبِيرٌ', fa: 'همانا خداوند لطیف و آگاه است.', ref: 'انعام، آیه ۱۰۳' },
+  { ar: 'وَعَدَ اللَّهُ الَّذِينَ آمَنُوا مِنْكُمْ وَعَمِلُوا الصَّالِحَاتِ', fa: 'خدا به کسانی از شما که ایمان آوردند و کارهای شایسته کردند وعده داده است.', ref: 'نور، آیه ۵۵' },
+  { ar: 'إِنَّ اللَّهَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ', fa: 'همانا خدا بر هر چیزی تواناست.', ref: 'بقره، آیه ۲۰' },
+  { ar: 'وَهُوَ مَعَكُمْ أَيْنَ مَا كُنْتُمْ', fa: 'و او هر جا که باشید با شماست.', ref: 'حدید، آیه ۴' },
+  { ar: 'لَا يُكَلِّفُ اللَّهُ نَفْساً إِلَّا وُسْعَهَا', fa: 'خدا هیچ‌کس را جز به اندازه توانایی‌اش تکلیف نمی‌کند.', ref: 'بقره، آیه ۲۸۶' },
+  { ar: 'وَاعْلَمُوا أَنَّ اللَّهَ مَعَ الْمُتَّقِينَ', fa: 'و بدانید که خدا با پرهیزگاران است.', ref: 'توبه، آیه ۳۶' },
+  { ar: 'وَمَنْ يُؤْمِنْ بِاللَّهِ يَهْدِ قَلْبَهُ', fa: 'و هر که به خدا ایمان آورد، خدا دلش را هدایت کند.', ref: 'تغابن، آیه ۱۱' },
+  { ar: 'وَرَحْمَتِي وَسِعَتْ كُلَّ شَيْءٍ', fa: 'و رحمت من همه چیز را فرا گرفته است.', ref: 'اعراف، آیه ۱۵۶' },
+  { ar: 'إِنَّ اللَّهَ يُحِبُّ الْمُتَطَهِّرِينَ', fa: 'همانا خداوند پاکیزگان را دوست دارد.', ref: 'توبه، آیه ۱۰۸' },
+  { ar: 'يَا أَيُّهَا الَّذِينَ آمَنُوا اصْبِرُوا وَصَابِرُوا', fa: 'ای اهل ایمان صبر کنید و پایداری نمایید.', ref: 'آل عمران، آیه ۲۰۰' },
+  { ar: 'وَذَكِّرْ فَإِنَّ الذِّكْرَىٰ تَنْفَعُ الْمُؤْمِنِينَ', fa: 'و یادآوری کن که یادآوری مؤمنان را سود می‌دهد.', ref: 'ذاریات، آیه ۵۵' }
+];
+
+const SHORT_HADITHS = [
+  { ar: 'الصَّلاةُ نُورُ الْمُؤْمِنِ', fa: 'نماز نور مؤمن است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار، ج۸۲، ص۲۰۸' },
+  { ar: 'الدُّنْیا ساعَةٌ فَاجْعَلْها طاعَةً', fa: 'دنیا یک لحظه است، پس آن را در طاعت قرار ده.', speaker: 'پیامبر اکرم (ص)', ref: 'تنبیه الخواطر' },
+  { ar: 'الْعِلْمُ نُورٌ', fa: 'دانش نور است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار، ج۱، ص۲۰۰' },
+  { ar: 'خَیْرُ النّاسِ اَنْفَعُهُمْ لِلنّاسِ', fa: 'بهترین مردم کسی است که به دیگران بیشتر سود برساند.', speaker: 'پیامبر اکرم (ص)', ref: 'کافی، ج۲، ص۱۶۴' },
+  { ar: 'لا تَغْضَبْ', fa: 'خشمگین نشو.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار، ج۷۳، ص۲۶۵' },
+  { ar: 'اَحْبِبْ لِلنّاسِ ما تُحِبُّ لِنَفْسِکَ', fa: 'برای مردم آنچه را برای خود دوست داری، دوست بدار.', speaker: 'پیامبر اکرم (ص)', ref: 'امالی صدوق' },
+  { ar: 'اِتَّقِ اللّٰهَ فی السِّرِّ وَالْعَلانِیَةِ', fa: 'در پنهان و آشکار از خدا پروا کن.', speaker: 'پیامبر اکرم (ص)', ref: 'کنز العمال' },
+  { ar: 'مَنْ صَبَرَ ظَفِرَ', fa: 'هر که صبر کند، پیروز می‌شود.', speaker: 'امام علی (ع)', ref: 'غررالحکم' },
+  { ar: 'الصَّدیقُ مَنْ صَدَقَکَ لا مَنْ صَدَّقَکَ', fa: 'دوست واقعی آن است که تو راست بگوید، نه آن که تو را تصدیق کند.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه، حکمت ۴۴' },
+  { ar: 'الدُّنْیا دَارُ عِبَرٍ', fa: 'دنیا سرای عبرت‌ها است.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه' },
+  { ar: 'اَلْقَلْبُ حَرَمُ اللّٰهِ', fa: 'دل حرم خدا است.', speaker: 'امام صادق (ع)', ref: 'بحارالانوار، ج۷۰، ص۲۵' },
+  { ar: 'اَلْمُؤْمِنُ مِرْآةُ اَخِیهِ', fa: 'مؤمن آینه برادر مؤمن خود است.', speaker: 'امام صادق (ع)', ref: 'کافی، ج۲، ص۱۶۹' },
+  { ar: 'الصَّلاةُ قُرْبانُ کُلِّ تَقِیٍّ', fa: 'نماز نزدیکی هر پرهیزگار به خدا است.', speaker: 'امام صادق (ع)', ref: 'وسائل الشیعه' },
+  { ar: 'اَکْثِرُوا مِنْ ذِکْرِ اللّٰهِ', fa: 'بسیار خدا را یاد کنید.', speaker: 'امام باقر (ع)', ref: 'کافی' },
+  { ar: 'لا خَیْرَ فی الدُّنْیا اِلاَّ لِرَجُلَیْنِ: عالِمٍ مُطاعٍ اَوْ مُسْتَمِعٍ واعٍ', fa: 'در دنیا خیری نیست جز برای دو کس: عالمی که اطاعت شود یا شنونده‌ای که پند پذیرد.', speaker: 'امام کاظم (ع)', ref: 'تحف العقول' },
+  { ar: 'اَلصَّبْرُ مِنَ الْایمانِ کَالرَّأْسِ مِنَ الْجَسَدِ', fa: 'صبر نسبت به ایمان مانند سر نسبت به بدن است.', speaker: 'امام رضا (ع)', ref: 'بحارالانوار' },
+  { ar: 'اَلتَّواضُعُ مَنْزِلَةٌ رَفیعَةٌ', fa: 'تواضع جایگاهی بلند است.', speaker: 'امام جواد (ع)', ref: 'بحارالانوار' },
+  { ar: 'لا تَتَعَلَّمِ الْعِلْمَ لِتُباهی بِهِ الْعُلَماءَ', fa: 'علم را نیاموز تا با آن بر دانشمندان فخر کنی.', speaker: 'امام عسکری (ع)', ref: 'بحارالانوار' },
+  { ar: 'اَلسَّلامُ عَلَیْکَ یا اَباعَبْدِاللّٰهِ', fa: 'سلام بر تو ای اباعبدالله.', speaker: 'امام صادق (ع)', ref: 'کافی' },
+  { ar: 'اِنَّ قَتْلَ الْحُسَیْنِ علیه‌السلام اَحْرَقَ قُلُوبَنا', fa: 'همانا شهادت حسین (ع) دل‌های ما را سوزاند.', speaker: 'امام سجاد (ع)', ref: 'کامل الزیارات' },
+  { ar: 'بُکاءُ الْعُیُونِ وَ خَشْیَةُ الْقُلُوبِ رَحْمَةٌ مِنَ اللّٰهِ', fa: 'اشک چشم و خشوع دل رحمتی از خداست.', speaker: 'امام سجاد (ع)', ref: 'بحارالانوار' },
+  { ar: 'مَنْ لا یَرْحَمُ لا یُرْحَمُ', fa: 'هر که رحم نکند، بر او رحم نمی‌شود.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَلْجَنَّةُ تَحْتَ اَقْدامِ الاُمَّهاتِ', fa: 'بهشت زیر پای مادران است.', speaker: 'پیامبر اکرم (ص)', ref: 'مستدرک الوسائل' },
+  { ar: 'اَحْسِنُوا الْخُلْقَ وَ اَنْفِقُوا', fa: 'خوش‌اخلاق باشید و انفاق کنید.', speaker: 'پیامبر اکرم (ص)', ref: 'تحف العقول' },
+  { ar: 'قَدْرُ الرَّجُلِ عَلى قَدْرِ هِمَّتِهِ', fa: 'ارزش هر انسان به اندازه همّت اوست.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه' },
+  { ar: 'کُنْ عِنْدَ الظَّنِّ الْحَسَنِ بِاللّٰهِ', fa: 'به خداوند گمان نیک داشته باش.', speaker: 'امام باقر (ع)', ref: 'بحارالانوار' },
+  { ar: 'اَلنَّظَرُ اِلَى الْعالِمِ عِبادَةٌ', fa: 'نگاه کردن به عالم عبادت است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَلْمُحِبُّ لِمُحَمَّدٍ وَ آلِهِ یَنْتَظِرُ الْفَرَجَ', fa: 'دوستدار محمد و آلش در انتظار فرج است.', speaker: 'امام رضا (ع)', ref: 'بحارالانوار' },
+  { ar: 'کُلُّ خُلُقٍ یُحِبُّ اللّٰهُ سِتٌّ', fa: 'شش خصلت است که خدا دوست دارد.', speaker: 'امام صادق (ع)', ref: 'کافی' },
+  { ar: 'اَفْضَلُ الْعَمَلِ اَداءُ الْفَرائِضِ', fa: 'برترین اعمال انجام واجبات است.', speaker: 'امام باقر (ع)', ref: 'کافی' },
+  { ar: 'اَلسَّخاءُ شَجَرَةٌ فِی الْجَنَّةِ', fa: 'سخاوت درختی است در بهشت.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'مَنْ اَخْلَصَ الْعِبادَةَ اَخْلَصَ اللّٰهُ لَهُ', fa: 'هر که عبادت خود را خالص کند، خداوند نیز برای او خالص می‌کند.', speaker: 'امام عسکری (ع)', ref: 'تحف العقول' },
+  { ar: 'لا حَیاءَ لِمَنْ لا دینَ لَهُ', fa: 'کسی که دین ندارد، حیا ندارد.', speaker: 'امام رضا (ع)', ref: 'بحارالانوار' },
+  { ar: 'اَلْاَمانَةُ تَجْلِبُ الرِّزْقَ', fa: 'امانت‌داری روزی می‌آورد.', speaker: 'امام جواد (ع)', ref: 'بحارالانوار' },
+  { ar: 'اَلْوَفاءُ کَرَمٌ', fa: 'وفاداری بزرگواری است.', speaker: 'امام هادی (ع)', ref: 'بحارالانوار' },
+  { ar: 'اِعْمَلْ بِالْعِلْمِ وَ لا تَعْمَلْ بِالْجَهْلِ', fa: 'به علم عمل کن نه به جهل.', speaker: 'امام کاظم (ع)', ref: 'تحف العقول' },
+  { ar: 'کُنْ بِالْوَفاءِ مُلْتَزِماً', fa: 'پایبند وفاداری باش.', speaker: 'امام هادی (ع)', ref: 'بحارالانوار' },
+  { ar: 'لا تَشْغَلْ قَلْبَکَ بِغَیْرِ اللّٰهِ', fa: 'دلت را به غیر خدا مشغول مکن.', speaker: 'امام زمان (عج)', ref: 'بحارالانوار' },
+  { ar: 'اِنَّ الدُّنْیا کَالْحَیَّةِ', fa: 'همانا دنیا همچون مار است.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه' },
+  { ar: 'اَلْعَدْلُ حَیاتُ الْقُلُوبِ', fa: 'عدالت زندگی دل‌ها است.', speaker: 'امام علی (ع)', ref: 'غررالحکم' },
+  { ar: 'اَشَدُّ النّاسِ حَسْرَةً یَوْمَ الْقیامَةِ مَنْ عَرَفَ حَقَّنا وَ جَحَدَهُ', fa: 'پشیمان‌ترین مردم در قیامت کسی است که حق ما را شناخت و انکار کرد.', speaker: 'حضرت زهرا (س)', ref: 'بحارالانوار' },
+  { ar: 'اِذا صَلَّیْتُمْ فَاَقْبِلُوا بِقُلُوبِکُمْ', fa: 'چون نماز خواندید با دل خود رو به خدا کنید.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَحْسِنْ مُجاوَرَةَ مَنْ جاوَرَکَ', fa: 'با همسایه خود نیک همسایگی کن.', speaker: 'پیامبر اکرم (ص)', ref: 'کافی' },
+  { ar: 'اَلسَّعیدُ مَنْ سَعِدَ فی بَطْنِ اُمِّهِ', fa: 'سعادتمند کسی است که در شکم مادرش سعادتمند شده.', speaker: 'امام باقر (ع)', ref: 'کافی' },
+  { ar: 'اَلْمَرْءُ مَعَ مَنْ اَحَبَّ', fa: 'انسان با کسی است که او را دوست دارد.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَکْرِمُوا اَوْلادَکُمْ', fa: 'فرزندان خود را گرامی بدارید.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اِذا عَزَمْتَ فَتَوَکَّلْ', fa: 'چون تصمیم گرفتی، توکل کن.', speaker: 'امام علی (ع)', ref: 'غررالحکم' },
+  { ar: 'اَلسَّلامُ قَبْلَ الْکَلامِ', fa: 'سلام پیش از سخن گفتن است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَلْقِناعَةُ مالٌ لا یَنْفَدُ', fa: 'قناعت مالی است که تمام نمی‌شود.', speaker: 'امام صادق (ع)', ref: 'کافی' },
+  { ar: 'اِذا اَحْسَنَ الْعَبْدُ الْمُؤْمِنُ کَفَّرَ اللّٰهُ سَیِّئاتِهِ', fa: 'چون بنده مؤمن نیکی کند، خدا گناهانش را می‌آمرزد.', speaker: 'امام باقر (ع)', ref: 'کافی' },
+  { ar: 'اَلْعِلْمُ اَکْبَرُ مِنَ الْمالِ', fa: 'علم بزرگ‌تر از مال است.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه' },
+  { ar: 'صِلَةُ الرَّحِمِ تُزیدُ فِی الْعُمْرِ', fa: 'صله رحم عمر را زیاد می‌کند.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اِذا اَرَدْتَ اَنْ یُخْتَمَ لَکَ بِخَیْرٍ فَاَحْسِنْ', fa: 'اگر می‌خواهی کارت به خیر تمام شود، نیکی کن.', speaker: 'امام صادق (ع)', ref: 'کافی' },
+  { ar: 'اَلسَّخِیُّ قَریبٌ مِنَ النّاسِ', fa: 'سخاوتمند به مردم نزدیک است.', speaker: 'امام علی (ع)', ref: 'غررالحکم' },
+  { ar: 'کَفی بِالْمَرْءِ عَیْباً اَنْ یَنْظُرَ فی عُیُوبِ النّاسِ', fa: 'برای عیب انسان همین بس که عیب‌های مردم را ببیند.', speaker: 'امام صادق (ع)', ref: 'کافی' },
+  { ar: 'اَحْسِنْ اِلَى جارِکَ', fa: 'به همسایه‌ات نیکی کن.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'اَلدّالُّ عَلَى الْخَیْرِ کَفاعِلِهِ', fa: 'راهنما به خیر مانند انجام‌دهنده آن است.', speaker: 'پیامبر اکرم (ص)', ref: 'بحارالانوار' },
+  { ar: 'لَعْنَةُ اللّٰهِ عَلَى الْکاذِبِ', fa: 'لعنت خدا بر دروغگو باد.', speaker: 'پیامبر اکرم (ص)', ref: 'کافی' },
+  { ar: 'اَلْحَلالُ بَیِّنٌ وَ الْحَرامُ بَیِّنٌ', fa: 'حلال روشن است و حرام روشن است.', speaker: 'پیامبر اکرم (ص)', ref: 'کافی' },
+  { ar: 'اَلسَّکینَةُ نورٌ', fa: 'آرامش نور است.', speaker: 'امام علی (ع)', ref: 'نهج البلاغه' },
+  { ar: 'اَلسُّکوتُ حِکْمَةٌ', fa: 'سکوت حکمت است.', speaker: 'پیامبر اکرم (ص)', ref: 'تحف العقول' }
+];
+
+const SHORT_DUAS = [
+  { ar: 'رَبَّنا آتِنا فِی الدُّنْیا حَسَنَةً وَ فِی الْآخِرَةِ حَسَنَةً وَ قِنا عَذابَ النّارِ', fa: 'پروردگارا! به ما در دنیا نیکی و در آخرت نیکی عطا کن و ما را از عذاب آتش نگاه دار.', name: 'دعای جامع' },
+  { ar: 'اللّٰهُمَّ اهْدِنی فیمَنْ هَدَیْتَ', fa: 'خدایا مرا در زمره هدایت‌شدگان قرار ده.', name: 'دعای قنوت' },
+  { ar: 'رَبِّ زِدْنی عِلْماً', fa: 'پروردگارا! بر دانش من بیفزای.', name: 'دعای علم' },
+  { ar: 'رَبَّنا لا تُزِغْ قُلُوبَنا بَعْدَ اِذْ هَدَیْتَنا', fa: 'پروردگارا! دل‌های ما را بعد از هدایت منحرف مکن.', name: 'دعای ثبات' },
+  { ar: 'یا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبی عَلى دینِکَ', fa: 'ای دگرگون‌کننده دل‌ها! دل مرا بر دین خود استوار بدار.', name: 'دعای غریق' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ الْعَفْوَ وَ الْعافِیَةَ', fa: 'خدایا! از تو بخشش و عافیت می‌خواهم.', name: 'دعای عافیت' },
+  { ar: 'اَللّٰهُمَّ اَرْزُقْنی حُبَّکَ وَ حُبَّ مَنْ یَنْفَعُنی حُبُّهُ عِنْدَکَ', fa: 'خدایا! محبت خود و محبت هر که محبتش مرا نزد تو سود می‌دهد، روزی من کن.', name: 'دعای محبت' },
+  { ar: 'اَللّٰهُمَّ اَغْنِنی بِحَلالِکَ عَنْ حَرامِکَ', fa: 'خدایا! مرا به حلال خود از حرامت بی‌نیاز کن.', name: 'دعای رزق' },
+  { ar: 'اَللّٰهُمَّ اغْفِرْ لِیَ الْمُؤْمِنینَ وَ الْمُؤْمِناتِ', fa: 'خدایا! مردان و زنان مؤمن را بیامرز.', name: 'دعای مؤمنان' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَعُوذُ بِکَ مِنَ الْهَمِّ وَ الْحَزَنِ', fa: 'خدایا! از غم و اندوه به تو پناه می‌برم.', name: 'دعای رفع غم' },
+  { ar: 'اَللّٰهُمَّ عافِنی فی بَدَنی', fa: 'خدایا! تنم را سالم بدار.', name: 'دعای سلامت' },
+  { ar: 'اَللّٰهُمَّ اجْعَلْ عاقِبَةَ اَمْری خَیْراً', fa: 'خدایا! سرانجام کارم را نیکو گردان.', name: 'دعای عاقبت' },
+  { ar: 'رَبِّ اغْفِرْ لی وَ لِوالِدَیَّ', fa: 'پروردگارا! مرا و پدر و مادرم را بیامرز.', name: 'دعای والدین' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ الْجَنَّةَ وَ ما یُقَرِّبُ اِلَیْها', fa: 'خدایا! بهشت و آنچه به آن نزدیک می‌کند از تو می‌خواهم.', name: 'دعای بهشت' },
+  { ar: 'اَللّٰهُمَّ اکْفِنی شَرَّ النّاسِ', fa: 'خدایا! مرا از شرّ مردم کفایت کن.', name: 'دعای امن' },
+  { ar: 'اَللّٰهُمَّ طَهِّرْ قَلْبی مِنَ النِّفاقِ', fa: 'خدایا! دلم را از نفاق پاک کن.', name: 'دعای اخلاص' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَعُوذُ بِکَ مِنْ عِلْمٍ لا یَنْفَعُ', fa: 'خدایا! از دانشی که سود نمی‌دهد پناه می‌برم.', name: 'دعای علم نافع' },
+  { ar: 'اَللّٰهُمَّ اجْعَلْنی مِنَ التَّوّابینَ', fa: 'خدایا! مرا از توبه‌کنندگان قرار ده.', name: 'دعای توبه' },
+  { ar: 'رَبَّنا هَبْ لَنا مِنْ اَزْواجِنا وَ ذُرِّیّاتِنا قُرَّةَ اَعْیُنٍ', fa: 'پروردگارا! از همسران و فرزندانمان مایه روشنی چشم ما قرار ده.', name: 'دعای خانواده' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ حُسْنَ الْخاتِمَةِ', fa: 'خدایا! حسن عاقبت می‌خواهم.', name: 'دعای حسن خاتمت' },
+  { ar: 'اَللّٰهُمَّ ثَبِّتْنی عَلَى الصِّراطِ الْمُسْتَقیمِ', fa: 'خدایا! مرا بر راه راست استوار بدار.', name: 'دعای استقامت' },
+  { ar: 'اَللّٰهُمَّ بَلِّغْنی شَهْرَ رَمَضانَ', fa: 'خدایا! مرا به ماه رمضان برسان.', name: 'دعای ماه رمضان' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ الصِّحَّةَ وَ الْفَراغَ', fa: 'خدایا! از تو سلامت و فراغت می‌خواهم.', name: 'دعای عبادت' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ الْهُدى وَ التُّقى', fa: 'خدایا! از تو هدایت و تقوا می‌خواهم.', name: 'دعای هدایت' },
+  { ar: 'اَللّٰهُمَّ اجْعَلْ قَلْبی خاشِعاً', fa: 'خدایا! دلم را خاشع گردان.', name: 'دعای خشوع' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ الرِّزْقَ الطَّیِّبَ', fa: 'خدایا! روزی پاک می‌خواهم.', name: 'دعای رزق حلال' },
+  { ar: 'اَللّٰهُمَّ اَصْلِحْ لی دینی وَ دُنْیایَ', fa: 'خدایا! دین و دنیایم را اصلاح کن.', name: 'دعای اصلاح' },
+  { ar: 'اَللّٰهُمَّ احْشُرْنی مَعَ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ', fa: 'خدایا! مرا با محمد و آل محمد محشور گردان.', name: 'دعای حشر' },
+  { ar: 'اَللّٰهُمَّ اجْعَلْنی مِنْ خُدّامِ الْقُرْآنِ', fa: 'خدایا! مرا از خادمان قرآن قرار ده.', name: 'دعای خدمت به قرآن' },
+  { ar: 'اَللّٰهُمَّ اِنّی اَسْئَلُکَ حُبَّ عَلِیِّ بْنِ اَبی طالِبٍ', fa: 'خدایا! محبت علی بن ابی‌طالب را از تو می‌خواهم.', name: 'دعای محبت اهل بیت' }
+];
+
+const GOOD_DEEDS = [
+  'به پدر و مادر خود محبت کن و دستشان را ببوس.',
+  'یک صدقه کوچک امروز بده، هر چقدر که هست.',
+  'به یک دوست قدیمی پیام بده و از حالش بپرس.',
+  'یک آیه از قرآن را حفظ کن یا با تأمل بخوان.',
+  'برای مسلمین و مؤمنان عالم دعا کن.',
+  'با همسایه‌ات به گرمی سلام کن.',
+  'یک لقمه حلال برای خانواده‌ات مهیا کن.',
+  'به یک یتیم یا نیازمند کمک کن.',
+  'یک صلوات هدیه به روح شهدا بفرست.',
+  'امروز از گناه چشم‌پوشی کن و ببخش.',
+  'یک حدیث را به دوستت هدیه بده.',
+  'به دیدار خویشاوند خود برو یا تماس بگیر.',
+  'پنج دقیقه سکوت کن و به عظمت خدا فکر کن.',
+  'در کارها امانت‌دار باش.',
+  'لبخندی به برادر مؤمن خود بزن.',
+  'به یک بیمار یا سالمند سر بزن.',
+  'امروز سعی کن کمتر حرف بزنی و بیشتر بشنوی.',
+  'به طبیعت احترام بگذار و زباله‌ات را در سطل بینداز.',
+  'برای معلم یا استادت دعا کن.',
+  'از کسی که با تو بدی کرده گذشت کن.',
+  'آب برای پرنده‌ای یا حیوانی بگذار.',
+  'برای امام زمان (عج) صدقه بده.',
+  'خبر خوشی را با خانواده‌ات به اشتراک بگذار.',
+  'از خدا در خلوت خود استغفار کن.',
+  'به یک همکار یا هم‌کلاسی کمک کن.',
+  'به نمازت بیشتر اهمیت بده و با آرامش بخوان.',
+  'یک عذرخواهی صادقانه از کسی که حقت دارد بکن.',
+  'کتابی به کسی هدیه بده یا قرض بده.',
+  'دعای فرج را امروز بخوان.',
+  'به کسی که ناراحت است دلخوشی بده.'
+];
+
+const PERSIAN_MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
+
+function getDayOfYear() {
+  const today = new Date();
+  const start = new Date(today.getFullYear(), 0, 0);
+  const diff = today - start;
+  return Math.floor(diff / 86400000);
+}
+
+function getJalaliDate() {
+  try {
+    const d = new Date();
+    const gy = d.getFullYear(), gm = d.getMonth() + 1, gd = d.getDate();
+    const g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    let jy;
+    if (gy <= 1600) {
+      jy = 0;
+    } else {
+      jy = 979;
+      gy -= 1600;
+    }
+    const gy2 = (gm > 2) ? (gy + 1) : gy;
+    let days = (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400) - 80 + gd + g_d_m[gm - 1];
+    jy += 33 * Math.floor(days / 12053);
+    days %= 12053;
+    jy += 4 * Math.floor(days / 1461);
+    days %= 1461;
+    if (days > 365) {
+      jy += Math.floor((days - 1) / 365);
+      days = (days - 1) % 365;
+    }
+    const jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+    const jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+    return { jy, jm, jd };
+  } catch (e) {
+    return null;
+  }
+}
+
+function getTodayLabel() {
+  const j = getJalaliDate();
+  if (j) {
+    return `${faNum(j.jd)} ${PERSIAN_MONTHS[j.jm - 1]} ${faNum(j.jy)}`;
+  }
+  return new Date().toLocaleDateString('fa-IR');
+}
+
+/* ===== GET NOOR ITEMS FOR TODAY ===== */
+function getTodayNoor() {
+  const day = getDayOfYear();
+  return {
+    verse: QURAN_VERSES[day % QURAN_VERSES.length],
+    hadith: SHORT_HADITHS[day % SHORT_HADITHS.length],
+    dua: SHORT_DUAS[day % SHORT_DUAS.length],
+    deed: GOOD_DEEDS[day % GOOD_DEEDS.length]
+  };
+}
+
+/* ============================================================
+   HADITHS DATA — شامل تمام معصومین
+   ============================================================ */
+const HADITHS_DATA = [
+  /* ===== پیامبر اکرم (ص) ===== */
+  { id: 'p1', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'إِنَّمَا بُعِثْتُ لِأُتَمِّمَ مَكَارِمَ الْأَخْلَاقِ', translation: 'همانا من برای کامل کردن مکارم اخلاق برانگیخته شدم', source: 'بحارالانوار، ج۶۸، ص۳۸۲', tags: ['اخلاق', 'بعثت'] },
+  { id: 'p2', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ كَانَ يُؤْمِنُ بِاللَّهِ وَالْيَوْمِ الْآخِرِ فَلْيُكْرِمْ جَارَهُ', translation: 'هر کس به خدا و روز قیامت ایمان دارد، باید همسایه خود را گرامی دارد', source: 'صحیح بخاری، ج۴، ص۱۷', tags: ['همسایه', 'ایمان'] },
+  { id: 'p3', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'dua', topicName: 'دعا', arabic: 'الدُّعَاءُ هُوَ الْعِبَادَةُ', translation: 'دعا خود عبادت است', source: 'سنن ترمذی، ج۵، ص۴۵۶', tags: ['دعا', 'عبادت'] },
+  { id: 'p4', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'elm', topicName: 'علم', arabic: 'طَلَبُ الْعِلْمِ فَرِيضَةٌ عَلَى كُلِّ مُسْلِمٍ', translation: 'طلب علم بر هر مسلمانی واجب است', source: 'سنن ابن ماجه، ج۱، ص۱۴', tags: ['علم', 'واجب'] },
+  { id: 'p5', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'مَنْ لَا يَرْحَمُ النَّاسَ لَا يَرْحَمُهُ اللَّهُ', translation: 'هر کس به مردم رحم نکند، خدا به او رحم نمی‌کند', source: 'صحیح مسلم، ج۴، ص۱۸۰', tags: ['رحم', 'مردم'] },
+  { id: 'p6', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'خَيْرُ النَّاسِ أَنْفَعُهُمْ لِلنَّاسِ', translation: 'بهترین مردم کسی است که به مردم بیشتر سود برساند', source: 'کافی، ج۲، ص۱۶۴', tags: ['خیر', 'نفع'] },
+  { id: 'p7', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'لَا تَغْضَبْ', translation: 'خشمگین نشو', source: 'بحارالانوار، ج۷۳، ص۲۶۵', tags: ['خشم', 'غضب'] },
+  { id: 'p8', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'أَحْبِبْ لِلنَّاسِ مَا تُحِبُّ لِنَفْسِكَ', translation: 'برای مردم آنچه برای خود دوست داری، دوست بدار', source: 'امالی صدوق', tags: ['محبت', 'مردم'] },
+  { id: 'p9', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'اتَّقِ اللَّهَ فِي السِّرِّ وَالْعَلَانِيَةِ', translation: 'در پنهان و آشکار از خدا پروا کن', source: 'کنز العمال', tags: ['تقوا', 'اخلاص'] },
+  { id: 'p10', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'الْجَنَّةُ تَحْتَ أَقْدَامِ الْأُمَّهَاتِ', translation: 'بهشت زیر پای مادران است', source: 'مستدرک الوسائل', tags: ['مادر', 'بهشت'] },
+  { id: 'p11', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'quran', topicName: 'قرآن', arabic: 'أَفْضَلُ عِبَادَةِ أُمَّتِي تِلَاوَةُ الْقُرْآنِ', translation: 'برترین عبادت امت من تلاوت قرآن است', source: 'بحارالانوار، ج۹۲، ص۲۰۲', tags: ['قرآن', 'تلاوت'] },
+  { id: 'p12', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'السَّلَامُ قَبْلَ الْكَلَامِ', translation: 'سلام قبل از سخن گفتن است', source: 'بحارالانوار، ج۷۶، ص۱۰', tags: ['سلام', 'آداب'] },
+  { id: 'p13', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ نِصْفُ الْإِيمَانِ', translation: 'صبر نصف ایمان است', source: 'کنز العمال، ج۳، ص۱۲۳', tags: ['صبر', 'ایمان'] },
+  { id: 'p14', speaker: 'payambar', speakerName: 'پیامبر اکرم (ص)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'الْكَلِمَةُ الطَّيِّبَةُ صَدَقَةٌ', translation: 'سخن نیکو صدقه است', source: 'بحارالانوار، ج۷۴، ص۱۴۹', tags: ['سخن', 'صدقه'] },
+
+  /* ===== امام علی (ع) ===== */
+  { id: 'a1', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'namaz', topicName: 'نماز', arabic: 'الصَّلَاةُ قُرْبَانُ كُلِّ تَقِيٍّ', translation: 'نماز قربانی هر پرهیزکاری است', source: 'نهج البلاغه، حکمت ۱۳۶', tags: ['نماز', 'تقوا'] },
+  { id: 'a2', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ مِفْتَاحُ الْفَرَجِ', translation: 'صبر کلید گشایش است', source: 'غررالحکم، ج۱، ص۲۸۰', tags: ['صبر', 'فرج'] },
+  { id: 'a3', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'elm', topicName: 'علم', arabic: 'لَا خَيْرَ فِي صَمْتٍ عَنْ حِكْمَةٍ', translation: 'در سکوت از حکمت خیری نیست', source: 'غررالحکم، ج۱، ص۲۵۰', tags: ['حکمت', 'سکوت'] },
+  { id: 'a4', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'خَالِقُوا النَّاسَ بِأَخْلَاقٍ حَسَنَةٍ', translation: 'با مردم با اخلاق نیکو رفتار کنید', source: 'نهج البلاغه، حکمت ۳۸', tags: ['اخلاق', 'مردم'] },
+  { id: 'a5', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'akhirat', topicName: 'آخرت', arabic: 'الدُّنْيَا مَزْرَعَةُ الْآخِرَةِ', translation: 'دنیا کشتزار آخرت است', source: 'نهج البلاغه، حکمت ۱۲۴', tags: ['دنیا', 'آخرت'] },
+  { id: 'a6', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'الْعِلْمُ أَكْبَرُ مِنَ الْمَالِ', translation: 'علم بزرگ‌تر از مال است', source: 'نهج البلاغه، حکمت ۱۴۷', tags: ['علم', 'مال'] },
+  { id: 'a7', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'قَدْرُ الرَّجُلِ عَلَى قَدْرِ هِمَّتِهِ', translation: 'ارزش هر انسان به اندازه همّت اوست', source: 'نهج البلاغه، حکمت ۴۷', tags: ['همت', 'ارزش'] },
+  { id: 'a8', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'الصَّدِيقُ مَنْ صَدَقَكَ لَا مَنْ صَدَّقَكَ', translation: 'دوست واقعی آن است که تو راست بگوید، نه آن که تو را تصدیق کند', source: 'نهج البلاغه، حکمت ۴۴', tags: ['دوست', 'صداقت'] },
+  { id: 'a9', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'عَدْلٌ سَاعَةٍ خَيْرٌ مِنْ عِبَادَةِ سَبْعِينَ سَنَةً', translation: 'یک ساعت عدالت بهتر از هفتاد سال عبادت است', source: 'غررالحکم، ج۱، ص۲۰۰', tags: ['عدالت', 'عبادت'] },
+  { id: 'a10', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'رُبَّ كَلِمَةٍ سَلَبَتْ نِعْمَةً', translation: 'چه بسا یک سخن که نعمتی را از انسان می‌گیرد', source: 'نهج البلاغه، حکمت ۳۵۷', tags: ['سخن', 'نعمت'] },
+  { id: 'a11', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'quran', topicName: 'قرآن', arabic: 'الْقُرْآنُ فِيهِ شِفَاءٌ مِنْ كُلِّ دَاءٍ', translation: 'قرآن شفای هر درد است', source: 'نهج البلاغه', tags: ['قرآن', 'شفا'] },
+  { id: 'a12', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'dua', topicName: 'دعا', arabic: 'الدُّعَاءُ مِفْتَاحُ الرَّحْمَةِ', translation: 'دعا کلید رحمت است', source: 'غررالحکم', tags: ['دعا', 'رحمت'] },
+  { id: 'a13', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'عَوِّدْ نَفْسَكَ الْإِحْسَانَ إِلَى النَّاسِ', translation: 'نفست را به نیکی به مردم عادت بده', source: 'غررالحکم', tags: ['نیکی', 'مردم'] },
+  { id: 'a14', speaker: 'ali', speakerName: 'امام علی (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'الصَّلَاةُ حِصْنٌ مِنَ الشَّيْطَانِ', translation: 'نماز دژی در برابر شیطان است', source: 'غررالحکم', tags: ['نماز', 'شیطان'] },
+
+  /* ===== حضرت فاطمه (س) ===== */
+  { id: 'f1', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'namaz', topicName: 'نماز', arabic: 'مَنْ أَصْعَدَ إِلَى اللَّهِ خَالِصَ عِبَادَتِهِ أَهْبَطَ اللَّهُ إِلَيْهِ أَفْضَلَ مَصْلَحَتِهِ', translation: 'هر کس عبادت خالص خود را به خدا بالا برد، خداوند بهترین مصلحت خود را به او فرو می‌فرستد', source: 'بحارالانوار، ج۴۳، ص۸۱', tags: ['عبادت', 'اخلاص'] },
+  { id: 'f2', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'walayat', topicName: 'ولایت', arabic: 'أَشَدُّ النَّاسِ عَذَاباً يَوْمَ الْقِيَامَةِ مَنْ عَرَفَ حَقَّنَا وَجَحَدَهُ', translation: 'سخت‌ترین عذاب در قیامت برای کسی است که حق ما را بشناسد و انکار کند', source: 'بحارالانوار، ج۴۳، ص۸۳', tags: ['ولایت', 'قیامت'] },
+  { id: 'f3', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'walayat', topicName: 'ولایت', arabic: 'إِنَّ أَفْضَلَ النَّاسِ بَعْدَ رَسُولِ اللَّهِ عَلِيُّ بْنُ أَبِي طَالِبٍ', translation: 'برترین مردم پس از رسول خدا، علی بن ابی‌طالب است', source: 'بحارالانوار، ج۴۳، ص۸۵', tags: ['فضیلت', 'علی'] },
+  { id: 'f4', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'مَنْ أَحَبَّنَا أَهْلَ الْبَيْتِ فَلْيَسْتَعِدَّ لِلْفَقْرِ', translation: 'هر کس ما اهل بیت را دوست دارد، باید خود را برای فقر آماده کند', source: 'بحارالانوار، ج۴۳، ص۸۷', tags: ['محبت', 'اهل بیت'] },
+  { id: 'f5', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'quran', topicName: 'قرآن', arabic: 'سَيِّدَةُ نِسَاءِ الْعَالَمِينَ فَاطِمَةُ بِنْتُ مُحَمَّدٍ', translation: 'سرور زنان جهانیان فاطمه دختر محمد است', source: 'بحارالانوار، ج۴۳، ص۸۹', tags: ['فاطمه', 'سرور'] },
+  { id: 'f6', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'dua', topicName: 'دعا', arabic: 'جَعَلَ اللَّهُ الصَّلَاةَ تَطْهِيراً لَكُمْ مِنَ الْكِبْرِ', translation: 'خداوند نماز را مایه پاکی شما از کبر قرار داد', source: 'خطبه فدکیه', tags: ['نماز', 'کبر'] },
+  { id: 'f7', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ أَخْلَصَ الْعِبَادَةَ لِلَّهِ بَلَغَ بِهَا أَعْلَى الدَّرَجَاتِ', translation: 'هر کس عبادت را برای خدا خالص کند، به بالاترین درجات می‌رسد', source: 'بحارالانوار', tags: ['عبادت', 'اخلاص'] },
+  { id: 'f8', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'حُبِّبَ إِلَيَّ مِنَ الدُّنْيَا ثَلَاثٌ: تِلَاوَةُ الْقُرْآنِ، وَالنَّظَرُ فِي وَجْهِ رَسُولِ اللَّهِ، وَالْإِنْفَاقُ فِي سَبِيلِ اللَّهِ', translation: 'از دنیا سه چیز نزد من محبوب است: تلاوت قرآن، نگاه به چهره رسول خدا، و انفاق در راه خدا', source: 'بحارالانوار', tags: ['قرآن', 'انفاق'] },
+  { id: 'f9', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'الْجَارُ ثُمَّ الدَّارُ', translation: 'اول همسایه، سپس خانه', source: 'بحارالانوار', tags: ['همسایه', 'خانه'] },
+  { id: 'f10', speaker: 'fatemeh', speakerName: 'حضرت فاطمه (س)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'طُوبَى لِمَنْ كَانَ عِلْمُهُ بِاللَّهِ', translation: 'خوشا به حال کسی که دانشش به خدا باشد', source: 'بحارالانوار', tags: ['علم', 'خدا'] },
+
+  /* ===== امام حسن (ع) ===== */
+  { id: 'h1', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'الْحِلْمُ زِينَةُ الْمَرْءِ وَالْعِلْمُ مَنْصِبُهُ', translation: 'بردباری زینت انسان و علم مقام اوست', source: 'تحف العقول، ص۲۲۶', tags: ['حلم', 'علم'] },
+  { id: 'h2', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'مَنْ تَرَكَ الْحَقَّ لِلْبَاطِلِ فَقَدْ ظَلَمَ نَفْسَهُ', translation: 'هر کس حق را برای باطل رها کند، به خود ستم کرده است', source: 'بحارالانوار، ج۴۴، ص۱۲', tags: ['حق', 'باطل'] },
+  { id: 'h3', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'elm', topicName: 'علم', arabic: 'إِنَّ اللَّهَ يَرْحَمُ عَبْداً أَحْيَا عِلْماً', translation: 'خداوند رحمت می‌کند بر بنده‌ای که علمی را زنده کند', source: 'تحف العقول، ص۲۲۷', tags: ['علم', 'رحمت'] },
+  { id: 'h4', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'أَفْضَلُ الزُّهْدِ إِخْفَاءُ الزُّهْدِ', translation: 'برترین زهد، پنهان کردن زهد است', source: 'بحارالانوار، ج۴۴، ص۱۵', tags: ['زهد', 'اخلاص'] },
+  { id: 'h5', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ أَكْرَمَ الْمُؤْمِنَ فَقَدْ أَكْرَمَ اللَّهَ', translation: 'هر کس مؤمنی را گرامی دارد، خدا را گرامی داشته است', source: 'تحف العقول، ص۲۲۸', tags: ['مؤمن', 'اکرام'] },
+  { id: 'h6', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'لَا تُجَالِسُوا الْأَغْنِيَاءَ فَإِنَّهُمْ يَحْقِرُونَ مَنْ لَيْسَ مِثْلَهُمْ', translation: 'با ثروتمندان هم‌نشین نشوید که هرکس مثل آنان نباشد را تحقیر می‌کنند', source: 'بحارالانوار', tags: ['هم‌نشینی', 'ثروت'] },
+  { id: 'h7', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'الْمَجْدُ فِي الصِّيَانَةِ لَيْسَ الْمَجْدُ فِي الْخِيَانَةِ', translation: 'بزرگواری در حفظ امانت است نه در خیانت', source: 'تحف العقول', tags: ['امانت', 'بزرگواری'] },
+  { id: 'h8', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'اعْمَلْ لِدُنْيَاكَ كَأَنَّكَ تَعِيشُ أَبَداً وَاعْمَلْ لِآخِرَتِكَ كَأَنَّكَ تَمُوتُ غَداً', translation: 'برای دنیایت چنان کار کن که گویا همیشه زنده‌ای و برای آخرتت چنان که گویا فردا می‌میری', source: 'تحف العقول', tags: ['دنیا', 'آخرت'] },
+  { id: 'h9', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'خَيْرُ النَّاسِ مَنْ أَنْفَعَ النَّاسَ', translation: 'بهترین مردم کسی است که به مردم سود برساند', source: 'بحارالانوار', tags: ['خیر', 'نفع'] },
+  { id: 'h10', speaker: 'hasan', speakerName: 'امام حسن (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'الْبُخْلُ عَارٌ وَالْجُبْنُ نَقْصٌ', translation: 'بخل ننگ و ترس نقص است', source: 'تحف العقول', tags: ['بخل', 'ترس'] },
+
+  /* ===== امام حسین (ع) ===== */
+  { id: 'ho1', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'إِنَّ النَّاسَ عَبِيدُ الدُّنْيَا وَالدِّينُ لَعْقٌ عَلَى أَلْسِنَتِهِمْ', translation: 'مردم بندگان دنیا هستند و دین بر زبانشان لقلقه‌ای بیش نیست', source: 'تحف العقول، ص۲۴۵', tags: ['دنیا', 'دین'] },
+  { id: 'ho2', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'مَنْ طَلَبَ رِضَى اللَّهِ بِسَخَطِ النَّاسِ كَفَاهُ اللَّهُ أَمْرَ النَّاسِ', translation: 'هر کس رضایت خدا را با ناخشنودی مردم طلب کند، خداوند او را از امر مردم بی‌نیاز می‌کند', source: 'بحارالانوار، ج۴۴، ص۱۹۲', tags: ['رضای خدا', 'مردم'] },
+  { id: 'ho3', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ مِفْتَاحُ الْفَرَجِ وَنُورُ الْيَقِينِ', translation: 'صبر کلید گشایش و نور یقین است', source: 'بحارالانوار، ج۴۴، ص۱۹۴', tags: ['صبر', 'یقین'] },
+  { id: 'ho4', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'إِنَّ لِلَّهِ عِبَاداً خَصَّهُمْ بِالنِّعَمِ فَأَبْقَوْهَا بِالْعَفَافِ', translation: 'خداوند بندگانی را با نعمت‌ها اختصاص داده، پس آن را با عفت و پاکدامنی باقی می‌دارند', source: 'تحف العقول، ص۲۴۶', tags: ['عفت', 'نعمت'] },
+  { id: 'ho5', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ أَرَادَ أَنْ يَكُونَ أَكْرَمَ النَّاسِ فَلْيَتَّقِ اللَّهَ', translation: 'هر کس می‌خواهد کریم‌ترین مردم باشد، باید از خدا بترسد', source: 'بحارالانوار، ج۴۴، ص۱۹۶', tags: ['تقوا', 'کرامت'] },
+  { id: 'ho6', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'بِأَبِي أَنْتَ وَأُمِّي يَا ابْنَ رَسُولِ اللَّهِ', translation: 'پدر و مادرم فدای تو باد ای فرزند رسول خدا', source: 'کامل الزیارات', tags: ['محبت', 'رسول'] },
+  { id: 'ho7', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'walayat', topicName: 'ولایت', arabic: 'إِنِّي لَمْ أَخْرُجْ أَشِراً وَلَا بَطِراً وَلَا مُفْسِداً', translation: 'من از روی خودخواهی و نه برای عیاشی و فساد قیام نکردم', source: 'بحارالانوار، ج۴۴، ص۳۲۹', tags: ['قیام', 'اصلاح'] },
+  { id: 'ho8', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'akhirat', topicName: 'آخرت', arabic: 'النَّاسُ فِي الدُّنْيَا ضَيْفٌ وَالْمَوْتُ ضِيَافَةٌ', translation: 'مردم در دنیا مهمانند و مرگ پذیرایی است', source: 'بحارالانوار', tags: ['دنیا', 'مرگ'] },
+  { id: 'ho9', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'dua', topicName: 'دعا', arabic: 'اللَّهُمَّ اجْعَلْ مَحْيَايَ مَحْيَا مُحَمَّدٍ وَآلِ مُحَمَّدٍ', translation: 'خدایا زندگی من را زندگی محمد و آل محمد قرار ده', source: 'زیارت عاشورا', tags: ['دعا', 'محمد'] },
+  { id: 'ho10', speaker: 'hossein', speakerName: 'امام حسین (ع)', topic: 'walayat', topicName: 'ولایت', arabic: 'إِنَّ الْحَيَاةَ عَقِيدَةٌ وَجِهَادٌ', translation: 'زندگی همانا عقیده و جهاد است', source: 'نهضت عاشورا', tags: ['زندگی', 'جهاد'] },
+
+  /* ===== امام سجاد (ع) ===== */
+  { id: 's1', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'إِنَّ أَحَبَّ الْأَعْمَالِ إِلَى اللَّهِ الْإِقْبَالُ عَلَى الْعِبَادَةِ', translation: 'محبوب‌ترین اعمال نزد خداوند، روی آوردن به عبادت است', source: 'تحف العقول، ص۲۸۰', tags: ['عبادت', 'محبوب'] },
+  { id: 's2', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ عَرَفَ اللَّهَ خَافَ اللَّهَ', translation: 'هر کس خدا را بشناسد از خدا می‌ترسد', source: 'صحیفه سجادیه، دعای ۳', tags: ['معرفت', 'خوف'] },
+  { id: 's3', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'أَلَا إِنَّ لِلَّهِ عِبَاداً يَغْبِطُهُمُ الْأَنْبِيَاءُ', translation: 'آگاه باشید که خداوند بندگانی دارد که پیامبران به آنان غبطه می‌خورند', source: 'تحف العقول، ص۲۸۲', tags: ['مقام', 'اولیاء'] },
+  { id: 's4', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'elm', topicName: 'علم', arabic: 'رَأْسُ الْحِكْمَةِ مَخَافَةُ اللَّهِ', translation: 'سر آغاز حکمت، ترس از خداست', source: 'صحیفه سجادیه، دعای ۵', tags: ['حکمت', 'خوف'] },
+  { id: 's5', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'لَا يَزَالُ الْمُؤْمِنُ فِي رَحْمَةِ اللَّهِ مَا كَانَ فِي طَاعَةِ اللَّهِ', translation: 'مؤمن تا در طاعت خداست، همواره در رحمت خدا خواهد بود', source: 'بحارالانوار، ج۴۶، ص۸۵', tags: ['طاعت', 'رحمت'] },
+  { id: 's6', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'اللَّهُمَّ إِنِّي أَسْأَلُكَ خَشْيَتَكَ فِي الْغَيْبِ وَالشَّهَادَةِ', translation: 'خدایا خشیتت را در پنهان و آشکار از تو می‌خواهم', source: 'صحیفه سجادیه', tags: ['خشیت', 'دعا'] },
+  { id: 's7', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'حُسْنُ الْخُلُقِ مَعَ الْأَهْلِ', translation: 'خوش‌اخلاقی با خانواده از نیکویی است', source: 'بحارالانوار', tags: ['اخلاق', 'خانواده'] },
+  { id: 's8', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'dua', topicName: 'دعا', arabic: 'لَا يُحِبُّ اللَّهُ مَنْ أَحَبَّ الدُّنْيَا', translation: 'خدا دوست ندارد کسی را که دنیا را دوست بدارد', source: 'تحف العقول', tags: ['دنیا', 'محبت'] },
+  { id: 's9', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'akhirat', topicName: 'آخرت', arabic: 'کُنْ لِلدُّنْیَا کَاسِراً وَلِلْآخِرَةِ عامِراً', translation: 'دنیا را ویران کن و آخرت را آبادان', source: 'بحارالانوار', tags: ['دنیا', 'آخرت'] },
+  { id: 's10', speaker: 'sajjad', speakerName: 'امام سجاد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'إِنِّي لَأَكْرَهُ الرَّجُلَ أَنْ يَكُونَ عَلَى الْمُسْلِمِينَ عَالَةً', translation: 'من خوش ندارم کسی سربار مسلمین باشد', source: 'کافی', tags: ['کار', 'سربار'] },
+
+  /* ===== امام باقر (ع) ===== */
+  { id: 'b1', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'إِنَّ الْعِلْمَ يُعَلِّمُ صاحِبَهُ الْوَرَعَ', translation: 'همانا علم به صاحب خود تقوا و پرهیزکاری می‌آموزد', source: 'کافی، ج۱، ص۳۶', tags: ['علم', 'ورع'] },
+  { id: 'b2', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'مَنْ دَعَا النَّاسَ إِلَى نَفْسِهِ فَاتَّهِمُوهُ', translation: 'هر کس مردم را به سوی خود دعوت کند، او را متهم کنید', source: 'تحف العقول، ص۲۹۰', tags: ['دعوت', 'اتهام'] },
+  { id: 'b3', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'لَوْ يَعْلَمُ الْعَابِدُ مَا لَهُ فِي عِبَادَتِهِ لَمَا انْقَطَعَ', translation: 'اگر عابد بداند در عبادتش چه دارد، هرگز قطع نمی‌کند', source: 'کافی، ج۲، ص۸۲', tags: ['عبادت', 'اجر'] },
+  { id: 'b4', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ أَحْسَنَ الظَّنَّ بِاللَّهِ كَانَ كَمَا يَظُنُّ', translation: 'هر کس به خدا گمان نیک داشته باشد، خداوند به همان گمان با او رفتار می‌کند', source: 'بحارالانوار، ج۴۶، ص۱۵۰', tags: ['حسن ظن', 'گمان'] },
+  { id: 'b5', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'elm', topicName: 'علم', arabic: 'إِنَّ اللَّهَ يُحِبُّ الْعَبْدَ الْمُتَفَكِّرَ', translation: 'خداوند بنده‌ای را که می‌اندیشد دوست دارد', source: 'کافی، ج۲، ص۵۳', tags: ['تفکر', 'محبوب'] },
+  { id: 'b6', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'صِلَةُ الْأَرْحَامِ تُحْسِنُ الْأَخْلَاقَ', translation: 'صله رحم اخلاق را نیکو می‌کند', source: 'کافی', tags: ['صله رحم', 'اخلاق'] },
+  { id: 'b7', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'quran', topicName: 'قرآن', arabic: 'قِرَاءَةُ الْقُرْآنِ فِي الْمُصْحَفِ تُخَفِّفُ الْعَذَابَ عَنِ الْوَالِدَيْنِ', translation: 'خواندن قرآن از روی مصحف عذاب را از پدر و مادر سبک می‌کند', source: 'کافی', tags: ['قرآن', 'والدین'] },
+  { id: 'b8', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ أَصْبَحَ لَا يَظْلِمُ أَحَداً غُفِرَ لَهُ', translation: 'هر کس صبح کند و به کسی ستم نکند، آمرزیده می‌شود', source: 'کافی', tags: ['ظلم', 'آمرزش'] },
+  { id: 'b9', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ مِنَ الْإِيمَانِ بِمَنْزِلَةِ الرَّأْسِ مِنَ الْجَسَدِ', translation: 'صبر در ایمان به منزله سر در بدن است', source: 'کافی', tags: ['صبر', 'ایمان'] },
+  { id: 'b10', speaker: 'baqer', speakerName: 'امام باقر (ع)', topic: 'dua', topicName: 'دعا', arabic: 'أَفْضَلُ الْعِبَادَةِ الدُّعَاءُ', translation: 'برترین عبادت دعا است', source: 'کافی', tags: ['دعا', 'عبادت'] },
+
+  /* ===== امام صادق (ع) ===== */
+  { id: 'sa1', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ عَرَفَ اللَّهَ خَافَ اللَّهَ', translation: 'هر کس خدا را بشناسد، از خدا می‌ترسد', source: 'کافی، ج۱، ص۱۳۵', tags: ['معرفت', 'خوف'] },
+  { id: 'sa2', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'namaz', topicName: 'نماز', arabic: 'الصَّلَاةُ قُرْبَانُ كُلِّ تَقِيٍّ', translation: 'نماز قربانی هر پرهیزکاری است', source: 'وسائل الشیعه، ج۳، ص۳۰', tags: ['نماز', 'تقوا'] },
+  { id: 'sa3', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ جَاهَدَ نَفْسَهُ فَقَدْ جَاهَدَ عَدُوَّهُ', translation: 'هر کس با نفس خود جهاد کند، با دشمن خود جهاد کرده است', source: 'تحف العقول، ص۳۲۰', tags: ['جهاد نفس', 'مجاهده'] },
+  { id: 'sa4', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'tavazo', topicName: 'تواضع', arabic: 'التَّوَاضُعُ زِينَةُ الْمُؤْمِنِ', translation: 'تواضع زینت مؤمن است', source: 'کافی، ج۲، ص۱۲۵', tags: ['تواضع', 'زینت'] },
+  { id: 'sa5', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'مَنْ أَحَبَّنَا فَلْيَكُنْ مُسْتَعِدّاً لِلْفَقْرِ', translation: 'هر کس ما را دوست دارد، باید برای فقر آماده باشد', source: 'بحارالانوار، ج۴۷، ص۴۵', tags: ['محبت', 'فقر'] },
+  { id: 'sa6', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'اَلْمُؤْمِنُ مِرْآةُ أَخِيهِ الْمُؤْمِنِ', translation: 'مؤمن آینه برادر مؤمن خود است', source: 'کافی، ج۲، ص۱۶۹', tags: ['مؤمن', 'برادر'] },
+  { id: 'sa7', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ سَتَرَ عَلَى مُؤْمِنٍ عَيْباً سَتَرَ اللَّهُ عَلَيْهِ سَبْعِينَ عَيْباً', translation: 'هر کس عیب مؤمنی را بپوشاند، خدا هفتاد عیب او را می‌پوشاند', source: 'کافی', tags: ['عیب', 'پوشاندن'] },
+  { id: 'sa8', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'أَحْسِنْ مُجَاوَرَةَ مَنْ جَاوَرَكَ تَكُنْ مُسْلِماً', translation: 'با همسایه‌ات خوب همسایگی کن تا مسلمان باشی', source: 'کافی', tags: ['همسایه', 'اسلام'] },
+  { id: 'sa9', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'elm', topicName: 'علم', arabic: 'اُطْلُبُوا الْعِلْمَ وَتَزَيَّنُوا مَعَهُ بِالْحِلْمِ وَالْوَقَارِ', translation: 'علم بجویید و با آن به حلم و وقار آراسته شوید', source: 'کافی', tags: ['علم', 'حلم'] },
+  { id: 'sa10', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'dua', topicName: 'دعا', arabic: 'اَلدُّعَاءُ يَرُدُّ الْقَضَاءَ الْمُبْرَمَ', translation: 'دعا قضای حتمی را برمی‌گرداند', source: 'کافی', tags: ['دعا', 'قضا'] },
+  { id: 'sa11', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'كُنْ لِلَّهِ عَبْداً وَ لِلنَّاسِ أَخاً', translation: 'برای خدا بنده و برای مردم برادر باش', source: 'بحارالانوار', tags: ['عبودیت', 'اخوت'] },
+  { id: 'sa12', speaker: 'sadeq', speakerName: 'امام صادق (ع)', topic: 'quran', topicName: 'قرآن', arabic: 'الْقُرْآنُ عَهْدُ اللَّهِ إِلَى خَلْقِهِ', translation: 'قرآن پیمان خدا با بندگان است', source: 'کافی', tags: ['قرآن', 'پیمان'] },
+
+  /* ===== امام کاظم (ع) ===== */
+  { id: 'k1', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'أَصْدَقُ النَّاسِ مَنْ رَضِيَ بِالْقَضَاءِ', translation: 'راست‌ترین مردم کسی است که به قضای الهی راضی باشد', source: 'تحف العقول، ص۳۶۰', tags: ['رضا', 'قضا'] },
+  { id: 'k2', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'akhirat', topicName: 'آخرت', arabic: 'إِنَّ اللَّهَ يُمْهِلُ الظَّالِمَ فَإِذَا أَخَذَهُ لَمْ يُفْلِتْهُ', translation: 'خداوند به ستمگر مهلت می‌دهد، ولی هنگامی که بگیرد رهایش نمی‌کند', source: 'بحارالانوار، ج۴۸، ص۱۲', tags: ['ظلم', 'عقاب'] },
+  { id: 'k3', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ أَخَافَ الْمُؤْمِنَ فَقَدْ أَخَافَ اللَّهَ', translation: 'هر کس مؤمنی را بترساند، خدا را ترسانده است', source: 'تحف العقول، ص۳۶۲', tags: ['مؤمن', 'خوف'] },
+  { id: 'k4', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ أَفْضَلُ الْأَعْمَالِ', translation: 'صبر برترین اعمال است', source: 'بحارالانوار، ج۴۸، ص۱۵', tags: ['صبر', 'افضل'] },
+  { id: 'k5', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'مَنْ أَحْسَنَ عَمَلَهُ جَازَاهُ اللَّهُ بِالْحُسْنَى', translation: 'هر کس عمل خود را نیکو کند، خداوند او را به نیکی پاداش می‌دهد', source: 'تحف العقول، ص۳۶۴', tags: ['عمل', 'پاداش'] },
+  { id: 'k6', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ لَمْ يَجْعَلْ قَلْبَهُ وَاحِداً لَمْ يَكُنْ لَهُ فِي الدُّنْيَا قَرَارٌ', translation: 'هر کس دلش را یکسان نگرداند، در دنیا آرامش ندارد', source: 'بحارالانوار', tags: ['دل', 'آرامش'] },
+  { id: 'k7', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ ضَحِكَ فِي وَجْهِ أَخِيهِ الْمُؤْمِنِ كَتَبَ اللَّهُ لَهُ حَسَنَةً', translation: 'هر کس به روی برادر مؤمن خود لبخند بزند، خدا برایش حسنه‌ای می‌نویسد', source: 'کافی', tags: ['لبخند', 'حسنه'] },
+  { id: 'k8', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ كَفَّ عَنْ أَعْرَاضِ النَّاسِ كَفَّ اللَّهُ عَنْهُ عَيْبَهُ', translation: 'هر کس از آبروی مردم دست بکشد، خدا از عیب او دست می‌کشد', source: 'بحارالانوار', tags: ['آبرو', 'عیب'] },
+  { id: 'k9', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'dua', topicName: 'دعا', arabic: 'كُنْ لِلَّهِ عَبْداً وَلِلْخَلْقِ خَيْرَ جَارٍ', translation: 'بنده خدا و برای مردم بهترین همسایه باش', source: 'تحف العقول', tags: ['بندگی', 'همسایگی'] },
+  { id: 'k10', speaker: 'kazem', speakerName: 'امام کاظم (ع)', topic: 'quran', topicName: 'قرآن', arabic: 'إِنَّ أَفْضَلَ الْعِبَادَةِ تِلَاوَةُ الْقُرْآنِ', translation: 'برترین عبادت تلاوت قرآن است', source: 'بحارالانوار', tags: ['قرآن', 'تلاوت'] },
+
+  /* ===== امام رضا (ع) ===== */
+  { id: 'r1', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'الصَّدَقَةُ مِفْتَاحُ الرِّزْقِ', translation: 'صدقه کلید روزی است', source: 'عیون اخبار الرضا، ج۲، ص۳۰', tags: ['صدقه', 'روزی'] },
+  { id: 'r2', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'tavazo', topicName: 'تواضع', arabic: 'مَنْ تَوَاضَعَ لِلَّهِ رَفَعَهُ اللَّهُ', translation: 'هر کس برای خدا تواضع کند، خداوند او را بالا می‌برد', source: 'عیون اخبار الرضا، ج۲، ص۳۲', tags: ['تواضع', 'رفعت'] },
+  { id: 'r3', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'لَا يَكُونُ الْمُؤْمِنُ مُؤْمِناً حَتَّى يَكُونَ خَوْفُهُ مِنَ اللَّهِ أَكْثَرَ مِنْ خَوْفِهِ مِنَ النَّاسِ', translation: 'مؤمن مؤمن نیست تا اینکه ترسش از خدا بیشتر از ترسش از مردم باشد', source: 'عیون اخبار الرضا، ج۲، ص۳۴', tags: ['خوف', 'ایمان'] },
+  { id: 'r4', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'أَفْضَلُ الْعِبَادَةِ الْفِكْرُ فِي آيَاتِ اللَّهِ', translation: 'برترین عبادت، تفکر در آیات خداست', source: 'عیون اخبار الرضا، ج۲، ص۳۶', tags: ['تفکر', 'عبادت'] },
+  { id: 'r5', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'akhirat', topicName: 'آخرت', arabic: 'مَنْ أَصْبَحَ وَأَمْسَى وَهَمُّهُ الْآخِرَةُ كَفَاهُ اللَّهُ هَمَّ الدُّنْيَا', translation: 'هر کس صبح و شام کند در حالی که همّ و غمش آخرت باشد، خداوند غم دنیا را از او برطرف می‌کند', source: 'عیون اخبار الرضا، ج۲، ص۳۸', tags: ['آخرت', 'همّ'] },
+  { id: 'r6', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'الْبُخْلُ عَارٌ وَالْجُبْنُ نَقْصٌ', translation: 'بخل ننگ و ترس نقص است', source: 'بحارالانوار', tags: ['بخل', 'ترس'] },
+  { id: 'r7', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'صِلْ رَحِمَكَ وَلَوْ بِشَرْبَةٍ مِنْ مَاءٍ', translation: 'صله رحم کن، حتی با یک جرعه آب', source: 'عیون اخبار الرضا', tags: ['صله رحم', 'آب'] },
+  { id: 'r8', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ سَتَرَ عَلَى مُؤْمِنٍ سَتَرَ اللَّهُ عَلَيْهِ', translation: 'هر کس عیب مؤمنی را بپوشاند، خدا عیبش را می‌پوشاند', source: 'عیون اخبار الرضا', tags: ['سِتر', 'مؤمن'] },
+  { id: 'r9', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'elm', topicName: 'علم', arabic: 'لَا يَكُونُ الْعِلْمُ إِلَّا مِنْ أَهْلِهِ', translation: 'علم نیست مگر از اهلش', source: 'عیون اخبار الرضا', tags: ['علم', 'اهل'] },
+  { id: 'r10', speaker: 'reza', speakerName: 'امام رضا (ع)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'مَنْ أَحَبَّنَا فَلْيَتَّبِعْ آثَارَنَا', translation: 'هر کس ما را دوست دارد باید از آثار ما پیروی کند', source: 'بحارالانوار', tags: ['محبت', 'پیروی'] },
+
+  /* ===== امام جواد (ع) ===== */
+  { id: 'j1', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'elm', topicName: 'علم', arabic: 'إِنَّ الْعِلْمَ حَيَاةُ الْقُلُوبِ', translation: 'همانا علم، حیات دل‌هاست', source: 'تحف العقول، ص۴۰۰', tags: ['علم', 'حیات'] },
+  { id: 'j2', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'elm', topicName: 'علم', arabic: 'مَنْ أَكْرَمَ عَالِماً فَقَدْ أَكْرَمَ اللَّهَ', translation: 'هر کس عالمی را گرامی دارد، خدا را گرامی داشته است', source: 'بحارالانوار، ج۵۰، ص۴۵', tags: ['عالم', 'اکرام'] },
+  { id: 'j3', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ أَفْضَلُ مَا يُحَلَّى بِهِ الْمُؤْمِنُ', translation: 'صبر بهترین چیزی است که مؤمن به آن آراسته می‌شود', source: 'تحف العقول، ص۴۰۲', tags: ['صبر', 'زینت'] },
+  { id: 'j4', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'مَنْ أَحَبَّنَا أَهْلَ الْبَيْتِ فَلْيَصْبِرْ عَلَى الْأَذَى', translation: 'هر کس ما اهل بیت را دوست دارد، باید بر آزار صبر کند', source: 'بحارالانوار، ج۵۰، ص۴۸', tags: ['محبت', 'صبر'] },
+  { id: 'j5', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'إِنَّ اللَّهَ يُحِبُّ الْعَامِلَ الْأَمِينَ', translation: 'خداوند کارگر امین را دوست دارد', source: 'تحف العقول، ص۴۰۴', tags: ['امانت', 'کار'] },
+  { id: 'j6', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ لَمْ يَعْرِفِ الْمَوَارِيدَ أَفْسَدَ الْمَصَادِرَ', translation: 'هر کس ورودی‌ها را نداند، خروجی‌ها را تباه می‌کند', source: 'بحارالانوار', tags: ['معرفت', 'تدبیر'] },
+  { id: 'j7', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'dua', topicName: 'دعا', arabic: 'ثَلَاثٌ مَنْ كُنَّ فِيهِ لَمْ يَنْدَمْ: تَرْكُ الْعَجَلَةِ، وَالْمَشُورَةُ، وَالتَّوَكُّلُ', translation: 'سه چیز است که هر کس آن را رعایت کند پشیمان نمی‌شود: ترک عجله، مشورت، و توکل', source: 'بحارالانوار', tags: ['عجله', 'مشورت'] },
+  { id: 'j8', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'صِلْ أَخَاكَ الْمُؤْمِنَ وَلَوْ بِقِطْعَةٍ مِنَ الْحَلْوَاءِ', translation: 'با برادر مؤمن خود پیوند کن اگر چه با یک تکه شیرینی باشد', source: 'بحارالانوار', tags: ['برادر', 'پیوند'] },
+  { id: 'j9', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ كَانَ جَاهِلاً كَانَ ضَعِيفاً', translation: 'هر کس نادان باشد، ضعیف است', source: 'تحف العقول', tags: ['جهل', 'ضعف'] },
+  { id: 'j10', speaker: 'javad', speakerName: 'امام جواد (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'الْمُؤْمِنُ يَحْتَاجُ إِلَى تَوْفِيقٍ مِنَ اللَّهِ وَ وَاعِظٍ مِنْ نَفْسِهِ', translation: 'مؤمن به توفیق الهی و پنددهنده‌ای از درون خود نیاز دارد', source: 'کافی', tags: ['توفیق', 'وجدان'] },
+
+  /* ===== امام هادی (ع) ===== */
+  { id: 'ha1', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'quran', topicName: 'قرآن', arabic: 'مَنْ قَرَأَ الْقُرْآنَ يَظُنُّ أَنَّهُ لَا يُتَابَعُ عَلَيْهِ كَانَ مُتَعَبِّداً', translation: 'هر کس قرآن را بخواند و گمان کند که از او پیروی نمی‌شود، عبادت‌کننده‌ای است', source: 'تحف العقول، ص۴۵۰', tags: ['قرآن', 'عبادت'] },
+  { id: 'ha2', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ مِفْتَاحُ كُلِّ خَيْرٍ', translation: 'صبر کلید هر خیری است', source: 'بحارالانوار، ج۵۰، ص۱۲۵', tags: ['صبر', 'خیر'] },
+  { id: 'ha3', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ أَحْسَنَ إِلَى النَّاسِ أَحْسَنَ اللَّهُ إِلَيْهِ', translation: 'هر کس به مردم نیکی کند، خداوند به او نیکی می‌کند', source: 'تحف العقول، ص۴۵۲', tags: ['نیکی', 'مردم'] },
+  { id: 'ha4', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'إِنَّ أَفْضَلَ النَّاسِ مَنْ نَفَعَ النَّاسَ', translation: 'برترین مردم کسی است که به مردم سود برساند', source: 'بحارالانوار، ج۵۰، ص۱۲۸', tags: ['نفع', 'مردم'] },
+  { id: 'ha5', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'elm-va-amal', topicName: 'علم و عمل', arabic: 'لَا تَنْظُرْ إِلَى مَنْ نَطَقَ بَلِ انْظُرْ إِلَى مَنْ أَحْسَنَ', translation: 'به کسی که سخن می‌گوید نگاه نکن، بلکه به کسی که نیکو عمل می‌کند نگاه کن', source: 'تحف العقول، ص۴۵۴', tags: ['عمل', 'گفتار'] },
+  { id: 'ha6', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'الْحِكْمَةُ لَا تَنْجَعُ فِي الطِّبَاعِ الْخَبِيثَةِ', translation: 'حکمت در طبع‌های پلید اثر نمی‌کند', source: 'بحارالانوار', tags: ['حکمت', 'طبع'] },
+  { id: 'ha7', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'مَنْ هَانَتْ عَلَيْهِ نَفْسُهُ فَلَا تَأْمَنْ شَرَّهُ', translation: 'هر کس خودش را سبک بشمارد، از شر او ایمن نباش', source: 'بحارالانوار', tags: ['شر', 'نفس'] },
+  { id: 'ha8', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'dua', topicName: 'دعا', arabic: 'الدُّنْيَا سُوقٌ رَبِحَ فِيهَا قَوْمٌ وَ خَسِرَ آخَرُونَ', translation: 'دنیا بازاری است که گروهی سود و گروهی زیان می‌کنند', source: 'تحف العقول', tags: ['دنیا', 'سود'] },
+  { id: 'ha9', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'احْذَرْ مِنْ كُلِّ عَمَلٍ يَعْمَلُهُ فِي السِّرِّ وَيُسْتَحَى مِنْهُ فِي الْعَلَانِيَةِ', translation: 'بپرهیز از هر عملی که در پنهان انجام می‌شود و در آشکار از آن شرم می‌آید', source: 'بحارالانوار', tags: ['عمل', 'حیا'] },
+  { id: 'ha10', speaker: 'hadi', speakerName: 'امام هادی (ع)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'حُبُّنَا يُسْقِطُ الذُّنُوبَ كَمَا يُسْقِطُ الرِّيحُ الْوَرَقَ', translation: 'محبت ما گناهان را فرو می‌ریزد، همچنان که باد برگ را', source: 'بحارالانوار', tags: ['محبت', 'گناه'] },
+
+  /* ===== امام عسکری (ع) ===== */
+  { id: 'as1', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'namaz', topicName: 'عبادت', arabic: 'إِنَّ أَفْضَلَ الْعَمَلِ الْإِيمَانُ بِاللَّهِ ثُمَّ الصَّلَاةُ', translation: 'برترین عمل، ایمان به خدا و سپس نماز است', source: 'تحف العقول، ص۴۸۰', tags: ['ایمان', 'نماز'] },
+  { id: 'as2', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'مَنْ أَحَبَّنَا فَلْيَكُنْ عَلَى خُلُقٍ حَسَنٍ', translation: 'هر کس ما را دوست دارد، باید خوش‌اخلاق باشد', source: 'بحارالانوار، ج۵۰، ص۲۴۰', tags: ['محبت', 'اخلاق'] },
+  { id: 'as3', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'sabr', topicName: 'صبر', arabic: 'الصَّبْرُ عَلَى الْفَقْرِ مِنَ الْإِيمَانِ', translation: 'صبر بر فقر از ایمان است', source: 'تحف العقول، ص۴۸۲', tags: ['صبر', 'فقر'] },
+  { id: 'as4', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'akhlaq-ejtemai', topicName: 'اخلاق اجتماعی', arabic: 'مَنْ أَكْرَمَ أَخَاهُ فَقَدْ أَكْرَمَ اللَّهَ', translation: 'هر کس برادر خود را گرامی دارد، خدا را گرامی داشته است', source: 'بحارالانوار، ج۵۰، ص۲۴۲', tags: ['برادر', 'اکرام'] },
+  { id: 'as5', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'إِنَّ اللَّهَ يُحِبُّ الْعَبْدَ الْحَيِيَّ الْحَلِيمَ', translation: 'خداوند بنده‌ای را که با حیا و بردبار است دوست دارد', source: 'تحف العقول، ص۴۸۴', tags: ['حیا', 'حلم'] },
+  { id: 'as6', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'لَا تَشْغَلِ الْقَلْبَ بِمَا لَا یَعْنِیهِ', translation: 'دل را به چیزی که به آن مربوط نیست مشغول مکن', source: 'بحارالانوار', tags: ['دل', 'مشغول'] },
+  { id: 'as7', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'elm', topicName: 'علم', arabic: 'الْعَالِمُ كَالشَّمْسِ یُضِیءُ لِلْعَالَمِ', translation: 'عالم همچون خورشید است که برای جهانیان نور می‌دهد', source: 'بحارالانوار', tags: ['عالم', 'خورشید'] },
+  { id: 'as8', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'dua', topicName: 'دعا', arabic: 'مَنْ كَانَ مَعَ اللَّهِ كَانَ اللَّهُ مَعَهُ', translation: 'هر کس با خدا باشد، خدا با اوست', source: 'تحف العقول', tags: ['خدا', 'همراهی'] },
+  { id: 'as9', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'akhlaq', topicName: 'اخلاق', arabic: 'التَّوَاضُعُ نِعْمَةٌ وَالْكِبْرُ نِقْمَةٌ', translation: 'تواضع نعمت و تکبر نقمت است', source: 'تحف العقول', tags: ['تواضع', 'تکبر'] },
+  { id: 'as10', speaker: 'askari', speakerName: 'امام عسکری (ع)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'إِنَّ مَحَبَّتَنَا أَهْلَ الْبَيْتِ تُكَفِّرُ الذُّنُوبَ', translation: 'همانا محبت ما اهل بیت گناهان را می‌پوشاند', source: 'بحارالانوار', tags: ['محبت', 'گناه'] },
+
+  /* ===== امام زمان (عج) ===== */
+  { id: 'm1', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'walayat', topicName: 'ولایت', arabic: 'إِنَّ اللَّهَ يَقُولُ: مَنِ انْتَظَرَ فَرَجَنَا فَكَأَنَّمَا كَانَ فِي عِبَادَةِ اللَّهِ', translation: 'خداوند می‌فرماید: هر کس فرج ما را انتظار بکشد، گویا در عبادت خدا بوده است', source: 'بحارالانوار، ج۵۲، ص۱۲۲', tags: ['انتظار', 'فرج'] },
+  { id: 'm2', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'مَنْ أَحَبَّنَا فَلْيَسْتَعِدَّ لِلْبَلَاءِ', translation: 'هر کس ما را دوست دارد، باید خود را برای بلا آماده کند', source: 'بحارالانوار، ج۵۲، ص۱۲۴', tags: ['محبت', 'بلا'] },
+  { id: 'm3', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'walayat', topicName: 'ولایت', arabic: 'أَفْضَلُ أَعْمَالِ شِيعَتِنَا انْتِظَارُ الْفَرَجِ', translation: 'برترین اعمال شیعیان ما، انتظار فرج است', source: 'بحارالانوار، ج۵۲، ص۱۲۶', tags: ['انتظار', 'افضل'] },
+  { id: 'm4', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'namaz', topicName: 'عبادت', arabic: 'مَنْ كَانَ لِلَّهِ مُطِيعاً كَانَ اللَّهُ لَهُ مُعِيناً', translation: 'هر کس برای خدا مطیع باشد، خداوند یار و یاور او خواهد بود', source: 'بحارالانوار، ج۵۲، ص۱۲۸', tags: ['طاعت', 'یاری'] },
+  { id: 'm5', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'walayat', topicName: 'ولایت', arabic: 'إِنَّ اللَّهَ سَيُتِمُّ نُورَهُ وَلَوْ كَرِهَ الْكَافِرُونَ', translation: 'خداوند نور خود را کامل خواهد کرد، هر چند کافران ناخشنود باشند', source: 'بحارالانوار، ج۵۲، ص۱۳۰', tags: ['نور', 'وعده'] },
+  { id: 'm6', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'dua', topicName: 'دعا', arabic: 'أَكْثِرُوا الدُّعَاءَ لِتَعْجِيلِ الْفَرَجِ', translation: 'برای تعجیل فرج بسیار دعا کنید', source: 'بحارالانوار', tags: ['دعا', 'فرج'] },
+  { id: 'm7', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'tazkiye', topicName: 'تزکیه نفس', arabic: 'فَإِنَّ اللَّهَ هُوَ الْغَنِيُّ الْحَمِيدُ', translation: 'زیرا خدا همان بی‌نیاز ستوده است', source: 'توقیعات', tags: ['خدا', 'بی‌نیازی'] },
+  { id: 'm8', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'walayat', topicName: 'ولایت', arabic: 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ', translation: 'هیچ جنبش و توانی جز به خدا نیست', source: 'بحارالانوار', tags: ['توحید', 'قدرت'] },
+  { id: 'm9', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'mohebbat', topicName: 'محبت اهل بیت', arabic: 'إِنَّهُمْ عِنْدَنَا مَحْفُوظُونَ', translation: 'همانا دوستان ما نزد ما محفوظ‌اند', source: 'بحارالانوار', tags: ['دوست', 'حفظ'] },
+  { id: 'm10', speaker: 'mahdi', speakerName: 'امام زمان (عج)', topic: 'dua', topicName: 'دعا', arabic: 'أَمَّا تَعْجِيلُ الْفَرَجِ فَإِنَّهُ إِلَى اللَّهِ', translation: 'اما تعجیل فرج به دست خداست', source: 'توقیعات', tags: ['فرج', 'خدا'] },
+
+  /* ===== حدیث کساء ===== */
+  {
+    id: 'kasa',
+    speaker: 'kasa',
+    speakerName: 'حضرت فاطمه زهرا (س)',
+    topic: 'walayat',
+    topicName: 'ولایت و اهل بیت',
+    arabic: 'حَدِيثُ الْكِسَاءِ — رِوَايَةُ جَابِرِ بْنِ عَبْدِ اللَّهِ الْأَنْصَارِيِّ',
+    translation: 'حدیث کساء — روایت جابر بن عبدالله انصاری از حضرت فاطمه زهرا (سلام الله علیها)',
+    source: 'بحارالانوار، ج۳۵، ص۲۰۵ • مفاتیح الجنان',
+    tags: ['کساء', 'اهل بیت', 'ولایت'],
+    verses: [
+      { ar: 'بِسَنَدٍ صَحيحٍ عَنْ جابِرِ بْنِ عَبْدِاللَّهِ الاَنْصاري عَنْ فاطِمَةَ الزَّهْراءِ عَلَيهَا السَّلامُ بِنْتِ رَسُولِ اللَّهِ صَلَّي اللَّهُ عَلَيهِ وَآلِهِ قالَ سَمِعْتُ فاطِمَةَ اَنَّها قالَتْ دَخَلَ عَلَيَّ اَبي رَسُولُ اللَّهِ في بَعْضِ الْأَيَّامِ، فَقالَ السَّلامُ عَلَيْكِ يا فاطِمَةُ، فَقُلْتُ عَلَيْكَ السَّلامُ قالَ اِنّي اَجِدُ في بَدَني ضُعْفاً، فَقُلْتُ لَهُ اُعيذُكَ بِاللَّهِ يا اَبَتاهُ مِنَ الضُّعْفِ، فَقَالَ يا فاطِمَةُ ايتيني بِالْكِسآءِ الْيَماني فَغَطّيني بِهِ، فَاَتَيْتُهُ بِالْكِسآءِ الْيَماني فَغَطَّيْتُهُ بِهِ، وَصِرْتُ اَنْظُرُ اِلَيْهِ، وَاِذا وَجْهُهُ يَتَلَأْلَؤُ كَاَنَّهُ الْبَدْرُ في لَيْلَةِ تَمامِهِ وَكَمالِهِ', fa: 'به سندی صحیح از جابر بن عبداللّه انصاری روایت شده از فاطمه زهرا سلام‌اللّه علیها دختر رسول خدا صلی‌اللّه علیه وآله، جابر گوید شنیدم از فاطمه زهرا که فرمود: وارد شد بر من پدرم رسول خدا در بعضی از روزها و فرمود: سلام بر تو ای فاطمه در پاسخش گفتم: بر تو باد سلام فرمود: من در بدنم سستی و ضعفی احساس می‌کنم، گفتم: پناه می‌دهم تو را به خدا ای پدرجان از سستی و ضعف فرمود: ای فاطمه برایم کساء یمانی را بیاور و مرا بدان بپوشان من کساء یمانی را برایش آوردم و او را بدان پوشاندم و هم‌چنان بدو می‌نگریستم و در آن حال چهره‌اش همانند ماه شب چهارده می‌درخشید.' },
+      { ar: 'فَما كانَتْ اِلاَّ ساعَةً وَاِذا بِوَلَدِيَ الْحَسَنِ قَدْ اَقْبَلَ، وَقالَ السَّلامُ عَلَيْكِ يا اُمَّاهُ، فَقُلْتُ وَعَلَيْكَ السَّلامُ يا قُرَّةَ عَيْني وَثَمَرَةَ فُؤادي، فَقالَ يا اُمَّاهُ اِنّي اَشَمُّ عِنْدَكِ رآئِحَةً طَيِّبَةً، كَاَنَّها رآئِحَةُ جَدّي رَسُولِ اللَّهِ، فَقُلْتُ نَعَمْ اِنَّ جَدَّكَ تَحْتَ الْكِسآءِ، فَاَقْبَلَ الْحَسَنُ نَحْوَ الْكِسآءِ، وَقالَ السَّلامُ عَلَيْكَ يا جَدَّاهُ يا رَسُولَ اللَّهِ، اَتَاْذَنُ لي اَنْ اَدْخُلَ مَعَكَ تَحْتَ الْكِسآءِ، فَقالَ وَعَلَيْكَ السَّلامُ يا وَلَدي وَيا صاحِبَ حَوْضي، قَدْ اَذِنْتُ لَكَ، فَدَخَلَ مَعَهُ تَحْتَ الْكِسآءِ', fa: 'پس ساعتی نگذشت که دیدم فرزندم حسن وارد شد و گفت سلام بر تو ای مادر گفتم: بر تو باد سلام ای نور دیده‌ام و میوه دلم گفت: مادرجان من در نزد تو بوی خوشی استشمام می‌کنم گویا بوی جدم رسول خدا است گفتم: آری همانا جد تو در زیر کساء است پس حسن بطرف کساء رفت و گفت: سلام بر تو ای جد بزرگوار ای رسول خدا آیا به من اذن می‌دهی که وارد شوم با تو در زیر کساء؟ فرمود: بر تو باد سلام ای فرزندم و ای صاحب حوض من اذنت دادم پس حسن با آن جناب بزیر کساء رفت.' },
+      { ar: 'فَما كانَتْ اِلاَّ ساعَةً وَاِذا بِوَلَدِيَ الْحُسَيْنِ قَدْ اَقْبَلَ، وَقالَ السَّلامُ عَلَيْكِ يا اُمَّاهُ، فَقُلْتُ وَعَلَيْكَ السَّلامُ يا وَلَدي وَيا قُرَّةَ عَيْني وَثَمَرَةَ فُؤادي، فَقالَ لي يا اُمَّاهُ اِنّي اَشَمُّ عِنْدَكِ رآئِحَةً طَيِّبَةً، كَاَنَّها رآئِحَةُ جَدّي رَسُولِ اللَّهِ صَلَّي اللَّهُ عَلَيْهِ وَآلِهِ فَقُلْتُ نَعَمْ اِنَّ جَدَّكَ وَاَخاكَ تَحْتَ الْكِسآءِ، فَدَنَي الْحُسَيْنُ نَحْوَ الْكِسآءِ، وَقالَ السَّلامُ عَلَيْكَ يا جَدَّاهُ، اَلسَّلامُ عَلَيْكَ يا مَنِ اخْتارَهُ اللَّهُ، اَتَاْذَنُ لي اَنْ اَكُونَ مَعَكُما تَحْتَ الْكِسآءِ، فَقالَ وَعَلَيْكَ السَّلامُ يا وَلَدي وَيا شافِعَ اُمَّتي، قَدْ اَذِنْتُ لَكَ فَدَخَلَ مَعَهُما تَحْتَ الْكِسآءِ', fa: 'ساعتی نگذشت که فرزندم حسین وارد شد و گفت: سلام بر تو ای مادر گفتم: بر تو باد سلام ای فرزند من و ای نور دیده‌ام و میوه دلم فرمود: مادرجان من در نزد تو بوی خوشی استشمام می‌کنم گویا بوی جدم رسول خدا(ص) است گفتم آری همانا جد تو و برادرت در زیر کساء هستند حسین نزدیک کساء رفته گفت: سلام بر تو ای جد بزرگوار، سلام بر تو ای کسی که خدا او را برگزید آیا به من اذن می‌دهی که داخل شوم با شما در زیر کساء فرمود: و بر تو باد سلام ای فرزندم و ای شفاعت‌کننده امتم به تو اذن دادم پس او نیز با آن دو در زیر کساء وارد شد.' },
+      { ar: 'فَاَقْبَلَ عِنْدَ ذلِكَ اَبُوالْحَسَنِ عَلِيُّ بْنُ اَبي طالِبٍ، وَقالَ السَّلامُ عَلَيْكِ يا بِنْتَ رَسُولِ اللَّهِ، فَقُلْتُ وَعَلَيْكَ السَّلامُ يا اَبَا الْحَسَنِ وَ يا اَميرَ الْمُؤْمِنينَ فَقالَ يا فاطِمَةُ اِنّي اَشَمُّ عِنْدَكِ رائِحَةً طَيِّبَةً كَاَنَّها رآئِحَةُ اَخي وَابْنِ عَمّي رَسُولِ اللَّهِ، فَقُلْتُ نَعَمْ ها هُوَ مَعَ وَلَدَيْكَ تَحْتَ الْكِسآءِ، فَاَقْبَلَ عَلِيٌّ نَحْوَ الْكِسآءِ، وَقالَ السَّلامُ عَلَيْكَ يا رَسُولَ اللَّهِ، اَتَاْذَنُ لي اَنْ اَكُونَ مَعَكُمْ تَحْتَ الْكِسآءِ، قالَ لَهُ وَعَلَيْكَ السَّلامُ يا اَخي يا وَصِيّي وَخَليفَتي وَصاحِبَ لِوآئي، قَدْ اَذِنْتُ لَكَ فَدَخَلَ عَلِيٌّ تَحْتَ الْكِسآءِ', fa: 'در این هنگام ابوالحسن علی بن ابی‌طالب وارد شد و فرمود سلام بر تو ای دختر رسول خدا گفتم: و بر تو باد سلام ای اباالحسن و ای امیرمؤمنان فرمود: ای فاطمه من بوی خوشی نزد تو استشمام می‌کنم گویا بوی برادرم و پسرعمویم رسول خدا است ؟ گفتم: آری این او است که با دو فرزندت در زیر کساء هستند پس علی نیز به طرف کساء رفت و گفت سلام بر تو ای رسول خدا آیا اذن می‌دهی که من نیز با شما در زیر کساء باشم رسول خدا به او فرمود: و بر تو باد سلام ای برادر من و ای وصی و خلیفه و پرچمدار من به تو اذن دادم پس علی نیز وارد در زیر کساء شد.' },
+      { ar: 'ثُمَّ اَتَيْتُ نَحْوَ الْكِسآءِ، وَقُلْتُ اَلسَّلامُ عَلَيْكَ يا اَبَتاهُ يا رَسُولَ اللَّهِ، اَتَاْذَنُ لي اَن اَكُونَ مَعَكُمْ تَحْتَ الْكِسآءِ، قالَ وَعَلَيْكِ السَّلامُ يا بِنْتي وَيا بَضْعَتي قَدْ اَذِنْتُ لَكِ، فَدَخَلْتُ تَحْتَ الْكِسآءِ', fa: 'در این هنگام من نیز به طرف کساء رفتم و عرض کردم سلام بر تو ای پدرجان ای رسول خدا آیا به من هم اذن می‌دهی که با شما در زیر کساء باشم؟ فرمود: و بر تو باد سلام ای دخترم و ای پاره تنم به تو هم اذن دادم، پس من نیز به زیر کساء رفتم.' },
+      { ar: 'فَلَمَّا اكْتَمَلْنا جَميعاً تَحْتَ الْكِسآءِ، اَخَذَ اَبي رَسُولُ اللَّهِ بِطَرَفَيِ الْكِسآءِ، وَاَوْمَئَ بِيَدِهِ الْيُمْني اِلَي السَّمآءِ، وَقالَ اَللَّهُمَّ اِنَّ هؤُلاءِ اَهْلُ بَيْتي وَخآصَّتي وَحآمَّتي، لَحْمُهُمْ لَحْمي، وَدَمُهُمْ دَمي، يُؤْلِمُني ما يُؤْلِمُهُمْ، وَيَحْزُنُني ما يَحْزُنُهُمْ، اَنَا حَرْبٌ لِمَنْ حارَبَهُمْ، وَسِلْمٌ لِمَنْ سالَمَهُمْ وَعَدُوٌّ لِمَنْ عاداهُمْ، وَمُحِبٌّ لِمَنْ اَحَبَّهُمْ، اِنَّهُمْ مِنّي وَاَ نَا مِنْهُمْ، فَاجْعَلْ صَلَواتِكَ وَبَرَكاتِكَ وَرَحْمَتَكَ، وَغُفْرانَكَ وَرِضْوانَكَ عَلَيَّ وَعَلَيْهِمْ، وَاَذْهِبْ عَنْهُمُ الرِّجْسَ، وَطَهِّرْهُمْ تَطْهيراً', fa: 'و چون همگی در زیر کساء جمع شدیم پدرم رسول خدا دو طرف کساء را گرفت و با دست راست به سوی آسمان اشاره کرد و فرمود: خدایا اینانند خاندان من و خواص و نزدیکانم گوشتشان گوشت من و خونشان خون من است می‌آزارد مرا هرچه ایشان را بیازارد و به اندوه می‌اندازد مرا هرچه ایشان را به اندوه در آورد من در جنگم با هر که با ایشان بجنگد و در صلحم با هر که با ایشان در صلح است و دشمنم با هر کس که با ایشان دشمنی کند و دوستم با هر کس که ایشان را دوست دارد اینان از منند و من از ایشانم پس بفرست درودهای خود و برکت‌هایت و مهرت و آمرزشت و خوشنودیت را بر من و بر ایشان و دور کن از ایشان پلیدی را و پاکیزه شان کن به خوبی.' },
+      { ar: 'فَقالَ اللَّهُ عَزَّوَجَلَّ يا مَلائِكَتي وَيا سُكَّانَ سَمواتي، اِنّي ما خَلَقْتُ سَمآءً مَبْنِيَّةً، وَلا اَرْضاً مَدْحِيَّةً، وَلا قَمَراً مُنيراً، وَلا شَمْساً مُضِيئَةً، وَلا فَلَكاً يَدُورُ، وَلا بَحْراً يَجْري، وَلا فُلْكاً يَسْري، اِلاَّ في مَحَبَّةِ هؤُلاءِ الْخَمْسَةِ الَّذينَ هُمْ تَحْتَ الْكِسآءِ، فَقالَ الْأَمينُ جِبْرآئيلُ يا رَبِّ وَمَنْ تَحْتَ الْكِسآءِ، فَقالَ عَزَّوَجَلَّ هُمْ اَهْلُ بَيْتِ النُّبُوَّةِ، وَمَعْدِنُ الرِّسالَةِ، هُمْ فاطِمَةُ وَاَبُوها وَبَعْلُها وَبَنُوها', fa: 'پس خدای عزوجل فرمود: ای فرشتگان من و ای ساکنان آسمان‌هایم براستی که من نیافریدم آسمان بنا شده و نه زمین گسترده و نه ماه تابان و نه مهر درخشان و نه فلک چرخان و نه دریای روان و نه کشتی در جریان را مگر به خاطر دوستی این پنج تن اینان که در زیر کسایند پس جبرئیل امین عرض کرد: پروردگارا کیانند در زیر کساء؟ خدای عزوجل فرمود: آنان خاندان نبوت و رسالتند: آنان فاطمه است و پدرش و شوهر و دو فرزندش.' },
+      { ar: 'فَقالَ جِبْرآئيلُ يا رَبِّ، اَتَاْذَنُ لي اَنْ اَهْبِطَ اِلَي الْأَرْضِ لِأَكُونَ مَعَهُمْ سادِساً، فَقالَ اللَّهُ نَعَمْ قَدْ اَذِنْتُ لَكَ، فَهَبَطَ الْأَمينُ جِبْرآئيلُ، وَقالَ السَّلامُ عَلَيْكَ يا رَسُولَ اللَّهِ، الْعَلِيُ الْأَعْلي يُقْرِئُكَ السَّلامَ، وَيَخُصُّكَ بِالتَّحِيَّةِ وَالْإِكْرامِ، وَيَقُولُ لَكَ وَعِزَّتي وَجَلالي اِنّي ما خَلَقْتُ سَمآءً مَبْنِيَّةً، وَلا اَرْضاً مَدْحِيَّةً، وَلا قَمَراً مُنيراً، وَلا شَمْساً مُضيئَةً وَلا فَلَكاً يَدُورُ، وَلا بَحْراً يَجْري، وَلا فُلْكاً يَسْري، اِلاَّ لِأَجْلِكُمْ وَمَحَبَّتِكُمْ، وَقَدْ اَذِنَ لي اَنْ اَدْخُلَ مَعَكُمْ، فَهَلْ تَاْذَنُ لي يا رَسُولَ اللَّهِ، فَقالَ رَسُولُ اللَّهِ وَعَلَيْكَ السَّلامُ يا اَمينَ وَحْيِ اللَّهِ، اِنَّهُ نَعَمْ قَدْ اَذِنْتُ لَكَ، فَدَخَلَ جِبْرآئيلُ مَعَنا تَحْتَ الْكِسآءِ، فَقالَ لِأَبي اِنَّ اللَّهَ قَدْ اَوْحى اِلَيْكُمْ يَقُولُ: اِنَّما يُريدُ اللَّهُ لِيُذْهِبَ عَنْكُمُ الرِّجْسَ اَهْلَ الْبَيْتِ، وَيُطَهِّرَكُمْ تَطْهيراً', fa: 'جبرئیل عرض کرد: پروردگارا آیا به من هم اذن می‌دهی که به زمین فرود آیم تا ششمین آنها باشم خدا فرمود: آری به تو اذن دادم پس جبرئیل امین به زمین آمد و گفت: سلام بر تو ای رسول خدا، (پروردگار) علی اعلی سلامت می‌رساند و تو را به تحیت و اکرام مخصوص داشته و می‌فرماید: به عزت و جلالم سوگند که من نیافریدم آسمان بنا شده و نه زمین گسترده و نه ماه تابان و نه مهر درخشان و نه فلک چرخان و نه دریای روان و نه کشتی در جریان را مگر برای خاطر شما و محبت و دوستی شما و به من نیز اذن داده است که با شما در زیر کساء باشم پس آیا تو هم ای رسول خدا اذنم می‌دهی؟ رسول خدا(ص ) فرمود و بر تو باد سلام ای امین وحی خدا آری به تو هم اذن دادم پس جبرئیل با ما وارد در زیر کساء شد و به پدرم گفت: همانا خداوند بسوی شما وحی کرده و می‌فرماید: (حقیقت این است که خدا می‌خواهد پلیدی (و ناپاکی) را از شما خاندان ببرد و پاکیزه کند شما را پاکیزگی کامل).' },
+      { ar: 'فَقالَ عَلِيٌّ لِأَبي يا رَسُولَ اللَّهِ، اَخْبِرْني ما لِجُلُوسِنا هذا تَحْتَ الْكِسآءِ مِنَ الْفَضْلِ عِنْدَ اللَّهِ؟ فَقالَ النَّبِيُّ وَالَّذي بَعَثَني بِالْحَقِّ نَبِيّاً، وَاصْطَفاني بِالرِّسالَةِ نَجِيّاً، ما ذُكِرَ خَبَرُنا هذا في مَحْفِلٍ مِنْ مَحافِلِ اَهْلِ الْأَرْضِ، وَفيهِ جَمْعٌ مِنْ شَيعَتِنا وَمُحِبّينا، اِلاَّ وَنَزَلَتْ عَلَيْهِمُ الرَّحْمَةُ وَحَفَّتْ بِهِمُ الْمَلائِكَةُ، وَاسْتَغْفَرَتْ لَهُمْ اِلي اَنْ يَتَفَرَّقُوا، فَقالَ عَلِيٌّ اِذاً وَاللَّهِ فُزْنا وَفازَ شيعَتُنا وَرَبِّ الْكَعْبَةِ', fa: 'علی علیه‌السلام به پدرم گفت: ای رسول خدا به من بگو این جلوس (و نشستن) ما در زیر کساء چه فضیلتی (و چه شرافتی) نزد خدا دارد؟ پیغمبر(ص ) فرمود: سوگند بدان خدائی که مرا به حق به پیامبری برانگیخت و به رسالت و نجات دادن (خلق) برگزید که ذکر نشود این خبر (و سرگذشت) ما در محفلی از محافل مردم زمین که در آن گروهی از شیعیان و دوستان ما باشند جز آنکه نازل شود بر ایشان رحمت (حق) و فرا گیرند ایشان را فرشتگان و برای آنها آمرزش خواهند تا آنگاه که از دور هم پراکنده شوند، علی (که این فضیلت را شنید) فرمود: با این ترتیب به خدا سوگند ما رستگار شدیم و سوگند به پروردگار کعبه که شیعیان ما نیز رستگار شدند.' },
+      { ar: 'فَقالَ النَّبِيُّ ثانِياً يا عَلِيُّ وَالَّذي بَعَثَني بِالْحَقِّ نَبِيّاً، وَاصْطَفاني بِالرِّسالَةِ نَجِيّاً، ما ذُكِرَ خَبَرُنا هذا في مَحْفِلٍ مِنْ مَحافِلِ اَهْلِ الْأَرْضِ، وَفيهِ جَمْعٌ مِنْ شيعَتِنا وَمُحِبّينا، وَفيهِمْ مَهْمُومٌ اِلاَّ وَفَرَّجَ اللَّهُ هَمَّهُ، وَلا مَغْمُومٌ اِلاَّ وَكَشَفَ اللَّهُ غَمَّهُ، وَلا طالِبُ حاجَةٍ اِلاَّ وَقَضَي اللّهُ حاجَتَهُ، فَقالَ عَلِيٌّ اِذاً وَاللَّهِ فُزْنا وَسُعِدْنا، وَكَذلِكَ شيعَتُنا فازُوا وَسُعِدُوا فِي الدُّنْيا وَالْأخِرَةِ، وَرَبِّ الْكَعْبَةِ', fa: 'دوباره پیغمبر فرمود: ای علی سوگند بدانکه مرا بحق به نبوت برانگیخت و به رسالت و نجات دادن (خلق) برگزید ذکر نشود این خبر (و سرگذشت) ما در محفلی از محافل مردم زمین که در آن گروهی از شیعیان و دوستان ما باشند و در میان آنها اندوهناکی باشد جز آنکه خدا اندوهش را برطرف کند و نه غمناکی جز آنکه خدا غمش را بگشاید و نه حاجت‌خواهی باشد جز آنکه خدا حاجتش را برآورد، علی گفت: بدین ترتیب به خدا سوگند ما کامیاب و سعادتمند شدیم و هم‌چنین سوگند به پروردگار کعبه که شیعیان ما نیز رستگار شدند.' }
+    ]
+  },
+
+  /* ===== خطبه غدیر ===== */
+  {
+    id: 'ghadir',
+    speaker: 'ghadir',
+    speakerName: 'پیامبر اکرم (ص)',
+    topic: 'walayat',
+    topicName: 'ولایت و امامت',
+    arabic: 'خُطْبَةُ الْغَدِيرِ',
+    translation: 'خطبه غدیر — خطبه پیامبر اکرم (ص) در روز عید غدیر خم',
+    source: 'بحارالانوار، ج۳۷، ص۲۵۴-۲۷۰ • مفاتیح الجنان',
+    tags: ['غدیر', 'ولایت', 'امامت'],
+    verses: [
+      { ar: 'الْحَمْدُ لِلَّهِ الَّذِي عَلَا فِي تَوْحِيدِهِ، وَدَنَا فِي تَفْرِيدِهِ، وَجَلَّ فِي سُلْطَانِهِ، وَعَظُمَ فِي أَرْكَانِهِ، وَأَحَاطَ بِكُلِّ شَيْءٍ عِلْماً، وَهُوَ فِي مَكَانِهِ، وَقَهَرَ جَمِيعَ الْخَلْقِ بِقُدْرَتِهِ وَبُرْهَانِهِ', fa: 'ستایش خداوندی را که در توحیدش برتر و در یگانگی‌اش نزدیک است و در سلطنتش جلیل و در ارکانش عظیم است. به همه چیز دانش دارد و در جای خویش است و همه آفریدگان را با قدرت و برهانش مقهور ساخته است.' },
+      { ar: 'أَيُّهَا النَّاسُ، إِنَّ جَبْرَئِيلَ أَتَانِي عَنْ رَبِّي جَلَّ جَلَالُهُ وَقَالَ: يَا مُحَمَّدُ، إِنَّ اللَّهَ يُقْرِئُكَ السَّلَامَ وَيَقُولُ لَكَ: إِنِّي أَرْسَلْتُكَ إِلَى النَّاسِ كَافَّةً بَشِيراً وَنَذِيراً', fa: 'ای مردم! جبرئیل از سوی پروردگارم که جلالش بزرگ است نزد من آمد و گفت: ای محمد! همانا خداوند بر تو سلام می‌رساند و می‌فرماید: من تو را به سوی همه مردم به عنوان بشارت‌دهنده و بیم‌دهنده فرستادم.' },
+      { ar: 'أَيُّهَا النَّاسُ، إِنِّي قَدْ بَلَّغْتُ مَا أُرْسِلْتُ بِهِ إِلَيْكُمْ، وَحُجَّتِي عَلَىٰ كُلِّ مَنْ حَضَرَ وَمَنْ غَابَ', fa: 'ای مردم! من آنچه به آن فرستاده شده بودم به شما رساندم و حجت من بر هر حاضر و غایب تمام است.' },
+      { ar: 'مَعَاشِرَ النَّاسِ، تَدَبَّرُوا الْقُرْآنَ وَافْهَمُوا آيَاتِهِ وَانْظُرُوا مُحْكَمَاتِهِ وَلَا تَتَّبِعُوا مُتَشَابِهَهُ', fa: 'ای گروه مردم! در قرآن بیندیشید و آیاتش را بفهمید و به محکماتش بنگرید و از متشابهاتش پیروی نکنید.' },
+      { ar: 'أَيُّهَا النَّاسُ، إِنِّي تَارِكٌ فِيكُمُ الثَّقَلَيْنِ: كِتَابَ اللَّهِ وَعِتْرَتِي أَهْلَ بَيْتِي، مَا إِنْ تَمَسَّكْتُمْ بِهِمَا لَنْ تَضِلُّوا أَبَداً', fa: 'ای مردم! من دو چیز گرانبها در میان شما می‌گذارم: کتاب خدا و عترتم، اهل بیتم. اگر به این دو تمسک کنید، هرگز گمراه نخواهید شد.' },
+      { ar: 'أَيُّهَا النَّاسُ، مَنْ أَوْلَىٰ بِكُمْ مِنْ أَنْفُسِكُمْ؟ فَقَالُوا: اللَّهُ وَرَسُولُهُ أَعْلَمُ. فَقَالَ: إِنَّ اللَّهَ مَوْلَايَ وَأَنَا مَوْلَى الْمُؤْمِنِينَ، وَأَنَا أَوْلَىٰ بِهِمْ مِنْ أَنْفُسِهِمْ', fa: 'ای مردم! چه کسی بر شما از خودتان سزاوارتر است؟ گفتند: خدا و رسولش داناترند. فرمود: همانا خدا مولای من است و من مولای مؤمنانم و من به آنان از خودشان سزاوارترم.' },
+      { ar: 'ثُمَّ أَخَذَ بِيَدِ عَلِيٍّ فَرَفَعَهَا وَقَالَ: مَنْ كُنْتُ مَوْلَاهُ فَعَلِيٌّ مَوْلَاهُ. اللَّهُمَّ وَالِ مَنْ وَالَاهُ، وَعَادِ مَنْ عَادَاهُ، وَأَحِبَّ مَنْ أَحَبَّهُ، وَأَبْغِضْ مَنْ أَبْغَضَهُ، وَانْصُرْ مَنْ نَصَرَهُ، وَاخْذُلْ مَنْ خَذَلَهُ', fa: 'سپس دست علی را گرفت و بالا برد و فرمود: هر کس من مولای اویم، علی مولای اوست. خدایا دوست بدار هر که او را دوست دارد، دشمن بدار هر که او را دشمن دارد، دوست بدار هر که او را دوست دارد، دشمن بدار هر که او را دشمن دارد، یاری کن هر که او را یاری کند، خوار کن هر که او را خوار کند.' },
+      { ar: 'اللَّهُمَّ اشْهَدْ أَنِّي قَدْ بَلَّغْتُ وَرَسُولُكَ شَاهِدٌ. ثُمَّ قَالَ: أَيُّهَا النَّاسُ، إِنَّ اللَّهَ قَدْ أَكْمَلَ لَكُمْ دِينَكُمْ بِإِمَامَةِ عَلِيٍّ وَلِيِّهِ', fa: 'خدایا گواه باش که من ابلاغ کردم و رسول تو گواه است. سپس فرمود: ای مردم! همانا خداوند دین شما را با امامت علی، ولی خود، کامل کرد.' },
+      { ar: 'وَأَنْزَلَ عَلَيَّ: ﴿الْيَوْمَ أَكْمَلْتُ لَكُمْ دِينَكُمْ وَأَتْمَمْتُ عَلَيْكُمْ نِعْمَتِي وَرَضِيتُ لَكُمُ الْإِسْلَامَ دِيناً﴾', fa: 'و بر من نازل فرمود: «امروز دین شما را برایتان کامل کردم و نعمت خود را بر شما تمام نمودم و اسلام را به عنوان آیین شما پسندیدم» (مائده، آیه ۳).' },
+      { ar: 'مَعَاشِرَ النَّاسِ، إِنِّي أُشْهِدُ اللَّهَ وَرَسُولَهُ وَالْمُؤْمِنِينَ أَنَّ عَلِيّاً وَأَوْلَادَهُ أَئِمَّةُ الْمُسْلِمِينَ، وَحُجَجُ اللَّهِ عَلَى الْعَالَمِينَ', fa: 'ای گروه مردم! خدا و رسولش و مؤمنان را گواه می‌گیرم که همانا علی و فرزندانش امامان مسلمانان و حجت‌های خدا بر جهانیانند.' },
+      { ar: 'أَيُّهَا النَّاسُ، إِنِّي أَدْعُوكُمْ إِلَىٰ بَيْعَتِي لِعَلِيٍّ، فَإِنَّ اللَّهَ أَمَرَنِي بِذَلِكَ. هُنَاكَ صَاحَ النَّاسُ: نَعَمْ، سَمِعْنَا وَأَطَعْنَا لِلَّهِ وَلِرَسُولِهِ', fa: 'ای مردم! شما را به بیعت با علی فرا می‌خوانم که خداوند مرا به این امر فرمان داده است. آنگاه مردم صدا زدند: آری! شنیدیم و برای خدا و رسولش اطاعت کردیم.' },
+      { ar: 'اللَّهُمَّ إِنِّي أُشْهِدُكَ عَلَىٰ هَؤُلَاءِ الْقَوْمِ بِمَا أَمَرْتَنِي بِهِ، وَإِنَّ لَكَ الْحُجَّةَ عَلَيْهِمْ فِي ذَلِكَ', fa: 'خدایا! تو را بر این گروه گواه می‌گیرم به آنچه مرا به آن فرمان دادی و همانا برای تو بر آنان حجت است.' }
+    ]
+  }
+];
+
+/* ============================================================
+   RENDER FUNCTIONS
+   ============================================================ */
+
+/* ===== Hero Hadith (روزانه) ===== */
+function renderHeroHadith() {
+  const day = getDayOfYear();
+  // احادیث اصلی + احادیث کوتاه را ادغام می‌کنیم برای تنوع بیشتر
+  const all = HADITHS_DATA.concat(SHORT_HADITHS.map((h, i) => ({
+    id: 'short_h_' + i,
+    speakerName: h.speaker,
+    arabic: h.ar,
+    translation: h.fa,
+    source: h.ref,
+    tags: ['کوتاه']
+  })));
+  const h = all[day % all.length];
+  const isBm = bookmarks.includes(h.id);
+  const arText = h.verses ? h.verses[0].ar : h.arabic;
+  const faText = h.verses ? h.verses[0].fa : h.translation;
+
+  $('#heroDate').textContent = getTodayLabel();
+  $('#heroContent').innerHTML = `
+    <div class="hero-ar">${arText}</div>
+    <div class="hero-fa">${faText}</div>
+    <div class="hero-meta">
+      <span class="speaker">${h.speakerName || ''}</span>
+      <span class="dot"></span>
+      <span>${h.source || ''}</span>
+    </div>
+    <div class="hero-actions">
+      <button data-act="bm" class="${isBm ? 'active' : ''}" title="نشان‌گذاری">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+      <button data-act="copy" title="کپی">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+      <button data-act="open" title="مشاهده">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+      </button>
+      <button data-act="share" title="اشتراک‌گذاری">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+    </div>
+  `;
+  $$('#heroContent [data-act]').forEach(b => b.onclick = () => {
+    const act = b.dataset.act;
+    if (act === 'bm') {
+      toggleBookmark(h.id);
+      renderHeroHadith();
+    } else if (act === 'copy') {
+      copyText(arText + '\n\n' + faText + '\n\n' + (h.speakerName || '') + '\n' + (h.source || ''));
+    } else if (act === 'open') {
+      openHadith(h.id);
+    } else if (act === 'share') {
+      shareText((h.speakerName || '') + '\n\n' + arText + '\n\n' + faText + '\n\n' + (h.source || ''));
+    }
+  });
+}
+
+/* ===== Noor of the Day (4 بخش روزانه) ===== */
+function renderNoorOfTheDay() {
+  const n = getTodayNoor();
+  const c = $('#noorGrid');
+  c.innerHTML = `
+    <div class="noor-item">
+      <div class="noor-top">
+        <div class="noor-ico">${ICONS.quran}</div>
+        <div class="noor-title">آیه امروز</div>
+      </div>
+      <div class="noor-ar">${n.verse.ar}</div>
+      <div class="noor-fa">${n.verse.fa}</div>
+      <span class="noor-ref">${n.verse.ref}</span>
+    </div>
+    <div class="noor-item">
+      <div class="noor-top">
+        <div class="noor-ico">${ICONS.hadith}</div>
+        <div class="noor-title">حدیث امروز</div>
+      </div>
+      <div class="noor-ar">${n.hadith.ar}</div>
+      <div class="noor-fa">${n.hadith.fa}</div>
+      <span class="noor-ref">${n.hadith.speaker} — ${n.hadith.ref}</span>
+    </div>
+    <div class="noor-item">
+      <div class="noor-top">
+        <div class="noor-ico">${ICONS.dua}</div>
+        <div class="noor-title">دعای امروز</div>
+      </div>
+      <div class="noor-ar">${n.dua.ar}</div>
+      <div class="noor-fa">${n.dua.fa}</div>
+      <span class="noor-ref">${n.dua.name}</span>
+    </div>
+    <div class="noor-item" id="noorDeedItem" style="cursor:pointer;">
+      <div class="noor-top">
+        <div class="noor-ico">${ICONS.good}</div>
+        <div class="noor-title">عمل نیک امروز</div>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px;color:var(--gold);"><polyline points="15 18 9 12 15 6"/></svg>
+      </div>
+      <div class="noor-fa" style="border-top:0;padding-top:0;">${n.deed}</div>
+    </div>
+  `;
+  $('#noorDeedItem').onclick = () => showGoodDeed(n.deed);
+}
+
+function showGoodDeed(deed) {
+  $('#goodDeedContent').innerHTML = `
+    <div class="info-block" style="text-align:center;">
+      <h4 style="justify-content:center;">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        پیشنهاد امروز
+      </h4>
+      <p style="font-size:0.95rem;line-height:2;color:var(--text);">${deed}</p>
+    </div>
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        چرا این کار؟
+      </h4>
+      <p>انجام کارهای نیک کوچک، عادت‌های بزرگ معنوی می‌سازد. پیامبر اکرم (ص) فرمود: «أَحَبُّ الْأَعْمَالِ إِلَى اللَّهِ أَدْوَمُهَا وَإِنْ قَلَّ» — محبوب‌ترین اعمال نزد خدا، پیوسته‌ترین آن‌هاست اگر چه اندک باشد.</p>
+    </div>
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        پیشنهاد
+      </h4>
+      <p>امروز این کار را با نیت خالص انجام بده و اگر توانستی، به عزیزانت هم پیشنهاد بده تا در ثواب آن شریک شوند.</p>
+    </div>
+  `;
+  $('#modalGoodDeed').classList.add('show');
+}
+
+/* ===== Category Chips ===== */
+function renderFilterChips() {
+  const speakers = [
+    { id: 'all', name: 'همه' },
+    { id: 'payambar', name: 'پیامبر (ص)' },
+    { id: 'fatemeh', name: 'حضرت زهرا (س)' },
+    { id: 'ali', name: 'امام علی (ع)' },
+    { id: 'hasan', name: 'امام حسن (ع)' },
+    { id: 'hossein', name: 'امام حسین (ع)' },
+    { id: 'sajjad', name: 'امام سجاد (ع)' },
+    { id: 'baqer', name: 'امام باقر (ع)' },
+    { id: 'sadeq', name: 'امام صادق (ع)' },
+    { id: 'kazem', name: 'امام کاظم (ع)' },
+    { id: 'reza', name: 'امام رضا (ع)' },
+    { id: 'javad', name: 'امام جواد (ع)' },
+    { id: 'hadi', name: 'امام هادی (ع)' },
+    { id: 'askari', name: 'امام عسکری (ع)' },
+    { id: 'mahdi', name: 'امام زمان (عج)' },
+    { id: 'kasa', name: 'حدیث کساء' },
+    { id: 'ghadir', name: 'خطبه غدیر' }
+  ];
+  const c = $('#filterChips');
+  c.innerHTML = '';
+  speakers.forEach(s => {
+    const btn = document.createElement('button');
+    btn.className = 'chip' + (currentFilter === s.id ? ' active' : '');
+    btn.textContent = s.name;
+    btn.onclick = () => {
+      currentFilter = s.id;
+      renderFilterChips();
+      renderHadithList();
+    };
+    c.appendChild(btn);
+  });
+}
+
+/* ===== Hadith List ===== */
+function renderHadithList() {
+  const c = $('#hadithList');
+  c.innerHTML = '';
+  let list = HADITHS_DATA;
+
+  if (currentFilter !== 'all') {
+    list = list.filter(h => h.speaker === currentFilter);
+  }
+
+  if (searchQuery) {
+    const q = searchQuery.trim().toLowerCase();
+    list = list.filter(h =>
+      (h.arabic && h.arabic.includes(q)) ||
+      (h.translation && h.translation.includes(q)) ||
+      (h.speakerName && h.speakerName.includes(q)) ||
+      (h.topicName && h.topicName.includes(q)) ||
+      (h.source && h.source.includes(q)) ||
+      (h.tags && h.tags.some(t => t.includes(q))) ||
+      (h.verses && h.verses.some(v => v.ar.includes(q) || v.fa.includes(q)))
+    );
+  }
+
+  const catName = currentFilter === 'all' ? 'همه احادیث' :
+    (HADITHS_DATA.find(h => h.speaker === currentFilter)?.speakerName || '');
+  $('#listTitle').textContent = catName;
+  $('#listCount').textContent = faNum(list.length) + ' حدیث';
+
+  if (!list.length) {
+    c.innerHTML = `
+      <div class="empty">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        <p>حدیثی یافت نشد.</p>
+      </div>`;
+    return;
+  }
+
+  list.forEach(h => {
+    const isBm = bookmarks.includes(h.id);
+    const arText = h.verses ? h.verses[0].ar : h.arabic;
+    const faText = h.verses ? h.verses[0].fa : h.translation;
+    const item = document.createElement('div');
+    item.className = 'hadith-item';
+    item.innerHTML = `
+      <div class="h-ico">${ICONS.hadith}</div>
+      <div class="h-info">
+        <div class="h-speaker">${h.speakerName}</div>
+        <div class="h-ar">${highlight(arText, searchQuery)}</div>
+        <div class="h-fa">${highlight(faText, searchQuery)}</div>
+      </div>
+      <button class="h-bm ${isBm ? 'active' : ''}" data-bm="${h.id}" aria-label="نشان‌گذاری">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+    `;
+    item.onclick = (e) => {
+      if (e.target.closest('[data-bm]')) return;
+      openHadith(h.id);
+    };
+    item.querySelector('[data-bm]').onclick = (e) => {
+      e.stopPropagation();
+      toggleBookmark(h.id);
+      renderHadithList();
+      renderHeroHadith();
+    };
+    c.appendChild(item);
+  });
+}
+
+function highlight(text, query) {
+  if (!query || !text) return text;
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(text).replace(new RegExp(q, 'gi'), m => `<mark>${m}</mark>`);
+}
+
+/* ===== Open Hadith ===== */
+function openHadith(id) {
+  let h = HADITHS_DATA.find(x => x.id === id);
+  // جستجو در احادیث کوتاه Hero
+  if (!h && id.startsWith('short_h_')) {
+    const idx = parseInt(id.replace('short_h_', ''));
+    const s = SHORT_HADITHS[idx];
+    if (s) {
+      h = {
+        id: id,
+        speakerName: s.speaker,
+        arabic: s.ar,
+        translation: s.fa,
+        source: s.ref,
+        topicName: 'حدیث کوتاه',
+        tags: ['کوتاه']
+      };
+    }
+  }
+  if (!h) return;
+  currentHadith = h;
+  history = history.filter(x => x.id !== id);
+  history.unshift({ id, timestamp: Date.now() });
+  history = history.slice(0, 30);
+  localStorage.setItem('noor_hadith_hist', JSON.stringify(history));
+
+  $('#listView').classList.add('hidden');
+  $('#detailView').classList.add('active');
+  $('#floatingBtns').style.display = 'flex';
+  $('#pageTitle').textContent = 'حدیث';
+  $('#searchWrap').classList.remove('show');
+  renderDetail(id);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderDetail(id) {
+  let h = HADITHS_DATA.find(x => x.id === id);
+  if (!h && id.startsWith('short_h_')) {
+    const idx = parseInt(id.replace('short_h_', ''));
+    const s = SHORT_HADITHS[idx];
+    if (s) {
+      h = {
+        id: id,
+        speakerName: s.speaker,
+        arabic: s.ar,
+        translation: s.fa,
+        source: s.ref,
+        topicName: 'حدیث کوتاه',
+        tags: ['کوتاه']
+      };
+    }
+  }
+  if (!h) return;
+  const isKasa = !!h.verses;
+  const arText = isKasa ? h.verses[0].ar : h.arabic;
+  const faText = isKasa ? h.verses[0].fa : h.translation;
+
+  let html = `
+    <div class="detail-head">
+      <div class="dh-ico">${ICONS.hadith}</div>
+      <div class="dh-title">${h.topicName || 'حدیث'}</div>
+      <div class="dh-sub">${h.speakerName}</div>
+      <div class="dh-meta"><span>${h.source}</span></div>
+    </div>
+  `;
+
+  if (isKasa) {
+    html += `<div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      متن کامل
+    </div>`;
+    h.verses.forEach(v => {
+      html += `
+        <div class="hadith-body${showTrans ? '' : ' hide-trans'}">
+          <div class="hb-ar">${v.ar}</div>
+          <div class="hb-fa">${v.fa}</div>
+        </div>
+      `;
+    });
+  } else {
+    html += `
+      <div class="hadith-body${showTrans ? '' : ' hide-trans'}">
+        <div class="hb-ar">${arText}</div>
+        <div class="hb-fa">${faText}</div>
+      </div>
+    `;
+  }
+
+  html += `
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        اطلاعات حدیث
+      </h4>
+      <p><strong>گوینده:</strong> ${h.speakerName}</p>
+      ${h.topicName ? `<p><strong>موضوع:</strong> ${h.topicName}</p>` : ''}
+      <p><strong>منبع:</strong> ${h.source}</p>
+    </div>
+  `;
+
+  if (h.tags && h.tags.length) {
+    html += `
+      <div class="info-block">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          برچسب‌ها
+        </h4>
+        <div class="tags">${h.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+    `;
+  }
+
+  const related = HADITHS_DATA.filter(x => x.id !== h.id && x.topic === h.topic && !x.verses).slice(0, 3);
+  if (related.length) {
+    html += `<div class="section-title">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+      احادیث مرتبط
+    </div>`;
+    const lst = document.createElement('div');
+    lst.className = 'hadith-list';
+    related.forEach(r => {
+      const it = document.createElement('div');
+      it.className = 'hadith-item';
+      it.innerHTML = `
+        <div class="h-ico">${ICONS.hadith}</div>
+        <div class="h-info">
+          <div class="h-speaker">${r.speakerName}</div>
+          <div class="h-ar">${r.arabic.slice(0, 60)}...</div>
+          <div class="h-fa">${r.translation.slice(0, 60)}...</div>
+        </div>
+      `;
+      it.onclick = () => openHadith(r.id);
+      lst.appendChild(it);
+    });
+    $('#detailContent').innerHTML = html;
+    $('#detailContent').appendChild(lst);
+    return;
+  }
+  $('#detailContent').innerHTML = html;
+}
+
+/* ===== Bookmark ===== */
+function toggleBookmark(id) {
+  const idx = bookmarks.indexOf(id);
+  if (idx > -1) {
+    bookmarks.splice(idx, 1);
+    toast('از نشان‌شده‌ها حذف شد');
+  } else {
+    bookmarks.push(id);
+    toast('به نشان‌شده‌ها اضافه شد');
+  }
+  localStorage.setItem('noor_hadith_bm', JSON.stringify(bookmarks));
+  updateBmCount();
+}
+
+function updateBmCount() {
+  const c = $('#bmCount');
+  if (bookmarks.length > 0) {
+    c.textContent = faNum(bookmarks.length);
+    c.style.display = 'block';
+  } else c.style.display = 'none';
+}
+
+/* ===== Search ===== */
+$('#searchInput').oninput = (e) => {
+  searchQuery = e.target.value;
+  renderHadithList();
+};
+
+$('#btnSearch').onclick = () => {
+  const w = $('#searchWrap');
+  w.classList.toggle('show');
+  if (w.classList.contains('show')) {
+    setTimeout(() => $('#searchInput').focus(), 100);
+  } else {
+    $('#searchInput').value = '';
+    searchQuery = '';
+    renderHadithList();
+  }
+};
+
+/* ===== Random ===== */
+$('#qaRandom').onclick = () => {
+  const pool = HADITHS_DATA;
+  if (pool.length === 0) return;
+  let rand;
+  let tries = 0;
+  do {
+    rand = pool[Math.floor(Math.random() * pool.length)];
+    tries++;
+  } while (currentHadith && rand.id === currentHadith.id && tries < 10);
+  openHadith(rand.id);
+  toast('یک حدیث برای شما انتخاب شد');
+};
+
+/* ===== Bookmarks List ===== */
+$('#qaBookmarks').onclick = () => {
+  if (!bookmarks.length) {
+    toast('هنوز حدیثی نشان نکرده‌اید');
+    return;
+  }
+  currentFilter = 'all';
+  searchQuery = '';
+  $('#searchInput').value = '';
+  renderCustomList(bookmarks, 'نشان‌شده‌ها');
+};
+
+/* ===== Notes Nav ===== */
+$('#navNotes').onclick = () => {
+  const ids = Object.keys(notes).filter(k => notes[k] && notes[k].trim());
+  if (!ids.length) {
+    toast('هنوز یادداشتی ثبت نکرده‌اید');
+    return;
+  }
+  renderCustomList(ids, 'یادداشت‌ها');
+};
+
+/* ===== Home ===== */
+$('#navHome').onclick = () => {
+  closeDetail();
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+};
+
+/* ===== Custom List ===== */
+function renderCustomList(ids, title) {
+  // اگر در حالت detail هستیم برگردیم
+  closeDetail();
+  $('#pageTitle').textContent = title;
+  const c = $('#hadithList');
+  c.innerHTML = '';
+  const list = ids.map(id => {
+    let h = HADITHS_DATA.find(x => x.id === id);
+    if (!h && id.startsWith('short_h_')) {
+      const idx = parseInt(id.replace('short_h_', ''));
+      const s = SHORT_HADITHS[idx];
+      if (s) h = { id, speakerName: s.speaker, arabic: s.ar, translation: s.fa, source: s.ref };
+    }
+    return h;
+  }).filter(Boolean);
+  $('#listTitle').textContent = title;
+  $('#listCount').textContent = faNum(list.length) + ' حدیث';
+
+  if (!list.length) {
+    c.innerHTML = `<div class="empty"><p>موردی یافت نشد.</p></div>`;
+    return;
+  }
+
+  list.forEach(h => {
+    const item = document.createElement('div');
+    item.className = 'hadith-item';
+    const arText = h.verses ? h.verses[0].ar : h.arabic;
+    const faText = h.verses ? h.verses[0].fa : h.translation;
+    const extra = notes[h.id] ? `<div class="h-fa" style="color:var(--gold);margin-top:4px;border-top:1px dashed var(--gold-border);padding-top:6px;">یادداشت: ${notes[h.id].slice(0, 80)}</div>` : '';
+    item.innerHTML = `
+      <div class="h-ico">${ICONS.hadith}</div>
+      <div class="h-info">
+        <div class="h-speaker">${h.speakerName || ''}</div>
+        <div class="h-ar">${arText.slice(0, 80)}...</div>
+        <div class="h-fa">${faText.slice(0, 80)}...</div>
+        ${extra}
+      </div>
+    `;
+    item.onclick = () => openHadith(h.id);
+    c.appendChild(item);
+  });
+}
+
+/* ===== Copy & Share ===== */
+function copyText(t) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(() => toast('متن کپی شد')).catch(() => fallbackCopy(t));
+  } else fallbackCopy(t);
+}
+function fallbackCopy(t) {
+  const ta = document.createElement('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); toast('متن کپی شد'); } catch (e) { toast('کپی ناموفق'); }
+  document.body.removeChild(ta);
+}
+function shareText(t) {
+  if (navigator.share) navigator.share({ title: 'حدیث', text: t }).catch(() => {});
+  else copyText(t);
+}
+
+$('#fabCopy').onclick = () => {
+  if (!currentHadith) return;
+  $('#modalCopy').classList.add('show');
+};
+
+$('#fabNotes').onclick = () => {
+  if (!currentHadith) return;
+  editingNoteId = currentHadith.id;
+  $('#notesArea').value = notes[currentHadith.id] || '';
+  $('#modalNotes').classList.add('show');
+  setTimeout(() => $('#notesArea').focus(), 200);
+};
+
+$('#copyArabic').onclick = () => {
+  if (!currentHadith) return;
+  const t = currentHadith.verses ? currentHadith.verses.map(v => v.ar).join('\n\n') : currentHadith.arabic;
+  copyText(t);
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyTrans').onclick = () => {
+  if (!currentHadith) return;
+  const t = currentHadith.verses ? currentHadith.verses.map(v => v.fa).join('\n\n') : currentHadith.translation;
+  copyText(t);
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyBoth').onclick = () => {
+  if (!currentHadith) return;
+  const h = currentHadith;
+  let t = '';
+  if (h.verses) {
+    t = h.verses.map(v => v.ar + '\n' + v.fa).join('\n\n');
+  } else {
+    t = h.arabic + '\n' + h.translation;
+  }
+  t += '\n\n' + (h.speakerName || '') + '\n' + (h.source || '');
+  copyText(t);
+  $('#modalCopy').classList.remove('show');
+};
+$('#shareBtn').onclick = () => {
+  if (!currentHadith) return;
+  const h = currentHadith;
+  let t = '';
+  if (h.verses) {
+    t = h.verses[0].ar + '\n' + h.verses[0].fa;
+  } else {
+    t = h.arabic + '\n' + h.translation;
+  }
+  t += '\n\n' + (h.speakerName || '') + '\n' + (h.source || '');
+  shareText(t);
+  $('#modalCopy').classList.remove('show');
+};
+
+/* ===== Notes Save ===== */
+$('#saveNotesBtn').onclick = () => {
+  if (!editingNoteId) return;
+  const val = $('#notesArea').value;
+  if (val.trim()) notes[editingNoteId] = val;
+  else delete notes[editingNoteId];
+  localStorage.setItem('noor_hadith_notes', JSON.stringify(notes));
+  $('#modalNotes').classList.remove('show');
+  editingNoteId = null;
+  toast('یادداشت ذخیره شد');
+};
+
+/* ===== Modal Close ===== */
+$$('[data-close]').forEach(b => b.onclick = () => $('#' + b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e) => { if (e.target === m) m.classList.remove('show'); });
+
+/* ===== Settings Button ===== */
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+
+/* ===== Back ===== */
+$('#btnBack').onclick = () => {
+  if (currentHadith) closeDetail();
+  else location.href = 'index.html';
+};
+
+function closeDetail() {
+  currentHadith = null;
+  $('#listView').classList.remove('hidden');
+  $('#detailView').classList.remove('active');
+  $('#floatingBtns').style.display = 'none';
+  $('#pageTitle').textContent = 'احادیث';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ===== Toast ===== */
+function toast(msg) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ===== INIT ===== */
+renderFilterChips();
+renderHadithList();
+renderHeroHadith();
+renderNoorOfTheDay();
+updateBmCount();
+
+console.log('📿  نور — احادیث بارگذاری شد');
+console.log('📚 تعداد احادیث اصلی:', HADITHS_DATA.length);
+console.log('📖 تعداد آیات روزانه:', QURAN_VERSES.length);
+console.log('📗 تعداد احادیث کوتاه:', SHORT_HADITHS.length);
+console.log('🤲 تعداد دعاهای کوتاه:', SHORT_DUAS.length);
+console.log('✨ تعداد اعمال نیک:', GOOD_DEEDS.length);
+</script>
+<script src="core/noor-unified.js" defer></script>
+</body>
+</html>

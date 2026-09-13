@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>دعای افتتاح | نــــور NOOR</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Lateef&family=Reem+Kufi:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.10);
+  --gold-border: rgba(184, 138, 59, 0.20);
+  --text: #17231F; --text-2: #3d4a44; --muted: #66716C;
+  --divider: #E7E0D3;
+  --arabic: #123C32; --translation: #3d4a44;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.05);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.03);
+  --radius: 16px; --radius-sm: 12px;
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --font-ar: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --fs-ar: 24px; --fs-fa: 16px; --line-height: 2.3;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.08);
+  --gold-border: rgba(210, 172, 92, 0.16);
+  --text: #F4EFE4; --text-2: #c8d2cc; --muted: #A8B3AD;
+  --divider: #26352F;
+  --arabic: #e8e2d2; --translation: #c8d2cc;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.30);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.20);
+}
+body.font-ar-amiri { --font-ar: 'Amiri', serif; }
+body.font-ar-scheherazade { --font-ar: 'Scheherazade New', serif; }
+body.font-ar-naskh { --font-ar: 'Noto Naskh Arabic', serif; }
+body.font-ar-lateef { --font-ar: 'Lateef', serif; }
+body.font-ar-reem { --font-ar: 'Reem Kufi', sans-serif; }
+body.font-fa-vazir { --font-fa: 'Vazirmatn', Tahoma, sans-serif; }
+body.font-fa-naskh { --font-fa: 'Noto Naskh Arabic', serif; }
+body.font-fa-amiri { --font-fa: 'Amiri', serif; }
+body.font-fa-scheherazade { --font-fa: 'Scheherazade New', serif; }
+body.font-fa-lateef { --font-fa: 'Lateef', serif; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-sm { width: 18px; height: 18px; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px 40px; }
+
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; min-width: 0; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.15rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 0.5px;
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.65rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 6px;
+  margin-top: 3px;
+}
+
+.scroll-content {
+  max-height: calc(100vh - 90px);
+  overflow-y: auto;
+  padding: 14px 0 20px;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--gold-border) transparent;
+}
+.scroll-content::-webkit-scrollbar { width: 4px; }
+.scroll-content::-webkit-scrollbar-track { background: transparent; }
+.scroll-content::-webkit-scrollbar-thumb { background: var(--gold-border); border-radius: 10px; }
+
+.top-orn {
+  position: relative; overflow: hidden;
+  text-align: center;
+  padding: 18px 14px 20px;
+  margin-bottom: 14px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.top-orn .orn-svg {
+  position: absolute; color: var(--gold); opacity: 0.10; pointer-events: none;
+}
+.top-orn .orn-svg.tr { top: -6px; right: -6px; width: 80px; height: 80px; }
+.top-orn .orn-svg.bl { bottom: -6px; left: -6px; width: 80px; height: 80px; transform: rotate(180deg); }
+.top-orn .orn-title {
+  font-family: 'Amiri', serif;
+  font-size: 1.45rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+  margin-bottom: 3px;
+}
+body.dark .top-orn .orn-title { color: var(--gold); }
+.top-orn .orn-sub { font-size: 0.78rem; color: var(--muted); }
+.top-orn .orn-div {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin: 8px auto 0; width: 80px;
+}
+.top-orn .orn-div::before, .top-orn .orn-div::after {
+  content: ""; flex: 1; height: 1px; background: var(--gold-border);
+}
+.top-orn .orn-div svg { color: var(--gold); width: 12px; height: 12px; }
+
+.verse-card {
+  background: var(--surface);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius);
+  padding: 16px 14px;
+  margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--trans);
+  position: relative;
+}
+.verse-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 4px 16px rgba(184, 138, 59, 0.08);
+}
+.verse-card .v-head {
+  display: flex; align-items: center; gap: 8px;
+  margin-bottom: 10px;
+}
+.verse-card .v-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 24px; height: 24px; padding: 0 8px;
+  border-radius: 7px;
+  background: var(--gold-soft); color: var(--gold);
+  font-family: 'Amiri', serif; font-weight: 700;
+  font-size: 0.72rem;
+  border: 1px solid var(--gold-border);
+}
+.verse-card .v-label {
+  font-size: 0.68rem; color: var(--muted);
+  font-weight: 600;
+}
+.verse-card .v-ar {
+  font-family: var(--font-ar);
+  font-size: var(--fs-ar);
+  line-height: var(--line-height);
+  color: var(--arabic);
+  text-align: center;
+  font-weight: 400;
+  margin-bottom: 12px;
+  padding: 4px 2px;
+  white-space: pre-line;
+}
+.verse-card .v-divider {
+  height: 1px;
+  background: repeating-linear-gradient(90deg, var(--gold-border) 0, var(--gold-border) 3px, transparent 3px, transparent 6px);
+  margin: 0 auto 12px;
+  width: 50px;
+}
+.verse-card .v-fa {
+  font-family: var(--font-fa);
+  font-size: var(--fs-fa);
+  line-height: 1.95;
+  color: var(--translation);
+  text-align: justify;
+  padding: 0 2px;
+  white-space: pre-line;
+}
+.verse-card.hide-trans .v-fa { display: none; }
+.verse-card.hide-trans .v-divider { display: none; }
+.verse-card.hide-trans .v-ar { margin-bottom: 0; }
+
+.modal-bg {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+  display: none; align-items: flex-end; justify-content: center;
+  z-index: 200; padding: 0 12px 12px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%; max-width: 520px; max-height: 85vh;
+  overflow-y: auto; background: var(--surface);
+  border-radius: 24px 24px 18px 18px;
+  padding: 20px 18px 26px;
+  border: 1px solid var(--gold-border);
+  animation: slideUp 0.3s ease;
+  box-shadow: var(--shadow);
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.modal-head h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+  color: var(--text);
+}
+.modal-head h3 svg { color: var(--gold); width: 20px; height: 20px; flex: none; }
+.modal-close {
+  width: 34px; height: 34px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--muted);
+}
+.modal-close:hover { color: var(--gold); border-color: var(--gold); }
+
+.set-group { margin-bottom: 16px; }
+.set-group > label {
+  display: block; font-size: 0.75rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 8px;
+}
+.set-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.set-opt {
+  padding: 6px 12px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text-2); font-size: 0.75rem;
+  font-weight: 600; cursor: pointer; transition: var(--trans);
+}
+.set-opt:hover { border-color: var(--gold-border); color: var(--gold); }
+.set-opt.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+.set-ctrl {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  border-radius: 10px; padding: 4px; width: fit-content;
+}
+.set-ctrl button {
+  width: 34px; height: 34px; border-radius: 8px;
+  color: var(--muted); font-weight: 700; font-size: 1rem;
+}
+.set-ctrl button:hover { background: var(--gold-soft); color: var(--gold); }
+.set-ctrl .val {
+  min-width: 40px; text-align: center;
+  color: var(--gold); font-weight: 700; font-size: 0.82rem;
+}
+.font-preview { font-family: 'Amiri', serif; font-size: 1.1rem; }
+
+.info-block {
+  padding: 14px 16px;
+  background: var(--surface2);
+  border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 10px;
+}
+.info-block h4 {
+  font-size: 0.8rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.info-block h4 svg { width: 16px; height: 16px; flex: none; }
+.info-block p {
+  font-size: 0.8rem; line-height: 1.95;
+  color: var(--text-2); text-align: justify;
+  white-space: pre-line;
+}
+
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+  display: flex; justify-content: space-around; align-items: center;
+  background: var(--surface); border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: 62px;
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px; border-radius: 12px; color: var(--muted);
+  transition: var(--trans); font-size: 0.6rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg { width: 20px; height: 20px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+
+.toast {
+  position: fixed; bottom: 80px; left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 18px; border-radius: 14px;
+  font-size: 0.8rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 16px; height: 16px; }
+
+.app { padding-bottom: 80px; }
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 1rem; }
+  :root { --fs-ar: 22px; --fs-fa: 15px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+  .verse-card { padding: 14px 12px; }
+  .top-orn .orn-title { font-size: 1.25rem; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">دعای افتتاح</h1>
+      <span class="brand-noor">نور</span>
+    </div>
+
+    <button class="hbtn" id="btnInfo" aria-label="اطلاعات و فضیلت">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+    </button>
+
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات مطالعه">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+    </button>
+
+    <button class="hbtn" id="themeToggle" aria-label="تغییر تم">
+      <svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+    </button>
+  </header>
+
+  <div class="scroll-content" id="scrollContent">
+
+    <div class="top-orn">
+      <svg class="orn-svg tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="orn-svg bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="orn-title">دعای افتتاح</div>
+      <div class="orn-sub">دعای شب‌های ماه رمضان</div>
+      <div class="orn-div">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15 9 22 9 17 14 19 21 12 17 5 21 7 14 2 9 9 9 12 2"/></svg>
+      </div>
+    </div>
+
+    <div id="versesContainer"></div>
+
+  </div>
+</div>
+
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="quran.html">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+      <path d="M8 7h8"/><path d="M8 11h8"/><path d="M8 15h5"/>
+    </svg>
+    <span>قرآن</span>
+  </a>
+  <a class="nav-btn" href="ziyarat.html">
+    <svg viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+    <span>زیارت</span>
+  </a>
+  <a class="nav-btn" href="imam.html">
+    <svg viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+    <span>امام زمان</span>
+  </a>
+</nav>
+
+<!-- ================= INFO MODAL ================= -->
+<div class="modal-bg" id="modalInfo">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+        درباره دعای افتتاح
+      </h3>
+      <button class="modal-close" data-close="modalInfo">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        فضیلت و خواص
+      </h4>
+      <p id="modalFazilat"></p>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+        منبع
+      </h4>
+      <p id="modalSource"></p>
+    </div>
+
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        زمان خواندن
+      </h4>
+      <p id="modalTime"></p>
+    </div>
+  </div>
+</div>
+
+<!-- ================= SETTINGS MODAL ================= -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/></svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <div class="set-opt" data-font-ar="amiri"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="naskh"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="lateef"><span class="font-preview">بِسْمِ اللَّه</span></div>
+        <div class="set-opt" data-font-ar="reem"><span class="font-preview">بسم الله</span></div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فونت متن ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt" data-font-fa="vazir">وزیرمتن</div>
+        <div class="set-opt" data-font-fa="naskh">نسخ</div>
+        <div class="set-opt" data-font-fa="amiri">امیری</div>
+        <div class="set-opt" data-font-fa="scheherazade">شهرزاد</div>
+        <div class="set-opt" data-font-fa="lateef">لطیف</div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>فاصله خطوط عربی</label>
+      <div class="set-options">
+        <div class="set-opt" data-lh="1.9">کم</div>
+        <div class="set-opt" data-lh="2.3">متوسط</div>
+        <div class="set-opt" data-lh="2.8">زیاد</div>
+      </div>
+    </div>
+
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt" data-trans="1">نمایش</div>
+        <div class="set-opt" data-trans="0">پنهان</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   نــــور NOOR — دعای افتتاح
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ============================================================
+   DATA — دعای افتتاح
+   ============================================================ */
+const DUA_DATA = {
+  title: "دعای افتتاح",
+  verses: [
+    { ar: "بِسْمِ اللهِ الرَّحْمنِ الرَّحِیمِ", fa: "به نام خداوند بخشنده‌ی مهربان" },
+    { ar: "اللّٰهُمَّ إِنِّى أَفْتَتِحُ الثَّناءَ بِحَمْدِكَ وَأَنْتَ مُسَدِّدٌ لِلصَّوابِ بِمَنِّكَ، وَأَيْقَنْتُ أَنَّكَ أَنْتَ أَرْحَمُ الرَّاحِمِينَ فِى مَوْضِعِ الْعَفْوِ وَالرَّحْمَةِ، وَأَشَدُّ الْمُعاقِبِينَ فِى مَوْضِعِ النَّكالِ وَالنَّقِمَةِ، وَأَعْظَمُ الْمُتَجَبِّرِينَ فِى مَوْضِعِ الْكِبْرِياءِ وَالْعَظَمَةِ.", fa: "خدایا، من همراه ستایشت مدح و ستودن تو را آغاز می‌کنم و تویی که با مهرورزی‌ات به‌سوی درستی توجّه می‌دهی و یقین دارم که در جای گذشت و رحمت مهربان‌ترین مهربانانی و در جای کیفر و انتقام، سخت‌ترین کیفرکننده‌ای و در جایگاه بزرگ‌منشی و عظمت بزرگ‌ترین قدرتمندی." },
+    { ar: "اللّٰهُمَّ أَذِنْتَ لِى فِى دُعائِكَ وَمَسْأَلَتِكَ، فَاسْمَعْ يَا سَمِيعُ مِدْحَتِى، وَأَجِبْ يَا رَحِيمُ دَعْوَتِى، وَأَقِلْ يَا غَفُورُ عَثْرَتِى، فَكَمْ يَا إِلٰهِى مِنْ كُرْبَةٍ قَدْ فَرَّجْتَها، وَهُمُومٍ قَدْ كَشَفْتَها، وَعَثْرَةٍ قَدْ أَقَلْتَها، وَرَحْمَةٍ قَدْ نَشَرْتَها، وَحَلْقَةِ بَلاءٍ قَدْ فَكَكْتَها.", fa: "خدایا، در خواندنت و در درخواست از حضرتت به من اجازه دادی، پس ای شنوا ستودنم را بشنو و ای مهربان اجابت کن دعایم را و ای آمرزنده بیامرز لغزشم را، ای معبودم چه بسیار سختی‌های که از آن گره گشودی و اندوه‌ها که برطرف کردی و لغزش‌ها که آمرزیدی و رحمت که گستردی و زنجیر بلا که باز کردی." },
+    { ar: "الْحَمْدُ لِلّٰهِ الَّذِى لَمْ يَتَّخِذْ صاحِبَةً وَلَا وَلَداً ﴿وَلَمْ يَكُنْ لَهُ شَرِيكٌ فِى الْمُلْكِ وَلَمْ يَكُنْ لَهُ وَلِيٌّ مِنَ الذُّلِّ وَكَبِّرْهُ تَكْبِيراً﴾؛ الْحَمْدُ لِلّٰهِ بِجَمِيعِ مَحامِدِهِ كُلِّها، عَلَىٰ جَمِيعِ نِعَمِهِ كُلِّها. الْحَمْدُ لِلّٰهِ الَّذِى لَامُضادَّ لَهُ فِى مُلْكِهِ، وَلَا مُنازِعَ لَهُ فِى أَمْرِهِ. الْحَمْدُ لِلّٰهِ الَّذِى لَاشَرِيكَ لَهُ فِى خَلْقِهِ، وَلَا شَبِيهَ لَهُ فِى عَظَمَتِهِ.", fa: "خدا را سپاس که همسر و فرزندی نگرفته و در فرمانروایی شریکی برایش نیست و سرپرستی از روی ناتوانی نداشته است و او را بزرگ شمار، بسیار بزرگ؛ خدا را سپاس با همه ستودنی‌هایش، بر تمام نعمت‌هایش، خدا را سپاس که در فرمانروایی رقیبی ندارد و برای او در کارش نزاع‌کننده‌ای نیست، خدا را سپاس که در آفرینش شریکی ندارد و در بزرگی‌اش شبیهی برای او نیست." },
+    { ar: "الْحَمْدُ لِلّٰهِ الْفاشِى فِى الْخَلْقِ أَمْرُهُ وَحَمْدُهُ، الظَّاهِرِ بِالْكَرَمِ مَجْدُهُ، الْباسِطِ بِالْجُودِ يَدَهُ، الَّذِى لَاتَنْقُصُ خَزائِنُهُ، وَلَا تَزِيدُهُ كَثْرَةُ الْعَطاءِ إِلّا جُوداً وَكَرَماً إِنَّهُ هُوَ الْعَزِيزُ الْوَهَّابُ.", fa: "خدا را سپاس که فرمان و سپاسش در آفریدگان جاری است و شکوه‌مندی‌اش با کرمش آشکار است و دست لطفش به سخاوت گشوده، خدایی که گنجینه‌هایش کاستی نپذیرد و بخشش بسیارش جز جود و کرم بر او نیفزاید، همانا او توانمند و بسیار بخشنده است." },
+    { ar: "اللّٰهُمَّ إِنِّى أَسْأَلُكَ قَلِيلاً مِنْ كَثِيرٍ، مَعَ حاجَةٍ بِى إِلَيْهِ عَظِيمَةٍ وَغِناكَ عَنْهُ قَدِيمٌ وَهُوَ عِنْدِى كَثِيرٌ، وَهُوَ عَلَيْكَ سَهْلٌ يَسِيرٌ؛", fa: "خدایا، اندک از بسیار از تو درخواست می‌کنم، با نیاز شدیدی که مرا به آن است و بی‌نیازی تو از آن دیرینه است و آن اندک نزد من بسیار است و برای تو هموار و آسان؛" },
+    { ar: "اللّٰهُمَّ إِنَّ عَفْوَكَ عَنْ ذَنْبِى، وَتَجاوُزَكَ عَنْ خَطِيئَتِى، وَصَفْحَكَ عَنْ ظُلْمِى، وَسِتْرَكَ عَلَىٰ قَبِيحِ عَمَلِى، وَحِلْمَكَ عَنْ كَثِيرِ جُرْمِى عِنْدَ مَا كانَ مِنْ خَطَإى وَعَمْدِى أَطْمَعَنِى فِى أَنْ أَسْأَلَكَ مَا لَاأَسْتَوْجِبُهُ مِنْكَ الَّذِى رَزَقْتَنِى مِنْ رَحْمَتِكَ، وَأَرَيْتَنِى مِنْ قُدْرَتِكَ، وَعَرَّفْتَنِى مِنْ إِجابَتِكَ، فَصِرْتُ أَدْعُوكَ آمِناً، وَأَسْأَلُكَ مُسْتَأْنِساً لَاخائِفاً وَلَا وَجِلاً، مُدِلّاً عَلَيْكَ فِيما قَصَدْتُ فِيهِ إِلَيْكَ، فَإِنْ أَبْطَأَ عَنِّى عَتَبْتُ بِجَهْلِى عَلَيْكَ، وَلَعَلَّ الَّذِى أَبْطَأَ عَنِّى هُوَ خَيْرٌ لِى لِعِلْمِكَ بِعاقِبَةِ الْأُمُورِ، فَلَمْ أَرَ مَوْلىً كَرِيماً أَصْبَرَ عَلَى عَبْدٍ لَئِيمٍ مِنْكَ عَلَىَّ، يَا رَبِّ، إِنَّكَ تَدْعُونِى فَأُوَلِّى عَنْكَ، وَتَتَحَبَّبُ إِلَىَّ فَأَتَبَغَّضُ إِلَيْكَ، وَتَتَوَدَّدُ إِلَىَّ فَلَا أَقْبَلُ مِنْكَ كَأَنَّ لِىَ التَّطَوُّلَ عَلَيْكَ؛ فَلَمْ يَمْنَعْكَ ذٰلِكَ مِنَ الرَّحْمَةِ لِى وَالْإِحْسانِ إِلَىَّ، وَالتَّفَضُّلِ عَلَىَّ بِجُودِكَ وَكَرَمِكَ، فَارْحَمْ عَبْدَكَ الْجاهِلَ وَجُدْ عَلَيْهِ بِفَضْلِ إِحْسانِكَ إِنَّكَ جَوادٌ كَرِيمٌ.", fa: "خدایا، بخششت از گناهم و گذشتت از خطایم و چشم‌پوشی‌ات از تجاوزم و پرده‌افکنی‌ات بر کردار زشتم و بردباری‌ات از فراوانی جرمم از آنچه از خطا و گناه عمدی‌ام بود، مرا به طمع انداخت که از درگاهت چیزی را که شایسته آن از سوی تو نیستم درخواست کنم، آنچه از رحمتت نصیبم نمودی و از قدرتت نشانم دادی و از اجابتت به من شناساندی، پس بر آن شدم که با اطمینان بخوانمت و با انس و میل بدون ترس و هراس از تو درخواست می‌کنم و در آنچه به خاطر آن روی به پیشگاه تو کردم این است که از تو ناز جویم، اگر برآورده شدن حاجتم تأخیر افتاد، از روی نادانی بر تو نکوهش ورزیدم، با آنکه شاید به تأخیر افتادن روا شدن حاجتم برایم بهتر باشد، چه تو به سرانجام امور آگاهی، پس هیچ مولای کریمی را بر بنده پستی، شکیباتر از تو بر خود ندیدم، ای پروردگار من، تو مرا می‌خوانی و من از تو روی می‌گردانم و با من دوستی می‌ورزی و من با تو دشمنی می‌کنم، به من محبّت می‌کنی و من از تو نمی‌پذیرم، گوئی مرا بر تو حق مهر و محبت است! و با همه این‌ها چیزی تو را از رحمت و احسان بر من و مهر و محبت همراه جود و بزرگواری‌ات بر من بازنمی‌دارد، بر بنده نادانت رحم کن و با فزونی احسانت بر او سخاوت و گشاده‌دستی داشته باش، زیرا تو بخشنده کریمی." },
+    { ar: "الْحَمْدُ لِلّٰهِ مالِكِ الْمُلْكِ، مُجْرِى الْفُلْكِ، مُسَخِّرِ الرِّياحِ، فالِقِ الْإِصْباحِ، دَيَّانِ الدِّينِ، رَبِّ الْعالَمِينَ. الْحَمْدُ لِلّٰهِ عَلىٰ حِلْمِهِ بَعْدَ عِلْمِهِ، وَالْحَمْدُ لِلّٰهِ عَلَىٰ عَفْوِهِ بَعْدَ قُدْرَتِهِ، وَالْحَمْدُ لِلّٰهِ عَلَىٰ طُولِ أَناتِهِ فِى غَضَبِهِ وَهُوَ قادِرٌ عَلَىٰ مَا يُرِيدُ.", fa: "خدا را سپاس خدای مالک سلطنت، روان‌کننده کشتی، تسخیرکننده بادها، شکافنده سپیده، حکم‌فرمای روز جزا، پروردگار جهانیان. خدا را سپاس بر بردباری‌اش پس از دانشش به نافرمانی بنده و خدا را سپاس بر گذشتش پس از قدرتش و خدا را سپاس بر طول بردباری‌اش در خشمش و حال آنکه او بر آنچه بخواهد تواناست." },
+    { ar: "الْحَمْدُ لِلّٰهِ خالِقِ الْخَلْقِ، باسِطِ الرِّزْقِ، فالِقِ الْإِصْباحِ، ذِى الْجَلالِ وَالْإِكْرامِ وَالْفَضْلِ وَالْإِنْعامِ، الَّذِى بَعُدَ فَلا يُرىٰ، وَقَرُبَ فَشَهِدَ النَّجْوىٰ، تَبارَكَ وَتَعالىٰ. الْحَمْدُ لِلّٰهِ الَّذِى لَيْسَ لَهُ مُنازِعٌ يُعادِلُهُ، وَلَا شَبِيهٌ يُشاكِلُهُ، وَلَا ظَهِيرٌ يُعاضِدُهُ، قَهَرَ بِعِزَّتِهِ الْأَعِزَّاءَ، وَتَواضَعَ لِعَظَمَتِهِ الْعُظَماءُ، فَبَلَغَ بِقُدْرَتِهِ مَا يَشاءُ؛", fa: "خدا را سپاس که آفریننده آفریدگان، گسترنده روزی، شکافنده سپیده، دارای عظمت و رأفت و محبت و احسان و نعمت‌بخشی است، خدایی که از دیدگان دور است پس دیده نمی‌شود و به جان‌ها نزدیک است پس شاهد گفتگوهای پنهان است، فرخنده و برتر است. خدا را سپاس که ستیزه‌ و دشمنی ندارد تا با او برابری کند و شبیهی ندارد که هم شکل او باشد و پشتیبانی ندارد که او را یاری کند، با توانمندی‌اش همه توانمندان را مقهور شکست داد و در برابر عظمتش بزرگان فروتن گشته‌اند، پس با قدرتش به هرچه خواهد می‌رسد؛" },
+    { ar: "الْحَمْدُ لِلّٰهِ الَّذِى يُجِيبُنِى حِينَ أُنادِيهِ، وَيَسْتُرُ عَلَىَّ كُلَّ عَوْرَةٍ وَأَنَا أَعْصِيهِ، وَيُعَظِّمُ النِّعْمَةَ عَلَىَّ فَلَا أُجازِيهِ، فَكَمْ مِنْ مَوْهِبَةٍ هَنِيئَةٍ قَدْ أَعْطانِى، وَعَظِيمَةٍ مَخُوفَةٍ قَدْ كَفانِى، وَبَهْجَةٍ مُونِقَةٍ قَدْ أَرانِى، فَأُثْنِى عَلَيْهِ حامِداً، وَأَذْكُرُهُ مُسَبِّحاً. الْحَمْدُ لِلّٰهِ الَّذِى لَايُهْتَكُ حِجابُهُ، وَلَا يُغْلَقُ بابُهُ، وَلَا يُرَدُّ سائِلُهُ، وَلَا يُخَيَّبُ آمِلُهُ.", fa: "خدا را سپاس که پاسخم را می‌دهد آنگاه که صدایش می‌زنم و هر زشتی را بر من می‌پوشاند و من از او نافرمانی می‌کنم و او نعمتش را بر من بزرگ می‌گرداند، پس من او را شکر نمی‌کنم، چه بسیار موهبت‌های گوارایی که به من عطا فرمود و حوادث وحشتناکی که مرا از آسیب آن‌ها بازداشت و چه بسیار خرّمی دلنشینی که به من نمایاند، او را سپاس گویان ستایش می‌کنم و تسبیح‌گویان یادش می‌کنم، خدا را سپاس که پرده‌اش دریده نگردد و در رحمتش بسته نشود و گدایش ردّ نگردد و آرزومندش نومید نشود." },
+    { ar: "الْحَمْدُ لِلّٰهِ الَّذِى يُؤْمِنُ الْخائِفِينَ، وَيُنَجِّى الصَّالِحِينَ، وَيَرْفَعُ الْمُسْتَضْعَفِينَ، وَيَضَعُ الْمُسْتَكْبِرِينَ، وَيُهْلِكُ مُلُوكاً وَيَسْتَخْلِفُ آخَرِينَ، وَالْحَمْدُ لِلّٰهِ قاصِمِ الْجَبَّارِينَ، مُبِيرِ الظَّالِمِينَ، مُدْرِكِ الْهارِبِينَ، نَكالِ الظَّالِمِينَ، صَرِيخِ الْمُسْتَصْرِخِينَ، مَوْضِعِ حاجاتِ الطَّالِبِينَ، مُعْتَمَدِ الْمُؤْمِنِينَ. الْحَمْدُ لِلّٰهِ الَّذِى مِنْ خَشْيَتِهِ تَرْعَدُ السَّماءُ وَسُكَّانُها، وَتَرْجُفُ الْأَرْضُ وَعُمَّارُها، وَتَمُوجُ الْبِحارُ وَمَنْ يَسْبَحُ فِى غَمَراتِها؛", fa: "خدا را سپاس که هراسندگان را ایمنی بخشد و شایستگان را نجات دهد و ناتوان شمردگان را به بلندی رساند و متکبّران را به خاک اندازد و پادشاهانی را نابود می‌کند و دیگران را جانشین آنان قرار می‌دهد، خدا را سپاس که درهم شکننده گردنکشان، نابودکننده ستمکاران، دریابنده گریختگان، کیفردهنده ستمگران، فریادرس فریادخواهان، جایگاه حاجت دادن خواهندگان، تکیه‌گاه مؤمنان است. خدا را سپاس که از هراسش آسمان و ساکنانش غرّش کنند و زمین و آباد کنندگانش بلرزند و دریاها و هرکه در اعماقش شناور است موج زنند؛" },
+    { ar: "﴿الْحَمْدُ لِلّٰهِ الَّذِى هَدانا لِهٰذا وَمَا كُنَّا لِنَهْتَدِىَ لَوْلَا أَنْ هَدانَا اللّٰهُ﴾ الْحَمْدُ لِلّٰهِ الَّذِى يَخْلُقُ وَلَمْ يُخْلَقْ، وَيَرْزُقُ وَلَا يُرْزَقُ، وَيُطْعِمُ وَلَا يُطْعَمُ، وَيُمِيتُ الْأَحْياءَ، وَيُحْيِى الْمَوْتىٰ، وَهُوَ حَيٌّ لَايَمُوتُ، بِيَدِهِ الْخَيْرُ، وَهُوَ عَلَىٰ كُلِّ شَىْءٍ قَدِيرٌ.", fa: "«همه ستایش‌ها ویژه خداست که ما را به این سعادت ابدی هدایت کرد، و اگر خداوند ما را هدایت نمی‌کرد راه را نمی‌یافتیم»، خدا را سپاس که می‌آفریند و خود آفریده نشده و روزی می‌دهد و خود روزی داده نمی‌شود و می‌خوراند و خود خورانده نمی‌شود و زنده‌ها را می‌میراند و مردگان را زنده می‌کند و اوست زنده‌ای که هرگز نمی‌میرد، خوبی و خیر تنها به دست اوست و او بر هر کاری تواناست." },
+    { ar: "اللّٰهُمَّ صَلِّ عَلَىٰ مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ وَأَمِينِكَ وَصَفِيِّكَ وَحَبِيبِكَ وَخِيَرَتِكَ مِنْ خَلْقِكَ، وَحافِظِ سِرِّكَ، وَمُبَلِّغِ رِسالاتِكَ أَفْضَلَ وَأَحْسَنَ وَأَجْمَلَ وَأَكْمَلَ وَأَزْكىٰ وَأَنْمىٰ وَأَطْيَبَ وَأَطْهَرَ وَأَسْنىٰ وَأَكْثَرَ مَا صَلَّيْتَ وَبارَكْتَ وَتَرَحَّمْتَ وَتَحَنَّنْتَ وَسَلَّمْتَ عَلَىٰ أَحَدٍ مِنْ عِبادِكَ وَأَنْبِيائِكَ وَرُسُلِكَ وَصِفْوَتِكَ وَأَهْلِ الْكَرامَةِ عَلَيْكَ مِنْ خَلْقِكَ؛", fa: "خدایا، درود فرست بر محمّد بنده و فرستاده‌ات و امین و یار صمیمی و محبوب و برگزیده‌ات و حافظ راز و رساننده پیام‌هایت، درودی برترین و بهترین و زیباترین و کامل‌ترین و پاکیزه‌ترین و پرنماترین و دلپسندترین و پاک‌ترین و بلندترین و بیشترین درودی که فرستادی و برکت دادی و ترحم نمودی و مهر ورزیدی و سلام دادی بر یکی از بندگان و پیامبران و رسولان و برگزیدگان و اهل کرامت از آفریده‌هایت؛" },
+    { ar: "اللّٰهُمَّ وَصَلِّ عَلَىٰ عَلِىٍّ أَمِيرِ الْمُؤْمِنِينَ، وَوَصِىِّ رَسُولِ رَبِّ الْعالَمِينَ، عَبْدِكَ وَوَلِيِّكَ وَأَخِى رَسُولِكَ وَحُجَّتِكَ عَلَىٰ خَلْقِكَ، وَآيَتِكَ الْكُبْرىٰ، وَالنَّبَاَ الْعَظِيمِ، وَصَلِّ عَلَى الصِّدِّيقَةِ الطَّاهِرَةِ فاطِمَةَ سَيِّدَةِ نِساءِ الْعالَمِينَ، وَصَلِّ عَلَىٰ سِبْطَىِ الرَّحْمَةِ، وَإِمامَىِ الْهُدىٰ الْحَسَنِ وَالْحُسَيْنِ سَيِّدَيْ شَبابِ أَهْلِ الْجَنَّةِ، وَصَلِّ عَلَىٰ أَئِمَّةِ الْمُسْلِمِينَ؛ عَلِىِّ بْنِ الْحُسَيْنِ، وَمُحَمَّدِ بْنِ عَلِىٍّ، وَجَعْفَرِ بْنِ مُحَمَّدٍ، وَمُوسَى بْنِ جَعْفَرٍ، وَعَلِىِّ بْنِ مُوسىٰ، وَمُحَمَّدِ بْنِ عَلِىٍّ، وَعَلِىِّ بْنِ مُحَمَّدٍ، وَالْحَسَنِ بْنِ عَلِىٍّ، وَالْخَلَفِ الْهادِى الْمَهْدِىِّ، حُجَجِكَ عَلَىٰ عِبادِكَ، وَأُمَنائِكَ فِى بِلادِكَ صَلاةً كَثِيرَةً دائِمَةً؛", fa: "خدایا درود فرست بر علی امیرمؤمنان و جانشین فرستاده پروردگار جهانیان، بنده و ولی‌ات و برادر رسولت و حجّتت بر بندگانت و نشانه بزرگ‌ترت و خبر عظیم و درود فرست بر صدیقه طاهره فاطمه زهرا سرور زنان جهانیان و درود فرست بر دو فرزندزاده پیامبر رحمت و دو پیشوای هدایت، حسن و حسین، دو سرور جوانان اهل بهشت و درود فرست بر پیشوایان مسلمانان، علی بن الحسین و محمّد بن علی و جعفر بن محمّد و موسی بن جعفر و علی بن موسی و محمّد بن علی و علی بن محمّد و حسن بن علی و یادگار شایسته هدایتگر، هدایت‌شده، حجّت‌های تو بر بندگان و امین‌های تو در سرزمین‌هایت، درودی بسیار و همیشگی؛" },
+    { ar: "اللّٰهُمَّ وَصَلِّ عَلَىٰ وَليِّ أَمْرِكَ الْقائِمِ الْمُؤَمَّلِ، وَالْعَدْلِ الْمُنْتَظَرِ، وَحُفَّهُ بِمَلائِكَتِكَ الْمُقَرَّبِينَ، وَأَيِّدْهُ بِرُوحِ الْقُدُسِ يَا رَبَّ الْعالَمِينَ. اللّٰهُمَّ اجْعَلْهُ الدَّاعِىَ إِلىٰ كِتابِكَ، وَالْقائِمَ بِدِينِكَ، اسْتَخْلِفْهُ فِى الْأَرْضِ كَمَا اسْتَخْلَفْتَ الَّذِينَ مِنْ قَبْلِهِ، مَكِّنْ لَهُ دِينَهُ الَّذِى ارْتَضَيْتَهُ لَهُ، أَبْدِلْهُ مِنْ بَعْدِ خَوْفِهِ أَمْناً، يَعْبُدُكَ لَايُشْرِكُ بِكَ شَيْئاً.", fa: "خدایا، درود فرست بر ولی امرت، آن قائم آرزو شده و دادگستر مورد انتظار، و او را در حمایت فرشتگان مقرّبت قرار ده و به روح‌القدس حمایتش کن ای پروردگار جهانیان. خدایا او را دعوت‌کننده به کتابت و قیام‌کننده به آئینت قرار ده، او را جانشین خود روی زمین گردان، چنان‌که پاکان پیش از او را جانشین خویش قرار دادی، دینی را که برایش پسندیده‌ای به دست او پابرجا بدار و ترسش را به امنیت تغییر ده تا با اخلاص کامل تو را بپرستد." },
+    { ar: "اللّٰهُمَّ أَعِزَّهُ وَأَعْزِزْ بِهِ، وَانْصُرْهُ وَانْتَصِرْ بِهِ، وَانْصُرْهُ نَصْراً عَزِيزاً، وَافْتَحْ لَهُ فَتْحاً يَسِيراً، وَاجْعَلْ لَهُ مِنْ لَدُنْكَ سُلْطاناً نَصِيراً. اللّٰهُمَّ أَظْهِرْ بِهِ دِينَكَ وَسُنَّةَ نَبِيِّكَ حَتَّىٰ لَايَسْتَخْفِىَ بِشَىْءٍ مِنَ الْحَقِّ مَخافَةَ أَحَدٍ مِنَ الْخَلْقِ. اللّٰهُمَّ إِنَّا نَرْغَبُ إِلَيْكَ فِى دَوْلَةٍ كَرِيمَةٍ تُعِزُّ بِهَا الْإِسْلامَ وَأَهْلَهُ، وَتُذِلُّ بِهَا النِّفاقَ وَأَهْلَهُ، وَتَجْعَلُنا فِيها مِنَ الدُّعاةِ إِلَىٰ طاعَتِكَ، وَالْقادَةِ إِلىٰ سَبِيلِكَ، وَتَرْزُقُنا بِها كَرامَةَ الدُّنْيا وَالْآخِرَةِ؛ اللّٰهُمَّ مَا عَرَّفْتَنا مِنَ الْحَقِّ فَحَمِّلْناهُ، وَمَا قَصُرْنا عَنْهُ فَبَلِّغْناهُ.", fa: "خدایا، توانمندش بدار و به دیگران توسط او توانمندی بده و یاری‌اش کن و به دیگران از سوی او یاری ده و یاری‌اش ده، یاری پیروزمندانه و پیروزی آسان برایش بگشا و از پیش خود برای او سلطنتی پیروزی آفرین قرار ده. خدایا، به وسیله او دینت و روش پیامبرت را آشکار کن تا چیزی از حق، از ترس احدی از مردم پنهان نماند. خدایا، به‌سوی تو مشتاقیم برای یافتن دولت کریمه‌ای که اسلام و اهلش را به آن توانمند گردانی و نفاق و اهلش را به وسیله آن خوار سازی و ما را در آن دولت از دعوت‌کنندگان به‌سوی طاعتت و رهبران به‌سوی راهت قرار دهی و کرامت دنیا و آخرت را از برکت آن روزی ما کنی؛ خدایا، آنچه از حق به ما شناساندی تاب تحملش را نیز عنایت کن و آنچه را در رسیدن به آن کوتاهی کردیم، ما را به آن برسان،" },
+    { ar: "اللّٰهُمَّ الْمُمْ بِه شَعَثَنا، وَاشْعَبْ بِهِ صَدْعَنا، وَارْتُقْ بِهِ فَتْقَنا، وَكَثِّرْ بِهِ قِلَّتَنا، وَأَعْزِزْ بِهِ ذِلَّتَنا، وَأَغْنِ بِهِ عائِلَنا، وَاقْضِ بِهِ عَنْ مَُغْرَمِنا، وَاجْبُرْ بِهِ فَقْرَنا، وَسُدَّ بِهِ خَلَّتَنا، وَيَسِّرْ بِهِ عُسْرَنا، وَبَيِّضْ بِهِ وُجُوهَنا، وَفُكَّ بِهِ أَسْرَنا، وَأَنْجِحْ بِهِ طَلِبَتَنا، وَأَنْجِزْ بِهِ مَواعِيدَنا، وَاسْتَجِبْ بِهِ دَعْوَتَنا، وَأَعْطِنا بِهِ سُؤْلَنا، وَبَلِّغْنا بِهِ مِنَ الدُّنْيا وَالْآخِرَةِ آمالَنا، وَأَعْطِنا بِهِ فَوْقَ رَغْبَتِنا، يَا خَيْرَ الْمَسْؤُولِينَ، وَأَوْسَعَ الْمُعْطِينَ، اشْفِ بِهِ صُدُورَنا، وَأَذْهَبْ بِهِ غَيْظَ قُلُوبِنا، وَاهْدِنا بِهِ لِمَا اخْتُلِفَ فِيهِ مِنَ الْحَقِّ بِإِذْنِكَ، إِنَّكَ تَهْدِى مَنْ تَشاءُ إِلىٰ صِراطٍ مُسْتَقِيمٍ، وَانْصُرْنا بِهِ عَلَىٰ عَدُوِّكَ وَعَدُوِّنا إِلٰهَ الْحَقِّ آمِينَ؛", fa: "خدایا، پریشانی ما را به یاری او جمع کن و پراکندگی ما را به او وحدت بخش و گسیختگی ما را با او پیوند ده و اندک ما را به او زیاد کن و خواری ما را به او عزّت ده و تنگدستی ما را به او توانگری بخش و بدهی ما را از برکت او ادا کن و تهیدستی ما را به مدد او جبران فرما و جدایی و دو دستگی ما را به او برطرف کن و دشواری کار ما را به او آسان گردان و روی ما را به دیدار او سپید کن و اسیران ما را به یاری او آزاد گردان و درخواست‌های ما را به حق او برآور وعده‌های ما را به ظهور او تحقق بخش و دعایمان را به خاطر او اجابت کن و خواسته‌هایمان را به‌حق او عطا فرما و ما را به یاری او به آرزوهای دنیا و آخرتمان برسان و بالاتر از آرزویمان را به ما اعطا کن، ای بهترین خواسته شدگان و گشاده‌دست‌ترین بخشندگان، سینه‌های ما را به او شفا بخش و کینه‌ی دل‌هایمان را به او برطرف کن و ما را به مدد او به آنچه که از حق در آن اختلاف افتاده به اذن خود راهنمایی فرما، همانا تو هرکه را بخواهی به راه راست هدایت می‌کنی و به وسیله‌ی او ما را بر دشمنان خود و دشمنان خویش یاری ده، ای معبود حق، آمین؛" },
+    { ar: "اللّٰهُمَّ إِنَّا نَشْكُو إِلَيْكَ فَقْدَ نَبِيِّنا صَلَواتُكَ عَلَيْهِ وَآلِهِ، وَغَيْبَةَ وَلِيِّنا، وَكَثْرَةَ عَدُوِّنا، وَقِلَّةَ عَدَدِنا، وَشِدَّةَ الْفِتَنِ بِنا، وَتَظاهُرَ الزَّمانِ عَلَيْنا، فَصَلِّ عَلَىٰ مُحَمَّدٍ وَآلِهِ، وَأَعِنَّا عَلىٰ ذٰلِكَ بِفَتْحٍ مِنْكَ تُعَجِّلُهُ، وَبِضُرٍّ تَكْشِفُهُ، وَنَصْرٍ تُعِزُّهُ، وَسُلْطانِ حَقٍّ تُظْهِرُهُ، وَرَحْمَةٍ مِنْكَ تُجَلِّلُناها، وَعافِيَةٍ مِنْكَ تُلْبِسُناها، بِرَحْمَتِكَ يَا أَرْحَمَ الرَّاحِمِينَ.", fa: "خدایا، از نبود پیامبرمان که درودهای تو بر او و خاندانش و از ناپیدایی مولایمان و بسیاری دشمنانمان و کمی نفراتمان و سختی فتنه‌هائی که گریبان‌گیر ما شده و از جریان زمان بر زیانمان به درگاه تو شکایت می‌آوریم، بر محمّد و خاندانش درود فرست و ما را در برابر این همه این امور یاری فرما به گشایشی از سوی خود که زود برسانی و بدحالی که آن را برطرف کنی و پیروزی با عزّت که آن را برایمان قرار دهی و سلطنت حقی که آشکارش فرمایی و به رحمتی که از سویت ما را فراگیرد و به سلامتی کاملی که از سویت ما را بپوشاند، ای مهربان‌ترین مهربانان." }
+  ],
+  fazilat: "دعای افتتاح از دعاهای معروف و پرفضیلت است که از امام زمان (عج) روایت شده و در هر شب از ماه مبارک رمضان خوانده می‌شود. این دعا شامل حمد و ثنای الهی، درخواست بخشش، طلب تعجیل در فرج، و درود بر پیامبر و اهل بیت علیهم‌السلام است.\n\nخواندن این دعا در شب‌های ماه رمضان بسیار سفارش شده و برای تعجیل در فرج، دفع بلا، آمرزش گناهان و برآورده شدن حاجات مؤثر است. همچنین در آن به امام زمان (عج) توسل شده و از خداوند درخواست دولت کریمه می‌شود.",
+  source: "مفاتیح الجنان (شیخ عباس قمی) • اقبال الأعمال (سید ابن طاووس) • مصباح المتهجد (شیخ طوسی)",
+  time: "بهترین زمان خواندن این دعا، شب‌های ماه مبارک رمضان است. همچنین در شب‌های قدر و در هر زمان برای طلب تعجیل در فرج، دفع بلا و برآورده شدن حاجات خوانده می‌شود. توصیه شده با وضو و رو به قبله و با قلب حاضر خوانده شود."
+};
+
+/* ============================================================
+   RENDER VERSES
+   ============================================================ */
+function renderVerses() {
+  const c = $('#versesContainer');
+  c.innerHTML = '';
+  DUA_DATA.verses.forEach((v, i) => {
+    const el = document.createElement('div');
+    el.className = 'verse-card';
+    el.innerHTML = `
+      <div class="v-head">
+        <span class="v-num">${faNum(i + 1)}</span>
+        <span class="v-label">بند ${faNum(i + 1)}</span>
+      </div>
+      <div class="v-ar">${v.ar}</div>
+      <div class="v-divider"></div>
+      <div class="v-fa">${v.fa}</div>
+    `;
+    c.appendChild(el);
+  });
+}
+
+/* ============================================================
+   INFO MODAL
+   ============================================================ */
+$('#modalFazilat').textContent = DUA_DATA.fazilat;
+$('#modalSource').textContent = DUA_DATA.source;
+$('#modalTime').textContent = DUA_DATA.time;
+
+$('#btnInfo').onclick = () => $('#modalInfo').classList.add('show');
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+
+$$('[data-close]').forEach(b => b.onclick = () => $('#' + b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e) => { if (e.target === m) m.classList.remove('show'); });
+
+/* ============================================================
+   THEME
+   ============================================================ */
+const sunIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
+const moonIcon = `<svg id="themeIcon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
+
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  if ($('#themeToggle')) $('#themeToggle').innerHTML = dark ? sunIcon : moonIcon;
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+$('#themeToggle').onclick = () => applyTheme(!document.body.classList.contains('dark'));
+
+/* ============================================================
+   SETTINGS
+   ============================================================ */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let lineHeight = localStorage.getItem('noor_lh') || '2.3';
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+
+document.body.classList.add('font-ar-' + fontAr);
+document.body.classList.add('font-fa-' + fontFa);
+
+function applySettings() {
+  document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+  document.documentElement.style.setProperty('--line-height', lineHeight);
+  $$('.verse-card').forEach(v => v.classList.toggle('hide-trans', !showTrans));
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_lh', lineHeight);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep) * 2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(24, faSize + parseInt(b.dataset.faStep) * 2));
+  applySettings();
+});
+$$('[data-lh]').forEach(b => {
+  if (b.dataset.lh === lineHeight) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-lh]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    lineHeight = b.dataset.lh;
+    applySettings();
+  };
+});
+$$('[data-trans]').forEach(b => {
+  const isOn = (b.dataset.trans === '1') === showTrans;
+  b.classList.toggle('active', isOn);
+  b.onclick = () => {
+    $$('[data-trans]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans === '1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g, '').trim();
+    document.body.classList.add('font-ar-' + b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g, '').trim();
+    document.body.classList.add('font-fa-' + b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+
+/* ============================================================
+   BACK BUTTON
+   ============================================================ */
+$('#btnBack').onclick = () => {
+  if (document.referrer && (document.referrer.includes('list.html') || document.referrer.includes('doa.html'))) history.back();
+  else location.href = 'list.html?type=famous';
+};
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+function toast(msg) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderVerses();
+applySettings();
+
+console.log('🤲 دعای افتتاح | NOOR – بارگذاری شد. تعداد بندها:', DUA_DATA.verses.length);
+</script>
+</body>
+</html>

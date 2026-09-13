@@ -1,0 +1,2108 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#123C32">
+<title>اذکار و تسبیح | نــــور NOOR</title>
+<link rel="manifest" href="manifest.json">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Vazirmatn:wght@300;400;500;600;700;800&family=Scheherazade+New:wght@400;700&family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F8F5EE; --surface: #FFFDF8; --surface2: #F1ECE2;
+  --brand: #123C32; --brand2: #2D6657;
+  --gold: #B88A3B; --gold2: #D6B56A;
+  --gold-soft: rgba(184, 138, 59, 0.12);
+  --gold-border: rgba(184, 138, 59, 0.28);
+  --text: #17231F; --text-2: #3d4a44; --muted: #66716C;
+  --divider: #E7E0D3;
+  --arabic: #123C32; --translation: #3d4a44;
+  --shadow: 0 4px 20px rgba(18, 60, 50, 0.06);
+  --shadow-sm: 0 2px 8px rgba(18, 60, 50, 0.04);
+  --radius: 18px; --radius-sm: 12px;
+  --trans: 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  --font-fa: 'Vazirmatn', Tahoma, sans-serif;
+  --font-ar: 'Amiri', 'Scheherazade New', 'Noto Naskh Arabic', serif;
+  --fs-ar: 24px; --fs-fa: 16px; --line-height: 2.4;
+  --nav-h: 68px;
+}
+body.dark {
+  --bg: #080E0C; --surface: #101A16; --surface2: #16231E;
+  --brand: #9FC5B5; --brand2: #B9D5C8;
+  --gold: #D2AC5C; --gold2: #E4C982;
+  --gold-soft: rgba(210, 172, 92, 0.10);
+  --gold-border: rgba(210, 172, 92, 0.22);
+  --text: #F4EFE4; --text-2: #c8d2cc; --muted: #A8B3AD;
+  --divider: #26352F;
+  --arabic: #e8e2d2; --translation: #c8d2cc;
+  --shadow: 0 4px 24px rgba(0, 0, 0, 0.35);
+  --shadow-sm: 0 2px 10px rgba(0, 0, 0, 0.25);
+}
+body.font-fa-vazir { --font-fa: 'Vazirmatn', Tahoma, sans-serif; }
+body.font-fa-amiri { --font-fa: 'Amiri', serif; }
+body.font-fa-naskh { --font-fa: 'Noto Naskh Arabic', serif; }
+body.font-ar-amiri { --font-ar: 'Amiri', serif; }
+body.font-ar-scheherazade { --font-ar: 'Scheherazade New', serif; }
+body.font-ar-naskh { --font-ar: 'Noto Naskh Arabic', serif; }
+* { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--font-fa); background: var(--bg); color: var(--text);
+  min-height: 100vh; padding-bottom: calc(var(--nav-h) + 20px);
+  line-height: 1.7; font-size: 16px;
+  transition: background var(--trans), color var(--trans);
+  overflow-x: hidden;
+}
+button, input, textarea, select { font-family: inherit; color: inherit; }
+button { border: 0; background: none; cursor: pointer; display: inline-flex; align-items: center; justify-content: center; transition: var(--trans); }
+svg { display: block; }
+.icon { width: 22px; height: 22px; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.icon-sm { width: 18px; height: 18px; }
+.app { max-width: 780px; margin: 0 auto; padding: 0 14px; }
+
+/* HEADER */
+.header {
+  position: sticky; top: 0; z-index: 50;
+  display: flex; align-items: center; gap: 6px;
+  padding: 12px 0; background: var(--bg);
+  border-bottom: 1px solid var(--divider);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+}
+.hbtn {
+  width: 40px; height: 40px; border-radius: 50%;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--gold); flex: none;
+}
+.hbtn:hover { background: var(--gold-soft); border-color: var(--gold); }
+.hbtn:active { transform: scale(0.94); }
+.brand { flex: 1; text-align: center; line-height: 1.15; }
+.brand h1 {
+  font-family: 'Amiri', serif;
+  font-size: 1.35rem; font-weight: 700;
+  color: var(--brand); letter-spacing: 1px;
+}
+body.dark .brand h1 { color: var(--gold); }
+.brand .brand-noor {
+  display: block; font-family: 'Amiri', serif;
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); letter-spacing: 7px;
+  margin-top: 3px; text-shadow: 0 0 12px var(--gold-soft);
+}
+
+/* SEARCH */
+.search-wrap { margin: 14px 0; display: none; }
+.search-wrap.show { display: block; }
+.search-box { position: relative; }
+.search-box input {
+  width: 100%; padding: 13px 46px 13px 16px;
+  border-radius: 60px; border: 1px solid var(--gold-border);
+  background: var(--surface); color: var(--text);
+  font-size: 0.9rem; outline: none; transition: var(--trans);
+}
+.search-box input:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+.search-box input::placeholder { color: var(--muted); }
+.search-box .ico {
+  position: absolute; right: 16px; top: 50%;
+  transform: translateY(-50%); color: var(--muted); pointer-events: none;
+}
+
+/* HERO */
+.hero {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 24px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.hero-orn { position: absolute; color: var(--gold); opacity: 0.15; pointer-events: none; }
+.hero-orn.tr { top: -8px; right: -8px; width: 100px; height: 100px; }
+.hero-orn.bl { bottom: -8px; left: -8px; width: 100px; height: 100px; transform: rotate(180deg); }
+.hero-label {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 0.7rem; font-weight: 700;
+  color: var(--gold); background: var(--gold-soft);
+  padding: 4px 12px; border-radius: 20px;
+  border: 1px solid var(--gold-border);
+  margin-bottom: 14px;
+}
+.hero-label svg { width: 14px; height: 14px; }
+.hero-date {
+  display: block; text-align: center;
+  font-size: 0.7rem; color: var(--muted);
+  margin-bottom: 10px; letter-spacing: 1px;
+}
+.hero-ar {
+  font-family: var(--font-ar);
+  font-size: 1.4rem; font-weight: 700;
+  line-height: 2.1; color: var(--arabic);
+  text-align: center; margin-bottom: 12px;
+  padding: 0 8px;
+}
+.hero-fa {
+  font-family: var(--font-fa);
+  font-size: 0.9rem; line-height: 1.95;
+  color: var(--translation); text-align: center;
+  padding-top: 12px; border-top: 1px dashed var(--gold-border);
+  margin-bottom: 12px;
+}
+.hero-meta {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; font-size: 0.7rem; color: var(--muted);
+  flex-wrap: wrap; margin-bottom: 12px;
+}
+.hero-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold); opacity: 0.6; }
+.hero-meta .speaker { color: var(--gold); font-weight: 700; }
+.hero-actions {
+  display: flex; gap: 8px; justify-content: center;
+  padding-top: 12px; border-top: 1px solid var(--divider);
+}
+.hero-actions button {
+  width: 38px; height: 38px; border-radius: 50%;
+  background: var(--surface2); color: var(--muted);
+  border: 1px solid var(--divider);
+}
+.hero-actions button:hover { color: var(--gold); border-color: var(--gold); }
+.hero-actions button.active { color: var(--gold); background: var(--gold-soft); border-color: var(--gold); }
+.hero-actions svg { width: 18px; height: 18px; }
+.hero-start-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 10px 20px; border-radius: 30px;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  font-weight: 700; font-size: 0.85rem;
+}
+.hero-start-btn:hover { background: var(--brand2); transform: translateY(-2px); }
+.hero-start-btn svg { width: 16px; height: 16px; }
+.hero-start-wrap {
+  display: flex; justify-content: center;
+  padding-top: 12px; border-top: 1px solid var(--divider);
+  margin-bottom: 10px;
+}
+
+/* QUICK ACCESS */
+.quick-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px; margin: 16px 0;
+}
+.qa-card {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px 14px; border-radius: var(--radius-sm);
+  background: var(--surface); border: 1px solid var(--gold-border);
+  color: var(--text); text-align: right;
+  transition: var(--trans); position: relative;
+  cursor: pointer;
+}
+.qa-card:hover { background: var(--gold-soft); border-color: var(--gold); transform: translateY(-2px); }
+.qa-card .qa-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.qa-card .qa-ico svg { width: 20px; height: 20px; }
+.qa-card .qa-info { flex: 1; min-width: 0; }
+.qa-card .qa-title { font-size: 0.8rem; font-weight: 700; }
+.qa-card .qa-sub { font-size: 0.65rem; color: var(--muted); margin-top: 2px; }
+
+/* SECTION HEAD */
+.section-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin: 22px 0 12px; gap: 10px;
+}
+.section-head h3 {
+  font-size: 1rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.section-head h3 svg { color: var(--gold); width: 18px; height: 18px; }
+.section-head .cnt {
+  font-size: 0.72rem; color: var(--gold);
+  background: var(--gold-soft); padding: 3px 10px;
+  border-radius: 10px; font-weight: 600;
+  border: 1px solid var(--gold-border);
+}
+
+/* FILTER CHIPS */
+.filter-chips {
+  display: flex; gap: 6px; overflow-x: auto;
+  padding-bottom: 4px; margin-bottom: 12px;
+  scrollbar-width: none;
+}
+.filter-chips::-webkit-scrollbar { display: none; }
+.chip {
+  flex-shrink: 0; padding: 6px 14px;
+  border-radius: 20px; font-size: 0.72rem;
+  font-weight: 600; cursor: pointer;
+  background: var(--surface); color: var(--muted);
+  border: 1px solid var(--divider);
+  transition: var(--trans);
+  white-space: nowrap;
+}
+.chip:hover { border-color: var(--gold-border); color: var(--gold); }
+.chip.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+
+/* DHIKR LIST */
+.dhikr-list { display: flex; flex-direction: column; gap: 10px; }
+.dhikr-item {
+  display: flex; gap: 12px; padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); box-shadow: var(--shadow-sm);
+  cursor: pointer; transition: var(--trans);
+  position: relative;
+}
+.dhikr-item:hover { background: var(--surface2); border-color: var(--gold); transform: translateY(-1px); }
+.dhikr-item .d-ico {
+  width: 40px; height: 40px; border-radius: 12px;
+  background: var(--gold-soft); color: var(--gold);
+  display: flex; align-items: center; justify-content: center; flex: none;
+}
+.dhikr-item .d-ico svg { width: 20px; height: 20px; }
+.dhikr-item .d-info { flex: 1; min-width: 0; }
+.dhikr-item .d-title {
+  font-size: 0.85rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 4px;
+}
+.dhikr-item .d-ar {
+  font-family: var(--font-ar);
+  font-size: 0.98rem; line-height: 1.9;
+  color: var(--arabic); margin-bottom: 6px;
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dhikr-item .d-fa {
+  font-size: 0.72rem; color: var(--muted); line-height: 1.7;
+  padding-top: 6px; border-top: 1px dashed var(--gold-border);
+  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.dhikr-item .d-count-badge {
+  display: inline-flex; align-items: center; gap: 4px;
+  font-size: 0.65rem; color: var(--gold);
+  background: var(--gold-soft); padding: 2px 8px;
+  border-radius: 8px; margin-top: 4px;
+  border: 1px solid var(--gold-border);
+  font-weight: 600;
+}
+.dhikr-item .d-bm {
+  width: 34px; height: 34px; border-radius: 10px;
+  color: var(--muted); flex: none;
+}
+.dhikr-item .d-bm:hover, .dhikr-item .d-bm.active { color: var(--gold); background: var(--gold-soft); }
+
+/* DETAIL VIEW */
+.detail-view { display: none; }
+.detail-view.active { display: block; }
+.list-view.hidden { display: none; }
+
+.detail-head {
+  position: relative; overflow: hidden;
+  margin: 16px 0; padding: 22px 20px;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--brand) 0%, var(--brand2) 100%);
+  color: #fff; text-align: center;
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.detail-head .dh-ico {
+  width: 52px; height: 52px; border-radius: 14px;
+  background: rgba(214, 181, 106, 0.18);
+  color: var(--gold2); margin: 0 auto 12px;
+  display: flex; align-items: center; justify-content: center;
+}
+.detail-head .dh-ico svg { width: 26px; height: 26px; }
+.detail-head .dh-title { font-size: 1.1rem; font-weight: 700; margin-bottom: 4px; }
+.detail-head .dh-meta {
+  display: flex; justify-content: center; align-items: center;
+  gap: 8px; font-size: 0.7rem; color: rgba(255,255,255,0.75);
+  margin-top: 8px; flex-wrap: wrap;
+}
+.detail-head .dh-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--gold2); }
+
+.dhikr-body {
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius); padding: 22px 18px;
+  margin-bottom: 12px; box-shadow: var(--shadow-sm);
+}
+.dhikr-body .db-ar {
+  font-family: var(--font-ar);
+  font-size: var(--fs-ar); line-height: var(--line-height);
+  color: var(--arabic); text-align: center;
+  padding: 6px 8px 16px;
+  border-bottom: 1px dashed var(--gold-border);
+}
+.dhikr-body .db-fa {
+  font-family: var(--font-fa);
+  font-size: var(--fs-fa); line-height: 1.95;
+  color: var(--translation); text-align: center;
+  padding-top: 14px;
+}
+.dhikr-body.hide-trans .db-fa { display: none; }
+.dhikr-body.hide-trans .db-ar { padding-bottom: 6px; border-bottom: 0; }
+
+.info-block {
+  padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm); margin-bottom: 10px;
+  box-shadow: var(--shadow-sm);
+}
+.info-block h4 {
+  font-size: 0.78rem; font-weight: 700;
+  color: var(--gold); margin-bottom: 8px;
+  display: flex; align-items: center; gap: 6px;
+}
+.info-block h4 svg { width: 15px; height: 15px; flex: none; }
+.info-block p {
+  font-size: 0.78rem; line-height: 1.95;
+  color: var(--text-2); text-align: justify;
+}
+.info-block .tags { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 6px; }
+.info-block .tag {
+  font-size: 0.68rem; padding: 3px 9px; border-radius: 8px;
+  background: var(--gold-soft); color: var(--gold);
+  border: 1px solid var(--gold-border);
+}
+
+/* PRIMARY / SECONDARY BUTTONS — اندازه SVG اصلاح شد */
+.primary-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 14px 20px;
+  border-radius: 14px;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  font-weight: 700; font-size: 0.9rem;
+  margin-bottom: 10px;
+  transition: var(--trans);
+}
+.primary-btn:hover { background: var(--brand2); transform: translateY(-2px); }
+.primary-btn svg { width: 18px; height: 18px; flex: none; }
+
+.secondary-btn {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; width: 100%; padding: 12px 18px;
+  border-radius: 14px;
+  background: var(--surface2); color: var(--text);
+  border: 1px solid var(--divider);
+  font-weight: 600; font-size: 0.85rem;
+  margin-bottom: 10px;
+  transition: var(--trans);
+}
+.secondary-btn:hover { border-color: var(--gold); color: var(--gold); }
+.secondary-btn svg { width: 18px; height: 18px; flex: none; }
+
+/* TASBIH MODAL */
+.tasbih-modal {
+  display: flex; flex-direction: column;
+  align-items: center; padding: 10px 0;
+}
+.progress-ring-wrap {
+  position: relative; width: 240px; height: 240px;
+  display: flex; align-items: center; justify-content: center;
+  margin: 20px auto;
+}
+.progress-ring { transform: rotate(-90deg); }
+.progress-ring circle {
+  fill: none; stroke-width: 8;
+  transition: stroke-dashoffset 0.3s ease;
+}
+.progress-ring .ring-bg { stroke: var(--divider); }
+.progress-ring .ring-fg {
+  stroke: var(--gold);
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 8px var(--gold-soft));
+}
+.counter-display {
+  position: absolute;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+}
+.counter-num {
+  font-family: 'Amiri', serif;
+  font-size: 3.5rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  text-shadow: 0 0 24px var(--gold-soft);
+}
+.counter-label {
+  font-size: 0.75rem; color: var(--muted);
+  margin-top: 6px; letter-spacing: 1px;
+}
+.counter-label strong { color: var(--text); font-weight: 700; margin-right: 4px; }
+
+.tasbih-actions {
+  display: flex; align-items: center; justify-content: center;
+  gap: 16px; margin: 20px 0;
+}
+.tasbih-btn-main {
+  width: 100px; height: 100px; border-radius: 50%;
+  background: var(--brand); color: var(--gold2);
+  border: 2px solid var(--gold);
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 8px 30px rgba(184, 138, 59, 0.3);
+  transition: var(--trans);
+  user-select: none;
+  touch-action: manipulation;
+}
+.tasbih-btn-main:active { transform: scale(0.92); }
+.tasbih-btn-main svg { width: 40px; height: 40px; }
+.tasbih-btn-side {
+  width: 50px; height: 50px; border-radius: 50%;
+  background: var(--surface2); color: var(--muted);
+  border: 1px solid var(--divider);
+}
+.tasbih-btn-side:hover { color: var(--gold); border-color: var(--gold); }
+.tasbih-btn-side svg { width: 22px; height: 22px; }
+
+.tasbih-preset {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  justify-content: center; margin: 12px 0;
+}
+.tasbih-preset .preset-chip {
+  padding: 6px 14px; border-radius: 20px;
+  font-size: 0.78rem; font-weight: 600;
+  background: var(--surface2); color: var(--text-2);
+  border: 1px solid var(--divider);
+  cursor: pointer; transition: var(--trans);
+}
+.tasbih-preset .preset-chip:hover { border-color: var(--gold); color: var(--gold); }
+.tasbih-preset .preset-chip.active {
+  background: var(--gold-soft); color: var(--gold);
+  border-color: var(--gold);
+}
+
+/* STEP-BASED */
+.step-progress {
+  display: flex; align-items: center; justify-content: center;
+  gap: 8px; margin: 16px 0;
+}
+.step-dot {
+  width: 30px; height: 6px; border-radius: 3px;
+  background: var(--divider);
+  transition: var(--trans);
+}
+.step-dot.active { background: var(--gold); width: 50px; }
+.step-dot.done { background: var(--brand); }
+
+.step-arrow {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; margin: 16px 0; width: 100%;
+}
+.step-arrow button {
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--surface2); color: var(--muted);
+  border: 1px solid var(--divider);
+}
+.step-arrow button:hover:not(:disabled) { color: var(--gold); border-color: var(--gold); }
+.step-arrow button:disabled { opacity: 0.4; cursor: not-allowed; }
+.step-arrow button svg { width: 20px; height: 20px; }
+.step-arrow .step-info {
+  flex: 1; text-align: center;
+  font-size: 0.82rem; color: var(--text-2);
+  font-weight: 600;
+}
+
+/* STATS */
+.stats-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr);
+  gap: 10px; margin: 12px 0;
+}
+.stat-card {
+  padding: 14px 16px;
+  background: var(--surface); border: 1px solid var(--gold-border);
+  border-radius: var(--radius-sm);
+  text-align: center;
+}
+.stat-card .stat-num {
+  font-family: 'Amiri', serif;
+  font-size: 1.8rem; font-weight: 700;
+  color: var(--gold);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+.stat-card .stat-label {
+  font-size: 0.68rem; color: var(--muted);
+  letter-spacing: 0.5px;
+}
+
+/* FORM */
+.form-group { margin-bottom: 14px; }
+.form-group label {
+  display: block; font-size: 0.78rem;
+  font-weight: 700; color: var(--muted);
+  margin-bottom: 6px;
+}
+.form-input, .form-textarea {
+  width: 100%; padding: 12px 14px;
+  border-radius: 12px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text); font-size: 0.85rem;
+  line-height: 1.8; outline: none;
+  transition: var(--trans);
+}
+.form-input:focus, .form-textarea:focus {
+  border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft);
+}
+.form-textarea { min-height: 80px; resize: vertical; }
+.form-input[type="number"] { text-align: center; }
+
+/* FLOATING */
+.floating-btns {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 14px;
+  z-index: 90; display: flex; flex-direction: column; gap: 8px;
+}
+.fab {
+  width: 46px; height: 46px; border-radius: 50%;
+  background: var(--brand); color: var(--gold2);
+  border: 1px solid var(--gold-border);
+  box-shadow: var(--shadow);
+}
+.fab:hover { background: var(--brand2); transform: translateY(-2px); }
+.fab:active { transform: scale(0.94); }
+.fab svg { width: 20px; height: 20px; }
+
+/* MODAL */
+.modal-bg {
+  position: fixed; inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+  display: none; align-items: flex-end; justify-content: center;
+  z-index: 200; padding: 0 12px 12px;
+}
+.modal-bg.show { display: flex; }
+.modal {
+  width: 100%; max-width: 520px; max-height: 88vh;
+  overflow-y: auto; background: var(--surface);
+  border-radius: 24px 24px 18px 18px;
+  padding: 22px 18px 26px;
+  border: 1px solid var(--gold-border);
+  animation: slideUp 0.3s ease;
+}
+@keyframes slideUp {
+  from { transform: translateY(40px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+.modal-head {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 16px; padding-bottom: 12px;
+  border-bottom: 1px solid var(--divider);
+}
+.modal-head h3 {
+  font-size: 1.05rem; font-weight: 700;
+  display: flex; align-items: center; gap: 8px;
+}
+.modal-head h3 svg { color: var(--gold); width: 20px; height: 20px; flex: none; }
+.modal-close {
+  width: 36px; height: 36px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--muted);
+}
+.modal-close:hover { color: var(--gold); }
+
+/* SETTINGS */
+.set-group { margin-bottom: 16px; }
+.set-group > label {
+  display: block; font-size: 0.78rem; font-weight: 700;
+  color: var(--muted); margin-bottom: 8px;
+}
+.set-options { display: flex; flex-wrap: wrap; gap: 6px; }
+.set-opt {
+  padding: 7px 14px; border-radius: 10px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text-2); font-size: 0.78rem;
+  font-weight: 600; cursor: pointer; transition: var(--trans);
+}
+.set-opt:hover { border-color: var(--gold-border); color: var(--gold); }
+.set-opt.active { background: var(--gold-soft); color: var(--gold); border-color: var(--gold); }
+.set-ctrl {
+  display: flex; align-items: center; gap: 6px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  border-radius: 10px; padding: 4px; width: fit-content;
+}
+.set-ctrl button {
+  width: 36px; height: 36px; border-radius: 8px;
+  color: var(--muted); font-weight: 700; font-size: 1rem;
+}
+.set-ctrl button:hover { background: var(--gold-soft); color: var(--gold); }
+.set-ctrl .val {
+  min-width: 44px; text-align: center;
+  color: var(--gold); font-weight: 700; font-size: 0.85rem;
+}
+.font-preview { font-family: 'Amiri', serif; font-size: 1.3rem; }
+
+/* NOTES */
+.notes-area {
+  width: 100%; min-height: 120px;
+  padding: 12px 14px; border-radius: 12px;
+  background: var(--surface2); border: 1px solid var(--divider);
+  color: var(--text); font-size: 0.85rem;
+  line-height: 1.8; resize: vertical; outline: none;
+}
+.notes-area:focus { border-color: var(--gold); box-shadow: 0 0 0 3px var(--gold-soft); }
+
+/* BOTTOM NAV */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0;
+  z-index: 100; display: flex; justify-content: space-around;
+  align-items: center; background: var(--surface);
+  border-top: 1px solid var(--divider);
+  padding: 6px 4px calc(6px + env(safe-area-inset-bottom, 0px));
+  height: var(--nav-h);
+  box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.06);
+}
+body.dark .bottom-nav { box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.4); }
+.nav-btn {
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  gap: 3px; flex: 1; padding: 6px 4px;
+  border-radius: 12px; color: var(--muted);
+  transition: var(--trans); position: relative;
+  font-size: 0.62rem; font-weight: 500;
+  text-decoration: none; background: none; border: 0; cursor: pointer;
+}
+.nav-btn svg {
+  width: 22px; height: 22px; fill: none; stroke: currentColor;
+  stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round;
+}
+.nav-btn:hover, .nav-btn.active { color: var(--gold); }
+.nav-btn.active::before {
+  content: ""; position: absolute; top: 0; left: 50%;
+  transform: translateX(-50%);
+  width: 22px; height: 3px;
+  border-radius: 0 0 4px 4px; background: var(--gold);
+}
+
+/* TOAST */
+.toast {
+  position: fixed; bottom: calc(var(--nav-h) + 16px); left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--brand); color: #fff;
+  padding: 10px 20px; border-radius: 14px;
+  font-size: 0.82rem; font-weight: 600;
+  opacity: 0; pointer-events: none;
+  transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 300; box-shadow: var(--shadow);
+  display: flex; align-items: center; gap: 8px;
+  border: 1px solid var(--gold-border); max-width: 90%;
+}
+.toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+.toast svg { color: var(--gold2); width: 18px; height: 18px; }
+
+.empty {
+  text-align: center; padding: 50px 20px; color: var(--muted);
+}
+.empty svg { width: 50px; height: 50px; color: var(--gold); opacity: 0.4; margin: 0 auto 14px; }
+.empty p { font-size: 0.85rem; }
+
+mark {
+  background: var(--gold-soft);
+  color: var(--gold);
+  padding: 0 3px;
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+@media (max-width: 480px) {
+  .brand h1 { font-size: 1.1rem; }
+  .brand .brand-noor { font-size: 0.7rem; letter-spacing: 5px; }
+  :root { --nav-h: 62px; --fs-ar: 22px; --fs-fa: 15px; }
+  .hbtn { width: 36px; height: 36px; }
+  .hbtn .icon { width: 18px; height: 18px; }
+  .progress-ring-wrap { width: 200px; height: 200px; }
+  .counter-num { font-size: 2.8rem; }
+  .tasbih-btn-main { width: 80px; height: 80px; }
+  .tasbih-btn-main svg { width: 32px; height: 32px; }
+}
+</style>
+</head>
+<body>
+
+<div class="app">
+  <!-- HEADER — نـــور | NOOR حذف شد -->
+  <header class="header">
+    <button class="hbtn" id="btnBack" aria-label="بازگشت">
+      <svg class="icon" viewBox="0 0 24 24"><polyline points="9 6 15 12 9 18"></polyline></svg>
+    </button>
+    <div class="brand">
+      <h1 id="pageTitle">اذکار و تسبیح</h1>
+      <span class="brand-noor">تسبیح</span>
+    </div>
+    <button class="hbtn" id="btnSearch" aria-label="جستجو">
+      <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </button>
+    <button class="hbtn" id="btnSettings" aria-label="تنظیمات">
+      <svg class="icon" viewBox="0 0 24 24">
+        <circle cx="12" cy="12" r="3"/>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+    </button>
+  </header>
+
+  <!-- SEARCH -->
+  <div class="search-wrap" id="searchWrap">
+    <div class="search-box">
+      <input type="text" id="searchInput" placeholder="جستجو در اذکار..." autocomplete="off">
+      <span class="ico">
+        <svg class="icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+      </span>
+    </div>
+  </div>
+
+  <!-- LIST VIEW -->
+  <div id="listView" class="list-view">
+
+    <!-- HERO — ذکر امروز -->
+    <section class="hero" id="heroDhikr">
+      <svg class="hero-orn tr" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <svg class="hero-orn bl" viewBox="0 0 100 100" fill="none" stroke="currentColor" stroke-width="0.8">
+        <path d="M50 5 L95 50 L50 95 L5 50 Z"/>
+        <path d="M50 20 L80 50 L50 80 L20 50 Z"/>
+        <circle cx="50" cy="50" r="15"/>
+      </svg>
+      <div class="hero-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+        </svg>
+        ذکر امروز
+      </div>
+      <span class="hero-date" id="heroDate"></span>
+      <div id="heroContent"></div>
+    </section>
+
+    <!-- QUICK ACCESS -->
+    <div class="quick-grid">
+      <div class="qa-card" id="qaTasbih">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="9"/>
+            <circle cx="12" cy="3.5" r="1.5"/>
+            <circle cx="12" cy="20.5" r="1.5"/>
+            <circle cx="3.5" cy="12" r="1.5"/>
+            <circle cx="20.5" cy="12" r="1.5"/>
+            <circle cx="6" cy="6" r="1.5"/>
+            <circle cx="18" cy="6" r="1.5"/>
+            <circle cx="6" cy="18" r="1.5"/>
+            <circle cx="18" cy="18" r="1.5"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">تسبیح دیجیتال</div>
+          <div class="qa-sub">شمارنده هوشمند</div>
+        </div>
+      </div>
+      <div class="qa-card" id="qaZahra">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">تسبیحات حضرت زهرا (س)</div>
+          <div class="qa-sub">۳۴ + ۳۳ + ۳۳</div>
+        </div>
+      </div>
+      <div class="qa-card" id="qaBookmarks">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">نشان‌شده‌ها</div>
+          <div class="qa-sub" id="bmCount">۰ ذکر</div>
+        </div>
+      </div>
+      <div class="qa-card" id="qaStats">
+        <div class="qa-ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="12" y1="20" x2="12" y2="10"/>
+            <line x1="18" y1="20" x2="18" y2="4"/>
+            <line x1="6" y1="20" x2="6" y2="16"/>
+          </svg>
+        </div>
+        <div class="qa-info">
+          <div class="qa-title">گزارش ذکر</div>
+          <div class="qa-sub">آمار شخصی</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- FILTER CHIPS -->
+    <div class="filter-chips" id="filterChips"></div>
+
+    <!-- DHIKR LIST -->
+    <div class="section-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="3.5" r="1.5"/>
+          <circle cx="12" cy="20.5" r="1.5"/>
+          <circle cx="3.5" cy="12" r="1.5"/>
+          <circle cx="20.5" cy="12" r="1.5"/>
+        </svg>
+        <span id="listTitle">همه اذکار</span>
+      </h3>
+      <span class="cnt" id="listCount">—</span>
+    </div>
+    <div class="dhikr-list" id="dhikrList"></div>
+  </div>
+
+  <!-- DETAIL VIEW -->
+  <div id="detailView" class="detail-view">
+    <div id="detailContent"></div>
+    <div style="height:80px"></div>
+  </div>
+</div>
+
+<!-- FLOATING BUTTONS -->
+<div class="floating-btns" id="floatingBtns" style="display:none">
+  <button class="fab" id="fabCopy" aria-label="کپی">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+    </svg>
+  </button>
+  <button class="fab" id="fabNotes" aria-label="یادداشت">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+      <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+    </svg>
+  </button>
+</div>
+
+<!-- BOTTOM NAV -->
+<nav class="bottom-nav">
+  <a class="nav-btn" href="index.html" aria-label="خانه">
+    <svg viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/><path d="M10 21v-6h4v6"/></svg>
+    <span>خانه</span>
+  </a>
+  <a class="nav-btn" href="hadith.html" aria-label="احادیث">
+    <svg viewBox="0 0 24 24">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
+      <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    <span>احادیث</span>
+  </a>
+  <button class="nav-btn active" aria-label="اذکار">
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <circle cx="12" cy="3.5" r="1.5"/>
+      <circle cx="12" cy="20.5" r="1.5"/>
+      <circle cx="3.5" cy="12" r="1.5"/>
+      <circle cx="20.5" cy="12" r="1.5"/>
+    </svg>
+    <span>اذکار</span>
+  </button>
+  <button class="nav-btn" id="navPersonal" aria-label="ذکر من">
+    <svg viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="10"/>
+      <line x1="12" y1="8" x2="12" y2="16"/>
+      <line x1="8" y1="12" x2="16" y2="12"/>
+    </svg>
+    <span>ذکر من</span>
+  </button>
+</nav>
+
+<!-- TASBIH MODAL -->
+<div class="modal-bg" id="modalTasbih">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="9"/>
+          <circle cx="12" cy="3.5" r="1.5"/>
+          <circle cx="12" cy="20.5" r="1.5"/>
+          <circle cx="3.5" cy="12" r="1.5"/>
+          <circle cx="20.5" cy="12" r="1.5"/>
+        </svg>
+        <span id="tasbihTitle">تسبیح دیجیتال</span>
+      </h3>
+      <button class="modal-close" data-close="modalTasbih">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="tasbih-modal">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="240" height="240">
+          <circle class="ring-bg" cx="120" cy="120" r="106"/>
+          <circle class="ring-fg" id="ringFg" cx="120" cy="120" r="106"/>
+        </svg>
+        <div class="counter-display">
+          <div class="counter-num" id="counterNum">۰</div>
+          <div class="counter-label">از <strong id="counterTarget">۳۳</strong></div>
+        </div>
+      </div>
+      <div class="tasbih-preset" id="tasbihPreset">
+        <div class="preset-chip" data-count="33">۳۳</div>
+        <div class="preset-chip" data-count="34">۳۴</div>
+        <div class="preset-chip" data-count="70">۷۰</div>
+        <div class="preset-chip" data-count="100">۱۰۰</div>
+        <div class="preset-chip" data-count="1000">۱۰۰۰</div>
+        <div class="preset-chip" data-count="custom">سفارشی</div>
+      </div>
+      <div class="tasbih-actions">
+        <button class="tasbih-btn-side" id="tasbihReset" title="شروع دوباره">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 3-6.7L3 8"/>
+            <polyline points="3 3 3 8 8 8"/>
+          </svg>
+        </button>
+        <button class="tasbih-btn-main" id="tasbihCounter" title="شمارش">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </button>
+        <button class="tasbih-btn-side" id="tasbihMinus" title="کاهش">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+      </div>
+      <div id="tasbihDhikrText" style="text-align:center;padding:10px 14px;background:var(--surface2);border-radius:12px;width:100%;border:1px solid var(--divider);">
+        <div class="db-ar" style="font-family:var(--font-ar);font-size:1.2rem;color:var(--arabic);padding:4px;border:0;">سُبْحانَ اللّٰهِ</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ZAHRA MODAL -->
+<div class="modal-bg" id="modalZahra">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/>
+        </svg>
+        تسبیحات حضرت زهرا (س)
+      </h3>
+      <button class="modal-close" data-close="modalZahra">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="step-progress">
+      <div class="step-dot active" id="stepDot1"></div>
+      <div class="step-dot" id="stepDot2"></div>
+      <div class="step-dot" id="stepDot3"></div>
+    </div>
+    <div class="tasbih-modal">
+      <div class="progress-ring-wrap">
+        <svg class="progress-ring" width="240" height="240">
+          <circle class="ring-bg" cx="120" cy="120" r="106"/>
+          <circle class="ring-fg" id="zahraRingFg" cx="120" cy="120" r="106"/>
+        </svg>
+        <div class="counter-display">
+          <div class="counter-num" id="zahraCounterNum">۰</div>
+          <div class="counter-label">از <strong id="zahraCounterTarget">۳۴</strong></div>
+        </div>
+      </div>
+      <div id="zahraStepText" style="text-align:center;padding:10px 14px;background:var(--surface2);border-radius:12px;width:100%;border:1px solid var(--divider);">
+        <div class="db-ar" style="font-family:var(--font-ar);font-size:1.2rem;color:var(--arabic);padding:4px;border:0;">اَللّٰهُ اَکْبَرُ</div>
+      </div>
+      <div class="step-arrow">
+        <button id="zahraPrev" disabled>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+        </button>
+        <div class="step-info" id="zahraStepInfo">مرحله ۱ از ۳</div>
+        <button id="zahraNext">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 6 9 12 15 18"/></svg>
+        </button>
+      </div>
+      <div class="tasbih-actions">
+        <button class="tasbih-btn-side" id="zahraReset">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 12a9 9 0 1 0 3-6.7L3 8"/>
+            <polyline points="3 3 3 8 8 8"/>
+          </svg>
+        </button>
+        <button class="tasbih-btn-main" id="zahraCounter">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 5v14M5 12h14"/>
+          </svg>
+        </button>
+        <button class="tasbih-btn-side" id="zahraMinus">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PERSONAL DHIKR MODAL -->
+<div class="modal-bg" id="modalPersonal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/>
+          <line x1="12" y1="8" x2="12" y2="16"/>
+          <line x1="8" y1="12" x2="16" y2="12"/>
+        </svg>
+        ذکر شخصی
+      </h3>
+      <button class="modal-close" data-close="modalPersonal">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="form-group">
+      <label>نام ذکر</label>
+      <input type="text" class="form-input" id="pName" placeholder="مثلاً: ذکر آرامش من">
+    </div>
+    <div class="form-group">
+      <label>متن عربی</label>
+      <textarea class="form-textarea" id="pArabic" placeholder="متن عربی ذکر"></textarea>
+    </div>
+    <div class="form-group">
+      <label>ترجمه فارسی (اختیاری)</label>
+      <textarea class="form-textarea" id="pFa" placeholder="ترجمه فارسی"></textarea>
+    </div>
+    <div class="form-group">
+      <label>تعداد هدف</label>
+      <input type="number" class="form-input" id="pCount" value="33" min="1" max="100000">
+    </div>
+    <button class="primary-btn" id="savePersonal">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/>
+        <polyline points="17 21 17 13 7 13 7 21"/>
+        <polyline points="7 3 7 8 15 8"/>
+      </svg>
+      ذخیره ذکر
+    </button>
+  </div>
+</div>
+
+<!-- STATS MODAL -->
+<div class="modal-bg" id="modalStats">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="20" x2="12" y2="10"/>
+          <line x1="18" y1="20" x2="18" y2="4"/>
+          <line x1="6" y1="20" x2="6" y2="16"/>
+        </svg>
+        گزارش ذکر
+      </h3>
+      <button class="modal-close" data-close="modalStats">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div id="statsContent"></div>
+  </div>
+</div>
+
+<!-- NOTES MODAL -->
+<div class="modal-bg" id="modalNotes">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/>
+          <path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/>
+        </svg>
+        یادداشت شخصی
+      </h3>
+      <button class="modal-close" data-close="modalNotes">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <textarea class="notes-area" id="notesArea" placeholder="یادداشت خود را بنویسید..."></textarea>
+    <button class="primary-btn" style="margin-top:12px;" id="saveNotesBtn">ذخیره یادداشت</button>
+  </div>
+</div>
+
+<!-- COPY MODAL -->
+<div class="modal-bg" id="modalCopy">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"/>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/>
+        </svg>
+        کپی / اشتراک‌گذاری
+      </h3>
+      <button class="modal-close" data-close="modalCopy">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div style="display:grid;gap:8px;">
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyArabic">کپی متن عربی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyTrans">کپی ترجمه فارسی</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="copyBoth">کپی کامل</button>
+      <button class="set-opt" style="text-align:right;padding:14px 16px;display:flex;justify-content:flex-start;width:100%;" id="shareBtn">اشتراک‌گذاری</button>
+    </div>
+  </div>
+</div>
+
+<!-- SETTINGS MODAL -->
+<div class="modal-bg" id="modalSettings">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M4 7V4h16v3"/><path d="M9 20h6"/><path d="M12 4v16"/>
+        </svg>
+        تنظیمات مطالعه
+      </h3>
+      <button class="modal-close" data-close="modalSettings">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <div class="set-group">
+      <label>فونت متن عربی</label>
+      <div class="set-options">
+        <div class="set-opt active" data-font-ar="amiri"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="scheherazade"><span class="font-preview">بسم الله</span></div>
+        <div class="set-opt" data-font-ar="naskh"><span class="font-preview">بسم الله</span></div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>فونت فارسی</label>
+      <div class="set-options">
+        <div class="set-opt active" data-font-fa="vazir">وزیرمتن</div>
+        <div class="set-opt" data-font-fa="amiri">امیری</div>
+        <div class="set-opt" data-font-fa="naskh">نسخ</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه متن عربی</label>
+      <div class="set-ctrl">
+        <button data-ar-step="-1">−</button>
+        <span class="val" id="arSizeVal">۲۴</span>
+        <button data-ar-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>اندازه ترجمه</label>
+      <div class="set-ctrl">
+        <button data-fa-step="-1">−</button>
+        <span class="val" id="faSizeVal">۱۶</span>
+        <button data-fa-step="1">+</button>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>نمایش ترجمه</label>
+      <div class="set-options">
+        <div class="set-opt active" data-trans="1">نمایش</div>
+        <div class="set-opt" data-trans="0">پنهان</div>
+      </div>
+    </div>
+    <div class="set-group">
+      <label>حالت نمایش</label>
+      <div class="set-options">
+        <div class="set-opt" id="themeLight">روشن</div>
+        <div class="set-opt" id="themeDark">تاریک</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+  <span id="toastText">انجام شد</span>
+</div>
+
+<script>
+/* ============================================================
+   نــــور NOOR — اذکار و تسبیح
+   ============================================================ */
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+const faNum = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[d]);
+
+/* ===== STATE ===== */
+let bookmarks = JSON.parse(localStorage.getItem('noor_dhikr_bm') || '[]');
+let notes = JSON.parse(localStorage.getItem('noor_dhikr_notes') || '{}');
+let stats = JSON.parse(localStorage.getItem('noor_dhikr_stats') || '{}');
+let personalDhikrs = JSON.parse(localStorage.getItem('noor_dhikr_personal') || '[]');
+let currentDhikr = null;
+let currentFilter = 'all';
+let searchQuery = '';
+let editingNoteId = null;
+
+/* ===== THEME ===== */
+function applyTheme(dark) {
+  document.body.classList.toggle('dark', dark);
+  localStorage.setItem('noor_theme', dark ? 'dark' : 'light');
+  const tl = $('#themeLight'), td = $('#themeDark');
+  if (tl && td) {
+    tl.classList.toggle('active', !dark);
+    td.classList.toggle('active', dark);
+  }
+}
+applyTheme(localStorage.getItem('noor_theme') === 'dark');
+
+/* ===== SETTINGS ===== */
+let arSize = parseInt(localStorage.getItem('noor_ar_size') || '24');
+let faSize = parseInt(localStorage.getItem('noor_fa_size') || '16');
+let showTrans = localStorage.getItem('noor_trans') !== 'false';
+const fontAr = localStorage.getItem('noor_font_ar') || 'amiri';
+const fontFa = localStorage.getItem('noor_font_fa') || 'vazir';
+document.body.classList.add('font-ar-' + fontAr);
+document.body.classList.add('font-fa-' + fontFa);
+
+function applySettings() {
+  document.documentElement.style.setProperty('--fs-ar', arSize + 'px');
+  document.documentElement.style.setProperty('--fs-fa', faSize + 'px');
+  document.querySelectorAll('.dhikr-body').forEach(v => v.classList.toggle('hide-trans', !showTrans));
+  if ($('#arSizeVal')) $('#arSizeVal').textContent = faNum(arSize);
+  if ($('#faSizeVal')) $('#faSizeVal').textContent = faNum(faSize);
+  localStorage.setItem('noor_ar_size', arSize);
+  localStorage.setItem('noor_fa_size', faSize);
+  localStorage.setItem('noor_trans', showTrans);
+}
+applySettings();
+
+$$('[data-ar-step]').forEach(b => b.onclick = () => {
+  arSize = Math.max(16, Math.min(42, arSize + parseInt(b.dataset.arStep) * 2));
+  applySettings();
+});
+$$('[data-fa-step]').forEach(b => b.onclick = () => {
+  faSize = Math.max(12, Math.min(24, faSize + parseInt(b.dataset.faStep) * 2));
+  applySettings();
+});
+$$('[data-trans]').forEach(b => {
+  const isOn = (b.dataset.trans === '1') === showTrans;
+  b.classList.toggle('active', isOn);
+  b.onclick = () => {
+    $$('[data-trans]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    showTrans = b.dataset.trans === '1';
+    applySettings();
+  };
+});
+$$('[data-font-ar]').forEach(b => {
+  if (b.dataset.fontAr === fontAr) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-ar]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-ar-\S+/g, '').trim();
+    document.body.classList.add('font-ar-' + b.dataset.fontAr);
+    localStorage.setItem('noor_font_ar', b.dataset.fontAr);
+  };
+});
+$$('[data-font-fa]').forEach(b => {
+  if (b.dataset.fontFa === fontFa) b.classList.add('active');
+  b.onclick = () => {
+    $$('[data-font-fa]').forEach(x => x.classList.remove('active'));
+    b.classList.add('active');
+    document.body.className = document.body.className.replace(/font-fa-\S+/g, '').trim();
+    document.body.classList.add('font-fa-' + b.dataset.fontFa);
+    localStorage.setItem('noor_font_fa', b.dataset.fontFa);
+  };
+});
+$('#themeLight').onclick = () => applyTheme(false);
+$('#themeDark').onclick = () => applyTheme(true);
+
+/* ===== ICONS ===== */
+const ICONS = {
+  dhikr: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="12" cy="20.5" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="20.5" cy="12" r="1.5"/></svg>'
+};
+
+/* ============================================================
+   DATA — اذکار
+   ============================================================ */
+const CATEGORIES = [
+  { id: 'all', name: 'همه' },
+  { id: 'general', name: 'اذکار عمومی' },
+  { id: 'morning', name: 'اذکار صبح' },
+  { id: 'evening', name: 'اذکار شام' },
+  { id: 'prayer', name: 'بعد از نماز' },
+  { id: 'zahra', name: 'تسبیحات حضرت زهرا (س)' },
+  { id: 'salawat', name: 'صلوات' },
+  { id: 'istighfar', name: 'استغفار' },
+  { id: 'tawbah', name: 'اذکار توبه' },
+  { id: 'shukr', name: 'اذکار شکر' },
+  { id: 'tawakkul', name: 'اذکار توکل' },
+  { id: 'calm', name: 'آرامش و یاد خدا' },
+  { id: 'sleep', name: 'اذکار خواب' },
+  { id: 'wake', name: 'هنگام بیدار شدن' },
+  { id: 'travel', name: 'اذکار سفر' },
+  { id: 'ahlulbayt', name: 'مرتبط با اهل‌بیت (ع)' },
+  { id: 'rajab', name: 'ماه رجب' },
+  { id: 'shaban', name: 'ماه شعبان' },
+  { id: 'ramadan', name: 'ماه رمضان' },
+  { id: 'muharram', name: 'محرم و صفر' }
+];
+
+const DHIKR_DATA = [
+  { id: 'd1', category: 'general', title: 'سبحان الله', arabic: 'سُبْحانَ اللّٰهِ', translation: 'پاک و منزّه است خداوند', count: 33, source: 'قرآن کریم و روایات متعدد', virtue: 'ذکر تسبیح خداوند که در قرآن بسیار سفارش شده است.', tags: ['تسبیح', 'تعظیم', 'تسبیحات اربعه'] },
+  { id: 'd2', category: 'general', title: 'الحمدلله', arabic: 'اَلْحَمْدُ لِلّٰهِ', translation: 'ستایش مخصوص خداوند است', count: 33, source: 'قرآن کریم و روایات متعدد', virtue: 'سپاسگزاری از نعمت‌های الهی.', tags: ['حمد', 'شکر', 'تسبیحات اربعه'] },
+  { id: 'd3', category: 'general', title: 'لا اله الا الله', arabic: 'لا اِلهَ اِلاَّ اللّٰهُ', translation: 'معبودی جز خدا نیست', count: 100, source: 'قرآن کریم و روایات متعدد', virtue: 'بالاترین ذکر و کلمه توحید. پیامبر (ص) فرمود: «لا اله الا الله» بهترین ذکر است.', tags: ['توحید', 'تهلیل', 'تسبیحات اربعه'] },
+  { id: 'd4', category: 'general', title: 'الله اکبر', arabic: 'اَللّٰهُ اَکْبَرُ', translation: 'خداوند بزرگ‌تر است', count: 34, source: 'قرآن کریم و روایات متعدد', virtue: 'بزرگ‌داشتن خداوند از هر وصفی.', tags: ['تکبیر', 'تعظیم', 'تسبیحات اربعه'] },
+  { id: 'zahra', category: 'zahra', title: 'تسبیحات حضرت زهرا (س)', arabic: 'اَللّٰهُ اَکْبَرُ (۳۴ مرتبه)، اَلْحَمْدُ لِلّٰهِ (۳۳ مرتبه)، سُبْحانَ اللّٰهِ (۳۳ مرتبه)', translation: 'الله اکبر (۳۴ بار)، الحمدلله (۳۳ بار)، سبحان الله (۳۳ بار)', count: 100, source: 'من لا یحضره الفقیه (شیخ صدوق)، ج۱، ص۳۲۰ • وسائل الشیعه، ج۴، ص۱۰۲۵', virtue: 'امام باقر (ع) فرمود: «هر کس تسبیحات حضرت زهرا (س) را بگوید و بعد از آن استغفار کند، آمرزیده می‌شود؛ همانا این تسبیحات صدگانه است و در میزان اعمال (کسی که) با اخلاص بگوید، ثبت می‌گردد». به‌گفته امام صادق (ع)، این تسبیحات نزد من از هزار رکعت نماز در هر روز بهتر است.', tags: ['تسبیحات', 'حضرت زهرا', 'بعد از نماز'], multiStep: true, steps: [
+    { label: 'الله اکبر', arabic: 'اَللّٰهُ اَکْبَرُ', count: 34 },
+    { label: 'الحمدلله', arabic: 'اَلْحَمْدُ لِلّٰهِ', count: 33 },
+    { label: 'سبحان الله', arabic: 'سُبْحانَ اللّٰهِ', count: 33 }
+  ]},
+  { id: 'd5', category: 'prayer', title: 'استغفار بعد از نماز', arabic: 'اَسْتَغْفِرُ اللّٰهَ', translation: 'از خداوند آمرزش می‌خواهم', count: 3, source: 'من لا یحضره الفقیه، ج۱، ص۳۲۱', virtue: 'روایت شده که پیامبر (ص) بعد از سلام نماز سه بار استغفار می‌کردند.', tags: ['استغفار', 'بعد از نماز'] },
+  { id: 'd6', category: 'prayer', title: 'دعای بعد از نماز', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ', translation: 'خدایا بر محمد و آل محمد درود فرست', count: 1, source: 'وسائل الشیعه', virtue: 'صلوات بعد از نماز. بر اساس روایت، صلوات بر محمد و آلش.', tags: ['صلوات', 'بعد از نماز'] },
+  { id: 'd7', category: 'salawat', title: 'صلوات', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ', translation: 'خدایا بر محمد و آل محمد درود فرست', count: 14, source: 'قرآن کریم، سوره احزاب آیه ۵۶ • کافی، ج۲، ص۴۹۲', virtue: 'پیامبر اکرم (ص) فرمود: «هر کس بر من یک صلوات فرستد، خداوند ده صلوات بر او می‌فرستد».', tags: ['صلوات', 'محمد', 'اهل بیت'] },
+  { id: 'd8', category: 'salawat', title: 'صلوات با تعقیب', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ وَ عَجِّلْ فَرَجَهُمْ', translation: 'خدایا بر محمد و آل محمد درود فرست و در فرجشان تعجیل فرما', count: 100, source: 'مفاتیح الجنان', virtue: 'این صلوات با درخواست تعجیل فرج همراه است.', tags: ['صلوات', 'فرج'] },
+  { id: 'd9', category: 'istighfar', title: 'استغفار هفتادگانه', arabic: 'اَسْتَغْفِرُ اللّٰهَ رَبِّی وَ اَتُوبُ اِلَیْهِ', translation: 'از خداوند پروردگارم آمرزش می‌خواهم و به سوی او باز می‌گردم', count: 70, source: 'روایات مختلف', virtue: 'استغفار هفتادگانه که در روایات برای آمرزش گناهان توصیه شده است.', tags: ['استغفار', 'توبه'] },
+  { id: 'd10', category: 'istighfar', title: 'استغفار کوتاه', arabic: 'اَسْتَغْفِرُ اللّٰهَ', translation: 'از خداوند آمرزش می‌خواهم', count: 100, source: 'روایات متعدد', virtue: 'ذکر استغفار از بهترین اذکار است و آثار فراوانی دارد.', tags: ['استغفار'] },
+  { id: 'd11', category: 'tawbah', title: 'ذکر توبه', arabic: 'رَبِّ اِنّی ظَلَمْتُ نَفْسی فَاغْفِرْ لی', translation: 'پروردگارا! من به خود ستم کردم پس مرا بیامرز', count: 1, source: 'قرآن کریم، سوره قصص آیه ۱۶', virtue: 'دعای حضرت موسی (ع) بعد از توبه.', tags: ['توبه', 'استغفار'] },
+  { id: 'd12', category: 'shukr', title: 'ذکر شکر', arabic: 'اَلْحَمْدُ لِلّٰهِ عَلىٰ کُلِّ حالٍ', translation: 'ستایش مخصوص خداوند است در هر حالی', count: 10, source: 'روایات متعدد', virtue: 'ذکر شکرگزاری در هر حال.', tags: ['شکر', 'حمد'] },
+  { id: 'd13', category: 'tawakkul', title: 'ذکر توکل', arabic: 'حَسْبُنَا اللّٰهُ وَ نِعْمَ الْوَکیلُ', translation: 'خداوند ما را کافی است و نیکو کارسازی است', count: 70, source: 'قرآن کریم، سوره آل عمران آیه ۱۷۳', virtue: 'ذکر توکل که در قرآن آمده است.', tags: ['توکل', 'امید'] },
+  { id: 'd14', category: 'tawakkul', title: 'ذکر لا حول و لا قوة', arabic: 'لا حَوْلَ وَ لا قُوَّةَ اِلاَّ بِاللّٰهِ', translation: 'هیچ نیرو و توانی نیست مگر به خداوند', count: 100, source: 'بحارالانوار، ج۸۶، ص۱۳۰', virtue: 'روایت شده این ذکر از گنج‌های بهشت است.', tags: ['توکل', 'قدرت خدا'] },
+  { id: 'd15', category: 'calm', title: 'ذکر یونسیه', arabic: 'لا اِلهَ اِلاَّ اَنْتَ سُبْحانَکَ اِنّی کُنْتُ مِنَ الظّالِمینَ', translation: 'معبودی جز تو نیست، پاک و منزّهی تو، براستی من از ستمکارانم', count: 40, source: 'قرآن کریم، سوره انبیاء آیه ۸۷', virtue: 'ذکر حضرت یونس (ع) که در قرآن ذکر شده است. برای رفع گرفتاری‌ها مؤثر است.', tags: ['آرامش', 'یونس', 'رفع گرفتاری'] },
+  { id: 'd16', category: 'calm', title: 'ذکر آرامش دل', arabic: 'یا مُقَلِّبَ الْقُلُوبِ ثَبِّتْ قَلْبی عَلىٰ دینِکَ', translation: 'ای دگرگون‌کننده دل‌ها، دل مرا بر دین خود استوار بدار', count: 3, source: 'روایات متعدد', virtue: 'دعای ثبات قلب در دین.', tags: ['آرامش', 'ثبات'] },
+  { id: 'd17', category: 'calm', title: 'ذکر یاد خدا', arabic: 'یا اللّٰهُ یا رَحْمٰنُ یا رَحیمُ', translation: 'ای خدا، ای بخشنده، ای مهربان', count: 100, source: 'روایات متعدد', virtue: 'یاد خدا که موجب آرامش قلب می‌شود؛ قرآن: «أَلا بِذِکْرِ اللّٰهِ تَطْمَئِنُّ الْقُلُوبُ».', tags: ['آرامش', 'یاد خدا'] },
+  { id: 'd18', category: 'morning', title: 'ذکر صبح', arabic: 'اَللّٰهُمَّ بِکَ اَصْبَحْنا وَ بِکَ اَمْسَیْنا وَ بِکَ نَحْیا وَ بِکَ نَموتُ', translation: 'خدایا با تو صبح کردیم و با تو شب کردیم و با تو زنده‌ایم و با تو می‌میریم', count: 3, source: 'روایات متعدد', virtue: 'ذکر شروع روز.', tags: ['صبح', 'یاد خدا'] },
+  { id: 'd19', category: 'evening', title: 'ذکر شام', arabic: 'اَعُوذُ بِکَلِماتِ اللّٰهِ التّامّاتِ مِنْ شَرِّ ما خَلَقَ', translation: 'پناه می‌برم به کلمات کامل خداوند از شر آنچه آفریده است', count: 3, source: 'روایات متعدد', virtue: 'ذکر شب که در روایات وارد شده است.', tags: ['شام', 'پناه'] },
+  { id: 'd20', category: 'sleep', title: 'ذکر خواب', arabic: 'بِسْمِ اللّٰهِ وَضَعْتُ جَنْبی، اَللّٰهُمَّ اغْفِرْ لی ذَنْبی', translation: 'به نام خدا پهلو بر زمین نهادم، خدایا گناهم را بیامرز', count: 1, source: 'روایات متعدد', virtue: 'ذکر هنگام خواب که در روایات وارد شده است.', tags: ['خواب', 'آمرزش'] },
+  { id: 'd21', category: 'wake', title: 'ذکر بیدار شدن', arabic: 'اَلْحَمْدُ لِلّٰهِ الَّذی اَحْیانی بَعْدَ ما اَماتَنی وَ اِلَیْهِ النُّشُورُ', translation: 'سپاس خداوندی را که مرا زنده کرد پس از آنکه میراند و بازگشت به سوی اوست', count: 1, source: 'روایات متعدد', virtue: 'ذکر هنگام بیدار شدن از خواب.', tags: ['بیداری', 'شکر'] },
+  { id: 'd22', category: 'travel', title: 'ذکر سفر', arabic: 'سُبْحانَ الَّذی سَخَّرَ لَنا هذا وَ ما کُنّا لَهُ مُقْرِنینَ', translation: 'پاک است آن خدایی که این را برای ما رام کرد و ما توان آن را نداشتیم', count: 1, source: 'قرآن کریم، سوره زخرف آیه ۱۳', virtue: 'ذکر قرآنی هنگام سفر که پیامبر (ص) می‌خواندند.', tags: ['سفر', 'قرآن'] },
+  { id: 'd23', category: 'ahlulbayt', title: 'صلوات خاصه امیرالمؤمنین', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ عَلِیٍّ اَمیرِالْمُؤْمِنینَ', translation: 'خدایا بر علی امیرمؤمنان درود فرست', count: 14, source: 'روایات متعدد', virtue: 'صلوات بر امیرمؤمنان علی (ع).', tags: ['صلوات', 'امام علی'] },
+  { id: 'd24', category: 'ahlulbayt', title: 'ذکر سلام بر امام زمان (عج)', arabic: 'یا صاحِبَ الزَّمانِ اَدْرِکْنی', translation: 'ای صاحب زمان! مرا دریاب', count: 3, source: 'روایات متعدد', virtue: 'توسل به امام زمان (عج) برای یاری و هدایت.', tags: ['امام زمان', 'توسل'] },
+  { id: 'd25', category: 'ramadan', title: 'ذکر ماه رمضان', arabic: 'یا عَلِیُّ یا عَظیمُ یا غَفُورُ یا رَحیمُ', translation: 'ای بلندمرتبه، ای بزرگ، ای بخشنده، ای مهربان', count: 100, source: 'مفاتیح الجنان', virtue: 'ذکر مخصوص ماه رمضان که در ادعیه وارد شده است.', tags: ['رمضان', 'استغفار'] },
+  { id: 'd26', category: 'muharram', title: 'ذکر مخصوص عاشورا', arabic: 'یا اَباعَبْدِاللّٰهِ الْحُسَیْنَ', translation: 'ای اباعبدالله الحسین (ع)', count: 100, source: 'کامل الزیارات', virtue: 'توسل به سیدالشهدا (ع) با ذکر نام ایشان.', tags: ['عاشورا', 'امام حسین'] },
+  { id: 'd27', category: 'rajab', title: 'ذکر ماه رجب', arabic: 'اَسْتَغْفِرُ اللّٰهَ ذَا الْجَلالِ وَ اْلِاکْرامِ مِنْ جَمیعِ الذُّنُوبِ وَ الْآثامِ', translation: 'از خداوند صاحب جلال و بزرگواری، از همه گناهان و لغزش‌ها آمرزش می‌خواهم', count: 70, source: 'مفاتیح الجنان', virtue: 'ذکر استغفار ماه رجب که در اعمال این ماه ذکر شده است.', tags: ['رجب', 'استغفار'] },
+  { id: 'd28', category: 'shaban', title: 'صلوات شعبانیه', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ شَجَرَةِ النُّبُوَّةِ', translation: 'خدایا بر محمد و آل محمد، درخت نبوت، درود فرست', count: 3, source: 'مفاتیح الجنان • مصباح المتهجد', virtue: 'صلوات شعبانیه که از امام سجاد (ع) روایت شده است.', tags: ['شعبان', 'صلوات'] },
+  { id: 'd29', category: 'general', title: 'ذکر صلوات کبیره', arabic: 'اَللّٰهُمَّ صَلِّ عَلىٰ مُحَمَّدٍ وَ آلِ مُحَمَّدٍ کَما صَلَّیْتَ عَلىٰ اِبْراهیمَ وَ آلِ اِبْراهیمَ', translation: 'خدایا بر محمد و آل محمد درود فرست، چنان‌که بر ابراهیم و آل ابراهیم درود فرستادی', count: 3, source: 'روایات متعدد', virtue: 'صلوات کامل که در تشهد نماز خوانده می‌شود.', tags: ['صلوات', 'ابراهیم'] },
+  { id: 'd30', category: 'general', title: 'ذکر تمجید', arabic: 'سُبْحانَ اللّٰهِ وَ الْحَمْدُ لِلّٰهِ وَ لا اِلهَ اِلاَّ اللّٰهُ وَ اللّٰهُ اَکْبَرُ', translation: 'پاک است خدا، ستایش مخصوص خداست، معبودی جز خدا نیست، خدا بزرگ‌تر است', count: 33, source: 'کافی، ج۲، ص۵۰۶', virtue: 'چهار ذکر که در روایت به عنوان تسبیحات اربعه آمده است.', tags: ['تسبیحات اربعه', 'ذکر جامع'] }
+];
+
+/* ===== HELPERS ===== */
+function getTodayKey() {
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth() + 1}-${d.getDate()}`;
+}
+function recordDhikr(dhikrId, count) {
+  const k = getTodayKey();
+  if (!stats[k]) stats[k] = { count: 0, sessions: 0, dhikrs: {} };
+  stats[k].count += count;
+  if (!stats[k].dhikrs[dhikrId]) stats[k].dhikrs[dhikrId] = 0;
+  stats[k].dhikrs[dhikrId] += count;
+  localStorage.setItem('noor_dhikr_stats', JSON.stringify(stats));
+}
+function recordSession(dhikrId) {
+  const k = getTodayKey();
+  if (!stats[k]) stats[k] = { count: 0, sessions: 0, dhikrs: {} };
+  stats[k].sessions += 1;
+  localStorage.setItem('noor_dhikr_stats', JSON.stringify(stats));
+}
+
+/* ===== JALALI ===== */
+const PERSIAN_MONTHS = ['فروردین', 'اردیبهشت', 'خرداد', 'تیر', 'مرداد', 'شهریور', 'مهر', 'آبان', 'آذر', 'دی', 'بهمن', 'اسفند'];
+function getJalaliDate() {
+  try {
+    const d = new Date();
+    const gy = d.getFullYear(), gm = d.getMonth() + 1, gd = d.getDate();
+    const g_d_m = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334];
+    let jy = gy <= 1600 ? 0 : 979;
+    if (gy > 1600) gy -= 1600;
+    const gy2 = (gm > 2) ? (gy + 1) : gy;
+    let days = (365 * gy) + Math.floor((gy2 + 3) / 4) - Math.floor((gy2 + 99) / 100) + Math.floor((gy2 + 399) / 400) - 80 + gd + g_d_m[gm - 1];
+    jy += 33 * Math.floor(days / 12053);
+    days %= 12053;
+    jy += 4 * Math.floor(days / 1461);
+    days %= 1461;
+    if (days > 365) { jy += Math.floor((days - 1) / 365); days = (days - 1) % 365; }
+    const jm = (days < 186) ? 1 + Math.floor(days / 31) : 7 + Math.floor((days - 186) / 30);
+    const jd = 1 + ((days < 186) ? (days % 31) : ((days - 186) % 30));
+    return { jy, jm, jd };
+  } catch (e) { return null; }
+}
+function getTodayLabel() {
+  const j = getJalaliDate();
+  if (j) return `${faNum(j.jd)} ${PERSIAN_MONTHS[j.jm - 1]} ${faNum(j.jy)}`;
+  return new Date().toLocaleDateString('fa-IR');
+}
+function getDayOfYear() {
+  const t = new Date();
+  const s = new Date(t.getFullYear(), 0, 0);
+  return Math.floor((t - s) / 86400000);
+}
+
+/* ===== GET ALL DHIKRS ===== */
+function getAllDhikrs() {
+  return DHIKR_DATA.concat(personalDhikrs.map(p => ({
+    id: p.id,
+    category: 'personal',
+    title: p.name,
+    arabic: p.arabic,
+    translation: p.fa || '',
+    count: p.count,
+    source: 'ذکر شخصی',
+    tags: ['شخصی']
+  })));
+}
+
+/* ===== HERO — ذکر امروز (بر اساس تاریخ، فقط از DHIKR_DATA) ===== */
+function renderHeroDhikr() {
+  const day = getDayOfYear();
+  // فقط از اذکار ثابت استفاده می‌شود تا مستقل از ذکرهای شخصی باشد
+  const d = DHIKR_DATA[day % DHIKR_DATA.length];
+  const isBm = bookmarks.includes(d.id);
+  $('#heroDate').textContent = getTodayLabel();
+  $('#heroContent').innerHTML = `
+    <div class="hero-ar">${d.arabic}</div>
+    <div class="hero-fa">${d.translation || '—'}</div>
+    <div class="hero-meta">
+      <span class="speaker">${d.title}</span>
+      <span class="dot"></span>
+      <span>${faNum(d.count)} مرتبه</span>
+    </div>
+    <div class="hero-start-wrap">
+      <button class="hero-start-btn" data-act="start">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+        شروع
+      </button>
+    </div>
+    <div class="hero-actions">
+      <button data-act="bm" class="${isBm ? 'active' : ''}" title="نشان‌گذاری">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+      <button data-act="copy" title="کپی">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+      </button>
+      <button data-act="share" title="اشتراک‌گذاری">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+      </button>
+    </div>
+  `;
+  $$('#heroContent [data-act]').forEach(b => b.onclick = () => {
+    const act = b.dataset.act;
+    if (act === 'bm') { toggleBookmark(d.id); renderHeroDhikr(); renderDhikrList(); }
+    else if (act === 'copy') { copyText(d.arabic + '\n\n' + (d.translation || '') + '\n\n' + d.title); }
+    else if (act === 'share') { shareText(d.title + '\n\n' + d.arabic + '\n\n' + (d.translation || '') + '\n\nنــــور | NOOR'); }
+    else if (act === 'start') {
+      if (d.multiStep) openZahraModal();
+      else openTasbihModal(d);
+    }
+  });
+}
+
+/* ===== FILTER CHIPS ===== */
+function renderFilterChips() {
+  const c = $('#filterChips');
+  c.innerHTML = '';
+  const allCats = CATEGORIES.concat([{ id: 'personal', name: 'ذکرهای من' }]);
+  allCats.forEach(cat => {
+    const btn = document.createElement('button');
+    btn.className = 'chip' + (currentFilter === cat.id ? ' active' : '');
+    btn.textContent = cat.name;
+    btn.onclick = () => {
+      currentFilter = cat.id;
+      renderFilterChips();
+      renderDhikrList();
+    };
+    c.appendChild(btn);
+  });
+}
+
+/* ===== DHIKR LIST ===== */
+function renderDhikrList() {
+  const c = $('#dhikrList');
+  c.innerHTML = '';
+  let list = getAllDhikrs();
+
+  if (currentFilter !== 'all') {
+    list = list.filter(d => d.category === currentFilter);
+  }
+  if (searchQuery) {
+    const q = searchQuery.trim().toLowerCase();
+    list = list.filter(d =>
+      (d.title && d.title.includes(q)) ||
+      (d.arabic && d.arabic.includes(q)) ||
+      (d.translation && d.translation.includes(q)) ||
+      (d.source && d.source.includes(q)) ||
+      (d.tags && d.tags.some(t => t.includes(q)))
+    );
+  }
+
+  const catName = currentFilter === 'all' ? 'همه اذکار' :
+    (CATEGORIES.find(x => x.id === currentFilter)?.name || 'ذکرهای من');
+  $('#listTitle').textContent = catName;
+  $('#listCount').textContent = faNum(list.length) + ' ذکر';
+
+  if (!list.length) {
+    c.innerHTML = `<div class="empty"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="3.5" r="1.5"/><circle cx="12" cy="20.5" r="1.5"/><circle cx="3.5" cy="12" r="1.5"/><circle cx="20.5" cy="12" r="1.5"/></svg><p>ذکری یافت نشد.</p></div>`;
+    return;
+  }
+
+  list.forEach(d => {
+    const isBm = bookmarks.includes(d.id);
+    const item = document.createElement('div');
+    item.className = 'dhikr-item';
+    item.innerHTML = `
+      <div class="d-ico">${ICONS.dhikr}</div>
+      <div class="d-info">
+        <div class="d-title">${highlight(d.title, searchQuery)}</div>
+        <div class="d-ar">${highlight(d.arabic, searchQuery)}</div>
+        <div class="d-fa">${highlight(d.translation || '—', searchQuery)}</div>
+        <span class="d-count-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:11px;height:11px;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+          ${faNum(d.count)} مرتبه
+        </span>
+      </div>
+      <button class="d-bm ${isBm ? 'active' : ''}" data-bm="${d.id}">
+        <svg class="icon icon-sm" viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+      </button>
+    `;
+    item.onclick = (e) => {
+      if (e.target.closest('[data-bm]')) return;
+      openDhikr(d.id);
+    };
+    item.querySelector('[data-bm]').onclick = (e) => {
+      e.stopPropagation();
+      toggleBookmark(d.id);
+      renderDhikrList();
+      renderHeroDhikr();
+    };
+    c.appendChild(item);
+  });
+}
+
+function highlight(text, query) {
+  if (!query || !text) return text;
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  return String(text).replace(new RegExp(q, 'gi'), m => `<mark>${m}</mark>`);
+}
+
+/* ===== OPEN DETAIL ===== */
+function openDhikr(id) {
+  const all = getAllDhikrs();
+  const d = all.find(x => x.id === id);
+  if (!d) return;
+  currentDhikr = d;
+  $('#listView').classList.add('hidden');
+  $('#detailView').classList.add('active');
+  $('#floatingBtns').style.display = 'flex';
+  $('#pageTitle').textContent = d.title;
+  $('#searchWrap').classList.remove('show');
+  renderDetail(d.id);
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+function renderDetail(id) {
+  const all = getAllDhikrs();
+  const d = all.find(x => x.id === id);
+  if (!d) return;
+  const isBm = bookmarks.includes(d.id);
+
+  let html = `
+    <div class="detail-head">
+      <div class="dh-ico">${ICONS.dhikr}</div>
+      <div class="dh-title">${d.title}</div>
+      <div class="dh-meta">
+        <span>${faNum(d.count)} مرتبه</span>
+        <span class="dot"></span>
+        <span>${CATEGORIES.find(c => c.id === d.category)?.name || 'ذکر'}</span>
+      </div>
+    </div>
+    <div class="dhikr-body${showTrans ? '' : ' hide-trans'}">
+      <div class="db-ar">${d.arabic}</div>
+      ${d.translation ? `<div class="db-fa">${d.translation}</div>` : ''}
+    </div>
+    <button class="primary-btn" id="startTasbihBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <polygon points="5 3 19 12 5 21 5 3"/>
+      </svg>
+      شروع شمارش
+    </button>
+    <button class="secondary-btn" id="bmBtn">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/>
+      </svg>
+      ${isBm ? 'حذف از نشان‌شده‌ها' : 'افزودن به نشان‌شده‌ها'}
+    </button>
+  `;
+
+  if (d.source) {
+    html += `
+      <div class="info-block">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+          منبع
+        </h4>
+        <p>${d.source}</p>
+      </div>
+    `;
+  }
+  if (d.virtue) {
+    html += `
+      <div class="info-block">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          فضیلت
+        </h4>
+        <p>${d.virtue}</p>
+      </div>
+    `;
+  }
+  if (d.tags && d.tags.length) {
+    html += `
+      <div class="info-block">
+        <h4>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+          برچسب‌ها
+        </h4>
+        <div class="tags">${d.tags.map(t => `<span class="tag">${t}</span>`).join('')}</div>
+      </div>
+    `;
+  }
+  const note = notes[d.id] || '';
+  html += `
+    <div class="info-block">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        یادداشت من
+      </h4>
+      <p style="color:${note ? 'var(--text)' : 'var(--muted)'};font-style:${note ? 'normal' : 'italic'};">${note || 'هنوز یادداشتی ثبت نشده است.'}</p>
+    </div>
+  `;
+  $('#detailContent').innerHTML = html;
+
+  $('#startTasbihBtn').onclick = () => {
+    if (d.multiStep) openZahraModal();
+    else openTasbihModal(d);
+  };
+  $('#bmBtn').onclick = () => {
+    toggleBookmark(d.id);
+    renderDetail(d.id);
+  };
+}
+
+function closeDetail() {
+  currentDhikr = null;
+  $('#listView').classList.remove('hidden');
+  $('#detailView').classList.remove('active');
+  $('#floatingBtns').style.display = 'none';
+  $('#pageTitle').textContent = 'اذکار و تسبیح';
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+/* ===== BOOKMARK ===== */
+function toggleBookmark(id) {
+  const idx = bookmarks.indexOf(id);
+  if (idx > -1) { bookmarks.splice(idx, 1); toast('از نشان‌شده‌ها حذف شد'); }
+  else { bookmarks.push(id); toast('به نشان‌شده‌ها اضافه شد'); }
+  localStorage.setItem('noor_dhikr_bm', JSON.stringify(bookmarks));
+  updateBmCount();
+}
+function updateBmCount() {
+  const el = $('#bmCount');
+  if (el) el.textContent = faNum(bookmarks.length) + ' ذکر';
+}
+
+/* ===== TASBIH ===== */
+let tasbihState = { count: 0, target: 33, dhikrId: null, sessionRecorded: false };
+
+function openTasbihModal(d) {
+  tasbihState = { count: 0, target: d.count || 33, dhikrId: d.id, sessionRecorded: false };
+  $('#tasbihTitle').textContent = d.title;
+  $('#counterTarget').textContent = faNum(tasbihState.target);
+  $('#counterNum').textContent = faNum(0);
+  $('#tasbihDhikrText').innerHTML = `<div class="db-ar" style="font-family:var(--font-ar);font-size:1.2rem;color:var(--arabic);padding:4px;border:0;">${d.arabic}</div>`;
+
+  const saved = JSON.parse(localStorage.getItem('noor_tasbih_current') || 'null');
+  if (saved && saved.dhikrId === d.id && saved.count > 0 && saved.count < saved.target) {
+    tasbihState.count = saved.count;
+    tasbihState.target = saved.target;
+    $('#counterTarget').textContent = faNum(saved.target);
+    $('#counterNum').textContent = faNum(saved.count);
+  }
+  updateTasbihRing();
+  $$('#tasbihPreset .preset-chip').forEach(ch => {
+    ch.classList.toggle('active', parseInt(ch.dataset.count) === tasbihState.target);
+  });
+  $('#modalTasbih').classList.add('show');
+}
+
+function updateTasbihRing() {
+  const r = 106;
+  const c = 2 * Math.PI * r;
+  const pct = Math.min(tasbihState.count / tasbihState.target, 1);
+  const ring = $('#ringFg');
+  if (ring) {
+    ring.style.strokeDasharray = c;
+    ring.style.strokeDashoffset = c * (1 - pct);
+  }
+  $('#counterNum').textContent = faNum(tasbihState.count);
+}
+
+$('#tasbihCounter').onclick = () => {
+  if (!tasbihState.dhikrId) return;
+  tasbihState.count++;
+  updateTasbihRing();
+  if (navigator.vibrate) navigator.vibrate(15);
+  localStorage.setItem('noor_tasbih_current', JSON.stringify({
+    dhikrId: tasbihState.dhikrId,
+    count: tasbihState.count,
+    target: tasbihState.target,
+    timestamp: Date.now()
+  }));
+  if (!tasbihState.sessionRecorded) {
+    recordSession(tasbihState.dhikrId);
+    tasbihState.sessionRecorded = true;
+  }
+  recordDhikr(tasbihState.dhikrId, 1);
+  if (tasbihState.count >= tasbihState.target) {
+    if (navigator.vibrate) navigator.vibrate([30, 50, 30]);
+    toast('مبارک باشد! ذکر کامل شد');
+  }
+};
+$('#tasbihMinus').onclick = () => {
+  if (tasbihState.count > 0) {
+    tasbihState.count--;
+    updateTasbihRing();
+    localStorage.setItem('noor_tasbih_current', JSON.stringify({
+      dhikrId: tasbihState.dhikrId,
+      count: tasbihState.count,
+      target: tasbihState.target,
+      timestamp: Date.now()
+    }));
+  }
+};
+$('#tasbihReset').onclick = () => {
+  if (tasbihState.count === 0) return;
+  tasbihState.count = 0;
+  tasbihState.sessionRecorded = false;
+  updateTasbihRing();
+  localStorage.removeItem('noor_tasbih_current');
+  toast('شمارش بازنشانی شد');
+};
+$$('#tasbihPreset .preset-chip').forEach(ch => {
+  ch.onclick = () => {
+    if (ch.dataset.count === 'custom') {
+      const v = prompt('تعداد هدف را وارد کنید:', '50');
+      const n = parseInt(v);
+      if (n && n > 0 && n <= 100000) {
+        tasbihState.target = n;
+        tasbihState.count = 0;
+      }
+    } else {
+      tasbihState.target = parseInt(ch.dataset.count);
+      tasbihState.count = 0;
+    }
+    $$('#tasbihPreset .preset-chip').forEach(x => x.classList.remove('active'));
+    ch.classList.add('active');
+    $('#counterTarget').textContent = faNum(tasbihState.target);
+    updateTasbihRing();
+    localStorage.removeItem('noor_tasbih_current');
+  };
+});
+
+/* ===== ZAHRA ===== */
+let zahraState = {
+  step: 0,
+  counts: [0, 0, 0],
+  steps: [
+    { label: 'الله اکبر', arabic: 'اَللّٰهُ اَکْبَرُ', target: 34 },
+    { label: 'الحمدلله', arabic: 'اَلْحَمْدُ لِلّٰهِ', target: 33 },
+    { label: 'سبحان الله', arabic: 'سُبْحانَ اللّٰهِ', target: 33 }
+  ]
+};
+
+function openZahraModal() {
+  const saved = JSON.parse(localStorage.getItem('noor_zahra_current') || 'null');
+  if (saved && saved.step !== undefined) {
+    zahraState.step = saved.step;
+    zahraState.counts = saved.counts || [0, 0, 0];
+  } else {
+    zahraState.step = 0;
+    zahraState.counts = [0, 0, 0];
+  }
+  updateZahraUI();
+  $('#modalZahra').classList.add('show');
+}
+
+function updateZahraUI() {
+  const s = zahraState.steps[zahraState.step];
+  const count = zahraState.counts[zahraState.step];
+  const r = 106;
+  const c = 2 * Math.PI * r;
+  const pct = Math.min(count / s.target, 1);
+  const ring = $('#zahraRingFg');
+  if (ring) {
+    ring.style.strokeDasharray = c;
+    ring.style.strokeDashoffset = c * (1 - pct);
+  }
+  $('#zahraCounterNum').textContent = faNum(count);
+  $('#zahraCounterTarget').textContent = faNum(s.target);
+  $('#zahraStepText').innerHTML = `<div class="db-ar" style="font-family:var(--font-ar);font-size:1.2rem;color:var(--arabic);padding:4px;border:0;">${s.arabic}</div>`;
+  $('#zahraStepInfo').textContent = `مرحله ${faNum(zahraState.step + 1)} از ۳`;
+  for (let i = 0; i < 3; i++) {
+    const dot = $(`#stepDot${i + 1}`);
+    dot.classList.remove('active', 'done');
+    if (i < zahraState.step) dot.classList.add('done');
+    else if (i === zahraState.step) dot.classList.add('active');
+  }
+  $('#zahraPrev').disabled = zahraState.step === 0;
+  $('#zahraNext').disabled = zahraState.step === 2;
+}
+
+$('#zahraCounter').onclick = () => {
+  const s = zahraState.steps[zahraState.step];
+  zahraState.counts[zahraState.step]++;
+  if (navigator.vibrate) navigator.vibrate(15);
+  recordDhikr('zahra_step_' + zahraState.step, 1);
+  if (zahraState.counts[zahraState.step] >= s.target) {
+    if (navigator.vibrate) navigator.vibrate([30, 50, 30]);
+    if (zahraState.step < 2) {
+      toast(`${s.label} کامل شد. برو مرحله بعد`);
+      zahraState.step++;
+    } else {
+      toast('تسبیحات حضرت زهرا (س) کامل شد. قبول باشد');
+    }
+  }
+  updateZahraUI();
+  localStorage.setItem('noor_zahra_current', JSON.stringify(zahraState));
+};
+$('#zahraMinus').onclick = () => {
+  if (zahraState.counts[zahraState.step] > 0) {
+    zahraState.counts[zahraState.step]--;
+    updateZahraUI();
+    localStorage.setItem('noor_zahra_current', JSON.stringify(zahraState));
+  }
+};
+$('#zahraReset').onclick = () => {
+  zahraState.step = 0;
+  zahraState.counts = [0, 0, 0];
+  updateZahraUI();
+  localStorage.removeItem('noor_zahra_current');
+  toast('تسبیحات بازنشانی شد');
+};
+$('#zahraPrev').onclick = () => {
+  if (zahraState.step > 0) { zahraState.step--; updateZahraUI(); }
+};
+$('#zahraNext').onclick = () => {
+  if (zahraState.step < 2) { zahraState.step++; updateZahraUI(); }
+};
+
+/* ===== PERSONAL ===== */
+$('#navPersonal').onclick = () => $('#modalPersonal').classList.add('show');
+
+$('#savePersonal').onclick = () => {
+  const name = $('#pName').value.trim();
+  const arabic = $('#pArabic').value.trim();
+  const fa = $('#pFa').value.trim();
+  const count = parseInt($('#pCount').value) || 33;
+  if (!name) { toast('نام ذکر را وارد کنید'); return; }
+  if (!arabic) { toast('متن عربی را وارد کنید'); return; }
+  personalDhikrs.push({
+    id: 'personal_' + Date.now(),
+    name, arabic, fa, count,
+    timestamp: Date.now()
+  });
+  localStorage.setItem('noor_dhikr_personal', JSON.stringify(personalDhikrs));
+  $('#pName').value = '';
+  $('#pArabic').value = '';
+  $('#pFa').value = '';
+  $('#pCount').value = '33';
+  $('#modalPersonal').classList.remove('show');
+  toast('ذکر شخصی ذخیره شد');
+  renderDhikrList();
+};
+
+/* ===== STATS ===== */
+$('#qaStats').onclick = () => {
+  const todayKey = getTodayKey();
+  const today = stats[todayKey] || { count: 0, sessions: 0, dhikrs: {} };
+  let weekTotal = 0;
+  let monthTotal = 0;
+  const now = new Date();
+  const weekAgo = new Date(now.getTime() - 7 * 86400000);
+  const monthAgo = new Date(now.getTime() - 30 * 86400000);
+  Object.keys(stats).forEach(k => {
+    const [y, m, d] = k.split('-').map(Number);
+    const date = new Date(y, m - 1, d);
+    if (date >= weekAgo) weekTotal += stats[k].count || 0;
+    if (date >= monthAgo) monthTotal += stats[k].count || 0;
+  });
+  const all = getAllDhikrs();
+  $('#statsContent').innerHTML = `
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-num">${faNum(today.count)}</div>
+        <div class="stat-label">ذکر امروز</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">${faNum(today.sessions)}</div>
+        <div class="stat-label">جلسات امروز</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">${faNum(weekTotal)}</div>
+        <div class="stat-label">هفته جاری</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-num">${faNum(monthTotal)}</div>
+        <div class="stat-label">ماه جاری</div>
+      </div>
+    </div>
+    <div class="info-block" style="margin-top:16px;">
+      <h4>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="12" y1="20" x2="12" y2="10"/><line x1="18" y1="20" x2="18" y2="4"/><line x1="6" y1="20" x2="6" y2="16"/></svg>
+        پرکاربردترین اذکار امروز
+      </h4>
+      <p>${Object.keys(today.dhikrs).length ? Object.entries(today.dhikrs).slice(0,5).map(([id, c]) => {
+        const d = all.find(x => x.id === id);
+        return `${d ? d.title : id}: ${faNum(c)}`;
+      }).join(' • ') : 'هنوز ذکری ثبت نشده است.'}</p>
+    </div>
+  `;
+  $('#modalStats').classList.add('show');
+};
+
+/* ===== BOOKMARKS LIST ===== */
+$('#qaBookmarks').onclick = () => {
+  if (!bookmarks.length) { toast('هنوز ذکری نشان نکرده‌اید'); return; }
+  currentFilter = 'all';
+  searchQuery = '';
+  $('#searchInput').value = '';
+  renderCustomList(bookmarks, 'نشان‌شده‌ها');
+};
+
+function renderCustomList(ids, title) {
+  closeDetail();
+  $('#pageTitle').textContent = title;
+  const c = $('#dhikrList');
+  c.innerHTML = '';
+  const all = getAllDhikrs();
+  const list = ids.map(id => all.find(x => x.id === id)).filter(Boolean);
+  $('#listTitle').textContent = title;
+  $('#listCount').textContent = faNum(list.length) + ' ذکر';
+  if (!list.length) { c.innerHTML = `<div class="empty"><p>موردی یافت نشد.</p></div>`; return; }
+  list.forEach(d => {
+    const item = document.createElement('div');
+    item.className = 'dhikr-item';
+    item.innerHTML = `
+      <div class="d-ico">${ICONS.dhikr}</div>
+      <div class="d-info">
+        <div class="d-title">${d.title}</div>
+        <div class="d-ar">${d.arabic}</div>
+        <div class="d-fa">${d.translation || '—'}</div>
+      </div>
+    `;
+    item.onclick = () => openDhikr(d.id);
+    c.appendChild(item);
+  });
+}
+
+/* ===== QUICK ACTIONS ===== */
+$('#qaTasbih').onclick = () => {
+  openTasbihModal({
+    id: 'free_tasbih',
+    title: 'تسبیح دیجیتال',
+    arabic: 'سُبْحانَ اللّٰهِ',
+    count: 33
+  });
+};
+$('#qaZahra').onclick = () => openZahraModal();
+
+/* ===== COPY & SHARE ===== */
+function copyText(t) {
+  if (navigator.clipboard && navigator.clipboard.writeText) {
+    navigator.clipboard.writeText(t).then(() => toast('متن کپی شد')).catch(() => fallbackCopy(t));
+  } else fallbackCopy(t);
+}
+function fallbackCopy(t) {
+  const ta = document.createElement('textarea');
+  ta.value = t; ta.style.position = 'fixed'; ta.style.left = '-9999px';
+  document.body.appendChild(ta); ta.select();
+  try { document.execCommand('copy'); toast('متن کپی شد'); } catch (e) { toast('کپی ناموفق'); }
+  document.body.removeChild(ta);
+}
+function shareText(t) {
+  if (navigator.share) navigator.share({ title: 'اذکار و تسبیح', text: t }).catch(() => {});
+  else copyText(t);
+}
+
+$('#fabCopy').onclick = () => {
+  if (!currentDhikr) return;
+  $('#modalCopy').classList.add('show');
+};
+$('#fabNotes').onclick = () => {
+  if (!currentDhikr) return;
+  editingNoteId = currentDhikr.id;
+  $('#notesArea').value = notes[currentDhikr.id] || '';
+  $('#modalNotes').classList.add('show');
+  setTimeout(() => $('#notesArea').focus(), 200);
+};
+$('#copyArabic').onclick = () => {
+  if (!currentDhikr) return;
+  copyText(currentDhikr.arabic);
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyTrans').onclick = () => {
+  if (!currentDhikr) return;
+  copyText(currentDhikr.translation || '');
+  $('#modalCopy').classList.remove('show');
+};
+$('#copyBoth').onclick = () => {
+  if (!currentDhikr) return;
+  const d = currentDhikr;
+  copyText(d.title + '\n\n' + d.arabic + '\n\n' + (d.translation || '') + '\n\nمنبع: ' + (d.source || '') + '\n\nنــــور | NOOR');
+  $('#modalCopy').classList.remove('show');
+};
+$('#shareBtn').onclick = () => {
+  if (!currentDhikr) return;
+  const d = currentDhikr;
+  shareText(d.title + '\n\n' + d.arabic + '\n\n' + (d.translation || '') + '\n\nنــــور | NOOR');
+  $('#modalCopy').classList.remove('show');
+};
+$('#saveNotesBtn').onclick = () => {
+  if (!editingNoteId) return;
+  const val = $('#notesArea').value;
+  if (val.trim()) notes[editingNoteId] = val;
+  else delete notes[editingNoteId];
+  localStorage.setItem('noor_dhikr_notes', JSON.stringify(notes));
+  $('#modalNotes').classList.remove('show');
+  if (currentDhikr && currentDhikr.id === editingNoteId) renderDetail(editingNoteId);
+  editingNoteId = null;
+  toast('یادداشت ذخیره شد');
+};
+
+/* ===== MODAL CLOSE ===== */
+$$('[data-close]').forEach(b => b.onclick = () => $('#' + b.dataset.close).classList.remove('show'));
+$$('.modal-bg').forEach(m => m.onclick = (e) => { if (e.target === m) m.classList.remove('show'); });
+
+/* ===== SEARCH ===== */
+$('#searchInput').oninput = (e) => {
+  searchQuery = e.target.value;
+  renderDhikrList();
+};
+$('#btnSearch').onclick = () => {
+  const w = $('#searchWrap');
+  w.classList.toggle('show');
+  if (w.classList.contains('show')) setTimeout(() => $('#searchInput').focus(), 100);
+  else { $('#searchInput').value = ''; searchQuery = ''; renderDhikrList(); }
+};
+$('#btnSettings').onclick = () => $('#modalSettings').classList.add('show');
+$('#btnBack').onclick = () => {
+  if (currentDhikr) closeDetail();
+  else location.href = 'index.html';
+};
+
+/* ===== TOAST ===== */
+function toast(msg) {
+  const t = $('#toast');
+  $('#toastText').textContent = msg;
+  t.classList.add('show');
+  clearTimeout(window._t);
+  window._t = setTimeout(() => t.classList.remove('show'), 2200);
+}
+
+/* ===== INIT ===== */
+renderFilterChips();
+renderDhikrList();
+renderHeroDhikr();
+updateBmCount();
+
+console.log('📿 نــــور NOOR — اذکار و تسبیح بارگذاری شد');
+console.log('📚 تعداد اذکار:', DHIKR_DATA.length);
+console.log('⭐ ذکرهای شخصی:', personalDhikrs.length);
+</script>
+</body>
+</html>
